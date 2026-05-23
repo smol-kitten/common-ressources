@@ -14,7 +14,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Check for broken links in README
         run: |
           if [ -f README.md ]; then
@@ -22,9 +22,37 @@ jobs:
             cat README.md
           fi
         shell: bash
-      
-      - name: List all files
+
+      - name: Validate all JSON files (syntax)
         run: |
-          echo "Repository contents:"
-          find . -type f -name "*.svg" -o -name "*.png" -o -name "*.jpg" | head -100
+          echo "Checking JSON syntax for all .json files..."
+          ERRORS=0
+          while IFS= read -r -d '' f; do
+            if python3 -c "import json,sys; json.load(open('$f'))" 2>/dev/null; then
+              echo "  OK  $f"
+            else
+              echo " FAIL $f — invalid JSON"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done < <(find . -name "*.json" ! -path "./.git/*" -print0 | sort -z)
+          if [ "$ERRORS" -gt 0 ]; then
+            echo "::error::$ERRORS JSON file(s) failed syntax validation"
+            exit 1
+          fi
+          echo "All JSON files are valid."
+        shell: bash
+
+      - name: Run schema checks
+        run: |
+          bash validate.sh
+        shell: bash
+
+      - name: List all resource files
+        run: |
+          echo "=== Images ==="
+          find . -type f \( -name "*.svg" -o -name "*.png" -o -name "*.jpg" \) | sort | head -100
+          echo "=== JSON resources ==="
+          find . -type f -name "*.json" ! -path "./.git/*" | sort
+          echo "=== Totals ==="
+          echo "JSON files: $(find . -name '*.json' ! -path './.git/*' | wc -l)"
         shell: bash

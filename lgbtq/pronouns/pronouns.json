@@ -1,0 +1,134 @@
+[
+  {
+    "subject": "he",
+    "object": "him",
+    "possessive-adjective": "his",
+    "possessive-pronoun": "his",
+    "reflexive": "himself",
+    "neopronouns": false,
+    "description": "Traditional masculine pronouns. Used by many men and some non-binary individuals.",
+    "example": "He went to the store. I saw him there. His bag was heavy. That bag is his. He carried it himself.",
+    "related": ["he/they", "he/she"]
+  },
+  {
+    "subject": "she",
+    "object": "her",
+    "possessive-adjective": "her",
+    "possessive-pronoun": "hers",
+    "reflexive": "herself",
+    "neopronouns": false,
+    "description": "Traditional feminine pronouns. Used by many women and some non-binary individuals.",
+    "example": "She went to the store. I saw her there. Her bag was heavy. That bag is hers. She carried it herself.",
+    "related": ["she/they", "she/he"]
+  },
+  {
+    "subject": "they",
+    "object": "them",
+    "possessive-adjective": "their",
+    "possessive-pronoun": "theirs",
+    "reflexive": "themselves",
+    "neopronouns": false,
+    "description": "Gender-neutral pronouns with a long history in the English language. Widely used by non-binary, genderqueer, and agender individuals. Singular they is grammatically accepted.",
+    "example": "They went to the store. I saw them there. Their bag was heavy. That bag is theirs. They carried it themselves.",
+    "related": ["he/they", "she/they"]
+  },
+  {
+    "subject": "ze",
+    "object": "zir",
+    "possessive-adjective": "zir",
+    "possessive-pronoun": "zirs",
+    "reflexive": "zirself",
+    "neopronouns": true,
+    "description": "A gender-neutral neopronoun set. Ze/zir is one of the most widely recognized neopronoun sets. Sometimes written ze/hir with variant hir forms.",
+    "example": "Ze went to the store. I saw zir there. Zir bag was heavy. That bag is zirs. Ze carried it zirself.",
+    "related": ["ze/hir"]
+  },
+  {
+    "subject": "ze",
+    "object": "hir",
+    "possessive-adjective": "hir",
+    "possessive-pronoun": "hirs",
+    "reflexive": "hirself",
+    "neopronouns": true,
+    "description": "A gender-neutral neopronoun variant. Ze/hir combines 'ze' as subject with 'hir' derived from 'her', forming a distinct neutral form.",
+    "example": "Ze went to the store. I saw hir there. Hir bag was heavy. That bag is hirs. Ze carried it hirself.",
+    "related": ["ze/zir"]
+  },
+  {
+    "subject": "xe",
+    "object": "xem",
+    "possessive-adjective": "xyr",
+    "possessive-pronoun": "xyrs",
+    "reflexive": "xemself",
+    "neopronouns": true,
+    "description": "A neopronoun set popular in online and trans communities. Xe/xem is designed to be phonetically unambiguous and easy to learn.",
+    "example": "Xe went to the store. I saw xem there. Xyr bag was heavy. That bag is xyrs. Xe carried it xemself.",
+    "related": []
+  },
+  {
+    "subject": "ey",
+    "object": "em",
+    "possessive-adjective": "eir",
+    "possessive-pronoun": "eirs",
+    "reflexive": "emself",
+    "neopronouns": true,
+    "description": "Spivak pronouns, developed by Michael Spivak in 1983 as a gender-neutral alternative. Created by dropping the 'th' from 'they/them'.",
+    "example": "Ey went to the store. I saw em there. Eir bag was heavy. That bag is eirs. Ey carried it emself.",
+    "related": []
+  },
+  {
+    "subject": "fae",
+    "object": "faer",
+    "possessive-adjective": "faer",
+    "possessive-pronoun": "faers",
+    "reflexive": "faerself",
+    "neopronouns": true,
+    "description": "Fae/faer neopronouns are inspired by faeries and fantasy, often used by those who feel a connection to fae mythology or aesthetics. Part of the broader neopronoun ecosystem.",
+    "example": "Fae went to the store. I saw faer there. Faer bag was heavy. That bag is faers. Fae carried it faerself.",
+    "related": ["it/its"]
+  },
+  {
+    "subject": "it",
+    "object": "it",
+    "possessive-adjective": "its",
+    "possessive-pronoun": "its",
+    "reflexive": "itself",
+    "neopronouns": false,
+    "description": "It/its pronouns are used by some non-binary and agender individuals who choose them for themselves. Using it/its for someone who has not requested these pronouns can be dehumanizing — always follow a person's stated preferences.",
+    "example": "It went to the store. I saw it there. Its bag was heavy. That bag is its. It carried it itself.",
+    "related": ["they/them"]
+  },
+  {
+    "subject": "per",
+    "object": "per",
+    "possessive-adjective": "per",
+    "possessive-pronoun": "pers",
+    "reflexive": "perself",
+    "neopronouns": true,
+    "description": "Per/per neopronouns were popularized in Marge Piercy's 1976 novel 'Woman on the Edge of Time'. A minimalist neopronoun derived from 'person'.",
+    "example": "Per went to the store. I saw per there. Per bag was heavy. That bag is pers. Per carried it perself.",
+    "related": []
+  },
+  {
+    "subject": "ve",
+    "object": "ver",
+    "possessive-adjective": "vis",
+    "possessive-pronoun": "vis",
+    "reflexive": "verself",
+    "neopronouns": true,
+    "description": "Ve/ver neopronouns are an alternative gender-neutral set. Ve/ver is often chosen by those who want a pronoun distinct from they/them but still recognizable.",
+    "example": "Ve went to the store. I saw ver there. Vis bag was heavy. That bag is vis. Ve carried it verself.",
+    "related": []
+  },
+  {
+    "subject": "any",
+    "object": "any",
+    "possessive-adjective": "any",
+    "possessive-pronoun": "any",
+    "reflexive": "any",
+    "neopronouns": false,
+    "description": "Some people are comfortable with any pronouns — they do not have a preference and allow others to use whatever feels natural. This is sometimes listed as 'any/all' pronouns.",
+    "example": "Ask the person directly — any pronoun works for them!",
+    "related": []
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "name": "Germany",
+    "iso": "DE",
+    "colors": ["#000000", "#DD0000", "#FFCE00"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The German flag features three equal horizontal bands of black, red, and gold. The colors date to the early 19th century and were used by the Frankfurt Parliament in 1848.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Germany",
+    "continent": "Europe"
+  },
+  {
+    "name": "France",
+    "iso": "FR",
+    "colors": ["#002395", "#FFFFFF", "#ED2939"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "The French tricolor features three equal vertical bands of blue, white, and red. Adopted during the French Revolution in 1794, the colors represent liberty, equality, and fraternity.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_France",
+    "continent": "Europe"
+  },
+  {
+    "name": "Italy",
+    "iso": "IT",
+    "colors": ["#009246", "#FFFFFF", "#CE2B37"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "The Italian tricolor consists of three equal vertical bands of green, white, and red. Inspired by the French flag, it was first adopted in 1797 and became the national flag in 1948.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Italy",
+    "continent": "Europe"
+  },
+  {
+    "name": "Belgium",
+    "iso": "BE",
+    "colors": ["#000000", "#FAE042", "#EF3340"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "The Belgian flag features three equal vertical bands of black, yellow, and red. The colors derive from the arms of the Duchy of Brabant, used since the Belgian Revolution of 1830.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Belgium",
+    "continent": "Europe"
+  },
+  {
+    "name": "Netherlands",
+    "iso": "NL",
+    "colors": ["#AE1C28", "#FFFFFF", "#21468B"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Dutch flag has three equal horizontal bands of red, white, and blue. One of the oldest tricolor flags in the world, it dates to the 16th-century Dutch Revolt.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_the_Netherlands",
+    "continent": "Europe"
+  },
+  {
+    "name": "Austria",
+    "iso": "AT",
+    "colors": ["#ED2939", "#FFFFFF", "#ED2939"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Austrian flag consists of three equal horizontal bands of red, white, and red. According to legend it originates from the Battle of Ptolemais in 1191 and is one of the oldest national flags in continuous use.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Austria",
+    "continent": "Europe"
+  },
+  {
+    "name": "Poland",
+    "iso": "PL",
+    "colors": ["#FFFFFF", "#DC143C"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Polish flag has two equal horizontal bands of white over red. The colors come from the coat of arms of Poland — a white eagle on a red shield.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Poland",
+    "continent": "Europe"
+  },
+  {
+    "name": "Ukraine",
+    "iso": "UA",
+    "colors": ["#005BBB", "#FFD500"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Ukrainian flag features two equal horizontal bands of azure blue over golden yellow, symbolizing blue skies above golden wheat fields.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Ukraine",
+    "continent": "Europe"
+  },
+  {
+    "name": "Hungary",
+    "iso": "HU",
+    "colors": ["#CE2939", "#FFFFFF", "#477050"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Hungarian flag has three equal horizontal bands of red, white, and green. The colors appear in Hungarian culture since the 13th century and were formally adopted in 1848.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Hungary",
+    "continent": "Europe"
+  },
+  {
+    "name": "Estonia",
+    "iso": "EE",
+    "colors": ["#0072CE", "#000000", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Estonian flag has three equal horizontal bands of blue, black, and white — representing the sky, the dark past, and the bright future of Estonia. First adopted in 1884.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Estonia",
+    "continent": "Europe"
+  },
+  {
+    "name": "Latvia",
+    "iso": "LV",
+    "colors": ["#9E3039", "#FFFFFF", "#9E3039"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Latvian flag features two dark red stripes with a narrower white stripe in between, in a 2:1:2 ratio. One of the oldest national flag designs, dating to 1279.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Latvia",
+    "continent": "Europe"
+  },
+  {
+    "name": "Lithuania",
+    "iso": "LT",
+    "colors": ["#FDB913", "#006A44", "#C1272D"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Lithuanian flag has three equal horizontal bands of yellow, green, and red. The colors symbolize ripening wheat, forests and hope, and the blood of fallen heroes.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Lithuania",
+    "continent": "Europe"
+  },
+  {
+    "name": "Bulgaria",
+    "iso": "BG",
+    "colors": ["#FFFFFF", "#00966E", "#D62612"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Bulgarian flag has three equal horizontal bands of white, green, and red. White symbolizes peace, green represents the fertile land, and red stands for the valor of its defenders.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Bulgaria",
+    "continent": "Europe"
+  },
+  {
+    "name": "Armenia",
+    "iso": "AM",
+    "colors": ["#D90012", "#0033A0", "#F2A800"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Armenian flag has three equal horizontal bands of red, blue, and orange. Red symbolizes the Armenian Highlands, blue the sky, and orange the creative talent and hard-working nature of the Armenian people.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Armenia",
+    "continent": "Asia"
+  },
+  {
+    "name": "Ireland",
+    "iso": "IE",
+    "colors": ["#169B62", "#FFFFFF", "#FF883E"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "The Irish tricolor has three equal vertical bands of green, white, and orange. Green represents Irish Catholics, orange represents Irish Protestants, and white symbolizes peace between them.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Ireland",
+    "continent": "Europe"
+  },
+  {
+    "name": "Russia",
+    "iso": "RU",
+    "colors": ["#FFFFFF", "#0039A6", "#D52B1E"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Russian flag features three equal horizontal bands of white, blue, and red. The tricolor was introduced by Peter the Great in the 17th century, inspired by the Dutch flag.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Russia",
+    "continent": "Europe"
+  },
+  {
+    "name": "Colombia",
+    "iso": "CO",
+    "colors": ["#FCD116", "#003087", "#CE1126"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Colombian flag features three horizontal bands: a wide yellow band on top occupying half the flag, and equal blue and red bands below. The colors symbolize gold, the sky, and the blood of Colombian patriots.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Colombia",
+    "continent": "Americas"
+  },
+  {
+    "name": "Guinea",
+    "iso": "GN",
+    "colors": ["#CE1126", "#FCD116", "#009460"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "The Guinean flag has three equal vertical bands of red, yellow, and green — the Pan-African colors — representing sacrifice and revolution, wealth and the sun, and the forests.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Guinea",
+    "continent": "Africa"
+  },
+  {
+    "name": "Mali",
+    "iso": "ML",
+    "colors": ["#14B53A", "#FCD116", "#CE1126"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "The Malian flag features three equal vertical bands of green, yellow, and red. The Pan-African colors symbolize Islam and solidarity, natural wealth, and the blood of those who died defending the nation.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Mali",
+    "continent": "Africa"
+  },
+  {
+    "name": "Sierra Leone",
+    "iso": "SL",
+    "colors": ["#1EB53A", "#FFFFFF", "#0072C6"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Sierra Leonean flag has three equal horizontal bands of green, white, and blue. Green represents the natural resources, white stands for unity and justice, and blue symbolizes hope for peace.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Sierra_Leone",
+    "continent": "Africa"
+  },
+  {
+    "name": "Cameroon",
+    "iso": "CM",
+    "colors": ["#007A5E", "#CE1126", "#FCD116"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "The Cameroonian flag has three equal vertical bands of green, red, and yellow. Green represents the southern forests, red symbolizes independence and unity, and yellow represents the savannahs of the north.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Cameroon",
+    "continent": "Africa"
+  },
+  {
+    "name": "Indonesia",
+    "iso": "ID",
+    "colors": ["#CE1126", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "The Indonesian flag, known as Sang Merah Putih (the Red and White), has two equal horizontal bands of red and white. The colors appear in the Majapahit Empire and represent courage and purity.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Indonesia",
+    "continent": "Asia"
+  },
+  {
+    "name": "Chad",
+    "iso": "TD",
+    "colors": ["#002664", "#FECB00", "#C60C30"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "The Chadian flag has three equal vertical bands of blue, yellow, and red. Blue represents the sky and hope, yellow symbolizes the sun and desert, and red stands for progress and the blood of martyrs.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Chad",
+    "continent": "Africa"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Pride Rainbow",
+    "slug": "pride-rainbow",
+    "description": "The classic 6-color rainbow pride flag palette representing the LGBTQ+ community.",
+    "colors": [
+      { "name": "red", "hex": "#E40303" },
+      { "name": "orange", "hex": "#FF8C00" },
+      { "name": "yellow", "hex": "#FFED00" },
+      { "name": "green", "hex": "#008026" },
+      { "name": "blue", "hex": "#24408E" },
+      { "name": "violet", "hex": "#732982" }
+    ],
+    "tags": ["lgbtq", "pride", "rainbow"]
+  },
+  {
+    "name": "Trans Pride",
+    "slug": "trans-pride",
+    "description": "Colors from the transgender pride flag.",
+    "colors": [
+      { "name": "light blue", "hex": "#5BCEFA" },
+      { "name": "pink", "hex": "#F5A9B8" },
+      { "name": "white", "hex": "#FFFFFF" }
+    ],
+    "tags": ["lgbtq", "pride", "trans"]
+  },
+  {
+    "name": "Nonbinary Pride",
+    "slug": "nonbinary-pride",
+    "description": "Colors from the nonbinary pride flag.",
+    "colors": [
+      { "name": "yellow", "hex": "#FFF430" },
+      { "name": "white", "hex": "#FFFFFF" },
+      { "name": "purple", "hex": "#9C59D1" },
+      { "name": "black", "hex": "#000000" }
+    ],
+    "tags": ["lgbtq", "pride", "nonbinary"]
+  },
+  {
+    "name": "Bisexual Pride",
+    "slug": "bisexual-pride",
+    "description": "Colors from the bisexual pride flag.",
+    "colors": [
+      { "name": "pink", "hex": "#D60270" },
+      { "name": "lavender", "hex": "#9B4F96" },
+      { "name": "blue", "hex": "#0038A8" }
+    ],
+    "tags": ["lgbtq", "pride", "bisexual"]
+  },
+  {
+    "name": "ANSI Terminal 16",
+    "slug": "ansi-16",
+    "description": "The standard 16 ANSI terminal colors — 8 basic and 8 bright variants.",
+    "colors": [
+      { "name": "black", "hex": "#000000" },
+      { "name": "red", "hex": "#AA0000" },
+      { "name": "green", "hex": "#00AA00" },
+      { "name": "yellow", "hex": "#AA5500" },
+      { "name": "blue", "hex": "#0000AA" },
+      { "name": "magenta", "hex": "#AA00AA" },
+      { "name": "cyan", "hex": "#00AAAA" },
+      { "name": "white", "hex": "#AAAAAA" },
+      { "name": "bright black", "hex": "#555555" },
+      { "name": "bright red", "hex": "#FF5555" },
+      { "name": "bright green", "hex": "#55FF55" },
+      { "name": "bright yellow", "hex": "#FFFF55" },
+      { "name": "bright blue", "hex": "#5555FF" },
+      { "name": "bright magenta", "hex": "#FF55FF" },
+      { "name": "bright cyan", "hex": "#55FFFF" },
+      { "name": "bright white", "hex": "#FFFFFF" }
+    ],
+    "tags": ["terminal", "ansi", "cli"]
+  },
+  {
+    "name": "Pastel Dream",
+    "slug": "pastel-dream",
+    "description": "A soft pastel palette suitable for gentle, friendly UI designs.",
+    "colors": [
+      { "name": "baby pink", "hex": "#FFD1DC" },
+      { "name": "peach", "hex": "#FFDAB9" },
+      { "name": "lemon", "hex": "#FFFACD" },
+      { "name": "mint", "hex": "#B5EAD7" },
+      { "name": "sky", "hex": "#C7CEEA" },
+      { "name": "lavender", "hex": "#E2D9F3" },
+      { "name": "lilac", "hex": "#F3C5E8" }
+    ],
+    "tags": ["pastel", "soft", "ui"]
+  },
+  {
+    "name": "Material Design Primary",
+    "slug": "material-primary",
+    "description": "The primary hue values from Google Material Design color system.",
+    "colors": [
+      { "name": "red", "hex": "#F44336" },
+      { "name": "pink", "hex": "#E91E63" },
+      { "name": "purple", "hex": "#9C27B0" },
+      { "name": "deep purple", "hex": "#673AB7" },
+      { "name": "indigo", "hex": "#3F51B5" },
+      { "name": "blue", "hex": "#2196F3" },
+      { "name": "light blue", "hex": "#03A9F4" },
+      { "name": "cyan", "hex": "#00BCD4" },
+      { "name": "teal", "hex": "#009688" },
+      { "name": "green", "hex": "#4CAF50" },
+      { "name": "lime", "hex": "#CDDC39" },
+      { "name": "yellow", "hex": "#FFEB3B" },
+      { "name": "amber", "hex": "#FFC107" },
+      { "name": "orange", "hex": "#FF9800" },
+      { "name": "deep orange", "hex": "#FF5722" }
+    ],
+    "tags": ["material", "google", "ui"]
+  },
+  {
+    "name": "Grayscale",
+    "slug": "grayscale",
+    "description": "A standard 11-step grayscale from pure black to pure white.",
+    "colors": [
+      { "name": "gray-0", "hex": "#000000" },
+      { "name": "gray-1", "hex": "#1A1A1A" },
+      { "name": "gray-2", "hex": "#333333" },
+      { "name": "gray-3", "hex": "#4D4D4D" },
+      { "name": "gray-4", "hex": "#666666" },
+      { "name": "gray-5", "hex": "#808080" },
+      { "name": "gray-6", "hex": "#999999" },
+      { "name": "gray-7", "hex": "#B3B3B3" },
+      { "name": "gray-8", "hex": "#CCCCCC" },
+      { "name": "gray-9", "hex": "#E6E6E6" },
+      { "name": "gray-10", "hex": "#FFFFFF" }
+    ],
+    "tags": ["neutral", "monochrome", "ui"]
+  },
+  {
+    "name": "Earth Tones",
+    "slug": "earth-tones",
+    "description": "Warm, natural earth-inspired colors suitable for organic and nature-themed designs.",
+    "colors": [
+      { "name": "soil", "hex": "#6B3D2E" },
+      { "name": "clay", "hex": "#A05C40" },
+      { "name": "sand", "hex": "#D4A77A" },
+      { "name": "straw", "hex": "#E8D5A3" },
+      { "name": "moss", "hex": "#5F6B3A" },
+      { "name": "sage", "hex": "#8B9E6A" },
+      { "name": "stone", "hex": "#8C8170" },
+      { "name": "slate", "hex": "#5A6475" }
+    ],
+    "tags": ["earth", "natural", "warm"]
+  },
+  {
+    "name": "Cyberpunk Neon",
+    "slug": "cyberpunk-neon",
+    "description": "High-contrast neon colors inspired by cyberpunk aesthetics and retro-futurist visuals.",
+    "colors": [
+      { "name": "hot magenta", "hex": "#FF00FF" },
+      { "name": "electric cyan", "hex": "#00FFFF" },
+      { "name": "neon yellow", "hex": "#EEFF00" },
+      { "name": "laser orange", "hex": "#FF6600" },
+      { "name": "plasma blue", "hex": "#0066FF" },
+      { "name": "void", "hex": "#0D0D1A" },
+      { "name": "chrome", "hex": "#CCCCDD" }
+    ],
+    "tags": ["cyberpunk", "neon", "dark"]
+  }
+]
