@@ -32,6 +32,13 @@ Languages: English, Spanish, German, French.
 
 [motds.json](/lgbtq/motd/motds.json)
 
+### LGBTQ+ Terminology
+
+36-entry glossary covering gender, sexuality, identity, community, medical, and legal terms.  
+Each entry includes definition, category, neopronoun flag, and related terms.
+
+[Info & Schema](/lgbtq/terms/Readme.MD) · [terms.json](/lgbtq/terms/terms.json)
+
 ---
 
 ## Flags
@@ -111,6 +118,13 @@ All 9 standard HTTP methods with safe/idempotent/cacheable flags and RFC referen
 
 [Info & Schema](/web/http/Readme.MD) · [headers.json](/web/http/headers.json)
 
+### Regex Patterns
+
+20 common validation patterns (email, URL, IPv4/6, UUID, slug, phone, dates, hex color, JWT, semver, and more).  
+Each entry includes valid/invalid examples, category, and caveats.
+
+[Info & Schema](/web/regex/Readme.MD) · [patterns.json](/web/regex/patterns.json)
+
 ### MIME Type Mappings
 
 A large list of file extension to MIME type mappings.
@@ -119,12 +133,53 @@ A large list of file extension to MIME type mappings.
 
 ---
 
+## Fonts
+
+### Web Font Stacks
+
+15 CSS font stacks covering system fonts, Google Fonts pairings, and specialty categories (serif, sans-serif, monospace, display, handwriting).  
+Each entry includes a ready-to-paste `css` value, category, and usage guidance.
+
+[Info & Schema](/fonts/Readme.MD) · [stacks.json](/fonts/stacks.json)
+
+---
+
 ## Validation
 
-A `validate.sh` script at the root validates JSON syntax and checks required fields for each resource type.
+### validate.sh
+
+Validates JSON syntax for all files and runs per-resource schema checks (required fields, value ranges, hex format).
 
 ```bash
 bash validate.sh
 ```
 
-CI runs automatically on push and pull requests via GitHub Actions and Gitea workflows.
+### Playwright tests
+
+`tests/previews.spec.js` validates all JSON schemas and generates PNG preview images via Playwright.
+
+```bash
+npm install
+npx playwright test          # run all tests + regenerate all PNGs
+npx playwright test --ui     # interactive mode
+```
+
+### Docker
+
+A `docker/Dockerfile` based on the official Playwright image (includes Node.js + Chromium + PHP):
+
+```bash
+docker build -t cr-preview docker/
+docker run --rm -v $PWD:/repo cr-preview npx playwright test
+docker run --rm -v $PWD:/repo cr-preview node tests/generate-previews.js
+```
+
+### CI / Workflows
+
+| Workflow | Trigger | Action |
+|---|---|---|
+| **Validate** | push + PR | JSON syntax + schema checks |
+| **Generate Previews** | push to main (JSON/HTML changed) | Playwright screenshots → commit PNGs |
+| **PR Previews** | pull request | Generate PNGs → commit to PR branch → post comment with image embeds |
+
+Runs on self-hosted runners via both GitHub Actions and Gitea.

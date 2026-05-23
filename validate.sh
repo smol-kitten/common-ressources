@@ -176,6 +176,36 @@ if [ -f "colors/terminal/export/windows-terminal.json" ]; then
     echo "    $COUNT Windows Terminal schemes"
 fi
 
+# LGBTQ terms
+if [ -f "lgbtq/terms/terms.json" ]; then
+    echo "  Checking lgbtq/terms/terms.json..."
+    COUNT=$(jq 'length' lgbtq/terms/terms.json)
+    echo "    $COUNT terms"
+    VALID_CATS='["gender","sexuality","identity","community","medical","legal"]'
+    BAD_CAT=$(jq --argjson v "$VALID_CATS" '[.[] | select(.category as $c | ($v | index($c)) == null)] | length' lgbtq/terms/terms.json)
+    [ "$BAD_CAT" != "0" ] && echo " WARN lgbtq/terms/terms.json — $BAD_CAT entries with unexpected category"
+fi
+
+# Regex patterns
+if [ -f "web/regex/patterns.json" ]; then
+    echo "  Checking web/regex/patterns.json..."
+    COUNT=$(jq 'length' web/regex/patterns.json)
+    echo "    $COUNT regex patterns"
+    MISSING_PAT=$(jq '[.[] | select(.pattern == null or .pattern == "")] | length' web/regex/patterns.json)
+    [ "$MISSING_PAT" != "0" ] && echo " WARN web/regex/patterns.json — $MISSING_PAT entries without pattern"
+    MISSING_SLUG=$(jq '[.[] | select(.slug == null or .slug == "")] | length' web/regex/patterns.json)
+    [ "$MISSING_SLUG" != "0" ] && echo " WARN web/regex/patterns.json — $MISSING_SLUG entries without slug"
+fi
+
+# Font stacks
+if [ -f "fonts/stacks.json" ]; then
+    echo "  Checking fonts/stacks.json..."
+    COUNT=$(jq 'length' fonts/stacks.json)
+    echo "    $COUNT font stacks"
+    MISSING_CSS=$(jq '[.[] | select(.css == null or .css == "")] | length' fonts/stacks.json)
+    [ "$MISSING_CSS" != "0" ] && echo " WARN fonts/stacks.json — $MISSING_CSS entries without css value"
+fi
+
 echo ""
 echo "=== Summary ==="
 echo "  JSON files checked: $JSON_COUNT"

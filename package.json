@@ -1,0 +1,13 @@
+{
+  "name": "common-ressources",
+  "version": "1.0.0",
+  "description": "Test and preview generation scripts for common-ressources",
+  "scripts": {
+    "previews": "node tests/generate-previews.js",
+    "test": "npx playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "playwright": "^1.44.0"
+  }
+}

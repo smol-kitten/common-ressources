@@ -1,0 +1,106 @@
+# Generates preview images for pull requests and posts them as a PR comment.
+# Images are committed to the PR branch so they're accessible via raw.githubusercontent.com
+# and can be embedded directly in the Markdown comment body.
+
+name: PR Previews
+
+on:
+  pull_request:
+    branches: [main, master]
+    paths:
+      - '**/*.json'
+      - '**/*.html'
+      - 'tests/**'
+      - 'package.json'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: self-hosted
+    container:
+      image: mcr.microsoft.com/playwright:v1.44.0-jammy
+      options: --user root
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Generate preview images
+        run: node tests/generate-previews.js
+
+      - name: Commit preview images to PR branch
+        run: |
+          git config user.email "noreply@github.com"
+          git config user.name "github-actions[bot]"
+          git add $(find . -name "*.png" ! -path "./.git/*" | head -50)
+          if git diff --staged --quiet; then
+            echo "No preview changes."
+          else
+            git commit -m "chore: PR preview images [skip ci]"
+            git push origin HEAD:${{ github.event.pull_request.head.ref }}
+          fi
+
+      - name: Post preview comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branch = context.payload.pull_request.head.ref;
+            const owner  = context.repo.owner;
+            const repo   = context.repo.repo;
+            const sha    = context.payload.pull_request.head.sha;
+
+            // Use commit SHA in URL to bypass CDN caching
+            const raw = (p) =>
+              `https://raw.githubusercontent.com/${owner}/${repo}/${sha}/${p}`;
+
+            const previews = [
+              ['Pride Flags',       'lgbtq/flags/colortest.png'],
+              ['Country Flags',     'flags/countries/colortest.png'],
+              ['Color Palettes',    'colors/colortest.png'],
+              ['Terminal Themes',   'colors/terminal/colortest.png'],
+              ['Social Platforms',  'social/brandsheet.png'],
+              ['HTTP Reference',    'web/http/reference.png'],
+            ];
+
+            const rows = previews
+              .map(([name, p]) => `| ${name} | ![${name}](${raw(p)}) |`)
+              .join('\n');
+
+            const body = [
+              '## Generated Previews',
+              '',
+              '> Auto-generated from JSON data using Playwright.',
+              '> Images may take ~30 s to appear (GitHub CDN warm-up).',
+              '',
+              '| Resource | Preview |',
+              '|---|---|',
+              rows,
+            ].join('\n');
+
+            // Delete any previous preview comment from this workflow
+            const { data: comments } = await github.rest.issues.listComments({
+              owner, repo, issue_number: context.issue.number,
+            });
+            for (const c of comments) {
+              if (c.user.login === 'github-actions[bot]' && c.body.startsWith('## Generated Previews')) {
+                await github.rest.issues.deleteComment({ owner, repo, comment_id: c.id });
+              }
+            }
+
+            await github.rest.issues.createComment({
+              owner, repo,
+              issue_number: context.issue.number,
+              body,
+            });

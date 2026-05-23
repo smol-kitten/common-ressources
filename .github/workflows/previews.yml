@@ -1,0 +1,56 @@
+# Regenerates all PNG preview images and commits them back to the branch.
+# Runs on every push to main when JSON data or HTML templates change.
+# Uses the Playwright Docker image so no local browser install is needed.
+
+name: Generate Previews
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - '**/*.json'
+      - '**/*.html'
+      - 'tests/generate-previews.js'
+      - 'tests/previews.spec.js'
+      - 'package.json'
+      - 'docker/Dockerfile'
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: self-hosted
+    container:
+      image: mcr.microsoft.com/playwright:v1.44.0-jammy
+      options: --user root
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run Playwright tests (includes screenshot generation)
+        run: npx playwright test --reporter=list
+
+      - name: Show generated previews
+        run: |
+          echo "Generated PNG files:"
+          find . -name "*.png" ! -path "./.git/*" | sort
+
+      - name: Commit generated previews
+        run: |
+          git config user.email "noreply@github.com"
+          git config user.name "github-actions[bot]"
+          git add $(find . -name "*.png" ! -path "./.git/*" | head -50)
+          if git diff --staged --quiet; then
+            echo "No preview changes to commit."
+          else
+            git commit -m "chore: regenerate preview images [skip ci]"
+            git push origin HEAD
+          fi

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Color Palettes</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #111115;
+    font-family: system-ui, -apple-system, sans-serif;
+    padding: 28px;
+    color: #ccc;
+  }
+  h1 {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  .palette {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  }
+  .palette-meta {
+    width: 210px;
+    flex-shrink: 0;
+    background: #1a1a1f;
+    padding: 12px 14px;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .palette-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e0e0e8;
+    margin-bottom: 4px;
+  }
+  .palette-tags {
+    font-size: 10px;
+    color: #555;
+    letter-spacing: 0.05em;
+  }
+  .swatches {
+    display: flex;
+    flex: 1;
+  }
+  .swatch {
+    flex: 1;
+    min-height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4px 2px;
+    align-items: center;
+  }
+  .swatch-hex {
+    font-size: 8px;
+    letter-spacing: 0.03em;
+    font-family: 'JetBrains Mono', Menlo, monospace;
+    line-height: 1.2;
+  }
+  .swatch-label {
+    font-size: 7px;
+    margin-top: 1px;
+    text-align: center;
+    line-height: 1.1;
+    max-width: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+</style>
+</head>
+<body>
+<h1>Color Palettes — common-ressources</h1>
+<div id="list"></div>
+
+<script>
+const PALETTES = "__PALETTES__";
+
+function luminance(hex) {
+  const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+  return 0.299*r + 0.587*g + 0.114*b;
+}
+
+function renderPalette(p) {
+  const swatches = p.colors.map(c => {
+    const lum = luminance(c.hex);
+    const text = lum > 140 ? 'rgba(0,0,0,0.7)' : 'rgba(255,255,255,0.75)';
+    return `<div class="swatch" style="background:${c.hex}">
+      <span class="swatch-hex" style="color:${text}">${c.hex.toUpperCase()}</span>
+      <span class="swatch-label" style="color:${text}">${c.name}</span>
+    </div>`;
+  }).join('');
+
+  return `<div class="palette">
+    <div class="palette-meta">
+      <div class="palette-name">${p.name}</div>
+      <div class="palette-tags">${(p.tags||[]).join(' · ')}</div>
+    </div>
+    <div class="swatches">${swatches}</div>
+  </div>`;
+}
+
+document.getElementById('list').innerHTML = PALETTES.map(renderPalette).join('');
+</script>
+</body>
+</html>

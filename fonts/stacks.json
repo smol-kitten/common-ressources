@@ -1,0 +1,167 @@
+[
+  {
+    "name": "System Sans-Serif",
+    "slug": "system-sans",
+    "category": "sans-serif",
+    "system": true,
+    "fonts": ["-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Liberation Sans", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+    "css": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "description": "The standard native sans-serif stack used by Bootstrap 5 and GitHub. Resolves to the platform's default UI font: San Francisco on macOS/iOS, Segoe UI on Windows, and Roboto on Android.",
+    "usage": "Body text, UI elements, general-purpose web typography.",
+    "tags": ["native", "ui", "bootstrap", "github", "cross-platform"]
+  },
+  {
+    "name": "System Serif",
+    "slug": "system-serif",
+    "category": "serif",
+    "system": true,
+    "fonts": ["Georgia", "Cambria", "\"Times New Roman\"", "Times", "serif"],
+    "css": "Georgia, Cambria, \"Times New Roman\", Times, serif",
+    "description": "A safe cross-platform serif stack that prefers Georgia for its on-screen legibility. Falls back to Cambria on Windows and Times New Roman for maximum compatibility.",
+    "usage": "Editorial content, long-form reading, formal documents.",
+    "tags": ["native", "editorial", "readable", "cross-platform"]
+  },
+  {
+    "name": "System Monospace",
+    "slug": "system-mono",
+    "category": "monospace",
+    "system": true,
+    "fonts": ["ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "\"Liberation Mono\"", "\"Courier New\"", "monospace"],
+    "css": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+    "description": "The system monospace stack used by GitHub for code blocks. Resolves to SF Mono on Apple platforms, Consolas on Windows, and Liberation Mono on Linux.",
+    "usage": "Code blocks, inline code, terminal output, technical documentation.",
+    "tags": ["native", "code", "github", "cross-platform"]
+  },
+  {
+    "name": "System UI",
+    "slug": "system-ui",
+    "category": "sans-serif",
+    "system": true,
+    "fonts": ["system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+    "css": "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+    "description": "A minimal stack using the CSS 'system-ui' keyword, which maps directly to the operating system's default UI font. Provides the most native feel with the fewest overrides.",
+    "usage": "UI components, dashboards, native-feeling web applications.",
+    "tags": ["native", "minimal", "ui", "modern"]
+  },
+  {
+    "name": "Geometric Sans-Serif",
+    "slug": "geometric-sans",
+    "category": "sans-serif",
+    "system": false,
+    "fonts": ["Inter", "Nunito Sans", "\"DM Sans\"", "Poppins", "Outfit", "Helvetica Neue", "Arial", "sans-serif"],
+    "css": "Inter, \"Nunito Sans\", \"DM Sans\", Poppins, Outfit, \"Helvetica Neue\", Arial, sans-serif",
+    "description": "A modern geometric sans-serif stack led by Inter — designed specifically for screen legibility. Clean, neutral, and widely used in SaaS and developer products.",
+    "usage": "Product UIs, dashboards, landing pages, modern web applications.",
+    "tags": ["geometric", "modern", "inter", "saas", "google-fonts"]
+  },
+  {
+    "name": "Humanist Sans-Serif",
+    "slug": "humanist-sans",
+    "category": "sans-serif",
+    "system": false,
+    "fonts": ["\"Gill Sans\"", "\"Gill Sans MT\"", "Calibri", "\"Trebuchet MS\"", "\"Fira Sans\"", "Optima", "Myriad Pro", "sans-serif"],
+    "css": "\"Gill Sans\", \"Gill Sans MT\", Calibri, \"Trebuchet MS\", \"Fira Sans\", Optima, \"Myriad Pro\", sans-serif",
+    "description": "A humanist sans-serif stack with warmer, more organic letterforms than geometric alternatives. Combines readability with a friendly, approachable character.",
+    "usage": "Marketing copy, editorial layouts, brand-facing content, signage.",
+    "tags": ["humanist", "warm", "approachable", "editorial"]
+  },
+  {
+    "name": "Transitional Serif",
+    "slug": "transitional-serif",
+    "category": "serif",
+    "system": false,
+    "fonts": ["Georgia", "\"Book Antiqua\"", "Palatino", "\"Palatino Linotype\"", "\"Bitstream Charter\"", "Charter", "serif"],
+    "css": "Georgia, \"Book Antiqua\", Palatino, \"Palatino Linotype\", \"Bitstream Charter\", Charter, serif",
+    "description": "A transitional serif stack centered on Georgia, which bridges old-style and modern serif design. Excellent screen legibility at body sizes due to its open apertures and generous x-height.",
+    "usage": "Long-form articles, blogs, news sites, academic content.",
+    "tags": ["transitional", "georgia", "readable", "editorial", "news"]
+  },
+  {
+    "name": "Old-Style Serif",
+    "slug": "old-style-serif",
+    "category": "serif",
+    "system": false,
+    "fonts": ["Palatino", "\"Palatino Linotype\"", "\"Palatino LT STD\"", "\"Book Antiqua\"", "Garamond", "\"EB Garamond\"", "\"Hoefler Text\"", "serif"],
+    "css": "Palatino, \"Palatino Linotype\", \"Palatino LT STD\", \"Book Antiqua\", Garamond, \"EB Garamond\", \"Hoefler Text\", serif",
+    "description": "An old-style (humanist) serif stack with diagonal stress, low stroke contrast, and bracketed serifs characteristic of 15th–17th century type design. Evokes a classic, literary quality.",
+    "usage": "Literary publications, academic writing, formal correspondence, historical content.",
+    "tags": ["old-style", "classic", "palatino", "garamond", "literary"]
+  },
+  {
+    "name": "Slab Serif",
+    "slug": "slab-serif",
+    "category": "serif",
+    "system": false,
+    "fonts": ["Rockwell", "\"Rockwell Extra Bold\"", "\"Courier New\"", "\"Roboto Slab\"", "\"Zilla Slab\"", "\"Crete Round\"", "serif"],
+    "css": "Rockwell, \"Rockwell Extra Bold\", \"Courier New\", \"Roboto Slab\", \"Zilla Slab\", \"Crete Round\", serif",
+    "description": "A slab serif (Egyptian) stack with thick, block-like serifs and low stroke contrast. Strong and assertive, combining the legibility of sans-serif with the character of serif design.",
+    "usage": "Headlines, poster text, branding, editorial headers, tech brand identities.",
+    "tags": ["slab", "egyptian", "bold", "headline", "impact"]
+  },
+  {
+    "name": "Modern Serif (Didone)",
+    "slug": "modern-serif",
+    "category": "serif",
+    "system": false,
+    "fonts": ["Didot", "\"Didot LT STD\"", "\"Bodoni MT\"", "\"Bodoni 72\"", "\"GFS Didot\"", "\"Libre Bodoni\"", "\"Playfair Display\"", "serif"],
+    "css": "Didot, \"Didot LT STD\", \"Bodoni MT\", \"Bodoni 72\", \"GFS Didot\", \"Libre Bodoni\", \"Playfair Display\", serif",
+    "description": "A Didone (modern) serif stack with extreme contrast between thick and hairline strokes, vertical stress, and unbracketed serifs. Highly refined and elegant at display sizes.",
+    "usage": "Fashion editorial, luxury branding, high-contrast headlines, magazine layouts.",
+    "tags": ["didone", "bodoni", "didot", "elegant", "luxury", "fashion", "display"]
+  },
+  {
+    "name": "Code Monospace",
+    "slug": "code-mono",
+    "category": "monospace",
+    "system": false,
+    "fonts": ["\"JetBrains Mono\"", "\"Fira Code\"", "\"Cascadia Code\"", "\"Source Code Pro\"", "\"Hack\"", "\"Inconsolata\"", "\"Courier New\"", "monospace"],
+    "css": "\"JetBrains Mono\", \"Fira Code\", \"Cascadia Code\", \"Source Code Pro\", Hack, Inconsolata, \"Courier New\", monospace",
+    "description": "A developer-focused monospace stack leading with modern coding fonts that support ligatures and have been specifically designed for long coding sessions. JetBrains Mono and Fira Code are the most widely installed.",
+    "usage": "Code editors, syntax-highlighted code blocks, REPLs, developer documentation.",
+    "tags": ["code", "ligatures", "jetbrains", "fira", "developer", "ide"]
+  },
+  {
+    "name": "Terminal Monospace",
+    "slug": "terminal-mono",
+    "category": "monospace",
+    "system": false,
+    "fonts": ["\"Courier New\"", "Courier", "\"Lucida Console\"", "\"Monaco\"", "\"Andale Mono\"", "monospace"],
+    "css": "\"Courier New\", Courier, \"Lucida Console\", Monaco, \"Andale Mono\", monospace",
+    "description": "A classic terminal-style monospace stack centered on Courier New. Evokes the aesthetic of typewriters, command-line interfaces, and early computing.",
+    "usage": "Terminal emulators, typewriter-style effects, retro/hacker aesthetics, receipts.",
+    "tags": ["terminal", "courier", "retro", "typewriter", "classic"]
+  },
+  {
+    "name": "Rounded Sans-Serif",
+    "slug": "rounded-sans",
+    "category": "sans-serif",
+    "system": false,
+    "fonts": ["\"Nunito\"", "\"Varela Round\"", "\"M PLUS Rounded 1c\"", "\"Quicksand\"", "\"Comfortaa\"", "Arial Rounded MT Bold", "sans-serif"],
+    "css": "Nunito, \"Varela Round\", \"M PLUS Rounded 1c\", Quicksand, Comfortaa, \"Arial Rounded MT Bold\", sans-serif",
+    "description": "A soft, rounded sans-serif stack with curved terminals that conveys friendliness and approachability. Widely used in children's products, wellness apps, and casual consumer-facing interfaces.",
+    "usage": "Children's content, wellness apps, friendly consumer UIs, casual brands, onboarding flows.",
+    "tags": ["rounded", "friendly", "soft", "casual", "nunito"]
+  },
+  {
+    "name": "Display Sans-Serif",
+    "slug": "display-sans",
+    "category": "display",
+    "system": false,
+    "fonts": ["\"Bebas Neue\"", "\"Anton\"", "\"Barlow Condensed\"", "\"Oswald\"", "\"Impact\"", "\"Arial Narrow\"", "sans-serif"],
+    "css": "\"Bebas Neue\", Anton, \"Barlow Condensed\", Oswald, Impact, \"Arial Narrow\", sans-serif",
+    "description": "A condensed display sans-serif stack designed for maximum visual impact at large sizes. Impact is a universally available fallback for when web fonts are unavailable.",
+    "usage": "Hero headings, posters, advertising banners, sports and entertainment branding.",
+    "tags": ["display", "condensed", "impact", "headline", "bold", "poster"]
+  },
+  {
+    "name": "Handwriting",
+    "slug": "handwriting",
+    "category": "handwriting",
+    "system": false,
+    "fonts": ["\"Dancing Script\"", "\"Pacifico\"", "\"Caveat\"", "\"Patrick Hand\"", "\"Indie Flower\"", "\"Bradley Hand\"", "\"Comic Sans MS\"", "cursive"],
+    "css": "\"Dancing Script\", Pacifico, Caveat, \"Patrick Hand\", \"Indie Flower\", \"Bradley Hand\", \"Comic Sans MS\", cursive",
+    "description": "A handwriting-style stack that mimics natural script letterforms. Modern web fonts like Dancing Script and Caveat are far more refined than the native cursive fallback.",
+    "usage": "Wedding and event invitations, personal blogs, greeting cards, decorative accents, craft and food brands.",
+    "tags": ["handwriting", "cursive", "script", "decorative", "personal"]
+  }
+]
