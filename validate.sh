@@ -155,6 +155,27 @@ if [ -f "lgbtq/motd/motds.json" ]; then
     echo "    $COUNT MOTD entries"
 fi
 
+# Terminal themes
+if [ -f "colors/terminal/themes.json" ]; then
+    echo "  Checking colors/terminal/themes.json..."
+    COUNT=$(jq 'length' colors/terminal/themes.json)
+    echo "    $COUNT terminal themes"
+    REQUIRED_KEYS='["black","red","green","yellow","blue","magenta","cyan","white","bright-black","bright-red","bright-green","bright-yellow","bright-blue","bright-magenta","bright-cyan","bright-white"]'
+    INCOMPLETE=$(jq --argjson req "$REQUIRED_KEYS" \
+        '[.[] | select((.colors | keys) as $k | ($req | map(. as $r | $k | index($r) != null) | all) | not)] | length' \
+        colors/terminal/themes.json)
+    [ "$INCOMPLETE" != "0" ] && echo " WARN colors/terminal/themes.json — $INCOMPLETE themes missing color keys"
+    MISSING_BG=$(jq '[.[] | select(.background == null or .background == "")] | length' colors/terminal/themes.json)
+    [ "$MISSING_BG" != "0" ] && echo " WARN colors/terminal/themes.json — $MISSING_BG themes without background"
+fi
+
+# Windows Terminal export
+if [ -f "colors/terminal/export/windows-terminal.json" ]; then
+    echo "  Checking colors/terminal/export/windows-terminal.json..."
+    COUNT=$(jq 'length' colors/terminal/export/windows-terminal.json)
+    echo "    $COUNT Windows Terminal schemes"
+fi
+
 echo ""
 echo "=== Summary ==="
 echo "  JSON files checked: $JSON_COUNT"

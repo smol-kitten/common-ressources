@@ -158,5 +158,137 @@
       { "name": "chrome", "hex": "#CCCCDD" }
     ],
     "tags": ["cyberpunk", "neon", "dark"]
+  },
+  {
+    "name": "Dracula",
+    "slug": "dracula",
+    "description": "Key accent colors from the Dracula terminal theme — vibrant, purple-tinged palette suitable for UI highlights and code syntax.",
+    "colors": [
+      { "name": "background", "hex": "#282A36" },
+      { "name": "comment",    "hex": "#6272A4" },
+      { "name": "cyan",       "hex": "#8BE9FD" },
+      { "name": "green",      "hex": "#50FA7B" },
+      { "name": "orange",     "hex": "#FFB86C" },
+      { "name": "pink",       "hex": "#FF79C6" },
+      { "name": "purple",     "hex": "#BD93F9" },
+      { "name": "red",        "hex": "#FF5555" },
+      { "name": "yellow",     "hex": "#F1FA8C" },
+      { "name": "foreground", "hex": "#F8F8F2" }
+    ],
+    "tags": ["dark", "terminal", "editor"]
+  },
+  {
+    "name": "Nord",
+    "slug": "nord",
+    "description": "Arctic, north-bluish tones. The Nord palette is built on four groups of related colors: Polar Night (dark), Snow Storm (light), Frost (blue-teal), and Aurora (accent).",
+    "colors": [
+      { "name": "polar night 0", "hex": "#2E3440" },
+      { "name": "polar night 1", "hex": "#3B4252" },
+      { "name": "polar night 2", "hex": "#434C5E" },
+      { "name": "polar night 3", "hex": "#4C566A" },
+      { "name": "snow storm 0",  "hex": "#D8DEE9" },
+      { "name": "snow storm 1",  "hex": "#E5E9F0" },
+      { "name": "snow storm 2",  "hex": "#ECEFF4" },
+      { "name": "frost 0",       "hex": "#8FBCBB" },
+      { "name": "frost 1",       "hex": "#88C0D0" },
+      { "name": "frost 2",       "hex": "#81A1C1" },
+      { "name": "frost 3",       "hex": "#5E81AC" },
+      { "name": "aurora red",    "hex": "#BF616A" },
+      { "name": "aurora orange", "hex": "#D08770" },
+      { "name": "aurora yellow", "hex": "#EBCB8B" },
+      { "name": "aurora green",  "hex": "#A3BE8C" },
+      { "name": "aurora purple", "hex": "#B48EAD" }
+    ],
+    "tags": ["dark", "terminal", "arctic", "editor"]
+  },
+  {
+    "name": "Gruvbox Dark",
+    "slug": "gruvbox-dark",
+    "description": "Retro groove colors — warm browns, muted gold, and earthy greens. Hard-contrast version of the Gruvbox palette beloved by Vim users.",
+    "colors": [
+      { "name": "bg hard",  "hex": "#1D2021" },
+      { "name": "bg",       "hex": "#282828" },
+      { "name": "bg soft",  "hex": "#32302F" },
+      { "name": "bg1",      "hex": "#3C3836" },
+      { "name": "bg4",      "hex": "#7C6F64" },
+      { "name": "fg4",      "hex": "#A89984" },
+      { "name": "fg",       "hex": "#EBDBB2" },
+      { "name": "red",      "hex": "#FB4934" },
+      { "name": "green",    "hex": "#B8BB26" },
+      { "name": "yellow",   "hex": "#FABD2F" },
+      { "name": "blue",     "hex": "#83A598" },
+      { "name": "purple",   "hex": "#D3869B" },
+      { "name": "aqua",     "hex": "#8EC07C" },
+      { "name": "orange",   "hex": "#FE8019" }
+    ],
+    "tags": ["dark", "terminal", "warm", "editor"]
+  },
+  {
+    "name": "Catppuccin Mocha",
+    "slug": "catppuccin-mocha",
+    "description": "The darkest of the four Catppuccin variants. Soft pastel accents on a warm dark purple base — community-driven and available for 250+ apps.",
+    "colors": [
+      { "name": "base",    "hex": "#1E1E2E" },
+      { "name": "surface", "hex": "#313244" },
+      { "name": "overlay", "hex": "#6C7086" },
+      { "name": "text",    "hex": "#CDD6F4" },
+      { "name": "rosewater","hex": "#F5E0DC" },
+      { "name": "flamingo","hex": "#F2CDCD" },
+      { "name": "pink",    "hex": "#F5C2E7" },
+      { "name": "mauve",   "hex": "#CBA6F7" },
+      { "name": "red",     "hex": "#F38BA8" },
+      { "name": "peach",   "hex": "#FAB387" },
+      { "name": "yellow",  "hex": "#F9E2AF" },
+      { "name": "green",   "hex": "#A6E3A1" },
+      { "name": "teal",    "hex": "#94E2D5" },
+      { "name": "blue",    "hex": "#89B4FA" },
+      { "name": "lavender","hex": "#B4BEFE" }
+    ],
+    "tags": ["dark", "terminal", "pastel", "editor"]
+  },
+  {
+    "name": "Tokyo Night",
+    "slug": "tokyo-night",
+    "description": "Cool blues and purples inspired by the lights of downtown Tokyo at night. Clean and minimal with selective neon accents.",
+    "colors": [
+      { "name": "background",  "hex": "#1A1B26" },
+      { "name": "dark surface","hex": "#16161E" },
+      { "name": "surface",     "hex": "#1F2335" },
+      { "name": "comment",     "hex": "#565F89" },
+      { "name": "foreground",  "hex": "#C0CAF5" },
+      { "name": "red",         "hex": "#F7768E" },
+      { "name": "orange",      "hex": "#FF9E64" },
+      { "name": "yellow",      "hex": "#E0AF68" },
+      { "name": "green",       "hex": "#9ECE6A" },
+      { "name": "teal",        "hex": "#73DACA" },
+      { "name": "cyan",        "hex": "#7DCFFF" },
+      { "name": "blue",        "hex": "#7AA2F7" },
+      { "name": "purple",      "hex": "#BB9AF7" }
+    ],
+    "tags": ["dark", "terminal", "cool", "editor"]
+  },
+  {
+    "name": "Solarized",
+    "slug": "solarized",
+    "description": "The complete Solarized palette by Ethan Schoonover — base tones and accent hues precisely calibrated for contrast in both dark and light environments.",
+    "colors": [
+      { "name": "base03",  "hex": "#002B36" },
+      { "name": "base02",  "hex": "#073642" },
+      { "name": "base01",  "hex": "#586E75" },
+      { "name": "base00",  "hex": "#657B83" },
+      { "name": "base0",   "hex": "#839496" },
+      { "name": "base1",   "hex": "#93A1A1" },
+      { "name": "base2",   "hex": "#EEE8D5" },
+      { "name": "base3",   "hex": "#FDF6E3" },
+      { "name": "yellow",  "hex": "#B58900" },
+      { "name": "orange",  "hex": "#CB4B16" },
+      { "name": "red",     "hex": "#DC322F" },
+      { "name": "magenta", "hex": "#D33682" },
+      { "name": "violet",  "hex": "#6C71C4" },
+      { "name": "blue",    "hex": "#268BD2" },
+      { "name": "cyan",    "hex": "#2AA198" },
+      { "name": "green",   "hex": "#859900" }
+    ],
+    "tags": ["terminal", "editor", "light", "dark", "classic"]
   }
 ]

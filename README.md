@@ -63,9 +63,18 @@ All 148 standard CSS named colors with hex values and RGB tuples.
 
 ### Color Palettes
 
-Curated themed palettes: pride flags, ANSI terminal, Material Design, pastels, earth tones, cyberpunk neon, and more.
+16 curated themed palettes: pride flags, ANSI 16, Material Design, pastels, earth tones, cyberpunk neon, Dracula, Nord, Gruvbox, Catppuccin, Tokyo Night, and Solarized.  
+Includes a PHP renderer (`colortest.php`) that outputs a swatch sheet PNG with hex labels.
 
-[Info & Schema](/colors/Readme.MD) · [palettes.json](/colors/palettes.json)
+[Info & Schema](/colors/Readme.MD) · [palettes.json](/colors/palettes.json) · [Preview](/colors/colortest.png)
+
+### Terminal Color Themes
+
+10 popular terminal themes (Dracula, Nord, Solarized, Monokai, Gruvbox, Catppuccin, Tokyo Night, One Dark, Material Dark) in a structured JSON format.  
+Includes exports for Windows Terminal and Alacritty, and a PHP renderer that generates terminal-window-style preview cards.
+
+[Info & Schema](/colors/terminal/Readme.MD) · [themes.json](/colors/terminal/themes.json) · [Preview](/colors/terminal/colortest.png)  
+Exports: [Windows Terminal](/colors/terminal/export/windows-terminal.json) · [Alacritty](/colors/terminal/export/alacritty.toml)
 
 ---
 
@@ -74,9 +83,10 @@ Curated themed palettes: pride flags, ANSI terminal, Material Design, pastels, e
 ### Platform Metadata
 
 Structured metadata for 15+ social media and community platforms.  
-Includes brand colors, federation status (ActivityPub / AT Protocol), handle formats, character limits, and content type support.
+Includes brand colors, federation status (ActivityPub / AT Protocol), handle formats, character limits, and content type support.  
+Includes a PHP renderer (`brandsheet.php`) that generates a brand color reference sheet PNG.
 
-[Info & Schema](/social/Readme.MD) · [platforms.json](/social/platforms.json)
+[Info & Schema](/social/Readme.MD) · [platforms.json](/social/platforms.json) · [Preview](/social/brandsheet.png)
 
 ---
 
@@ -84,9 +94,10 @@ Includes brand colors, federation status (ActivityPub / AT Protocol), handle for
 
 ### HTTP Status Codes
 
-35+ HTTP response codes with names, descriptions, categories (1xx–5xx), cacheability, and RFC sources.
+35+ HTTP response codes with names, descriptions, categories (1xx–5xx), cacheability, and RFC sources.  
+Includes a PHP renderer (`reference.php`) that generates a color-coded reference sheet PNG grouped by category.
 
-[Info & Schema](/web/http/Readme.MD) · [status-codes.json](/web/http/status-codes.json)
+[Info & Schema](/web/http/Readme.MD) · [status-codes.json](/web/http/status-codes.json) · [Preview](/web/http/reference.png)
 
 ### HTTP Methods
 
