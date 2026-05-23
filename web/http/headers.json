@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Accept",
+    "direction": "request",
+    "category": "content-negotiation",
+    "description": "Informs the server about the types of data that can be sent back. It is a MIME type.",
+    "example": "Accept: text/html, application/json",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Accept-Encoding",
+    "direction": "request",
+    "category": "content-negotiation",
+    "description": "Indicates the content encodings the client can understand, such as gzip or br (brotli).",
+    "example": "Accept-Encoding: gzip, deflate, br",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Accept-Language",
+    "direction": "request",
+    "category": "content-negotiation",
+    "description": "Indicates the natural language and locale that the client prefers.",
+    "example": "Accept-Language: en-US, en;q=0.9, de;q=0.8",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Authorization",
+    "direction": "request",
+    "category": "authentication",
+    "description": "Contains the credentials to authenticate a user agent with a server, usually after a 401 response.",
+    "example": "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Cache-Control",
+    "direction": "both",
+    "category": "caching",
+    "description": "Holds directives for caching in both requests and responses. These are used to control caching throughout the request/response chain.",
+    "example": "Cache-Control: max-age=3600, must-revalidate",
+    "source": "RFC 9111"
+  },
+  {
+    "name": "Content-Type",
+    "direction": "both",
+    "category": "representation",
+    "description": "Indicates the media type of the resource or the data being sent in the body.",
+    "example": "Content-Type: application/json; charset=utf-8",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Content-Length",
+    "direction": "both",
+    "category": "representation",
+    "description": "Indicates the size of the message body in bytes.",
+    "example": "Content-Length: 1234",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Cookie",
+    "direction": "request",
+    "category": "cookies",
+    "description": "Contains stored HTTP cookies previously sent by the server with the Set-Cookie header.",
+    "example": "Cookie: session_id=abc123; user_pref=dark",
+    "source": "RFC 6265"
+  },
+  {
+    "name": "Set-Cookie",
+    "direction": "response",
+    "category": "cookies",
+    "description": "Sent by the server to instruct the client to store a cookie.",
+    "example": "Set-Cookie: session_id=abc123; HttpOnly; Secure; SameSite=Strict",
+    "source": "RFC 6265"
+  },
+  {
+    "name": "ETag",
+    "direction": "response",
+    "category": "caching",
+    "description": "An identifier for a specific version of a resource. Allows caches to be more efficient and saves bandwidth.",
+    "example": "ETag: \"33a64df551425fcc55e4d42a148795d9f25f89d4\"",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Host",
+    "direction": "request",
+    "category": "routing",
+    "description": "Specifies the host and port number of the server to which the request is being sent. Required in all HTTP/1.1 requests.",
+    "example": "Host: example.com:443",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "If-None-Match",
+    "direction": "request",
+    "category": "caching",
+    "description": "Makes the request conditional; the server returns the resource only if the ETag does not match.",
+    "example": "If-None-Match: \"33a64df551425fcc55e4d42a148795d9f25f89d4\"",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Location",
+    "direction": "response",
+    "category": "routing",
+    "description": "Indicates the URL to redirect a page to. Only has meaning when served with a 3xx (redirection) or 201 (created) response.",
+    "example": "Location: https://example.com/new-path",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Origin",
+    "direction": "request",
+    "category": "cors",
+    "description": "Indicates where a fetch originates from. Sent with CORS requests and POST requests.",
+    "example": "Origin: https://example.com",
+    "source": "RFC 6454"
+  },
+  {
+    "name": "Access-Control-Allow-Origin",
+    "direction": "response",
+    "category": "cors",
+    "description": "Indicates whether the response can be shared with resources with the given origin.",
+    "example": "Access-Control-Allow-Origin: *",
+    "source": "Fetch Standard"
+  },
+  {
+    "name": "Access-Control-Allow-Methods",
+    "direction": "response",
+    "category": "cors",
+    "description": "Specifies the HTTP methods allowed when accessing a resource in response to a preflight request.",
+    "example": "Access-Control-Allow-Methods: GET, POST, PUT, DELETE",
+    "source": "Fetch Standard"
+  },
+  {
+    "name": "Referer",
+    "direction": "request",
+    "category": "routing",
+    "description": "Contains the address of the previous web page from which a link to the currently requested page was followed.",
+    "example": "Referer: https://example.com/page",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Retry-After",
+    "direction": "response",
+    "category": "rate-limiting",
+    "description": "Indicates how long the user agent should wait before making a follow-up request. Used with 429 and 503 responses.",
+    "example": "Retry-After: 120",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Server",
+    "direction": "response",
+    "category": "server-info",
+    "description": "Contains information about the software used by the origin server to handle the request.",
+    "example": "Server: nginx/1.25.0",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "Strict-Transport-Security",
+    "direction": "response",
+    "category": "security",
+    "description": "Informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS.",
+    "example": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
+    "source": "RFC 6797"
+  },
+  {
+    "name": "User-Agent",
+    "direction": "request",
+    "category": "client-info",
+    "description": "A characteristic string that lets servers and network peers identify the application, operating system, vendor, and version of the requesting client.",
+    "example": "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "WWW-Authenticate",
+    "direction": "response",
+    "category": "authentication",
+    "description": "Defines the authentication method that should be used to gain access to a resource. Returned with a 401 Unauthorized response.",
+    "example": "WWW-Authenticate: Bearer realm=\"api\", error=\"invalid_token\"",
+    "source": "RFC 9110"
+  },
+  {
+    "name": "X-Content-Type-Options",
+    "direction": "response",
+    "category": "security",
+    "description": "Prevents MIME type sniffing by instructing browsers to follow the declared Content-Type.",
+    "example": "X-Content-Type-Options: nosniff",
+    "source": "WHATWG Fetch Standard"
+  },
+  {
+    "name": "X-Frame-Options",
+    "direction": "response",
+    "category": "security",
+    "description": "Indicates whether or not a browser should be allowed to render a page in a frame, iframe, or object. Used to prevent clickjacking.",
+    "example": "X-Frame-Options: DENY",
+    "source": "RFC 7034"
+  },
+  {
+    "name": "Content-Security-Policy",
+    "direction": "response",
+    "category": "security",
+    "description": "Allows web site administrators to control resources the user agent is allowed to load for a given page. Helps prevent XSS and data injection attacks.",
+    "example": "Content-Security-Policy: default-src 'self'; img-src *",
+    "source": "CSP Level 3 W3C"
+  }
+]

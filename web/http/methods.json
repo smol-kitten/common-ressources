@@ -1,0 +1,92 @@
+[
+  {
+    "method": "GET",
+    "safe": true,
+    "idempotent": true,
+    "cacheable": true,
+    "request-body": "not allowed",
+    "response-body": "yes",
+    "description": "Requests a representation of the specified resource. Should only retrieve data and should not have other effects.",
+    "source": "RFC 9110"
+  },
+  {
+    "method": "HEAD",
+    "safe": true,
+    "idempotent": true,
+    "cacheable": true,
+    "request-body": "not allowed",
+    "response-body": "no",
+    "description": "Identical to GET but without the response body. Useful for checking resource existence or retrieving headers before downloading.",
+    "source": "RFC 9110"
+  },
+  {
+    "method": "POST",
+    "safe": false,
+    "idempotent": false,
+    "cacheable": false,
+    "request-body": "yes",
+    "response-body": "yes",
+    "description": "Submits data to the specified resource, often causing a state change or side effects on the server. Used for creating new resources.",
+    "source": "RFC 9110"
+  },
+  {
+    "method": "PUT",
+    "safe": false,
+    "idempotent": true,
+    "cacheable": false,
+    "request-body": "yes",
+    "response-body": "may",
+    "description": "Replaces all current representations of the target resource with the request payload. Creates the resource if it does not exist.",
+    "source": "RFC 9110"
+  },
+  {
+    "method": "PATCH",
+    "safe": false,
+    "idempotent": false,
+    "cacheable": false,
+    "request-body": "yes",
+    "response-body": "yes",
+    "description": "Applies partial modifications to a resource. Unlike PUT, PATCH is not idempotent by default, though a PATCH request can be made idempotent.",
+    "source": "RFC 5789"
+  },
+  {
+    "method": "DELETE",
+    "safe": false,
+    "idempotent": true,
+    "cacheable": false,
+    "request-body": "may",
+    "response-body": "may",
+    "description": "Deletes the specified resource.",
+    "source": "RFC 9110"
+  },
+  {
+    "method": "OPTIONS",
+    "safe": true,
+    "idempotent": true,
+    "cacheable": false,
+    "request-body": "optional",
+    "response-body": "yes",
+    "description": "Describes the communication options for the target resource. Used in CORS preflight requests to determine allowed methods and headers.",
+    "source": "RFC 9110"
+  },
+  {
+    "method": "CONNECT",
+    "safe": false,
+    "idempotent": false,
+    "cacheable": false,
+    "request-body": "no",
+    "response-body": "yes",
+    "description": "Establishes a tunnel to the server identified by the target resource. Used primarily for HTTPS through an HTTP proxy.",
+    "source": "RFC 9110"
+  },
+  {
+    "method": "TRACE",
+    "safe": true,
+    "idempotent": true,
+    "cacheable": false,
+    "request-body": "no",
+    "response-body": "yes",
+    "description": "Performs a message loop-back test along the path to the target resource. Useful for debugging, but often disabled for security reasons.",
+    "source": "RFC 9110"
+  }
+]

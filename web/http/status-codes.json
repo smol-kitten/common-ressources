@@ -1,0 +1,282 @@
+[
+  {
+    "code": 100,
+    "name": "Continue",
+    "description": "The server has received the request headers and the client should proceed to send the request body.",
+    "category": "informational",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 101,
+    "name": "Switching Protocols",
+    "description": "The server agrees to switch protocols as requested by the client, for example upgrading from HTTP/1.1 to WebSockets.",
+    "category": "informational",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 200,
+    "name": "OK",
+    "description": "The request has succeeded. The meaning of the success depends on the HTTP method.",
+    "category": "success",
+    "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 201,
+    "name": "Created",
+    "description": "The request has succeeded and a new resource has been created as a result.",
+    "category": "success",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 202,
+    "name": "Accepted",
+    "description": "The request has been received but not yet acted upon. The request may or may not be eventually acted upon.",
+    "category": "success",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 203,
+    "name": "Non-Authoritative Information",
+    "description": "The returned metadata is not exactly the same as is available from the origin server, but is collected from a local or a third-party copy.",
+    "category": "success",
+    "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 204,
+    "name": "No Content",
+    "description": "There is no content to send for this request, but the headers may be useful.",
+    "category": "success",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 206,
+    "name": "Partial Content",
+    "description": "This response code is used when the Range header is sent from the client to request only part of a resource.",
+    "category": "success",
+    "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 207,
+    "name": "Multi-Status",
+    "description": "Conveys information about multiple resources, for situations where multiple status codes might be appropriate (WebDAV).",
+    "category": "success",
+    "cacheable": false,
+    "source": "RFC 4918"
+  },
+  {
+    "code": 301,
+    "name": "Moved Permanently",
+    "description": "The URL of the requested resource has been changed permanently. The new URL is given in the response.",
+    "category": "redirection",
+    "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 302,
+    "name": "Found",
+    "description": "The URI of the requested resource has been changed temporarily. The client should continue to use the original URI.",
+    "category": "redirection",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 304,
+    "name": "Not Modified",
+    "description": "The response has not been modified, so the client can continue to use the same cached version of the response.",
+    "category": "redirection",
+    "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 307,
+    "name": "Temporary Redirect",
+    "description": "The server sends this response to direct the client to get the requested resource at another URI with the same method that was used in the prior request.",
+    "category": "redirection",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 308,
+    "name": "Permanent Redirect",
+    "description": "The resource is now permanently located at another URI. This is similar to 301 but the client must not change the HTTP method used in the request.",
+    "category": "redirection",
+    "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 400,
+    "name": "Bad Request",
+    "description": "The server cannot or will not process the request due to something that is perceived to be a client error (malformed request syntax, invalid message framing, etc.).",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 401,
+    "name": "Unauthorized",
+    "description": "Although the HTTP standard specifies 'unauthorized', semantically this response means 'unauthenticated'. The client must authenticate itself to get the requested response.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 403,
+    "name": "Forbidden",
+    "description": "The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 404,
+    "name": "Not Found",
+    "description": "The server cannot find the requested resource. The URL is not recognized.",
+    "category": "client-error",
+    "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 405,
+    "name": "Method Not Allowed",
+    "description": "The request method is known by the server but is not supported by the target resource.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 408,
+    "name": "Request Timeout",
+    "description": "This response is sent on an idle connection by some servers, even without any previous request by the client.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 409,
+    "name": "Conflict",
+    "description": "This response is sent when a request conflicts with the current state of the server.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 410,
+    "name": "Gone",
+    "description": "This response is sent when the requested content has been permanently deleted from the server, with no forwarding address.",
+    "category": "client-error",
+    "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 413,
+    "name": "Content Too Large",
+    "description": "Request entity is larger than limits defined by the server; the server might close the connection or return a Retry-After header field.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 414,
+    "name": "URI Too Long",
+    "description": "The URI requested by the client is longer than the server is willing to interpret.",
+    "category": "client-error",
+    "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 415,
+    "name": "Unsupported Media Type",
+    "description": "The media format of the requested data is not supported by the server, so the server is rejecting the request.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 418,
+    "name": "I'm a teapot",
+    "description": "The server refuses the attempt to brew coffee with a teapot. This error is a reference to Hyper Text Coffee Pot Control Protocol defined in RFC 2324.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 2324"
+  },
+  {
+    "code": 422,
+    "name": "Unprocessable Content",
+    "description": "The request was well-formed but was unable to be followed due to semantic errors.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 429,
+    "name": "Too Many Requests",
+    "description": "The user has sent too many requests in a given amount of time (rate limiting).",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 6585"
+  },
+  {
+    "code": 451,
+    "name": "Unavailable For Legal Reasons",
+    "description": "The user agent requested a resource that cannot legally be provided, such as a web page censored by a government.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 7725"
+  },
+  {
+    "code": 500,
+    "name": "Internal Server Error",
+    "description": "The server has encountered a situation it does not know how to handle.",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 501,
+    "name": "Not Implemented",
+    "description": "The request method is not supported by the server and cannot be handled. The only methods that servers are required to support are GET and HEAD.",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 502,
+    "name": "Bad Gateway",
+    "description": "The server, while working as a gateway to get a response needed to handle the request, got an invalid response.",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 503,
+    "name": "Service Unavailable",
+    "description": "The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded.",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 504,
+    "name": "Gateway Timeout",
+    "description": "This error response is given when the server is acting as a gateway and cannot get a response in time.",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 507,
+    "name": "Insufficient Storage",
+    "description": "The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request (WebDAV).",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 4918"
+  }
+]

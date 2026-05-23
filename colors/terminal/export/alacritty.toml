@@ -1,0 +1,130 @@
+# Alacritty color themes — generated from colors/terminal/themes.json
+# To use: copy the desired [[colors]] block into your alacritty.toml,
+# or import the whole file with:  import = ["/path/to/alacritty.toml"]
+# then override with:  [colors] (Alacritty applies imports in order)
+#
+# Each theme is a standalone [[colors]] entry. Alacritty uses the last
+# matching import, so put your preferred theme last.
+
+# ─── Dracula ──────────────────────────────────────────────────────────────────
+[colors.primary]
+background = "#282A36"
+foreground = "#F8F8F2"
+
+[colors.cursor]
+text   = "#282A36"
+cursor = "#F8F8F2"
+
+[colors.selection]
+text       = "CellForeground"
+background = "#44475A"
+
+[colors.normal]
+black   = "#21222C"
+red     = "#FF5555"
+green   = "#50FA7B"
+yellow  = "#F1FA8C"
+blue    = "#BD93F9"
+magenta = "#FF79C6"
+cyan    = "#8BE9FD"
+white   = "#F8F8F2"
+
+[colors.bright]
+black   = "#6272A4"
+red     = "#FF6E6E"
+green   = "#69FF94"
+yellow  = "#FFFFA5"
+blue    = "#D6ACFF"
+magenta = "#FF92DF"
+cyan    = "#A4FFFF"
+white   = "#FFFFFF"
+
+# ─── To use a different theme, replace the blocks above with one of: ──────────
+#
+# Nord
+# [colors.primary]
+# background = "#2E3440"
+# foreground = "#D8DEE9"
+# [colors.normal]
+# black="#3B4252" red="#BF616A" green="#A3BE8C" yellow="#EBCB8B"
+# blue="#81A1C1" magenta="#B48EAD" cyan="#88C0D0" white="#E5E9F0"
+# [colors.bright]
+# black="#4C566A" red="#BF616A" green="#A3BE8C" yellow="#EBCB8B"
+# blue="#81A1C1" magenta="#B48EAD" cyan="#8FBCBB" white="#ECEFF4"
+#
+# Solarized Dark
+# [colors.primary]
+# background = "#002B36"
+# foreground = "#839496"
+# [colors.normal]
+# black="#073642" red="#DC322F" green="#859900" yellow="#B58900"
+# blue="#268BD2" magenta="#D33682" cyan="#2AA198" white="#EEE8D5"
+# [colors.bright]
+# black="#002B36" red="#CB4B16" green="#586E75" yellow="#657B83"
+# blue="#839496" magenta="#6C71C4" cyan="#93A1A1" white="#FDF6E3"
+#
+# Monokai
+# [colors.primary]
+# background = "#272822"
+# foreground = "#F8F8F2"
+# [colors.normal]
+# black="#272822" red="#F92672" green="#A6E22E" yellow="#F4BF75"
+# blue="#66D9E8" magenta="#AE81FF" cyan="#A1EFE4" white="#F8F8F2"
+# [colors.bright]
+# black="#75715E" red="#F92672" green="#A6E22E" yellow="#F4BF75"
+# blue="#66D9E8" magenta="#AE81FF" cyan="#A1EFE4" white="#F9F8F5"
+#
+# Gruvbox Dark
+# [colors.primary]
+# background = "#282828"
+# foreground = "#EBDBB2"
+# [colors.normal]
+# black="#282828" red="#CC241D" green="#98971A" yellow="#D79921"
+# blue="#458588" magenta="#B16286" cyan="#689D6A" white="#A89984"
+# [colors.bright]
+# black="#928374" red="#FB4934" green="#B8BB26" yellow="#FABD2F"
+# blue="#83A598" magenta="#D3869B" cyan="#8EC07C" white="#EBDBB2"
+#
+# Catppuccin Mocha
+# [colors.primary]
+# background = "#1E1E2E"
+# foreground = "#CDD6F4"
+# [colors.normal]
+# black="#45475A" red="#F38BA8" green="#A6E3A1" yellow="#F9E2AF"
+# blue="#89B4FA" magenta="#F5C2E7" cyan="#94E2D5" white="#BAC2DE"
+# [colors.bright]
+# black="#585B70" red="#F38BA8" green="#A6E3A1" yellow="#F9E2AF"
+# blue="#89B4FA" magenta="#F5C2E7" cyan="#94E2D5" white="#A6ADC8"
+#
+# Tokyo Night
+# [colors.primary]
+# background = "#1A1B26"
+# foreground = "#C0CAF5"
+# [colors.normal]
+# black="#15161E" red="#F7768E" green="#9ECE6A" yellow="#E0AF68"
+# blue="#7AA2F7" magenta="#BB9AF7" cyan="#7DCFFF" white="#A9B1D6"
+# [colors.bright]
+# black="#414868" red="#F7768E" green="#9ECE6A" yellow="#E0AF68"
+# blue="#7AA2F7" magenta="#BB9AF7" cyan="#7DCFFF" white="#C0CAF5"
+#
+# One Dark
+# [colors.primary]
+# background = "#282C34"
+# foreground = "#ABB2BF"
+# [colors.normal]
+# black="#282C34" red="#E06C75" green="#98C379" yellow="#E5C07B"
+# blue="#61AFEF" magenta="#C678DD" cyan="#56B6C2" white="#ABB2BF"
+# [colors.bright]
+# black="#5C6370" red="#E06C75" green="#98C379" yellow="#E5C07B"
+# blue="#61AFEF" magenta="#C678DD" cyan="#56B6C2" white="#FFFFFF"
+#
+# Material Dark
+# [colors.primary]
+# background = "#212121"
+# foreground = "#EEFFFF"
+# [colors.normal]
+# black="#546E7A" red="#FF5370" green="#C3E88D" yellow="#FFCB6B"
+# blue="#82AAFF" magenta="#C792EA" cyan="#89DDFF" white="#EEFFFF"
+# [colors.bright]
+# black="#B0BEC5" red="#FF5370" green="#C3E88D" yellow="#FFCB6B"
+# blue="#82AAFF" magenta="#C792EA" cyan="#89DDFF" white="#FFFFFF"
