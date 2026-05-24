@@ -114,15 +114,18 @@ async function generateAll(filter) {
       const html = fs.readFileSync(htmlFile, 'utf8');
       const hydrated = inject(html, resolvedData);
 
-      await page.setViewportSize({ width: preview.width, height: 800 });
-      await page.setContent(hydrated, { waitUntil: preview.waitUntil || 'networkidle' });
+      // Use a tall initial viewport so fullPage captures everything without a
+      // resize step (resize triggers async re-layout that can race the screenshot)
+      await page.setViewportSize({ width: preview.width, height: 4000 });
+      await page.setContent(hydrated, { waitUntil: 'domcontentloaded' });
 
-      // Wait for any JS rendering to finish (xterm.js needs more time to paint)
-      await page.waitForTimeout(preview.id === 'rice' ? 800 : 150);
-
-      // Measure actual page height and resize viewport to fit
-      const height = await page.evaluate(() => document.body.scrollHeight);
-      await page.setViewportSize({ width: preview.width, height: Math.max(height, 200) });
+      // Wait for JS-rendered content to appear in the DOM
+      const waitMs = preview.id === 'rice' ? 2000 : 400;
+      await page.waitForFunction(
+        () => document.body.scrollHeight > 100,
+        { timeout: 10000 }
+      );
+      await page.waitForTimeout(waitMs);
 
       await page.screenshot({ path: outFile, fullPage: true });
       console.log(`  OK  ${preview.output}`);
