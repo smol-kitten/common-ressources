@@ -240,6 +240,156 @@ Covers Ubuntu 22.04/24.04 LTS, Debian, Arch Linux (unofficial via ArchWSL), Kali
 
 ---
 
+## Geo
+
+### Timezones
+
+25 IANA timezone identifiers with UTC offsets, DST flags, region groupings, and example cities.  
+Covers all major inhabited zones across Americas, Europe, Asia, Africa, and the Pacific.
+
+[Info & Schema](/geo/timezones/Readme.MD) · [timezones.json](/geo/timezones/timezones.json)
+
+### Currencies
+
+25 major ISO 4217 currencies with symbol, decimal places, and issuing country.  
+Handles zero-decimal currencies (JPY, KRW, IDR) and regional variations.
+
+[Info & Schema](/geo/currencies/Readme.MD) · [currencies.json](/geo/currencies/currencies.json)
+
+### Countries
+
+25 countries with ISO 3166-1 alpha-2 and alpha-3 codes, capital city, continent, international dial code, currency code, and approximate population.
+
+[Info & Schema](/geo/countries/Readme.MD) · [countries.json](/geo/countries/countries.json)
+
+---
+
+## Science
+
+### Chemical Elements
+
+30 elements from the periodic table — the first 20 by atomic number plus selected heavier elements (Cr, Fe, Ni, Cu, Zn, Br, Kr, Ag, Au, Pb).  
+Each entry includes atomic number, symbol, atomic mass, group, period, category, and room-temperature phase.
+
+[Info & Schema](/science/elements/Readme.MD) · [elements.json](/science/elements/elements.json)
+
+### Units of Measurement
+
+25 common SI and imperial units across length, mass, time, temperature, energy, power, pressure, and volume.  
+Each entry includes a `to_si_factor` for straightforward programmatic conversion between compatible units.
+
+[Info & Schema](/science/units/Readme.MD) · [units.json](/science/units/units.json)
+
+---
+
+## Gaming
+
+### Platforms
+
+18 gaming platforms spanning consoles, handhelds, hybrid devices, and PC — from the Sega Genesis (1989) to the Nintendo Switch 2 (2025).  
+Includes manufacturer, release year, generation, type, and active/discontinued status.
+
+[Info & Schema](/gaming/platforms/Readme.MD) · [platforms.json](/gaming/platforms/platforms.json)
+
+---
+
+## Music
+
+### Genres
+
+20 major music genres with typical BPM ranges, mood tags, geographic origin decade and region, and example artists.  
+Covers rock, pop, hip-hop, electronic, jazz, classical, techno, house, ambient, reggae, metal, and more.
+
+[Info & Schema](/music/genres/Readme.MD) · [genres.json](/music/genres/genres.json)
+
+---
+
+## Food
+
+### World Cuisines
+
+16 major world cuisines with key ingredients, staple dishes, primary cooking methods, and spice level.  
+Covers Italian, Japanese, Indian, Mexican, Thai, Ethiopian, Korean, Peruvian, and more.
+
+[Info & Schema](/food/cuisines/Readme.MD) · [cuisines.json](/food/cuisines/cuisines.json)
+
+---
+
+## Space
+
+### Solar System Planets
+
+All 8 planets of the Solar System with mass, radius, distance from the Sun, orbital and rotation periods, moon count, ring status, and average temperature.
+
+[Info & Schema](/space/planets/Readme.MD) · [planets.json](/space/planets/planets.json)
+
+---
+
+## Networking
+
+### Well-Known Ports
+
+42 well-known TCP/UDP port assignments covering system ports and popular databases/services.  
+Includes SSH (22), HTTP (80), HTTPS (443), databases (MySQL 3306, PostgreSQL 5432, Redis 6379, MongoDB 27017), VPNs (OpenVPN 1194, WireGuard 51820), and more.
+
+[Info & Schema](/net/ports/Readme.MD) · [ports.json](/net/ports/ports.json)
+
+---
+
+## i18n
+
+### Locales
+
+25 BCP 47 locale codes with language name, language code, region, writing script, text direction (ltr/rtl), and native name.  
+Covers Latin, Cyrillic, Arabic, Hebrew, CJK, Devanagari, and Hangul scripts.
+
+[Info & Schema](/i18n/locales/Readme.MD) · [locales.json](/i18n/locales/locales.json)
+
+---
+
+## Biology
+
+### Amino Acids
+
+All 20 standard proteinogenic amino acids with single-letter code, three-letter code, molecular weight, charge, polarity, essentiality, side chain type, and structural category.
+
+[Info & Schema](/bio/amino-acids/Readme.MD) · [amino-acids.json](/bio/amino-acids/amino-acids.json)
+
+---
+
+## Accessibility
+
+### WCAG 2.1 Criteria
+
+25 key WCAG 2.1 success criteria with conformance level (A/AA/AAA), POUR principle, guideline, title, and plain-language description.  
+Covers the most commonly audited requirements across Perceivable, Operable, Understandable, and Robust principles.
+
+[Info & Schema](/accessibility/wcag/Readme.MD) · [criteria.json](/accessibility/wcag/criteria.json)
+
+---
+
+## Dates
+
+### Date Formats
+
+17 common date and datetime format strings — ISO 8601, Unix timestamps, RFC 2822/7231, SQL, regional (US/EU/Japanese), and more.  
+Each entry includes the format pattern, a concrete example, category, applicable systems, and usage notes.
+
+[Info & Schema](/dates/formats/Readme.MD) · [formats.json](/dates/formats/formats.json)
+
+---
+
+## Finance
+
+### Cryptocurrency
+
+Top 20 cryptocurrencies by market cap rank with ticker, full name, decimal precision, consensus mechanism, protocol layer, and founding year.  
+Includes BTC, ETH, SOL, XRP, DOGE, privacy coins (XMR), stablecoins (USDT, USDC), and DeFi tokens.
+
+[Info & Schema](/finance/crypto/Readme.MD) · [crypto.json](/finance/crypto/crypto.json)
+
+---
+
 ## Fonts
 
 ### Web Font Stacks
