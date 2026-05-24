@@ -1,13 +1,8 @@
 # Real Wayland terminal screenshots for each rice theme.
 # Uses Arch Linux + Sway (headless/pixman) + foot terminal + grim.
 #
-# HOW TO TEST ON A PR BRANCH:
-#   1. Go to Actions → "Generate App Screenshots"
-#   2. Click "Run workflow" → select your branch → Run
-#   Screenshots commit back to the branch automatically.
-#
-# Triggers automatically on push to main when theme data or configs change.
-# Also runs when the "screenshots" label is added to a pull request.
+# Runs automatically on PRs when theme data, rice configs, or Docker files change.
+# Also triggerable manually from Actions → "Generate App Screenshots" → Run workflow.
 
 name: Generate App Screenshots
 
@@ -21,7 +16,13 @@ on:
       - 'docker/rice-wayland.sh'
       - 'docker/styles/**'
   pull_request:
-    types: [labeled]
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'colors/terminal/themes.json'
+      - 'rice/**'
+      - 'docker/Dockerfile.rice-wayland'
+      - 'docker/rice-wayland.sh'
+      - 'docker/styles/**'
   workflow_dispatch:
     inputs:
       slug:
@@ -51,10 +52,6 @@ on:
 
 jobs:
   screenshots:
-    # On pull_request events, only run when the "screenshots" label is added
-    if: >
-      github.event_name != 'pull_request' ||
-      github.event.label.name == 'screenshots'
     runs-on: self-hosted
 
     steps:

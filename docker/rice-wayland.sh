@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-# Real Wayland terminal screenshots of rice themes.
-# Each theme gets a matching aesthetic display style.
+# Full desktop scene screenshots of rice themes — 1440x900.
+# Renders: gradient wallpaper + waybar + foot terminal + rofi launcher.
 #
 # Usage (inside the rice-wayland Docker image):
 #   bash docker/rice-wayland.sh            # all themes, auto style
 #   bash docker/rice-wayland.sh dracula    # single theme
 #   STYLE=scp bash docker/rice-wayland.sh  # force a style for all
 #
-# Window geometry env vars (all optional):
-#   WIN_W, WIN_H — terminal width/height in px (default 900x520)
-#   WIN_X, WIN_Y — window position in px       (default 40,40)
+# Geometry env vars (all optional):
+#   WIN_W, WIN_H — foot terminal width/height in px (default 760x460)
+#   WIN_X, WIN_Y — foot terminal position in px     (default 60,55)
 
 set -euo pipefail
 
@@ -18,13 +18,14 @@ OUT_DIR="${REPO_ROOT}/rice/screenshots"
 THEMES_JSON="${REPO_ROOT}/colors/terminal/themes.json"
 STYLES_DIR="${REPO_ROOT}/docker/styles"
 
-# ── window geometry ───────────────────────────────────────────────────────────
-WIN_W="${WIN_W:-900}"
-WIN_H="${WIN_H:-520}"
-WIN_X="${WIN_X:-40}"
-WIN_Y="${WIN_Y:-40}"
-OUTPUT_W="${OUTPUT_W:-980}"
-OUTPUT_H="${OUTPUT_H:-600}"
+# ── output / window geometry ──────────────────────────────────────────────────
+OUTPUT_W=1440
+OUTPUT_H=900
+
+WIN_W="${WIN_W:-760}"
+WIN_H="${WIN_H:-460}"
+WIN_X="${WIN_X:-60}"
+WIN_Y="${WIN_Y:-55}"
 
 # ── theme → display style mapping ────────────────────────────────────────────
 declare -A THEME_STYLE=(
@@ -42,7 +43,6 @@ declare -A THEME_STYLE=(
 
 style_for() {
   local slug="$1"
-  # STYLE env override takes priority
   if [[ -n "${STYLE:-}" ]]; then
     echo "$STYLE"
     return
@@ -83,9 +83,12 @@ default_border none
 default_floating_border none
 gaps inner 0
 gaps outer 0
+# foot terminal: left side, mid-height
 for_window [app_id="foot"] floating enable, \
     resize set ${WIN_W} ${WIN_H}, \
     move position ${WIN_X} ${WIN_Y}
+# rofi: floating, sway will place it centered
+for_window [app_id="rofi"] floating enable
 SWAY_EOF
 
 echo "==> Starting Sway headless (${OUTPUT_W}x${OUTPUT_H})..."
@@ -93,6 +96,7 @@ WLR_BACKENDS=headless WLR_RENDERER=pixman \
   sway --config "$SWAY_CONF" 2>/tmp/sway.log &
 SWAY_PID=$!
 
+# Wait up to 4 seconds for sway to become responsive
 for i in $(seq 1 40); do
   swaymsg -t get_version >/dev/null 2>&1 && break
   sleep 0.1
@@ -181,14 +185,295 @@ for SLUG in "${SLUGS[@]}"; do
     STYLE_SCRIPT="${STYLES_DIR}/minimal.sh"
   fi
 
+  # ── a. read theme colors for wallpaper ──────────────────────────────────────
+  THEME_DATA=$(jq -r ".[] | select(.slug == \"$SLUG\")" "$THEMES_JSON")
+  BG_COLOR=$(printf '%s' "$THEME_DATA" | jq -r '.background')
+  # Prefer blue, fall back to cyan, then foreground
+  ACCENT_COLOR=$(printf '%s' "$THEME_DATA" | jq -r '
+    if .colors.blue and (.colors.blue != "") then .colors.blue
+    elif .colors.cyan and (.colors.cyan != "") then .colors.cyan
+    else .foreground
+    end')
+
+  # ── b. generate gradient wallpaper ──────────────────────────────────────────
+  WALLPAPER="/tmp/wallpaper-${SLUG}.png"
+  echo "  Generating wallpaper: ${BG_COLOR} → ${ACCENT_COLOR}"
+  convert -size "${OUTPUT_W}x${OUTPUT_H}" \
+    gradient:"${BG_COLOR}-${ACCENT_COLOR}" \
+    -alpha set -channel Alpha -evaluate set 100% \
+    "$WALLPAPER"
+
+  # ── c. set wallpaper via swaybg ──────────────────────────────────────────────
+  # Kill any previous swaybg instance
+  pkill -x swaybg 2>/dev/null || true
+  sleep 0.1
+  SWAYBG_PID=""
+  swaybg -o HEADLESS-1 -i "$WALLPAPER" -m fill &
+  SWAYBG_PID=$!
+  sleep 0.5
+
+  # ── d. generate foot config ──────────────────────────────────────────────────
   FOOT_CONF=$(generate_foot_config "$SLUG")
 
+  # ── e. generate and launch waybar ────────────────────────────────────────────
+  # Kill any previous waybar instance
+  pkill -x waybar 2>/dev/null || true
+  sleep 0.2
+
+  # Write waybar JSON config
+  WAYBAR_JSON="/tmp/waybar-${SLUG}.json"
+  cat > "$WAYBAR_JSON" <<WAYBAR_JSON_EOF
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "output": "HEADLESS-1",
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory"],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "urgent": "",
+      "focused": "",
+      "default": ""
+    },
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": []
+    }
+  },
+  "clock": {
+    "format": " {:%H:%M   %a %d %b}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 5,
+    "tooltip": false
+  },
+  "memory": {
+    "format": " {}%",
+    "interval": 5,
+    "tooltip": false
+  }
+}
+WAYBAR_JSON_EOF
+
+  # Build waybar CSS: start with the theme's CSS variables, then append layout rules
+  WAYBAR_CSS="/tmp/waybar-${SLUG}.css"
+  THEME_CSS="${REPO_ROOT}/rice/waybar/${SLUG}.css"
+
+  if [[ -f "$THEME_CSS" ]]; then
+    cp "$THEME_CSS" "$WAYBAR_CSS"
+  else
+    # Fallback: empty :root block so CSS vars resolve to safe defaults
+    printf ':root {}\n' > "$WAYBAR_CSS"
+  fi
+
+  # Append full layout rules after the theme variables
+  cat >> "$WAYBAR_CSS" <<WAYBAR_CSS_EOF
+
+/* ── layout rules appended by rice-wayland.sh ── */
+* {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  border: none;
+  margin: 0;
+  padding: 0 8px;
+}
+
+window#waybar {
+  background-color: var(--background);
+  color: var(--foreground);
+  border-bottom: 2px solid var(--bright-black);
+}
+
+#workspaces {
+  padding: 0;
+}
+
+#workspaces button {
+  color: var(--bright-black);
+  background: transparent;
+  padding: 0 6px;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  color: var(--foreground);
+  box-shadow: none;
+}
+
+#workspaces button.focused {
+  color: var(--cyan);
+  font-weight: bold;
+  border-bottom: 2px solid var(--cyan);
+}
+
+#workspaces button.urgent {
+  color: var(--red);
+  border-bottom: 2px solid var(--red);
+}
+
+#clock {
+  color: var(--green);
+  font-weight: bold;
+  padding: 0 16px;
+}
+
+#cpu {
+  color: var(--blue);
+  padding: 0 8px;
+}
+
+#memory {
+  color: var(--magenta);
+  padding: 0 8px;
+}
+
+tooltip {
+  background: var(--background);
+  border: 1px solid var(--bright-black);
+  border-radius: 4px;
+}
+
+tooltip label {
+  color: var(--foreground);
+}
+WAYBAR_CSS_EOF
+
+  echo "  Launching waybar..."
+  DBUS_SESSION_BUS_ADDRESS="" \
+  waybar --config "$WAYBAR_JSON" --style "$WAYBAR_CSS" \
+    2>/tmp/waybar-${SLUG}.log &
+  WAYBAR_PID=$!
+  # Give waybar time to render its bar
+  sleep 1.0
+
+  # ── f. generate and launch rofi ──────────────────────────────────────────────
+  # Kill any previous rofi instance
+  pkill -x rofi 2>/dev/null || true
+  sleep 0.1
+
+  ROFI_RASI="/tmp/rofi-${SLUG}.rasi"
+  THEME_RASI="${REPO_ROOT}/rice/rofi/${SLUG}.rasi"
+
+  if [[ -f "$THEME_RASI" ]]; then
+    cp "$THEME_RASI" "$ROFI_RASI"
+  else
+    # Minimal fallback color block so layout rules compile
+    cat > "$ROFI_RASI" <<ROFI_FALLBACK_EOF
+* {
+  background-color: #1e1e2e;
+  foreground: #cdd6f4;
+  normal-background: #1e1e2e;
+  normal-foreground: #cdd6f4;
+  selected-normal-background: #89b4fa;
+  selected-normal-foreground: #1e1e2e;
+  border-color: #6c7086;
+}
+ROFI_FALLBACK_EOF
+  fi
+
+  # Append full layout rules after the theme color definitions
+  cat >> "$ROFI_RASI" <<ROFI_LAYOUT_EOF
+
+/* ── layout rules appended by rice-wayland.sh ── */
+window {
+  width: 480px;
+  padding: 12px;
+  background-color: @background-color;
+  border: 2px solid @border-color;
+  border-radius: 8px;
+  x-offset: $((OUTPUT_W - 540));
+  y-offset: 40;
+  location: northwest;
+  anchor: northwest;
+}
+
+mainbox {
+  background-color: transparent;
+  spacing: 8px;
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: @normal-background;
+  padding: 8px 12px;
+  border-radius: 4px;
+  children: [prompt, entry];
+}
+
+prompt {
+  background-color: transparent;
+  text-color: @selected-normal-background;
+  padding: 0 6px 0 0;
+}
+
+entry {
+  background-color: transparent;
+  text-color: @foreground;
+  placeholder: "Type to filter...";
+  placeholder-color: @border-color;
+}
+
+listview {
+  lines: 6;
+  scrollbar: false;
+  background-color: transparent;
+  spacing: 4px;
+}
+
+element {
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: @normal-background;
+  text-color: @normal-foreground;
+}
+
+element selected {
+  background-color: @selected-normal-background;
+  text-color: @selected-normal-foreground;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+}
+ROFI_LAYOUT_EOF
+
+  echo "  Launching rofi..."
+  printf 'Firefox\nAlacritty\nKitty\nNeovim\nFile Manager\nSpotify\nDiscord\nVS Code\nTerminal\nFiles\nBrave\nMPV' \
+    | rofi -dmenu -p "Search" \
+           -config "$ROFI_RASI" \
+           -no-custom \
+           -selected-row 2 \
+    2>/tmp/rofi-${SLUG}.log &
+  ROFI_PID=$!
+  # Give rofi time to render
+  sleep 0.8
+
+  # ── g. launch foot terminal ───────────────────────────────────────────────────
+  echo "  Launching foot..."
   foot \
     --config="$FOOT_CONF" \
     --app-id=foot \
     -- bash "$STYLE_SCRIPT" "$THEME_NAME" "$SLUG" &
   FOOT_PID=$!
 
+  # ── h. wait for foot window to appear in sway tree ───────────────────────────
   APPEARED=0
   for i in $(seq 1 50); do
     if swaymsg -t get_tree 2>/dev/null \
@@ -200,40 +485,64 @@ for SLUG in "${SLUGS[@]}"; do
 
   if [[ $APPEARED -eq 0 ]]; then
     echo "  FAIL — foot window did not appear"
-    kill "$FOOT_PID" 2>/dev/null || true
+    kill "$FOOT_PID"  2>/dev/null || true
+    kill "$ROFI_PID"  2>/dev/null || true
+    kill "$WAYBAR_PID" 2>/dev/null || true
+    [[ -n "${SWAYBG_PID:-}" ]] && kill "$SWAYBG_PID" 2>/dev/null || true
     FAIL=$((FAIL + 1)); continue
   fi
 
-  sleep 0.4  # let the style script finish printing
+  # ── i. wait for rendering to settle ─────────────────────────────────────────
+  sleep 0.5
 
-  GEOM=$(swaymsg -t get_tree 2>/dev/null \
-    | jq -r '.. | objects | select(.app_id == "foot") | .rect
-              | "\(.x),\(.y) \(.width)x\(.height)"' \
-    | head -1)
+  # ── j. screenshot the full HEADLESS-1 output ─────────────────────────────────
+  SHOT_RAW="/tmp/shot-${SLUG}.png"
+  grim -o HEADLESS-1 "$SHOT_RAW"
+  echo "  Captured full output → $SHOT_RAW"
 
+  # ── k. burn attribution text onto the bottom-right corner ────────────────────
   OUT="${OUT_DIR}/${SLUG}.png"
 
-  if [[ -n "$GEOM" && "$GEOM" != "null" ]]; then
-    grim -o HEADLESS-1 -g "$GEOM" "$OUT"
-    echo "  OK  $OUT  [$GEOM]"
-  else
-    FULL="/tmp/full-${SLUG}.png"
-    grim -o HEADLESS-1 "$FULL"
-    convert "$FULL" -crop "${WIN_W}x${WIN_H}+${WIN_X}+${WIN_Y}" +repage "$OUT"
-    echo "  OK  $OUT  (fallback crop)"
-    rm -f "$FULL"
-  fi
+  # Calculate positions for the badge
+  BADGE_X1=$((OUTPUT_W - 320))
+  BADGE_Y1=$((OUTPUT_H - 26))
+  BADGE_X2=$((OUTPUT_W - 4))
+  BADGE_Y2=$((OUTPUT_H - 4))
+  TEXT_X=$((OUTPUT_W - 316))
+  TEXT_Y=$((OUTPUT_H - 8))
 
+  convert "$SHOT_RAW" \
+    -font DejaVu-Sans \
+    -pointsize 11 \
+    -fill "rgba(0,0,0,0.6)" \
+    -draw "roundRectangle ${BADGE_X1},${BADGE_Y1} ${BADGE_X2},${BADGE_Y2} 4,4" \
+    -fill "rgba(255,255,255,0.8)" \
+    -annotate "+${TEXT_X}+${TEXT_Y}" "Theme: ${THEME_NAME} · Wallpaper: ImageMagick gradient" \
+    "$OUT"
+
+  echo "  OK  $OUT"
   OK=$((OK + 1))
-  kill "$FOOT_PID" 2>/dev/null || true
-  wait "$FOOT_PID" 2>/dev/null || true
+
+  # ── l. kill foot, rofi, waybar, swaybg ───────────────────────────────────────
+  kill "$FOOT_PID"   2>/dev/null || true
+  wait "$FOOT_PID"   2>/dev/null || true
+  kill "$ROFI_PID"   2>/dev/null || true
+  wait "$ROFI_PID"   2>/dev/null || true
+  kill "$WAYBAR_PID" 2>/dev/null || true
+  wait "$WAYBAR_PID" 2>/dev/null || true
+  [[ -n "${SWAYBG_PID:-}" ]] && { kill "$SWAYBG_PID" 2>/dev/null || true; wait "$SWAYBG_PID" 2>/dev/null || true; }
+
+  # ── m. clean up temp files ────────────────────────────────────────────────────
+  rm -f "$SHOT_RAW" "$WALLPAPER" "$FOOT_CONF" \
+        "$WAYBAR_JSON" "$WAYBAR_CSS" "$ROFI_RASI"
+
   sleep 0.2
 done
 
 # ── cleanup ───────────────────────────────────────────────────────────────────
 kill "$SWAY_PID" 2>/dev/null || true
 wait "$SWAY_PID" 2>/dev/null || true
-rm -f "$SWAY_CONF" /tmp/foot-*.ini
+rm -f "$SWAY_CONF" /tmp/sway.log /tmp/waybar-*.log /tmp/rofi-*.log
 
 echo ""
 echo "Done: ${OK} saved, ${FAIL} failed."

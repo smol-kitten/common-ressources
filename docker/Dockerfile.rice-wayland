@@ -33,6 +33,14 @@ RUN pacman -Syu --noconfirm \
       ttf-jetbrains-mono \
       # Utilities
       git bash \
+      # Top bar (Wayland-native)
+      waybar \
+      # App launcher — Wayland fork of rofi
+      rofi-wayland \
+      # Set wallpaper on sway output
+      swaybg \
+      # Optional: wallpaper download / HTTP requests
+      curl \
     && pacman -Scc --noconfirm
 
 WORKDIR /repo
