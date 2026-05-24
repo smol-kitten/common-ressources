@@ -1,7 +1,13 @@
 # Real Wayland terminal screenshots for each rice theme.
 # Uses Arch Linux + Sway (headless/pixman) + foot terminal + grim.
-# Triggered when themes.json or configs change, or on demand.
-# Commits generated screenshots back to the branch.
+#
+# HOW TO TEST ON A PR BRANCH:
+#   1. Go to Actions → "Generate App Screenshots"
+#   2. Click "Run workflow" → select your branch → Run
+#   Screenshots commit back to the branch automatically.
+#
+# Triggers automatically on push to main when theme data or configs change.
+# Also runs when the "screenshots" label is added to a pull request.
 
 name: Generate App Screenshots
 
@@ -13,18 +19,25 @@ on:
       - 'rice/**'
       - 'docker/Dockerfile.rice-wayland'
       - 'docker/rice-wayland.sh'
+      - 'docker/styles/**'
+  pull_request:
+    types: [labeled]
   workflow_dispatch:
     inputs:
       slug:
-        description: 'Theme slug (leave empty for all)'
+        description: 'Theme slug (empty = all)'
+        required: false
+        default: ''
+      style:
+        description: 'Force a display style (cyberpunk|scp|anime|science|retro|macos|neofetch|windows|minimal)'
         required: false
         default: ''
       win_w:
-        description: 'Terminal window width (px)'
+        description: 'Window width px'
         required: false
         default: '900'
       win_h:
-        description: 'Terminal window height (px)'
+        description: 'Window height px'
         required: false
         default: '520'
       win_x:
@@ -38,11 +51,16 @@ on:
 
 jobs:
   screenshots:
+    # On pull_request events, only run when the "screenshots" label is added
+    if: >
+      github.event_name != 'pull_request' ||
+      github.event.label.name == 'screenshots'
     runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
@@ -61,8 +79,9 @@ jobs:
             -e WIN_H="${{ github.event.inputs.win_h || '520' }}" \
             -e WIN_X="${{ github.event.inputs.win_x || '40' }}" \
             -e WIN_Y="${{ github.event.inputs.win_y || '40' }}" \
+            -e STYLE="${{ github.event.inputs.style || '' }}" \
             rice-wayland \
-            bash docker/rice-wayland.sh ${{ github.event.inputs.slug }}
+            bash docker/rice-wayland.sh ${{ github.event.inputs.slug || '' }}
 
       - name: List generated screenshots
         run: |
@@ -76,11 +95,13 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git remote set-url origin \
             https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git pull --rebase origin "$(git rev-parse --abbrev-ref HEAD)" || true
+          # Pull any commits made since checkout (PR preview bot etc.)
+          BRANCH="${{ github.event.pull_request.head.ref || github.ref_name }}"
+          git pull --rebase origin "$BRANCH" || true
           git add rice/screenshots/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No screenshot changes."
           else
             git commit -m "chore: regenerate rice theme screenshots [skip ci]"
-            git push origin HEAD
+            git push origin "HEAD:$BRANCH"
           fi

@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Windows CMD / PowerShell style — fun contrast on any theme
+THEME="${1:-theme}"
+clear
+printf "\033[2J\033[H"
+printf "\n"
+printf "  \033[1;34mWindows PowerShell\033[0m\n"
+printf "  \033[90mCopyright (C) Microsoft Corporation. All rights reserved.\033[0m\n"
+printf "\n"
+printf "  \033[90mInstall the latest PowerShell for new features and improvements!\033[0m\n"
+printf "  \033[90mhttps://aka.ms/PSWindows   ·   Theme: \033[36m%s\033[0m\n" "$THEME"
+printf "\n"
+printf "  \033[33mPS\033[0m \033[36mC:\\Users\\user\033[0m\033[1;37m>\033[0m Get-ChildItem\n"
+printf "\n"
+printf "  \033[90m    Directory: C:\\Users\\user\033[0m\n"
+printf "\n"
+printf "  \033[90m%-12s  %-10s  %-6s  %s\033[0m\n" "Mode" "LastWriteTime" "Length" "Name"
+printf "  \033[90m────────────  ──────────  ──────  ────────────────\033[0m\n"
+printf "  \033[36md----\033[0m        \033[90m01/06/2024\033[0m   \033[90m<DIR>\033[0m   .config\n"
+printf "  \033[36md----\033[0m        \033[90m01/06/2024\033[0m   \033[90m<DIR>\033[0m   Desktop\n"
+printf "  \033[36md----\033[0m        \033[90m01/06/2024\033[0m   \033[90m<DIR>\033[0m   Documents\n"
+printf "  \033[37m-a---\033[0m        \033[90m01/06/2024\033[0m   \033[33m1,234\033[0m   .profile.ps1\n"
+printf "\n"
+printf "  \033[33mPS\033[0m \033[36mC:\\Users\\user\033[0m\033[1;37m>\033[0m \033[1;37m█\033[0m\n"
+sleep 999
