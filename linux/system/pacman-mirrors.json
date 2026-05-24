@@ -1,0 +1,222 @@
+[
+  {
+    "url": "https://mirror.rackspace.com/archlinux/$repo/os/$arch",
+    "country": "United States",
+    "code": "US",
+    "continent": "Americas",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Rackspace CDN mirror, high bandwidth"
+  },
+  {
+    "url": "https://mirrors.kernel.org/archlinux/$repo/os/$arch",
+    "country": "United States",
+    "code": "US",
+    "continent": "Americas",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Kernel.org official mirror, very reliable"
+  },
+  {
+    "url": "https://mirror.leaseweb.net/archlinux/$repo/os/$arch",
+    "country": "United States",
+    "code": "US",
+    "continent": "Americas",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Leaseweb CDN, also available in EU"
+  },
+  {
+    "url": "https://mirrors.mit.edu/archlinux/$repo/os/$arch",
+    "country": "United States",
+    "code": "US",
+    "continent": "Americas",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "MIT university mirror, academic network"
+  },
+  {
+    "url": "https://mirror.sfo12.us.leaseweb.net/archlinux/$repo/os/$arch",
+    "country": "United States",
+    "code": "US",
+    "continent": "Americas",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "medium",
+    "notes": "Leaseweb San Francisco datacenter"
+  },
+  {
+    "url": "https://archlinux.mirror.ca.colo4.ca/$repo/os/$arch",
+    "country": "Canada",
+    "code": "CA",
+    "continent": "Americas",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "medium",
+    "notes": "Canadian mirror, colo4 network"
+  },
+  {
+    "url": "https://mirror.archlinux.ikoula.com/$repo/os/$arch",
+    "country": "France",
+    "code": "FR",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Ikoula datacenter, Paris, France"
+  },
+  {
+    "url": "https://mirrors.ircam.fr/pub/archlinux/$repo/os/$arch",
+    "country": "France",
+    "code": "FR",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "IRCAM institute mirror, Paris"
+  },
+  {
+    "url": "https://ftp.halifax.rwth-aachen.de/archlinux/$repo/os/$arch",
+    "country": "Germany",
+    "code": "DE",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "RWTH Aachen university mirror, high capacity"
+  },
+  {
+    "url": "https://mirror.netcologne.de/archlinux/$repo/os/$arch",
+    "country": "Germany",
+    "code": "DE",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Netcologne ISP mirror, Cologne"
+  },
+  {
+    "url": "https://packages.oth-regensburg.de/archlinux/$repo/os/$arch",
+    "country": "Germany",
+    "code": "DE",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "medium",
+    "notes": "OTH Regensburg university mirror"
+  },
+  {
+    "url": "https://mirror.netzwerge.de/archlinux/$repo/os/$arch",
+    "country": "Germany",
+    "code": "DE",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Netzwerge datacenter mirror"
+  },
+  {
+    "url": "https://archlinux.mirrors.ovh.net/archlinux/$repo/os/$arch",
+    "country": "France",
+    "code": "FR",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "OVH datacenter mirror"
+  },
+  {
+    "url": "https://mirror.hetzner.com/archlinux/packages/$repo/os/$arch",
+    "country": "Germany",
+    "code": "DE",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Hetzner official mirror, ideal for Hetzner VPS"
+  },
+  {
+    "url": "https://mirrors.dotsrc.org/archlinux/$repo/os/$arch",
+    "country": "Denmark",
+    "code": "DK",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Dotsrc.org, Denmark, long-running reliable mirror"
+  },
+  {
+    "url": "https://mirror.nl.leaseweb.net/archlinux/$repo/os/$arch",
+    "country": "Netherlands",
+    "code": "NL",
+    "continent": "Europe",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Leaseweb Netherlands datacenter"
+  },
+  {
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch",
+    "country": "China",
+    "code": "CN",
+    "continent": "Asia",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Tsinghua University TUNA mirror, major Chinese mirror"
+  },
+  {
+    "url": "https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch",
+    "country": "China",
+    "code": "CN",
+    "continent": "Asia",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "USTC (University of Science and Technology of China) mirror"
+  },
+  {
+    "url": "https://mirror.aktkn.sg/archlinux/$repo/os/$arch",
+    "country": "Singapore",
+    "code": "SG",
+    "continent": "Asia",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "medium",
+    "notes": "Singapore mirror, good for Southeast Asia"
+  },
+  {
+    "url": "https://mirrors.cat.net/archlinux/$repo/os/$arch",
+    "country": "Japan",
+    "code": "JP",
+    "continent": "Asia",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "Cat.net mirror in Japan, excellent uptime"
+  },
+  {
+    "url": "https://mirror.archlinux.tw/ArchLinux/$repo/os/$arch",
+    "country": "Taiwan",
+    "code": "TW",
+    "continent": "Asia",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "medium",
+    "notes": "Taiwan Arch Linux community mirror"
+  },
+  {
+    "url": "https://mirror.aarnet.edu.au/pub/archlinux/$repo/os/$arch",
+    "country": "Australia",
+    "code": "AU",
+    "continent": "Asia",
+    "protocol": "https",
+    "active": true,
+    "speed-tier": "fast",
+    "notes": "AARNet (Australian Academic Research Network) mirror"
+  }
+]

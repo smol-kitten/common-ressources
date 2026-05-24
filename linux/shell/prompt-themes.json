@@ -1,0 +1,134 @@
+[
+  {
+    "name": "robbyrussell",
+    "slug": "robbyrussell",
+    "shell": "zsh",
+    "framework": "oh-my-zsh",
+    "install-cmd": "ZSH_THEME=\"robbyrussell\" # set in ~/.zshrc",
+    "preview-colors": ["#00afff", "#ffffff", "#af0000"],
+    "description": "The default Oh My Zsh theme. Shows a check/cross indicator, current directory, and git branch in a compact one-line format.",
+    "features": ["git-branch", "status-indicator", "minimal", "single-line"],
+    "tags": ["omz", "default", "minimal", "git"]
+  },
+  {
+    "name": "agnoster",
+    "slug": "agnoster",
+    "shell": "zsh",
+    "framework": "oh-my-zsh",
+    "install-cmd": "ZSH_THEME=\"agnoster\" # set in ~/.zshrc, requires Powerline font",
+    "preview-colors": ["#585858", "#00afff", "#d7005f", "#5f8700"],
+    "description": "Powerline-style theme with segmented prompt blocks showing user, host, directory, git status, and virtualenv. Requires a Nerd Font or Powerline-patched font.",
+    "features": ["powerline-style", "git-status", "virtualenv", "username", "hostname", "segments"],
+    "tags": ["omz", "powerline", "nerd-font", "segments", "popular"]
+  },
+  {
+    "name": "Powerlevel10k",
+    "slug": "powerlevel10k",
+    "shell": "zsh",
+    "framework": "oh-my-zsh",
+    "install-cmd": "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k && ZSH_THEME=\"powerlevel10k/powerlevel10k\"",
+    "preview-colors": ["#00afff", "#d75f00", "#af00af", "#00af5f", "#ff5f00"],
+    "description": "The most popular Zsh theme. Extremely fast (instant prompt), feature-rich, and fully customizable via an interactive wizard. Supports lean, classic, rainbow, and pure styles.",
+    "features": ["instant-prompt", "interactive-wizard", "segments", "git-status", "async", "transient-prompt", "nerd-font"],
+    "tags": ["omz", "popular", "fast", "nerd-font", "configurable", "wizard"]
+  },
+  {
+    "name": "Spaceship",
+    "slug": "spaceship",
+    "shell": "zsh",
+    "framework": "oh-my-zsh",
+    "install-cmd": "git clone https://github.com/spaceship-prompt/spaceship-prompt.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship && ZSH_THEME=\"spaceship\"",
+    "preview-colors": ["#ffaf00", "#00afff", "#5faf00", "#af87ff"],
+    "description": "A minimalist but feature-rich Zsh prompt for astronauts. Two-line layout with async rendering, supports Node, Python, Docker, Git, Kubernetes, and many more contexts.",
+    "features": ["two-line", "async", "context-aware", "node", "python", "docker", "kubernetes", "git"],
+    "tags": ["omz", "modern", "two-line", "context-aware", "popular"]
+  },
+  {
+    "name": "Starship",
+    "slug": "starship",
+    "shell": "zsh",
+    "framework": "none",
+    "install-cmd": "curl -sS https://starship.rs/install.sh | sh && echo 'eval \"$(starship init zsh)\"' >> ~/.zshrc",
+    "preview-colors": ["#dd0077", "#ffa500", "#00af5f", "#5f87ff"],
+    "description": "Cross-shell, blazing-fast prompt written in Rust. Works with zsh, bash, fish, PowerShell, and more. Configured via TOML. Nerd Font optional but recommended.",
+    "features": ["cross-shell", "rust", "toml-config", "async", "git-status", "cloud-context", "nerd-font-optional"],
+    "tags": ["cross-shell", "rust", "fast", "toml", "popular", "nerd-font-optional"]
+  },
+  {
+    "name": "Pure",
+    "slug": "pure",
+    "shell": "zsh",
+    "framework": "none",
+    "install-cmd": "npm install --global pure-prompt && autoload -U promptinit && promptinit && prompt pure",
+    "preview-colors": ["#875faf", "#ffffff", "#5f87ff"],
+    "description": "A minimal, elegant single-line Zsh prompt by Sindre Sorhus. Shows git status asynchronously. No framework dependency, no special fonts required.",
+    "features": ["minimal", "async-git", "no-framework", "no-special-font", "npm-install"],
+    "tags": ["minimal", "no-framework", "elegant", "async"]
+  },
+  {
+    "name": "bira",
+    "slug": "bira",
+    "shell": "zsh",
+    "framework": "oh-my-zsh",
+    "install-cmd": "ZSH_THEME=\"bira\" # set in ~/.zshrc",
+    "preview-colors": ["#af5f87", "#00afff", "#878787"],
+    "description": "A two-line Oh My Zsh theme showing username, hostname, Python virtualenv, Ruby version, and git branch. Great for development workflows.",
+    "features": ["two-line", "username", "hostname", "virtualenv", "ruby", "git-branch"],
+    "tags": ["omz", "two-line", "dev", "python", "ruby"]
+  },
+  {
+    "name": "ys",
+    "slug": "ys",
+    "shell": "zsh",
+    "framework": "oh-my-zsh",
+    "install-cmd": "ZSH_THEME=\"ys\" # set in ~/.zshrc",
+    "preview-colors": ["#00af5f", "#0087af", "#ff8700"],
+    "description": "Clean Oh My Zsh theme with a two-line prompt showing full path, username, hostname, git info, and execution time. Clear and informative without Powerline fonts.",
+    "features": ["two-line", "full-path", "git-info", "exec-time", "no-powerline-font"],
+    "tags": ["omz", "two-line", "informative", "no-powerline-font"]
+  },
+  {
+    "name": "Tide",
+    "slug": "tide",
+    "shell": "fish",
+    "framework": "none",
+    "install-cmd": "fisher install IlanCosman/tide@v6",
+    "preview-colors": ["#5f87ff", "#00af5f", "#ff5f00", "#af00af"],
+    "description": "The fastest and most feature-rich Fish shell prompt. Inspired by Powerlevel10k with an interactive configuration wizard, async rendering, and Nerd Font icons.",
+    "features": ["async", "interactive-wizard", "git-status", "nerd-font", "segments", "fast"],
+    "tags": ["fish", "fast", "nerd-font", "wizard", "popular"]
+  },
+  {
+    "name": "Hydro",
+    "slug": "hydro",
+    "shell": "fish",
+    "framework": "none",
+    "install-cmd": "fisher install jorgebucaran/hydro",
+    "preview-colors": ["#6699cc", "#99ccbb", "#f2777a"],
+    "description": "Ultra-minimal Fish prompt with async git status and zero config. Renders in pure Fish with no dependencies.",
+    "features": ["minimal", "async-git", "no-dependencies", "fish-pure"],
+    "tags": ["fish", "minimal", "async", "zero-config"]
+  },
+  {
+    "name": "Bash Powerline",
+    "slug": "bash-powerline",
+    "shell": "bash",
+    "framework": "none",
+    "install-cmd": "curl -L https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh && source ~/.bash-powerline.sh",
+    "preview-colors": ["#585858", "#00afff", "#d70000"],
+    "description": "Powerline-style prompt for bash using only shell builtins and Unicode symbols. Shows exit status, git branch, and directory with arrow separators.",
+    "features": ["powerline-style", "git-branch", "exit-status", "unicode-symbols", "no-external-deps"],
+    "tags": ["bash", "powerline", "minimal", "no-deps"]
+  },
+  {
+    "name": "Oh My Posh",
+    "slug": "oh-my-posh",
+    "shell": "bash",
+    "framework": "none",
+    "install-cmd": "curl -s https://ohmyposh.dev/install.sh | bash -s && eval \"$(oh-my-posh init bash)\"",
+    "preview-colors": ["#00afff", "#ff5f00", "#af00af", "#00af5f"],
+    "description": "Cross-shell prompt engine with dozens of themes. Works in bash, zsh, fish, and PowerShell. Configured via JSON/TOML/YAML theme files. Nerd Font recommended.",
+    "features": ["cross-shell", "theme-files", "json-toml-yaml-config", "many-segments", "nerd-font"],
+    "tags": ["bash", "cross-shell", "configurable", "themes", "nerd-font"]
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "name": "Windows Terminal",
+    "slug": "windows-terminal",
+    "id": "Microsoft.WindowsTerminal",
+    "category": "terminal",
+    "description": "Modern tabbed terminal with GPU acceleration, themes, and pane splitting.",
+    "install-cmd": "winget install Microsoft.WindowsTerminal",
+    "open-source": true,
+    "tags": ["terminal", "microsoft", "essential"]
+  },
+  {
+    "name": "PowerShell 7",
+    "slug": "powershell-7",
+    "id": "Microsoft.PowerShell",
+    "category": "shell",
+    "description": "Cross-platform PowerShell 7 (pwsh). Installs alongside Windows PowerShell 5.1.",
+    "install-cmd": "winget install Microsoft.PowerShell",
+    "open-source": true,
+    "tags": ["shell", "microsoft", "essential"]
+  },
+  {
+    "name": "Git",
+    "slug": "git",
+    "id": "Git.Git",
+    "category": "development",
+    "description": "Git version control system with Git Bash, Git GUI, and shell integration.",
+    "install-cmd": "winget install Git.Git",
+    "open-source": true,
+    "tags": ["git", "vcs", "development", "essential"]
+  },
+  {
+    "name": "Visual Studio Code",
+    "slug": "vscode",
+    "id": "Microsoft.VisualStudioCode",
+    "category": "editor",
+    "description": "Lightweight but powerful source code editor with extension ecosystem.",
+    "install-cmd": "winget install Microsoft.VisualStudioCode",
+    "open-source": true,
+    "tags": ["editor", "ide", "microsoft", "essential"]
+  },
+  {
+    "name": "Neovim",
+    "slug": "neovim",
+    "id": "Neovim.Neovim",
+    "category": "editor",
+    "description": "Hyperextensible Vim-based text editor. Lua-configurable with built-in LSP support.",
+    "install-cmd": "winget install Neovim.Neovim",
+    "open-source": true,
+    "tags": ["editor", "vim", "terminal", "ricing"]
+  },
+  {
+    "name": "Starship",
+    "slug": "starship",
+    "id": "Starship.Starship",
+    "category": "shell",
+    "description": "Cross-shell prompt written in Rust. Minimal, fast, and infinitely customizable.",
+    "install-cmd": "winget install Starship.Starship",
+    "open-source": true,
+    "tags": ["prompt", "shell", "ricing", "rust"]
+  },
+  {
+    "name": "Oh My Posh",
+    "slug": "oh-my-posh",
+    "id": "JanDeDobbeleer.OhMyPosh",
+    "category": "shell",
+    "description": "Prompt theme engine for PowerShell, CMD, bash, and other shells on Windows.",
+    "install-cmd": "winget install JanDeDobbeleer.OhMyPosh",
+    "open-source": true,
+    "tags": ["prompt", "shell", "ricing", "themes"]
+  },
+  {
+    "name": "Node.js",
+    "slug": "nodejs",
+    "id": "OpenJS.NodeJS",
+    "category": "runtime",
+    "description": "JavaScript runtime built on V8. LTS release.",
+    "install-cmd": "winget install OpenJS.NodeJS",
+    "open-source": true,
+    "tags": ["node", "javascript", "runtime", "development"]
+  },
+  {
+    "name": "Python 3",
+    "slug": "python3",
+    "id": "Python.Python.3",
+    "category": "runtime",
+    "description": "Python 3 interpreter. Includes pip and the Python Launcher for Windows.",
+    "install-cmd": "winget install Python.Python.3",
+    "open-source": true,
+    "tags": ["python", "runtime", "development"]
+  },
+  {
+    "name": "Rustup",
+    "slug": "rustup",
+    "id": "Rustlang.Rustup",
+    "category": "runtime",
+    "description": "Rust toolchain installer. Installs rustc, cargo, and rustfmt.",
+    "install-cmd": "winget install Rustlang.Rustup",
+    "open-source": true,
+    "tags": ["rust", "runtime", "development"]
+  },
+  {
+    "name": "7-Zip",
+    "slug": "7zip",
+    "id": "7zip.7zip",
+    "category": "utilities",
+    "description": "High compression ratio archiver. Supports 7z, zip, tar, gzip, bzip2, xz, and more.",
+    "install-cmd": "winget install 7zip.7zip",
+    "open-source": true,
+    "tags": ["archive", "compression", "utilities", "essential"]
+  },
+  {
+    "name": "Scoop",
+    "slug": "scoop",
+    "id": "ScoopInstaller.Scoop",
+    "category": "package-manager",
+    "description": "Command-line installer for Windows. Installs tools without UAC prompts, into ~/scoop.",
+    "install-cmd": "winget install ScoopInstaller.Scoop",
+    "open-source": true,
+    "tags": ["package-manager", "cli", "utilities"]
+  },
+  {
+    "name": "Chocolatey",
+    "slug": "chocolatey",
+    "id": "Chocolatey.Chocolatey",
+    "category": "package-manager",
+    "description": "Windows package manager with 9000+ packages. Requires elevated PowerShell.",
+    "install-cmd": "winget install Chocolatey.Chocolatey",
+    "open-source": true,
+    "tags": ["package-manager", "cli", "utilities"]
+  },
+  {
+    "name": "Nerd Fonts - JetBrains Mono",
+    "slug": "jetbrainsmono-nf",
+    "id": "DEVCOM.JetBrainsMonoNerdFont",
+    "category": "fonts",
+    "description": "JetBrains Mono patched with Nerd Fonts icons. Recommended for terminal ricing.",
+    "install-cmd": "winget install DEVCOM.JetBrainsMonoNerdFont",
+    "open-source": true,
+    "tags": ["font", "nerd-font", "ricing", "terminal"]
+  },
+  {
+    "name": "Nerd Fonts - FiraCode",
+    "slug": "firacode-nf",
+    "id": "DEVCOM.FiraCode",
+    "category": "fonts",
+    "description": "FiraCode with programming ligatures, patched with Nerd Fonts icons.",
+    "install-cmd": "winget install DEVCOM.FiraCode",
+    "open-source": true,
+    "tags": ["font", "nerd-font", "ricing", "ligatures"]
+  },
+  {
+    "name": "GitHub CLI",
+    "slug": "gh",
+    "id": "GitHub.cli",
+    "category": "development",
+    "description": "GitHub CLI for creating PRs, issues, managing repos, and more from the terminal.",
+    "install-cmd": "winget install GitHub.cli",
+    "open-source": true,
+    "tags": ["github", "cli", "development", "git"]
+  },
+  {
+    "name": "fzf",
+    "slug": "fzf",
+    "id": "junegunn.fzf",
+    "category": "utilities",
+    "description": "Command-line fuzzy finder. Used in shell integrations for history search, file picker, etc.",
+    "install-cmd": "winget install junegunn.fzf",
+    "open-source": true,
+    "tags": ["fuzzy-finder", "cli", "utilities", "ricing"]
+  },
+  {
+    "name": "ripgrep",
+    "slug": "ripgrep",
+    "id": "BurntSushi.ripgrep.MSVC",
+    "category": "utilities",
+    "description": "Extremely fast regex-based file content search. Respects .gitignore.",
+    "install-cmd": "winget install BurntSushi.ripgrep.MSVC",
+    "open-source": true,
+    "tags": ["search", "grep", "cli", "utilities", "rust"]
+  },
+  {
+    "name": "bat",
+    "slug": "bat",
+    "id": "sharkdp.bat",
+    "category": "utilities",
+    "description": "cat clone with syntax highlighting, line numbers, and git integration.",
+    "install-cmd": "winget install sharkdp.bat",
+    "open-source": true,
+    "tags": ["cat", "syntax-highlight", "cli", "utilities"]
+  },
+  {
+    "name": "lsd",
+    "slug": "lsd",
+    "id": "lsd-rs.lsd",
+    "category": "utilities",
+    "description": "Next-gen ls command with colors, icons, tree view, and date formatting.",
+    "install-cmd": "winget install lsd-rs.lsd",
+    "open-source": true,
+    "tags": ["ls", "cli", "icons", "utilities", "ricing"]
+  },
+  {
+    "name": "Docker Desktop",
+    "slug": "docker-desktop",
+    "id": "Docker.DockerDesktop",
+    "category": "containers",
+    "description": "Docker engine, Compose, and a GUI dashboard. Requires Hyper-V or WSL2.",
+    "install-cmd": "winget install Docker.DockerDesktop",
+    "open-source": false,
+    "tags": ["docker", "containers", "development"]
+  },
+  {
+    "name": "Obsidian",
+    "slug": "obsidian",
+    "id": "Obsidian.Obsidian",
+    "category": "productivity",
+    "description": "Knowledge base and note-taking app using local Markdown files.",
+    "install-cmd": "winget install Obsidian.Obsidian",
+    "open-source": false,
+    "tags": ["notes", "markdown", "productivity"]
+  },
+  {
+    "name": "VLC",
+    "slug": "vlc",
+    "id": "VideoLAN.VLC",
+    "category": "media",
+    "description": "Open-source media player supporting virtually every audio and video format.",
+    "install-cmd": "winget install VideoLAN.VLC",
+    "open-source": true,
+    "tags": ["media", "video", "audio", "essential"]
+  },
+  {
+    "name": "Bitwarden",
+    "slug": "bitwarden",
+    "id": "Bitwarden.Bitwarden",
+    "category": "security",
+    "description": "Open-source password manager with browser extensions and CLI.",
+    "install-cmd": "winget install Bitwarden.Bitwarden",
+    "open-source": true,
+    "tags": ["password-manager", "security", "privacy"]
+  },
+  {
+    "name": "ShareX",
+    "slug": "sharex",
+    "id": "ShareX.ShareX",
+    "category": "utilities",
+    "description": "Feature-rich screenshot and screen recording tool with annotation and upload support.",
+    "install-cmd": "winget install ShareX.ShareX",
+    "open-source": true,
+    "tags": ["screenshot", "recording", "utilities", "productivity"]
+  }
+]

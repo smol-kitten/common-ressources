@@ -1,0 +1,182 @@
+[
+  {
+    "app": "Alacritty",
+    "slug": "alacritty",
+    "config-path": "~/.config/alacritty/alacritty.toml",
+    "data-path": null,
+    "cache-path": null,
+    "env-var": "ALACRITTY_CONFIG_PATH",
+    "notes": "Prior to v0.13, config was alacritty.yml. TOML is the current format."
+  },
+  {
+    "app": "Kitty",
+    "slug": "kitty",
+    "config-path": "~/.config/kitty/kitty.conf",
+    "data-path": "~/.local/share/kitty",
+    "cache-path": "~/.cache/kitty",
+    "env-var": "KITTY_CONFIG_DIRECTORY",
+    "notes": "Supports per-OS includes via the 'include' directive. Socket at /tmp/kitty-{uid}."
+  },
+  {
+    "app": "Hyprland",
+    "slug": "hyprland",
+    "config-path": "~/.config/hypr/hyprland.conf",
+    "data-path": "~/.local/share/hyprland",
+    "cache-path": "~/.cache/hyprland",
+    "env-var": "HYPRLAND_INSTANCE_SIGNATURE",
+    "notes": "Additional source files included via 'source' directive. IPC socket at /tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE."
+  },
+  {
+    "app": "Waybar",
+    "slug": "waybar",
+    "config-path": "~/.config/waybar/config",
+    "data-path": null,
+    "cache-path": null,
+    "env-var": null,
+    "notes": "Also reads ~/.config/waybar/style.css for appearance. Config can be JSON or JSONC."
+  },
+  {
+    "app": "Rofi",
+    "slug": "rofi",
+    "config-path": "~/.config/rofi/config.rasi",
+    "data-path": null,
+    "cache-path": "~/.cache/rofi",
+    "env-var": null,
+    "notes": "Theme files (.rasi) placed in ~/.config/rofi/themes/. rofi-wayland for Wayland support."
+  },
+  {
+    "app": "Dunst",
+    "slug": "dunst",
+    "config-path": "~/.config/dunst/dunstrc",
+    "data-path": null,
+    "cache-path": null,
+    "env-var": null,
+    "notes": "Fallback to /etc/dunst/dunstrc if user config absent. D-Bus activated."
+  },
+  {
+    "app": "WezTerm",
+    "slug": "wezterm",
+    "config-path": "~/.config/wezterm/wezterm.lua",
+    "data-path": "~/.local/share/wezterm",
+    "cache-path": "~/.cache/wezterm",
+    "env-var": "WEZTERM_CONFIG_FILE",
+    "notes": "Lua-based config. WEZTERM_CONFIG_FILE env var overrides default path."
+  },
+  {
+    "app": "Zsh",
+    "slug": "zsh",
+    "config-path": "~/.zshrc",
+    "data-path": "~/.local/share/zsh",
+    "cache-path": "~/.cache/zsh",
+    "env-var": "ZDOTDIR",
+    "notes": "Setting ZDOTDIR moves all zsh dotfiles to that dir. ~/.zshenv is always sourced first."
+  },
+  {
+    "app": "Bash",
+    "slug": "bash",
+    "config-path": "~/.bashrc",
+    "data-path": null,
+    "cache-path": null,
+    "env-var": "BASH_ENV",
+    "notes": "Interactive login shells source ~/.bash_profile. History at ~/.bash_history."
+  },
+  {
+    "app": "Fish",
+    "slug": "fish",
+    "config-path": "~/.config/fish/config.fish",
+    "data-path": "~/.local/share/fish",
+    "cache-path": "~/.cache/fish",
+    "env-var": null,
+    "notes": "Functions go in ~/.config/fish/functions/. Completions in ~/.config/fish/completions/."
+  },
+  {
+    "app": "Neovim",
+    "slug": "nvim",
+    "config-path": "~/.config/nvim/init.lua",
+    "data-path": "~/.local/share/nvim",
+    "cache-path": "~/.cache/nvim",
+    "env-var": "NVIM_APPNAME",
+    "notes": "NVIM_APPNAME allows multiple isolated configs (e.g. ~/.config/nvim-lazy). init.vim also supported."
+  },
+  {
+    "app": "Helix",
+    "slug": "helix",
+    "config-path": "~/.config/helix/config.toml",
+    "data-path": "~/.local/share/helix",
+    "cache-path": "~/.cache/helix",
+    "env-var": null,
+    "notes": "Language settings in ~/.config/helix/languages.toml. Themes in ~/.config/helix/themes/."
+  },
+  {
+    "app": "Git",
+    "slug": "gitconfig",
+    "config-path": "~/.gitconfig",
+    "data-path": null,
+    "cache-path": null,
+    "env-var": "GIT_CONFIG_GLOBAL",
+    "notes": "XDG path: ~/.config/git/config. GIT_CONFIG_GLOBAL overrides. Per-repo config at .git/config."
+  },
+  {
+    "app": "SSH",
+    "slug": "ssh",
+    "config-path": "~/.ssh/config",
+    "data-path": "~/.ssh",
+    "cache-path": null,
+    "env-var": null,
+    "notes": "~/.ssh must be chmod 700. Key files must be chmod 600. Includes supported via 'Include' directive."
+  },
+  {
+    "app": "GPG",
+    "slug": "gpg",
+    "config-path": "~/.gnupg/gpg.conf",
+    "data-path": "~/.gnupg",
+    "cache-path": null,
+    "env-var": "GNUPGHOME",
+    "notes": "GNUPGHOME overrides ~/.gnupg. Directory must be chmod 700."
+  },
+  {
+    "app": "GTK 3",
+    "slug": "gtk3",
+    "config-path": "~/.config/gtk-3.0/settings.ini",
+    "data-path": null,
+    "cache-path": null,
+    "env-var": "GTK_THEME",
+    "notes": "Also reads ~/.config/gtk-3.0/gtk.css for custom CSS overrides."
+  },
+  {
+    "app": "GTK 4",
+    "slug": "gtk4",
+    "config-path": "~/.config/gtk-4.0/settings.ini",
+    "data-path": null,
+    "cache-path": null,
+    "env-var": "GTK_THEME",
+    "notes": "Custom CSS at ~/.config/gtk-4.0/gtk.css. Some apps also read ~/.config/gtk-4.0/colors.css."
+  },
+  {
+    "app": "Fontconfig",
+    "slug": "fontconfig",
+    "config-path": "~/.config/fontconfig/fonts.conf",
+    "data-path": "~/.local/share/fonts",
+    "cache-path": "~/.cache/fontconfig",
+    "env-var": "FONTCONFIG_FILE",
+    "notes": "User fonts go in ~/.local/share/fonts/. Run 'fc-cache -fv' to rebuild font cache."
+  },
+  {
+    "app": "PipeWire / PulseAudio",
+    "slug": "pipewire",
+    "config-path": "~/.config/pipewire/pipewire.conf",
+    "data-path": null,
+    "cache-path": null,
+    "env-var": null,
+    "notes": "Override files in ~/.config/pipewire/pipewire.conf.d/. WirePlumber config at ~/.config/wireplumber/."
+  },
+  {
+    "app": "systemd (user)",
+    "slug": "systemd-user",
+    "config-path": "~/.config/systemd/user",
+    "data-path": "~/.local/share/systemd/user",
+    "cache-path": null,
+    "env-var": null,
+    "notes": "Units in ~/.config/systemd/user/ override /usr/lib/systemd/user/. Manage with 'systemctl --user'."
+  }
+]

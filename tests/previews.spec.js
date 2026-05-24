@@ -23,7 +23,6 @@ function injectInto(htmlRel, dataMap) {
 async function renderAndShot(page, html, outputRel, width = 1100, waitMs = 400) {
   await page.setViewportSize({ width, height: 4000 });
   await page.setContent(html, { waitUntil: 'domcontentloaded' });
-  await page.waitForFunction(() => document.body.scrollHeight > 100, { timeout: 10000 });
   await page.waitForTimeout(waitMs);
   await page.screenshot({ path: path.join(ROOT, outputRel), fullPage: true });
 }

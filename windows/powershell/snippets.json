@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Get System Info",
+    "slug": "get-system-info",
+    "description": "Displays OS version, hostname, uptime, CPU, and RAM summary.",
+    "code": "Get-ComputerInfo | Select-Object CsName, WindowsVersion, OsArchitecture, CsNumberOfLogicalProcessors, CsTotalPhysicalMemory",
+    "category": "system-info",
+    "min-version": "5.1",
+    "tags": ["system", "info", "hardware"],
+    "example-output": "CsName : DESKTOP-ABC\\nWindowsVersion : 2009\\nOsArchitecture : 64-bit"
+  },
+  {
+    "name": "Get Public IP Address",
+    "slug": "get-public-ip",
+    "description": "Fetches the machine's public IP address via a web service.",
+    "code": "(Invoke-WebRequest -Uri 'https://api.ipify.org').Content",
+    "category": "network",
+    "min-version": "5.1",
+    "tags": ["network", "ip", "internet"],
+    "example-output": "203.0.113.42"
+  },
+  {
+    "name": "Get Local IP Addresses",
+    "slug": "get-local-ip",
+    "description": "Lists all local IPv4 addresses and their adapter names.",
+    "code": "Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.IPAddress -ne '127.0.0.1' } | Select-Object InterfaceAlias, IPAddress",
+    "category": "network",
+    "min-version": "5.1",
+    "tags": ["network", "ip", "local"],
+    "example-output": "InterfaceAlias : Ethernet\\nIPAddress      : 192.168.1.10"
+  },
+  {
+    "name": "Test Network Connectivity",
+    "slug": "test-connectivity",
+    "description": "Tests connectivity to a host and returns round-trip time.",
+    "code": "Test-Connection -ComputerName 8.8.8.8 -Count 4 | Select-Object Address, ResponseTime, StatusCode",
+    "category": "network",
+    "min-version": "5.1",
+    "tags": ["network", "ping", "connectivity"],
+    "example-output": "Address  ResponseTime StatusCode\\n8.8.8.8  12           Success"
+  },
+  {
+    "name": "Download File",
+    "slug": "download-file",
+    "description": "Downloads a file from a URL and saves it to a local path.",
+    "code": "Invoke-WebRequest -Uri 'https://example.com/file.zip' -OutFile 'C:\\Downloads\\file.zip'",
+    "category": "file-ops",
+    "min-version": "5.1",
+    "tags": ["download", "http", "file"],
+    "example-output": ""
+  },
+  {
+    "name": "Find Large Files",
+    "slug": "find-large-files",
+    "description": "Finds files larger than 100 MB recursively under a given directory.",
+    "code": "Get-ChildItem -Path 'C:\\' -Recurse -File -ErrorAction SilentlyContinue | Where-Object { $_.Length -gt 100MB } | Sort-Object Length -Descending | Select-Object FullName, @{N='SizeMB';E={[math]::Round($_.Length/1MB,1)}}",
+    "category": "file-ops",
+    "min-version": "5.1",
+    "tags": ["files", "disk-usage", "large"],
+    "example-output": "FullName                    SizeMB\\nC:\\pagefile.sys             4096.0"
+  },
+  {
+    "name": "Get Disk Usage",
+    "slug": "get-disk-usage",
+    "description": "Shows free and total space for all local disk drives.",
+    "code": "Get-PSDrive -PSProvider FileSystem | Select-Object Name, @{N='UsedGB';E={[math]::Round($_.Used/1GB,2)}}, @{N='FreeGB';E={[math]::Round($_.Free/1GB,2)}}",
+    "category": "system-info",
+    "min-version": "5.1",
+    "tags": ["disk", "storage", "drives"],
+    "example-output": "Name UsedGB FreeGB\\nC    245.3  210.7"
+  },
+  {
+    "name": "List Running Services",
+    "slug": "list-running-services",
+    "description": "Lists all currently running Windows services sorted by name.",
+    "code": "Get-Service | Where-Object { $_.Status -eq 'Running' } | Sort-Object Name | Select-Object Name, DisplayName",
+    "category": "process",
+    "min-version": "5.1",
+    "tags": ["services", "processes", "system"],
+    "example-output": "Name   DisplayName\\nAudio  Windows Audio"
+  },
+  {
+    "name": "Kill Process by Name",
+    "slug": "kill-process-by-name",
+    "description": "Stops all running processes matching a given name.",
+    "code": "Stop-Process -Name 'notepad' -Force -ErrorAction SilentlyContinue",
+    "category": "process",
+    "min-version": "5.1",
+    "tags": ["process", "kill", "stop"],
+    "example-output": ""
+  },
+  {
+    "name": "Get Top CPU Processes",
+    "slug": "top-cpu-processes",
+    "description": "Lists the top 10 CPU-consuming processes.",
+    "code": "Get-Process | Sort-Object CPU -Descending | Select-Object -First 10 Name, CPU, WorkingSet",
+    "category": "process",
+    "min-version": "5.1",
+    "tags": ["cpu", "processes", "performance"],
+    "example-output": "Name    CPU  WorkingSet\\nCode 2400.5  512000000"
+  },
+  {
+    "name": "Get Installed Programs",
+    "slug": "get-installed-programs",
+    "description": "Lists all installed programs via the registry, similar to Control Panel Programs list.",
+    "code": "Get-ItemProperty HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | Select-Object DisplayName, DisplayVersion, Publisher | Sort-Object DisplayName",
+    "category": "registry",
+    "min-version": "5.1",
+    "tags": ["registry", "installed", "programs", "uninstall"],
+    "example-output": "DisplayName   DisplayVersion  Publisher\\n7-Zip         23.01           Igor Pavlov"
+  },
+  {
+    "name": "Read Registry Value",
+    "slug": "read-registry-value",
+    "description": "Reads a specific registry value from a given key.",
+    "code": "Get-ItemPropertyValue -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize' -Name 'AppsUseLightTheme'",
+    "category": "registry",
+    "min-version": "5.1",
+    "tags": ["registry", "read", "settings"],
+    "example-output": "0"
+  },
+  {
+    "name": "Set Registry Value",
+    "slug": "set-registry-value",
+    "description": "Creates or updates a registry DWORD value. Run as Administrator for HKLM keys.",
+    "code": "Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize' -Name 'AppsUseLightTheme' -Value 0 -Type DWord",
+    "category": "registry",
+    "min-version": "5.1",
+    "tags": ["registry", "write", "settings"],
+    "example-output": ""
+  },
+  {
+    "name": "List WSL Distros",
+    "slug": "list-wsl-distros",
+    "description": "Lists all installed WSL distributions and their versions.",
+    "code": "wsl --list --verbose",
+    "category": "wsl",
+    "min-version": "5.1",
+    "tags": ["wsl", "linux", "distros"],
+    "example-output": "  NAME          STATE    VERSION\\n* Ubuntu-22.04  Running  2"
+  },
+  {
+    "name": "Export WSL Distro",
+    "slug": "export-wsl-distro",
+    "description": "Exports a WSL distribution to a .tar file for backup or migration.",
+    "code": "wsl --export Ubuntu-22.04 'C:\\Backups\\ubuntu-2204.tar'",
+    "category": "wsl",
+    "min-version": "5.1",
+    "tags": ["wsl", "backup", "export"],
+    "example-output": ""
+  },
+  {
+    "name": "Install winget Package",
+    "slug": "winget-install",
+    "description": "Installs a package by ID via winget, accepting all prompts automatically.",
+    "code": "winget install --id Microsoft.VisualStudioCode --silent --accept-package-agreements --accept-source-agreements",
+    "category": "winget",
+    "min-version": "5.1",
+    "tags": ["winget", "install", "package-manager"],
+    "example-output": ""
+  },
+  {
+    "name": "Update All winget Packages",
+    "slug": "winget-upgrade-all",
+    "description": "Upgrades all installed winget packages to their latest versions.",
+    "code": "winget upgrade --all --silent --accept-package-agreements --accept-source-agreements",
+    "category": "winget",
+    "min-version": "5.1",
+    "tags": ["winget", "upgrade", "update"],
+    "example-output": ""
+  },
+  {
+    "name": "Get Open Network Ports",
+    "slug": "get-open-ports",
+    "description": "Lists all listening TCP ports and the process using each one.",
+    "code": "Get-NetTCPConnection -State Listen | Select-Object LocalAddress, LocalPort, @{N='ProcessName';E={(Get-Process -Id $_.OwningProcess -ErrorAction SilentlyContinue).Name}} | Sort-Object LocalPort",
+    "category": "network",
+    "min-version": "5.1",
+    "tags": ["network", "ports", "tcp", "firewall"],
+    "example-output": "LocalAddress  LocalPort  ProcessName\\n0.0.0.0       80         nginx"
+  },
+  {
+    "name": "Get Event Log Errors",
+    "slug": "get-event-log-errors",
+    "description": "Retrieves the 20 most recent error events from the Windows System event log.",
+    "code": "Get-EventLog -LogName System -EntryType Error -Newest 20 | Select-Object TimeGenerated, Source, Message",
+    "category": "system-info",
+    "min-version": "5.1",
+    "tags": ["event-log", "errors", "diagnostics"],
+    "example-output": "TimeGenerated         Source     Message\\n5/24/2026 08:00:00 AM Service Control Manager The service failed..."
+  },
+  {
+    "name": "Create Symbolic Link",
+    "slug": "create-symlink",
+    "description": "Creates a symbolic link (requires Administrator or Developer Mode enabled).",
+    "code": "New-Item -ItemType SymbolicLink -Path 'C:\\link-name' -Target 'C:\\actual\\path'",
+    "category": "file-ops",
+    "min-version": "5.1",
+    "tags": ["symlink", "filesystem", "admin"],
+    "example-output": ""
+  }
+]

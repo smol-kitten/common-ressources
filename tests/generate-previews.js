@@ -119,12 +119,8 @@ async function generateAll(filter) {
       await page.setViewportSize({ width: preview.width, height: 4000 });
       await page.setContent(hydrated, { waitUntil: 'domcontentloaded' });
 
-      // Wait for JS-rendered content to appear in the DOM
+      // Give JS time to render content (rice/xterm.js needs more)
       const waitMs = preview.id === 'rice' ? 2000 : 400;
-      await page.waitForFunction(
-        () => document.body.scrollHeight > 100,
-        { timeout: 10000 }
-      );
       await page.waitForTimeout(waitMs);
 
       await page.screenshot({ path: outFile, fullPage: true });
