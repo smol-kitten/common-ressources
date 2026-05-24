@@ -35,6 +35,47 @@ function inject(html, dataMap) {
   return out;
 }
 
+// Pre-render terminal theme cards server-side to avoid client-JS issues
+const ANSI_KEYS = [
+  'black','red','green','yellow','blue','magenta','cyan','white',
+  'bright-black','bright-red','bright-green','bright-yellow',
+  'bright-blue','bright-magenta','bright-cyan','bright-white',
+];
+
+function buildTerminalCards(themes) {
+  return themes.map(theme => {
+    const bg     = theme.background || '#1e1e2e';
+    const fg     = theme.foreground || '#cdd6f4';
+    const accent = (theme.colors['blue'] || theme.colors['cyan'] || fg);
+    const green  = theme.colors['green']  || '#a6e3a1';
+    const yellow = theme.colors['yellow'] || '#f9e2af';
+    const swatches = ANSI_KEYS.map(k =>
+      `<div class="swatch" style="background:${theme.colors[k] || '#888'}" title="${k}"></div>`
+    ).join('');
+    return `<div class="terminal-card">
+  <div class="titlebar" style="background:${bg}cc">
+    <div class="dot dot-red"></div>
+    <div class="dot dot-yel"></div>
+    <div class="dot dot-grn"></div>
+    <div class="title-label">${theme.name}</div>
+  </div>
+  <div class="term-body" style="background:${bg};color:${fg}">
+    <div class="swatches">${swatches}</div>
+    <div class="prompt-line">
+      <span class="ps1-user" style="color:${green}">user</span>
+      <span class="ps1-sep">@arch</span>
+      <span class="ps1-sep">:</span>
+      <span class="ps1-dir" style="color:${accent}">~/dotfiles</span>
+      <span class="ps1-git" style="color:${yellow}"> main</span>
+      <span class="ps1-sym" style="color:${green}">$</span>
+    </div>
+    <div class="cmd-line" style="color:${fg}">ls -la rice/</div>
+    <div class="out-line">alacritty/  dunst/  hyprland/  kitty/  rofi/  waybar/  wezterm/</div>
+  </div>
+</div>`;
+  }).join('');
+}
+
 // Pre-render country flag cards server-side to avoid client-JS issues
 function buildFlagCards(flags) {
   return flags.map(flag => {
@@ -103,7 +144,7 @@ const PREVIEWS = [
     html: 'rice/preview.html',
     output: 'rice/preview.png',
     width: 1100,
-    data: { THEMES: () => load('colors/terminal/themes.json') },
+    data: { CARDS: () => buildTerminalCards(load('colors/terminal/themes.json')) },
   },
 ];
 

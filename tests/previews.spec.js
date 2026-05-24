@@ -24,6 +24,34 @@ function injectInto(htmlRel, dataMap) {
   return html;
 }
 
+const ANSI_KEYS = [
+  'black','red','green','yellow','blue','magenta','cyan','white',
+  'bright-black','bright-red','bright-green','bright-yellow',
+  'bright-blue','bright-magenta','bright-cyan','bright-white',
+];
+
+function buildTerminalCards(themes) {
+  return themes.map(theme => {
+    const bg     = theme.background || '#1e1e2e';
+    const fg     = theme.foreground || '#cdd6f4';
+    const accent = (theme.colors['blue'] || theme.colors['cyan'] || fg);
+    const green  = theme.colors['green']  || '#a6e3a1';
+    const yellow = theme.colors['yellow'] || '#f9e2af';
+    const swatches = ANSI_KEYS.map(k =>
+      `<div class="swatch" style="background:${theme.colors[k] || '#888'}" title="${k}"></div>`
+    ).join('');
+    return `<div class="terminal-card">
+  <div class="titlebar" style="background:${bg}cc">
+    <div class="dot dot-red"></div><div class="dot dot-yel"></div><div class="dot dot-grn"></div>
+    <div class="title-label">${theme.name}</div>
+  </div>
+  <div class="term-body" style="background:${bg};color:${fg}">
+    <div class="swatches">${swatches}</div>
+  </div>
+</div>`;
+  }).join('');
+}
+
 function buildFlagCards(flags) {
   return flags.map(flag => {
     const isVertical = (flag.type || '') === 'vertical-stripes';
@@ -202,7 +230,7 @@ test.describe('Preview screenshots', () => {
 
   test('rice terminal preview', async ({ page }) => {
     const themes = load('colors/terminal/themes.json');
-    const html = injectInto('rice/preview.html', { THEMES: themes });
+    const html = injectInto('rice/preview.html', { CARDS: buildTerminalCards(themes) });
     await renderAndShot(page, html, 'rice/preview.png', 1100);
     const cards = await page.locator('.terminal-card').count();
     expect(cards).toBe(themes.length);
