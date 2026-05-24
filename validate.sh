@@ -206,6 +206,64 @@ if [ -f "fonts/stacks.json" ]; then
     [ "$MISSING_CSS" != "0" ] && echo " WARN fonts/stacks.json — $MISSING_CSS entries without css value"
 fi
 
+# Winget packages
+if [ -f "windows/winget/packages.json" ]; then
+    echo "  Checking windows/winget/packages.json..."
+    COUNT=$(jq 'length' windows/winget/packages.json)
+    echo "    $COUNT winget packages"
+    MISSING_ID=$(jq '[.[] | select(.id == null or .id == "")] | length' windows/winget/packages.json)
+    [ "$MISSING_ID" != "0" ] && echo " WARN windows/winget/packages.json — $MISSING_ID entries missing field 'id'"
+    MISSING_CAT=$(jq '[.[] | select(.category == null or .category == "")] | length' windows/winget/packages.json)
+    [ "$MISSING_CAT" != "0" ] && echo " WARN windows/winget/packages.json — $MISSING_CAT entries missing field 'category'"
+    MISSING_SLUG=$(jq '[.[] | select(.slug == null or .slug == "")] | length' windows/winget/packages.json)
+    [ "$MISSING_SLUG" != "0" ] && echo " WARN windows/winget/packages.json — $MISSING_SLUG entries missing field 'slug'"
+fi
+
+# Registry tweaks
+if [ -f "windows/registry/common-tweaks.json" ]; then
+    echo "  Checking windows/registry/common-tweaks.json..."
+    COUNT=$(jq 'length' windows/registry/common-tweaks.json)
+    echo "    $COUNT registry tweaks"
+    MISSING_KEY=$(jq '[.[] | select(.key == null or .key == "")] | length' windows/registry/common-tweaks.json)
+    [ "$MISSING_KEY" != "0" ] && echo " WARN windows/registry/common-tweaks.json — $MISSING_KEY entries missing field 'key'"
+    MISSING_TYPE=$(jq '[.[] | select(.["value-type"] == null or .["value-type"] == "")] | length' windows/registry/common-tweaks.json)
+    [ "$MISSING_TYPE" != "0" ] && echo " WARN windows/registry/common-tweaks.json — $MISSING_TYPE entries missing field 'value-type'"
+    VALID_TYPES='["REG_DWORD","REG_SZ","REG_BINARY","REG_QWORD"]'
+    BAD_TYPE=$(jq --argjson v "$VALID_TYPES" '[.[] | select(.["value-type"] as $t | ($v | index($t)) == null)] | length' windows/registry/common-tweaks.json)
+    [ "$BAD_TYPE" != "0" ] && echo " WARN windows/registry/common-tweaks.json — $BAD_TYPE entries with unexpected value-type"
+fi
+
+# AUR tools
+if [ -f "linux/packages/aur-tools.json" ]; then
+    echo "  Checking linux/packages/aur-tools.json..."
+    COUNT=$(jq 'length' linux/packages/aur-tools.json)
+    echo "    $COUNT AUR tools"
+    MISSING_SLUG=$(jq '[.[] | select(.slug == null or .slug == "")] | length' linux/packages/aur-tools.json)
+    [ "$MISSING_SLUG" != "0" ] && echo " WARN linux/packages/aur-tools.json — $MISSING_SLUG entries missing field 'slug'"
+    MISSING_CAT=$(jq '[.[] | select(.category == null or .category == "")] | length' linux/packages/aur-tools.json)
+    [ "$MISSING_CAT" != "0" ] && echo " WARN linux/packages/aur-tools.json — $MISSING_CAT entries missing field 'category'"
+fi
+
+# WM configs
+if [ -f "linux/desktop/wm-configs.json" ]; then
+    echo "  Checking linux/desktop/wm-configs.json..."
+    COUNT=$(jq 'length' linux/desktop/wm-configs.json)
+    echo "    $COUNT window manager configs"
+    MISSING_PROTO=$(jq '[.[] | select(.protocol == null or .protocol == "")] | length' linux/desktop/wm-configs.json)
+    [ "$MISSING_PROTO" != "0" ] && echo " WARN linux/desktop/wm-configs.json — $MISSING_PROTO entries missing field 'protocol'"
+fi
+
+# Pacman mirrors
+if [ -f "linux/system/pacman-mirrors.json" ]; then
+    echo "  Checking linux/system/pacman-mirrors.json..."
+    COUNT=$(jq 'length' linux/system/pacman-mirrors.json)
+    echo "    $COUNT pacman mirrors"
+    MISSING_URL=$(jq '[.[] | select(.url == null or .url == "")] | length' linux/system/pacman-mirrors.json)
+    [ "$MISSING_URL" != "0" ] && echo " WARN linux/system/pacman-mirrors.json — $MISSING_URL entries missing field 'url'"
+    MISSING_CODE=$(jq '[.[] | select(.code == null or .code == "")] | length' linux/system/pacman-mirrors.json)
+    [ "$MISSING_CODE" != "0" ] && echo " WARN linux/system/pacman-mirrors.json — $MISSING_CODE entries missing field 'code'"
+fi
+
 echo ""
 echo "=== Summary ==="
 echo "  JSON files checked: $JSON_COUNT"
