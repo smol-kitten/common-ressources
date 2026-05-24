@@ -41,6 +41,7 @@ jobs:
 
       - name: Commit preview images to PR branch
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.email "noreply@github.com"
           git config user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}

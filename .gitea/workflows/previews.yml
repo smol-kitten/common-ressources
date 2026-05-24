@@ -35,6 +35,7 @@ jobs:
 
       - name: Commit generated previews
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.email "noreply@gitea.local"
           git config user.name "Gitea Actions"
           git add $(find . -name "*.png" ! -path "./.git/*" | head -50)
