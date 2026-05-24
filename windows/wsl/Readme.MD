@@ -1,25 +1,23 @@
-# WSL Distro Reference
+# WSL Distros
 
-8 WSL-compatible Linux distributions with install commands, package managers, and notes on use cases.
+A structured JSON reference for WSL (Windows Subsystem for Linux) distributions with install commands, init system, package manager, and recommended use cases.
 
 ## JSON
 
-### Structure
+### Structure as of 24.05.2026
 
 ```json
 {
-  "name": "Ubuntu 24.04 LTS",
-  "slug": "ubuntu-2404",
-  "id": "Ubuntu-24.04",
-  "install-cmd": "wsl --install -d Ubuntu-24.04",
-  "base": "Ubuntu",
-  "version": "24.04",
-  "lts": true,
+  "name": "Ubuntu 22.04 LTS",
+  "slug": "ubuntu-2204",
+  "wsl-version": 2,
+  "install-cmd": "wsl --install -d Ubuntu-22.04",
   "default-user": "your-username",
-  "package-manager": "apt",
   "init-system": "systemd",
-  "notes": "Noble Numbat. Ships with Python 3.12, supports WSL2 systemd natively.",
-  "tags": ["ubuntu", "lts", "popular", "recommended"]
+  "package-manager": "apt",
+  "notes": "Jammy Jellyfish. Most CI/CD pipelines target this release.",
+  "good-for": ["general-development", "ci-cd", "docker"],
+  "tags": ["ubuntu", "lts", "popular", "ci"]
 }
 ```
 
@@ -29,74 +27,104 @@
 |---|---|---|
 | `name` | string | Full distro display name |
 | `slug` | string | Lowercase hyphen-separated identifier |
-| `id` | string | WSL distro ID (used with `wsl --install -d`) |
-| `install-cmd` | string | Command to install this distro |
-| `base` | string | Upstream Linux base distribution |
-| `version` | string | Version or `"rolling"` |
-| `lts` | boolean | Whether this is a Long Term Support release |
-| `default-user` | string | Default login user after first-run setup |
-| `package-manager` | string | Primary package manager (`apt`, `pacman`, `dnf`, etc.) |
-| `init-system` | string | Init system (`systemd`, `openrc`) |
-| `notes` | string | Additional context, caveats, or recommended use cases |
-| `tags` | string[] | Keywords for filtering |
+| `wsl-version` | number | Required WSL version (1 or 2) |
+| `install-cmd` | string | Shell command to install the distro |
+| `default-user` | string | Default login user after initial setup |
+| `init-system` | string | Init system: `systemd` or `openrc` |
+| `package-manager` | string | Primary package manager (apt, pacman, dnf, zypper, apk) |
+| `notes` | string | Additional context, caveats, and version details |
+| `good-for` | string[] | Recommended use cases |
+| `tags` | string[] | Keywords for filtering and discovery |
 
-## Distros Included
+## Distros included
 
-| Slug | Base | Version | LTS | Package Manager |
-|---|---|---|---|---|
-| `ubuntu-2404` | Ubuntu | 24.04 | yes | apt |
-| `ubuntu-2204` | Ubuntu | 22.04 | yes | apt |
-| `debian` | Debian | 12 | yes | apt |
-| `arch-wsl` | Arch | rolling | no | pacman |
-| `fedora-remix` | Fedora | 39 | no | dnf |
-| `opensuse-tumbleweed` | openSUSE | rolling | no | zypper |
-| `kali-linux` | Debian | rolling | no | apt |
-| `alpine` | Alpine | 3.x | no | apk |
+| Slug | Name | Package Manager | Init System |
+|---|---|---|---|
+| `ubuntu-2204` | Ubuntu 22.04 LTS | apt | systemd |
+| `ubuntu-2404` | Ubuntu 24.04 LTS | apt | systemd |
+| `debian` | Debian | apt | systemd |
+| `arch-wsl` | Arch Linux (unofficial) | pacman | systemd |
+| `kali-linux` | Kali Linux | apt | systemd |
+| `opensuse-tumbleweed` | openSUSE Tumbleweed | zypper | systemd |
+| `fedora-remix` | Fedora Remix for WSL | dnf | systemd |
+| `alpine` | Alpine Linux | apk | openrc |
+| `oracle-linux-8` | Oracle Linux 8 | dnf | systemd |
+| `sles` | SUSE Linux Enterprise | zypper | systemd |
 
-## Usage
+## Prerequisites
 
-### List installed distros
-
-```powershell
-wsl --list --verbose
-```
-
-### Set default distro
+WSL 2 is required for all entries. Enable it once:
 
 ```powershell
-wsl --set-default Ubuntu-24.04
+# Run as Administrator
+wsl --install
+wsl --set-default-version 2
 ```
 
-### Install a new distro
+## Examples
 
-```powershell
-wsl --install -d Debian
-```
-
-### Terminate a running distro
-
-```powershell
-wsl --terminate Ubuntu-24.04
-```
-
-### PowerShell — install from JSON by slug
+### Shell (PowerShell) — install a distro by slug
 
 ```powershell
 $distros = Get-Content distros.json | ConvertFrom-Json
 $d = $distros | Where-Object slug -eq 'debian'
-Invoke-Expression $d.'install-cmd'
+Write-Host "Running: $($d.'install-cmd')"
+# Execute manually or: Invoke-Expression $d.'install-cmd'
 ```
 
-### JavaScript — filter LTS distros
+### Shell — list all distros and their package managers
+
+```bash
+jq '[.[] | {slug, name, "package-manager"}]' distros.json
+```
+
+### Shell — find distros using apt
+
+```bash
+jq '[.[] | select(.["package-manager"] == "apt") | .name]' distros.json
+```
+
+### Shell — find distros good for a use case
+
+```bash
+jq '[.[] | select(.["good-for"] | contains(["docker"])) | .name]' distros.json
+```
+
+### JavaScript — look up a distro by slug
 
 ```javascript
 const distros = await fetch('distros.json').then(r => r.json());
-const lts = distros.filter(d => d.lts);
-lts.forEach(d => console.log(`${d.name} — ${d['package-manager']}`));
+const bySlug = Object.fromEntries(distros.map(d => [d.slug, d]));
+
+const arch = bySlug['arch-wsl'];
+console.log(arch['install-cmd']);
+// "# Download from ... wsl --import Arch ..."
 ```
 
-### Shell — list by package manager
+### JavaScript — group by package manager
 
-```bash
-jq 'group_by(.["package-manager"]) | map({manager: .[0]["package-manager"], distros: map(.name)})' distros.json
+```javascript
+const distros = await fetch('distros.json').then(r => r.json());
+const byPM = distros.reduce((acc, d) => {
+  (acc[d['package-manager']] = acc[d['package-manager']] || []).push(d.name);
+  return acc;
+}, {});
+console.log(byPM);
+// { apt: ["Ubuntu 22.04 LTS", "Ubuntu 24.04 LTS", ...], pacman: [...], ... }
+```
+
+### PHP — display distros grouped by package manager
+
+```php
+$distros = json_decode(file_get_contents('distros.json'), true);
+$byPM = [];
+foreach ($distros as $d) {
+    $byPM[$d['package-manager']][] = $d;
+}
+foreach ($byPM as $pm => $group) {
+    echo "$pm:\n";
+    foreach ($group as $d) {
+        echo "  {$d['name']}: {$d['install-cmd']}\n";
+    }
+}
 ```
