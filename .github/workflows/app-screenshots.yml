@@ -71,6 +71,7 @@ jobs:
       - name: Run screenshot capture
         run: |
           docker run --rm \
+            --security-opt seccomp=unconfined \
             -v "$PWD:/repo" \
             -e WIN_W="${{ github.event.inputs.win_w || '900' }}" \
             -e WIN_H="${{ github.event.inputs.win_h || '520' }}" \

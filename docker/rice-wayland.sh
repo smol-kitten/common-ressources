@@ -92,7 +92,14 @@ for_window [app_id="rofi"] floating enable
 SWAY_EOF
 
 echo "==> Starting Sway headless (${OUTPUT_W}x${OUTPUT_H})..."
-WLR_BACKENDS=headless WLR_RENDERER=pixman \
+# LIBSEAT_BACKEND=noop  — skip seat acquisition (no logind/seatd in Docker)
+# WLR_LIBINPUT_NO_DEVICES=1 — don't fail on missing /dev/input devices
+# XKB_DEFAULT_RULES=evdev   — safe keymap rules that don't require kernel keyctl
+WLR_BACKENDS=headless \
+WLR_RENDERER=pixman \
+LIBSEAT_BACKEND=noop \
+WLR_LIBINPUT_NO_DEVICES=1 \
+XKB_DEFAULT_RULES=evdev \
   sway --config "$SWAY_CONF" 2>/tmp/sway.log &
 SWAY_PID=$!
 
