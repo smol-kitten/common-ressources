@@ -44,5 +44,8 @@ RUN pacman -Syu --noconfirm \
       curl \
     && pacman -Scc --noconfirm
 
+# Non-root user required to run Sway (refuses to start as root in wlroots 0.17+)
+RUN useradd -m -u 1000 -s /bin/bash wluser
+
 WORKDIR /repo
 CMD ["bash", "docker/rice-wayland.sh"]

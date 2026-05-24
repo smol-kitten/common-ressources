@@ -70,53 +70,71 @@ cd "$REPO_ROOT" && node rice/generate.js
 echo "    Done."
 
 # ── Wayland / Sway environment ────────────────────────────────────────────────
-export XDG_RUNTIME_DIR=/tmp/xdg-runtime
+# Sway (wlroots 0.17+) refuses to run as root — use a dedicated non-root user.
+SWAY_USER=wluser
+SWAY_XDG=/tmp/xdg-sway
+
+mkdir -p "$SWAY_XDG"
+chown "${SWAY_USER}:${SWAY_USER}" "$SWAY_XDG"
+chmod 755 "$SWAY_XDG"   # 755 so root-owned clients can access the socket
+
+export XDG_RUNTIME_DIR="$SWAY_XDG"
 export WAYLAND_DISPLAY=wayland-1
-mkdir -p "$XDG_RUNTIME_DIR"
-chmod 700 "$XDG_RUNTIME_DIR"
 
 SWAY_CONF="$(mktemp /tmp/sway-XXXXXX.conf)"
 cat > "$SWAY_CONF" <<SWAY_EOF
+# No XWayland — keeps the container lean (xorg-xwayland not installed)
+xwayland disable
 output HEADLESS-1 resolution ${OUTPUT_W}x${OUTPUT_H} position 0,0
 input type:keyboard xkb_layout us
 default_border none
 default_floating_border none
 gaps inner 0
 gaps outer 0
-# foot terminal: left side, mid-height
 for_window [app_id="foot"] floating enable, \
     resize set ${WIN_W} ${WIN_H}, \
     move position ${WIN_X} ${WIN_Y}
-# rofi: floating, sway will place it centered
 for_window [app_id="rofi"] floating enable
 SWAY_EOF
+chmod 644 "$SWAY_CONF"
 
-echo "==> Starting Sway headless (${OUTPUT_W}x${OUTPUT_H})..."
-# WLR_SESSION=noop          — skip wlroots seat/session management
-# LIBSEAT_BACKEND=noop      — skip libseat seat acquisition
-# WLR_LIBINPUT_NO_DEVICES=1 — don't fail on missing /dev/input devices
-# XKB_DEFAULT_RULES=evdev   — safe keymap rules, avoids kernel keyctl syscall
-WLR_BACKENDS=headless \
-WLR_RENDERER=pixman \
-WLR_SESSION=noop \
-LIBSEAT_BACKEND=noop \
-WLR_LIBINPUT_NO_DEVICES=1 \
-XKB_DEFAULT_RULES=evdev \
-  sway --config "$SWAY_CONF" 2>/tmp/sway.log &
+# Write a launch wrapper so all env vars are set before exec
+SWAY_LAUNCH=/tmp/launch-sway.sh
+cat > "$SWAY_LAUNCH" <<LAUNCH_EOF
+#!/bin/bash
+export XDG_RUNTIME_DIR=$SWAY_XDG
+export WAYLAND_DISPLAY=wayland-1
+exec env \\
+  WLR_BACKENDS=headless \\
+  WLR_RENDERER=pixman \\
+  WLR_SESSION=noop \\
+  LIBSEAT_BACKEND=noop \\
+  WLR_LIBINPUT_NO_DEVICES=1 \\
+  XKB_DEFAULT_RULES=evdev \\
+  sway --config $SWAY_CONF
+LAUNCH_EOF
+chmod +x "$SWAY_LAUNCH"
+chown "${SWAY_USER}:${SWAY_USER}" "$SWAY_LAUNCH"
+
+echo "==> Starting Sway headless as ${SWAY_USER} (${OUTPUT_W}x${OUTPUT_H})..."
+runuser -u "$SWAY_USER" -- "$SWAY_LAUNCH" 2>/tmp/sway.log &
 SWAY_PID=$!
 
-# Wait up to 4 seconds for sway to become responsive
+# Wait up to 4 s for the IPC socket (created at ${SWAY_XDG}/sway-ipc.*.*.sock)
+SWAYSOCK_PATH=""
 for i in $(seq 1 40); do
-  swaymsg -t get_version >/dev/null 2>&1 && break
+  SWAYSOCK_PATH=$(ls "$SWAY_XDG"/sway-ipc.*.*.sock 2>/dev/null | head -1)
+  [[ -n "$SWAYSOCK_PATH" ]] && break
   sleep 0.1
 done
 
-if ! swaymsg -t get_version >/dev/null 2>&1; then
-  echo "ERROR: Sway did not start." >&2
+if [[ -z "$SWAYSOCK_PATH" ]]; then
+  echo "ERROR: Sway did not start (no IPC socket after 4s)." >&2
   cat /tmp/sway.log >&2
   exit 1
 fi
-echo "    Sway ready."
+export SWAYSOCK="$SWAYSOCK_PATH"
+echo "    Sway ready. IPC: $SWAYSOCK"
 
 # ── foot config generator ─────────────────────────────────────────────────────
 generate_foot_config() {
@@ -544,7 +562,7 @@ done
 # ── cleanup ───────────────────────────────────────────────────────────────────
 kill "$SWAY_PID" 2>/dev/null || true
 wait "$SWAY_PID" 2>/dev/null || true
-rm -f "$SWAY_CONF" /tmp/sway.log /tmp/waybar-*.log /tmp/rofi-*.log
+rm -f "$SWAY_CONF" "$SWAY_LAUNCH" /tmp/sway.log /tmp/waybar-*.log /tmp/rofi-*.log
 
 echo ""
 echo "Done: ${OK} saved, ${FAIL} failed."
