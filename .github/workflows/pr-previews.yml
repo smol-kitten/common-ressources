@@ -32,18 +32,18 @@ jobs:
           fetch-depth: 0
 
       - name: Install Node dependencies
-        run: npm install
-
-      - name: Install Playwright browsers
-        run: npx playwright install chromium --with-deps
+        run: npm ci
 
       - name: Generate preview images
         run: node tests/generate-previews.js
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
 
       - name: Commit preview images to PR branch
         run: |
           git config user.email "noreply@github.com"
           git config user.name "github-actions[bot]"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add $(find . -name "*.png" ! -path "./.git/*" | head -50)
           if git diff --staged --quiet; then
             echo "No preview changes."
