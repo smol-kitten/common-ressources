@@ -178,4 +178,19 @@ test.describe('Preview screenshots', () => {
     const sections = await page.locator('.section').count();
     expect(sections).toBe(5); // 5 HTTP categories
   });
+
+  test('rice terminal preview', async ({ page }) => {
+    const themes = load('colors/terminal/themes.json');
+    const html = injectInto('rice/preview.html', { THEMES: themes });
+    // rice/preview.html has inline xterm.js — use domcontentloaded to avoid
+    // networkidle timeout, then wait for xterm to render
+    await page.setViewportSize({ width: 1100, height: 800 });
+    await page.setContent(html, { waitUntil: 'domcontentloaded' });
+    await page.waitForTimeout(800);
+    const height = await page.evaluate(() => document.body.scrollHeight);
+    await page.setViewportSize({ width: 1100, height: Math.max(height, 200) });
+    await page.screenshot({ path: path.join(ROOT, 'rice/preview.png'), fullPage: true });
+    const cards = await page.locator('.terminal-card').count();
+    expect(cards).toBe(themes.length);
+  });
 });

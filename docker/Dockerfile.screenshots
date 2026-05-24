@@ -1,0 +1,57 @@
+# Dockerfile for taking real terminal screenshots of rice themes.
+# Installs Xvfb, xterm, kitty (if available), scrot, imagemagick,
+# fonts, neofetch/fastfetch, and zsh + oh-my-zsh.
+#
+# Build:
+#   docker build -t rice-screenshots -f docker/Dockerfile.screenshots .
+#
+# Run:
+#   docker run --rm -v $PWD:/repo rice-screenshots bash docker/screenshot-terminals.sh dracula
+
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV DISPLAY=:99
+
+# ── system packages ────────────────────────────────────────────────────────────
+RUN apt-get update && apt-get install -y \
+    # Virtual framebuffer
+    xvfb \
+    x11-utils \
+    x11vnc \
+    # Terminals
+    xterm \
+    # Screenshot & image tools
+    scrot \
+    imagemagick \
+    # Fonts
+    fonts-hack \
+    ttf-dejavu \
+    fonts-noto-color-emoji \
+    # System fetch tool
+    neofetch \
+    # Shell
+    zsh \
+    curl \
+    git \
+    wget \
+    ca-certificates \
+    procps \
+    # Build tools (for potential from-source builds)
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# ── Try to install kitty from official installer ───────────────────────────────
+RUN curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \
+    launch=n 2>/dev/null || true
+
+# ── oh-my-zsh (non-interactive) ───────────────────────────────────────────────
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \
+    "" --unattended 2>/dev/null || true
+
+# ── default shell ─────────────────────────────────────────────────────────────
+RUN chsh -s /usr/bin/zsh root || true
+
+WORKDIR /repo
+
+CMD ["bash", "docker/screenshot-terminals.sh"]

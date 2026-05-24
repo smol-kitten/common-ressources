@@ -1,0 +1,77 @@
+# Takes real terminal screenshots for each rice theme using Docker + Xvfb.
+# Triggered when themes.json changes, or on demand.
+# Commits all generated screenshots back to the branch.
+
+name: Generate App Screenshots
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'colors/terminal/themes.json'
+      - 'rice/alacritty/**'
+      - 'docker/Dockerfile.screenshots'
+      - 'docker/screenshot-terminals.sh'
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'Theme slug to screenshot (leave empty for all)'
+        required: false
+        default: ''
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Build screenshot Docker image
+        run: |
+          docker build \
+            -t rice-screenshots \
+            -f docker/Dockerfile.screenshots \
+            .
+
+      - name: Generate rice config files
+        run: node rice/generate.js
+
+      - name: Run screenshot capture
+        run: |
+          SLUG="${{ github.event.inputs.slug }}"
+          if [ -n "$SLUG" ]; then
+            docker run --rm \
+              -v "$PWD:/repo" \
+              --privileged \
+              rice-screenshots \
+              bash docker/screenshot-terminals.sh "$SLUG"
+          else
+            docker run --rm \
+              -v "$PWD:/repo" \
+              --privileged \
+              rice-screenshots \
+              bash docker/screenshot-terminals.sh
+          fi
+
+      - name: List generated screenshots
+        run: |
+          echo "Generated screenshots:"
+          find rice/screenshots -name "*.png" | sort || echo "(none)"
+
+      - name: Commit screenshots
+        run: |
+          git config --global user.email "noreply@github.com"
+          git config --global user.name "github-actions[bot]"
+          git remote set-url origin \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
+          git add rice/screenshots/*.png 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No screenshot changes to commit."
+          else
+            git commit -m "chore: regenerate rice theme screenshots [skip ci]"
+            git push origin HEAD
+          fi

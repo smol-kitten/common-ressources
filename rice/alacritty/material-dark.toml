@@ -1,0 +1,34 @@
+# Theme: Material Dark
+# Source: https://material-theme.com
+
+[colors.primary]
+background = "#212121"
+foreground = "#EEFFFF"
+
+[colors.cursor]
+cursor = "#FFCC00"
+text   = "#212121"
+
+[colors.selection]
+background = "#546E7A"
+text       = "#EEFFFF"
+
+[colors.normal]
+black   = "#546E7A"
+red     = "#FF5370"
+green   = "#C3E88D"
+yellow  = "#FFCB6B"
+blue    = "#82AAFF"
+magenta = "#C792EA"
+cyan    = "#89DDFF"
+white   = "#EEFFFF"
+
+[colors.bright]
+black   = "#B0BEC5"
+red     = "#FF5370"
+green   = "#C3E88D"
+yellow  = "#FFCB6B"
+blue    = "#82AAFF"
+magenta = "#C792EA"
+cyan    = "#89DDFF"
+white   = "#FFFFFF"

@@ -1,0 +1,26 @@
+/* Theme: Catppuccin Mocha */
+/* Source: https://github.com/catppuccin/catppuccin */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #1E1E2E;
+    foreground:                    #CDD6F4;
+
+    normal-background:             #1E1E2E;
+    normal-foreground:             #CDD6F4;
+    selected-normal-background:    #89B4FA;
+    selected-normal-foreground:    #1E1E2E;
+
+    active-background:             #A6E3A1;
+    active-foreground:             #1E1E2E;
+    selected-active-background:    #A6E3A1;
+    selected-active-foreground:    #1E1E2E;
+
+    urgent-background:             #F38BA8;
+    urgent-foreground:             #1E1E2E;
+    selected-urgent-background:    #F38BA8;
+    selected-urgent-foreground:    #1E1E2E;
+
+    border-color:                  #585B70;
+    separatorcolor:                #585B70;
+}

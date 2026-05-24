@@ -71,6 +71,14 @@ const PREVIEWS = [
     width: 1000,
     data: { CODES: () => load('web/http/status-codes.json') },
   },
+  {
+    id: 'rice',
+    html: 'rice/preview.html',
+    output: 'rice/preview.png',
+    width: 1100,
+    waitUntil: 'domcontentloaded',
+    data: { THEMES: () => load('colors/terminal/themes.json') },
+  },
 ];
 
 async function generateAll(filter) {
@@ -107,10 +115,10 @@ async function generateAll(filter) {
       const hydrated = inject(html, resolvedData);
 
       await page.setViewportSize({ width: preview.width, height: 800 });
-      await page.setContent(hydrated, { waitUntil: 'networkidle' });
+      await page.setContent(hydrated, { waitUntil: preview.waitUntil || 'networkidle' });
 
-      // Wait for any JS rendering to finish
-      await page.waitForTimeout(150);
+      // Wait for any JS rendering to finish (xterm.js needs more time to paint)
+      await page.waitForTimeout(preview.id === 'rice' ? 800 : 150);
 
       // Measure actual page height and resize viewport to fit
       const height = await page.evaluate(() => document.body.scrollHeight);

@@ -1,0 +1,28 @@
+/* Theme: Solarized Light */
+/* Source: https://ethanschoonover.com/solarized/ */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #FDF6E3;
+  --foreground:        #657B83;
+  --cursor:            #586E75;
+  --selection:         #EEE8D5;
+
+  --black:             #073642;
+  --red:               #DC322F;
+  --green:             #859900;
+  --yellow:            #B58900;
+  --blue:              #268BD2;
+  --magenta:           #D33682;
+  --cyan:              #2AA198;
+  --white:             #EEE8D5;
+
+  --bright-black:      #002B36;
+  --bright-red:        #CB4B16;
+  --bright-green:      #586E75;
+  --bright-yellow:     #657B83;
+  --bright-blue:       #839496;
+  --bright-magenta:    #6C71C4;
+  --bright-cyan:       #93A1A1;
+  --bright-white:      #FDF6E3;
+}

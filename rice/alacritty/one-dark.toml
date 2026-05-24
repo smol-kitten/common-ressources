@@ -1,0 +1,34 @@
+# Theme: One Dark
+# Source: https://github.com/atom/atom
+
+[colors.primary]
+background = "#282C34"
+foreground = "#ABB2BF"
+
+[colors.cursor]
+cursor = "#528BFF"
+text   = "#282C34"
+
+[colors.selection]
+background = "#3E4451"
+text       = "#ABB2BF"
+
+[colors.normal]
+black   = "#282C34"
+red     = "#E06C75"
+green   = "#98C379"
+yellow  = "#E5C07B"
+blue    = "#61AFEF"
+magenta = "#C678DD"
+cyan    = "#56B6C2"
+white   = "#ABB2BF"
+
+[colors.bright]
+black   = "#5C6370"
+red     = "#E06C75"
+green   = "#98C379"
+yellow  = "#E5C07B"
+blue    = "#61AFEF"
+magenta = "#C678DD"
+cyan    = "#56B6C2"
+white   = "#FFFFFF"

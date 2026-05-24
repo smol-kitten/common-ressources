@@ -1,0 +1,28 @@
+/* Theme: Catppuccin Mocha */
+/* Source: https://github.com/catppuccin/catppuccin */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #1E1E2E;
+  --foreground:        #CDD6F4;
+  --cursor:            #F5E0DC;
+  --selection:         #585B70;
+
+  --black:             #45475A;
+  --red:               #F38BA8;
+  --green:             #A6E3A1;
+  --yellow:            #F9E2AF;
+  --blue:              #89B4FA;
+  --magenta:           #F5C2E7;
+  --cyan:              #94E2D5;
+  --white:             #BAC2DE;
+
+  --bright-black:      #585B70;
+  --bright-red:        #F38BA8;
+  --bright-green:      #A6E3A1;
+  --bright-yellow:     #F9E2AF;
+  --bright-blue:       #89B4FA;
+  --bright-magenta:    #F5C2E7;
+  --bright-cyan:       #94E2D5;
+  --bright-white:      #A6ADC8;
+}

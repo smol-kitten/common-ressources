@@ -1,0 +1,26 @@
+/* Theme: Monokai */
+/* Source: https://monokai.pro */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #272822;
+    foreground:                    #F8F8F2;
+
+    normal-background:             #272822;
+    normal-foreground:             #F8F8F2;
+    selected-normal-background:    #66D9E8;
+    selected-normal-foreground:    #272822;
+
+    active-background:             #A6E22E;
+    active-foreground:             #272822;
+    selected-active-background:    #A6E22E;
+    selected-active-foreground:    #272822;
+
+    urgent-background:             #F92672;
+    urgent-foreground:             #272822;
+    selected-urgent-background:    #F92672;
+    selected-urgent-foreground:    #272822;
+
+    border-color:                  #75715E;
+    separatorcolor:                #75715E;
+}

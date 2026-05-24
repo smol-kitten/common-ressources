@@ -1,0 +1,28 @@
+/* Theme: Material Dark */
+/* Source: https://material-theme.com */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #212121;
+  --foreground:        #EEFFFF;
+  --cursor:            #FFCC00;
+  --selection:         #546E7A;
+
+  --black:             #546E7A;
+  --red:               #FF5370;
+  --green:             #C3E88D;
+  --yellow:            #FFCB6B;
+  --blue:              #82AAFF;
+  --magenta:           #C792EA;
+  --cyan:              #89DDFF;
+  --white:             #EEFFFF;
+
+  --bright-black:      #B0BEC5;
+  --bright-red:        #FF5370;
+  --bright-green:      #C3E88D;
+  --bright-yellow:     #FFCB6B;
+  --bright-blue:       #82AAFF;
+  --bright-magenta:    #C792EA;
+  --bright-cyan:       #89DDFF;
+  --bright-white:      #FFFFFF;
+}

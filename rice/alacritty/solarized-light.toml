@@ -1,0 +1,34 @@
+# Theme: Solarized Light
+# Source: https://ethanschoonover.com/solarized/
+
+[colors.primary]
+background = "#FDF6E3"
+foreground = "#657B83"
+
+[colors.cursor]
+cursor = "#586E75"
+text   = "#FDF6E3"
+
+[colors.selection]
+background = "#EEE8D5"
+text       = "#657B83"
+
+[colors.normal]
+black   = "#073642"
+red     = "#DC322F"
+green   = "#859900"
+yellow  = "#B58900"
+blue    = "#268BD2"
+magenta = "#D33682"
+cyan    = "#2AA198"
+white   = "#EEE8D5"
+
+[colors.bright]
+black   = "#002B36"
+red     = "#CB4B16"
+green   = "#586E75"
+yellow  = "#657B83"
+blue    = "#839496"
+magenta = "#6C71C4"
+cyan    = "#93A1A1"
+white   = "#FDF6E3"

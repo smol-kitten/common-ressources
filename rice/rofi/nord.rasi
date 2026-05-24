@@ -1,0 +1,26 @@
+/* Theme: Nord */
+/* Source: https://www.nordtheme.com */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #2E3440;
+    foreground:                    #D8DEE9;
+
+    normal-background:             #2E3440;
+    normal-foreground:             #D8DEE9;
+    selected-normal-background:    #81A1C1;
+    selected-normal-foreground:    #2E3440;
+
+    active-background:             #A3BE8C;
+    active-foreground:             #2E3440;
+    selected-active-background:    #A3BE8C;
+    selected-active-foreground:    #2E3440;
+
+    urgent-background:             #BF616A;
+    urgent-foreground:             #2E3440;
+    selected-urgent-background:    #BF616A;
+    selected-urgent-foreground:    #2E3440;
+
+    border-color:                  #4C566A;
+    separatorcolor:                #4C566A;
+}

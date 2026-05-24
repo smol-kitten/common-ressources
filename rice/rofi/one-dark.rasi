@@ -1,0 +1,26 @@
+/* Theme: One Dark */
+/* Source: https://github.com/atom/atom */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #282C34;
+    foreground:                    #ABB2BF;
+
+    normal-background:             #282C34;
+    normal-foreground:             #ABB2BF;
+    selected-normal-background:    #61AFEF;
+    selected-normal-foreground:    #282C34;
+
+    active-background:             #98C379;
+    active-foreground:             #282C34;
+    selected-active-background:    #98C379;
+    selected-active-foreground:    #282C34;
+
+    urgent-background:             #E06C75;
+    urgent-foreground:             #282C34;
+    selected-urgent-background:    #E06C75;
+    selected-urgent-foreground:    #282C34;
+
+    border-color:                  #5C6370;
+    separatorcolor:                #5C6370;
+}

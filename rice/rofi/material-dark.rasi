@@ -1,0 +1,26 @@
+/* Theme: Material Dark */
+/* Source: https://material-theme.com */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #212121;
+    foreground:                    #EEFFFF;
+
+    normal-background:             #212121;
+    normal-foreground:             #EEFFFF;
+    selected-normal-background:    #82AAFF;
+    selected-normal-foreground:    #212121;
+
+    active-background:             #C3E88D;
+    active-foreground:             #212121;
+    selected-active-background:    #C3E88D;
+    selected-active-foreground:    #212121;
+
+    urgent-background:             #FF5370;
+    urgent-foreground:             #212121;
+    selected-urgent-background:    #FF5370;
+    selected-urgent-foreground:    #212121;
+
+    border-color:                  #B0BEC5;
+    separatorcolor:                #B0BEC5;
+}

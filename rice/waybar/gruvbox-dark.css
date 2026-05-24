@@ -1,0 +1,28 @@
+/* Theme: Gruvbox Dark */
+/* Source: https://github.com/morhetz/gruvbox */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #282828;
+  --foreground:        #EBDBB2;
+  --cursor:            #EBDBB2;
+  --selection:         #3C3836;
+
+  --black:             #282828;
+  --red:               #CC241D;
+  --green:             #98971A;
+  --yellow:            #D79921;
+  --blue:              #458588;
+  --magenta:           #B16286;
+  --cyan:              #689D6A;
+  --white:             #A89984;
+
+  --bright-black:      #928374;
+  --bright-red:        #FB4934;
+  --bright-green:      #B8BB26;
+  --bright-yellow:     #FABD2F;
+  --bright-blue:       #83A598;
+  --bright-magenta:    #D3869B;
+  --bright-cyan:       #8EC07C;
+  --bright-white:      #EBDBB2;
+}
