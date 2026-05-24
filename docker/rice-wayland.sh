@@ -123,9 +123,10 @@ setpriv --reuid=1000 --regid=1000 --init-groups -- bash "$SWAY_LAUNCH" 2>/tmp/sw
 SWAY_PID=$!
 
 # Wait up to 4 s for the IPC socket (created at ${SWAY_XDG}/sway-ipc.*.*.sock)
+# Use find not ls — find exits 0 on zero matches, ls exits 2 (triggers set -e)
 SWAYSOCK_PATH=""
 for i in $(seq 1 40); do
-  SWAYSOCK_PATH=$(ls "$SWAY_XDG"/sway-ipc.*.*.sock 2>/dev/null | head -1)
+  SWAYSOCK_PATH=$(find "$SWAY_XDG" -maxdepth 1 -name "sway-ipc.*.*.sock" 2>/dev/null | head -1)
   [[ -n "$SWAYSOCK_PATH" ]] && break
   sleep 0.1
 done
