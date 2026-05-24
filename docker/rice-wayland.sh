@@ -503,21 +503,14 @@ ROFI_LAYOUT_EOF
   # ── k. burn attribution text onto the bottom-right corner ────────────────────
   OUT="${OUT_DIR}/${SLUG}.png"
 
-  # Calculate positions for the badge
-  BADGE_X1=$((OUTPUT_W - 320))
-  BADGE_Y1=$((OUTPUT_H - 26))
-  BADGE_X2=$((OUTPUT_W - 4))
-  BADGE_Y2=$((OUTPUT_H - 4))
-  TEXT_X=$((OUTPUT_W - 316))
-  TEXT_Y=$((OUTPUT_H - 8))
-
   convert "$SHOT_RAW" \
     -font DejaVu-Sans \
     -pointsize 11 \
-    -fill "rgba(0,0,0,0.6)" \
-    -draw "roundRectangle ${BADGE_X1},${BADGE_Y1} ${BADGE_X2},${BADGE_Y2} 4,4" \
-    -fill "rgba(255,255,255,0.8)" \
-    -annotate "+${TEXT_X}+${TEXT_Y}" "Theme: ${THEME_NAME} · Wallpaper: ImageMagick gradient" \
+    -gravity SouthEast \
+    -fill "rgba(0,0,0,0.65)" \
+    -draw "roundRectangle $((OUTPUT_W-322)),$((OUTPUT_H-28)) $((OUTPUT_W-2)),$((OUTPUT_H-2)) 4,4" \
+    -fill "rgba(255,255,255,0.85)" \
+    -annotate "0+6+8" "Theme: ${THEME_NAME} · Wallpaper: ImageMagick gradient" \
     "$OUT"
 
   echo "  OK  $OUT"
