@@ -15,13 +15,35 @@ function load(rel) {
 function injectInto(htmlRel, dataMap) {
   let html = fs.readFileSync(path.join(ROOT, htmlRel), 'utf8');
   for (const [key, value] of Object.entries(dataMap)) {
-    html = html.replace(`"__${key}__"`, JSON.stringify(value));
+    if (typeof value === 'string') {
+      html = html.replace(`<!--__${key}__-->`, value);
+    } else {
+      html = html.replace(`"__${key}__"`, JSON.stringify(value));
+    }
   }
   return html;
 }
 
+function buildFlagCards(flags) {
+  return flags.map(flag => {
+    const isVertical = (flag.type || '') === 'vertical-stripes';
+    const dir = isVertical ? 'row' : 'column';
+    const stripes = (flag.colors || []).map(c =>
+      `<div style="background:${c};flex:1"></div>`
+    ).join('');
+    return `<div class="flag-card">
+      <div class="flag" style="display:flex;flex-direction:${dir}">${stripes}</div>
+      <div class="flag-meta">
+        <div class="flag-name">${flag.name}</div>
+        <div class="flag-iso">${flag.iso}</div>
+        <div class="flag-continent">${flag.continent}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
 async function renderAndShot(page, html, outputRel, width = 1100, waitMs = 400) {
-  await page.setViewportSize({ width, height: 4000 });
+  await page.setViewportSize({ width, height: 1 });
   await page.setContent(html, { waitUntil: 'domcontentloaded' });
   await page.waitForTimeout(waitMs);
   await page.screenshot({ path: path.join(ROOT, outputRel), fullPage: true });
@@ -134,12 +156,13 @@ test.describe('Preview screenshots', () => {
   });
 
   test('country flags preview', async ({ page }) => {
+    const flags = load('flags/countries/flags.json');
     const html = injectInto('flags/countries/preview.html', {
-      FLAGS: load('flags/countries/flags.json'),
+      CARDS: buildFlagCards(flags),
     });
     await renderAndShot(page, html, 'flags/countries/colortest.png', 1100);
     const cards = await page.locator('.flag-card').count();
-    expect(cards).toBe(load('flags/countries/flags.json').length);
+    expect(cards).toBe(flags.length);
   });
 
   test('color palettes preview', async ({ page }) => {
@@ -180,7 +203,7 @@ test.describe('Preview screenshots', () => {
   test('rice terminal preview', async ({ page }) => {
     const themes = load('colors/terminal/themes.json');
     const html = injectInto('rice/preview.html', { THEMES: themes });
-    await renderAndShot(page, html, 'rice/preview.png', 1100, 2000);
+    await renderAndShot(page, html, 'rice/preview.png', 1100);
     const cards = await page.locator('.terminal-card').count();
     expect(cards).toBe(themes.length);
   });

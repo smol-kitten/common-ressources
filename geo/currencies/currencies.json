@@ -1,0 +1,202 @@
+[
+  {
+    "code": "USD",
+    "name": "United States Dollar",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "United States",
+    "country_code": "US"
+  },
+  {
+    "code": "EUR",
+    "name": "Euro",
+    "symbol": "€",
+    "decimals": 2,
+    "country": "European Union",
+    "country_code": "EU"
+  },
+  {
+    "code": "GBP",
+    "name": "British Pound Sterling",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  {
+    "code": "JPY",
+    "name": "Japanese Yen",
+    "symbol": "¥",
+    "decimals": 0,
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  {
+    "code": "CNY",
+    "name": "Chinese Yuan Renminbi",
+    "symbol": "¥",
+    "decimals": 2,
+    "country": "China",
+    "country_code": "CN"
+  },
+  {
+    "code": "INR",
+    "name": "Indian Rupee",
+    "symbol": "₹",
+    "decimals": 2,
+    "country": "India",
+    "country_code": "IN"
+  },
+  {
+    "code": "CAD",
+    "name": "Canadian Dollar",
+    "symbol": "C$",
+    "decimals": 2,
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  {
+    "code": "AUD",
+    "name": "Australian Dollar",
+    "symbol": "A$",
+    "decimals": 2,
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  {
+    "code": "CHF",
+    "name": "Swiss Franc",
+    "symbol": "Fr",
+    "decimals": 2,
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  {
+    "code": "SEK",
+    "name": "Swedish Krona",
+    "symbol": "kr",
+    "decimals": 2,
+    "country": "Sweden",
+    "country_code": "SE"
+  },
+  {
+    "code": "NOK",
+    "name": "Norwegian Krone",
+    "symbol": "kr",
+    "decimals": 2,
+    "country": "Norway",
+    "country_code": "NO"
+  },
+  {
+    "code": "DKK",
+    "name": "Danish Krone",
+    "symbol": "kr",
+    "decimals": 2,
+    "country": "Denmark",
+    "country_code": "DK"
+  },
+  {
+    "code": "NZD",
+    "name": "New Zealand Dollar",
+    "symbol": "NZ$",
+    "decimals": 2,
+    "country": "New Zealand",
+    "country_code": "NZ"
+  },
+  {
+    "code": "BRL",
+    "name": "Brazilian Real",
+    "symbol": "R$",
+    "decimals": 2,
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  {
+    "code": "MXN",
+    "name": "Mexican Peso",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "Mexico",
+    "country_code": "MX"
+  },
+  {
+    "code": "ZAR",
+    "name": "South African Rand",
+    "symbol": "R",
+    "decimals": 2,
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  {
+    "code": "KRW",
+    "name": "South Korean Won",
+    "symbol": "₩",
+    "decimals": 0,
+    "country": "South Korea",
+    "country_code": "KR"
+  },
+  {
+    "code": "SGD",
+    "name": "Singapore Dollar",
+    "symbol": "S$",
+    "decimals": 2,
+    "country": "Singapore",
+    "country_code": "SG"
+  },
+  {
+    "code": "HKD",
+    "name": "Hong Kong Dollar",
+    "symbol": "HK$",
+    "decimals": 2,
+    "country": "Hong Kong",
+    "country_code": "HK"
+  },
+  {
+    "code": "TRY",
+    "name": "Turkish Lira",
+    "symbol": "₺",
+    "decimals": 2,
+    "country": "Turkey",
+    "country_code": "TR"
+  },
+  {
+    "code": "RUB",
+    "name": "Russian Ruble",
+    "symbol": "₽",
+    "decimals": 2,
+    "country": "Russia",
+    "country_code": "RU"
+  },
+  {
+    "code": "PLN",
+    "name": "Polish Zloty",
+    "symbol": "zł",
+    "decimals": 2,
+    "country": "Poland",
+    "country_code": "PL"
+  },
+  {
+    "code": "AED",
+    "name": "UAE Dirham",
+    "symbol": "د.إ",
+    "decimals": 2,
+    "country": "United Arab Emirates",
+    "country_code": "AE"
+  },
+  {
+    "code": "SAR",
+    "name": "Saudi Riyal",
+    "symbol": "﷼",
+    "decimals": 2,
+    "country": "Saudi Arabia",
+    "country_code": "SA"
+  },
+  {
+    "code": "IDR",
+    "name": "Indonesian Rupiah",
+    "symbol": "Rp",
+    "decimals": 0,
+    "country": "Indonesia",
+    "country_code": "ID"
+  }
+]

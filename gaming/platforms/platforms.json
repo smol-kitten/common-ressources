@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "pc",
+    "name": "PC",
+    "manufacturer": "Various",
+    "release_year": null,
+    "type": "pc",
+    "generation": null,
+    "discontinued": false,
+    "notes": "Open platform; Windows, Linux, macOS"
+  },
+  {
+    "slug": "ps5",
+    "name": "PlayStation 5",
+    "manufacturer": "Sony",
+    "release_year": 2020,
+    "type": "console",
+    "generation": 9,
+    "discontinued": false,
+    "notes": "AMD Zen 2 CPU, RDNA 2 GPU, custom NVMe SSD"
+  },
+  {
+    "slug": "ps4",
+    "name": "PlayStation 4",
+    "manufacturer": "Sony",
+    "release_year": 2013,
+    "type": "console",
+    "generation": 8,
+    "discontinued": true,
+    "notes": "x86-64 AMD Jaguar, 8 GB GDDR5"
+  },
+  {
+    "slug": "ps3",
+    "name": "PlayStation 3",
+    "manufacturer": "Sony",
+    "release_year": 2006,
+    "type": "console",
+    "generation": 7,
+    "discontinued": true,
+    "notes": "Cell Broadband Engine CPU, Blu-ray"
+  },
+  {
+    "slug": "xbox-series-x",
+    "name": "Xbox Series X",
+    "manufacturer": "Microsoft",
+    "release_year": 2020,
+    "type": "console",
+    "generation": 9,
+    "discontinued": false,
+    "notes": "AMD Zen 2 CPU, RDNA 2 GPU, 1 TB NVMe SSD"
+  },
+  {
+    "slug": "xbox-one",
+    "name": "Xbox One",
+    "manufacturer": "Microsoft",
+    "release_year": 2013,
+    "type": "console",
+    "generation": 8,
+    "discontinued": true,
+    "notes": "AMD x86-64, HDMI passthrough"
+  },
+  {
+    "slug": "switch",
+    "name": "Nintendo Switch",
+    "manufacturer": "Nintendo",
+    "release_year": 2017,
+    "type": "hybrid",
+    "generation": 8,
+    "discontinued": false,
+    "notes": "NVIDIA Tegra X1, handheld/docked hybrid"
+  },
+  {
+    "slug": "switch-2",
+    "name": "Nintendo Switch 2",
+    "manufacturer": "Nintendo",
+    "release_year": 2025,
+    "type": "hybrid",
+    "generation": 9,
+    "discontinued": false,
+    "notes": "NVIDIA custom SoC, 4K docked, 1080p handheld"
+  },
+  {
+    "slug": "wii",
+    "name": "Wii",
+    "manufacturer": "Nintendo",
+    "release_year": 2006,
+    "type": "console",
+    "generation": 7,
+    "discontinued": true,
+    "notes": "IBM PowerPC Broadway, motion controllers"
+  },
+  {
+    "slug": "game-boy-advance",
+    "name": "Game Boy Advance",
+    "manufacturer": "Nintendo",
+    "release_year": 2001,
+    "type": "handheld",
+    "generation": 6,
+    "discontinued": true,
+    "notes": "ARM7TDMI 32-bit, 240×160 display"
+  },
+  {
+    "slug": "ds",
+    "name": "Nintendo DS",
+    "manufacturer": "Nintendo",
+    "release_year": 2004,
+    "type": "handheld",
+    "generation": 7,
+    "discontinued": true,
+    "notes": "Dual screen, touchscreen, wireless"
+  },
+  {
+    "slug": "3ds",
+    "name": "Nintendo 3DS",
+    "manufacturer": "Nintendo",
+    "release_year": 2011,
+    "type": "handheld",
+    "generation": 8,
+    "discontinued": true,
+    "notes": "Autostereoscopic 3D, dual screens"
+  },
+  {
+    "slug": "steam-deck",
+    "name": "Steam Deck",
+    "manufacturer": "Valve",
+    "release_year": 2022,
+    "type": "handheld-pc",
+    "generation": null,
+    "discontinued": false,
+    "notes": "AMD Van Gogh APU, SteamOS, runs PC games"
+  },
+  {
+    "slug": "psp",
+    "name": "PlayStation Portable",
+    "manufacturer": "Sony",
+    "release_year": 2005,
+    "type": "handheld",
+    "generation": 7,
+    "discontinued": true,
+    "notes": "MIPS R4000 CPU, UMD disc format"
+  },
+  {
+    "slug": "genesis",
+    "name": "Sega Genesis (Mega Drive)",
+    "manufacturer": "Sega",
+    "release_year": 1989,
+    "type": "console",
+    "generation": 4,
+    "discontinued": true,
+    "notes": "Motorola 68000 CPU, 16-bit era"
+  },
+  {
+    "slug": "snes",
+    "name": "Super Nintendo Entertainment System",
+    "manufacturer": "Nintendo",
+    "release_year": 1990,
+    "type": "console",
+    "generation": 4,
+    "discontinued": true,
+    "notes": "Ricoh 5A22, 16-bit, Mode 7 graphics"
+  },
+  {
+    "slug": "n64",
+    "name": "Nintendo 64",
+    "manufacturer": "Nintendo",
+    "release_year": 1996,
+    "type": "console",
+    "generation": 5,
+    "discontinued": true,
+    "notes": "MIPS R4300i 64-bit, cartridge-based"
+  },
+  {
+    "slug": "dreamcast",
+    "name": "Dreamcast",
+    "manufacturer": "Sega",
+    "release_year": 1998,
+    "type": "console",
+    "generation": 6,
+    "discontinued": true,
+    "notes": "Hitachi SH-4 CPU, first built-in modem"
+  }
+]

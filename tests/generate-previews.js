@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 // Generates PNG preview images from HTML template files using Playwright.
-// Each HTML template has a "__KEY__" placeholder that is replaced with
-// the corresponding JSON data before the page is rendered.
+//
+// Two injection modes:
+//   "<!--__KEY__-->"  → raw HTML string (pre-rendered server-side)
+//   "\"__KEY__\""     → JSON-serialised value (parsed client-side)
 //
 // Usage:
 //   node tests/generate-previews.js
@@ -22,10 +24,34 @@ function load(relPath) {
 function inject(html, dataMap) {
   let out = html;
   for (const [key, value] of Object.entries(dataMap)) {
-    // Replace the JSON-string placeholder "\"__KEY__\"" with serialized data
-    out = out.replace(`"__${key}__"`, JSON.stringify(value));
+    if (typeof value === 'string') {
+      // Raw HTML injection — no JS needed in the template
+      out = out.replace(`<!--__${key}__-->`, value);
+    } else {
+      // JSON injection — client-side JS parses the value
+      out = out.replace(`"__${key}__"`, JSON.stringify(value));
+    }
   }
   return out;
+}
+
+// Pre-render country flag cards server-side to avoid client-JS issues
+function buildFlagCards(flags) {
+  return flags.map(flag => {
+    const isVertical = (flag.type || '') === 'vertical-stripes';
+    const dir = isVertical ? 'row' : 'column';
+    const stripes = (flag.colors || []).map(c =>
+      `<div style="background:${c};flex:1"></div>`
+    ).join('');
+    return `<div class="flag-card">
+      <div class="flag" style="display:flex;flex-direction:${dir}">${stripes}</div>
+      <div class="flag-meta">
+        <div class="flag-name">${flag.name}</div>
+        <div class="flag-iso">${flag.iso}</div>
+        <div class="flag-continent">${flag.continent}</div>
+      </div>
+    </div>`;
+  }).join('');
 }
 
 const PREVIEWS = [
@@ -41,7 +67,8 @@ const PREVIEWS = [
     html: 'flags/countries/preview.html',
     output: 'flags/countries/colortest.png',
     width: 1100,
-    data: { FLAGS: () => load('flags/countries/flags.json') },
+    // Pre-render cards server-side → raw HTML injection, no client JS needed
+    data: { CARDS: () => buildFlagCards(load('flags/countries/flags.json')) },
   },
   {
     id: 'colors/palettes',
@@ -76,7 +103,6 @@ const PREVIEWS = [
     html: 'rice/preview.html',
     output: 'rice/preview.png',
     width: 1100,
-    waitUntil: 'domcontentloaded',
     data: { THEMES: () => load('colors/terminal/themes.json') },
   },
 ];
@@ -105,7 +131,6 @@ async function generateAll(filter) {
         continue;
       }
 
-      // Resolve data (call each loader)
       const resolvedData = {};
       for (const [key, loader] of Object.entries(preview.data)) {
         resolvedData[key] = loader();
@@ -114,14 +139,11 @@ async function generateAll(filter) {
       const html = fs.readFileSync(htmlFile, 'utf8');
       const hydrated = inject(html, resolvedData);
 
-      // Use a tall initial viewport so fullPage captures everything without a
-      // resize step (resize triggers async re-layout that can race the screenshot)
-      await page.setViewportSize({ width: preview.width, height: 4000 });
+      // height:1 ensures scrollHeight == content height so fullPage captures
+      // exactly the content — no empty black space below short pages.
+      await page.setViewportSize({ width: preview.width, height: 1 });
       await page.setContent(hydrated, { waitUntil: 'domcontentloaded' });
-
-      // Give JS time to render content (rice/xterm.js needs more)
-      const waitMs = preview.id === 'rice' ? 2000 : 400;
-      await page.waitForTimeout(waitMs);
+      await page.waitForTimeout(400);
 
       await page.screenshot({ path: outFile, fullPage: true });
       console.log(`  OK  ${preview.output}`);

@@ -63,26 +63,6 @@
 </head>
 <body>
 <h1>Country Flags (simple stripe) — common-ressources</h1>
-<div class="grid" id="grid"></div>
-
-<script>
-const FLAGS = "__FLAGS__";
-
-function card(flag) {
-  const isVertical = flag.type === 'vertical-stripes';
-  const direction = isVertical ? 'row' : 'column';
-  const stripes = flag.colors.map(c => `<div style="background:${c};flex:1"></div>`).join('');
-  return `<div class="flag-card">
-    <div class="flag"><div style="display:flex;flex-direction:${direction};height:80px;width:100%">${stripes}</div></div>
-    <div class="flag-meta">
-      <div class="flag-name">${flag.name}</div>
-      <div class="flag-iso">${flag.iso}</div>
-      <div class="flag-continent">${flag.continent}</div>
-    </div>
-  </div>`;
-}
-
-document.getElementById('grid').innerHTML = FLAGS.map(card).join('');
-</script>
+<div class="grid"><!--__CARDS__--></div>
 </body>
 </html>
