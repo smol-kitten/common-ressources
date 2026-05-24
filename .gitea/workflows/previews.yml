@@ -35,9 +35,9 @@ jobs:
 
       - name: Commit generated previews
         run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git config user.email "noreply@gitea.local"
-          git config user.name "Gitea Actions"
+          git config --global --add safe.directory '*'
+          git config --global user.email "noreply@gitea.local"
+          git config --global user.name "Gitea Actions"
           git add $(find . -name "*.png" ! -path "./.git/*" ! -path "./node_modules/*" | head -50)
           if git diff --staged --quiet; then
             echo "No preview changes to commit."

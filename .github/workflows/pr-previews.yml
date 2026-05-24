@@ -40,10 +40,11 @@ jobs:
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
 
       - name: Commit preview images to PR branch
+        id: commit-previews
         run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git config user.email "noreply@github.com"
-          git config user.name "github-actions[bot]"
+          git config --global --add safe.directory '*'
+          git config --global user.email "noreply@github.com"
+          git config --global user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add $(find . -name "*.png" ! -path "./.git/*" ! -path "./node_modules/*" | head -50)
           if git diff --staged --quiet; then
@@ -52,17 +53,18 @@ jobs:
             git commit -m "chore: PR preview images [skip ci]"
             git push origin HEAD:${{ github.event.pull_request.head.ref }}
           fi
+          # Capture SHA *after* any new PNG commit so URLs point to the right tree
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Post preview comment
         uses: actions/github-script@v7
         with:
           script: |
-            const branch = context.payload.pull_request.head.ref;
-            const owner  = context.repo.owner;
-            const repo   = context.repo.repo;
-            const sha    = context.payload.pull_request.head.sha;
+            const owner = context.repo.owner;
+            const repo  = context.repo.repo;
+            // Use the SHA captured after the PNG commit, not the trigger SHA
+            const sha   = '${{ steps.commit-previews.outputs.sha }}';
 
-            // Use commit SHA in URL to bypass CDN caching
             const raw = (p) =>
               `https://raw.githubusercontent.com/${owner}/${repo}/${sha}/${p}`;
 
@@ -73,6 +75,7 @@ jobs:
               ['Terminal Themes',   'colors/terminal/colortest.png'],
               ['Social Platforms',  'social/brandsheet.png'],
               ['HTTP Reference',    'web/http/reference.png'],
+              ['Rice Preview',      'rice/preview.png'],
             ];
 
             const rows = previews

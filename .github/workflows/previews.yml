@@ -44,9 +44,9 @@ jobs:
 
       - name: Commit generated previews
         run: |
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git config user.email "noreply@github.com"
-          git config user.name "github-actions[bot]"
+          git config --global --add safe.directory '*'
+          git config --global user.email "noreply@github.com"
+          git config --global user.name "github-actions[bot]"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add $(find . -name "*.png" ! -path "./.git/*" ! -path "./node_modules/*" | head -50)
           if git diff --staged --quiet; then
