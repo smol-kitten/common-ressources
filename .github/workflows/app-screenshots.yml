@@ -1,6 +1,7 @@
-# Takes real terminal screenshots for each rice theme using Docker + Xvfb.
-# Triggered when themes.json changes, or on demand.
-# Commits all generated screenshots back to the branch.
+# Real Wayland terminal screenshots for each rice theme.
+# Uses Arch Linux + Sway (headless/pixman) + foot terminal + grim.
+# Triggered when themes.json or configs change, or on demand.
+# Commits generated screenshots back to the branch.
 
 name: Generate App Screenshots
 
@@ -9,19 +10,35 @@ on:
     branches: [main, master]
     paths:
       - 'colors/terminal/themes.json'
-      - 'rice/alacritty/**'
-      - 'docker/Dockerfile.screenshots'
-      - 'docker/screenshot-terminals.sh'
+      - 'rice/**'
+      - 'docker/Dockerfile.rice-wayland'
+      - 'docker/rice-wayland.sh'
   workflow_dispatch:
     inputs:
       slug:
-        description: 'Theme slug to screenshot (leave empty for all)'
+        description: 'Theme slug (leave empty for all)'
         required: false
         default: ''
+      win_w:
+        description: 'Terminal window width (px)'
+        required: false
+        default: '900'
+      win_h:
+        description: 'Terminal window height (px)'
+        required: false
+        default: '520'
+      win_x:
+        description: 'Window X position'
+        required: false
+        default: '40'
+      win_y:
+        description: 'Window Y position'
+        required: false
+        default: '40'
 
 jobs:
   screenshots:
-    runs-on: ubuntu-22.04
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v4
@@ -29,32 +46,23 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - name: Build screenshot Docker image
+      - name: Build Wayland screenshot image
         run: |
           docker build \
-            -t rice-screenshots \
-            -f docker/Dockerfile.screenshots \
+            -t rice-wayland \
+            -f docker/Dockerfile.rice-wayland \
             .
-
-      - name: Generate rice config files
-        run: node rice/generate.js
 
       - name: Run screenshot capture
         run: |
-          SLUG="${{ github.event.inputs.slug }}"
-          if [ -n "$SLUG" ]; then
-            docker run --rm \
-              -v "$PWD:/repo" \
-              --privileged \
-              rice-screenshots \
-              bash docker/screenshot-terminals.sh "$SLUG"
-          else
-            docker run --rm \
-              -v "$PWD:/repo" \
-              --privileged \
-              rice-screenshots \
-              bash docker/screenshot-terminals.sh
-          fi
+          docker run --rm \
+            -v "$PWD:/repo" \
+            -e WIN_W="${{ github.event.inputs.win_w || '900' }}" \
+            -e WIN_H="${{ github.event.inputs.win_h || '520' }}" \
+            -e WIN_X="${{ github.event.inputs.win_x || '40' }}" \
+            -e WIN_Y="${{ github.event.inputs.win_y || '40' }}" \
+            rice-wayland \
+            bash docker/rice-wayland.sh ${{ github.event.inputs.slug }}
 
       - name: List generated screenshots
         run: |
@@ -63,14 +71,15 @@ jobs:
 
       - name: Commit screenshots
         run: |
+          git config --global --add safe.directory '*'
           git config --global user.email "noreply@github.com"
           git config --global user.name "github-actions[bot]"
           git remote set-url origin \
             https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-
-          git add rice/screenshots/*.png 2>/dev/null || true
+          git pull --rebase origin "$(git rev-parse --abbrev-ref HEAD)" || true
+          git add rice/screenshots/ 2>/dev/null || true
           if git diff --staged --quiet; then
-            echo "No screenshot changes to commit."
+            echo "No screenshot changes."
           else
             git commit -m "chore: regenerate rice theme screenshots [skip ci]"
             git push origin HEAD
