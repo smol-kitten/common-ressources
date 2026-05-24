@@ -98,13 +98,16 @@ for_window [app_id="rofi"] floating enable
 SWAY_EOF
 chmod 644 "$SWAY_CONF"
 
-# Write a launch wrapper so all env vars are set before exec
+# Write a launch wrapper so all env vars are set before exec.
+# setpriv (util-linux, no PAM) drops root to wluser uid/gid directly.
 SWAY_LAUNCH=/tmp/launch-sway.sh
 cat > "$SWAY_LAUNCH" <<LAUNCH_EOF
 #!/bin/bash
-export XDG_RUNTIME_DIR=$SWAY_XDG
-export WAYLAND_DISPLAY=wayland-1
 exec env \\
+  HOME=/home/wluser \\
+  USER=wluser \\
+  XDG_RUNTIME_DIR=$SWAY_XDG \\
+  WAYLAND_DISPLAY=wayland-1 \\
   WLR_BACKENDS=headless \\
   WLR_RENDERER=pixman \\
   WLR_SESSION=noop \\
@@ -114,10 +117,9 @@ exec env \\
   sway --config $SWAY_CONF
 LAUNCH_EOF
 chmod +x "$SWAY_LAUNCH"
-chown "${SWAY_USER}:${SWAY_USER}" "$SWAY_LAUNCH"
 
-echo "==> Starting Sway headless as ${SWAY_USER} (${OUTPUT_W}x${OUTPUT_H})..."
-runuser -u "$SWAY_USER" -- "$SWAY_LAUNCH" 2>/tmp/sway.log &
+echo "==> Starting Sway headless as ${SWAY_USER} (uid 1000) (${OUTPUT_W}x${OUTPUT_H})..."
+setpriv --reuid=1000 --regid=1000 --init-groups -- bash "$SWAY_LAUNCH" 2>/tmp/sway.log &
 SWAY_PID=$!
 
 # Wait up to 4 s for the IPC socket (created at ${SWAY_XDG}/sway-ipc.*.*.sock)
@@ -130,7 +132,14 @@ done
 
 if [[ -z "$SWAYSOCK_PATH" ]]; then
   echo "ERROR: Sway did not start (no IPC socket after 4s)." >&2
+  echo "--- sway log ---" >&2
   cat /tmp/sway.log >&2
+  echo "--- launch script ---" >&2
+  cat "$SWAY_LAUNCH" >&2
+  echo "--- processes ---" >&2
+  ps aux >&2
+  echo "--- xdg runtime dir ---" >&2
+  ls -la "$SWAY_XDG" >&2 || true
   exit 1
 fi
 export SWAYSOCK="$SWAYSOCK_PATH"
