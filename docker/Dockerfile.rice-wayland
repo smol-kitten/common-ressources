@@ -1,6 +1,5 @@
-# Dockerfile for real Wayland terminal screenshots of rice themes.
-# Uses Sway (headless, pixman renderer — no GPU needed) + foot terminal + grim.
-# foot uses pixman/cairo for rendering so it works fully CPU-only in Docker.
+# Dockerfile for rice theme desktop screenshots via ImageMagick composition.
+# No compositor, no virtual display — pure ImageMagick drawing primitives.
 #
 # Build:
 #   docker build -t rice-wayland -f docker/Dockerfile.rice-wayland .
@@ -11,41 +10,15 @@
 
 FROM archlinux:latest
 
-# Initialise pacman keyring (required in fresh containers)
 RUN pacman-key --init && pacman-key --populate archlinux
 
-# Full system update + packages in one layer to keep image size down
 RUN pacman -Syu --noconfirm \
-      # Wayland compositor — headless via WLR_BACKENDS=headless
-      sway \
-      # Terminal — pixman/cairo renderer, no GPU required
-      foot \
-      # Wayland screenshot tool
-      grim \
-      # Image crop / resize
       imagemagick \
-      # JSON parsing for theme config generation
       jq \
-      # For rice/generate.js
       nodejs npm \
-      # Fonts
-      noto-fonts \
       ttf-dejavu \
-      ttf-jetbrains-mono \
-      # Utilities
       git bash \
-      # Top bar (Wayland-native)
-      waybar \
-      # App launcher — Wayland fork of rofi
-      rofi-wayland \
-      # Set wallpaper on sway output
-      swaybg \
-      # Optional: wallpaper download / HTTP requests
-      curl \
     && pacman -Scc --noconfirm
-
-# Non-root user required to run Sway (refuses to start as root in wlroots 0.17+)
-RUN useradd -m -u 1000 -s /bin/bash wluser
 
 WORKDIR /repo
 CMD ["bash", "docker/rice-wayland.sh"]
