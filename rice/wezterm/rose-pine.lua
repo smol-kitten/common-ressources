@@ -1,0 +1,20 @@
+-- Theme: Rose Piné
+-- Source: https://rosepinetheme.com
+-- Usage in wezterm.lua:
+--   local scheme = require("rice.wezterm.rose-pine")
+--   config.colors = scheme.colors
+
+return {
+  colors = {
+    background    = "#191724",
+    foreground    = "#e0def4",
+    cursor_bg     = "#e0def4",
+    cursor_border = "#e0def4",
+    cursor_fg     = "#191724",
+    selection_bg  = "#403d52",
+    selection_fg  = "#e0def4",
+
+    ansi    = { "#26233a", "#eb6f92", "#31748f", "#f6c177", "#9ccfd8", "#c4a7e7", "#ebbcba", "#e0def4" },
+    brights = { "#6e6a86", "#eb6f92", "#31748f", "#f6c177", "#9ccfd8", "#c4a7e7", "#ebbcba", "#e0def4" },
+  },
+}

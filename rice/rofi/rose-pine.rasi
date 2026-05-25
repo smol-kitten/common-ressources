@@ -1,0 +1,26 @@
+/* Theme: Rose Piné */
+/* Source: https://rosepinetheme.com */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #191724;
+    foreground:                    #e0def4;
+
+    normal-background:             #191724;
+    normal-foreground:             #e0def4;
+    selected-normal-background:    #9ccfd8;
+    selected-normal-foreground:    #191724;
+
+    active-background:             #31748f;
+    active-foreground:             #191724;
+    selected-active-background:    #31748f;
+    selected-active-foreground:    #191724;
+
+    urgent-background:             #eb6f92;
+    urgent-foreground:             #191724;
+    selected-urgent-background:    #eb6f92;
+    selected-urgent-foreground:    #191724;
+
+    border-color:                  #6e6a86;
+    separatorcolor:                #6e6a86;
+}

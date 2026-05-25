@@ -1,0 +1,34 @@
+# Theme: Palenight
+# Source: https://github.com/whizkydee/vscode-palenight-theme
+
+[colors.primary]
+background = "#292d3e"
+foreground = "#a6accd"
+
+[colors.cursor]
+cursor = "#a6accd"
+text   = "#292d3e"
+
+[colors.selection]
+background = "#32374d"
+text       = "#a6accd"
+
+[colors.normal]
+black   = "#292d3e"
+red     = "#f07178"
+green   = "#c3e88d"
+yellow  = "#ffcb6b"
+blue    = "#82aaff"
+magenta = "#c792ea"
+cyan    = "#89ddff"
+white   = "#d0d0d0"
+
+[colors.bright]
+black   = "#434758"
+red     = "#ff8b92"
+green   = "#ddffa7"
+yellow  = "#ffe585"
+blue    = "#9cc4ff"
+magenta = "#e1acff"
+cyan    = "#a3f7ff"
+white   = "#ffffff"

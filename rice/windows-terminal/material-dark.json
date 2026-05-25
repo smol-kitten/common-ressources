@@ -1,0 +1,28 @@
+// Theme: Material Dark
+// Source: https://material-theme.com
+// Add the object inside "schemes" to your Windows Terminal settings.json
+// Then set "colorScheme": "Material Dark" in your profile.
+
+{
+  "name": "Material Dark",
+  "background": "#212121",
+  "foreground": "#EEFFFF",
+  "cursorColor": "#FFCC00",
+  "selectionBackground": "#546E7A",
+  "black": "#546E7A",
+  "red": "#FF5370",
+  "green": "#C3E88D",
+  "yellow": "#FFCB6B",
+  "blue": "#82AAFF",
+  "purple": "#C792EA",
+  "cyan": "#89DDFF",
+  "white": "#EEFFFF",
+  "brightBlack": "#B0BEC5",
+  "brightRed": "#FF5370",
+  "brightGreen": "#C3E88D",
+  "brightYellow": "#FFCB6B",
+  "brightBlue": "#82AAFF",
+  "brightPurple": "#C792EA",
+  "brightCyan": "#89DDFF",
+  "brightWhite": "#FFFFFF"
+}

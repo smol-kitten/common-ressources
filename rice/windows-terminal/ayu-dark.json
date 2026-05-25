@@ -1,0 +1,28 @@
+// Theme: Ayu Dark
+// Source: https://github.com/dempfi/ayu
+// Add the object inside "schemes" to your Windows Terminal settings.json
+// Then set "colorScheme": "Ayu Dark" in your profile.
+
+{
+  "name": "Ayu Dark",
+  "background": "#0a0e14",
+  "foreground": "#b3b1ad",
+  "cursorColor": "#e6b450",
+  "selectionBackground": "#273747",
+  "black": "#01060e",
+  "red": "#ea6c73",
+  "green": "#91b362",
+  "yellow": "#f9af4f",
+  "blue": "#53bdfa",
+  "purple": "#fae994",
+  "cyan": "#90e1c6",
+  "white": "#c7c7c7",
+  "brightBlack": "#686868",
+  "brightRed": "#f07178",
+  "brightGreen": "#c2d94c",
+  "brightYellow": "#ffb454",
+  "brightBlue": "#59c2ff",
+  "brightPurple": "#ffee99",
+  "brightCyan": "#95e6cb",
+  "brightWhite": "#ffffff"
+}

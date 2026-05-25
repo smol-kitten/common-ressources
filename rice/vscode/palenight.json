@@ -1,0 +1,94 @@
+{
+  "name": "Palenight",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#292d3e",
+    "editor.foreground": "#a6accd",
+    "editorCursor.foreground": "#a6accd",
+    "editor.selectionBackground": "#32374d",
+    "terminal.background": "#292d3e",
+    "terminal.foreground": "#a6accd",
+    "terminal.ansiBlack": "#292d3e",
+    "terminal.ansiRed": "#f07178",
+    "terminal.ansiGreen": "#c3e88d",
+    "terminal.ansiYellow": "#ffcb6b",
+    "terminal.ansiBlue": "#82aaff",
+    "terminal.ansiMagenta": "#c792ea",
+    "terminal.ansiCyan": "#89ddff",
+    "terminal.ansiWhite": "#d0d0d0",
+    "terminal.ansiBrightBlack": "#434758",
+    "terminal.ansiBrightRed": "#ff8b92",
+    "terminal.ansiBrightGreen": "#ddffa7",
+    "terminal.ansiBrightYellow": "#ffe585",
+    "terminal.ansiBrightBlue": "#9cc4ff",
+    "terminal.ansiBrightMagenta": "#e1acff",
+    "terminal.ansiBrightCyan": "#a3f7ff",
+    "terminal.ansiBrightWhite": "#ffffff",
+    "activityBar.background": "#292d3e",
+    "sideBar.background": "#292d3e",
+    "statusBar.background": "#82aaff",
+    "statusBar.foreground": "#292d3e",
+    "titleBar.activeBackground": "#292d3e",
+    "titleBar.activeForeground": "#a6accd"
+  },
+  "tokenColors": [
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#434758",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "#c3e88d"
+      }
+    },
+    {
+      "scope": [
+        "keyword",
+        "storage"
+      ],
+      "settings": {
+        "foreground": "#c792ea"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function",
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#82aaff"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type",
+        "entity.name.class"
+      ],
+      "settings": {
+        "foreground": "#ffcb6b"
+      }
+    },
+    {
+      "scope": "variable",
+      "settings": {
+        "foreground": "#a6accd"
+      }
+    },
+    {
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#89ddff"
+      }
+    },
+    {
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "#f07178"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+/* Theme: Kanagawa */
+/* Source: https://github.com/rebelot/kanagawa.nvim */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #1f1f28;
+  --foreground:        #dcd7ba;
+  --cursor:            #c8c093;
+  --selection:         #2d4f67;
+
+  --black:             #16161d;
+  --red:               #c34043;
+  --green:             #76946a;
+  --yellow:            #c0a36e;
+  --blue:              #7e9cd8;
+  --magenta:           #957fb8;
+  --cyan:              #6a9589;
+  --white:             #c8c093;
+
+  --bright-black:      #727169;
+  --bright-red:        #e82424;
+  --bright-green:      #98bb6c;
+  --bright-yellow:     #e6c384;
+  --bright-blue:       #7fb4ca;
+  --bright-magenta:    #938aa9;
+  --bright-cyan:       #7aa89f;
+  --bright-white:      #dcd7ba;
+}

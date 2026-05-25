@@ -1,0 +1,28 @@
+/* Theme: Catppuccin Latte */
+/* Source: https://catppuccin.com */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #eff1f5;
+  --foreground:        #4c4f69;
+  --cursor:            #dc8a78;
+  --selection:         #acb0be;
+
+  --black:             #5c5f77;
+  --red:               #d20f39;
+  --green:             #40a02b;
+  --yellow:            #df8e1d;
+  --blue:              #1e66f5;
+  --magenta:           #ea76cb;
+  --cyan:              #179299;
+  --white:             #acb0be;
+
+  --bright-black:      #6c6f85;
+  --bright-red:        #d20f39;
+  --bright-green:      #40a02b;
+  --bright-yellow:     #df8e1d;
+  --bright-blue:       #1e66f5;
+  --bright-magenta:    #ea76cb;
+  --bright-cyan:       #179299;
+  --bright-white:      #bcc0cc;
+}

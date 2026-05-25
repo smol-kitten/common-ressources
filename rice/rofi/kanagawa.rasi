@@ -1,0 +1,26 @@
+/* Theme: Kanagawa */
+/* Source: https://github.com/rebelot/kanagawa.nvim */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #1f1f28;
+    foreground:                    #dcd7ba;
+
+    normal-background:             #1f1f28;
+    normal-foreground:             #dcd7ba;
+    selected-normal-background:    #7e9cd8;
+    selected-normal-foreground:    #1f1f28;
+
+    active-background:             #76946a;
+    active-foreground:             #1f1f28;
+    selected-active-background:    #98bb6c;
+    selected-active-foreground:    #1f1f28;
+
+    urgent-background:             #c34043;
+    urgent-foreground:             #1f1f28;
+    selected-urgent-background:    #e82424;
+    selected-urgent-foreground:    #1f1f28;
+
+    border-color:                  #727169;
+    separatorcolor:                #727169;
+}

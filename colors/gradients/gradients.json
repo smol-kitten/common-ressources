@@ -1,0 +1,308 @@
+[
+  {
+    "name": "Sunset",
+    "slug": "sunset",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#ff6b6b", "position": 0 },
+      { "color": "#feca57", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #ff6b6b 0%, #feca57 100%)",
+    "tags": ["warm", "vibrant", "orange", "red"]
+  },
+  {
+    "name": "Ocean Breeze",
+    "slug": "ocean-breeze",
+    "type": "linear",
+    "angle": 180,
+    "stops": [
+      { "color": "#667eea", "position": 0 },
+      { "color": "#764ba2", "position": 100 }
+    ],
+    "css": "linear-gradient(180deg, #667eea 0%, #764ba2 100%)",
+    "tags": ["cool", "purple", "blue", "calm"]
+  },
+  {
+    "name": "Emerald",
+    "slug": "emerald",
+    "type": "linear",
+    "angle": 120,
+    "stops": [
+      { "color": "#11998e", "position": 0 },
+      { "color": "#38ef7d", "position": 100 }
+    ],
+    "css": "linear-gradient(120deg, #11998e 0%, #38ef7d 100%)",
+    "tags": ["green", "nature", "cool"]
+  },
+  {
+    "name": "Royal Purple",
+    "slug": "royal-purple",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#4776e6", "position": 0 },
+      { "color": "#8e54e9", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #4776e6 0%, #8e54e9 100%)",
+    "tags": ["purple", "blue", "royal", "cool"]
+  },
+  {
+    "name": "Cherry Blossom",
+    "slug": "cherry-blossom",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#fd79a8", "position": 0 },
+      { "color": "#e84393", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #fd79a8 0%, #e84393 100%)",
+    "tags": ["pink", "feminine", "vibrant"]
+  },
+  {
+    "name": "Midnight City",
+    "slug": "midnight-city",
+    "type": "linear",
+    "angle": 90,
+    "stops": [
+      { "color": "#232526", "position": 0 },
+      { "color": "#414345", "position": 100 }
+    ],
+    "css": "linear-gradient(90deg, #232526 0%, #414345 100%)",
+    "tags": ["dark", "neutral", "minimal"]
+  },
+  {
+    "name": "Cosmic Fusion",
+    "slug": "cosmic-fusion",
+    "type": "linear",
+    "angle": 45,
+    "stops": [
+      { "color": "#ff00cc", "position": 0 },
+      { "color": "#333399", "position": 100 }
+    ],
+    "css": "linear-gradient(45deg, #ff00cc 0%, #333399 100%)",
+    "tags": ["neon", "purple", "pink", "cyberpunk"]
+  },
+  {
+    "name": "Fresh Mint",
+    "slug": "fresh-mint",
+    "type": "linear",
+    "angle": 120,
+    "stops": [
+      { "color": "#00b09b", "position": 0 },
+      { "color": "#96c93d", "position": 100 }
+    ],
+    "css": "linear-gradient(120deg, #00b09b 0%, #96c93d 100%)",
+    "tags": ["green", "teal", "fresh"]
+  },
+  {
+    "name": "Burning Orange",
+    "slug": "burning-orange",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#f7971e", "position": 0 },
+      { "color": "#ffd200", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #f7971e 0%, #ffd200 100%)",
+    "tags": ["orange", "yellow", "warm", "energy"]
+  },
+  {
+    "name": "Steel Blue",
+    "slug": "steel-blue",
+    "type": "linear",
+    "angle": 180,
+    "stops": [
+      { "color": "#2c3e50", "position": 0 },
+      { "color": "#4ca1af", "position": 100 }
+    ],
+    "css": "linear-gradient(180deg, #2c3e50 0%, #4ca1af 100%)",
+    "tags": ["blue", "dark", "professional"]
+  },
+  {
+    "name": "Aurora",
+    "slug": "aurora",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#a8edea", "position": 0 },
+      { "color": "#fed6e3", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+    "tags": ["pastel", "light", "soft", "nordic"]
+  },
+  {
+    "name": "Candy Shop",
+    "slug": "candy-shop",
+    "type": "linear",
+    "angle": 90,
+    "stops": [
+      { "color": "#fc5c7d", "position": 0 },
+      { "color": "#6a3093", "position": 100 }
+    ],
+    "css": "linear-gradient(90deg, #fc5c7d 0%, #6a3093 100%)",
+    "tags": ["pink", "purple", "vivid"]
+  },
+  {
+    "name": "Mojave Desert",
+    "slug": "mojave-desert",
+    "type": "linear",
+    "angle": 150,
+    "stops": [
+      { "color": "#f093fb", "position": 0 },
+      { "color": "#f5576c", "position": 100 }
+    ],
+    "css": "linear-gradient(150deg, #f093fb 0%, #f5576c 100%)",
+    "tags": ["pink", "magenta", "warm", "macos"]
+  },
+  {
+    "name": "Northern Lights",
+    "slug": "northern-lights",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#43e97b", "position": 0 },
+      { "color": "#38f9d7", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    "tags": ["green", "teal", "neon", "nordic"]
+  },
+  {
+    "name": "Lavender Dream",
+    "slug": "lavender-dream",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#a18cd1", "position": 0 },
+      { "color": "#fbc2eb", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)",
+    "tags": ["purple", "pink", "pastel", "soft"]
+  },
+  {
+    "name": "Deep Sea",
+    "slug": "deep-sea",
+    "type": "linear",
+    "angle": 180,
+    "stops": [
+      { "color": "#0f0c29", "position": 0 },
+      { "color": "#302b63", "position": 50 },
+      { "color": "#24243e", "position": 100 }
+    ],
+    "css": "linear-gradient(180deg, #0f0c29 0%, #302b63 50%, #24243e 100%)",
+    "tags": ["dark", "purple", "blue", "deep"]
+  },
+  {
+    "name": "Peach Fuzz",
+    "slug": "peach-fuzz",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#f8b500", "position": 0 },
+      { "color": "#ff6f61", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #f8b500 0%, #ff6f61 100%)",
+    "tags": ["orange", "peach", "warm", "2024"]
+  },
+  {
+    "name": "Matrix",
+    "slug": "matrix",
+    "type": "linear",
+    "angle": 180,
+    "stops": [
+      { "color": "#000000", "position": 0 },
+      { "color": "#0d3321", "position": 100 }
+    ],
+    "css": "linear-gradient(180deg, #000000 0%, #0d3321 100%)",
+    "tags": ["dark", "green", "cyberpunk", "terminal"]
+  },
+  {
+    "name": "Tropical Paradise",
+    "slug": "tropical-paradise",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#56ab2f", "position": 0 },
+      { "color": "#a8e063", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #56ab2f 0%, #a8e063 100%)",
+    "tags": ["green", "lime", "fresh", "nature"]
+  },
+  {
+    "name": "Skyline",
+    "slug": "skyline",
+    "type": "linear",
+    "angle": 180,
+    "stops": [
+      { "color": "#1a1a2e", "position": 0 },
+      { "color": "#16213e", "position": 33 },
+      { "color": "#0f3460", "position": 66 },
+      { "color": "#533483", "position": 100 }
+    ],
+    "css": "linear-gradient(180deg, #1a1a2e 0%, #16213e 33%, #0f3460 66%, #533483 100%)",
+    "tags": ["dark", "blue", "purple", "night", "city"]
+  },
+  {
+    "name": "Warm Flame",
+    "slug": "warm-flame",
+    "type": "linear",
+    "angle": 45,
+    "stops": [
+      { "color": "#ff9a9e", "position": 0 },
+      { "color": "#fad0c4", "position": 100 }
+    ],
+    "css": "linear-gradient(45deg, #ff9a9e 0%, #fad0c4 100%)",
+    "tags": ["warm", "pink", "pastel", "soft"]
+  },
+  {
+    "name": "Cotton Candy",
+    "slug": "cotton-candy",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#84fab0", "position": 0 },
+      { "color": "#8fd3f4", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)",
+    "tags": ["pastel", "mint", "blue", "soft", "light"]
+  },
+  {
+    "name": "Volcano",
+    "slug": "volcano",
+    "type": "linear",
+    "angle": 180,
+    "stops": [
+      { "color": "#1a0000", "position": 0 },
+      { "color": "#8b0000", "position": 50 },
+      { "color": "#ff4500", "position": 100 }
+    ],
+    "css": "linear-gradient(180deg, #1a0000 0%, #8b0000 50%, #ff4500 100%)",
+    "tags": ["red", "dark", "dramatic", "fire"]
+  },
+  {
+    "name": "Ice Cold",
+    "slug": "ice-cold",
+    "type": "linear",
+    "angle": 135,
+    "stops": [
+      { "color": "#e0f7fa", "position": 0 },
+      { "color": "#b2ebf2", "position": 50 },
+      { "color": "#80deea", "position": 100 }
+    ],
+    "css": "linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%)",
+    "tags": ["light", "blue", "cold", "minimal", "clean"]
+  },
+  {
+    "name": "Cyber Neon",
+    "slug": "cyber-neon",
+    "type": "linear",
+    "angle": 90,
+    "stops": [
+      { "color": "#0d0d0d", "position": 0 },
+      { "color": "#1a0033", "position": 50 },
+      { "color": "#0d0d0d", "position": 100 }
+    ],
+    "css": "linear-gradient(90deg, #0d0d0d 0%, #1a0033 50%, #0d0d0d 100%)",
+    "tags": ["dark", "neon", "cyberpunk", "terminal"]
+  }
+]

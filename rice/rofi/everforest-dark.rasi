@@ -1,0 +1,26 @@
+/* Theme: Everforest Dark */
+/* Source: https://github.com/sainnhe/everforest */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #2d353b;
+    foreground:                    #d3c6aa;
+
+    normal-background:             #2d353b;
+    normal-foreground:             #d3c6aa;
+    selected-normal-background:    #7fbbb3;
+    selected-normal-foreground:    #2d353b;
+
+    active-background:             #a7c080;
+    active-foreground:             #2d353b;
+    selected-active-background:    #a7c080;
+    selected-active-foreground:    #2d353b;
+
+    urgent-background:             #e67e80;
+    urgent-foreground:             #2d353b;
+    selected-urgent-background:    #e67e80;
+    selected-urgent-foreground:    #2d353b;
+
+    border-color:                  #5c6a72;
+    separatorcolor:                #5c6a72;
+}

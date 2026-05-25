@@ -1,0 +1,28 @@
+/* Theme: Everforest Dark */
+/* Source: https://github.com/sainnhe/everforest */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #2d353b;
+  --foreground:        #d3c6aa;
+  --cursor:            #d3c6aa;
+  --selection:         #475258;
+
+  --black:             #475258;
+  --red:               #e67e80;
+  --green:             #a7c080;
+  --yellow:            #dbbc7f;
+  --blue:              #7fbbb3;
+  --magenta:           #d699b6;
+  --cyan:              #83c092;
+  --white:             #d3c6aa;
+
+  --bright-black:      #5c6a72;
+  --bright-red:        #e67e80;
+  --bright-green:      #a7c080;
+  --bright-yellow:     #dbbc7f;
+  --bright-blue:       #7fbbb3;
+  --bright-magenta:    #d699b6;
+  --bright-cyan:       #83c092;
+  --bright-white:      #d3c6aa;
+}

@@ -32,11 +32,14 @@ node rice/generate.js
 echo "    Done."
 
 declare -A THEME_STYLE=(
-  [dracula]="nvim"           [nord]="htop"
-  [solarized-dark]="retro"   [solarized-light]="macos"
-  [monokai]="neofetch"       [gruvbox-dark]="scp"
-  [catppuccin-mocha]="anime" [tokyo-night]="cyberpunk"
-  [one-dark]="science"       [material-dark]="browser"
+  [dracula]="nvim"              [nord]="htop"
+  [solarized-dark]="retro"      [solarized-light]="macos"
+  [monokai]="neofetch"          [gruvbox-dark]="scp"
+  [catppuccin-mocha]="anime"    [tokyo-night]="cyberpunk"
+  [one-dark]="science"          [material-dark]="browser"
+  [rose-pine]="nvim"            [catppuccin-latte]="macos"
+  [everforest-dark]="neofetch"  [kanagawa]="htop"
+  [ayu-dark]="cyberpunk"        [palenight]="science"
 )
 style_for() { [[ -n "${STYLE:-}" ]] && echo "$STYLE" || echo "${THEME_STYLE[$1]:-minimal}"; }
 

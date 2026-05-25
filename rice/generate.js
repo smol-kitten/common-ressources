@@ -265,6 +265,160 @@ return {
   write(path.join(RICE_DIR, 'wezterm', `${theme.slug}.lua`), content);
 }
 
+function genTmux(theme) {
+  const c = theme.colors;
+  const content = `# Theme: ${theme.name}
+# Source: ${theme.source}
+# Usage: add to ~/.tmux.conf or source this file
+#   source-file ~/.config/tmux/themes/${theme.slug}.conf
+
+# Status bar
+set -g status-style "bg=${theme.background},fg=${theme.foreground}"
+set -g status-left-style "fg=${c['green']},bold"
+set -g status-right-style "fg=${c['bright-black']}"
+
+# Active window tab
+set -g window-status-current-style "fg=${theme.background},bg=${c['blue']},bold"
+set -g window-status-current-format " #I:#W "
+
+# Inactive window tab
+set -g window-status-style "fg=${c['bright-black']},bg=${theme.background}"
+set -g window-status-format " #I:#W "
+
+# Pane borders
+set -g pane-border-style "fg=${c['bright-black']}"
+set -g pane-active-border-style "fg=${c['blue']}"
+
+# Message bar
+set -g message-style "bg=${c['yellow']},fg=${theme.background}"
+
+# Selection in copy mode
+set -g mode-style "bg=${theme['selection-background']},fg=${theme.foreground}"
+
+# Clock
+set -g clock-mode-colour "${c['blue']}"
+`;
+  write(path.join(RICE_DIR, 'tmux', `${theme.slug}.conf`), content);
+}
+
+function genGhostty(theme) {
+  const c = theme.colors;
+  const content = `# Theme: ${theme.name}
+# Source: ${theme.source}
+# Usage: add to ~/.config/ghostty/config
+#   theme = ${theme.slug}
+
+background = ${theme.background.slice(1)}
+foreground = ${theme.foreground.slice(1)}
+cursor-color = ${theme.cursor.slice(1)}
+selection-background = ${theme['selection-background'].slice(1)}
+selection-foreground = ${theme.foreground.slice(1)}
+
+palette = 0=${c['black']}
+palette = 1=${c['red']}
+palette = 2=${c['green']}
+palette = 3=${c['yellow']}
+palette = 4=${c['blue']}
+palette = 5=${c['magenta']}
+palette = 6=${c['cyan']}
+palette = 7=${c['white']}
+palette = 8=${c['bright-black']}
+palette = 9=${c['bright-red']}
+palette = 10=${c['bright-green']}
+palette = 11=${c['bright-yellow']}
+palette = 12=${c['bright-blue']}
+palette = 13=${c['bright-magenta']}
+palette = 14=${c['bright-cyan']}
+palette = 15=${c['bright-white']}
+`;
+  write(path.join(RICE_DIR, 'ghostty', `${theme.slug}`), content);
+}
+
+function genVSCode(theme) {
+  const c = theme.colors;
+  const isLight = parseInt(theme.background.slice(1, 3), 16) > 128;
+  const obj = {
+    name: theme.name,
+    type: isLight ? 'light' : 'dark',
+    colors: {
+      'editor.background': theme.background,
+      'editor.foreground': theme.foreground,
+      'editorCursor.foreground': theme.cursor,
+      'editor.selectionBackground': theme['selection-background'],
+      'terminal.background': theme.background,
+      'terminal.foreground': theme.foreground,
+      'terminal.ansiBlack': c['black'],
+      'terminal.ansiRed': c['red'],
+      'terminal.ansiGreen': c['green'],
+      'terminal.ansiYellow': c['yellow'],
+      'terminal.ansiBlue': c['blue'],
+      'terminal.ansiMagenta': c['magenta'],
+      'terminal.ansiCyan': c['cyan'],
+      'terminal.ansiWhite': c['white'],
+      'terminal.ansiBrightBlack': c['bright-black'],
+      'terminal.ansiBrightRed': c['bright-red'],
+      'terminal.ansiBrightGreen': c['bright-green'],
+      'terminal.ansiBrightYellow': c['bright-yellow'],
+      'terminal.ansiBrightBlue': c['bright-blue'],
+      'terminal.ansiBrightMagenta': c['bright-magenta'],
+      'terminal.ansiBrightCyan': c['bright-cyan'],
+      'terminal.ansiBrightWhite': c['bright-white'],
+      'activityBar.background': theme.background,
+      'sideBar.background': theme.background,
+      'statusBar.background': c['blue'],
+      'statusBar.foreground': theme.background,
+      'titleBar.activeBackground': theme.background,
+      'titleBar.activeForeground': theme.foreground,
+    },
+    tokenColors: [
+      { scope: 'comment', settings: { foreground: c['bright-black'], fontStyle: 'italic' } },
+      { scope: 'string', settings: { foreground: c['green'] } },
+      { scope: ['keyword', 'storage'], settings: { foreground: c['magenta'] } },
+      { scope: ['entity.name.function', 'support.function'], settings: { foreground: c['blue'] } },
+      { scope: ['entity.name.type', 'entity.name.class'], settings: { foreground: c['yellow'] } },
+      { scope: 'variable', settings: { foreground: theme.foreground } },
+      { scope: 'constant.numeric', settings: { foreground: c['cyan'] } },
+      { scope: 'constant.language', settings: { foreground: c['red'] } },
+    ],
+  };
+  write(path.join(RICE_DIR, 'vscode', `${theme.slug}.json`), JSON.stringify(obj, null, 2));
+}
+
+function genWindowsTerminal(theme) {
+  const c = theme.colors;
+  const scheme = {
+    name: theme.name,
+    background: theme.background,
+    foreground: theme.foreground,
+    cursorColor: theme.cursor,
+    selectionBackground: theme['selection-background'],
+    black: c['black'],
+    red: c['red'],
+    green: c['green'],
+    yellow: c['yellow'],
+    blue: c['blue'],
+    purple: c['magenta'],
+    cyan: c['cyan'],
+    white: c['white'],
+    brightBlack: c['bright-black'],
+    brightRed: c['bright-red'],
+    brightGreen: c['bright-green'],
+    brightYellow: c['bright-yellow'],
+    brightBlue: c['bright-blue'],
+    brightPurple: c['bright-magenta'],
+    brightCyan: c['bright-cyan'],
+    brightWhite: c['bright-white'],
+  };
+  const content = `// Theme: ${theme.name}
+// Source: ${theme.source}
+// Add the object inside "schemes" to your Windows Terminal settings.json
+// Then set "colorScheme": "${theme.name}" in your profile.
+
+${JSON.stringify(scheme, null, 2)}
+`;
+  write(path.join(RICE_DIR, 'windows-terminal', `${theme.slug}.json`), content);
+}
+
 // ── interactive index page ─────────────────────────────────────────────────────
 
 function genIndex(themes) {
@@ -958,7 +1112,12 @@ for (const theme of themes) {
   genRofi(theme);
   genDunst(theme);
   genWezterm(theme);
+  genTmux(theme);
+  genGhostty(theme);
+  genVSCode(theme);
+  genWindowsTerminal(theme);
 }
 
 genIndex(themes);
-console.log(`\nDone. Generated ${themes.length * 7 + 1} files (configs + interactive index).`);
+const CONFIG_TYPES = 11;
+console.log(`\nDone. Generated ${themes.length * CONFIG_TYPES + 1} files (configs + interactive index).`);
