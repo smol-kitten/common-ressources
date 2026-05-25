@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Full desktop scene screenshots of rice themes — 1440x900.
-# Renders: gradient wallpaper + waybar + foot terminal + rofi launcher.
+# Desktop scene screenshots via pure ImageMagick composition — no compositor.
+# Layers: gradient wallpaper + waybar bar + terminal window + rofi popup.
 #
 # Usage (inside the rice-wayland Docker image):
 #   bash docker/rice-wayland.sh            # all themes, auto style
@@ -8,55 +8,49 @@
 #   STYLE=scp bash docker/rice-wayland.sh  # force a style for all
 #
 # Geometry env vars (all optional):
-#   WIN_W, WIN_H — foot terminal width/height in px (default 760x460)
-#   WIN_X, WIN_Y — foot terminal position in px     (default 60,55)
+#   WIN_W, WIN_H — terminal width/height in px  (default 760x460)
+#   WIN_X, WIN_Y — terminal position in px       (default 60,55)
 
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 OUT_DIR="${REPO_ROOT}/rice/screenshots"
 THEMES_JSON="${REPO_ROOT}/colors/terminal/themes.json"
-STYLES_DIR="${REPO_ROOT}/docker/styles"
 
-# ── output / window geometry ──────────────────────────────────────────────────
+# ── canvas / window geometry ─────────────────────────────────────────────────
 OUTPUT_W=1440
 OUTPUT_H=900
+BAR_H=32
+TITLE_H=28
 
 WIN_W="${WIN_W:-760}"
 WIN_H="${WIN_H:-460}"
 WIN_X="${WIN_X:-60}"
 WIN_Y="${WIN_Y:-55}"
 
-# ── theme → display style mapping ────────────────────────────────────────────
+ROFI_W=400
+ROFI_H=252
+ROFI_X=$((OUTPUT_W - ROFI_W - 40))
+ROFI_Y=$((BAR_H + 36))
+
+FONT_UI="DejaVu-Sans"
+FONT_MONO="DejaVu-Sans-Mono"
+
+# ── theme → display style ─────────────────────────────────────────────────────
 declare -A THEME_STYLE=(
-  [dracula]="cyberpunk"
-  [nord]="science"
-  [solarized-dark]="retro"
-  [solarized-light]="macos"
-  [monokai]="neofetch"
-  [gruvbox-dark]="scp"
-  [catppuccin-mocha]="anime"
-  [tokyo-night]="cyberpunk"
-  [one-dark]="minimal"
-  [material-dark]="science"
+  [dracula]="cyberpunk"     [nord]="science"
+  [solarized-dark]="retro"  [solarized-light]="macos"
+  [monokai]="neofetch"      [gruvbox-dark]="scp"
+  [catppuccin-mocha]="anime" [tokyo-night]="cyberpunk"
+  [one-dark]="minimal"      [material-dark]="science"
 )
 
-style_for() {
-  local slug="$1"
-  if [[ -n "${STYLE:-}" ]]; then
-    echo "$STYLE"
-    return
-  fi
-  echo "${THEME_STYLE[$slug]:-minimal}"
-}
+style_for() { [[ -n "${STYLE:-}" ]] && echo "$STYLE" || echo "${THEME_STYLE[$1]:-minimal}"; }
 
 mkdir -p "$OUT_DIR"
 
-# ── collect theme slugs ───────────────────────────────────────────────────────
 ALL_SLUGS=()
-while IFS= read -r slug; do
-  ALL_SLUGS+=("$slug")
-done < <(jq -r '.[].slug' "$THEMES_JSON")
+while IFS= read -r s; do ALL_SLUGS+=("$s"); done < <(jq -r '.[].slug' "$THEMES_JSON")
 
 if [[ $# -ge 1 ]]; then
   SLUGS=("$1")
@@ -64,515 +58,237 @@ else
   SLUGS=("${ALL_SLUGS[@]}")
 fi
 
-# ── generate rice configs ─────────────────────────────────────────────────────
 echo "==> Generating rice configs..."
 cd "$REPO_ROOT" && node rice/generate.js
 echo "    Done."
 
-# ── Wayland / Sway environment ────────────────────────────────────────────────
-# Sway (wlroots 0.17+) refuses to run as root — use a dedicated non-root user.
-SWAY_USER=wluser
-SWAY_XDG=/tmp/xdg-sway
-
-mkdir -p "$SWAY_XDG"
-chown "${SWAY_USER}:${SWAY_USER}" "$SWAY_XDG"
-chmod 755 "$SWAY_XDG"   # 755 so root-owned clients can access the socket
-
-export XDG_RUNTIME_DIR="$SWAY_XDG"
-export WAYLAND_DISPLAY=wayland-1
-
-SWAY_CONF="$(mktemp /tmp/sway-XXXXXX.conf)"
-cat > "$SWAY_CONF" <<SWAY_EOF
-# No XWayland — keeps the container lean (xorg-xwayland not installed)
-xwayland disable
-output HEADLESS-1 resolution ${OUTPUT_W}x${OUTPUT_H} position 0,0
-input type:keyboard xkb_layout us
-default_border none
-default_floating_border none
-gaps inner 0
-gaps outer 0
-for_window [app_id="foot"] floating enable, \
-    resize set ${WIN_W} ${WIN_H}, \
-    move position ${WIN_X} ${WIN_Y}
-for_window [app_id="rofi"] floating enable
-SWAY_EOF
-chmod 644 "$SWAY_CONF"
-
-# Write a launch wrapper so all env vars are set before exec.
-# setpriv (util-linux, no PAM) drops root to wluser uid/gid directly.
-SWAY_LAUNCH=/tmp/launch-sway.sh
-cat > "$SWAY_LAUNCH" <<LAUNCH_EOF
-#!/bin/bash
-exec env \\
-  HOME=/home/wluser \\
-  USER=wluser \\
-  XDG_RUNTIME_DIR=$SWAY_XDG \\
-  WAYLAND_DISPLAY=wayland-1 \\
-  WLR_BACKENDS=headless \\
-  WLR_RENDERER=pixman \\
-  WLR_SESSION=noop \\
-  LIBSEAT_BACKEND=noop \\
-  WLR_LIBINPUT_NO_DEVICES=1 \\
-  XKB_DEFAULT_RULES=evdev \\
-  sway --config $SWAY_CONF
-LAUNCH_EOF
-chmod +x "$SWAY_LAUNCH"
-
-echo "==> Starting Sway headless as ${SWAY_USER} (uid 1000) (${OUTPUT_W}x${OUTPUT_H})..."
-setpriv --reuid=1000 --regid=1000 --init-groups -- bash "$SWAY_LAUNCH" 2>/tmp/sway.log &
-SWAY_PID=$!
-
-# Wait up to 4 s for the IPC socket (created at ${SWAY_XDG}/sway-ipc.*.*.sock)
-# Use find not ls — find exits 0 on zero matches, ls exits 2 (triggers set -e)
-SWAYSOCK_PATH=""
-for i in $(seq 1 40); do
-  SWAYSOCK_PATH=$(find "$SWAY_XDG" -maxdepth 1 -name "sway-ipc.*.*.sock" 2>/dev/null | head -1)
-  [[ -n "$SWAYSOCK_PATH" ]] && break
-  sleep 0.1
-done
-
-if [[ -z "$SWAYSOCK_PATH" ]]; then
-  echo "ERROR: Sway did not start (no IPC socket after 4s)." >&2
-  echo "--- sway log ---" >&2
-  cat /tmp/sway.log >&2
-  echo "--- launch script ---" >&2
-  cat "$SWAY_LAUNCH" >&2
-  echo "--- processes ---" >&2
-  ps aux >&2
-  echo "--- xdg runtime dir ---" >&2
-  ls -la "$SWAY_XDG" >&2 || true
-  exit 1
-fi
-export SWAYSOCK="$SWAYSOCK_PATH"
-echo "    Sway ready. IPC: $SWAYSOCK"
-
-# ── foot config generator ─────────────────────────────────────────────────────
-generate_foot_config() {
-  local slug="$1"
-  local cfg="/tmp/foot-${slug}.ini"
-  local theme
-  theme=$(jq -r ".[] | select(.slug == \"$slug\")" "$THEMES_JSON")
-
-  strip() { printf '%s' "$1" | jq -r "$2" | tr -d '#'; }
-
-  local bg fg c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15
-  bg=$(strip  "$theme" '.background')
-  fg=$(strip  "$theme" '.foreground')
-  c0=$(strip  "$theme" '.colors.black')
-  c1=$(strip  "$theme" '.colors.red')
-  c2=$(strip  "$theme" '.colors.green')
-  c3=$(strip  "$theme" '.colors.yellow')
-  c4=$(strip  "$theme" '.colors.blue')
-  c5=$(strip  "$theme" '.colors.magenta')
-  c6=$(strip  "$theme" '.colors.cyan')
-  c7=$(strip  "$theme" '.colors.white')
-  c8=$(strip  "$theme" '.colors["bright-black"]')
-  c9=$(strip  "$theme" '.colors["bright-red"]')
-  c10=$(strip "$theme" '.colors["bright-green"]')
-  c11=$(strip "$theme" '.colors["bright-yellow"]')
-  c12=$(strip "$theme" '.colors["bright-blue"]')
-  c13=$(strip "$theme" '.colors["bright-magenta"]')
-  c14=$(strip "$theme" '.colors["bright-cyan"]')
-  c15=$(strip "$theme" '.colors["bright-white"]')
-
-  cat > "$cfg" <<FOOT_EOF
-[main]
-font=JetBrains Mono:size=13
-pad=18x18 center
-[colors]
-background=${bg}
-foreground=${fg}
-regular0=${c0}
-regular1=${c1}
-regular2=${c2}
-regular3=${c3}
-regular4=${c4}
-regular5=${c5}
-regular6=${c6}
-regular7=${c7}
-bright0=${c8}
-bright1=${c9}
-bright2=${c10}
-bright3=${c11}
-bright4=${c12}
-bright5=${c13}
-bright6=${c14}
-bright7=${c15}
-FOOT_EOF
-  echo "$cfg"
-}
-
-# ── main loop ─────────────────────────────────────────────────────────────────
 OK=0; FAIL=0
 
 for SLUG in "${SLUGS[@]}"; do
   THEME_NAME=$(jq -r ".[] | select(.slug == \"$SLUG\") | .name" "$THEMES_JSON")
-  STYLE_NAME=$(style_for "$SLUG")
-  STYLE_SCRIPT="${STYLES_DIR}/${STYLE_NAME}.sh"
+  if [[ -z "$THEME_NAME" || "$THEME_NAME" == "null" ]]; then
+    echo "  SKIP $SLUG (not found)"; FAIL=$((FAIL+1)); continue
+  fi
 
+  STYLE_NAME=$(style_for "$SLUG")
   echo ""
   echo "==> $SLUG  [style: $STYLE_NAME]"
 
-  if [[ -z "$THEME_NAME" || "$THEME_NAME" == "null" ]]; then
-    echo "  SKIP — slug not found in themes.json"
-    FAIL=$((FAIL + 1)); continue
-  fi
-  if [[ ! -f "$STYLE_SCRIPT" ]]; then
-    echo "  WARN — style script not found: $STYLE_SCRIPT, falling back to minimal"
-    STYLE_SCRIPT="${STYLES_DIR}/minimal.sh"
-  fi
+  # ── extract colors ────────────────────────────────────────────────────────
+  TD=$(jq -r ".[] | select(.slug == \"$SLUG\")" "$THEMES_JSON")
+  s() { printf '%s' "$TD" | jq -r "$1" | tr -d '#'; }
 
-  # ── a. read theme colors for wallpaper ──────────────────────────────────────
-  THEME_DATA=$(jq -r ".[] | select(.slug == \"$SLUG\")" "$THEMES_JSON")
-  BG_COLOR=$(printf '%s' "$THEME_DATA" | jq -r '.background')
-  # Prefer blue, fall back to cyan, then foreground
-  ACCENT_COLOR=$(printf '%s' "$THEME_DATA" | jq -r '
-    if .colors.blue and (.colors.blue != "") then .colors.blue
-    elif .colors.cyan and (.colors.cyan != "") then .colors.cyan
-    else .foreground
-    end')
+  BG=$(s '.background');  FG=$(s '.foreground')
+  C0=$(s '.colors.black');   C1=$(s '.colors.red')
+  C2=$(s '.colors.green');   C3=$(s '.colors.yellow')
+  C4=$(s '.colors.blue');    C5=$(s '.colors.magenta')
+  C6=$(s '.colors.cyan');    C7=$(s '.colors.white')
+  C8=$(s '.colors["bright-black"]');  C9=$(s  '.colors["bright-red"]')
+  C10=$(s '.colors["bright-green"]'); C11=$(s '.colors["bright-yellow"]')
+  C12=$(s '.colors["bright-blue"]');  C13=$(s '.colors["bright-magenta"]')
+  C14=$(s '.colors["bright-cyan"]');  C15=$(s '.colors["bright-white"]')
 
-  # ── b. generate gradient wallpaper ──────────────────────────────────────────
-  WALLPAPER="/tmp/wallpaper-${SLUG}.png"
-  echo "  Generating wallpaper: ${BG_COLOR} → ${ACCENT_COLOR}"
-  convert -size "${OUTPUT_W}x${OUTPUT_H}" \
-    gradient:"${BG_COLOR}-${ACCENT_COLOR}" \
-    -alpha set -channel Alpha -evaluate set 100% \
-    "$WALLPAPER"
+  # accent for wallpaper gradient: prefer blue, fall back to cyan, then fg
+  if [[ -n "$C4" ]]; then ACCENT="$C4"
+  elif [[ -n "$C6" ]]; then ACCENT="$C6"
+  else ACCENT="$FG"; fi
 
-  # ── c. set wallpaper via swaybg ──────────────────────────────────────────────
-  # Kill any previous swaybg instance
-  pkill -x swaybg 2>/dev/null || true
-  sleep 0.1
-  SWAYBG_PID=""
-  swaybg -o HEADLESS-1 -i "$WALLPAPER" -m fill &
-  SWAYBG_PID=$!
-  sleep 0.5
-
-  # ── d. generate foot config ──────────────────────────────────────────────────
-  FOOT_CONF=$(generate_foot_config "$SLUG")
-
-  # ── e. generate and launch waybar ────────────────────────────────────────────
-  # Kill any previous waybar instance
-  pkill -x waybar 2>/dev/null || true
-  sleep 0.2
-
-  # Write waybar JSON config
-  WAYBAR_JSON="/tmp/waybar-${SLUG}.json"
-  cat > "$WAYBAR_JSON" <<WAYBAR_JSON_EOF
-{
-  "layer": "top",
-  "position": "top",
-  "height": 32,
-  "output": "HEADLESS-1",
-  "modules-left": ["sway/workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["cpu", "memory"],
-  "sway/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "urgent": "",
-      "focused": "",
-      "default": ""
-    },
-    "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": []
-    }
-  },
-  "clock": {
-    "format": " {:%H:%M   %a %d %b}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-  },
-  "cpu": {
-    "format": " {usage}%",
-    "interval": 5,
-    "tooltip": false
-  },
-  "memory": {
-    "format": " {}%",
-    "interval": 5,
-    "tooltip": false
-  }
-}
-WAYBAR_JSON_EOF
-
-  # Build waybar CSS: start with the theme's CSS variables, then append layout rules
-  WAYBAR_CSS="/tmp/waybar-${SLUG}.css"
-  THEME_CSS="${REPO_ROOT}/rice/waybar/${SLUG}.css"
-
-  if [[ -f "$THEME_CSS" ]]; then
-    cp "$THEME_CSS" "$WAYBAR_CSS"
-  else
-    # Fallback: empty :root block so CSS vars resolve to safe defaults
-    printf ':root {}\n' > "$WAYBAR_CSS"
-  fi
-
-  # Append full layout rules after the theme variables
-  cat >> "$WAYBAR_CSS" <<WAYBAR_CSS_EOF
-
-/* ── layout rules appended by rice-wayland.sh ── */
-* {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-  border: none;
-  margin: 0;
-  padding: 0 8px;
-}
-
-window#waybar {
-  background-color: var(--background);
-  color: var(--foreground);
-  border-bottom: 2px solid var(--bright-black);
-}
-
-#workspaces {
-  padding: 0;
-}
-
-#workspaces button {
-  color: var(--bright-black);
-  background: transparent;
-  padding: 0 6px;
-  border-radius: 0;
-  box-shadow: none;
-  text-shadow: none;
-}
-
-#workspaces button:hover {
-  background: transparent;
-  color: var(--foreground);
-  box-shadow: none;
-}
-
-#workspaces button.focused {
-  color: var(--cyan);
-  font-weight: bold;
-  border-bottom: 2px solid var(--cyan);
-}
-
-#workspaces button.urgent {
-  color: var(--red);
-  border-bottom: 2px solid var(--red);
-}
-
-#clock {
-  color: var(--green);
-  font-weight: bold;
-  padding: 0 16px;
-}
-
-#cpu {
-  color: var(--blue);
-  padding: 0 8px;
-}
-
-#memory {
-  color: var(--magenta);
-  padding: 0 8px;
-}
-
-tooltip {
-  background: var(--background);
-  border: 1px solid var(--bright-black);
-  border-radius: 4px;
-}
-
-tooltip label {
-  color: var(--foreground);
-}
-WAYBAR_CSS_EOF
-
-  echo "  Launching waybar..."
-  DBUS_SESSION_BUS_ADDRESS="" \
-  waybar --config "$WAYBAR_JSON" --style "$WAYBAR_CSS" \
-    2>/tmp/waybar-${SLUG}.log &
-  WAYBAR_PID=$!
-  # Give waybar time to render its bar
-  sleep 1.0
-
-  # ── f. generate and launch rofi ──────────────────────────────────────────────
-  # Kill any previous rofi instance
-  pkill -x rofi 2>/dev/null || true
-  sleep 0.1
-
-  ROFI_RASI="/tmp/rofi-${SLUG}.rasi"
-  THEME_RASI="${REPO_ROOT}/rice/rofi/${SLUG}.rasi"
-
-  if [[ -f "$THEME_RASI" ]]; then
-    cp "$THEME_RASI" "$ROFI_RASI"
-  else
-    # Minimal fallback color block so layout rules compile
-    cat > "$ROFI_RASI" <<ROFI_FALLBACK_EOF
-* {
-  background-color: #1e1e2e;
-  foreground: #cdd6f4;
-  normal-background: #1e1e2e;
-  normal-foreground: #cdd6f4;
-  selected-normal-background: #89b4fa;
-  selected-normal-foreground: #1e1e2e;
-  border-color: #6c7086;
-}
-ROFI_FALLBACK_EOF
-  fi
-
-  # Append full layout rules after the theme color definitions
-  cat >> "$ROFI_RASI" <<ROFI_LAYOUT_EOF
-
-/* ── layout rules appended by rice-wayland.sh ── */
-window {
-  width: 480px;
-  padding: 12px;
-  background-color: @background-color;
-  border: 2px solid @border-color;
-  border-radius: 8px;
-  x-offset: $((OUTPUT_W - 540));
-  y-offset: 40;
-  location: northwest;
-  anchor: northwest;
-}
-
-mainbox {
-  background-color: transparent;
-  spacing: 8px;
-  children: [inputbar, listview];
-}
-
-inputbar {
-  background-color: @normal-background;
-  padding: 8px 12px;
-  border-radius: 4px;
-  children: [prompt, entry];
-}
-
-prompt {
-  background-color: transparent;
-  text-color: @selected-normal-background;
-  padding: 0 6px 0 0;
-}
-
-entry {
-  background-color: transparent;
-  text-color: @foreground;
-  placeholder: "Type to filter...";
-  placeholder-color: @border-color;
-}
-
-listview {
-  lines: 6;
-  scrollbar: false;
-  background-color: transparent;
-  spacing: 4px;
-}
-
-element {
-  padding: 8px 12px;
-  border-radius: 4px;
-  background-color: @normal-background;
-  text-color: @normal-foreground;
-}
-
-element selected {
-  background-color: @selected-normal-background;
-  text-color: @selected-normal-foreground;
-}
-
-element-text {
-  background-color: transparent;
-  text-color: inherit;
-}
-ROFI_LAYOUT_EOF
-
-  echo "  Launching rofi..."
-  printf 'Firefox\nAlacritty\nKitty\nNeovim\nFile Manager\nSpotify\nDiscord\nVS Code\nTerminal\nFiles\nBrave\nMPV' \
-    | rofi -dmenu -p "Search" \
-           -config "$ROFI_RASI" \
-           -no-custom \
-           -selected-row 2 \
-    2>/tmp/rofi-${SLUG}.log &
-  ROFI_PID=$!
-  # Give rofi time to render
-  sleep 0.8
-
-  # ── g. launch foot terminal ───────────────────────────────────────────────────
-  echo "  Launching foot..."
-  foot \
-    --config="$FOOT_CONF" \
-    --app-id=foot \
-    -- bash "$STYLE_SCRIPT" "$THEME_NAME" "$SLUG" &
-  FOOT_PID=$!
-
-  # ── h. wait for foot window to appear in sway tree ───────────────────────────
-  APPEARED=0
-  for i in $(seq 1 50); do
-    if swaymsg -t get_tree 2>/dev/null \
-        | jq -e '.. | objects | select(.app_id == "foot")' >/dev/null 2>&1; then
-      APPEARED=1; break
-    fi
-    sleep 0.1
-  done
-
-  if [[ $APPEARED -eq 0 ]]; then
-    echo "  FAIL — foot window did not appear"
-    kill "$FOOT_PID"  2>/dev/null || true
-    kill "$ROFI_PID"  2>/dev/null || true
-    kill "$WAYBAR_PID" 2>/dev/null || true
-    [[ -n "${SWAYBG_PID:-}" ]] && kill "$SWAYBG_PID" 2>/dev/null || true
-    FAIL=$((FAIL + 1)); continue
-  fi
-
-  # ── i. wait for rendering to settle ─────────────────────────────────────────
-  sleep 0.5
-
-  # ── j. screenshot the full HEADLESS-1 output ─────────────────────────────────
-  SHOT_RAW="/tmp/shot-${SLUG}.png"
-  grim -o HEADLESS-1 "$SHOT_RAW"
-  echo "  Captured full output → $SHOT_RAW"
-
-  # ── k. burn attribution text onto the bottom-right corner ────────────────────
+  WP="/tmp/wp-${SLUG}.png"
+  PTXT="/tmp/ptxt-${SLUG}.png"
   OUT="${OUT_DIR}/${SLUG}.png"
 
-  convert "$SHOT_RAW" \
-    -font DejaVu-Sans \
-    -pointsize 11 \
+  # ── 1. gradient wallpaper ─────────────────────────────────────────────────
+  convert -size "${OUTPUT_W}x${OUTPUT_H}" gradient:"#${BG}-#${ACCENT}" "$WP"
+
+  # ── 2. pango terminal content (colored text) ──────────────────────────────
+  TXT_W=$((WIN_W - 36))
+
+  case "$STYLE_NAME" in
+    cyberpunk)
+      PANGO="<span font='DejaVu Sans Mono 12'>\
+<span fgcolor='#${C2}'>❯ </span><span fgcolor='#${C7}'>ssh neo@matrix.local</span>\n\
+<span fgcolor='#${C6}'>Connected to matrix.local [encrypted]</span>\n\
+<span fgcolor='#${C3}'>Warning: 3 new messages in /dev/null</span>\n\
+<span fgcolor='#${C2}'>❯ </span><span fgcolor='#${C7}'>ls --color=auto /</span>\n\
+<span fgcolor='#${C4}'>bin  boot  dev  etc  home  proc  sys  usr</span>\n\
+<span fgcolor='#${C2}'>❯ </span><span fgcolor='#${C1}'>█</span></span>"
+      ;;
+    scp)
+      PANGO="<span font='DejaVu Sans Mono 12'>\
+<span fgcolor='#${C1}'>[SCP-SECURE] </span><span fgcolor='#${C7}'>Accessing database...</span>\n\
+<span fgcolor='#${C6}'>Object class: Keter | Clearance: O5</span>\n\
+<span fgcolor='#${C3}'>[WARNING] Cognitohazard filters active</span>\n\
+<span fgcolor='#${C2}'>❯ </span><span fgcolor='#${C7}'>query --object SCP-3125</span>\n\
+<span fgcolor='#${C7}'>Containment status: Nominal</span>\n\
+<span fgcolor='#${C1}'>[REDACTED] █</span></span>"
+      ;;
+    anime)
+      PANGO="<span font='DejaVu Sans Mono 12'>\
+<span fgcolor='#${C5}'>(◕‿◕✿) </span><span fgcolor='#${C7}'>Welcome, senpai~</span>\n\
+<span fgcolor='#${C6}'>Loading kawaii modules... done ✓</span>\n\
+<span fgcolor='#${C2}'>❯ </span><span fgcolor='#${C7}'>neofetch</span>\n\
+<span fgcolor='#${C3}'>✿ OS: Arch Linux btw  ✿ WM: Sway</span>\n\
+<span fgcolor='#${C5}'>✿ Theme: ${THEME_NAME}</span>\n\
+<span fgcolor='#${C6}'>UwU █</span></span>"
+      ;;
+    science)
+      PANGO="<span font='DejaVu Sans Mono 12'>\
+<span fgcolor='#${C6}'>λ </span><span fgcolor='#${C7}'>python3</span>\n\
+<span fgcolor='#${C2}'>&gt;&gt;&gt; </span><span fgcolor='#${C7}'>import numpy as np; np.pi</span>\n\
+<span fgcolor='#${C3}'>3.141592653589793</span>\n\
+<span fgcolor='#${C6}'>λ </span><span fgcolor='#${C7}'>grep -c 'TODO' src/*.py</span>\n\
+<span fgcolor='#${C3}'>42</span>\n\
+<span fgcolor='#${C6}'>λ █</span></span>"
+      ;;
+    retro)
+      PANGO="<span font='DejaVu Sans Mono 12'>\
+<span fgcolor='#${C3}'>C:\&gt; </span><span fgcolor='#${C7}'>dir /w</span>\n\
+<span fgcolor='#${C7}'> Volume in drive C is ARCH</span>\n\
+<span fgcolor='#${C6}'> CONFIG.SYS  COMMAND.COM  AUTOEXEC.BAT</span>\n\
+<span fgcolor='#${C3}'>C:\&gt; </span><span fgcolor='#${C7}'>edit config.sys</span>\n\
+<span fgcolor='#${C2}'>[████████████████] 100%</span>\n\
+<span fgcolor='#${C2}'>OK █</span></span>"
+      ;;
+    macos)
+      PANGO="<span font='DejaVu Sans Mono 12'>\
+<span fgcolor='#${C2}'>~/projects </span><span fgcolor='#${C4}'>(main) </span><span fgcolor='#${C2}'>❯ </span><span fgcolor='#${C7}'>ls -la</span>\n\
+<span fgcolor='#${C4}'>drwxr-xr-x  </span><span fgcolor='#${C7}'>src    tests</span>\n\
+<span fgcolor='#${C7}'>-rw-r--r--  package.json  README.md</span>\n\
+<span fgcolor='#${C2}'>~/projects </span><span fgcolor='#${C4}'>(main) </span><span fgcolor='#${C2}'>❯</span>\n\
+<span fgcolor='#${C3}'>⚡ </span><span fgcolor='#${C7}'>npm run build</span>\n\
+<span fgcolor='#${C2}'>✓ Built in 1.2s █</span></span>"
+      ;;
+    neofetch)
+      PANGO="<span font='DejaVu Sans Mono 12'>\
+<span fgcolor='#${C4}'>    .     </span><span fgcolor='#${C7}'>user</span><span fgcolor='#${C6}'>@</span><span fgcolor='#${C7}'>archbox</span>\n\
+<span fgcolor='#${C4}'>   /\\     </span><span fgcolor='#${C3}'>OS: </span><span fgcolor='#${C7}'>Arch Linux</span>\n\
+<span fgcolor='#${C4}'>  /  \\    </span><span fgcolor='#${C3}'>WM: </span><span fgcolor='#${C7}'>Sway</span>\n\
+<span fgcolor='#${C4}'> /    \\   </span><span fgcolor='#${C3}'>Theme: </span><span fgcolor='#${C7}'>${THEME_NAME}</span>\n\
+<span fgcolor='#${C4}'>/______\\  </span><span fgcolor='#${C3}'>Term: </span><span fgcolor='#${C7}'>foot</span></span>"
+      ;;
+    windows)
+      PANGO="<span font='DejaVu Sans Mono 12'>\
+<span fgcolor='#${C4}'>Microsoft Windows [Version 11.0]</span>\n\
+<span fgcolor='#${C7}'>(c) Microsoft Corporation.</span>\n\n\
+<span fgcolor='#${C7}'>C:\Users\User&gt; </span><span fgcolor='#${C15}'>winver</span>\n\
+<span fgcolor='#${C6}'>About Windows — ${THEME_NAME} Edition</span>\n\
+<span fgcolor='#${C7}'>C:\Users\User&gt; █</span></span>"
+      ;;
+    minimal|*)
+      PANGO="<span font='DejaVu Sans Mono 12'>\
+<span fgcolor='#${C2}'>❯ </span><span fgcolor='#${C7}'>git log --oneline -3</span>\n\
+<span fgcolor='#${C3}'>7a1f3b2 </span><span fgcolor='#${C15}'>(HEAD) </span><span fgcolor='#${C7}'>add rice theme configs</span>\n\
+<span fgcolor='#${C3}'>3c8e5d1 </span><span fgcolor='#${C7}'>update hyprland keybinds</span>\n\
+<span fgcolor='#${C3}'>9f2a4c0 </span><span fgcolor='#${C7}'>initial dotfiles</span>\n\
+<span fgcolor='#${C2}'>❯ </span><span fgcolor='#${C7}'>nvim .</span>\n\
+<span fgcolor='#${C2}'>❯ █</span></span>"
+      ;;
+  esac
+
+  # Render pango markup → PNG; fall back to plain text if pango unsupported
+  if ! convert -background "#${BG}" -size "${TXT_W}x" \
+       pango:"${PANGO}" "$PTXT" 2>/dev/null; then
+    # Plain-text fallback (no colors, but readable)
+    PLAIN=$(printf '%s' "$PANGO" | sed 's/<[^>]*>//g' | sed 's/\\n/\n/g')
+    convert -background "#${BG}" -fill "#${FG}" \
+      -font "$FONT_MONO" -pointsize 12 \
+      -size "${TXT_W}x160" label:"$PLAIN" "$PTXT"
+  fi
+
+  # ── 3. compose full scene ─────────────────────────────────────────────────
+  # Swatch positions
+  SW_X=$((WIN_X+18));  SW_Y=$((WIN_Y+TITLE_H+20))
+  SW_W=28; SW_H=16; SW_GAP=4; SW_Y2=$((SW_Y+SW_H+5))
+  TXT_X=$((WIN_X+18)); TXT_Y=$((SW_Y2+SW_H+20))
+  CLK_X=$((OUTPUT_W/2 - 90))
+
+  convert "$WP" \
+    `# ── waybar ──` \
+    -fill "#${BG}"    -draw "rectangle 0,0 $((OUTPUT_W-1)),$BAR_H" \
+    -fill "#${C8}"    -draw "line 0,$BAR_H $((OUTPUT_W-1)),$BAR_H" \
+    -gravity NorthWest \
+    -fill "#${C15}"   -font "$FONT_UI" -pointsize 12  -annotate "+14+9"       "  1   2   3" \
+    -fill "#${C2}"    -font "$FONT_UI" -pointsize 12  -annotate "+${CLK_X}+9" " 14:23   Sat 24 May" \
+    -fill "#${C4}"    -font "$FONT_UI" -pointsize 12  -annotate "+$((OUTPUT_W-175))+9" " 12%   63%" \
+    `# ── terminal shadow ──` \
+    -fill "rgba(0,0,0,0.35)" \
+    -draw "roundRectangle $((WIN_X+4)),$((WIN_Y+4)) $((WIN_X+WIN_W+4)),$((WIN_Y+WIN_H+4)) 10,10" \
+    `# ── terminal body ──` \
+    -fill "#${BG}" \
+    -draw "roundRectangle $WIN_X,$WIN_Y $((WIN_X+WIN_W)),$((WIN_Y+WIN_H)) 8,8" \
+    `# ── titlebar ──` \
+    -fill "#${C8}" \
+    -draw "roundRectangle $WIN_X,$WIN_Y $((WIN_X+WIN_W)),$((WIN_Y+TITLE_H)) 8,8" \
+    -draw "rectangle $WIN_X,$((WIN_Y+TITLE_H/2)) $((WIN_X+WIN_W)),$((WIN_Y+TITLE_H))" \
+    `# ── traffic lights ──` \
+    -fill "#ff5f57" -draw "circle $((WIN_X+14)),$((WIN_Y+14)) $((WIN_X+20)),$((WIN_Y+14))" \
+    -fill "#febc2e" -draw "circle $((WIN_X+30)),$((WIN_Y+14)) $((WIN_X+36)),$((WIN_Y+14))" \
+    -fill "#28c840" -draw "circle $((WIN_X+46)),$((WIN_Y+14)) $((WIN_X+52)),$((WIN_Y+14))" \
+    `# ── window title ──` \
+    -fill "#${C15}" -font "$FONT_MONO" -pointsize 11 \
+    -annotate "+$((WIN_X+WIN_W/2-50))+$((WIN_Y+9))" "bash — ${THEME_NAME}" \
+    `# ── color swatches row 1 (normal) ──` \
+    -fill "#${C0}" -draw "roundRectangle $((SW_X+0*32)),$SW_Y $((SW_X+0*32+SW_W)),$((SW_Y+SW_H)) 2,2" \
+    -fill "#${C1}" -draw "roundRectangle $((SW_X+1*32)),$SW_Y $((SW_X+1*32+SW_W)),$((SW_Y+SW_H)) 2,2" \
+    -fill "#${C2}" -draw "roundRectangle $((SW_X+2*32)),$SW_Y $((SW_X+2*32+SW_W)),$((SW_Y+SW_H)) 2,2" \
+    -fill "#${C3}" -draw "roundRectangle $((SW_X+3*32)),$SW_Y $((SW_X+3*32+SW_W)),$((SW_Y+SW_H)) 2,2" \
+    -fill "#${C4}" -draw "roundRectangle $((SW_X+4*32)),$SW_Y $((SW_X+4*32+SW_W)),$((SW_Y+SW_H)) 2,2" \
+    -fill "#${C5}" -draw "roundRectangle $((SW_X+5*32)),$SW_Y $((SW_X+5*32+SW_W)),$((SW_Y+SW_H)) 2,2" \
+    -fill "#${C6}" -draw "roundRectangle $((SW_X+6*32)),$SW_Y $((SW_X+6*32+SW_W)),$((SW_Y+SW_H)) 2,2" \
+    -fill "#${C7}" -draw "roundRectangle $((SW_X+7*32)),$SW_Y $((SW_X+7*32+SW_W)),$((SW_Y+SW_H)) 2,2" \
+    `# ── color swatches row 2 (bright) ──` \
+    -fill "#${C8}"  -draw "roundRectangle $((SW_X+0*32)),$SW_Y2 $((SW_X+0*32+SW_W)),$((SW_Y2+SW_H)) 2,2" \
+    -fill "#${C9}"  -draw "roundRectangle $((SW_X+1*32)),$SW_Y2 $((SW_X+1*32+SW_W)),$((SW_Y2+SW_H)) 2,2" \
+    -fill "#${C10}" -draw "roundRectangle $((SW_X+2*32)),$SW_Y2 $((SW_X+2*32+SW_W)),$((SW_Y2+SW_H)) 2,2" \
+    -fill "#${C11}" -draw "roundRectangle $((SW_X+3*32)),$SW_Y2 $((SW_X+3*32+SW_W)),$((SW_Y2+SW_H)) 2,2" \
+    -fill "#${C12}" -draw "roundRectangle $((SW_X+4*32)),$SW_Y2 $((SW_X+4*32+SW_W)),$((SW_Y2+SW_H)) 2,2" \
+    -fill "#${C13}" -draw "roundRectangle $((SW_X+5*32)),$SW_Y2 $((SW_X+5*32+SW_W)),$((SW_Y2+SW_H)) 2,2" \
+    -fill "#${C14}" -draw "roundRectangle $((SW_X+6*32)),$SW_Y2 $((SW_X+6*32+SW_W)),$((SW_Y2+SW_H)) 2,2" \
+    -fill "#${C15}" -draw "roundRectangle $((SW_X+7*32)),$SW_Y2 $((SW_X+7*32+SW_W)),$((SW_Y2+SW_H)) 2,2" \
+    `# ── rofi popup shadow ──` \
+    -fill "rgba(0,0,0,0.3)" \
+    -draw "roundRectangle $((ROFI_X+3)),$((ROFI_Y+3)) $((ROFI_X+ROFI_W+3)),$((ROFI_Y+ROFI_H+3)) 8,8" \
+    `# ── rofi popup body ──` \
+    -fill "#${BG}" \
+    -draw "roundRectangle $ROFI_X,$ROFI_Y $((ROFI_X+ROFI_W)),$((ROFI_Y+ROFI_H)) 8,8" \
+    -fill none -stroke "#${C4}" -strokewidth 2 \
+    -draw "roundRectangle $ROFI_X,$ROFI_Y $((ROFI_X+ROFI_W)),$((ROFI_Y+ROFI_H)) 8,8" \
+    -stroke none \
+    `# ── rofi search bar ──` \
+    -fill "#${C8}" \
+    -draw "roundRectangle $((ROFI_X+10)),$((ROFI_Y+10)) $((ROFI_X+ROFI_W-10)),$((ROFI_Y+46)) 4,4" \
+    -fill "#${C4}" -font "$FONT_UI" -pointsize 12 \
+    -annotate "+$((ROFI_X+16))+$((ROFI_Y+16))" " Search" \
+    -fill "#${C7}" \
+    -annotate "+$((ROFI_X+68))+$((ROFI_Y+16))" "Type to filter..." \
+    `# ── rofi items ──` \
+    -fill "#${C7}" -font "$FONT_UI" -pointsize 12 \
+    -annotate "+$((ROFI_X+18))+$((ROFI_Y+58))"  "Firefox" \
+    -annotate "+$((ROFI_X+18))+$((ROFI_Y+88))"  "Alacritty" \
+    `# selected item ──` \
+    -fill "#${C4}" \
+    -draw "roundRectangle $((ROFI_X+10)),$((ROFI_Y+112)) $((ROFI_X+ROFI_W-10)),$((ROFI_Y+138)) 4,4" \
+    -fill "#${BG}" -font "$FONT_UI" -pointsize 12 \
+    -annotate "+$((ROFI_X+18))+$((ROFI_Y+118))" "Neovim" \
+    -fill "#${C7}" \
+    -annotate "+$((ROFI_X+18))+$((ROFI_Y+148))" "File Manager" \
+    -annotate "+$((ROFI_X+18))+$((ROFI_Y+178))" "Spotify" \
+    -annotate "+$((ROFI_X+18))+$((ROFI_Y+208))" "Discord" \
+    `# ── attribution ──` \
     -gravity SouthEast \
     -fill "rgba(0,0,0,0.65)" \
     -draw "roundRectangle $((OUTPUT_W-322)),$((OUTPUT_H-28)) $((OUTPUT_W-2)),$((OUTPUT_H-2)) 4,4" \
-    -fill "rgba(255,255,255,0.85)" \
+    -fill "rgba(255,255,255,0.85)" -font "$FONT_UI" -pointsize 11 \
     -annotate "0+6+8" "Theme: ${THEME_NAME} · Wallpaper: ImageMagick gradient" \
     "$OUT"
 
-  echo "  OK  $OUT"
-  OK=$((OK + 1))
+  # ── 4. composite pango text onto terminal area ────────────────────────────
+  convert "$OUT" "$PTXT" -geometry "+${TXT_X}+${TXT_Y}" -composite "$OUT"
 
-  # ── l. kill foot, rofi, waybar, swaybg ───────────────────────────────────────
-  kill "$FOOT_PID"   2>/dev/null || true
-  wait "$FOOT_PID"   2>/dev/null || true
-  kill "$ROFI_PID"   2>/dev/null || true
-  wait "$ROFI_PID"   2>/dev/null || true
-  kill "$WAYBAR_PID" 2>/dev/null || true
-  wait "$WAYBAR_PID" 2>/dev/null || true
-  [[ -n "${SWAYBG_PID:-}" ]] && { kill "$SWAYBG_PID" 2>/dev/null || true; wait "$SWAYBG_PID" 2>/dev/null || true; }
-
-  # ── m. clean up temp files ────────────────────────────────────────────────────
-  rm -f "$SHOT_RAW" "$WALLPAPER" "$FOOT_CONF" \
-        "$WAYBAR_JSON" "$WAYBAR_CSS" "$ROFI_RASI"
-
-  sleep 0.2
+  rm -f "$WP" "$PTXT"
+  echo "  OK → $OUT"
+  OK=$((OK+1))
 done
-
-# ── cleanup ───────────────────────────────────────────────────────────────────
-kill "$SWAY_PID" 2>/dev/null || true
-wait "$SWAY_PID" 2>/dev/null || true
-rm -f "$SWAY_CONF" "$SWAY_LAUNCH" /tmp/sway.log /tmp/waybar-*.log /tmp/rofi-*.log
 
 echo ""
 echo "Done: ${OK} saved, ${FAIL} failed."
