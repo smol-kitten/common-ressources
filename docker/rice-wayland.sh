@@ -32,11 +32,11 @@ node rice/generate.js
 echo "    Done."
 
 declare -A THEME_STYLE=(
-  [dracula]="cyberpunk"     [nord]="science"
-  [solarized-dark]="retro"  [solarized-light]="macos"
-  [monokai]="neofetch"      [gruvbox-dark]="scp"
+  [dracula]="nvim"           [nord]="htop"
+  [solarized-dark]="retro"   [solarized-light]="macos"
+  [monokai]="neofetch"       [gruvbox-dark]="scp"
   [catppuccin-mocha]="anime" [tokyo-night]="cyberpunk"
-  [one-dark]="minimal"      [material-dark]="science"
+  [one-dark]="science"       [material-dark]="browser"
 )
 style_for() { [[ -n "${STYLE:-}" ]] && echo "$STYLE" || echo "${THEME_STYLE[$1]:-minimal}"; }
 
@@ -79,6 +79,12 @@ for SLUG in "${SLUGS[@]}"; do
   TXT_X=$((WIN_X+18)); TXT_Y=$((SW_Y2+SW_H+20))
   LH=20
   CLK_X=$((OUTPUT_W/2-90))
+  # Rofi launcher overlay — bottom centre (above attribution line)
+  ROFI_X=$((OUTPUT_W/2-190)); ROFI_Y=$((OUTPUT_H-200))
+  ROFI_W=380; ROFI_H=170
+  # Dunst notification — top right
+  NT_X=$((OUTPUT_W-280)); NT_Y=$((BAR_H+10))
+  NT_W=260; NT_H=70
 
   # Style-specific terminal lines: "COLOR_HEX|text"
   case "$STYLE_NAME" in
@@ -131,6 +137,30 @@ for SLUG in "${SLUGS[@]}"; do
         "${C4}| /    \   Theme: ${THEME_NAME}"
         "${C4}|/______\  Term: foot"
         "${C8}| " ) ;;
+    nvim) LINES=(
+        "${C8}|-- nvim  config.lua  [+]"
+        "${C5}|local colors = require('${SLUG}')"
+        "${C4}|vim.cmd('colorscheme ${SLUG}')"
+        "${C8}|"
+        "${C2}|function M.setup(opts)"
+        "${C6}|  opts = opts or {}"
+        "${C3}|  vim.g.theme = '${THEME_NAME}'" ) ;;
+    htop) LINES=(
+        "${C6}|  CPU [|||||||||||||     56%]"
+        "${C2}|  MEM [||||||||||        42%]"
+        "${C3}|  SWP [||                 8%]"
+        "${C8}|──────────────────────────"
+        "${C7}| PID  CPU  MEM  Command"
+        "${C4}|1337  5.2  1.1  nvim"
+        "${C2}|  42  0.4  0.3  waybar" ) ;;
+    browser) LINES=(
+        "${C8}|  [1] localhost:3000  [2] github.com"
+        "${C4}|  > https://github.com/${SLUG}"
+        "${C8}|──────────────────────────────────"
+        "${C7}|  # ${THEME_NAME}"
+        "${C6}|  A dark, vibrant color scheme"
+        "${C2}|  16 colors  MIT license"
+        "${C3}|  ★ 2.1k  ⑂ 340" ) ;;
     windows) LINES=(
         "${C4}|Microsoft Windows [Version 11.0]"
         "${C7}|(c) Microsoft Corporation."
@@ -201,6 +231,27 @@ for SLUG in "${SLUGS[@]}"; do
       "${TEXT_ARGS[@]}" \
       -fill "#${C4}" -pointsize 11 \
       -annotate "+$((OUTPUT_W-175))+$((OUTPUT_H-14))" "Theme: ${THEME_NAME}  Wallpaper: ImageMagick gradient" \
+      -fill "#${C8}" -draw "rectangle $((ROFI_X+4)),$((ROFI_Y+4)) $((ROFI_X+ROFI_W+4)),$((ROFI_Y+ROFI_H+4))" \
+      -fill "#${BG}" -draw "rectangle ${ROFI_X},${ROFI_Y} $((ROFI_X+ROFI_W)),$((ROFI_Y+ROFI_H))" \
+      -fill "#${C8}" -draw "rectangle ${ROFI_X},${ROFI_Y} $((ROFI_X+ROFI_W)),$((ROFI_Y+30))" \
+      -fill "#${C4}" -draw "rectangle ${ROFI_X},$((ROFI_Y+30)) $((ROFI_X+ROFI_W)),$((ROFI_Y+54))" \
+      -fill "#${C15}" -pointsize 11 \
+      -annotate "+$((ROFI_X+12))+$((ROFI_Y+10))" "  run anything..." \
+      -fill "#${BG}" \
+      -annotate "+$((ROFI_X+12))+$((ROFI_Y+40))" "  System Settings" \
+      -fill "#${FG}" \
+      -annotate "+$((ROFI_X+12))+$((ROFI_Y+64))" "  Firefox" \
+      -annotate "+$((ROFI_X+12))+$((ROFI_Y+88))" "  Files" \
+      -annotate "+$((ROFI_X+12))+$((ROFI_Y+112))" "  Spotify" \
+      -annotate "+$((ROFI_X+12))+$((ROFI_Y+136))" "  Terminal" \
+      -fill "#${C8}" -draw "rectangle ${NT_X},${NT_Y} $((NT_X+NT_W)),$((NT_Y+NT_H))" \
+      -fill "#${C4}" -draw "rectangle ${NT_X},${NT_Y} $((NT_X+4)),$((NT_Y+NT_H))" \
+      -fill "#${C15}" -pointsize 11 \
+      -annotate "+$((NT_X+12))+$((NT_Y+16))" "Build complete" \
+      -fill "#${C7}" -pointsize 10 \
+      -annotate "+$((NT_X+12))+$((NT_Y+34))" "rice · 10 screenshots done" \
+      -fill "#${C8}" \
+      -annotate "+$((NT_X+12))+$((NT_Y+52))" "dunst  just now" \
       "$OUT"
   ); then
     rm -f "$WP"

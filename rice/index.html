@@ -1,276 +1,4 @@
-#!/usr/bin/env node
-// Generates per-theme config files for Arch Linux ricing tools.
-// Reads colors/terminal/themes.json and writes one file per theme for each tool.
-//
-// Usage:
-//   node rice/generate.js
-
-'use strict';
-
-const fs   = require('fs');
-const path = require('path');
-
-const ROOT       = path.resolve(__dirname, '..');
-const THEMES_FILE = path.join(ROOT, 'colors', 'terminal', 'themes.json');
-const RICE_DIR   = __dirname;
-
-const themes = JSON.parse(fs.readFileSync(THEMES_FILE, 'utf8'));
-
-// ── helpers ────────────────────────────────────────────────────────────────────
-
-/** Strip '#' prefix from a hex colour string. */
-function stripHash(hex) { return hex.replace(/^#/, ''); }
-
-/** Ensure a directory exists. */
-function ensureDir(dir) { fs.mkdirSync(dir, { recursive: true }); }
-
-/** Write a file, creating parent dirs as needed. */
-function write(filePath, content) {
-  ensureDir(path.dirname(filePath));
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('  wrote', path.relative(ROOT, filePath));
-}
-
-// ── generators ─────────────────────────────────────────────────────────────────
-
-function genAlacritty(theme) {
-  const c = theme.colors;
-  const content = `# Theme: ${theme.name}
-# Source: ${theme.source}
-
-[colors.primary]
-background = "${theme.background}"
-foreground = "${theme.foreground}"
-
-[colors.cursor]
-cursor = "${theme.cursor}"
-text   = "${theme.background}"
-
-[colors.selection]
-background = "${theme['selection-background']}"
-text       = "${theme.foreground}"
-
-[colors.normal]
-black   = "${c['black']}"
-red     = "${c['red']}"
-green   = "${c['green']}"
-yellow  = "${c['yellow']}"
-blue    = "${c['blue']}"
-magenta = "${c['magenta']}"
-cyan    = "${c['cyan']}"
-white   = "${c['white']}"
-
-[colors.bright]
-black   = "${c['bright-black']}"
-red     = "${c['bright-red']}"
-green   = "${c['bright-green']}"
-yellow  = "${c['bright-yellow']}"
-blue    = "${c['bright-blue']}"
-magenta = "${c['bright-magenta']}"
-cyan    = "${c['bright-cyan']}"
-white   = "${c['bright-white']}"
-`;
-  write(path.join(RICE_DIR, 'alacritty', `${theme.slug}.toml`), content);
-}
-
-function genKitty(theme) {
-  const c = theme.colors;
-  const content = `# Theme: ${theme.name}
-# Source: ${theme.source}
-
-background              ${theme.background}
-foreground              ${theme.foreground}
-cursor                  ${theme.cursor}
-selection_background    ${theme['selection-background']}
-selection_foreground    ${theme.foreground}
-
-# Normal colors (0-7)
-color0  ${c['black']}
-color1  ${c['red']}
-color2  ${c['green']}
-color3  ${c['yellow']}
-color4  ${c['blue']}
-color5  ${c['magenta']}
-color6  ${c['cyan']}
-color7  ${c['white']}
-
-# Bright colors (8-15)
-color8  ${c['bright-black']}
-color9  ${c['bright-red']}
-color10 ${c['bright-green']}
-color11 ${c['bright-yellow']}
-color12 ${c['bright-blue']}
-color13 ${c['bright-magenta']}
-color14 ${c['bright-cyan']}
-color15 ${c['bright-white']}
-`;
-  write(path.join(RICE_DIR, 'kitty', `${theme.slug}.conf`), content);
-}
-
-function genHyprland(theme) {
-  const c = theme.colors;
-  const content = `# Theme: ${theme.name}
-# Source: ${theme.source}
-# Include in hyprland.conf: source = ~/.config/hypr/colors.conf
-
-$color_background = rgb(${stripHash(theme.background)})
-$color_foreground = rgb(${stripHash(theme.foreground)})
-$color_cursor     = rgb(${stripHash(theme.cursor)})
-$color_selection  = rgb(${stripHash(theme['selection-background'])})
-
-$color_black      = rgb(${stripHash(c['black'])})
-$color_red        = rgb(${stripHash(c['red'])})
-$color_green      = rgb(${stripHash(c['green'])})
-$color_yellow     = rgb(${stripHash(c['yellow'])})
-$color_blue       = rgb(${stripHash(c['blue'])})
-$color_magenta    = rgb(${stripHash(c['magenta'])})
-$color_cyan       = rgb(${stripHash(c['cyan'])})
-$color_white      = rgb(${stripHash(c['white'])})
-
-$color_bright_black   = rgb(${stripHash(c['bright-black'])})
-$color_bright_red     = rgb(${stripHash(c['bright-red'])})
-$color_bright_green   = rgb(${stripHash(c['bright-green'])})
-$color_bright_yellow  = rgb(${stripHash(c['bright-yellow'])})
-$color_bright_blue    = rgb(${stripHash(c['bright-blue'])})
-$color_bright_magenta = rgb(${stripHash(c['bright-magenta'])})
-$color_bright_cyan    = rgb(${stripHash(c['bright-cyan'])})
-$color_bright_white   = rgb(${stripHash(c['bright-white'])})
-`;
-  write(path.join(RICE_DIR, 'hyprland', `${theme.slug}.conf`), content);
-}
-
-function genWaybar(theme) {
-  const c = theme.colors;
-  const content = `/* Theme: ${theme.name} */
-/* Source: ${theme.source} */
-/* Include in waybar/style.css: @import url("colors.css"); */
-
-:root {
-  --background:        ${theme.background};
-  --foreground:        ${theme.foreground};
-  --cursor:            ${theme.cursor};
-  --selection:         ${theme['selection-background']};
-
-  --black:             ${c['black']};
-  --red:               ${c['red']};
-  --green:             ${c['green']};
-  --yellow:            ${c['yellow']};
-  --blue:              ${c['blue']};
-  --magenta:           ${c['magenta']};
-  --cyan:              ${c['cyan']};
-  --white:             ${c['white']};
-
-  --bright-black:      ${c['bright-black']};
-  --bright-red:        ${c['bright-red']};
-  --bright-green:      ${c['bright-green']};
-  --bright-yellow:     ${c['bright-yellow']};
-  --bright-blue:       ${c['bright-blue']};
-  --bright-magenta:    ${c['bright-magenta']};
-  --bright-cyan:       ${c['bright-cyan']};
-  --bright-white:      ${c['bright-white']};
-}
-`;
-  write(path.join(RICE_DIR, 'waybar', `${theme.slug}.css`), content);
-}
-
-function genRofi(theme) {
-  const c = theme.colors;
-  const content = `/* Theme: ${theme.name} */
-/* Source: ${theme.source} */
-/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
-
-* {
-    background-color:              ${theme.background};
-    foreground:                    ${theme.foreground};
-
-    normal-background:             ${theme.background};
-    normal-foreground:             ${theme.foreground};
-    selected-normal-background:    ${c['blue']};
-    selected-normal-foreground:    ${theme.background};
-
-    active-background:             ${c['green']};
-    active-foreground:             ${theme.background};
-    selected-active-background:    ${c['bright-green']};
-    selected-active-foreground:    ${theme.background};
-
-    urgent-background:             ${c['red']};
-    urgent-foreground:             ${theme.background};
-    selected-urgent-background:    ${c['bright-red']};
-    selected-urgent-foreground:    ${theme.background};
-
-    border-color:                  ${c['bright-black']};
-    separatorcolor:                ${c['bright-black']};
-}
-`;
-  write(path.join(RICE_DIR, 'rofi', `${theme.slug}.rasi`), content);
-}
-
-function genDunst(theme) {
-  const c = theme.colors;
-  const content = `# Theme: ${theme.name}
-# Source: ${theme.source}
-# Include in dunstrc: [global] section, or source this file
-
-[urgency_low]
-    background = "${theme.background}"
-    foreground = "${theme.foreground}"
-    frame_color = "${c['blue']}"
-
-[urgency_normal]
-    background = "${theme.background}"
-    foreground = "${theme.foreground}"
-    frame_color = "${c['blue']}"
-
-[urgency_critical]
-    background = "${c['red']}"
-    foreground = "${theme.background}"
-    frame_color = "${c['bright-red']}"
-`;
-  write(path.join(RICE_DIR, 'dunst', `${theme.slug}.conf`), content);
-}
-
-function genWezterm(theme) {
-  const c = theme.colors;
-  const ansi = [
-    c['black'], c['red'], c['green'], c['yellow'],
-    c['blue'],  c['magenta'], c['cyan'], c['white'],
-  ];
-  const brights = [
-    c['bright-black'], c['bright-red'],   c['bright-green'],  c['bright-yellow'],
-    c['bright-blue'],  c['bright-magenta'], c['bright-cyan'], c['bright-white'],
-  ];
-  const fmtList = (arr) => arr.map(v => `"${v}"`).join(', ');
-
-  const content = `-- Theme: ${theme.name}
--- Source: ${theme.source}
--- Usage in wezterm.lua:
---   local scheme = require("rice.wezterm.${theme.slug}")
---   config.colors = scheme.colors
-
-return {
-  colors = {
-    background    = "${theme.background}",
-    foreground    = "${theme.foreground}",
-    cursor_bg     = "${theme.cursor}",
-    cursor_border = "${theme.cursor}",
-    cursor_fg     = "${theme.background}",
-    selection_bg  = "${theme['selection-background']}",
-    selection_fg  = "${theme.foreground}",
-
-    ansi    = { ${fmtList(ansi)} },
-    brights = { ${fmtList(brights)} },
-  },
-}
-`;
-  write(path.join(RICE_DIR, 'wezterm', `${theme.slug}.lua`), content);
-}
-
-// ── interactive index page ─────────────────────────────────────────────────────
-
-function genIndex(themes) {
-  const themeData = JSON.stringify(themes, null, 2);
-
-  const html = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -682,7 +410,288 @@ body {
 </div>
 
 <script>
-const THEMES = ${themeData};
+const THEMES = [
+  {
+    "name": "Dracula",
+    "slug": "dracula",
+    "background": "#282A36",
+    "foreground": "#F8F8F2",
+    "cursor": "#F8F8F2",
+    "selection-background": "#44475A",
+    "description": "A dark theme inspired by Bram Stoker's Dracula. Features a deep purple-tinged dark background with vibrant, high-contrast accent colors.",
+    "source": "https://draculatheme.com",
+    "colors": {
+      "black": "#21222C",
+      "red": "#FF5555",
+      "green": "#50FA7B",
+      "yellow": "#F1FA8C",
+      "blue": "#BD93F9",
+      "magenta": "#FF79C6",
+      "cyan": "#8BE9FD",
+      "white": "#F8F8F2",
+      "bright-black": "#6272A4",
+      "bright-red": "#FF6E6E",
+      "bright-green": "#69FF94",
+      "bright-yellow": "#FFFFA5",
+      "bright-blue": "#D6ACFF",
+      "bright-magenta": "#FF92DF",
+      "bright-cyan": "#A4FFFF",
+      "bright-white": "#FFFFFF"
+    }
+  },
+  {
+    "name": "Nord",
+    "slug": "nord",
+    "background": "#2E3440",
+    "foreground": "#D8DEE9",
+    "cursor": "#D8DEE9",
+    "selection-background": "#4C566A",
+    "description": "An arctic, north-bluish color palette. Nord uses a clean set of colors derived from the arctic, inspired by the color of ice and the polar night.",
+    "source": "https://www.nordtheme.com",
+    "colors": {
+      "black": "#3B4252",
+      "red": "#BF616A",
+      "green": "#A3BE8C",
+      "yellow": "#EBCB8B",
+      "blue": "#81A1C1",
+      "magenta": "#B48EAD",
+      "cyan": "#88C0D0",
+      "white": "#E5E9F0",
+      "bright-black": "#4C566A",
+      "bright-red": "#BF616A",
+      "bright-green": "#A3BE8C",
+      "bright-yellow": "#EBCB8B",
+      "bright-blue": "#81A1C1",
+      "bright-magenta": "#B48EAD",
+      "bright-cyan": "#8FBCBB",
+      "bright-white": "#ECEFF4"
+    }
+  },
+  {
+    "name": "Solarized Dark",
+    "slug": "solarized-dark",
+    "background": "#002B36",
+    "foreground": "#839496",
+    "cursor": "#839496",
+    "selection-background": "#073642",
+    "description": "Solarized is a sixteen-color palette designed for use with terminal and GUI applications. Crafted by Ethan Schoonover with careful attention to contrast relationships.",
+    "source": "https://ethanschoonover.com/solarized/",
+    "colors": {
+      "black": "#073642",
+      "red": "#DC322F",
+      "green": "#859900",
+      "yellow": "#B58900",
+      "blue": "#268BD2",
+      "magenta": "#D33682",
+      "cyan": "#2AA198",
+      "white": "#EEE8D5",
+      "bright-black": "#002B36",
+      "bright-red": "#CB4B16",
+      "bright-green": "#586E75",
+      "bright-yellow": "#657B83",
+      "bright-blue": "#839496",
+      "bright-magenta": "#6C71C4",
+      "bright-cyan": "#93A1A1",
+      "bright-white": "#FDF6E3"
+    }
+  },
+  {
+    "name": "Solarized Light",
+    "slug": "solarized-light",
+    "background": "#FDF6E3",
+    "foreground": "#657B83",
+    "cursor": "#586E75",
+    "selection-background": "#EEE8D5",
+    "description": "The light variant of Solarized. The same carefully balanced palette but with a warm off-white background, suitable for well-lit environments.",
+    "source": "https://ethanschoonover.com/solarized/",
+    "colors": {
+      "black": "#073642",
+      "red": "#DC322F",
+      "green": "#859900",
+      "yellow": "#B58900",
+      "blue": "#268BD2",
+      "magenta": "#D33682",
+      "cyan": "#2AA198",
+      "white": "#EEE8D5",
+      "bright-black": "#002B36",
+      "bright-red": "#CB4B16",
+      "bright-green": "#586E75",
+      "bright-yellow": "#657B83",
+      "bright-blue": "#839496",
+      "bright-magenta": "#6C71C4",
+      "bright-cyan": "#93A1A1",
+      "bright-white": "#FDF6E3"
+    }
+  },
+  {
+    "name": "Monokai",
+    "slug": "monokai",
+    "background": "#272822",
+    "foreground": "#F8F8F2",
+    "cursor": "#F8F8F2",
+    "selection-background": "#75715E",
+    "description": "The original Monokai color scheme, created by Wimer Hazenberg. A warm dark theme with vibrant yellows, greens, and pinks — one of the most widely ported terminal and editor themes.",
+    "source": "https://monokai.pro",
+    "colors": {
+      "black": "#272822",
+      "red": "#F92672",
+      "green": "#A6E22E",
+      "yellow": "#F4BF75",
+      "blue": "#66D9E8",
+      "magenta": "#AE81FF",
+      "cyan": "#A1EFE4",
+      "white": "#F8F8F2",
+      "bright-black": "#75715E",
+      "bright-red": "#F92672",
+      "bright-green": "#A6E22E",
+      "bright-yellow": "#F4BF75",
+      "bright-blue": "#66D9E8",
+      "bright-magenta": "#AE81FF",
+      "bright-cyan": "#A1EFE4",
+      "bright-white": "#F9F8F5"
+    }
+  },
+  {
+    "name": "Gruvbox Dark",
+    "slug": "gruvbox-dark",
+    "background": "#282828",
+    "foreground": "#EBDBB2",
+    "cursor": "#EBDBB2",
+    "selection-background": "#3C3836",
+    "description": "Gruvbox is a retro groove color scheme with carefully tuned contrast. Created by Pavel Pertsev. The warm brown-gold palette is easy on the eyes for long coding sessions.",
+    "source": "https://github.com/morhetz/gruvbox",
+    "colors": {
+      "black": "#282828",
+      "red": "#CC241D",
+      "green": "#98971A",
+      "yellow": "#D79921",
+      "blue": "#458588",
+      "magenta": "#B16286",
+      "cyan": "#689D6A",
+      "white": "#A89984",
+      "bright-black": "#928374",
+      "bright-red": "#FB4934",
+      "bright-green": "#B8BB26",
+      "bright-yellow": "#FABD2F",
+      "bright-blue": "#83A598",
+      "bright-magenta": "#D3869B",
+      "bright-cyan": "#8EC07C",
+      "bright-white": "#EBDBB2"
+    }
+  },
+  {
+    "name": "Catppuccin Mocha",
+    "slug": "catppuccin-mocha",
+    "background": "#1E1E2E",
+    "foreground": "#CDD6F4",
+    "cursor": "#F5E0DC",
+    "selection-background": "#585B70",
+    "description": "Catppuccin is a community-driven pastel theme with four variants. Mocha is the darkest, featuring a warm dark purple background with soft, pastelly accent colors.",
+    "source": "https://github.com/catppuccin/catppuccin",
+    "colors": {
+      "black": "#45475A",
+      "red": "#F38BA8",
+      "green": "#A6E3A1",
+      "yellow": "#F9E2AF",
+      "blue": "#89B4FA",
+      "magenta": "#F5C2E7",
+      "cyan": "#94E2D5",
+      "white": "#BAC2DE",
+      "bright-black": "#585B70",
+      "bright-red": "#F38BA8",
+      "bright-green": "#A6E3A1",
+      "bright-yellow": "#F9E2AF",
+      "bright-blue": "#89B4FA",
+      "bright-magenta": "#F5C2E7",
+      "bright-cyan": "#94E2D5",
+      "bright-white": "#A6ADC8"
+    }
+  },
+  {
+    "name": "Tokyo Night",
+    "slug": "tokyo-night",
+    "background": "#1A1B26",
+    "foreground": "#C0CAF5",
+    "cursor": "#C0CAF5",
+    "selection-background": "#283457",
+    "description": "Inspired by the lights of downtown Tokyo at night. A clean dark theme with cool blue-purple tones and a neon accent palette, popularized by the VS Code extension.",
+    "source": "https://github.com/enkia/tokyo-night-vscode-theme",
+    "colors": {
+      "black": "#15161E",
+      "red": "#F7768E",
+      "green": "#9ECE6A",
+      "yellow": "#E0AF68",
+      "blue": "#7AA2F7",
+      "magenta": "#BB9AF7",
+      "cyan": "#7DCFFF",
+      "white": "#A9B1D6",
+      "bright-black": "#414868",
+      "bright-red": "#F7768E",
+      "bright-green": "#9ECE6A",
+      "bright-yellow": "#E0AF68",
+      "bright-blue": "#7AA2F7",
+      "bright-magenta": "#BB9AF7",
+      "bright-cyan": "#7DCFFF",
+      "bright-white": "#C0CAF5"
+    }
+  },
+  {
+    "name": "One Dark",
+    "slug": "one-dark",
+    "background": "#282C34",
+    "foreground": "#ABB2BF",
+    "cursor": "#528BFF",
+    "selection-background": "#3E4451",
+    "description": "Atom's iconic One Dark theme, ported everywhere. A balanced dark blue-grey palette with carefully chosen accent hues that remains readable across long sessions.",
+    "source": "https://github.com/atom/atom",
+    "colors": {
+      "black": "#282C34",
+      "red": "#E06C75",
+      "green": "#98C379",
+      "yellow": "#E5C07B",
+      "blue": "#61AFEF",
+      "magenta": "#C678DD",
+      "cyan": "#56B6C2",
+      "white": "#ABB2BF",
+      "bright-black": "#5C6370",
+      "bright-red": "#E06C75",
+      "bright-green": "#98C379",
+      "bright-yellow": "#E5C07B",
+      "bright-blue": "#61AFEF",
+      "bright-magenta": "#C678DD",
+      "bright-cyan": "#56B6C2",
+      "bright-white": "#FFFFFF"
+    }
+  },
+  {
+    "name": "Material Dark",
+    "slug": "material-dark",
+    "background": "#212121",
+    "foreground": "#EEFFFF",
+    "cursor": "#FFCC00",
+    "selection-background": "#546E7A",
+    "description": "Based on Google Material Design's dark surface colors. A neutral near-black background with Material accent colors — popular in editors like VS Code and JetBrains IDEs.",
+    "source": "https://material-theme.com",
+    "colors": {
+      "black": "#546E7A",
+      "red": "#FF5370",
+      "green": "#C3E88D",
+      "yellow": "#FFCB6B",
+      "blue": "#82AAFF",
+      "magenta": "#C792EA",
+      "cyan": "#89DDFF",
+      "white": "#EEFFFF",
+      "bright-black": "#B0BEC5",
+      "bright-red": "#FF5370",
+      "bright-green": "#C3E88D",
+      "bright-yellow": "#FFCB6B",
+      "bright-blue": "#82AAFF",
+      "bright-magenta": "#C792EA",
+      "bright-cyan": "#89DDFF",
+      "bright-white": "#FFFFFF"
+    }
+  }
+];
 
 let current = 0;
 
@@ -741,23 +750,23 @@ function applyTheme(idx) {
   ];
   const tb = document.getElementById('term-body');
   tb.innerHTML = termLines.map(([col, txt]) =>
-    \`<div style="color:var(--t-\${col})">\${txt}</div>\`
+    `<div style="color:var(--t-${col})">${txt}</div>`
   ).join('');
 
   // editor content (fake Lua config)
   const ed = document.getElementById('editor-body');
-  ed.innerHTML = \`<div><span class="ed-gutter">1</span><span class="ed-cmt">-- Neovim config · \${t.name}</span></div>
+  ed.innerHTML = `<div><span class="ed-gutter">1</span><span class="ed-cmt">-- Neovim config · ${t.name}</span></div>
 <div><span class="ed-gutter">2</span><span class="ed-kw">local</span> <span class="ed-var">colors</span> <span class="ed-op">=</span> <span class="ed-fn">require</span>(<span class="ed-str">"rice.colors"</span>)</div>
 <div><span class="ed-gutter">3</span></div>
-<div><span class="ed-gutter">4</span><span class="ed-kw">vim</span>.cmd(<span class="ed-str">"colorscheme \${t.slug}"</span>)</div>
-<div><span class="ed-gutter">5</span><span class="ed-kw">vim</span>.opt.background <span class="ed-op">=</span> <span class="ed-str">"\${luma(t.background) > 128 ? 'light' : 'dark'}"</span></div>
+<div><span class="ed-gutter">4</span><span class="ed-kw">vim</span>.cmd(<span class="ed-str">"colorscheme ${t.slug}"</span>)</div>
+<div><span class="ed-gutter">5</span><span class="ed-kw">vim</span>.opt.background <span class="ed-op">=</span> <span class="ed-str">"${luma(t.background) > 128 ? 'light' : 'dark'}"</span></div>
 <div><span class="ed-gutter">6</span></div>
 <div><span class="ed-gutter">7</span><span class="ed-kw">local</span> <span class="ed-var">hl</span> <span class="ed-op">=</span> <span class="ed-var">vim</span>.api.nvim_set_hl</div>
-<div><span class="ed-gutter">8</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"Normal"</span>, { bg<span class="ed-op">=</span><span class="ed-str">"\${t.background}"</span>, fg<span class="ed-op">=</span><span class="ed-str">"\${t.foreground}"</span> })</div>
-<div><span class="ed-gutter">9</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"Comment"</span>, { fg<span class="ed-op">=</span><span class="ed-str">"\${c['bright-black']}"</span>, italic<span class="ed-op">=</span><span class="ed-kw">true</span> })</div>
-<div><span class="ed-gutter">10</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"String"</span>, { fg<span class="ed-op">=</span><span class="ed-str">"\${c.green}"</span> })</div>
-<div><span class="ed-gutter">11</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"Keyword"</span>, { fg<span class="ed-op">=</span><span class="ed-str">"\${c.magenta}"</span>, bold<span class="ed-op">=</span><span class="ed-kw">true</span> })</div>
-<div><span class="ed-gutter">12</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"Function"</span>, { fg<span class="ed-op">=</span><span class="ed-str">"\${c.blue}"</span> })</div>\`;
+<div><span class="ed-gutter">8</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"Normal"</span>, { bg<span class="ed-op">=</span><span class="ed-str">"${t.background}"</span>, fg<span class="ed-op">=</span><span class="ed-str">"${t.foreground}"</span> })</div>
+<div><span class="ed-gutter">9</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"Comment"</span>, { fg<span class="ed-op">=</span><span class="ed-str">"${c['bright-black']}"</span>, italic<span class="ed-op">=</span><span class="ed-kw">true</span> })</div>
+<div><span class="ed-gutter">10</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"String"</span>, { fg<span class="ed-op">=</span><span class="ed-str">"${c.green}"</span> })</div>
+<div><span class="ed-gutter">11</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"Keyword"</span>, { fg<span class="ed-op">=</span><span class="ed-str">"${c.magenta}"</span>, bold<span class="ed-op">=</span><span class="ed-kw">true</span> })</div>
+<div><span class="ed-gutter">12</span><span class="ed-fn">hl</span>(<span class="ed-num">0</span>, <span class="ed-str">"Function"</span>, { fg<span class="ed-op">=</span><span class="ed-str">"${c.blue}"</span> })</div>`;
 }
 
 // Build sidebar
@@ -766,14 +775,14 @@ THEMES.forEach((t, i) => {
   const c = t.colors;
   const el = document.createElement('div');
   el.className = 'theme-item';
-  el.innerHTML = \`
+  el.innerHTML = `
     <div class="theme-dot-row">
-      <div class="theme-dot" style="background:\${c.red}"></div>
-      <div class="theme-dot" style="background:\${c.green}"></div>
-      <div class="theme-dot" style="background:\${c.blue}"></div>
+      <div class="theme-dot" style="background:${c.red}"></div>
+      <div class="theme-dot" style="background:${c.green}"></div>
+      <div class="theme-dot" style="background:${c.blue}"></div>
     </div>
-    <span class="theme-name">\${t.name}</span>
-  \`;
+    <span class="theme-name">${t.name}</span>
+  `;
   el.addEventListener('click', () => applyTheme(i));
   list.appendChild(el);
 });
@@ -788,26 +797,26 @@ THEMES.forEach((t, i) => {
   const card = document.createElement('div');
   card.className = 'card';
   card.style.background = t.background;
-  card.innerHTML = \`
-    <div class="card-bar" style="background:\${c['bright-black']}">
+  card.innerHTML = `
+    <div class="card-bar" style="background:${c['bright-black']}">
       <div class="card-dots">
         <div class="card-dot" style="background:#ff5f57"></div>
         <div class="card-dot" style="background:#febc2e"></div>
         <div class="card-dot" style="background:#28c840"></div>
       </div>
-      <div class="card-label" style="color:\${t.foreground}">\${t.name}</div>
+      <div class="card-label" style="color:${t.foreground}">${t.name}</div>
     </div>
-    <div class="card-body" style="color:\${t.foreground}">
-      <div class="swatches">\${allColors.map(col=>\`<div class="sw" style="background:\${col}" title="\${col}"></div>\`).join('')}</div>
+    <div class="card-body" style="color:${t.foreground}">
+      <div class="swatches">${allColors.map(col=>`<div class="sw" style="background:${col}" title="${col}"></div>`).join('')}</div>
       <div class="tl">
-        <div class="tl-line"><span style="color:\${c.green}">❯</span> <span>git log --oneline -2</span></div>
-        <div class="tl-line" style="opacity:0.6"><span style="color:\${c.yellow}">7a1f3b2</span> add \${t.slug} rice configs</div>
-        <div class="tl-line" style="opacity:0.6"><span style="color:\${c.yellow}">3c8e5d1</span> update hyprland theme</div>
-        <div class="tl-line" style="margin-top:4px"><span style="color:\${c.green}">❯</span> <span>echo \$THEME</span></div>
-        <div class="tl-line" style="opacity:0.6; color:\${c.cyan}">\${t.name}</div>
+        <div class="tl-line"><span style="color:${c.green}">❯</span> <span>git log --oneline -2</span></div>
+        <div class="tl-line" style="opacity:0.6"><span style="color:${c.yellow}">7a1f3b2</span> add ${t.slug} rice configs</div>
+        <div class="tl-line" style="opacity:0.6"><span style="color:${c.yellow}">3c8e5d1</span> update hyprland theme</div>
+        <div class="tl-line" style="margin-top:4px"><span style="color:${c.green}">❯</span> <span>echo $THEME</span></div>
+        <div class="tl-line" style="opacity:0.6; color:${c.cyan}">${t.name}</div>
       </div>
     </div>
-  \`;
+  `;
   card.addEventListener('click', () => {
     applyTheme(i);
     document.querySelector('[data-panel="panel-desktop"]').click();
@@ -820,13 +829,13 @@ const configGrid = document.getElementById('config-grid');
 function makeConfigCard(title, ext, contentFn) {
   const card = document.createElement('div');
   card.className = 'config-card';
-  card.innerHTML = \`
+  card.innerHTML = `
     <div class="config-card-head">
-      <span id="cc-\${ext}-title">\${title}</span>
-      <span class="config-badge">\${ext}</span>
+      <span id="cc-${ext}-title">${title}</span>
+      <span class="config-badge">${ext}</span>
     </div>
-    <div class="config-body" id="cc-\${ext}-body"></div>
-  \`;
+    <div class="config-body" id="cc-${ext}-body"></div>
+  `;
   configGrid.appendChild(card);
   return contentFn;
 }
@@ -834,80 +843,80 @@ function makeConfigCard(title, ext, contentFn) {
 const configRenderers = [];
 configRenderers.push(makeConfigCard('Alacritty', 'toml', (t) => {
   const c = t.colors;
-  return \`[colors.primary]
-background = "\${t.background}"
-foreground = "\${t.foreground}"
+  return `[colors.primary]
+background = "${t.background}"
+foreground = "${t.foreground}"
 
 [colors.normal]
-black   = "\${c.black}"
-red     = "\${c.red}"
-green   = "\${c.green}"
-yellow  = "\${c.yellow}"
-blue    = "\${c.blue}"
-magenta = "\${c.magenta}"
-cyan    = "\${c.cyan}"
-white   = "\${c.white}"\`;
+black   = "${c.black}"
+red     = "${c.red}"
+green   = "${c.green}"
+yellow  = "${c.yellow}"
+blue    = "${c.blue}"
+magenta = "${c.magenta}"
+cyan    = "${c.cyan}"
+white   = "${c.white}"`;
 }));
 configRenderers.push(makeConfigCard('Kitty', 'conf', (t) => {
   const c = t.colors;
-  return \`background  \${t.background}
-foreground  \${t.foreground}
-cursor      \${t.cursor}
+  return `background  ${t.background}
+foreground  ${t.foreground}
+cursor      ${t.cursor}
 
-color0  \${c.black}
-color1  \${c.red}
-color2  \${c.green}
-color3  \${c.yellow}
-color4  \${c.blue}
-color5  \${c.magenta}
-color6  \${c.cyan}
-color7  \${c.white}\`;
+color0  ${c.black}
+color1  ${c.red}
+color2  ${c.green}
+color3  ${c.yellow}
+color4  ${c.blue}
+color5  ${c.magenta}
+color6  ${c.cyan}
+color7  ${c.white}`;
 }));
 configRenderers.push(makeConfigCard('Waybar CSS', 'css', (t) => {
   const c = t.colors;
-  return \`:root {
-  --background: \${t.background};
-  --foreground: \${t.foreground};
-  --red:        \${c.red};
-  --green:      \${c.green};
-  --yellow:     \${c.yellow};
-  --blue:       \${c.blue};
-  --magenta:    \${c.magenta};
-  --cyan:       \${c.cyan};
-}\`;
+  return `:root {
+  --background: ${t.background};
+  --foreground: ${t.foreground};
+  --red:        ${c.red};
+  --green:      ${c.green};
+  --yellow:     ${c.yellow};
+  --blue:       ${c.blue};
+  --magenta:    ${c.magenta};
+  --cyan:       ${c.cyan};
+}`;
 }));
 configRenderers.push(makeConfigCard('Rofi', 'rasi', (t) => {
   const c = t.colors;
-  return \`* {
-  background-color:           \${t.background};
-  foreground:                 \${t.foreground};
-  selected-normal-background: \${c.blue};
-  selected-normal-foreground: \${t.background};
-  border-color:               \${c['bright-black']};
-}\`;
+  return `* {
+  background-color:           ${t.background};
+  foreground:                 ${t.foreground};
+  selected-normal-background: ${c.blue};
+  selected-normal-foreground: ${t.background};
+  border-color:               ${c['bright-black']};
+}`;
 }));
 configRenderers.push(makeConfigCard('Hyprland', 'conf', (t) => {
   const c = t.colors;
-  return \`\$color_background = rgb(\${hex(t.background)})
-\$color_foreground = rgb(\${hex(t.foreground)})
-\$color_red        = rgb(\${hex(c.red)})
-\$color_green      = rgb(\${hex(c.green)})
-\$color_blue       = rgb(\${hex(c.blue)})
-\$color_magenta    = rgb(\${hex(c.magenta)})
-\$color_cyan       = rgb(\${hex(c.cyan)})\`;
+  return `$color_background = rgb(${hex(t.background)})
+$color_foreground = rgb(${hex(t.foreground)})
+$color_red        = rgb(${hex(c.red)})
+$color_green      = rgb(${hex(c.green)})
+$color_blue       = rgb(${hex(c.blue)})
+$color_magenta    = rgb(${hex(c.magenta)})
+$color_cyan       = rgb(${hex(c.cyan)})`;
 }));
 configRenderers.push(makeConfigCard('WezTerm', 'lua', (t) => {
   const c = t.colors;
-  return \`return {
+  return `return {
   colors = {
-    background    = "\${t.background}",
-    foreground    = "\${t.foreground}",
+    background    = "${t.background}",
+    foreground    = "${t.foreground}",
     ansi = {
-      "\${c.black}", "\${c.red}", "\${c.green}", "\${c.yellow}",
-      "\${c.blue}",  "\${c.magenta}", "\${c.cyan}", "\${c.white}",
+      "${c.black}", "${c.red}", "${c.green}", "${c.yellow}",
+      "${c.blue}",  "${c.magenta}", "${c.cyan}", "${c.white}",
     },
   },
-}\`;
+}`;
 }));
 
 function updateConfigPanel(t) {
@@ -941,24 +950,3 @@ updateConfigPanel(THEMES[0]);
 </script>
 </body>
 </html>
-`;
-  write(path.join(RICE_DIR, 'index.html'), html);
-}
-
-// ── main ───────────────────────────────────────────────────────────────────────
-
-console.log(`Generating rice configs for ${themes.length} themes...\n`);
-
-for (const theme of themes) {
-  console.log(`[${theme.slug}]`);
-  genAlacritty(theme);
-  genKitty(theme);
-  genHyprland(theme);
-  genWaybar(theme);
-  genRofi(theme);
-  genDunst(theme);
-  genWezterm(theme);
-}
-
-genIndex(themes);
-console.log(`\nDone. Generated ${themes.length * 7 + 1} files (configs + interactive index).`);
