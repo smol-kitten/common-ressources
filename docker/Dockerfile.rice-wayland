@@ -8,17 +8,17 @@
 #   docker run --rm -v $PWD:/repo rice-wayland
 #   docker run --rm -v $PWD:/repo rice-wayland bash docker/rice-wayland.sh dracula
 
-FROM archlinux:latest
+FROM ubuntu:22.04
 
-RUN pacman-key --init && pacman-key --populate archlinux
+ENV DEBIAN_FRONTEND=noninteractive
 
-RUN pacman -Syu --noconfirm \
+RUN apt-get update && apt-get install -y --no-install-recommends \
       imagemagick \
       jq \
       nodejs npm \
-      ttf-dejavu \
-      git bash \
-    && pacman -Scc --noconfirm
+      fonts-dejavu-core \
+      ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /repo
 CMD ["bash", "docker/rice-wayland.sh"]
