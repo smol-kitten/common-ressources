@@ -159,53 +159,58 @@ for SLUG in "${SLUGS[@]}"; do
   OUT="${OUT_DIR}/${SLUG}.png"
   WP="/tmp/wp-${SLUG}.png"
 
-  # Step 1: gradient wallpaper
-  convert -size "${OUTPUT_W}x${OUTPUT_H}" "gradient:#${BG}-#${ACCENT}" "$WP"
-
-  # Step 2: compose full scene — one convert call, solid hex colors only
-  convert "$WP" \
-    -fill "#${BG}"  -draw "rectangle 0,0 $((OUTPUT_W-1)),$BAR_H" \
-    -fill "#${C8}"  -draw "rectangle 0,$BAR_H $((OUTPUT_W-1)),$((BAR_H+1))" \
-    -gravity NorthWest -pointsize 12 \
-    -fill "#${C15}" -annotate "+14+9"            "  1   2   3" \
-    -fill "#${C2}"  -annotate "+${CLK_X}+9"      " 14:23   Sat 24 May" \
-    -fill "#${C4}"  -annotate "+$((OUTPUT_W-175))+9" " 12%   63%" \
-    -fill "#${C8}"  \
-    -draw "rectangle $((WIN_X+4)),$((WIN_Y+4)) $((WIN_X+WIN_W+4)),$((WIN_Y+WIN_H+4))" \
-    -fill "#${BG}" \
-    -draw "rectangle ${WIN_X},${WIN_Y} $((WIN_X+WIN_W)),$((WIN_Y+WIN_H))" \
-    -fill "#${C8}" \
-    -draw "rectangle ${WIN_X},${WIN_Y} $((WIN_X+WIN_W)),$((WIN_Y+TITLE_H))" \
-    -fill "#ff5f57" -draw "circle $((WIN_X+14)),$((WIN_Y+14)) $((WIN_X+20)),$((WIN_Y+14))" \
-    -fill "#febc2e" -draw "circle $((WIN_X+30)),$((WIN_Y+14)) $((WIN_X+36)),$((WIN_Y+14))" \
-    -fill "#28c840" -draw "circle $((WIN_X+46)),$((WIN_Y+14)) $((WIN_X+52)),$((WIN_Y+14))" \
-    -fill "#${C15}" -pointsize 11 \
-    -annotate "+$((WIN_X+WIN_W/2-50))+$((WIN_Y+9))" "bash - ${THEME_NAME}" \
-    -fill "#${C0}" -draw "rectangle $((SW_X+0*32)),${SW_Y} $((SW_X+0*32+SW_W)),$((SW_Y+SW_H))" \
-    -fill "#${C1}" -draw "rectangle $((SW_X+1*32)),${SW_Y} $((SW_X+1*32+SW_W)),$((SW_Y+SW_H))" \
-    -fill "#${C2}" -draw "rectangle $((SW_X+2*32)),${SW_Y} $((SW_X+2*32+SW_W)),$((SW_Y+SW_H))" \
-    -fill "#${C3}" -draw "rectangle $((SW_X+3*32)),${SW_Y} $((SW_X+3*32+SW_W)),$((SW_Y+SW_H))" \
-    -fill "#${C4}" -draw "rectangle $((SW_X+4*32)),${SW_Y} $((SW_X+4*32+SW_W)),$((SW_Y+SW_H))" \
-    -fill "#${C5}" -draw "rectangle $((SW_X+5*32)),${SW_Y} $((SW_X+5*32+SW_W)),$((SW_Y+SW_H))" \
-    -fill "#${C6}" -draw "rectangle $((SW_X+6*32)),${SW_Y} $((SW_X+6*32+SW_W)),$((SW_Y+SW_H))" \
-    -fill "#${C7}" -draw "rectangle $((SW_X+7*32)),${SW_Y} $((SW_X+7*32+SW_W)),$((SW_Y+SW_H))" \
-    -fill "#${C8}"  -draw "rectangle $((SW_X+0*32)),${SW_Y2} $((SW_X+0*32+SW_W)),$((SW_Y2+SW_H))" \
-    -fill "#${C9}"  -draw "rectangle $((SW_X+1*32)),${SW_Y2} $((SW_X+1*32+SW_W)),$((SW_Y2+SW_H))" \
-    -fill "#${C10}" -draw "rectangle $((SW_X+2*32)),${SW_Y2} $((SW_X+2*32+SW_W)),$((SW_Y2+SW_H))" \
-    -fill "#${C11}" -draw "rectangle $((SW_X+3*32)),${SW_Y2} $((SW_X+3*32+SW_W)),$((SW_Y2+SW_H))" \
-    -fill "#${C12}" -draw "rectangle $((SW_X+4*32)),${SW_Y2} $((SW_X+4*32+SW_W)),$((SW_Y2+SW_H))" \
-    -fill "#${C13}" -draw "rectangle $((SW_X+5*32)),${SW_Y2} $((SW_X+5*32+SW_W)),$((SW_Y2+SW_H))" \
-    -fill "#${C14}" -draw "rectangle $((SW_X+6*32)),${SW_Y2} $((SW_X+6*32+SW_W)),$((SW_Y2+SW_H))" \
-    -fill "#${C15}" -draw "rectangle $((SW_X+7*32)),${SW_Y2} $((SW_X+7*32+SW_W)),$((SW_Y2+SW_H))" \
-    -pointsize 12 \
-    "${TEXT_ARGS[@]}" \
-    -fill "#${C4}" -pointsize 11 \
-    -annotate "+$((OUTPUT_W-175))+$((OUTPUT_H-14))" "Theme: ${THEME_NAME}  Wallpaper: ImageMagick gradient" \
-    "$OUT"
-
-  rm -f "$WP"
-  echo "  OK -> $OUT"
-  OK=$((OK+1))
+  if (
+    # Step 1: gradient wallpaper
+    convert -size "${OUTPUT_W}x${OUTPUT_H}" "gradient:#${BG}-#${ACCENT}" "$WP"
+    # Step 2: compose full scene — one convert call, solid hex colors only
+    convert "$WP" \
+      -fill "#${BG}"  -draw "rectangle 0,0 $((OUTPUT_W-1)),$BAR_H" \
+      -fill "#${C8}"  -draw "rectangle 0,$BAR_H $((OUTPUT_W-1)),$((BAR_H+1))" \
+      -gravity NorthWest -font /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf -pointsize 12 \
+      -fill "#${C15}" -annotate "+14+9"            "  1   2   3" \
+      -fill "#${C2}"  -annotate "+${CLK_X}+9"      " 14:23   Sat 24 May" \
+      -fill "#${C4}"  -annotate "+$((OUTPUT_W-175))+9" " 12%   63%" \
+      -fill "#${C8}"  \
+      -draw "rectangle $((WIN_X+4)),$((WIN_Y+4)) $((WIN_X+WIN_W+4)),$((WIN_Y+WIN_H+4))" \
+      -fill "#${BG}" \
+      -draw "rectangle ${WIN_X},${WIN_Y} $((WIN_X+WIN_W)),$((WIN_Y+WIN_H))" \
+      -fill "#${C8}" \
+      -draw "rectangle ${WIN_X},${WIN_Y} $((WIN_X+WIN_W)),$((WIN_Y+TITLE_H))" \
+      -fill "#ff5f57" -draw "circle $((WIN_X+14)),$((WIN_Y+14)) $((WIN_X+20)),$((WIN_Y+14))" \
+      -fill "#febc2e" -draw "circle $((WIN_X+30)),$((WIN_Y+14)) $((WIN_X+36)),$((WIN_Y+14))" \
+      -fill "#28c840" -draw "circle $((WIN_X+46)),$((WIN_Y+14)) $((WIN_X+52)),$((WIN_Y+14))" \
+      -fill "#${C15}" -pointsize 11 \
+      -annotate "+$((WIN_X+WIN_W/2-50))+$((WIN_Y+9))" "bash - ${THEME_NAME}" \
+      -fill "#${C0}" -draw "rectangle $((SW_X+0*32)),${SW_Y} $((SW_X+0*32+SW_W)),$((SW_Y+SW_H))" \
+      -fill "#${C1}" -draw "rectangle $((SW_X+1*32)),${SW_Y} $((SW_X+1*32+SW_W)),$((SW_Y+SW_H))" \
+      -fill "#${C2}" -draw "rectangle $((SW_X+2*32)),${SW_Y} $((SW_X+2*32+SW_W)),$((SW_Y+SW_H))" \
+      -fill "#${C3}" -draw "rectangle $((SW_X+3*32)),${SW_Y} $((SW_X+3*32+SW_W)),$((SW_Y+SW_H))" \
+      -fill "#${C4}" -draw "rectangle $((SW_X+4*32)),${SW_Y} $((SW_X+4*32+SW_W)),$((SW_Y+SW_H))" \
+      -fill "#${C5}" -draw "rectangle $((SW_X+5*32)),${SW_Y} $((SW_X+5*32+SW_W)),$((SW_Y+SW_H))" \
+      -fill "#${C6}" -draw "rectangle $((SW_X+6*32)),${SW_Y} $((SW_X+6*32+SW_W)),$((SW_Y+SW_H))" \
+      -fill "#${C7}" -draw "rectangle $((SW_X+7*32)),${SW_Y} $((SW_X+7*32+SW_W)),$((SW_Y+SW_H))" \
+      -fill "#${C8}"  -draw "rectangle $((SW_X+0*32)),${SW_Y2} $((SW_X+0*32+SW_W)),$((SW_Y2+SW_H))" \
+      -fill "#${C9}"  -draw "rectangle $((SW_X+1*32)),${SW_Y2} $((SW_X+1*32+SW_W)),$((SW_Y2+SW_H))" \
+      -fill "#${C10}" -draw "rectangle $((SW_X+2*32)),${SW_Y2} $((SW_X+2*32+SW_W)),$((SW_Y2+SW_H))" \
+      -fill "#${C11}" -draw "rectangle $((SW_X+3*32)),${SW_Y2} $((SW_X+3*32+SW_W)),$((SW_Y2+SW_H))" \
+      -fill "#${C12}" -draw "rectangle $((SW_X+4*32)),${SW_Y2} $((SW_X+4*32+SW_W)),$((SW_Y2+SW_H))" \
+      -fill "#${C13}" -draw "rectangle $((SW_X+5*32)),${SW_Y2} $((SW_X+5*32+SW_W)),$((SW_Y2+SW_H))" \
+      -fill "#${C14}" -draw "rectangle $((SW_X+6*32)),${SW_Y2} $((SW_X+6*32+SW_W)),$((SW_Y2+SW_H))" \
+      -fill "#${C15}" -draw "rectangle $((SW_X+7*32)),${SW_Y2} $((SW_X+7*32+SW_W)),$((SW_Y2+SW_H))" \
+      -pointsize 12 \
+      "${TEXT_ARGS[@]}" \
+      -fill "#${C4}" -pointsize 11 \
+      -annotate "+$((OUTPUT_W-175))+$((OUTPUT_H-14))" "Theme: ${THEME_NAME}  Wallpaper: ImageMagick gradient" \
+      "$OUT"
+  ); then
+    rm -f "$WP"
+    echo "  OK -> $OUT"
+    OK=$((OK+1))
+  else
+    rm -f "$WP" "$OUT" 2>/dev/null
+    echo "  FAIL $SLUG"
+    FAIL=$((FAIL+1))
+  fi
 done
 
 echo ""

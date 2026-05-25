@@ -70,6 +70,7 @@ jobs:
 
       - name: Run screenshot capture
         run: |
+          set -o pipefail
           docker run --rm \
             -v "$PWD:/repo" \
             -e WIN_W="${{ github.event.inputs.win_w || '900' }}" \
@@ -78,14 +79,17 @@ jobs:
             -e WIN_Y="${{ github.event.inputs.win_y || '40' }}" \
             -e STYLE="${{ github.event.inputs.style || '' }}" \
             rice-wayland \
-            bash docker/rice-wayland.sh ${{ github.event.inputs.slug || '' }}
+            bash docker/rice-wayland.sh ${{ github.event.inputs.slug || '' }} \
+            2>&1 | tee /tmp/rice-screenshots.log
 
       - name: List generated screenshots
+        if: always()
         run: |
           echo "Generated screenshots:"
           find rice/screenshots -name "*.png" | sort || echo "(none)"
 
       - name: Commit screenshots
+        if: always()
         run: |
           git config --global --add safe.directory '*'
           git config --global user.email "noreply@github.com"
@@ -102,3 +106,26 @@ jobs:
             git commit -m "chore: regenerate rice theme screenshots [skip ci]"
             git push origin "HEAD:$BRANCH"
           fi
+
+      - name: Comment failure summary on PR
+        if: failure() && github.event_name == 'pull_request'
+        env:
+          PR_NUM: ${{ github.event.pull_request.number }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 -c "
+          import json,urllib.request,os
+          log_file='/tmp/rice-screenshots.log'
+          try:
+              log=open(log_file).read()[-3000:]
+          except Exception:
+              log='(log not captured)'
+          run_url=os.environ['RUN_URL']
+          body='**Screenshot generation failed**\n\n<pre>\n'+log+'\n</pre>\n\n[Full logs]('+run_url+')'
+          data=json.dumps({'body':body}).encode()
+          req=urllib.request.Request('https://api.github.com/repos/'+os.environ['REPO']+'/issues/'+os.environ['PR_NUM']+'/comments',data=data,headers={'Authorization':'token '+os.environ['GH_TOKEN'],'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'})
+          urllib.request.urlopen(req)
+          print('Failure comment posted to PR #'+os.environ['PR_NUM'])
+          "
