@@ -53,6 +53,9 @@ on:
 jobs:
   screenshots:
     runs-on: self-hosted
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
       - uses: actions/checkout@v4
