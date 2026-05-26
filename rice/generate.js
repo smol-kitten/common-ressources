@@ -388,6 +388,7 @@ function genWindowsTerminal(theme) {
   const c = theme.colors;
   const scheme = {
     name: theme.name,
+    _source: theme.source,
     background: theme.background,
     foreground: theme.foreground,
     cursorColor: theme.cursor,
@@ -409,14 +410,7 @@ function genWindowsTerminal(theme) {
     brightCyan: c['bright-cyan'],
     brightWhite: c['bright-white'],
   };
-  const content = `// Theme: ${theme.name}
-// Source: ${theme.source}
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "${theme.name}" in your profile.
-
-${JSON.stringify(scheme, null, 2)}
-`;
-  write(path.join(RICE_DIR, 'windows-terminal', `${theme.slug}.json`), content);
+  write(path.join(RICE_DIR, 'windows-terminal', `${theme.slug}.json`), JSON.stringify(scheme, null, 2));
 }
 
 // ── interactive index page ─────────────────────────────────────────────────────

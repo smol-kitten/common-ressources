@@ -1,10 +1,6 @@
-// Theme: Gruvbox Dark
-// Source: https://github.com/morhetz/gruvbox
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Gruvbox Dark" in your profile.
-
 {
   "name": "Gruvbox Dark",
+  "_source": "https://github.com/morhetz/gruvbox",
   "background": "#282828",
   "foreground": "#EBDBB2",
   "cursorColor": "#EBDBB2",

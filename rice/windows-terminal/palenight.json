@@ -1,10 +1,6 @@
-// Theme: Palenight
-// Source: https://github.com/whizkydee/vscode-palenight-theme
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Palenight" in your profile.
-
 {
   "name": "Palenight",
+  "_source": "https://github.com/whizkydee/vscode-palenight-theme",
   "background": "#292d3e",
   "foreground": "#a6accd",
   "cursorColor": "#a6accd",

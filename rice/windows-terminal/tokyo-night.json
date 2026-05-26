@@ -1,10 +1,6 @@
-// Theme: Tokyo Night
-// Source: https://github.com/enkia/tokyo-night-vscode-theme
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Tokyo Night" in your profile.
-
 {
   "name": "Tokyo Night",
+  "_source": "https://github.com/enkia/tokyo-night-vscode-theme",
   "background": "#1A1B26",
   "foreground": "#C0CAF5",
   "cursorColor": "#C0CAF5",

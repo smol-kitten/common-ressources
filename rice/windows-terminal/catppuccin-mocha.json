@@ -1,10 +1,6 @@
-// Theme: Catppuccin Mocha
-// Source: https://github.com/catppuccin/catppuccin
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Catppuccin Mocha" in your profile.
-
 {
   "name": "Catppuccin Mocha",
+  "_source": "https://github.com/catppuccin/catppuccin",
   "background": "#1E1E2E",
   "foreground": "#CDD6F4",
   "cursorColor": "#F5E0DC",

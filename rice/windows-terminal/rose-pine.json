@@ -1,10 +1,6 @@
-// Theme: Rose Piné
-// Source: https://rosepinetheme.com
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Rose Piné" in your profile.
-
 {
   "name": "Rose Piné",
+  "_source": "https://rosepinetheme.com",
   "background": "#191724",
   "foreground": "#e0def4",
   "cursorColor": "#e0def4",

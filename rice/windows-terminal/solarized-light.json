@@ -1,10 +1,6 @@
-// Theme: Solarized Light
-// Source: https://ethanschoonover.com/solarized/
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Solarized Light" in your profile.
-
 {
   "name": "Solarized Light",
+  "_source": "https://ethanschoonover.com/solarized/",
   "background": "#FDF6E3",
   "foreground": "#657B83",
   "cursorColor": "#586E75",

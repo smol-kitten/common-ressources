@@ -1,10 +1,6 @@
-// Theme: Kanagawa
-// Source: https://github.com/rebelot/kanagawa.nvim
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Kanagawa" in your profile.
-
 {
   "name": "Kanagawa",
+  "_source": "https://github.com/rebelot/kanagawa.nvim",
   "background": "#1f1f28",
   "foreground": "#dcd7ba",
   "cursorColor": "#c8c093",

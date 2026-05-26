@@ -1,10 +1,6 @@
-// Theme: One Dark
-// Source: https://github.com/atom/atom
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "One Dark" in your profile.
-
 {
   "name": "One Dark",
+  "_source": "https://github.com/atom/atom",
   "background": "#282C34",
   "foreground": "#ABB2BF",
   "cursorColor": "#528BFF",

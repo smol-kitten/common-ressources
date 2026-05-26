@@ -1,10 +1,6 @@
-// Theme: Monokai
-// Source: https://monokai.pro
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Monokai" in your profile.
-
 {
   "name": "Monokai",
+  "_source": "https://monokai.pro",
   "background": "#272822",
   "foreground": "#F8F8F2",
   "cursorColor": "#F8F8F2",

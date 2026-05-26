@@ -1,10 +1,6 @@
-// Theme: Dracula
-// Source: https://draculatheme.com
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Dracula" in your profile.
-
 {
   "name": "Dracula",
+  "_source": "https://draculatheme.com",
   "background": "#282A36",
   "foreground": "#F8F8F2",
   "cursorColor": "#F8F8F2",

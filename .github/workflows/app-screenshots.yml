@@ -99,9 +99,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git remote set-url origin \
             https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          # Pull any commits made since checkout (PR preview bot etc.)
           BRANCH="${{ github.event.pull_request.head.ref || github.ref_name }}"
+          # Stash docker-generated files so rebase can proceed cleanly,
+          # then restore them after pulling upstream commits.
+          git stash --include-untracked 2>/dev/null || true
           git pull --rebase origin "$BRANCH" || true
+          git stash pop 2>/dev/null || true
           git add rice/screenshots/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No screenshot changes."

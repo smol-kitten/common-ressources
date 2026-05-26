@@ -1,10 +1,6 @@
-// Theme: Nord
-// Source: https://www.nordtheme.com
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Nord" in your profile.
-
 {
   "name": "Nord",
+  "_source": "https://www.nordtheme.com",
   "background": "#2E3440",
   "foreground": "#D8DEE9",
   "cursorColor": "#D8DEE9",

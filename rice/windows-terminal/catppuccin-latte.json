@@ -1,10 +1,6 @@
-// Theme: Catppuccin Latte
-// Source: https://catppuccin.com
-// Add the object inside "schemes" to your Windows Terminal settings.json
-// Then set "colorScheme": "Catppuccin Latte" in your profile.
-
 {
   "name": "Catppuccin Latte",
+  "_source": "https://catppuccin.com",
   "background": "#eff1f5",
   "foreground": "#4c4f69",
   "cursorColor": "#dc8a78",
