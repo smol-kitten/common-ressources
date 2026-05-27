@@ -66,10 +66,14 @@ jobs:
 
       - name: Build Wayland screenshot image
         run: |
-          docker build \
-            -t rice-wayland \
-            -f docker/Dockerfile.rice-wayland \
-            .
+          for attempt in 1 2 3; do
+            echo "==> Docker build attempt $attempt"
+            docker build \
+              -t rice-wayland \
+              -f docker/Dockerfile.rice-wayland \
+              . && break
+            [[ $attempt -lt 3 ]] && sleep $((attempt * 4))
+          done
 
       - name: Run screenshot capture
         run: |
