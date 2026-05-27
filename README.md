@@ -6,6 +6,14 @@ All data is stored as plain JSON — no images bundled, no runtime dependencies.
 PHP rendering examples are provided where visual output is useful (e.g. flags).  
 Run `bash validate.sh` locally to verify JSON syntax and schema integrity.
 
+> **Disclaimer:** All data is provided **as-is** for convenience and reference only.
+> No warranty — express or implied — is made regarding accuracy, completeness,
+> currency, or fitness for any particular purpose. Numeric values, standards
+> references, and technical specifications may contain errors or may have been
+> superseded. **Always verify critical values against authoritative primary sources**
+> (ISO, NIST, IETF, manufacturer datasheets, etc.) before using them in safety-,
+> compliance-, or production-critical contexts.
+
 ---
 
 ## LGBTQ Resources

@@ -1,0 +1,157 @@
+{
+  "note": "Signal and wave propagation speeds in various media. Values are representative engineering figures; exact values depend on material grade, wavelength, temperature, and pressure. Always verify against manufacturer datasheets or primary sources for precision applications.",
+
+  "speed_of_light": {
+    "in_vacuum": {
+      "value_m_s": 299792458,
+      "value_km_s": 299792.458,
+      "exact": true,
+      "notes": "Defined exactly since 1983 (SI); used to define the metre. Symbol: c"
+    },
+    "in_air_stp": {
+      "value_m_s": 299702547,
+      "value_km_s": 299702.547,
+      "refractive_index": 1.000293,
+      "notes": "At standard temperature and pressure (STP, 0 °C, 1 atm). Varies slightly with humidity."
+    },
+    "in_water": {
+      "value_m_s": 225056650,
+      "value_km_s": 225057,
+      "refractive_index": 1.333,
+      "notes": "Pure water at 20 °C, 589 nm (sodium D line)"
+    },
+    "in_glass_generic": {
+      "value_m_s": 200000000,
+      "value_km_s": 200000,
+      "refractive_index": "1.45–1.55 (typical)",
+      "notes": "Varies significantly by glass type and wavelength"
+    },
+    "in_diamond": {
+      "value_m_s": 124000000,
+      "value_km_s": 124000,
+      "refractive_index": 2.417,
+      "notes": "Highest refractive index of common natural materials"
+    }
+  },
+
+  "fiber_optic": {
+    "description": "Optical fiber propagates light at roughly 2/3 of c due to the refractive index of silica glass (~1.47–1.5 at 1550 nm).",
+    "single_mode_os2": {
+      "wavelength_nm": 1550,
+      "refractive_index": 1.467,
+      "speed_m_s": 204330000,
+      "speed_km_s": 204330,
+      "velocity_factor": 0.681,
+      "propagation_delay_ns_per_m": 4.90,
+      "propagation_delay_us_per_km": 4.90,
+      "propagation_delay_ms_per_1000km": 4.90,
+      "notes": "ITU-T G.652D standard single-mode fiber (OS2). Most common for long-haul and datacenter interconnects."
+    },
+    "single_mode_os1": {
+      "wavelength_nm": 1310,
+      "refractive_index": 1.468,
+      "speed_m_s": 204200000,
+      "speed_km_s": 204200,
+      "velocity_factor": 0.681,
+      "propagation_delay_ns_per_m": 4.90,
+      "propagation_delay_us_per_km": 4.90,
+      "notes": "ITU-T G.652 at 1310 nm window. Slightly higher loss than 1550 nm window."
+    },
+    "multimode_om3_om4": {
+      "wavelength_nm": 850,
+      "refractive_index": 1.477,
+      "speed_m_s": 203000000,
+      "speed_km_s": 203000,
+      "velocity_factor": 0.677,
+      "propagation_delay_ns_per_m": 4.93,
+      "propagation_delay_us_per_km": 4.93,
+      "notes": "50/125 µm multimode fiber (OM3/OM4). Used for short-reach datacenter links up to ~400 m."
+    },
+    "latency_examples": [
+      { "route": "London – Frankfurt (terrestrial fiber)", "distance_km": 1200, "one_way_ms_fiber": 5.9,   "rtt_ms_fiber": 11.8, "rtt_ms_typical_real": 12,  "notes": "~5 ms additional latency from routing, amplifiers, switching" },
+      { "route": "London – New York (transatlantic cable)", "distance_km": 5500, "one_way_ms_fiber": 27,   "rtt_ms_fiber": 54,   "rtt_ms_typical_real": 71,  "notes": "AEConnect-1 cable; real-world RTT ~65–80 ms" },
+      { "route": "Los Angeles – Tokyo (transpacific cable)", "distance_km": 9000,"one_way_ms_fiber": 44,   "rtt_ms_fiber": 88,   "rtt_ms_typical_real": 110, "notes": "FASTER/PLCN cables; real-world RTT ~100–120 ms" },
+      { "route": "Sydney – London (backhaul)", "distance_km": 17000, "one_way_ms_fiber": 83,   "rtt_ms_fiber": 166,  "rtt_ms_typical_real": 270, "notes": "Via multiple submarine cable segments" }
+    ]
+  },
+
+  "copper_cable": {
+    "description": "Electrical signals in copper travel at a fraction of c determined by the velocity factor (VF) of the dielectric.",
+    "coaxial_rg58": {
+      "velocity_factor": 0.66,
+      "speed_m_s": 197863000,
+      "propagation_delay_ns_per_m": 5.05,
+      "impedance_ohm": 50,
+      "notes": "RG-58A/U coaxial cable; common in 10BASE2 Ethernet and RF"
+    },
+    "coaxial_rg6": {
+      "velocity_factor": 0.75,
+      "speed_m_s": 224844000,
+      "propagation_delay_ns_per_m": 4.45,
+      "impedance_ohm": 75,
+      "notes": "RG-6; cable TV, satellite dish cabling"
+    },
+    "twisted_pair_cat5e": {
+      "velocity_factor": 0.64,
+      "speed_m_s": 191867000,
+      "propagation_delay_ns_per_m": 5.21,
+      "max_propagation_delay_ns_per_100m": 570,
+      "notes": "TIA-568 Cat 5e; 100BASE-TX / 1000BASE-T (max 100 m segment)"
+    },
+    "twisted_pair_cat6": {
+      "velocity_factor": 0.65,
+      "speed_m_s": 194865000,
+      "propagation_delay_ns_per_m": 5.13,
+      "max_propagation_delay_ns_per_100m": 538,
+      "notes": "TIA-568 Cat 6; 1000BASE-T / 10GBASE-T up to 55 m"
+    },
+    "twisted_pair_cat6a": {
+      "velocity_factor": 0.65,
+      "speed_m_s": 194865000,
+      "propagation_delay_ns_per_m": 5.13,
+      "max_propagation_delay_ns_per_100m": 498,
+      "notes": "TIA-568 Cat 6A; 10GBASE-T up to 100 m"
+    },
+    "pcb_trace_fr4": {
+      "velocity_factor": "0.55–0.58",
+      "speed_m_s": "165000000–174000000",
+      "propagation_delay_ps_per_mm": "5.7–6.0",
+      "notes": "FR-4 PCB substrate; er (dielectric constant) ≈ 4.0–4.5. Critical for high-speed signal integrity."
+    }
+  },
+
+  "radio_wireless": {
+    "free_space": {
+      "speed_m_s": 299792458,
+      "notes": "Radio waves travel at c in free space. Atmospheric effects are negligible for most applications."
+    },
+    "gps_one_way_delay_ms": {
+      "altitude_km": 20200,
+      "one_way_ms": 67.3,
+      "notes": "GPS satellite to receiver. Ionospheric delay adds 1–10 ns (L1 band)."
+    },
+    "wifi_indoor_propagation": {
+      "notes": "RF propagation delay is negligible for indoor distances (<30 m ≈ 100 ns). Latency is dominated by protocol overhead."
+    }
+  },
+
+  "sound": {
+    "description": "Acoustic wave propagation speeds for comparison.",
+    "in_air_20c": { "speed_m_s": 343,   "notes": "At 20 °C, 50% RH, sea level. Temperature coefficient: +0.6 m/s per °C." },
+    "in_air_0c":  { "speed_m_s": 331,   "notes": "At 0 °C (STP)" },
+    "in_water_25c": { "speed_m_s": 1497, "notes": "Fresh water at 25 °C" },
+    "in_seawater": { "speed_m_s": 1531,  "notes": "Approximate at 25 °C, 35 ppt salinity" },
+    "in_steel":    { "speed_m_s": 5120,  "notes": "Longitudinal wave in steel (E ≈ 200 GPa, ρ ≈ 7850 kg/m³)" },
+    "in_aluminium":{ "speed_m_s": 6420,  "notes": "Longitudinal wave in aluminium alloy" },
+    "in_concrete": { "speed_m_s": 3100,  "notes": "Approximate; varies widely with aggregate and moisture" }
+  },
+
+  "memory_bandwidth_latency_reference": {
+    "note": "For context: typical round-trip latency from CPU to RAM (DDR4) is 50–70 ns; NVMe SSD ~20–100 µs; SATA SSD ~50–100 µs; HDD ~5–10 ms.",
+    "ddr4_latency_ns":  "50–70 (unloaded; DRAM CAS latency + memory controller overhead)",
+    "ddr5_latency_ns":  "60–80 (slightly higher absolute latency than DDR4 at comparable frequencies)",
+    "nvme_ssd_us":      "20–100",
+    "sata_ssd_us":      "50–100",
+    "hdd_ms":           "5–10 (seek + rotational latency)"
+  }
+}

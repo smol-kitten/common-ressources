@@ -1,0 +1,68 @@
+[
+  {
+    "series": "A",
+    "iso": "ISO 216",
+    "description": "International standard paper sizes. Each size is half the previous by area; dimensions are rounded to the nearest mm.",
+    "sizes": [
+      { "name": "A0",  "width_mm": 841,  "height_mm": 1189, "width_in": 33.11, "height_in": 46.81, "area_m2": 1.0000 },
+      { "name": "A1",  "width_mm": 594,  "height_mm": 841,  "width_in": 23.39, "height_in": 33.11, "area_m2": 0.5000 },
+      { "name": "A2",  "width_mm": 420,  "height_mm": 594,  "width_in": 16.54, "height_in": 23.39, "area_m2": 0.2500 },
+      { "name": "A3",  "width_mm": 297,  "height_mm": 420,  "width_in": 11.69, "height_in": 16.54, "area_m2": 0.1250 },
+      { "name": "A4",  "width_mm": 210,  "height_mm": 297,  "width_in": 8.27,  "height_in": 11.69, "area_m2": 0.0625, "common_use": "Standard office/letter paper (most of the world)" },
+      { "name": "A5",  "width_mm": 148,  "height_mm": 210,  "width_in": 5.83,  "height_in": 8.27,  "area_m2": 0.0313, "common_use": "Notebooks, small booklets" },
+      { "name": "A6",  "width_mm": 105,  "height_mm": 148,  "width_in": 4.13,  "height_in": 5.83,  "area_m2": 0.0156, "common_use": "Postcards, index cards" },
+      { "name": "A7",  "width_mm": 74,   "height_mm": 105,  "width_in": 2.91,  "height_in": 4.13,  "area_m2": 0.0078 },
+      { "name": "A8",  "width_mm": 52,   "height_mm": 74,   "width_in": 2.05,  "height_in": 2.91,  "area_m2": 0.0039 },
+      { "name": "A9",  "width_mm": 37,   "height_mm": 52,   "width_in": 1.46,  "height_in": 2.05,  "area_m2": 0.0019 },
+      { "name": "A10", "width_mm": 26,   "height_mm": 37,   "width_in": 1.02,  "height_in": 1.46,  "area_m2": 0.0010 }
+    ]
+  },
+  {
+    "series": "B",
+    "iso": "ISO 216",
+    "description": "B series is the geometric mean between consecutive A sizes. Used for posters, books, and passports.",
+    "sizes": [
+      { "name": "B0",  "width_mm": 1000, "height_mm": 1414, "width_in": 39.37, "height_in": 55.67 },
+      { "name": "B1",  "width_mm": 707,  "height_mm": 1000, "width_in": 27.83, "height_in": 39.37 },
+      { "name": "B2",  "width_mm": 500,  "height_mm": 707,  "width_in": 19.69, "height_in": 27.83 },
+      { "name": "B3",  "width_mm": 353,  "height_mm": 500,  "width_in": 13.90, "height_in": 19.69 },
+      { "name": "B4",  "width_mm": 250,  "height_mm": 353,  "width_in": 9.84,  "height_in": 13.90, "common_use": "Newspapers (tabloid), books" },
+      { "name": "B5",  "width_mm": 176,  "height_mm": 250,  "width_in": 6.93,  "height_in": 9.84,  "common_use": "Books, some magazines" },
+      { "name": "B6",  "width_mm": 125,  "height_mm": 176,  "width_in": 4.92,  "height_in": 6.93,  "common_use": "Paperback books, envelopes" },
+      { "name": "B7",  "width_mm": 88,   "height_mm": 125,  "width_in": 3.46,  "height_in": 4.92,  "common_use": "Passports (B7 is 88×125 mm)" },
+      { "name": "B8",  "width_mm": 62,   "height_mm": 88,   "width_in": 2.44,  "height_in": 3.46 },
+      { "name": "B9",  "width_mm": 44,   "height_mm": 62,   "width_in": 1.73,  "height_in": 2.44 },
+      { "name": "B10", "width_mm": 31,   "height_mm": 44,   "width_in": 1.22,  "height_in": 1.73 }
+    ]
+  },
+  {
+    "series": "C",
+    "iso": "ISO 269",
+    "description": "C series is designed for envelopes. A C4 envelope holds an unfolded A4 sheet; C5 holds A4 folded once; DL holds A4 folded in thirds.",
+    "sizes": [
+      { "name": "C0",  "width_mm": 917,  "height_mm": 1297, "width_in": 36.10, "height_in": 51.06 },
+      { "name": "C1",  "width_mm": 648,  "height_mm": 917,  "width_in": 25.51, "height_in": 36.10 },
+      { "name": "C2",  "width_mm": 458,  "height_mm": 648,  "width_in": 18.03, "height_in": 25.51 },
+      { "name": "C3",  "width_mm": 324,  "height_mm": 458,  "width_in": 12.76, "height_in": 18.03 },
+      { "name": "C4",  "width_mm": 229,  "height_mm": 324,  "width_in": 9.02,  "height_in": 12.76, "common_use": "Envelope for unfolded A4" },
+      { "name": "C5",  "width_mm": 162,  "height_mm": 229,  "width_in": 6.38,  "height_in": 9.02,  "common_use": "Envelope for A4 folded once (A5)" },
+      { "name": "C6",  "width_mm": 114,  "height_mm": 162,  "width_in": 4.49,  "height_in": 6.38,  "common_use": "Envelope for A4 folded twice (A6)" },
+      { "name": "DL",  "width_mm": 110,  "height_mm": 220,  "width_in": 4.33,  "height_in": 8.66,  "common_use": "Standard window envelope (A4 folded in thirds)" }
+    ]
+  },
+  {
+    "series": "US",
+    "iso": null,
+    "description": "North American paper sizes defined by ANSI/ASME Y14.1. Not ISO but included for reference.",
+    "sizes": [
+      { "name": "Letter",          "ansi": "A",  "width_mm": 216, "height_mm": 279, "width_in": 8.5,   "height_in": 11.0,  "common_use": "US/Canada standard office paper" },
+      { "name": "Legal",           "ansi": null, "width_mm": 216, "height_mm": 356, "width_in": 8.5,   "height_in": 14.0,  "common_use": "Legal documents" },
+      { "name": "Tabloid/Ledger",  "ansi": "B",  "width_mm": 279, "height_mm": 432, "width_in": 11.0,  "height_in": 17.0,  "common_use": "Tabloid newspapers, engineering" },
+      { "name": "Executive",       "ansi": null, "width_mm": 184, "height_mm": 267, "width_in": 7.25,  "height_in": 10.5,  "common_use": "Executive stationery" },
+      { "name": "Statement/Half-Letter", "ansi": null, "width_mm": 140, "height_mm": 216, "width_in": 5.5, "height_in": 8.5, "common_use": "Half letter, small booklets" },
+      { "name": "ANSI C",          "ansi": "C",  "width_mm": 432, "height_mm": 559, "width_in": 17.0,  "height_in": 22.0,  "common_use": "Engineering drawings" },
+      { "name": "ANSI D",          "ansi": "D",  "width_mm": 559, "height_mm": 864, "width_in": 22.0,  "height_in": 34.0,  "common_use": "Engineering drawings" },
+      { "name": "ANSI E",          "ansi": "E",  "width_mm": 864, "height_mm": 1118,"width_in": 34.0,  "height_in": 44.0,  "common_use": "Engineering drawings (largest ANSI)" }
+    ]
+  }
+]
