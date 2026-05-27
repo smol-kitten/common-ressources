@@ -1,0 +1,89 @@
+{
+  "_note": "Master index of ISO standard reference data available in this repository. Files marked canonical=true contain the primary data for that standard; cross_reference points to the canonical location when the data lives outside the iso/ folder.",
+  "standards": [
+    {
+      "iso": "ISO 639-1 / ISO 639-2",
+      "title": "Codes for the representation of names of languages",
+      "description": "Two-letter (639-1) and three-letter (639-2) language codes covering ~140 languages with script, direction, and native-name metadata.",
+      "canonical": false,
+      "cross_reference": "i18n/languages/languages.json",
+      "fields": ["iso639_1", "iso639_2", "name", "native", "direction", "script"],
+      "entry_count_approx": 140
+    },
+    {
+      "iso": "ISO 3166-1",
+      "title": "Codes for the representation of names of countries — Part 1: Country codes",
+      "description": "Alpha-2, alpha-3, and numeric codes for countries with capital city, continent, dial code, and currency.",
+      "canonical": false,
+      "cross_reference": "geo/countries/countries.json",
+      "fields": ["iso2", "iso3", "name", "capital", "continent", "dial_code", "currency_code"],
+      "entry_count_approx": 25
+    },
+    {
+      "iso": "ISO 4217",
+      "title": "Codes for the representation of currencies",
+      "description": "Three-letter currency codes and numeric codes with symbol and decimal places.",
+      "canonical": false,
+      "cross_reference": "geo/currencies/currencies.json",
+      "fields": ["code", "numeric", "name", "symbol", "decimals"],
+      "entry_count_approx": 40
+    },
+    {
+      "iso": "ISO 8601-1:2019 / ISO 8601-2:2019",
+      "title": "Date and time — Representations for information interchange",
+      "description": "Complete reference for ISO 8601 date, time, datetime, duration, and interval format patterns with regex validators and ordering rules.",
+      "canonical": true,
+      "file": "iso/8601/formats.json",
+      "cross_reference": null,
+      "topics": ["calendar date", "time of day", "timezone offsets", "combined datetime", "duration (PnYnMnD)", "time intervals", "recurring intervals"]
+    },
+    {
+      "iso": "ISO 10383",
+      "title": "Securities and related financial instruments — Codes for exchanges and market identification (MIC)",
+      "description": "Market Identification Codes for 22 major stock exchanges with trading hours, currency, and timezone.",
+      "canonical": false,
+      "cross_reference": "finance/stock-exchanges/stock-exchanges.json",
+      "fields": ["mic", "name", "acronym", "country", "city", "currency", "timezone", "open", "close"],
+      "entry_count_approx": 22
+    },
+    {
+      "iso": "ISO 15924",
+      "title": "Codes for the representation of names of scripts",
+      "description": "Four-letter script codes (e.g. Latn, Arab, Cyrl) with numeric codes, writing direction, representative languages, and Unicode ranges.",
+      "canonical": true,
+      "file": "iso/15924/scripts.json",
+      "cross_reference": null,
+      "fields": ["code", "name", "numeric", "direction", "unicode_range", "languages", "status"],
+      "entry_count_approx": 54
+    },
+    {
+      "iso": "ISO/IEC 27001:2022",
+      "title": "Information security, cybersecurity and privacy protection — ISMS requirements",
+      "description": "All 93 Annex A controls organized into 4 themes (Organizational, People, Physical, Technological) with control type (preventive/detective/corrective) and full description.",
+      "canonical": true,
+      "file": "iso/27001/controls.json",
+      "cross_reference": null,
+      "related": ["ISO/IEC 27002:2022 (implementation guidance)", "ISO/IEC 27005 (risk management)"],
+      "entry_count_approx": 93
+    },
+    {
+      "iso": "ISO 9001:2015",
+      "title": "Quality management systems — Requirements",
+      "description": "All 7 requirement clauses (4–10) broken into subclauses with actionable checklists. Includes the list of 19 mandatory documented information items.",
+      "canonical": true,
+      "file": "iso/9001/clauses.json",
+      "cross_reference": null,
+      "related": ["ISO 9000:2015 (vocabulary)", "ISO 9004:2018 (guidance for sustained success)"],
+      "clause_count": 7,
+      "subclause_count_approx": 25
+    }
+  ],
+  "planned": [
+    { "iso": "ISO 3166-2", "title": "Country subdivision codes (states/provinces/regions)", "status": "not yet added" },
+    { "iso": "ISO 3166-3", "title": "Codes for formerly used country names",                "status": "not yet added" },
+    { "iso": "ISO 639-3",  "title": "Individual language codes (7000+ languages)",           "status": "not yet added" },
+    { "iso": "ISO 14001:2015", "title": "Environmental management systems requirements",     "status": "not yet added" },
+    { "iso": "ISO 45001:2018", "title": "OH&S management systems requirements",              "status": "not yet added" },
+    { "iso": "ISO 25010",  "title": "Software product quality model",                        "status": "not yet added" }
+  ]
+}
