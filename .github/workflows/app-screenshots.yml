@@ -1,8 +1,8 @@
-# Real Wayland terminal screenshots for each rice theme.
-# Uses Arch Linux + Sway (headless/pixman) + foot terminal + grim.
+# Terminal theme screenshots via pure ImageMagick composition.
+# Runs directly on the self-hosted runner — no Docker required.
 #
-# Runs automatically on PRs when theme data, rice configs, or Docker files change.
-# Also triggerable manually from Actions → "Generate App Screenshots" → Run workflow.
+# Triggered automatically on PRs when theme data, rice configs, or Docker
+# files change, and on push to main/master.
 
 name: Generate App Screenshots
 
@@ -64,29 +64,26 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - name: Build Wayland screenshot image
+      - name: Install dependencies
         run: |
-          for attempt in 1 2 3; do
-            echo "==> Docker build attempt $attempt"
-            docker build \
-              -t rice-wayland \
-              -f docker/Dockerfile.rice-wayland \
-              . && break
-            [[ $attempt -lt 3 ]] && sleep $((attempt * 4))
-          done
+          # Install ImageMagick, jq, Node.js and the DejaVu font used by the script.
+          # apt-get is idempotent — already-installed packages are skipped.
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            imagemagick jq nodejs npm fonts-dejavu-core ca-certificates
+          echo "==> ImageMagick $(convert --version | head -1)"
+          echo "==> Node $(node --version)"
+          echo "==> jq $(jq --version)"
 
       - name: Run screenshot capture
         run: |
           set -o pipefail
-          docker run --rm \
-            -v "$PWD:/repo" \
-            -e WIN_W="${{ github.event.inputs.win_w || '900' }}" \
-            -e WIN_H="${{ github.event.inputs.win_h || '520' }}" \
-            -e WIN_X="${{ github.event.inputs.win_x || '40' }}" \
-            -e WIN_Y="${{ github.event.inputs.win_y || '40' }}" \
-            -e STYLE="${{ github.event.inputs.style || '' }}" \
-            rice-wayland \
-            bash docker/rice-wayland.sh ${{ github.event.inputs.slug || '' }} \
+          export WIN_W="${{ github.event.inputs.win_w || '900' }}"
+          export WIN_H="${{ github.event.inputs.win_h || '520' }}"
+          export WIN_X="${{ github.event.inputs.win_x || '40' }}"
+          export WIN_Y="${{ github.event.inputs.win_y || '40' }}"
+          export STYLE="${{ github.event.inputs.style || '' }}"
+          bash docker/rice-wayland.sh ${{ github.event.inputs.slug || '' }} \
             2>&1 | tee /tmp/rice-screenshots.log
 
       - name: List generated screenshots
@@ -104,8 +101,6 @@ jobs:
           git remote set-url origin \
             https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           BRANCH="${{ github.event.pull_request.head.ref || github.ref_name }}"
-          # Stash docker-generated files so rebase can proceed cleanly,
-          # then restore them after pulling upstream commits.
           git stash --include-untracked 2>/dev/null || true
           git pull --rebase origin "$BRANCH" || true
           git stash pop 2>/dev/null || true
