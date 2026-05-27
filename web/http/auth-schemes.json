@@ -1,0 +1,92 @@
+[
+  {
+    "scheme": "Basic",
+    "slug": "basic",
+    "rfc": "RFC 7617",
+    "security": "low",
+    "description": "Transmits credentials as a Base64-encoded username:password pair in the Authorization header. Must be used over HTTPS — Base64 is encoding, not encryption.",
+    "header_format": "Authorization: Basic <base64(username:password)>",
+    "example": "Authorization: Basic dXNlcjpwYXNzd29yZA=="
+  },
+  {
+    "scheme": "Bearer",
+    "slug": "bearer",
+    "rfc": "RFC 6750",
+    "security": "high",
+    "description": "Uses a bearer token (commonly a JWT) issued by an authorization server. The client includes the token in every request. Standard scheme for OAuth 2.0 APIs.",
+    "header_format": "Authorization: Bearer <token>",
+    "example": "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  },
+  {
+    "scheme": "Digest",
+    "slug": "digest",
+    "rfc": "RFC 7616",
+    "security": "medium",
+    "description": "An improvement over Basic auth — credentials are hashed (MD5 or SHA-256) with a server-provided nonce, preventing replay attacks. Rarely used in modern APIs.",
+    "header_format": "Authorization: Digest username=\"...\", realm=\"...\", nonce=\"...\", uri=\"...\", response=\"...\"",
+    "example": "Authorization: Digest username=\"user\", realm=\"example.com\", nonce=\"abc\", response=\"hash\""
+  },
+  {
+    "scheme": "OAuth",
+    "slug": "oauth1",
+    "rfc": "RFC 5849",
+    "security": "high",
+    "description": "OAuth 1.0a — signs each request with HMAC using the consumer secret and access token secret. Complex but does not require HTTPS (signature protects integrity). Largely superseded by OAuth 2.0.",
+    "header_format": "Authorization: OAuth oauth_consumer_key=\"...\", oauth_token=\"...\", oauth_signature=\"...\"",
+    "example": "Authorization: OAuth oauth_consumer_key=\"key\", oauth_nonce=\"nonce\", oauth_signature=\"sig\""
+  },
+  {
+    "scheme": "API-Key",
+    "slug": "api-key",
+    "rfc": null,
+    "security": "medium",
+    "description": "Non-standard but widely used. A static secret key sent as a header (commonly X-API-Key) or query parameter. Easy to implement but offers no built-in expiry or scope.",
+    "header_format": "X-API-Key: <api-key>",
+    "example": "X-API-Key: sk_live_abc123def456"
+  },
+  {
+    "scheme": "HMAC",
+    "slug": "hmac",
+    "rfc": null,
+    "security": "high",
+    "description": "Requests are signed by hashing the payload + timestamp + secret key with HMAC-SHA256. Prevents tampering and replay attacks. Used by AWS (AWS Signature v4) and Stripe webhooks.",
+    "header_format": "Authorization: HMAC-SHA256 Credential=..., SignedHeaders=..., Signature=...",
+    "example": "Authorization: AWS4-HMAC-SHA256 Credential=AKID/20250101/us-east-1/s3/aws4_request"
+  },
+  {
+    "scheme": "JWT",
+    "slug": "jwt",
+    "rfc": "RFC 7519",
+    "security": "high",
+    "description": "JSON Web Tokens are self-contained tokens with a header, payload, and signature. Typically used as Bearer tokens. Stateless — server validates without a database lookup.",
+    "header_format": "Authorization: Bearer <jwt>",
+    "example": "Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyMSJ9.signature"
+  },
+  {
+    "scheme": "Mutual TLS (mTLS)",
+    "slug": "mtls",
+    "rfc": "RFC 8705",
+    "security": "very-high",
+    "description": "Both client and server present X.509 certificates. Verifies both parties' identities at the TLS layer — no separate HTTP Authorization header needed. Used in zero-trust and service mesh architectures.",
+    "header_format": "N/A — authentication occurs at TLS handshake",
+    "example": "Client presents client.crt signed by trusted CA during TLS handshake"
+  },
+  {
+    "scheme": "NTLM",
+    "slug": "ntlm",
+    "rfc": null,
+    "security": "medium",
+    "description": "Windows NT LAN Manager — a Microsoft challenge-response authentication protocol. Used in Windows environments for intranet single sign-on. Multi-step handshake; rarely used outside Windows ecosystems.",
+    "header_format": "Authorization: NTLM <base64-blob>",
+    "example": "Authorization: NTLM TlRMTVNTUAABAAAA..."
+  },
+  {
+    "scheme": "Negotiate / Kerberos",
+    "slug": "negotiate",
+    "rfc": "RFC 4559",
+    "security": "high",
+    "description": "Negotiates between Kerberos (preferred) and NTLM. Used for Windows integrated authentication / SSO in enterprise intranets. Kerberos provides strong mutual authentication with a trusted KDC.",
+    "header_format": "Authorization: Negotiate <base64-kerberos-token>",
+    "example": "Authorization: Negotiate YIGXBgkqhkiG9xIBAgICAG..."
+  }
+]

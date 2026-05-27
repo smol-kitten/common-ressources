@@ -1,0 +1,614 @@
+[
+  {
+    "role": "alert",
+    "category": "live-region",
+    "description": "A type of live region with important, usually time-sensitive, information. Screen readers will interrupt ongoing speech to announce alert content.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-expanded"],
+    "focusable": false
+  },
+  {
+    "role": "alertdialog",
+    "category": "window",
+    "description": "A type of dialog that contains an alert message. Combines the properties of dialog and alert.",
+    "implicit_elements": null,
+    "required_attrs": ["aria-labelledby or aria-label"],
+    "optional_attrs": ["aria-describedby", "aria-expanded", "aria-modal"],
+    "focusable": true
+  },
+  {
+    "role": "application",
+    "category": "landmark",
+    "description": "A region declared as a web application, as opposed to a web document. Turns off standard browser key handling; application manages all keyboard interaction.",
+    "implicit_elements": null,
+    "required_attrs": ["aria-label or aria-labelledby"],
+    "optional_attrs": ["aria-expanded"],
+    "focusable": true
+  },
+  {
+    "role": "article",
+    "category": "document-structure",
+    "description": "A section of a page that could stand alone in a feed, document, or website. Maps to the HTML <article> element.",
+    "implicit_elements": ["article"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-posinset", "aria-setsize"],
+    "focusable": false
+  },
+  {
+    "role": "banner",
+    "category": "landmark",
+    "description": "A region that contains the prime heading or internal title of a page. There should be only one banner landmark per page. Maps to <header> when used as a direct child of <body>.",
+    "implicit_elements": ["header (when child of body)"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "button",
+    "category": "widget",
+    "description": "An input that allows for user-triggered actions when clicked or pressed. Maps to <button>.",
+    "implicit_elements": ["button", "input[type=button]", "input[type=image]", "input[type=reset]", "input[type=submit]"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-expanded", "aria-haspopup", "aria-pressed"],
+    "focusable": true
+  },
+  {
+    "role": "cell",
+    "category": "document-structure",
+    "description": "A cell in a tabular container. Maps to <td>.",
+    "implicit_elements": ["td"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-colindex", "aria-colspan", "aria-rowindex", "aria-rowspan"],
+    "focusable": false
+  },
+  {
+    "role": "checkbox",
+    "category": "widget",
+    "description": "A checkable input that has three possible values: true, false, or mixed. Maps to <input type='checkbox'>.",
+    "implicit_elements": ["input[type=checkbox]"],
+    "required_attrs": ["aria-checked"],
+    "optional_attrs": ["aria-readonly", "aria-required"],
+    "focusable": true
+  },
+  {
+    "role": "columnheader",
+    "category": "document-structure",
+    "description": "A cell containing header information for a column. Maps to <th scope='col'>.",
+    "implicit_elements": ["th[scope=col]"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-sort", "aria-colindex", "aria-colspan", "aria-readonly", "aria-required", "aria-selected"],
+    "focusable": false
+  },
+  {
+    "role": "combobox",
+    "category": "widget",
+    "description": "An input that controls another element (e.g. a listbox or tree), which can dynamically pop up to help the user set the input's value.",
+    "implicit_elements": ["select (in some browsers)"],
+    "required_attrs": ["aria-controls", "aria-expanded"],
+    "optional_attrs": ["aria-activedescendant", "aria-autocomplete", "aria-haspopup", "aria-readonly", "aria-required"],
+    "focusable": true
+  },
+  {
+    "role": "complementary",
+    "category": "landmark",
+    "description": "A supporting section of a document designed to be complementary to the main content. Maps to <aside>.",
+    "implicit_elements": ["aside"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "contentinfo",
+    "category": "landmark",
+    "description": "A large perceivable region containing information about the parent document. Maps to <footer> when used as a direct child of <body>.",
+    "implicit_elements": ["footer (when child of body)"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "definition",
+    "category": "document-structure",
+    "description": "A definition of a term or concept. Maps to <dfn>.",
+    "implicit_elements": ["dfn"],
+    "required_attrs": [],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "dialog",
+    "category": "window",
+    "description": "A dialog is a descendant window separated from the main window. Focus is typically constrained to the dialog. Maps to <dialog>.",
+    "implicit_elements": ["dialog"],
+    "required_attrs": ["aria-labelledby or aria-label"],
+    "optional_attrs": ["aria-describedby", "aria-modal"],
+    "focusable": true
+  },
+  {
+    "role": "document",
+    "category": "document-structure",
+    "description": "Region within an application that is treated like a document. Restores standard reading-mode shortcuts in screen readers. Maps to <body>.",
+    "implicit_elements": ["body"],
+    "required_attrs": [],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "feed",
+    "category": "document-structure",
+    "description": "A scrollable list of articles in which articles are added to or removed from either end as the user scrolls.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label", "aria-busy"],
+    "focusable": false
+  },
+  {
+    "role": "figure",
+    "category": "document-structure",
+    "description": "A perceivable section of content, typically referenced as a single unit from the main content. Maps to <figure>.",
+    "implicit_elements": ["figure"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "form",
+    "category": "landmark",
+    "description": "A landmark region that contains a collection of items and objects that, as a whole, combine to create a form. Maps to <form> when it has an accessible name.",
+    "implicit_elements": ["form (with accessible name)"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "grid",
+    "category": "widget",
+    "description": "A composite widget containing a collection of one or more rows with one or more cells where some or all cells in the grid are focusable.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-colcount", "aria-level", "aria-multiselectable", "aria-readonly", "aria-rowcount"],
+    "focusable": true
+  },
+  {
+    "role": "gridcell",
+    "category": "widget",
+    "description": "A cell in a grid or treegrid. Maps to <td> within a grid context.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-colindex", "aria-colspan", "aria-expanded", "aria-rowindex", "aria-rowspan", "aria-readonly", "aria-required", "aria-selected"],
+    "focusable": true
+  },
+  {
+    "role": "group",
+    "category": "document-structure",
+    "description": "A set of user interface objects which are not intended to be included in a page summary or table of contents by navigational assistive technologies. Maps to <details>, <fieldset>, <optgroup>.",
+    "implicit_elements": ["details", "fieldset", "optgroup"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "heading",
+    "category": "document-structure",
+    "description": "A heading for a section of the page. Maps to <h1>–<h6>.",
+    "implicit_elements": ["h1", "h2", "h3", "h4", "h5", "h6"],
+    "required_attrs": ["aria-level"],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "img",
+    "category": "document-structure",
+    "description": "A container for a collection of elements that form an image. Maps to <img>.",
+    "implicit_elements": ["img"],
+    "required_attrs": ["aria-label or aria-labelledby"],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "link",
+    "category": "widget",
+    "description": "An interactive reference to an internal or external resource. Maps to <a href> and <area href>.",
+    "implicit_elements": ["a[href]", "area[href]"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-expanded", "aria-haspopup"],
+    "focusable": true
+  },
+  {
+    "role": "list",
+    "category": "document-structure",
+    "description": "A section containing listitem elements. Maps to <ol>, <ul>, and <menu>.",
+    "implicit_elements": ["ol", "ul", "menu"],
+    "required_attrs": [],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "listbox",
+    "category": "widget",
+    "description": "A widget that allows the user to select one or more items from a list of choices. Maps to <select> with non-combined behaviour.",
+    "implicit_elements": ["select (without multiple and size > 1)"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-expanded", "aria-multiselectable", "aria-orientation", "aria-readonly", "aria-required"],
+    "focusable": true
+  },
+  {
+    "role": "listitem",
+    "category": "document-structure",
+    "description": "A single item in a list or directory. Maps to <li>.",
+    "implicit_elements": ["li"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-level", "aria-posinset", "aria-setsize"],
+    "focusable": false
+  },
+  {
+    "role": "log",
+    "category": "live-region",
+    "description": "A type of live region where new information is added in meaningful order and old information may disappear. Examples: chat history, error log.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-atomic", "aria-live"],
+    "focusable": false
+  },
+  {
+    "role": "main",
+    "category": "landmark",
+    "description": "The main content of a document. There should be only one main landmark per page. Maps to <main>.",
+    "implicit_elements": ["main"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "marquee",
+    "category": "live-region",
+    "description": "A type of live region where non-essential information changes frequently. Often used for stock tickers or ad banners.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "math",
+    "category": "document-structure",
+    "description": "Content that represents a mathematical expression. Maps to <math> (MathML).",
+    "implicit_elements": ["math"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "menu",
+    "category": "widget",
+    "description": "A list of choices offered to the user, such as a context menu or action menu. Not the same as a navigation menu.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-expanded", "aria-orientation"],
+    "focusable": true
+  },
+  {
+    "role": "menubar",
+    "category": "widget",
+    "description": "A container of menu elements that represents a menu bar (typically horizontal), similar to those found in Windows, Mac, or GNOME desktop applications.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-expanded", "aria-orientation"],
+    "focusable": true
+  },
+  {
+    "role": "menuitem",
+    "category": "widget",
+    "description": "An option in a set of choices contained by a menu or menubar.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-expanded", "aria-haspopup", "aria-posinset", "aria-setsize"],
+    "focusable": true
+  },
+  {
+    "role": "menuitemcheckbox",
+    "category": "widget",
+    "description": "A checkable menuitem that has three possible values: true, false, or mixed.",
+    "implicit_elements": null,
+    "required_attrs": ["aria-checked"],
+    "optional_attrs": ["aria-posinset", "aria-setsize"],
+    "focusable": true
+  },
+  {
+    "role": "menuitemradio",
+    "category": "widget",
+    "description": "A checkable menuitem in a group of menuitemradio roles, only one of which can be checked at a time.",
+    "implicit_elements": null,
+    "required_attrs": ["aria-checked"],
+    "optional_attrs": ["aria-posinset", "aria-setsize"],
+    "focusable": true
+  },
+  {
+    "role": "navigation",
+    "category": "landmark",
+    "description": "A collection of navigational elements (usually links) for navigating the document or related documents. Maps to <nav>.",
+    "implicit_elements": ["nav"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "none",
+    "category": "document-structure",
+    "description": "An element whose implicit native role semantics will not be mapped to the accessibility API. Alias for presentation.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "note",
+    "category": "document-structure",
+    "description": "A section whose content is parenthetic or ancillary to the main content of the resource.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "option",
+    "category": "widget",
+    "description": "A selectable item in a select list. Maps to <option>.",
+    "implicit_elements": ["option"],
+    "required_attrs": ["aria-selected"],
+    "optional_attrs": ["aria-checked", "aria-posinset", "aria-setsize"],
+    "focusable": true
+  },
+  {
+    "role": "presentation",
+    "category": "document-structure",
+    "description": "An element whose implicit native role semantics will not be mapped to the accessibility API. Used to remove meaning from decorative elements.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "progressbar",
+    "category": "widget",
+    "description": "An element that displays the progress status for tasks that take a long time. Maps to <progress>.",
+    "implicit_elements": ["progress"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext"],
+    "focusable": false
+  },
+  {
+    "role": "radio",
+    "category": "widget",
+    "description": "A checkable input in a group of radio roles, only one of which can be checked at a time. Maps to <input type='radio'>.",
+    "implicit_elements": ["input[type=radio]"],
+    "required_attrs": ["aria-checked"],
+    "optional_attrs": ["aria-posinset", "aria-required", "aria-setsize"],
+    "focusable": true
+  },
+  {
+    "role": "radiogroup",
+    "category": "widget",
+    "description": "A group of radio buttons.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-labelledby", "aria-label", "aria-orientation", "aria-required"],
+    "focusable": false
+  },
+  {
+    "role": "region",
+    "category": "landmark",
+    "description": "A perceivable section of the page containing content relevant to a specific, author-specified purpose. Maps to <section> with an accessible name.",
+    "implicit_elements": ["section (with accessible name)"],
+    "required_attrs": ["aria-labelledby or aria-label"],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "row",
+    "category": "document-structure",
+    "description": "A row of cells in a tabular container. Maps to <tr>.",
+    "implicit_elements": ["tr"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-colindex", "aria-expanded", "aria-level", "aria-rowindex", "aria-selected"],
+    "focusable": false
+  },
+  {
+    "role": "rowgroup",
+    "category": "document-structure",
+    "description": "A structure containing one or more row elements in a tabular container. Maps to <thead>, <tfoot>, <tbody>.",
+    "implicit_elements": ["thead", "tbody", "tfoot"],
+    "required_attrs": [],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "rowheader",
+    "category": "document-structure",
+    "description": "A cell containing header information for a row. Maps to <th scope='row'>.",
+    "implicit_elements": ["th[scope=row]"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-expanded", "aria-readonly", "aria-required", "aria-rowindex", "aria-rowspan", "aria-selected", "aria-sort"],
+    "focusable": false
+  },
+  {
+    "role": "scrollbar",
+    "category": "widget",
+    "description": "A graphical object that controls the scrolling of content within a viewing area.",
+    "implicit_elements": null,
+    "required_attrs": ["aria-controls", "aria-orientation", "aria-valuenow"],
+    "optional_attrs": ["aria-valuemax", "aria-valuemin", "aria-valuetext"],
+    "focusable": true
+  },
+  {
+    "role": "search",
+    "category": "landmark",
+    "description": "A landmark region containing a collection of items and objects that, as a whole, combine to create search functionality. Maps to <search> (HTML5.3).",
+    "implicit_elements": ["search"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-labelledby", "aria-label"],
+    "focusable": false
+  },
+  {
+    "role": "searchbox",
+    "category": "widget",
+    "description": "A type of textbox intended for specifying search criteria. Maps to <input type='search'>.",
+    "implicit_elements": ["input[type=search]"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-autocomplete", "aria-multiline", "aria-placeholder", "aria-readonly", "aria-required"],
+    "focusable": true
+  },
+  {
+    "role": "separator",
+    "category": "document-structure",
+    "description": "A divider that separates and distinguishes sections of content or groups of menuitems. Maps to <hr>.",
+    "implicit_elements": ["hr"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-orientation", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext"],
+    "focusable": false
+  },
+  {
+    "role": "slider",
+    "category": "widget",
+    "description": "A user input where the user selects a value from within a given range. Maps to <input type='range'>.",
+    "implicit_elements": ["input[type=range]"],
+    "required_attrs": ["aria-valuenow"],
+    "optional_attrs": ["aria-orientation", "aria-readonly", "aria-valuemax", "aria-valuemin", "aria-valuetext"],
+    "focusable": true
+  },
+  {
+    "role": "spinbutton",
+    "category": "widget",
+    "description": "A form of range that expects the user to select from among discrete choices. Maps to <input type='number'>.",
+    "implicit_elements": ["input[type=number]"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-readonly", "aria-required", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext"],
+    "focusable": true
+  },
+  {
+    "role": "status",
+    "category": "live-region",
+    "description": "A type of live region whose content is advisory information for the user but not important enough to warrant an alert. Maps to <output>.",
+    "implicit_elements": ["output"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-atomic", "aria-live"],
+    "focusable": false
+  },
+  {
+    "role": "switch",
+    "category": "widget",
+    "description": "A type of checkbox that represents on/off values, as opposed to checked/unchecked. Visually rendered as a toggle.",
+    "implicit_elements": null,
+    "required_attrs": ["aria-checked"],
+    "optional_attrs": ["aria-readonly", "aria-required"],
+    "focusable": true
+  },
+  {
+    "role": "tab",
+    "category": "widget",
+    "description": "A grouping label providing a mechanism for selecting the tab content that is to be rendered to the user.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-expanded", "aria-posinset", "aria-selected", "aria-setsize"],
+    "focusable": true
+  },
+  {
+    "role": "table",
+    "category": "document-structure",
+    "description": "A section containing data arranged in rows and columns, like a spreadsheet. Maps to <table>.",
+    "implicit_elements": ["table"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-colcount", "aria-labelledby", "aria-label", "aria-rowcount"],
+    "focusable": false
+  },
+  {
+    "role": "tablist",
+    "category": "widget",
+    "description": "A list of tab elements, which are references to tabpanel elements.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-labelledby", "aria-label", "aria-multiselectable", "aria-orientation"],
+    "focusable": false
+  },
+  {
+    "role": "tabpanel",
+    "category": "widget",
+    "description": "A container for the resources associated with a tab, where each tab is contained in a tablist.",
+    "implicit_elements": null,
+    "required_attrs": ["aria-labelledby or aria-label"],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "term",
+    "category": "document-structure",
+    "description": "A word or phrase with an optional corresponding definition. Maps to <dfn> and <dt>.",
+    "implicit_elements": ["dfn", "dt"],
+    "required_attrs": [],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "textbox",
+    "category": "widget",
+    "description": "A type of input that allows free-form text as its value. Maps to <input type='text'> and <textarea>.",
+    "implicit_elements": ["input[type=text]", "input[type=email]", "input[type=tel]", "input[type=url]", "textarea"],
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-autocomplete", "aria-multiline", "aria-placeholder", "aria-readonly", "aria-required"],
+    "focusable": true
+  },
+  {
+    "role": "timer",
+    "category": "live-region",
+    "description": "A type of live region containing a numerical counter which indicates an amount of elapsed time from a start point, or the time remaining until an end point.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-atomic", "aria-live"],
+    "focusable": false
+  },
+  {
+    "role": "toolbar",
+    "category": "document-structure",
+    "description": "A collection of commonly used function buttons or controls represented in compact visual form.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-labelledby", "aria-label", "aria-orientation"],
+    "focusable": false
+  },
+  {
+    "role": "tooltip",
+    "category": "document-structure",
+    "description": "A contextual popup that displays a description for an element. The element it describes should have aria-describedby referencing the tooltip.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": [],
+    "focusable": false
+  },
+  {
+    "role": "tree",
+    "category": "widget",
+    "description": "A widget that allows the user to select one or more items from a hierarchically organized collection.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-labelledby", "aria-label", "aria-multiselectable", "aria-orientation", "aria-required"],
+    "focusable": true
+  },
+  {
+    "role": "treegrid",
+    "category": "widget",
+    "description": "A grid whose rows can be expanded and collapsed in the same manner as for a tree.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-activedescendant", "aria-colcount", "aria-labelledby", "aria-label", "aria-multiselectable", "aria-orientation", "aria-readonly", "aria-required", "aria-rowcount"],
+    "focusable": true
+  },
+  {
+    "role": "treeitem",
+    "category": "widget",
+    "description": "An option item of a tree. This is an element within a tree that may be expanded or collapsed.",
+    "implicit_elements": null,
+    "required_attrs": [],
+    "optional_attrs": ["aria-expanded", "aria-haspopup", "aria-level", "aria-posinset", "aria-selected", "aria-setsize"],
+    "focusable": true
+  }
+]

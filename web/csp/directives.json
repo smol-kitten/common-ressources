@@ -1,0 +1,178 @@
+[
+  {
+    "directive": "default-src",
+    "slug": "default-src",
+    "category": "fetch",
+    "description": "Fallback for other fetch directives. If a specific directive is absent, the browser uses default-src.",
+    "example": "default-src 'self'",
+    "notes": "Set as a secure baseline; override with more permissive rules per specific directive."
+  },
+  {
+    "directive": "script-src",
+    "slug": "script-src",
+    "category": "fetch",
+    "description": "Controls valid sources for JavaScript. The single most important CSP directive for preventing XSS.",
+    "example": "script-src 'self' https://cdn.example.com",
+    "notes": "'unsafe-inline' and 'unsafe-eval' should be avoided. Use nonces or hashes instead."
+  },
+  {
+    "directive": "style-src",
+    "slug": "style-src",
+    "category": "fetch",
+    "description": "Controls valid sources for CSS stylesheets, including inline <style> blocks.",
+    "example": "style-src 'self' 'nonce-abc123'",
+    "notes": "'unsafe-inline' allows inline styles; prefer nonces or hashes."
+  },
+  {
+    "directive": "img-src",
+    "slug": "img-src",
+    "category": "fetch",
+    "description": "Controls valid sources for images, including favicons.",
+    "example": "img-src 'self' data: https://cdn.example.com",
+    "notes": "data: URIs allow inline images; restrict to trusted hosts where possible."
+  },
+  {
+    "directive": "connect-src",
+    "slug": "connect-src",
+    "category": "fetch",
+    "description": "Restricts URLs that can be loaded using fetch(), XHR, WebSockets, and EventSource.",
+    "example": "connect-src 'self' https://api.example.com",
+    "notes": "Critical for preventing data exfiltration via AJAX to attacker-controlled endpoints."
+  },
+  {
+    "directive": "font-src",
+    "slug": "font-src",
+    "category": "fetch",
+    "description": "Controls valid sources for fonts loaded with @font-face.",
+    "example": "font-src 'self' https://fonts.gstatic.com",
+    "notes": "Google Fonts requires both font-src and style-src allowlisting."
+  },
+  {
+    "directive": "object-src",
+    "slug": "object-src",
+    "category": "fetch",
+    "description": "Controls valid sources for <object>, <embed>, and <applet> elements.",
+    "example": "object-src 'none'",
+    "notes": "Should almost always be set to 'none' — these elements are vectors for plugin-based attacks."
+  },
+  {
+    "directive": "media-src",
+    "slug": "media-src",
+    "category": "fetch",
+    "description": "Controls valid sources for <audio> and <video> elements.",
+    "example": "media-src 'self' https://media.example.com",
+    "notes": null
+  },
+  {
+    "directive": "frame-src",
+    "slug": "frame-src",
+    "category": "fetch",
+    "description": "Controls valid sources for <iframe> and <frame> elements.",
+    "example": "frame-src 'self' https://player.vimeo.com",
+    "notes": "Supersedes child-src for frames."
+  },
+  {
+    "directive": "child-src",
+    "slug": "child-src",
+    "category": "fetch",
+    "description": "Controls valid sources for nested browsing contexts (frames) and Web Workers.",
+    "example": "child-src 'self'",
+    "notes": "Deprecated in favour of frame-src (frames) and worker-src (workers)."
+  },
+  {
+    "directive": "worker-src",
+    "slug": "worker-src",
+    "category": "fetch",
+    "description": "Controls valid sources for Worker, SharedWorker, and ServiceWorker scripts.",
+    "example": "worker-src 'self'",
+    "notes": null
+  },
+  {
+    "directive": "manifest-src",
+    "slug": "manifest-src",
+    "category": "fetch",
+    "description": "Controls valid sources for Web App Manifest files.",
+    "example": "manifest-src 'self'",
+    "notes": null
+  },
+  {
+    "directive": "prefetch-src",
+    "slug": "prefetch-src",
+    "category": "fetch",
+    "description": "Controls valid sources for prefetch and prerender operations.",
+    "example": "prefetch-src 'self'",
+    "notes": "Deprecated and removed from most browsers."
+  },
+  {
+    "directive": "form-action",
+    "slug": "form-action",
+    "category": "navigation",
+    "description": "Restricts the URLs that can be used as the action of a <form> element.",
+    "example": "form-action 'self' https://forms.example.com",
+    "notes": "Not a fetch directive — does not fall back to default-src."
+  },
+  {
+    "directive": "frame-ancestors",
+    "slug": "frame-ancestors",
+    "category": "navigation",
+    "description": "Restricts which URLs can embed the page in a frame. Replacement for the X-Frame-Options header.",
+    "example": "frame-ancestors 'none'",
+    "notes": "'none' prevents all framing (equivalent to X-Frame-Options: DENY). Prevents clickjacking."
+  },
+  {
+    "directive": "base-uri",
+    "slug": "base-uri",
+    "category": "navigation",
+    "description": "Restricts the URLs that can be used in a <base> element. Prevents base-tag injection attacks.",
+    "example": "base-uri 'self'",
+    "notes": "Does not fall back to default-src. Often set to 'none' or 'self'."
+  },
+  {
+    "directive": "navigate-to",
+    "slug": "navigate-to",
+    "category": "navigation",
+    "description": "Restricts the URLs to which a document can navigate by any means.",
+    "example": "navigate-to 'self' https://example.com",
+    "notes": "Experimental; not widely supported yet."
+  },
+  {
+    "directive": "report-uri",
+    "slug": "report-uri",
+    "category": "reporting",
+    "description": "Specifies a URL where the browser sends violation reports when a CSP policy is violated.",
+    "example": "report-uri https://csp-report.example.com/endpoint",
+    "notes": "Deprecated in favour of report-to. Still widely supported as fallback."
+  },
+  {
+    "directive": "report-to",
+    "slug": "report-to",
+    "category": "reporting",
+    "description": "Specifies a Reporting API endpoint group where violation reports should be sent.",
+    "example": "report-to csp-endpoint",
+    "notes": "Requires a Report-To response header defining the endpoint group."
+  },
+  {
+    "directive": "upgrade-insecure-requests",
+    "slug": "upgrade-insecure-requests",
+    "category": "other",
+    "description": "Instructs browsers to upgrade all HTTP URLs to HTTPS before fetching.",
+    "example": "upgrade-insecure-requests",
+    "notes": "Useful for migrating legacy sites to HTTPS; does not affect navigation."
+  },
+  {
+    "directive": "block-all-mixed-content",
+    "slug": "block-all-mixed-content",
+    "category": "other",
+    "description": "Blocks all mixed content (HTTP resources on HTTPS pages), even in passive contexts like images.",
+    "example": "block-all-mixed-content",
+    "notes": "Deprecated in favour of upgrade-insecure-requests in most implementations."
+  },
+  {
+    "directive": "sandbox",
+    "slug": "sandbox",
+    "category": "other",
+    "description": "Applies restrictions similar to the <iframe> sandbox attribute to the page: disables scripts, forms, popups, etc.",
+    "example": "sandbox allow-scripts allow-same-origin",
+    "notes": "With no values, maximally restrictive. Add individual allow-* tokens to loosen."
+  }
+]
