@@ -1,0 +1,131 @@
+/* ── windows-like Waybar theme — Material Dark + Windows Blue ── */
+
+* {
+    font-family: "Segoe UI", "Noto Sans", sans-serif;
+    font-size: 12px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+window#waybar {
+    background: rgba(20, 20, 20, 0.92);
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Start button ── */
+#custom-start {
+    background: #0078d4;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 14px;
+    margin: 0;
+    min-width: 40px;
+}
+
+#custom-start:hover {
+    background: #1084d8;
+}
+
+/* ── Workspaces ── */
+#workspaces {
+    background: transparent;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #adadad;
+    padding: 0 8px;
+    min-width: 32px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    border-bottom: 2px solid #0078d4;
+    background: rgba(0, 120, 212, 0.12);
+}
+
+#workspaces button.urgent {
+    color: #ff5252;
+    border-bottom: 2px solid #ff5252;
+}
+
+/* ── Window title ── */
+#window {
+    color: #adadad;
+    font-size: 12px;
+    padding: 0 12px;
+}
+
+/* ── Right modules ── */
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#battery,
+#clock {
+    padding: 0 10px;
+    color: #ffffff;
+    background: transparent;
+    transition: background 0.15s ease;
+}
+
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#clock:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+#clock {
+    color: #ffffff;
+    padding: 0 14px;
+}
+
+/* ── Battery states ── */
+#battery.warning { color: #ffb300; }
+#battery.critical {
+    color: #ff5252;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    to { background: rgba(255, 82, 82, 0.15); }
+}
+
+/* ── Power button ── */
+#custom-power {
+    color: #adadad;
+    font-size: 14px;
+    padding: 0 12px;
+    background: transparent;
+}
+
+#custom-power:hover {
+    color: #ff5252;
+    background: rgba(255, 82, 82, 0.12);
+}
+
+/* ── Tray ── */
+#tray {
+    background: transparent;
+    padding: 0 6px;
+}
+
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: rgba(255, 82, 82, 0.1);
+}

@@ -1,0 +1,119 @@
+# ── mac-like Zsh — Catppuccin Latte + Powerlevel10k lean ──────
+
+# ── Powerlevel10k instant prompt ───────────────────────────────
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# ── Path ───────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
+
+# ── Zsh options ────────────────────────────────────────────────
+setopt AUTO_CD
+setopt GLOB_DOTS
+setopt EXTENDED_GLOB
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+
+# ── Completion ─────────────────────────────────────────────────
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*:descriptions' format '%F{blue}── %d ──%f'
+
+# ── Plugins (sourced if present) ───────────────────────────────
+[[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Autosuggestion style — subtle gray
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#9ca0b0"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# ── zoxide ─────────────────────────────────────────────────────
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
+
+# ── fzf ────────────────────────────────────────────────────────
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="
+  --color=bg+:#e6e9ef,bg:#eff1f5,spinner:#1e66f5,hl:#d20f39
+  --color=fg:#4c4f69,header:#9ca0b0,info:#1e66f5,pointer:#1e66f5
+  --color=marker:#40a02b,fg+:#4c4f69,prompt:#1e66f5,hl+:#d20f39
+  --border rounded --prompt '  ' --pointer '' --marker ''
+  --height 40% --layout reverse"
+export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always {} 2>/dev/null || cat {}'"
+
+# ── Aliases ────────────────────────────────────────────────────
+alias ls='eza --icons --group-directories-first'
+alias ll='eza -lah --icons --group-directories-first --git'
+alias lt='eza --tree --icons --level=2'
+alias cat='bat --style=auto'
+alias grep='grep --color=auto'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias g='git'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate --all'
+alias gs='git status'
+alias gd='git diff'
+alias lg='lazygit'
+alias vi='nvim'
+alias vim='nvim'
+alias top='btop'
+alias df='df -h'
+alias du='du -sh'
+alias open='xdg-open'
+
+# ── Editor ─────────────────────────────────────────────────────
+export EDITOR='nvim'
+export VISUAL='nvim'
+export PAGER='bat --plain'
+
+# ── Language / locale ──────────────────────────────────────────
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# ── Powerlevel10k theme ────────────────────────────────────────
+[[ -f ~/powerlevel10k/powerlevel10k.zsh-theme ]] && \
+  source ~/powerlevel10k/powerlevel10k.zsh-theme
+[[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]] && \
+  source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# ── P10k config (lean style, Catppuccin Latte colors) ─────────
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+# Inline minimal p10k setup if no .p10k.zsh exists
+if ! [[ -f ~/.p10k.zsh ]]; then
+  POWERLEVEL9K_MODE='nerdfont-v3'
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs)
+  POWERLEVEL9K_PROMPT_ADD_NEWLINE=false
+  POWERLEVEL9K_MULTILINE_FIRST_PROMPT_GAP_CHAR=' '
+
+  # Colors — Catppuccin Latte accent
+  POWERLEVEL9K_DIR_FOREGROUND='#4c4f69'
+  POWERLEVEL9K_DIR_BACKGROUND='#e6e9ef'
+  POWERLEVEL9K_DIR_ANCHOR_FOREGROUND='#1e66f5'
+  POWERLEVEL9K_VCS_CLEAN_FOREGROUND='#40a02b'
+  POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='#df8e1d'
+  POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='#fe640b'
+  POWERLEVEL9K_STATUS_OK=false
+  POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#d20f39'
+  POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3
+  POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='#9ca0b0'
+fi

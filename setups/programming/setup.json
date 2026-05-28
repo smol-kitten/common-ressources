@@ -1,0 +1,44 @@
+{
+  "id": "programming",
+  "name": "Programming",
+  "description": "A distraction-free developer setup. Tokyo Night colors, maximum screen real estate, Starship prompt with git/lang context, scratchpad terminals, dev-focused keybinds.",
+  "color_scheme": "Tokyo Night",
+  "colors": {
+    "bg":       "#1a1b26",
+    "bg_dark":  "#16161e",
+    "surface":  "#24283b",
+    "surface2": "#2f3549",
+    "border":   "#3b4261",
+    "fg":       "#c0caf5",
+    "subtext":  "#a9b1d6",
+    "blue":     "#7aa2f7",
+    "cyan":     "#7dcfff",
+    "green":    "#9ece6a",
+    "red":      "#f7768e",
+    "orange":   "#ff9e64",
+    "yellow":   "#e0af68",
+    "purple":   "#bb9af7",
+    "magenta":  "#bb9af7"
+  },
+  "files": [
+    { "source": "hyprland.conf",  "target": "~/.config/hypr/hyprland.conf",          "description": "Hyprland with scratchpad, tiling, dev keybinds" },
+    { "source": "waybar.json",    "target": "~/.config/waybar/config",                "description": "Minimal Waybar with git/lang/sysinfo modules" },
+    { "source": "waybar.css",     "target": "~/.config/waybar/style.css",             "description": "Tokyo Night Waybar theme" },
+    { "source": "alacritty.toml", "target": "~/.config/alacritty/alacritty.toml",     "description": "Alacritty Tokyo Night" },
+    { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",             "description": "Minimal fast launcher" },
+    { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",                "description": "Compact build/CI notifications" },
+    { "source": "zshrc",          "target": "~/.zshrc",                               "description": "Zsh with Starship, fzf, zoxide, aliases" },
+    { "source": "starship.toml",  "target": "~/.config/starship.toml",                "description": "Starship prompt config (Tokyo Night)" }
+  ],
+  "recommended_packages": {
+    "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "starship"],
+    "dev_tools": ["fzf", "ripgrep", "bat", "eza", "zoxide", "delta", "github-cli", "lazygit", "btop", "neovim", "tmux"],
+    "optional": ["swww", "ttf-jetbrains-mono-nerd", "grimblast", "cliphist", "wl-clipboard"],
+    "aur": ["zsh-autosuggestions", "zsh-syntax-highlighting", "zsh-history-substring-search"]
+  },
+  "wallpaper_hint": "Dark minimal: tokyo-night-wallpaper or a simple dark gradient. Avoid busy wallpapers behind editor windows.",
+  "gtk_theme": "Tokyonight-Dark-BL",
+  "icon_theme": "Papirus-Dark",
+  "cursor_theme": "Bibata-Modern-Ice",
+  "font": { "ui": "Noto Sans 10", "mono": "JetBrainsMono Nerd Font 13" }
+}

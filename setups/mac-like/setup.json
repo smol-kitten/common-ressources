@@ -1,0 +1,41 @@
+{
+  "id": "mac-like",
+  "name": "macOS-like",
+  "description": "A clean, light Catppuccin Latte desktop inspired by macOS. Top menu bar, Spotlight-style launcher, rounded corners, blur, smooth animations.",
+  "color_scheme": "Catppuccin Latte",
+  "colors": {
+    "base":    "#eff1f5",
+    "mantle":  "#e6e9ef",
+    "surface0":"#ccd0da",
+    "surface1":"#bcc0cc",
+    "overlay0":"#9ca0b0",
+    "text":    "#4c4f69",
+    "subtext": "#6c6f85",
+    "blue":    "#1e66f5",
+    "green":   "#40a02b",
+    "red":     "#d20f39",
+    "yellow":  "#df8e1d",
+    "mauve":   "#8839ef",
+    "pink":    "#ea76cb",
+    "teal":    "#179299"
+  },
+  "files": [
+    { "source": "hyprland.conf",  "target": "~/.config/hypr/hyprland.conf",          "description": "Hyprland window manager config" },
+    { "source": "waybar.json",    "target": "~/.config/waybar/config",                "description": "Waybar status bar layout" },
+    { "source": "waybar.css",     "target": "~/.config/waybar/style.css",             "description": "Waybar CSS theme" },
+    { "source": "alacritty.toml", "target": "~/.config/alacritty/alacritty.toml",     "description": "Alacritty terminal emulator config" },
+    { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",             "description": "Rofi app launcher config" },
+    { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",                "description": "Dunst notification daemon config" },
+    { "source": "zshrc",          "target": "~/.zshrc",                               "description": "Zsh shell config with Powerlevel10k" }
+  ],
+  "recommended_packages": {
+    "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh"],
+    "optional": ["swww", "catppuccin-gtk-theme-latte", "papirus-icon-theme", "noto-fonts", "ttf-jetbrains-mono-nerd", "grimblast", "cliphist", "wl-clipboard"],
+    "aur": ["powerlevel10k", "catppuccin-gtk-theme-latte"]
+  },
+  "wallpaper_hint": "Light solid or subtle gradient. Try: swww img /path/to/wallpaper.jpg --transition-type fade",
+  "gtk_theme": "Catppuccin-Latte-Standard-Blue-Light",
+  "icon_theme": "Papirus-Light",
+  "cursor_theme": "Bibata-Modern-Classic",
+  "font": { "ui": "Noto Sans 11", "mono": "JetBrainsMono Nerd Font 12" }
+}

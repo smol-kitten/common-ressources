@@ -1,0 +1,90 @@
+# ── programming Alacritty config — Tokyo Night ─────────────────
+
+[window]
+padding    = { x = 14, y = 10 }
+decorations = "buttonless"
+opacity    = 0.94
+blur       = true
+title      = "Terminal"
+dynamic_title = true
+
+[font]
+normal  = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold    = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic  = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size    = 13.0
+offset  = { x = 0, y = 1 }
+
+[cursor]
+style    = { shape = "Block", blinking = "On" }
+blink_interval = 600
+unfocused_hollow = true
+
+[scrolling]
+history   = 50000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+# ── Tokyo Night colors ──────────────────────────────────────────
+[colors.primary]
+background = "#1a1b26"
+foreground = "#c0caf5"
+dim_foreground = "#737aa2"
+bright_foreground = "#c0caf5"
+
+[colors.cursor]
+text   = "#1a1b26"
+cursor = "#c0caf5"
+
+[colors.vi_mode_cursor]
+text   = "#1a1b26"
+cursor = "#bb9af7"
+
+[colors.selection]
+text       = "#c0caf5"
+background = "#283457"
+
+[colors.search.matches]
+foreground = "#1a1b26"
+background = "#e0af68"
+
+[colors.search.focused_match]
+foreground = "#1a1b26"
+background = "#ff9e64"
+
+[colors.normal]
+black   = "#15161e"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#a9b1d6"
+
+[colors.bright]
+black   = "#414868"
+red     = "#f7768e"
+green   = "#9ece6a"
+yellow  = "#e0af68"
+blue    = "#7aa2f7"
+magenta = "#bb9af7"
+cyan    = "#7dcfff"
+white   = "#c0caf5"
+
+[colors.dim]
+black   = "#1d202f"
+red     = "#914c54"
+green   = "#4d6a35"
+yellow  = "#726943"
+blue    = "#3f5291"
+magenta = "#6a4088"
+cyan    = "#3a6d8c"
+white   = "#737aa2"
+
+[keyboard]
+bindings = [
+    { key = "K", mods = "Command", chars = "\x0c" },
+]

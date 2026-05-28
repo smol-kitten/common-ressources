@@ -1,0 +1,76 @@
+# ── windows-like Zsh — Material Dark, minimal Starship prompt ──
+
+# ── Path ───────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
+
+# ── Zsh options ────────────────────────────────────────────────
+setopt AUTO_CD
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=20000
+SAVEHIST=20000
+
+# ── Completion ─────────────────────────────────────────────────
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# ── Plugins ────────────────────────────────────────────────────
+[[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#707070"
+
+# ── zoxide ─────────────────────────────────────────────────────
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
+
+# ── fzf ────────────────────────────────────────────────────────
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="
+  --color=bg+:#2d2d2d,bg:#252526,spinner:#0078d4,hl:#ff5252
+  --color=fg:#cccccc,header:#707070,info:#0078d4,pointer:#0078d4
+  --color=marker:#69f0ae,fg+:#ffffff,prompt:#0078d4,hl+:#ff5252
+  --border sharp --prompt '> ' --height 40% --layout reverse"
+
+# ── Aliases ────────────────────────────────────────────────────
+alias ls='ls --color=auto'
+alias ll='ls -lah --color=auto'
+alias grep='grep --color=auto'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias g='git'
+alias gs='git status'
+alias gl='git log --oneline --graph --decorate'
+alias gd='git diff'
+alias vi='nvim'
+alias vim='nvim'
+alias cls='clear'
+alias open='xdg-open'
+alias explorer='xdg-open .'
+alias ipconfig='ip addr'
+alias tasklist='ps aux'
+alias taskkill='kill'
+
+# ── Editor ─────────────────────────────────────────────────────
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+# ── Locale ─────────────────────────────────────────────────────
+export LANG=en_US.UTF-8
+
+# ── Starship prompt ────────────────────────────────────────────
+command -v starship &>/dev/null && eval "$(starship init zsh)"
+
+# Fallback prompt if starship not installed
+if ! command -v starship &>/dev/null; then
+  PROMPT='%F{#0078d4}%~%f %F{white}❯%f '
+fi

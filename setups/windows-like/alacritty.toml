@@ -1,0 +1,68 @@
+# ── windows-like Alacritty config — Material Dark ─────────────
+
+[window]
+padding    = { x = 8, y = 6 }
+decorations = "full"
+opacity    = 1.0
+blur       = false
+title      = "Terminal"
+dynamic_title = true
+
+[font]
+normal  = { family = "Cascadia Code NF", style = "Regular" }
+bold    = { family = "Cascadia Code NF", style = "Bold" }
+italic  = { family = "Cascadia Code NF", style = "Italic" }
+size    = 12.0
+
+[cursor]
+style    = { shape = "Block", blinking = "Off" }
+
+[scrolling]
+history   = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+
+# ── Material Dark colors ────────────────────────────────────────
+[colors.primary]
+background = "#212121"
+foreground = "#eeffff"
+dim_foreground = "#b0bec5"
+bright_foreground = "#ffffff"
+
+[colors.cursor]
+text   = "#212121"
+cursor = "#0078d4"
+
+[colors.vi_mode_cursor]
+text   = "#212121"
+cursor = "#80cbc4"
+
+[colors.selection]
+text       = "#212121"
+background = "#0078d4"
+
+[colors.search.matches]
+foreground = "#212121"
+background = "#ffb300"
+
+[colors.normal]
+black   = "#546e7a"
+red     = "#ff5252"
+green   = "#69f0ae"
+yellow  = "#ffb300"
+blue    = "#0078d4"
+magenta = "#e040fb"
+cyan    = "#40c4ff"
+white   = "#b0bec5"
+
+[colors.bright]
+black   = "#78909c"
+red     = "#ff5252"
+green   = "#69f0ae"
+yellow  = "#ffd740"
+blue    = "#40c4ff"
+magenta = "#ea80fc"
+cyan    = "#84ffff"
+white   = "#eeffff"

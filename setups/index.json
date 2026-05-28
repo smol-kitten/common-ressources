@@ -1,0 +1,48 @@
+{
+  "description": "Curated dotfile bundles for Hyprland (Wayland) desktops. Each setup is a self-contained folder of drop-in config files targeting a specific aesthetic or workflow.",
+  "target_os": "Arch Linux (or any distro with Hyprland, Waybar, Rofi, Dunst, Alacritty, Zsh)",
+  "disclaimer": "Config files are provided as starting points. Adjust monitor names, keybinds, and font paths to match your hardware.",
+  "deploy_hint": "Copy files to the paths listed in each setup's setup.json, then reload Hyprland with: hyprctl reload",
+  "setups": [
+    {
+      "id": "mac-like",
+      "name": "macOS-like",
+      "tagline": "Clean, light, Catppuccin Latte — macOS aesthetics on Linux",
+      "theme_colors": { "bg": "#eff1f5", "fg": "#4c4f69", "accent": "#1e66f5", "surface": "#ccd0da" },
+      "bar_position": "top",
+      "style": "minimal, rounded, blurred, light",
+      "recommended_packages": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "swww", "catppuccin-gtk-theme-latte"],
+      "file": "setups/mac-like/setup.json"
+    },
+    {
+      "id": "windows-like",
+      "name": "Windows 11-like",
+      "tagline": "Bottom taskbar, centered icons, acrylic dark glass — Windows feel on Wayland",
+      "theme_colors": { "bg": "#202020", "fg": "#ffffff", "accent": "#0078d4", "surface": "#2d2d2d" },
+      "bar_position": "bottom",
+      "style": "dark, centered taskbar, frosted glass",
+      "recommended_packages": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "swww"],
+      "file": "setups/windows-like/setup.json"
+    },
+    {
+      "id": "programming",
+      "name": "Programming",
+      "tagline": "Tokyo Night, maximum screen space, Starship prompt, dev-first keybinds",
+      "theme_colors": { "bg": "#1a1b26", "fg": "#c0caf5", "accent": "#7aa2f7", "surface": "#24283b" },
+      "bar_position": "top",
+      "style": "dark, minimal, information-dense",
+      "recommended_packages": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "starship", "swww", "github-cli", "fzf", "ripgrep", "bat", "eza"],
+      "file": "setups/programming/setup.json"
+    },
+    {
+      "id": "pride",
+      "name": "Pride",
+      "tagline": "Trans-flag base, rainbow animated borders, vibrant and expressive",
+      "theme_colors": { "bg": "#0d0221", "fg": "#ffffff", "trans_blue": "#55cdfc", "trans_pink": "#f7a8b8" },
+      "bar_position": "top",
+      "style": "dark, colorful, expressive, animated",
+      "recommended_packages": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "swww"],
+      "file": "setups/pride/setup.json"
+    }
+  ]
+}

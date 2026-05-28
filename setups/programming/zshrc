@@ -1,0 +1,154 @@
+# ── programming Zsh — Tokyo Night + Starship ──────────────────
+
+# ── Path ───────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
+
+# ── Zsh options ────────────────────────────────────────────────
+setopt AUTO_CD
+setopt GLOB_DOTS
+setopt EXTENDED_GLOB
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt INTERACTIVE_COMMENTS
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=100000
+SAVEHIST=100000
+
+# ── Completion ─────────────────────────────────────────────────
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*:descriptions' format '%F{#7aa2f7}── %d ──%f'
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons --color=always $realpath 2>/dev/null'
+
+# ── Plugins ────────────────────────────────────────────────────
+[[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#414868"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_HIGHLIGHT_STYLES[comment]="fg=#565f89"
+
+# History substring search keybindings
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# ── zoxide ─────────────────────────────────────────────────────
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh --cmd cd)"
+
+# ── fzf ────────────────────────────────────────────────────────
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
+export FZF_DEFAULT_OPTS="
+  --color=bg+:#24283b,bg:#1a1b26,spinner:#7aa2f7,hl:#f7768e
+  --color=fg:#c0caf5,header:#565f89,info:#7aa2f7,pointer:#7aa2f7
+  --color=marker:#9ece6a,fg+:#c0caf5,prompt:#7aa2f7,hl+:#f7768e
+  --color=border:#3b4261
+  --border rounded --prompt '  ' --pointer '▶' --marker '✓'
+  --height 50% --layout reverse --info inline"
+export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always --line-range :100 {} 2>/dev/null || cat {}'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --icons --level=2 --color=always {} 2>/dev/null'"
+
+# ── Aliases ────────────────────────────────────────────────────
+alias ls='eza --icons --group-directories-first --color=always'
+alias ll='eza -lah --icons --group-directories-first --git --color=always'
+alias lt='eza --tree --icons --level=2 --color=always'
+alias la='eza -a --icons --color=always'
+alias cat='bat --style=auto'
+alias less='bat --style=plain'
+alias grep='rg'
+alias find='fd'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias -- -='cd -'
+
+# Git
+alias g='git'
+alias ga='git add'
+alias gaa='git add -A'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gp='git push'
+alias gpf='git push --force-with-lease'
+alias gpl='git pull'
+alias gl='git log --oneline --graph --decorate --all'
+alias gs='git status'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gb='git branch'
+alias gco='git checkout'
+alias grs='git restore --staged'
+alias grh='git reset HEAD'
+alias lg='lazygit'
+
+# Dev tools
+alias vi='nvim'
+alias vim='nvim'
+alias v='nvim'
+alias top='btop'
+alias df='duf'
+alias du='dust'
+alias ping='gping'
+alias http='xh'
+alias ps='procs'
+alias diff='delta'
+alias open='xdg-open'
+alias j='zoxide'
+
+# Docker
+alias d='docker'
+alias dc='docker compose'
+alias dps='docker ps'
+alias di='docker images'
+
+# ── Editor ─────────────────────────────────────────────────────
+export EDITOR='nvim'
+export VISUAL='nvim'
+export PAGER='bat --plain'
+export MANPAGER='sh -c "col -bx | bat -l man -p"'
+
+# ── Language / locale ──────────────────────────────────────────
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# ── Dev env managers ───────────────────────────────────────────
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+
+# pyenv
+command -v pyenv &>/dev/null && eval "$(pyenv init -)"
+
+# rbenv
+command -v rbenv &>/dev/null && eval "$(rbenv init -)"
+
+# ── Starship prompt — Tokyo Night ─────────────────────────────
+export STARSHIP_CONFIG="$HOME/.config/starship.toml"
+command -v starship &>/dev/null && eval "$(starship init zsh)"
+
+# Minimal fallback prompt
+if ! command -v starship &>/dev/null; then
+  PROMPT='%F{#7aa2f7}%~%f %F{#9ece6a}❯%f '
+  RPROMPT='%F{#565f89}%*%f'
+fi

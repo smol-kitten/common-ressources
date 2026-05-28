@@ -1,0 +1,51 @@
+{
+  "id": "pride",
+  "name": "Pride",
+  "description": "A vibrant, expressive desktop celebrating LGBTQ+ identity. Trans-flag color base (#55cdfc / #f7a8b8 / white), animated rainbow borders, colorful notifications and prompt.",
+  "color_scheme": "Trans Pride + Rainbow",
+  "colors": {
+    "bg":           "#0d0221",
+    "surface":      "#1a0a2e",
+    "surface2":     "#2a1052",
+    "fg":           "#ffffff",
+    "subtext":      "#d4b8e0",
+    "trans_blue":   "#55cdfc",
+    "trans_pink":   "#f7a8b8",
+    "trans_white":  "#ffffff",
+    "rainbow_red":  "#ff4d4d",
+    "rainbow_orange":"#ff9a3c",
+    "rainbow_yellow":"#ffdd57",
+    "rainbow_green": "#57e389",
+    "rainbow_blue":  "#4db6e8",
+    "rainbow_violet":"#c061cb",
+    "bi_pink":      "#d60270",
+    "bi_purple":    "#9b4f96",
+    "bi_blue":      "#0038a8",
+    "pan_pink":     "#ff218c",
+    "pan_yellow":   "#ffd800",
+    "pan_blue":     "#21b1ff",
+    "nonbinary_yellow": "#fcf434",
+    "nonbinary_white":  "#ffffff",
+    "nonbinary_purple": "#9c59d1",
+    "nonbinary_black":  "#2c2c2c"
+  },
+  "files": [
+    { "source": "hyprland.conf",  "target": "~/.config/hypr/hyprland.conf",          "description": "Hyprland with rainbow border animation" },
+    { "source": "waybar.json",    "target": "~/.config/waybar/config",                "description": "Waybar with pride flag gradient" },
+    { "source": "waybar.css",     "target": "~/.config/waybar/style.css",             "description": "Rainbow/trans-flag Waybar CSS" },
+    { "source": "alacritty.toml", "target": "~/.config/alacritty/alacritty.toml",     "description": "Trans-flag themed terminal" },
+    { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",             "description": "Pride-colored launcher" },
+    { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",                "description": "Colorful notifications" },
+    { "source": "zshrc",          "target": "~/.zshrc",                               "description": "Zsh with rainbow prompt" }
+  ],
+  "recommended_packages": {
+    "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh"],
+    "optional": ["swww", "ttf-jetbrains-mono-nerd", "noto-fonts-emoji", "grimblast", "cliphist", "wl-clipboard"],
+    "aur": ["zsh-autosuggestions", "zsh-syntax-highlighting"]
+  },
+  "wallpaper_hint": "A pride flag wallpaper, trans flag gradient, or rainbow abstract. swww img ~/pride-wallpaper.png --transition-type wipe --transition-angle 30",
+  "gtk_theme": "Orchis-Purple-Dark",
+  "icon_theme": "Papirus-Dark",
+  "cursor_theme": "Bibata-Modern-Rainbow",
+  "font": { "ui": "Noto Sans 11", "mono": "JetBrainsMono Nerd Font 12" }
+}

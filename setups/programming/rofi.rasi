@@ -1,0 +1,147 @@
+/* ── programming Rofi — Tokyo Night ──────────────────────────── */
+
+configuration {
+    modi:           "drun,run,window,ssh";
+    show-icons:     true;
+    icon-theme:     "Papirus-Dark";
+    drun-display-format: "{name}";
+    window-format:  "{w} · {c} · {t}";
+    font:           "JetBrainsMono Nerd Font 12";
+    terminal:       "alacritty";
+    ssh-client:     "ssh";
+}
+
+@theme "blank"
+
+* {
+    bg:      #1a1b26;
+    bg2:     #24283b;
+    bg3:     #292e42;
+    border:  #3b4261;
+    text:    #c0caf5;
+    subtext: #565f89;
+    accent:  #7aa2f7;
+    urgent:  #f7768e;
+    match:   #e0af68;
+
+    background-color: transparent;
+    text-color:       @text;
+}
+
+window {
+    background-color: @bg;
+    border-color:     @border;
+    border:           1px;
+    border-radius:    10px;
+    width:            600px;
+    padding:          0;
+    location:         center;
+    anchor:           center;
+    y-offset:         -80px;
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          0;
+    children:         [ inputbar, message, listview ];
+}
+
+inputbar {
+    background-color: @bg2;
+    border-color:     @border;
+    border:           0 0 1px 0;
+    border-radius:    10px 10px 0 0;
+    padding:          12px 14px;
+    children:         [ prompt, textbox-prompt-colon, entry, num-filtered-rows, textbox-num-sep, num-rows, case-indicator ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    padding:          0 6px 0 0;
+}
+
+textbox-prompt-colon {
+    background-color: transparent;
+    text-color:       @subtext;
+    str:              "";
+    padding:          0;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @text;
+    placeholder:      " search…";
+    placeholder-color: @subtext;
+    cursor:           text;
+}
+
+num-filtered-rows,
+num-rows,
+textbox-num-sep {
+    background-color: transparent;
+    text-color:       @subtext;
+    font:             "JetBrainsMono Nerd Font 10";
+}
+
+case-indicator {
+    background-color: transparent;
+    text-color:       @subtext;
+}
+
+message {
+    background-color: @bg2;
+    border:           0 0 1px 0;
+    border-color:     @border;
+    padding:          4px 14px;
+}
+
+textbox {
+    background-color: transparent;
+    text-color:       @subtext;
+    font:             "JetBrainsMono Nerd Font 10";
+}
+
+listview {
+    background-color: transparent;
+    padding:          6px 4px;
+    lines:            9;
+    columns:          1;
+    scrollbar:        false;
+    spacing:          2px;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    6px;
+    padding:          7px 12px;
+    spacing:          10px;
+    children:         [ element-icon, element-text ];
+    orientation:      horizontal;
+}
+
+element.selected.normal {
+    background-color: rgba(122, 162, 247, 0.15);
+    text-color:       @accent;
+}
+
+element.selected.urgent {
+    background-color: rgba(247, 118, 142, 0.12);
+    text-color:       @urgent;
+}
+
+element.urgent {
+    text-color: @urgent;
+}
+
+element-icon {
+    size:             18px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    highlight:        bold #e0af68;
+}
