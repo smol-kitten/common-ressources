@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTTP Status Codes</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f0f12;
+    font-family: system-ui, -apple-system, sans-serif;
+    padding: 28px;
+    color: #ccc;
+  }
+  h1 {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  .section { margin-bottom: 16px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.5); }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .section-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .row {
+    display: flex;
+    align-items: baseline;
+    padding: 7px 14px;
+    gap: 12px;
+    border-top: 1px solid rgba(255,255,255,0.03);
+    font-size: 12px;
+  }
+  .row:nth-child(even) { background: rgba(255,255,255,0.02); }
+  .code {
+    font-family: 'JetBrains Mono', Menlo, monospace;
+    font-size: 13px;
+    font-weight: 600;
+    width: 38px;
+    flex-shrink: 0;
+  }
+  .name {
+    width: 210px;
+    flex-shrink: 0;
+    color: #ddd;
+    font-size: 12px;
+  }
+  .desc {
+    flex: 1;
+    color: #666;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  .cacheable {
+    flex-shrink: 0;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.06);
+    color: #555;
+  }
+  .cacheable.yes { background: rgba(50,200,100,0.15); color: #5c9; }
+</style>
+</head>
+<body>
+<h1>HTTP Status Code Reference — common-ressources</h1>
+<div id="content"></div>
+
+<script>
+const CODES = "__CODES__";
+
+const categories = {
+  informational: { label: '1xx Informational', bg: '#0e1e26', header: '#0f2530', dot: '#3cb', text: '#3cb' },
+  success:       { label: '2xx Success',        bg: '#0e1e12', header: '#0f2515', dot: '#4d9', text: '#4d9' },
+  redirection:   { label: '3xx Redirection',    bg: '#1e1a0a', header: '#25200d', dot: '#db7', text: '#db7' },
+  'client-error':{ label: '4xx Client Error',   bg: '#1e0e0e', header: '#250f0f', dot: '#d64', text: '#d64' },
+  'server-error':{ label: '5xx Server Error',   bg: '#180e1e', header: '#1e0f25', dot: '#c5a', text: '#c5a' },
+};
+
+const order = ['informational','success','redirection','client-error','server-error'];
+const grouped = {};
+for (const code of CODES) {
+  (grouped[code.category] = grouped[code.category] || []).push(code);
+}
+
+let html = '';
+for (const cat of order) {
+  const items = grouped[cat] || [];
+  if (!items.length) continue;
+  const cfg = categories[cat];
+  const rows = items.map(c => `
+    <div class="row" style="background:${cfg.bg}">
+      <span class="code" style="color:${cfg.dot}">${c.code}</span>
+      <span class="name">${c.name}</span>
+      <span class="desc">${c.description}</span>
+      <span class="cacheable ${c.cacheable ? 'yes' : ''}">${c.cacheable ? 'cacheable' : ''}</span>
+    </div>`).join('');
+  html += `<div class="section">
+    <div class="section-header" style="background:${cfg.header};color:${cfg.text}">
+      <span class="section-dot" style="background:${cfg.dot}"></span>
+      ${cfg.label}
+    </div>
+    ${rows}
+  </div>`;
+}
+document.getElementById('content').innerHTML = html;
+</script>
+</body>
+</html>

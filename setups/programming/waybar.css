@@ -1,0 +1,153 @@
+/* ── programming Waybar theme — Tokyo Night ───────────────────── */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+window#waybar {
+    background: rgba(26, 27, 38, 0.88);
+    color: #c0caf5;
+    border-radius: 10px;
+    border: 1px solid rgba(41, 46, 66, 0.8);
+}
+
+/* ── Workspaces ── */
+#workspaces {
+    background: transparent;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #565f89;
+    padding: 0 6px;
+    min-width: 20px;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+}
+
+#workspaces button:hover {
+    background: rgba(122, 162, 247, 0.1);
+    color: #7aa2f7;
+}
+
+#workspaces button.active {
+    color: #7aa2f7;
+    background: rgba(122, 162, 247, 0.18);
+}
+
+#workspaces button.urgent {
+    color: #f7768e;
+    background: rgba(247, 118, 142, 0.12);
+}
+
+/* ── Submap indicator ── */
+#submap {
+    color: #e0af68;
+    background: rgba(224, 175, 104, 0.12);
+    padding: 0 8px;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+/* ── Window title ── */
+#window {
+    color: #737aa2;
+    font-size: 11px;
+    padding: 0 8px;
+}
+
+/* ── Clock ── */
+#clock {
+    color: #c0caf5;
+    font-weight: 600;
+    padding: 0 12px;
+}
+
+/* ── Right modules shared ── */
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#network,
+#battery,
+#custom-updates,
+#tray,
+#custom-power {
+    padding: 0 8px;
+    color: #a9b1d6;
+    background: rgba(36, 40, 59, 0.6);
+    border-radius: 6px;
+    margin: 4px 2px;
+    transition: all 0.15s ease;
+}
+
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#custom-updates:hover {
+    background: rgba(122, 162, 247, 0.12);
+    color: #c0caf5;
+}
+
+/* Module-specific accent colors */
+#cpu      { color: #7dcfff; }
+#memory   { color: #9ece6a; }
+#network  { color: #7aa2f7; }
+#pulseaudio { color: #bb9af7; }
+
+/* ── Temperature ── */
+#temperature.critical {
+    color: #f7768e;
+    background: rgba(247, 118, 142, 0.12);
+    animation: blink-crit 1s steps(1) infinite;
+}
+
+/* ── Battery states ── */
+#battery.warning  { color: #e0af68; }
+#battery.critical {
+    color: #f7768e;
+    animation: blink-crit 1s steps(1) infinite;
+}
+
+/* ── Updates ── */
+#custom-updates {
+    color: #e0af68;
+}
+
+@keyframes blink-crit {
+    to { background: rgba(247, 118, 142, 0.18); }
+}
+
+/* ── Power button ── */
+#custom-power {
+    color: #565f89;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+#custom-power:hover {
+    color: #f7768e;
+    background: rgba(247, 118, 142, 0.1);
+}
+
+/* ── Tray ── */
+#tray {
+    background: transparent;
+}
+
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: rgba(247, 118, 142, 0.1);
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "type": "A",
+    "name": "Address",
+    "class": "IN",
+    "description": "Maps a hostname to an IPv4 address.",
+    "example_value": "93.184.216.34",
+    "numeric_id": 1,
+    "rfc": "RFC 1035"
+  },
+  {
+    "type": "AAAA",
+    "name": "IPv6 Address",
+    "class": "IN",
+    "description": "Maps a hostname to an IPv6 address.",
+    "example_value": "2606:2800:220:1:248:1893:25c8:1946",
+    "numeric_id": 28,
+    "rfc": "RFC 3596"
+  },
+  {
+    "type": "CNAME",
+    "name": "Canonical Name",
+    "class": "IN",
+    "description": "Alias of one name to another. The DNS lookup continues with the new name.",
+    "example_value": "example.com.",
+    "numeric_id": 5,
+    "rfc": "RFC 1035"
+  },
+  {
+    "type": "MX",
+    "name": "Mail Exchanger",
+    "class": "IN",
+    "description": "Specifies mail servers responsible for accepting email for a domain. Includes a priority value (lower = higher priority).",
+    "example_value": "10 mail.example.com.",
+    "numeric_id": 15,
+    "rfc": "RFC 1035"
+  },
+  {
+    "type": "NS",
+    "name": "Name Server",
+    "class": "IN",
+    "description": "Delegates a DNS zone to use the given authoritative name servers.",
+    "example_value": "ns1.example.com.",
+    "numeric_id": 2,
+    "rfc": "RFC 1035"
+  },
+  {
+    "type": "PTR",
+    "name": "Pointer",
+    "class": "IN",
+    "description": "Used for reverse DNS lookups — maps an IP address back to a hostname. Lives in the .in-addr.arpa or .ip6.arpa zone.",
+    "example_value": "example.com.",
+    "numeric_id": 12,
+    "rfc": "RFC 1035"
+  },
+  {
+    "type": "SOA",
+    "name": "Start of Authority",
+    "class": "IN",
+    "description": "Stores administrative information about a DNS zone: primary nameserver, email of the zone admin, zone serial number, and timers.",
+    "example_value": "ns1.example.com. admin.example.com. 2024010101 3600 900 604800 300",
+    "numeric_id": 6,
+    "rfc": "RFC 1035"
+  },
+  {
+    "type": "TXT",
+    "name": "Text",
+    "class": "IN",
+    "description": "Holds arbitrary text. Used for SPF, DKIM, DMARC, domain verification tokens, and other machine-readable data.",
+    "example_value": "\"v=spf1 include:_spf.google.com ~all\"",
+    "numeric_id": 16,
+    "rfc": "RFC 1035"
+  },
+  {
+    "type": "SRV",
+    "name": "Service Locator",
+    "class": "IN",
+    "description": "Specifies the location (hostname and port) of servers for specified services. Format: priority weight port target.",
+    "example_value": "10 5 443 sip.example.com.",
+    "numeric_id": 33,
+    "rfc": "RFC 2782"
+  },
+  {
+    "type": "CAA",
+    "name": "Certification Authority Authorization",
+    "class": "IN",
+    "description": "Specifies which Certificate Authorities (CAs) are allowed to issue SSL/TLS certificates for a domain.",
+    "example_value": "0 issue \"letsencrypt.org\"",
+    "numeric_id": 257,
+    "rfc": "RFC 8659"
+  },
+  {
+    "type": "DKIM",
+    "name": "DomainKeys Identified Mail",
+    "class": "IN",
+    "description": "Stored as a TXT record at a selector subdomain (_domainkey). Contains the public key used to verify DKIM email signatures.",
+    "example_value": "\"v=DKIM1; k=rsa; p=MIGfMA0...\"",
+    "numeric_id": null,
+    "rfc": "RFC 6376"
+  },
+  {
+    "type": "SPF",
+    "name": "Sender Policy Framework",
+    "class": "IN",
+    "description": "Published as a TXT record specifying which mail servers are permitted to send email on behalf of a domain.",
+    "example_value": "\"v=spf1 ip4:192.0.2.0/24 include:_spf.google.com -all\"",
+    "numeric_id": null,
+    "rfc": "RFC 7208"
+  },
+  {
+    "type": "DMARC",
+    "name": "Domain-based Message Authentication, Reporting & Conformance",
+    "class": "IN",
+    "description": "Published as a TXT record at _dmarc subdomain. Defines policy for SPF/DKIM failures and reporting email address.",
+    "example_value": "\"v=DMARC1; p=quarantine; rua=mailto:dmarc@example.com\"",
+    "numeric_id": null,
+    "rfc": "RFC 7489"
+  },
+  {
+    "type": "ALIAS",
+    "name": "Alias (ANAME)",
+    "class": "IN",
+    "description": "Non-standard record (DNS provider-specific) that allows CNAME-like behaviour at the zone apex (@). Resolves to the IP of the target at query time.",
+    "example_value": "myapp.netlify.app.",
+    "numeric_id": null,
+    "rfc": "Vendor extension"
+  },
+  {
+    "type": "NAPTR",
+    "name": "Naming Authority Pointer",
+    "class": "IN",
+    "description": "Used by DDDS (Dynamic Delegation Discovery System) applications such as SIP URI routing and ENUM (telephone number to URI mapping).",
+    "example_value": "100 10 \"U\" \"E2U+sip\" \"!^.*$!sip:info@example.com!\" .",
+    "numeric_id": 35,
+    "rfc": "RFC 3403"
+  },
+  {
+    "type": "HTTPS",
+    "name": "HTTPS Service Binding",
+    "class": "IN",
+    "description": "A newer record type (SVCB subtype) that helps browsers connect to HTTPS services more efficiently, including ECH and alt-svc parameters.",
+    "example_value": "1 . alpn=\"h3,h2\"",
+    "numeric_id": 65,
+    "rfc": "RFC 9460"
+  },
+  {
+    "type": "DS",
+    "name": "Delegation Signer",
+    "class": "IN",
+    "description": "Part of DNSSEC. Contains a hash of a child zone's DNSKEY record, establishing the chain of trust between parent and child zones.",
+    "example_value": "12345 8 2 AABBCC...",
+    "numeric_id": 43,
+    "rfc": "RFC 4034"
+  },
+  {
+    "type": "DNSKEY",
+    "name": "DNS Key",
+    "class": "IN",
+    "description": "Part of DNSSEC. Stores the public key used to verify DNSSEC signatures (RRSIG records) in a zone.",
+    "example_value": "256 3 8 AwEAAb...",
+    "numeric_id": 48,
+    "rfc": "RFC 4034"
+  },
+  {
+    "type": "TLSA",
+    "name": "TLS Authentication",
+    "class": "IN",
+    "description": "Part of DANE. Associates a TLS server certificate or public key with a domain name, allowing pinning without CAs.",
+    "example_value": "3 1 1 ABC123...",
+    "numeric_id": 52,
+    "rfc": "RFC 6698"
+  },
+  {
+    "type": "LOC",
+    "name": "Location",
+    "class": "IN",
+    "description": "Stores geographic location of a host (latitude, longitude, altitude, precision). Rarely used in practice.",
+    "example_value": "51 30 12.748 N 0 7 39.612 W 0m 0m 0m 0m",
+    "numeric_id": 29,
+    "rfc": "RFC 1876"
+  }
+]

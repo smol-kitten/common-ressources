@@ -1,0 +1,28 @@
+/* Theme: Tokyo Night */
+/* Source: https://github.com/enkia/tokyo-night-vscode-theme */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #1A1B26;
+  --foreground:        #C0CAF5;
+  --cursor:            #C0CAF5;
+  --selection:         #283457;
+
+  --black:             #15161E;
+  --red:               #F7768E;
+  --green:             #9ECE6A;
+  --yellow:            #E0AF68;
+  --blue:              #7AA2F7;
+  --magenta:           #BB9AF7;
+  --cyan:              #7DCFFF;
+  --white:             #A9B1D6;
+
+  --bright-black:      #414868;
+  --bright-red:        #F7768E;
+  --bright-green:      #9ECE6A;
+  --bright-yellow:     #E0AF68;
+  --bright-blue:       #7AA2F7;
+  --bright-magenta:    #BB9AF7;
+  --bright-cyan:       #7DCFFF;
+  --bright-white:      #C0CAF5;
+}

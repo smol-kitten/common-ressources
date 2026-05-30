@@ -1,0 +1,106 @@
+/* ── windows-like Rofi — Material Dark + Win Blue ─────────────
+   Start-menu style: bottom-left, list layout                    */
+
+configuration {
+    modi:           "drun,run,window";
+    show-icons:     true;
+    icon-theme:     "Papirus-Dark";
+    drun-display-format: "{name}";
+    window-format:  "{w} · {c} · {t}";
+    font:           "Segoe UI 12";
+    terminal:       "alacritty";
+}
+
+@theme "blank"
+
+* {
+    bg:      #252526;
+    bg2:     #2d2d2d;
+    border:  #0078d4;
+    text:    #cccccc;
+    subtext: #707070;
+    accent:  #0078d4;
+    urgent:  #ff5252;
+
+    background-color: transparent;
+    text-color:       @text;
+}
+
+window {
+    background-color: @bg;
+    border-color:     @border;
+    border:           1px;
+    border-radius:    4px;
+    width:            480px;
+    padding:          0;
+    location:         southwest;
+    anchor:           southwest;
+    x-offset:         12px;
+    y-offset:         -48px;
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          0;
+    children:         [ listview, inputbar ];
+}
+
+inputbar {
+    background-color: #1e1e1e;
+    border-color:     @border;
+    border:           1px 0 0 0;
+    padding:          10px 14px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    padding:          0 8px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @text;
+    placeholder:      "Type to search…";
+    placeholder-color: @subtext;
+    cursor:           text;
+}
+
+listview {
+    background-color: transparent;
+    padding:          8px 4px;
+    lines:            10;
+    columns:          1;
+    scrollbar:        false;
+    spacing:          1px;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    2px;
+    padding:          7px 12px;
+    spacing:          10px;
+    children:         [ element-icon, element-text ];
+    orientation:      horizontal;
+}
+
+element.selected.normal {
+    background-color: rgba(0, 120, 212, 0.25);
+    text-color:       #ffffff;
+}
+
+element.urgent {
+    text-color: @urgent;
+}
+
+element-icon {
+    size:             18px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}

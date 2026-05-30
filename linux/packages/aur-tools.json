@@ -1,0 +1,112 @@
+[
+  {
+    "name": "yay",
+    "slug": "yay",
+    "description": "Yet Another Yogurt — a fast AUR helper written in Go with pacman-compatible syntax and support for development packages.",
+    "language": "Go",
+    "install-cmd": "git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si",
+    "homepage": "https://github.com/Jguer/yay",
+    "stars-approx": 25000,
+    "category": "aur-helper",
+    "tags": ["aur", "go", "pacman-wrapper", "popular", "active"]
+  },
+  {
+    "name": "paru",
+    "slug": "paru",
+    "description": "Feature-rich AUR helper written in Rust. Supports review diffs, PKGBUILD editing, and news reading. Considered the modern successor to yay.",
+    "language": "Rust",
+    "install-cmd": "git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si",
+    "homepage": "https://github.com/morganamilo/paru",
+    "stars-approx": 6000,
+    "category": "aur-helper",
+    "tags": ["aur", "rust", "pacman-wrapper", "popular", "active", "diff-review"]
+  },
+  {
+    "name": "trizen",
+    "slug": "trizen",
+    "description": "Lightweight AUR helper written in Perl with interactive search and a focus on simplicity.",
+    "language": "Perl",
+    "install-cmd": "git clone https://aur.archlinux.org/trizen.git && cd trizen && makepkg -si",
+    "homepage": "https://github.com/trizen/trizen",
+    "stars-approx": 1700,
+    "category": "aur-helper",
+    "tags": ["aur", "perl", "lightweight", "interactive"]
+  },
+  {
+    "name": "pikaur",
+    "slug": "pikaur",
+    "description": "AUR helper that builds all AUR packages in a single makepkg call to avoid privilege escalation loops. Written in Python.",
+    "language": "Python",
+    "install-cmd": "git clone https://aur.archlinux.org/pikaur.git && cd pikaur && makepkg -si",
+    "homepage": "https://github.com/actionless/pikaur",
+    "stars-approx": 1200,
+    "category": "aur-helper",
+    "tags": ["aur", "python", "privilege-safe", "batch-build"]
+  },
+  {
+    "name": "bauerbill",
+    "slug": "bauerbill",
+    "description": "Advanced AUR and pacman wrapper with dependency resolution and blacklisting support. Extends powerpill.",
+    "language": "Python",
+    "install-cmd": "yay -S bauerbill",
+    "homepage": "https://xyne.dev/projects/bauerbill/",
+    "stars-approx": 80,
+    "category": "pacman-wrapper",
+    "tags": ["aur", "python", "advanced", "powerpill"]
+  },
+  {
+    "name": "makepkg",
+    "slug": "makepkg",
+    "description": "The official Arch Linux package build tool. Reads PKGBUILDs to compile and package software. Ships with pacman.",
+    "language": "Bash",
+    "install-cmd": "pacman -S pacman",
+    "homepage": "https://man.archlinux.org/man/makepkg.8",
+    "stars-approx": 0,
+    "category": "build-tool",
+    "tags": ["official", "pkgbuild", "core", "build", "pacman"]
+  },
+  {
+    "name": "aurutils",
+    "slug": "aurutils",
+    "description": "A collection of scripts for managing local AUR package repositories, building, and syncing. Designed for power users.",
+    "language": "Bash",
+    "install-cmd": "git clone https://aur.archlinux.org/aurutils.git && cd aurutils && makepkg -si",
+    "homepage": "https://github.com/AladW/aurutils",
+    "stars-approx": 1000,
+    "category": "build-tool",
+    "tags": ["aur", "bash", "local-repo", "scripting", "power-user"]
+  },
+  {
+    "name": "pacaur",
+    "slug": "pacaur",
+    "description": "Minimalist AUR helper focused on minimal interaction. Uses cower under the hood. Largely unmaintained.",
+    "language": "Bash",
+    "install-cmd": "git clone https://aur.archlinux.org/pacaur.git && cd pacaur && makepkg -si",
+    "homepage": "https://github.com/rmarquis/pacaur",
+    "stars-approx": 1600,
+    "category": "aur-helper",
+    "tags": ["aur", "bash", "minimal", "legacy", "unmaintained"]
+  },
+  {
+    "name": "pamac",
+    "slug": "pamac",
+    "description": "Graphical and CLI package manager from Manjaro with AUR, Flatpak, and Snap support. Includes a GTK GUI application.",
+    "language": "Vala",
+    "install-cmd": "yay -S pamac-aur",
+    "homepage": "https://gitlab.manjaro.org/applications/pamac",
+    "stars-approx": 900,
+    "category": "pacman-wrapper",
+    "tags": ["aur", "gui", "gtk", "flatpak", "snap", "manjaro"]
+  },
+  {
+    "name": "asp",
+    "slug": "asp",
+    "description": "Arch Source Package tool — fetches PKGBUILDs from the official Arch Linux SVN repository. Useful for inspecting or modifying official packages.",
+    "language": "Bash",
+    "install-cmd": "pacman -S asp",
+    "homepage": "https://github.com/archlinux/asp",
+    "stars-approx": 400,
+    "category": "build-tool",
+    "tags": ["official", "pkgbuild", "svn", "inspection", "core"]
+  }
+]

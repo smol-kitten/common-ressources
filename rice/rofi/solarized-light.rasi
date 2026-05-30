@@ -1,0 +1,26 @@
+/* Theme: Solarized Light */
+/* Source: https://ethanschoonover.com/solarized/ */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #FDF6E3;
+    foreground:                    #657B83;
+
+    normal-background:             #FDF6E3;
+    normal-foreground:             #657B83;
+    selected-normal-background:    #268BD2;
+    selected-normal-foreground:    #FDF6E3;
+
+    active-background:             #859900;
+    active-foreground:             #FDF6E3;
+    selected-active-background:    #586E75;
+    selected-active-foreground:    #FDF6E3;
+
+    urgent-background:             #DC322F;
+    urgent-foreground:             #FDF6E3;
+    selected-urgent-background:    #CB4B16;
+    selected-urgent-foreground:    #FDF6E3;
+
+    border-color:                  #002B36;
+    separatorcolor:                #002B36;
+}

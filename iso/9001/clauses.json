@@ -1,0 +1,373 @@
+{
+  "standard": "ISO 9001:2015",
+  "title": "Quality management systems — Requirements",
+  "edition": "Fifth edition, 2015-09-15",
+  "structure": "High Level Structure (HLS) — aligned with ISO 14001, ISO 45001, ISO 27001",
+  "clauses": [
+    {
+      "id": "4",
+      "name": "Context of the organization",
+      "subclauses": [
+        {
+          "id": "4.1",
+          "name": "Understanding the organization and its context",
+          "checklist": [
+            "Identify internal issues relevant to the QMS purpose (e.g. culture, capabilities, processes)",
+            "Identify external issues relevant to the QMS purpose (e.g. regulatory, market, competitive)",
+            "Monitor and review this information at planned intervals"
+          ]
+        },
+        {
+          "id": "4.2",
+          "name": "Understanding the needs and expectations of interested parties",
+          "checklist": [
+            "Determine relevant interested parties (customers, regulators, suppliers, employees, etc.)",
+            "Determine their relevant requirements",
+            "Monitor and review this information"
+          ]
+        },
+        {
+          "id": "4.3",
+          "name": "Determining the scope of the QMS",
+          "checklist": [
+            "Consider external/internal issues from 4.1 and requirements from 4.2",
+            "Determine applicable products and services",
+            "Apply all requirements that can be applied; justify any non-applicable clauses",
+            "Make the scope available as documented information"
+          ]
+        },
+        {
+          "id": "4.4",
+          "name": "QMS and its processes",
+          "checklist": [
+            "Determine the processes needed and their application throughout the organization",
+            "Determine inputs, outputs, sequence, and interaction of processes",
+            "Determine criteria, methods, measures, and KPIs",
+            "Assign responsibilities and authorities for processes",
+            "Address risks and opportunities for each process",
+            "Evaluate and change processes to achieve intended results"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Leadership",
+      "subclauses": [
+        {
+          "id": "5.1",
+          "name": "Leadership and commitment",
+          "checklist": [
+            "Top management takes accountability for the QMS",
+            "Quality policy and quality objectives are compatible with strategic direction",
+            "QMS requirements are integrated into business processes",
+            "Process approach and risk-based thinking are promoted",
+            "Resources required for the QMS are available",
+            "Communicate importance of quality management",
+            "QMS achieves its intended results",
+            "Support other relevant management roles"
+          ]
+        },
+        {
+          "id": "5.1.2",
+          "name": "Customer focus (sub-element of 5.1)",
+          "checklist": [
+            "Customer and statutory/regulatory requirements are determined and met",
+            "Risks and opportunities that affect product/service conformity are addressed",
+            "Customer satisfaction is maintained"
+          ]
+        },
+        {
+          "id": "5.2",
+          "name": "Policy",
+          "checklist": [
+            "Quality policy is appropriate to the organization's purpose and context",
+            "Policy provides a framework for quality objectives",
+            "Policy commits to satisfying applicable requirements",
+            "Policy commits to continual improvement",
+            "Policy is available as documented information",
+            "Policy is communicated, understood, and applied"
+          ]
+        },
+        {
+          "id": "5.3",
+          "name": "Organizational roles, responsibilities, and authorities",
+          "checklist": [
+            "Responsibilities and authorities are assigned, communicated, and understood",
+            "QMS conforms to ISO 9001 requirements",
+            "Processes deliver intended outputs",
+            "Customer focus is promoted throughout the organization",
+            "Integrity of QMS is maintained during changes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Planning",
+      "subclauses": [
+        {
+          "id": "6.1",
+          "name": "Actions to address risks and opportunities",
+          "checklist": [
+            "Determine risks and opportunities based on 4.1 and 4.2",
+            "Plan actions to address risks and opportunities",
+            "Integrate actions into QMS processes",
+            "Evaluate the effectiveness of these actions",
+            "Actions are proportionate to potential impact on conformity"
+          ]
+        },
+        {
+          "id": "6.2",
+          "name": "Quality objectives and planning to achieve them",
+          "checklist": [
+            "Objectives are consistent with quality policy",
+            "Objectives are measurable",
+            "Objectives take into account applicable requirements",
+            "Objectives are relevant to conformity and customer satisfaction",
+            "Objectives are monitored and communicated",
+            "Objectives are updated as appropriate",
+            "Plan: what will be done, resources needed, responsible person, completion date, results evaluation method"
+          ]
+        },
+        {
+          "id": "6.3",
+          "name": "Planning of changes",
+          "checklist": [
+            "Changes to QMS are conducted in a planned manner",
+            "Consider purpose of change and potential consequences",
+            "Consider QMS integrity, resource availability, responsibility allocation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Support",
+      "subclauses": [
+        {
+          "id": "7.1",
+          "name": "Resources",
+          "checklist": [
+            "7.1.1: Determine and provide resources for QMS establishment, implementation, maintenance, and improvement",
+            "7.1.2: Determine competence requirements and ensure persons are competent",
+            "7.1.3: Ensure persons are aware of quality policy, objectives, and their contribution",
+            "7.1.4: Determine and provide infrastructure needed (buildings, equipment, IT, transport)",
+            "7.1.5: Determine and provide the environment for process operation (social, psychological, physical)",
+            "7.1.6: Measurement traceability — measuring equipment is calibrated, identified, and protected"
+          ]
+        },
+        {
+          "id": "7.2",
+          "name": "Competence",
+          "checklist": [
+            "Determine competence required for persons affecting QMS performance",
+            "Ensure persons are competent (education, training, experience)",
+            "Take actions to acquire competence and evaluate effectiveness",
+            "Retain documented information as evidence of competence"
+          ]
+        },
+        {
+          "id": "7.3",
+          "name": "Awareness",
+          "checklist": [
+            "Persons are aware of the quality policy",
+            "Persons know relevant quality objectives",
+            "Persons know their contribution to QMS effectiveness",
+            "Persons know the implications of not conforming to QMS requirements"
+          ]
+        },
+        {
+          "id": "7.4",
+          "name": "Communication",
+          "checklist": [
+            "Determine internal and external communications relevant to the QMS",
+            "What to communicate, when, to whom, how, and who communicates"
+          ]
+        },
+        {
+          "id": "7.5",
+          "name": "Documented information",
+          "checklist": [
+            "QMS includes all documented information required by the standard and by the organization",
+            "Creating and updating: ensure appropriate identification, format, and review/approval",
+            "Control: available and suitable for use, adequately protected",
+            "Control: distribution, access, retrieval, use, storage, preservation, change control, retention, disposition",
+            "Externally originated documented information is identified and controlled"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Operation",
+      "subclauses": [
+        {
+          "id": "8.1",
+          "name": "Operational planning and control",
+          "checklist": [
+            "Plan, implement, control, and maintain the processes needed to meet requirements",
+            "Establish criteria for processes and acceptance of products/services",
+            "Maintain documented information to have confidence processes were carried out as planned",
+            "Control planned changes and review unintended changes",
+            "Ensure outsourced processes are controlled"
+          ]
+        },
+        {
+          "id": "8.2",
+          "name": "Requirements for products and services",
+          "checklist": [
+            "8.2.1: Communicate with customers (information, enquiries, contracts, feedback, complaints)",
+            "8.2.2: Determine statutory/regulatory requirements before offering products/services",
+            "8.2.3: Review customer requirements and organization ability to meet them before commitment",
+            "8.2.4: Amend relevant documented information and inform affected persons when requirements change"
+          ]
+        },
+        {
+          "id": "8.3",
+          "name": "Design and development of products and services",
+          "checklist": [
+            "Establish, implement, and maintain a design and development process",
+            "Determine stages, controls, inputs, and outputs",
+            "Conduct reviews, verifications, and validations",
+            "Control design and development changes; retain documented information"
+          ]
+        },
+        {
+          "id": "8.4",
+          "name": "Control of externally provided processes, products, and services",
+          "checklist": [
+            "Ensure externally provided processes, products, and services conform to requirements",
+            "Determine type and extent of controls on external providers",
+            "Communicate requirements to external providers",
+            "Evaluate, select, monitor, and re-evaluate external providers"
+          ]
+        },
+        {
+          "id": "8.5",
+          "name": "Production and service provision",
+          "checklist": [
+            "8.5.1: Control conditions for production/service (documentation, monitoring, infrastructure)",
+            "8.5.2: Use suitable means to identify outputs and their status throughout production",
+            "8.5.3: Preserve customer property; identify, protect, safeguard",
+            "8.5.4: Preserve outputs during production and delivery",
+            "8.5.5: Meet post-delivery requirements (warranties, maintenance, recycling/disposal)",
+            "8.5.6: Review and control changes; retain documented information"
+          ]
+        },
+        {
+          "id": "8.6",
+          "name": "Release of products and services",
+          "checklist": [
+            "Implement planned arrangements to verify requirements have been met",
+            "Do not release until all planned arrangements are completed satisfactorily",
+            "Retain documented information on release, including person authorizing"
+          ]
+        },
+        {
+          "id": "8.7",
+          "name": "Control of nonconforming outputs",
+          "checklist": [
+            "Identify and control nonconforming outputs to prevent unintended use or delivery",
+            "Take appropriate action (correction, segregation, return, suspension)",
+            "Obtain authorization for acceptance under concession where applicable",
+            "Retain documented information describing the nonconformity and actions taken"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Performance evaluation",
+      "subclauses": [
+        {
+          "id": "9.1",
+          "name": "Monitoring, measurement, analysis, and evaluation",
+          "checklist": [
+            "Determine what to monitor and measure, methods, when to analyse and evaluate results",
+            "9.1.2: Monitor information relating to customer perception and satisfaction",
+            "9.1.3: Analyse and evaluate data to evaluate QMS performance and effectiveness"
+          ]
+        },
+        {
+          "id": "9.2",
+          "name": "Internal audit",
+          "checklist": [
+            "Conduct internal audits at planned intervals",
+            "Audit programme: frequency, methods, responsibilities, planning requirements, reporting",
+            "Auditors do not audit their own work (objectivity and impartiality)",
+            "Report audit results to relevant management",
+            "Take appropriate corrections and corrective actions",
+            "Retain documented information as evidence of audit programme and audit results"
+          ]
+        },
+        {
+          "id": "9.3",
+          "name": "Management review",
+          "checklist": [
+            "Top management reviews the QMS at planned intervals",
+            "Inputs: status of previous actions, changes in context, QMS performance and effectiveness",
+            "Inputs: resource adequacy, effectiveness of actions taken on risks and opportunities",
+            "Outputs: decisions on opportunities for improvement, changes to QMS, resource needs",
+            "Retain documented information as evidence of management review results"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Improvement",
+      "subclauses": [
+        {
+          "id": "10.1",
+          "name": "General",
+          "checklist": [
+            "Determine and select opportunities for improvement",
+            "Implement actions to meet customer requirements and enhance satisfaction"
+          ]
+        },
+        {
+          "id": "10.2",
+          "name": "Nonconformity and corrective action",
+          "checklist": [
+            "React to the nonconformity: control, correct, deal with consequences",
+            "Evaluate the need for action to eliminate causes (root cause analysis)",
+            "Implement corrective actions and review their effectiveness",
+            "Update risks and opportunities and change QMS if necessary",
+            "Retain documented information as evidence of the nature of nonconformity and actions taken"
+          ]
+        },
+        {
+          "id": "10.3",
+          "name": "Continual improvement",
+          "checklist": [
+            "Continually improve suitability, adequacy, and effectiveness of the QMS",
+            "Consider results of analysis and evaluation, management review outputs",
+            "Use tools such as PDCA (Plan-Do-Check-Act) cycle"
+          ]
+        }
+      ]
+    }
+  ],
+  "mandatory_documented_information": [
+    { "ref": "4.3",   "description": "Scope of the QMS" },
+    { "ref": "4.4",   "description": "Processes (to the extent necessary)" },
+    { "ref": "5.2",   "description": "Quality policy" },
+    { "ref": "6.2",   "description": "Quality objectives" },
+    { "ref": "7.1.5.1", "description": "Basis for monitoring and measurement (calibration)" },
+    { "ref": "7.2",   "description": "Evidence of competence" },
+    { "ref": "8.1",   "description": "Operational planning and control" },
+    { "ref": "8.2.3", "description": "Results of review of requirements" },
+    { "ref": "8.3",   "description": "Design and development process (if applicable)" },
+    { "ref": "8.4.1", "description": "Externally provided processes/products/services" },
+    { "ref": "8.5.1", "description": "Production/service provision (control conditions)" },
+    { "ref": "8.5.2", "description": "Traceability of outputs (if required)" },
+    { "ref": "8.5.3", "description": "Customer or external provider property" },
+    { "ref": "8.6",   "description": "Evidence of product/service conformity" },
+    { "ref": "8.7",   "description": "Nonconforming outputs" },
+    { "ref": "9.1",   "description": "Results of monitoring and measurement" },
+    { "ref": "9.2",   "description": "Internal audit results" },
+    { "ref": "9.3",   "description": "Management review results" },
+    { "ref": "10.2",  "description": "Nonconformities and corrective actions" }
+  ]
+}

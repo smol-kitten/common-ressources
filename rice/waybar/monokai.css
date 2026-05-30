@@ -1,0 +1,28 @@
+/* Theme: Monokai */
+/* Source: https://monokai.pro */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #272822;
+  --foreground:        #F8F8F2;
+  --cursor:            #F8F8F2;
+  --selection:         #75715E;
+
+  --black:             #272822;
+  --red:               #F92672;
+  --green:             #A6E22E;
+  --yellow:            #F4BF75;
+  --blue:              #66D9E8;
+  --magenta:           #AE81FF;
+  --cyan:              #A1EFE4;
+  --white:             #F8F8F2;
+
+  --bright-black:      #75715E;
+  --bright-red:        #F92672;
+  --bright-green:      #A6E22E;
+  --bright-yellow:     #F4BF75;
+  --bright-blue:       #66D9E8;
+  --bright-magenta:    #AE81FF;
+  --bright-cyan:       #A1EFE4;
+  --bright-white:      #F9F8F5;
+}

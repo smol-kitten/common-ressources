@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Better History Search",
+    "slug": "history-search",
+    "category": "input",
+    "description": "Binds Up/Down arrows to history search filtered by already-typed prefix, like fish shell.",
+    "snippet": "Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward\nSet-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward",
+    "requires": ["PSReadLine"],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Predictive IntelliSense",
+    "slug": "predictive-intellisense",
+    "category": "input",
+    "description": "Enables inline command completion suggestions from command history, shown in grey as you type.",
+    "snippet": "Set-PSReadLineOption -PredictionSource History\nSet-PSReadLineOption -PredictionViewStyle InlineView",
+    "requires": ["PSReadLine 2.2+"],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Starship Prompt",
+    "slug": "starship-prompt",
+    "category": "prompt",
+    "description": "Initializes the Starship cross-shell prompt. Requires starship to be installed.",
+    "snippet": "Invoke-Expression (&starship init powershell)",
+    "requires": ["starship"],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Oh My Posh Prompt",
+    "slug": "oh-my-posh",
+    "category": "prompt",
+    "description": "Loads Oh My Posh with a specified theme. Replace 'jandedobbeleer' with any installed theme name.",
+    "snippet": "oh-my-posh init pwsh --config \"$env:POSH_THEMES_PATH\\jandedobbeleer.omp.json\" | Invoke-Expression",
+    "requires": ["oh-my-posh"],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "posh-git Integration",
+    "slug": "posh-git",
+    "category": "git",
+    "description": "Loads posh-git for git tab completion and git status in the prompt.",
+    "snippet": "Import-Module posh-git",
+    "requires": ["posh-git module"],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Useful Aliases",
+    "slug": "useful-aliases",
+    "category": "aliases",
+    "description": "Common Unix-style aliases: touch, which, grep, and a reload-profile alias.",
+    "snippet": "function touch { New-Item -ItemType File -Path $args[0] -Force | Out-Null }\nfunction which { (Get-Command $args[0]).Source }\nSet-Alias -Name grep -Value Select-String\nfunction Reload-Profile { . $PROFILE }",
+    "requires": [],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Environment Variable Helpers",
+    "slug": "env-helpers",
+    "category": "system",
+    "description": "Functions to list, get, set, and remove environment variables conveniently from the prompt.",
+    "snippet": "function Get-EnvVar { [System.Environment]::GetEnvironmentVariables() }\nfunction Set-EnvVar($name, $val) { [System.Environment]::SetEnvironmentVariable($name, $val, 'User') }\nfunction Remove-EnvVar($name) { [System.Environment]::SetEnvironmentVariable($name, $null, 'User') }",
+    "requires": [],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Quick Navigation Functions",
+    "slug": "quick-nav",
+    "category": "navigation",
+    "description": "Shortcuts for common directories: dev, desktop, downloads, and a 'back' alias for cd ..",
+    "snippet": "function dev { Set-Location \"$HOME\\dev\" }\nfunction desk { Set-Location \"$HOME\\Desktop\" }\nfunction dl { Set-Location \"$HOME\\Downloads\" }\nSet-Alias -Name back -Value { Set-Location .. }",
+    "requires": [],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Colorized Directory Listing",
+    "slug": "colorized-ls",
+    "category": "output",
+    "description": "Replaces default ls/dir output with a colorized version using the Terminal-Icons module.",
+    "snippet": "Import-Module Terminal-Icons\nSet-Alias -Name ls -Value Get-ChildItem",
+    "requires": ["Terminal-Icons module"],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Auto-elevate to Admin",
+    "slug": "auto-elevate",
+    "category": "system",
+    "description": "Function that restarts the current command in an elevated (Administrator) session.",
+    "snippet": "function sudo {\n  $cmd = $args -join ' '\n  Start-Process powershell -ArgumentList \"-NoProfile -Command $cmd\" -Verb RunAs\n}",
+    "requires": [],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Git Log Graph Alias",
+    "slug": "git-log-graph",
+    "category": "git",
+    "description": "Alias 'gl' that shows a compact colorized git log graph.",
+    "snippet": "function gl { git log --oneline --graph --decorate --all }",
+    "requires": ["git"],
+    "profile-path": "$PROFILE"
+  },
+  {
+    "name": "Clipboard Utilities",
+    "slug": "clipboard-utils",
+    "category": "utilities",
+    "description": "Functions to copy file content or command output to clipboard, and paste from clipboard.",
+    "snippet": "function Copy-File { Get-Content $args[0] | Set-Clipboard }\nfunction Paste-Here { Get-Clipboard | Out-File $args[0] }",
+    "requires": [],
+    "profile-path": "$PROFILE"
+  }
+]

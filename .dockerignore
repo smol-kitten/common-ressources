@@ -1,0 +1,8 @@
+# Exclude everything except what the Dockerfile actually needs at build time.
+# The repo is bind-mounted at runtime, so only build-context-referenced files need to be here.
+# Since this Dockerfile has no COPY instructions, the context is only used for metadata caching.
+
+# Large generated/binary files that bloat the build context
+rice/screenshots/
+node_modules/
+.git/

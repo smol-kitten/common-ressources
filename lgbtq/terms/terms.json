@@ -1,0 +1,290 @@
+[
+  {
+    "term": "Transgender",
+    "abbreviation": "Trans",
+    "definition": "An umbrella term for people whose gender identity differs from the sex they were assigned at birth. Transgender people may identify as men, women, or outside the gender binary entirely. The term does not imply any specific medical procedure or transition pathway.",
+    "category": "gender",
+    "neologism": false,
+    "related": ["Transitioning", "Gender Dysphoria", "Gender Euphoria", "Nonbinary", "HRT (Hormone Replacement Therapy)"]
+  },
+  {
+    "term": "Nonbinary",
+    "abbreviation": "NB / Enby",
+    "definition": "A spectrum of gender identities that are not exclusively masculine or feminine. Nonbinary people may identify as having no gender, multiple genders, a fluctuating gender, or a gender that falls outside the male/female binary. The term is often used as both a specific identity and a broader umbrella.",
+    "category": "gender",
+    "neologism": false,
+    "related": ["Genderfluid", "Agender", "Bigender", "Transgender", "Xenogender"]
+  },
+  {
+    "term": "Genderfluid",
+    "abbreviation": null,
+    "definition": "A gender identity in which a person's gender shifts or fluctuates over time, between or across different genders. A genderfluid person may feel more like a man on some days, more like a woman on others, or somewhere else along the spectrum. This fluidity can occur on varying timescales for different individuals.",
+    "category": "gender",
+    "neologism": false,
+    "related": ["Nonbinary", "Bigender", "Agender", "Transgender"]
+  },
+  {
+    "term": "Agender",
+    "abbreviation": null,
+    "definition": "A gender identity characterized by the absence of gender, or a feeling of being genderless or gender-neutral. Agender individuals may not identify with any gender at all, or may feel that the concept of gender does not apply to them. Some agender people also identify as nonbinary.",
+    "category": "gender",
+    "neologism": false,
+    "related": ["Nonbinary", "Genderfluid", "Xenogender"]
+  },
+  {
+    "term": "Bigender",
+    "abbreviation": null,
+    "definition": "A gender identity in which a person identifies as two genders, either simultaneously or alternating between them. The two genders experienced can include any combination, such as man and woman, or man and nonbinary. Bigender is distinct from genderfluid in that the genders are experienced as distinct rather than on a continuum.",
+    "category": "gender",
+    "neologism": false,
+    "related": ["Genderfluid", "Nonbinary", "Transgender"]
+  },
+  {
+    "term": "Demiboy",
+    "abbreviation": null,
+    "definition": "A gender identity in which a person partially identifies as a boy or man, but not fully. The other part of their gender identity may be agender, nonbinary, or another gender entirely. Demiboy individuals may or may not identify with the masculine aspects of their partial gender.",
+    "category": "gender",
+    "neologism": true,
+    "related": ["Demigirl", "Nonbinary", "Agender", "Genderfluid"]
+  },
+  {
+    "term": "Demigirl",
+    "abbreviation": null,
+    "definition": "A gender identity in which a person partially identifies as a girl or woman, but not fully. The remaining portion of their gender may be agender, nonbinary, or another gender. Demigirl individuals may or may not connect with feminine expression or experiences.",
+    "category": "gender",
+    "neologism": true,
+    "related": ["Demiboy", "Nonbinary", "Agender", "Genderfluid"]
+  },
+  {
+    "term": "Xenogender",
+    "abbreviation": null,
+    "definition": "An umbrella term for gender identities that are described using concepts outside the traditional framework of gender, such as animals, abstract concepts, aesthetics, or archetypes. Xenogenders are often used by people who feel that conventional gender language does not adequately describe their experience. The term is common in online LGBTQ+ communities and is considered highly neologistic.",
+    "category": "gender",
+    "neologism": true,
+    "related": ["Nonbinary", "Agender", "Genderfluid"]
+  },
+  {
+    "term": "Two-Spirit",
+    "abbreviation": "2S",
+    "definition": "A term used by some Indigenous North American peoples to describe a person who fulfills a traditional third-gender or other gender-variant role within their community. Two-Spirit is a culturally specific identity and is not interchangeable with Western LGBTQ+ terms. It was adopted in 1990 as a pan-Indigenous English term and should only be used by those within Indigenous communities.",
+    "category": "identity",
+    "neologism": false,
+    "related": ["Nonbinary", "Queer", "LGBTQ+"]
+  },
+  {
+    "term": "Intersex",
+    "abbreviation": null,
+    "definition": "A term for people born with reproductive anatomy, chromosomes, or hormone levels that do not fit typical definitions of male or female. Intersex is a naturally occurring biological variation and is distinct from gender identity or sexual orientation. Intersex people may identify with any gender and any sexual orientation.",
+    "category": "medical",
+    "neologism": false,
+    "related": ["LGBTQ+", "Gender Affirming Care", "Transgender"]
+  },
+  {
+    "term": "Asexual",
+    "abbreviation": "Ace",
+    "definition": "A sexual orientation characterized by experiencing little to no sexual attraction to any gender. Asexuality exists on a spectrum and does not necessarily mean a lack of romantic attraction or desire for relationships. Asexual people can and do form meaningful intimate partnerships and may experience a range of other forms of attraction.",
+    "category": "sexuality",
+    "neologism": false,
+    "related": ["Aromantic", "Demisexual", "Graysexual", "Queer"]
+  },
+  {
+    "term": "Aromantic",
+    "abbreviation": "Aro",
+    "definition": "A romantic orientation characterized by experiencing little to no romantic attraction to others. Aromantic people may still experience sexual attraction and may engage in sexual relationships. Like asexuality, aromanticism exists on a spectrum and encompasses a range of related identities.",
+    "category": "sexuality",
+    "neologism": false,
+    "related": ["Asexual", "Demisexual", "Graysexual", "Queer"]
+  },
+  {
+    "term": "Bisexual",
+    "abbreviation": "Bi",
+    "definition": "A sexual orientation in which a person experiences attraction to people of their own gender and to people of other genders. Bisexuality does not require equal attraction to all genders, nor does it reinforce a binary view of gender. It is one of the most common non-heterosexual orientations.",
+    "category": "sexuality",
+    "neologism": false,
+    "related": ["Pansexual", "Polysexual", "Queer", "LGBTQ+"]
+  },
+  {
+    "term": "Pansexual",
+    "abbreviation": "Pan",
+    "definition": "A sexual orientation characterized by attraction to people regardless of their gender identity or biological sex. Pansexual people often describe their attraction as gender-blind or gender-inclusive. While similar to bisexuality, pansexuality explicitly emphasizes attraction irrespective of the gender spectrum.",
+    "category": "sexuality",
+    "neologism": false,
+    "related": ["Bisexual", "Polysexual", "Queer"]
+  },
+  {
+    "term": "Polysexual",
+    "abbreviation": null,
+    "definition": "A sexual orientation in which a person is attracted to multiple, but not necessarily all, genders. Polysexual differs from pansexual in that it acknowledges a preference for some genders over others. It is distinct from polyamory, which concerns relationship structures rather than attraction.",
+    "category": "sexuality",
+    "neologism": true,
+    "related": ["Bisexual", "Pansexual", "Queer"]
+  },
+  {
+    "term": "Demisexual",
+    "abbreviation": null,
+    "definition": "A sexual orientation in which a person only experiences sexual attraction after forming a strong emotional bond with someone. Demisexuality is considered part of the asexual spectrum. People who identify as demisexual may or may not experience sexual attraction frequently once such a bond is established.",
+    "category": "sexuality",
+    "neologism": true,
+    "related": ["Asexual", "Graysexual", "Aromantic"]
+  },
+  {
+    "term": "Graysexual",
+    "abbreviation": "Gray-ace",
+    "definition": "An orientation describing people who experience sexual attraction rarely, only under specific circumstances, or with low intensity. Graysexuality sits in the gray area between asexuality and more typical levels of sexual attraction. It is part of the asexual spectrum and sometimes written as grey-sexual or gray-ace.",
+    "category": "sexuality",
+    "neologism": true,
+    "related": ["Asexual", "Demisexual", "Aromantic"]
+  },
+  {
+    "term": "Lesbian",
+    "abbreviation": null,
+    "definition": "A woman or woman-aligned person who is primarily or exclusively attracted to other women or woman-aligned people. The term has historically referred to same-gender attraction among women, but some nonbinary people also use it to describe their identity. Lesbian identity is distinct from, but may overlap with, bisexual or queer identities.",
+    "category": "sexuality",
+    "neologism": false,
+    "related": ["Gay", "Bisexual", "Queer", "LGBTQ+"]
+  },
+  {
+    "term": "Gay",
+    "abbreviation": null,
+    "definition": "A term primarily used to describe men or man-aligned people attracted to other men or man-aligned people, though it is also used as a broader umbrella for non-heterosexual identities. Historically, 'gay' was used for both men and women before 'lesbian' became more common for women. The term can be used as an adjective (gay person) or as a collective noun (the gay community).",
+    "category": "sexuality",
+    "neologism": false,
+    "related": ["Lesbian", "Bisexual", "Queer", "LGBTQ+"]
+  },
+  {
+    "term": "Queer",
+    "abbreviation": null,
+    "definition": "An umbrella term for sexual and gender minorities who are not heterosexual and/or cisgender. Once a pejorative, 'queer' has been widely reclaimed by the LGBTQ+ community as a positive identifier. Some individuals still find the term offensive, so it should only be used for or by those who self-identify with it.",
+    "category": "identity",
+    "neologism": false,
+    "related": ["LGBTQ+", "Questioning", "Gay", "Lesbian", "Bisexual", "Transgender"]
+  },
+  {
+    "term": "Questioning",
+    "abbreviation": null,
+    "definition": "A term used to describe individuals who are exploring or unsure about their sexual orientation, gender identity, or both. Questioning is a valid identity in itself and not a transitional phase that everyone must move through. It is often included in expansions of the LGBTQ+ acronym.",
+    "category": "identity",
+    "neologism": false,
+    "related": ["Queer", "LGBTQ+", "Coming Out"]
+  },
+  {
+    "term": "Ally",
+    "abbreviation": null,
+    "definition": "A person who is not LGBTQ+ but supports and advocates for the rights, dignity, and well-being of LGBTQ+ people. Allies may be family members, friends, coworkers, or community members who use their privilege to advance equality. Effective allyship is generally considered an ongoing practice rather than a fixed identity.",
+    "category": "community",
+    "neologism": false,
+    "related": ["LGBTQ+", "Pride", "Chosen Family"]
+  },
+  {
+    "term": "LGBTQ+",
+    "abbreviation": "LGBTQ+",
+    "definition": "An acronym standing for Lesbian, Gay, Bisexual, Transgender, and Queer (or Questioning), with the '+' representing additional identities not covered by the initial letters. The acronym has many variants including LGBT, LGBTQI+, and LGBTQIA2S+. It is used as a collective umbrella term for the broader community of sexual and gender minorities.",
+    "category": "community",
+    "neologism": false,
+    "related": ["Queer", "Pride", "Chosen Family", "Ally"]
+  },
+  {
+    "term": "Gender Dysphoria",
+    "abbreviation": null,
+    "definition": "Psychological distress that results from a significant incongruence between a person's experienced or expressed gender and the gender they were assigned at birth. Gender dysphoria is recognized as a medical condition in the DSM-5, enabling access to gender-affirming treatments. Not all transgender or nonbinary people experience gender dysphoria.",
+    "category": "medical",
+    "neologism": false,
+    "related": ["Gender Euphoria", "Transgender", "HRT (Hormone Replacement Therapy)", "Gender Affirming Care", "Transitioning"]
+  },
+  {
+    "term": "Gender Euphoria",
+    "abbreviation": null,
+    "definition": "A positive feeling of joy, comfort, or affirmation that arises when a person's gender is recognized or expressed in a way that aligns with their identity. Gender euphoria is often discussed as the counterpart to gender dysphoria, though it can be experienced without the other. The concept is increasingly used in trans and nonbinary communities to focus on positive experiences of gender.",
+    "category": "identity",
+    "neologism": true,
+    "related": ["Gender Dysphoria", "Transgender", "Transitioning", "Passing"]
+  },
+  {
+    "term": "Dead Name",
+    "abbreviation": null,
+    "definition": "The birth name of a transgender or nonbinary person who has changed their name as part of their transition or identity. Using someone's dead name without their permission, especially after they have changed it, is considered disrespectful and harmful. The act of using a dead name without consent is called deadnaming.",
+    "category": "identity",
+    "neologism": true,
+    "related": ["Misgendering", "Transitioning", "Transgender", "Outing"]
+  },
+  {
+    "term": "Misgendering",
+    "abbreviation": null,
+    "definition": "The act of referring to someone using gendered language — such as pronouns, titles, or nouns — that does not reflect their gender identity. Misgendering can be accidental or intentional and can cause significant emotional harm to transgender and nonbinary people. Correcting oneself and others when misgendering occurs is considered an important aspect of allyship.",
+    "category": "community",
+    "neologism": true,
+    "related": ["Dead Name", "Transgender", "Nonbinary", "Outing"]
+  },
+  {
+    "term": "Transitioning",
+    "abbreviation": null,
+    "definition": "The process by which a transgender or nonbinary person aligns their life, body, or social presentation with their gender identity. Transitioning can be social (changing name, pronouns, clothing), medical (HRT, surgery), or legal (changing documents). Not all trans people choose to transition, and transition looks different for each individual.",
+    "category": "identity",
+    "neologism": false,
+    "related": ["HRT (Hormone Replacement Therapy)", "Gender Affirming Care", "Transgender", "Passing", "Stealth"]
+  },
+  {
+    "term": "HRT (Hormone Replacement Therapy)",
+    "abbreviation": "HRT",
+    "definition": "A medical treatment in which hormones are administered to align a person's secondary sex characteristics with their gender identity. For transgender women this typically involves estrogen, and for transgender men it typically involves testosterone. HRT is one component of gender-affirming medical care and requires ongoing medical supervision.",
+    "category": "medical",
+    "neologism": false,
+    "related": ["Gender Affirming Care", "Transitioning", "Transgender", "Gender Dysphoria"]
+  },
+  {
+    "term": "Gender Affirming Care",
+    "abbreviation": "GAC",
+    "definition": "A broad range of medical, psychological, and social interventions designed to support a person in living in alignment with their gender identity. Gender-affirming care can include HRT, surgery, mental health support, voice therapy, and social transition guidance. It is endorsed by major medical organizations as evidence-based care for transgender and nonbinary individuals.",
+    "category": "medical",
+    "neologism": false,
+    "related": ["HRT (Hormone Replacement Therapy)", "Transitioning", "Transgender", "Gender Dysphoria"]
+  },
+  {
+    "term": "Passing",
+    "abbreviation": null,
+    "definition": "The ability of a transgender or nonbinary person to be perceived by others as the gender they identify with, without being identified as transgender. Passing is a complex and often fraught concept, as it implies a normative standard and can be tied to safety or social acceptance. Not all trans people desire to pass, and the concept is critiqued by some for reinforcing cisnormative standards.",
+    "category": "identity",
+    "neologism": false,
+    "related": ["Stealth", "Transitioning", "Transgender", "Gender Euphoria"]
+  },
+  {
+    "term": "Stealth",
+    "abbreviation": null,
+    "definition": "A term describing a transgender person who does not disclose their trans identity in everyday life and is perceived by others as cisgender. Living stealth is a personal choice often motivated by safety, privacy, or personal preference. It is distinct from being closeted, as stealth individuals are generally comfortable with their identity but choose not to disclose it publicly.",
+    "category": "identity",
+    "neologism": false,
+    "related": ["Passing", "Coming Out", "Outing", "Transgender"]
+  },
+  {
+    "term": "Outing",
+    "abbreviation": null,
+    "definition": "The act of disclosing someone's sexual orientation, gender identity, or LGBTQ+ status without their consent. Outing can have serious consequences including family rejection, job loss, violence, and mental health harm. It is widely considered a serious violation of privacy and trust within and outside the LGBTQ+ community.",
+    "category": "community",
+    "neologism": false,
+    "related": ["Coming Out", "Stealth", "Misgendering", "Dead Name"]
+  },
+  {
+    "term": "Coming Out",
+    "abbreviation": null,
+    "definition": "The process by which an LGBTQ+ person discloses their sexual orientation, gender identity, or both to others. Coming out is a deeply personal decision and can occur multiple times throughout a person's life in different contexts. The process can be affirming and liberating, though it may also carry risks depending on the individual's environment.",
+    "category": "community",
+    "neologism": false,
+    "related": ["Outing", "Questioning", "Chosen Family", "Pride"]
+  },
+  {
+    "term": "Chosen Family",
+    "abbreviation": null,
+    "definition": "A network of close friends and allies who provide support, love, and community for LGBTQ+ individuals, often in the absence of or in addition to biological family. The concept of chosen family has deep roots in LGBTQ+ culture, particularly in communities that have experienced rejection by their families of origin. Chosen families play a vital role in emotional wellbeing and resilience.",
+    "category": "community",
+    "neologism": false,
+    "related": ["Coming Out", "Ally", "Pride", "LGBTQ+"]
+  },
+  {
+    "term": "Pride",
+    "abbreviation": null,
+    "definition": "A celebration of LGBTQ+ identities, visibility, and the ongoing struggle for equal rights, most commonly manifesting as Pride Month (June) and Pride parades worldwide. Pride events trace their roots to the 1969 Stonewall Uprising in New York City. Pride encompasses both a political movement advocating for rights and an affirmative expression of joy and community.",
+    "category": "community",
+    "neologism": false,
+    "related": ["LGBTQ+", "Coming Out", "Queer", "Chosen Family", "Ally"]
+  }
+]

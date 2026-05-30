@@ -1,0 +1,26 @@
+/* Theme: Gruvbox Dark */
+/* Source: https://github.com/morhetz/gruvbox */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #282828;
+    foreground:                    #EBDBB2;
+
+    normal-background:             #282828;
+    normal-foreground:             #EBDBB2;
+    selected-normal-background:    #458588;
+    selected-normal-foreground:    #282828;
+
+    active-background:             #98971A;
+    active-foreground:             #282828;
+    selected-active-background:    #B8BB26;
+    selected-active-foreground:    #282828;
+
+    urgent-background:             #CC241D;
+    urgent-foreground:             #282828;
+    selected-urgent-background:    #FB4934;
+    selected-urgent-foreground:    #282828;
+
+    border-color:                  #928374;
+    separatorcolor:                #928374;
+}

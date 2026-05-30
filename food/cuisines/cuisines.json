@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "italian",
+    "name": "Italian",
+    "country": "Italy",
+    "continent": "Europe",
+    "key_ingredients": ["pasta", "tomato", "olive oil", "parmesan", "basil"],
+    "staple_dishes": ["pizza", "pasta carbonara", "risotto", "tiramisu"],
+    "cooking_methods": ["baking", "sautéing", "slow-simmering"],
+    "spice_level": "mild"
+  },
+  {
+    "slug": "french",
+    "name": "French",
+    "country": "France",
+    "continent": "Europe",
+    "key_ingredients": ["butter", "wine", "cream", "herbs", "baguette"],
+    "staple_dishes": ["coq au vin", "bouillabaisse", "crème brûlée", "ratatouille"],
+    "cooking_methods": ["sautéing", "braising", "poaching"],
+    "spice_level": "mild"
+  },
+  {
+    "slug": "japanese",
+    "name": "Japanese",
+    "country": "Japan",
+    "continent": "Asia",
+    "key_ingredients": ["rice", "soy sauce", "miso", "dashi", "seaweed"],
+    "staple_dishes": ["sushi", "ramen", "tempura", "miso soup"],
+    "cooking_methods": ["steaming", "grilling", "raw preparation"],
+    "spice_level": "mild"
+  },
+  {
+    "slug": "chinese",
+    "name": "Chinese",
+    "country": "China",
+    "continent": "Asia",
+    "key_ingredients": ["soy sauce", "ginger", "garlic", "scallion", "rice wine"],
+    "staple_dishes": ["dim sum", "Peking duck", "kung pao chicken", "hot pot"],
+    "cooking_methods": ["stir-frying", "steaming", "braising"],
+    "spice_level": "mild-to-hot"
+  },
+  {
+    "slug": "indian",
+    "name": "Indian",
+    "country": "India",
+    "continent": "Asia",
+    "key_ingredients": ["cumin", "turmeric", "coriander", "ghee", "lentils"],
+    "staple_dishes": ["biryani", "butter chicken", "dal", "naan"],
+    "cooking_methods": ["slow-cooking", "tandoor-baking", "tempering"],
+    "spice_level": "medium-to-hot"
+  },
+  {
+    "slug": "mexican",
+    "name": "Mexican",
+    "country": "Mexico",
+    "continent": "Americas",
+    "key_ingredients": ["corn", "chili", "beans", "avocado", "lime"],
+    "staple_dishes": ["tacos", "enchiladas", "guacamole", "tamales"],
+    "cooking_methods": ["grilling", "frying", "braising"],
+    "spice_level": "medium-to-hot"
+  },
+  {
+    "slug": "thai",
+    "name": "Thai",
+    "country": "Thailand",
+    "continent": "Asia",
+    "key_ingredients": ["lemongrass", "fish sauce", "coconut milk", "chili", "galangal"],
+    "staple_dishes": ["pad thai", "green curry", "tom yum", "papaya salad"],
+    "cooking_methods": ["stir-frying", "steaming", "curry-making"],
+    "spice_level": "hot"
+  },
+  {
+    "slug": "greek",
+    "name": "Greek",
+    "country": "Greece",
+    "continent": "Europe",
+    "key_ingredients": ["olive oil", "feta", "lemon", "oregano", "lamb"],
+    "staple_dishes": ["moussaka", "souvlaki", "spanakopita", "tzatziki"],
+    "cooking_methods": ["grilling", "baking", "slow-roasting"],
+    "spice_level": "mild"
+  },
+  {
+    "slug": "moroccan",
+    "name": "Moroccan",
+    "country": "Morocco",
+    "continent": "Africa",
+    "key_ingredients": ["ras el hanout", "preserved lemon", "argan oil", "couscous", "chickpeas"],
+    "staple_dishes": ["tagine", "couscous", "harira", "pastilla"],
+    "cooking_methods": ["slow-cooking", "braising", "grilling"],
+    "spice_level": "medium"
+  },
+  {
+    "slug": "ethiopian",
+    "name": "Ethiopian",
+    "country": "Ethiopia",
+    "continent": "Africa",
+    "key_ingredients": ["injera", "berbere", "niter kibbeh", "lentils", "teff"],
+    "staple_dishes": ["injera with stews", "doro wat", "misir wot", "tibs"],
+    "cooking_methods": ["stewing", "fermenting", "slow-cooking"],
+    "spice_level": "hot"
+  },
+  {
+    "slug": "spanish",
+    "name": "Spanish",
+    "country": "Spain",
+    "continent": "Europe",
+    "key_ingredients": ["olive oil", "saffron", "pimentón", "jamón", "garlic"],
+    "staple_dishes": ["paella", "tortilla española", "gazpacho", "churros"],
+    "cooking_methods": ["grilling", "frying", "slow-cooking"],
+    "spice_level": "mild-to-medium"
+  },
+  {
+    "slug": "vietnamese",
+    "name": "Vietnamese",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "key_ingredients": ["fish sauce", "rice noodles", "fresh herbs", "lemongrass", "chili"],
+    "staple_dishes": ["pho", "banh mi", "spring rolls", "bun bo hue"],
+    "cooking_methods": ["simmering", "grilling", "fresh assembly"],
+    "spice_level": "mild-to-medium"
+  },
+  {
+    "slug": "lebanese",
+    "name": "Lebanese",
+    "country": "Lebanon",
+    "continent": "Asia",
+    "key_ingredients": ["tahini", "chickpeas", "sumac", "pine nuts", "lamb"],
+    "staple_dishes": ["hummus", "falafel", "tabbouleh", "kibbeh"],
+    "cooking_methods": ["grilling", "baking", "raw preparation"],
+    "spice_level": "mild"
+  },
+  {
+    "slug": "peruvian",
+    "name": "Peruvian",
+    "country": "Peru",
+    "continent": "Americas",
+    "key_ingredients": ["potato", "aji amarillo", "quinoa", "corn", "lime"],
+    "staple_dishes": ["ceviche", "lomo saltado", "causa", "aji de gallina"],
+    "cooking_methods": ["marinating", "stir-frying", "slow-roasting"],
+    "spice_level": "medium"
+  },
+  {
+    "slug": "korean",
+    "name": "Korean",
+    "country": "South Korea",
+    "continent": "Asia",
+    "key_ingredients": ["gochugaru", "doenjang", "sesame oil", "kimchi", "rice"],
+    "staple_dishes": ["bibimbap", "kimchi jjigae", "bulgogi", "japchae"],
+    "cooking_methods": ["grilling", "fermenting", "stewing"],
+    "spice_level": "medium-to-hot"
+  },
+  {
+    "slug": "american",
+    "name": "American",
+    "country": "United States",
+    "continent": "Americas",
+    "key_ingredients": ["corn", "beef", "cheese", "bacon", "potatoes"],
+    "staple_dishes": ["burger", "BBQ ribs", "mac and cheese", "apple pie"],
+    "cooking_methods": ["grilling", "deep-frying", "smoking"],
+    "spice_level": "mild-to-medium"
+  }
+]

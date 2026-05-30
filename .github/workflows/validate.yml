@@ -49,10 +49,14 @@ jobs:
 
       - name: List all resource files
         run: |
-          echo "=== Images ==="
-          find . -type f \( -name "*.svg" -o -name "*.png" -o -name "*.jpg" \) | sort | head -100
+          echo "=== Preview images ==="
+          find . -name "*.png" ! -path "./.git/*" | sort
+          echo "=== HTML templates ==="
+          find . -name "preview.html" ! -path "./.git/*" | sort
           echo "=== JSON resources ==="
-          find . -type f -name "*.json" ! -path "./.git/*" | sort
+          find . -name "*.json" ! -path "./.git/*" | sort
           echo "=== Totals ==="
-          echo "JSON files: $(find . -name '*.json' ! -path './.git/*' | wc -l)"
+          echo "JSON files:  $(find . -name '*.json' ! -path './.git/*' | wc -l)"
+          echo "PNG files:   $(find . -name '*.png'  ! -path './.git/*' | wc -l)"
+          echo "HTML files:  $(find . -name '*.html' ! -path './.git/*' | wc -l)"
         shell: bash

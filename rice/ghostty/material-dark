@@ -1,0 +1,27 @@
+# Theme: Material Dark
+# Source: https://material-theme.com
+# Usage: add to ~/.config/ghostty/config
+#   theme = material-dark
+
+background = 212121
+foreground = EEFFFF
+cursor-color = FFCC00
+selection-background = 546E7A
+selection-foreground = EEFFFF
+
+palette = 0=#546E7A
+palette = 1=#FF5370
+palette = 2=#C3E88D
+palette = 3=#FFCB6B
+palette = 4=#82AAFF
+palette = 5=#C792EA
+palette = 6=#89DDFF
+palette = 7=#EEFFFF
+palette = 8=#B0BEC5
+palette = 9=#FF5370
+palette = 10=#C3E88D
+palette = 11=#FFCB6B
+palette = 12=#82AAFF
+palette = 13=#C792EA
+palette = 14=#89DDFF
+palette = 15=#FFFFFF

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Hyprland",
+    "slug": "hyprland",
+    "type": "tiling",
+    "protocol": "Wayland",
+    "config-format": "custom",
+    "config-path": "~/.config/hypr/hyprland.conf",
+    "reload-cmd": "hyprctl reload",
+    "description": "A dynamic tiling Wayland compositor with stunning animations, rounded corners, and extensive customization via its own config language. Very popular in the ricing community.",
+    "features": ["animations", "rounded-corners", "blur", "gaps", "workspaces", "scratchpad", "multi-monitor", "ipc"],
+    "tags": ["wayland", "tiling", "popular", "ricing", "animations", "dynamic"]
+  },
+  {
+    "name": "Sway",
+    "slug": "sway",
+    "type": "tiling",
+    "protocol": "Wayland",
+    "config-format": "i3-compatible",
+    "config-path": "~/.config/sway/config",
+    "reload-cmd": "swaymsg reload",
+    "description": "A drop-in Wayland replacement for i3 with near-identical config syntax. Stable, minimal, and widely used for straightforward tiling setups.",
+    "features": ["i3-compatible-config", "bar-support", "multi-monitor", "ipc", "output-management"],
+    "tags": ["wayland", "tiling", "i3-compatible", "stable", "minimal"]
+  },
+  {
+    "name": "i3",
+    "slug": "i3",
+    "type": "tiling",
+    "protocol": "X11",
+    "config-format": "custom",
+    "config-path": "~/.config/i3/config",
+    "reload-cmd": "i3-msg reload",
+    "description": "The classic X11 tiling window manager. Simple, fast, well-documented, and the inspiration for many modern tiling WMs.",
+    "features": ["workspaces", "splits", "tabbed-layout", "stacking-layout", "ipc", "bar-support", "floating"],
+    "tags": ["x11", "tiling", "classic", "stable", "well-documented"]
+  },
+  {
+    "name": "bspwm",
+    "slug": "bspwm",
+    "type": "tiling",
+    "protocol": "X11",
+    "config-format": "shell-script",
+    "config-path": "~/.config/bspwm/bspwmrc",
+    "reload-cmd": "bspc wm --restart",
+    "description": "Binary Space Partitioning Window Manager. Controlled entirely via the bspc CLI, allowing scripted configuration. Paired with sxhkd for keybindings.",
+    "features": ["bsp-tiling", "monocle-layout", "virtual-desktops", "node-flags", "external-rules", "sxhkd-integration"],
+    "tags": ["x11", "tiling", "bsp", "scriptable", "minimal", "sxhkd"]
+  },
+  {
+    "name": "Openbox",
+    "slug": "openbox",
+    "type": "floating",
+    "protocol": "X11",
+    "config-format": "xml",
+    "config-path": "~/.config/openbox/rc.xml",
+    "reload-cmd": "openbox --reconfigure",
+    "description": "A highly configurable, lightweight stacking window manager for X11. XML-based config, widely used as the WM in desktop environments like LXDE.",
+    "features": ["xml-config", "themes", "pipe-menus", "autostart", "decorations", "per-app-rules"],
+    "tags": ["x11", "floating", "lightweight", "xml", "lxde", "classic"]
+  },
+  {
+    "name": "Qtile",
+    "slug": "qtile",
+    "type": "dynamic",
+    "protocol": "X11",
+    "config-format": "python",
+    "config-path": "~/.config/qtile/config.py",
+    "reload-cmd": "qtile cmd-obj -o cmd -f restart",
+    "description": "A hackable, Python-configured tiling window manager that runs on both X11 and Wayland. Full Python API for scripting layouts and widgets.",
+    "features": ["python-config", "multiple-layouts", "bar-included", "wayland-support", "scripting", "hooks"],
+    "tags": ["x11", "wayland", "tiling", "python", "dynamic", "scriptable"]
+  },
+  {
+    "name": "AwesomeWM",
+    "slug": "awesome",
+    "type": "dynamic",
+    "protocol": "X11",
+    "config-format": "lua",
+    "config-path": "~/.config/awesome/rc.lua",
+    "reload-cmd": "echo 'awesome.restart()' | awesome-client",
+    "description": "A powerful dynamic tiling WM configured entirely in Lua with a built-in status bar widget system. Highly extensible via the Lua API.",
+    "features": ["lua-config", "dynamic-layouts", "built-in-bar", "widgets", "scripting", "dbus"],
+    "tags": ["x11", "tiling", "lua", "dynamic", "extensible", "widgets"]
+  },
+  {
+    "name": "XMonad",
+    "slug": "xmonad",
+    "type": "tiling",
+    "protocol": "X11",
+    "config-format": "haskell",
+    "config-path": "~/.config/xmonad/xmonad.hs",
+    "reload-cmd": "xmonad --restart",
+    "description": "A minimal, purely functional tiling WM configured in Haskell. Extremely stable and type-safe. Extended by XMonad.Contrib for hundreds of additional features.",
+    "features": ["haskell-config", "type-safe", "dynamic-workspaces", "contrib-modules", "minimal-core"],
+    "tags": ["x11", "tiling", "haskell", "functional", "minimal", "stable"]
+  },
+  {
+    "name": "River",
+    "slug": "river",
+    "type": "tiling",
+    "protocol": "Wayland",
+    "config-format": "shell-script",
+    "config-path": "~/.config/river/init",
+    "reload-cmd": "pkill -SIGUSR1 river",
+    "description": "A dynamic tiling Wayland compositor inspired by dwm and bspwm, controlled via the riverctl CLI. Supports tag-based workspaces and external layout generators.",
+    "features": ["tag-workspaces", "external-layouts", "riverctl-ipc", "xwayland", "multi-output"],
+    "tags": ["wayland", "tiling", "dynamic", "minimal", "riverctl", "tags"]
+  },
+  {
+    "name": "Niri",
+    "slug": "niri",
+    "type": "tiling",
+    "protocol": "Wayland",
+    "config-format": "kdl",
+    "config-path": "~/.config/niri/config.kdl",
+    "reload-cmd": "niri msg action do-screen-transition",
+    "description": "A scrollable-tiling Wayland compositor where windows tile infinitely to the right rather than splitting. Uses KDL config format.",
+    "features": ["scrollable-tiling", "kdl-config", "animations", "xwayland", "ipc", "rounded-corners"],
+    "tags": ["wayland", "tiling", "scrollable", "kdl", "modern", "animations"]
+  }
+]

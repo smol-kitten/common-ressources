@@ -1,0 +1,28 @@
+/* Theme: Ayu Dark */
+/* Source: https://github.com/dempfi/ayu */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #0a0e14;
+  --foreground:        #b3b1ad;
+  --cursor:            #e6b450;
+  --selection:         #273747;
+
+  --black:             #01060e;
+  --red:               #ea6c73;
+  --green:             #91b362;
+  --yellow:            #f9af4f;
+  --blue:              #53bdfa;
+  --magenta:           #fae994;
+  --cyan:              #90e1c6;
+  --white:             #c7c7c7;
+
+  --bright-black:      #686868;
+  --bright-red:        #f07178;
+  --bright-green:      #c2d94c;
+  --bright-yellow:     #ffb454;
+  --bright-blue:       #59c2ff;
+  --bright-magenta:    #ffee99;
+  --bright-cyan:       #95e6cb;
+  --bright-white:      #ffffff;
+}

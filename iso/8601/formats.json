@@ -1,0 +1,235 @@
+{
+  "standard": "ISO 8601",
+  "title": "Date and time — Representations for information interchange",
+  "latest_edition": "ISO 8601-1:2019 / ISO 8601-2:2019",
+  "note": "Format strings use strftime-style tokens where illustrative; regex patterns are partial validators.",
+
+  "date": {
+    "description": "Calendar date representations",
+    "formats": [
+      {
+        "name": "Extended complete date",
+        "pattern": "YYYY-MM-DD",
+        "example": "2026-05-27",
+        "regex": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+        "notes": "Preferred form. Unambiguous in all locales."
+      },
+      {
+        "name": "Basic complete date",
+        "pattern": "YYYYMMDD",
+        "example": "20260527",
+        "regex": "^\\d{8}$",
+        "notes": "Compact form; must not be confused with other 8-digit codes."
+      },
+      {
+        "name": "Year and month (extended)",
+        "pattern": "YYYY-MM",
+        "example": "2026-05",
+        "regex": "^\\d{4}-(0[1-9]|1[0-2])$",
+        "notes": "Day component omitted. Not to be confused with YYYYMM (basic form)."
+      },
+      {
+        "name": "Year only",
+        "pattern": "YYYY",
+        "example": "2026",
+        "regex": "^\\d{4}$",
+        "notes": "Four-digit year."
+      },
+      {
+        "name": "Week date (extended)",
+        "pattern": "YYYY-Www-D",
+        "example": "2026-W22-3",
+        "regex": "^\\d{4}-W(0[1-9]|[1-4]\\d|5[0-3])-[1-7]$",
+        "notes": "W = literal, ww = week number (01–53), D = day of week (1=Mon … 7=Sun)."
+      },
+      {
+        "name": "Week date (basic)",
+        "pattern": "YYYYWwwD",
+        "example": "2026W223",
+        "regex": "^\\d{4}W(0[1-9]|[1-4]\\d|5[0-3])[1-7]$",
+        "notes": "Compact week date."
+      },
+      {
+        "name": "Ordinal date (extended)",
+        "pattern": "YYYY-DDD",
+        "example": "2026-147",
+        "regex": "^\\d{4}-(00[1-9]|0[1-9]\\d|[1-2]\\d{2}|3[0-5]\\d|36[0-6])$",
+        "notes": "DDD = day of year (001–366)."
+      },
+      {
+        "name": "Ordinal date (basic)",
+        "pattern": "YYYYDDD",
+        "example": "2026147",
+        "regex": "^\\d{7}$",
+        "notes": "Compact ordinal date."
+      }
+    ]
+  },
+
+  "time": {
+    "description": "Time-of-day representations. Separator T is required when combined with a date.",
+    "formats": [
+      {
+        "name": "Extended time with seconds",
+        "pattern": "hh:mm:ss",
+        "example": "14:30:00",
+        "regex": "^([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d$",
+        "notes": "24-hour clock. Midnight is 00:00:00; end-of-day is 24:00:00."
+      },
+      {
+        "name": "Basic time with seconds",
+        "pattern": "hhmmss",
+        "example": "143000",
+        "regex": "^([01]\\d|2[0-3])[0-5]\\d[0-5]\\d$",
+        "notes": "Compact form."
+      },
+      {
+        "name": "Extended time with fractional seconds",
+        "pattern": "hh:mm:ss.sss",
+        "example": "14:30:00.500",
+        "regex": "^([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d\\.\\d+$",
+        "notes": "Decimal fraction of seconds. The comma (,) is also allowed as decimal sign per the standard."
+      },
+      {
+        "name": "Extended time without seconds",
+        "pattern": "hh:mm",
+        "example": "14:30",
+        "regex": "^([01]\\d|2[0-3]):[0-5]\\d$",
+        "notes": "Reduced precision — seconds implied as :00."
+      }
+    ]
+  },
+
+  "timezone": {
+    "description": "Time zone designators appended to time or datetime values.",
+    "formats": [
+      {
+        "name": "UTC (Zulu)",
+        "pattern": "Z",
+        "example": "2026-05-27T14:30:00Z",
+        "notes": "Indicates UTC. Equivalent to +00:00."
+      },
+      {
+        "name": "Positive offset (extended)",
+        "pattern": "+hh:mm",
+        "example": "2026-05-27T16:30:00+02:00",
+        "notes": "UTC plus offset."
+      },
+      {
+        "name": "Negative offset (extended)",
+        "pattern": "-hh:mm",
+        "example": "2026-05-27T09:30:00-05:00",
+        "notes": "UTC minus offset."
+      },
+      {
+        "name": "Offset basic form",
+        "pattern": "+hhmm or -hhmm",
+        "example": "+0200",
+        "notes": "Without colon separator."
+      },
+      {
+        "name": "Hour-only offset",
+        "pattern": "+hh or -hh",
+        "example": "+02",
+        "notes": "Permitted when minute is :00."
+      }
+    ]
+  },
+
+  "datetime": {
+    "description": "Combined date and time. The date and time components are separated by the letter T.",
+    "formats": [
+      {
+        "name": "Extended datetime, UTC",
+        "pattern": "YYYY-MM-DDThh:mm:ssZ",
+        "example": "2026-05-27T14:30:00Z",
+        "regex": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\dZ$",
+        "notes": "Most common serialisation format. Used by JSON Schema, OpenAPI, RFC 3339."
+      },
+      {
+        "name": "Extended datetime with offset",
+        "pattern": "YYYY-MM-DDThh:mm:ss+hh:mm",
+        "example": "2026-05-27T16:30:00+02:00",
+        "regex": "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])T([01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d[+-]([01]\\d|2[0-3]):[0-5]\\d$",
+        "notes": "Explicit UTC offset preserves the local time context."
+      },
+      {
+        "name": "Extended datetime with fractional seconds, UTC",
+        "pattern": "YYYY-MM-DDThh:mm:ss.sssZ",
+        "example": "2026-05-27T14:30:00.000Z",
+        "regex": null,
+        "notes": "Millisecond precision. Used by JavaScript's Date.toISOString()."
+      },
+      {
+        "name": "Basic datetime",
+        "pattern": "YYYYMMDDThhmmssZ",
+        "example": "20260527T143000Z",
+        "regex": null,
+        "notes": "Compact form; avoid in contexts where it may be ambiguous."
+      }
+    ]
+  },
+
+  "duration": {
+    "description": "Representation of a time span. Starts with the letter P (period).",
+    "pattern": "PnYnMnDTnHnMnS",
+    "examples": [
+      { "value": "P1Y",          "meaning": "1 year" },
+      { "value": "P3M",          "meaning": "3 months" },
+      { "value": "P10D",         "meaning": "10 days" },
+      { "value": "PT2H30M",      "meaning": "2 hours 30 minutes" },
+      { "value": "P1Y2M3DT4H5M6S", "meaning": "1 year, 2 months, 3 days, 4 hours, 5 minutes, 6 seconds" },
+      { "value": "P0001-02-03T04:05:06", "meaning": "Alternative week form using date designators" }
+    ],
+    "notes": "T separates date and time components inside a duration. Components may be omitted if zero. At least one component must be present."
+  },
+
+  "interval": {
+    "description": "Time interval between two points in time or of a fixed duration.",
+    "formats": [
+      {
+        "name": "Start / End datetime",
+        "pattern": "datetime/datetime",
+        "example": "2026-05-01T00:00:00Z/2026-05-31T23:59:59Z",
+        "notes": "Both endpoints expressed as datetimes."
+      },
+      {
+        "name": "Start datetime / Duration",
+        "pattern": "datetime/duration",
+        "example": "2026-05-01T00:00:00Z/P1M",
+        "notes": "Start point plus a duration."
+      },
+      {
+        "name": "Duration / End datetime",
+        "pattern": "duration/datetime",
+        "example": "P1M/2026-05-31T23:59:59Z",
+        "notes": "Duration plus end point."
+      },
+      {
+        "name": "Duration only",
+        "pattern": "duration",
+        "example": "P1M",
+        "notes": "When the endpoints can be inferred from context."
+      }
+    ]
+  },
+
+  "recurring_interval": {
+    "description": "Repeating time interval. Prefixed with Rn/ where n is the recurrence count (omit n for unbounded).",
+    "pattern": "Rn/interval",
+    "examples": [
+      { "value": "R3/P1W",                           "meaning": "Repeat 3 times, every 1 week" },
+      { "value": "R/2026-01-01T00:00:00Z/P1M",       "meaning": "Repeat indefinitely starting 2026-01-01, every 1 month" }
+    ]
+  },
+
+  "ordering_rules": [
+    "Dates must use a four-digit year (negative years must be agreed out-of-band).",
+    "Always use leading zeros: 01, not 1.",
+    "The T separator between date and time is mandatory in combined representations.",
+    "Always include a timezone designator in datetimes meant for interchange.",
+    "Prefer the extended form (with hyphens/colons) for human-readable contexts.",
+    "Prefer the basic form only in filenames, headers, or compact protocols.",
+    "The comma decimal separator (e.g. 14:30:00,5) is technically valid but the period is preferred."
+  ]
+}

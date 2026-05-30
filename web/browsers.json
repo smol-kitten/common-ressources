@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Google Chrome",
+    "slug": "chrome",
+    "vendor": "Google",
+    "engine": "Blink",
+    "js_engine": "V8",
+    "year": 2008,
+    "open_source": false,
+    "platforms": ["windows", "macos", "linux", "android", "ios"],
+    "market_share_pct": 65.7,
+    "latest_stable": "136",
+    "install": {
+      "debian": "apt install google-chrome-stable",
+      "arch": "pacman -S chromium",
+      "brew": "brew install --cask google-chrome"
+    },
+    "website": "https://google.com/chrome",
+    "description": "The most widely used browser, built on the Chromium open-source project."
+  },
+  {
+    "name": "Mozilla Firefox",
+    "slug": "firefox",
+    "vendor": "Mozilla",
+    "engine": "Gecko",
+    "js_engine": "SpiderMonkey",
+    "year": 2002,
+    "open_source": true,
+    "platforms": ["windows", "macos", "linux", "android", "ios"],
+    "market_share_pct": 3.2,
+    "latest_stable": "138",
+    "install": {
+      "debian": "apt install firefox",
+      "arch": "pacman -S firefox",
+      "brew": "brew install --cask firefox"
+    },
+    "website": "https://mozilla.org/firefox",
+    "description": "Privacy-focused open-source browser from the Mozilla Foundation, the only major non-Chromium engine."
+  },
+  {
+    "name": "Apple Safari",
+    "slug": "safari",
+    "vendor": "Apple",
+    "engine": "WebKit",
+    "js_engine": "JavaScriptCore",
+    "year": 2003,
+    "open_source": false,
+    "platforms": ["macos", "ios"],
+    "market_share_pct": 18.8,
+    "latest_stable": "18",
+    "install": {
+      "brew": "# Built-in on macOS/iOS — no separate install"
+    },
+    "website": "https://apple.com/safari",
+    "description": "Apple's default browser, optimised for energy efficiency on Apple silicon and iOS."
+  },
+  {
+    "name": "Microsoft Edge",
+    "slug": "edge",
+    "vendor": "Microsoft",
+    "engine": "Blink",
+    "js_engine": "V8",
+    "year": 2015,
+    "open_source": false,
+    "platforms": ["windows", "macos", "linux", "android", "ios"],
+    "market_share_pct": 5.4,
+    "latest_stable": "136",
+    "install": {
+      "debian": "apt install microsoft-edge-stable",
+      "arch": "yay -S microsoft-edge-stable-bin",
+      "brew": "brew install --cask microsoft-edge"
+    },
+    "website": "https://microsoft.com/edge",
+    "description": "Chromium-based browser from Microsoft with built-in Copilot AI integration."
+  },
+  {
+    "name": "Brave",
+    "slug": "brave",
+    "vendor": "Brave Software",
+    "engine": "Blink",
+    "js_engine": "V8",
+    "year": 2016,
+    "open_source": true,
+    "platforms": ["windows", "macos", "linux", "android", "ios"],
+    "market_share_pct": 1.1,
+    "latest_stable": "1.67",
+    "install": {
+      "debian": "apt install brave-browser",
+      "arch": "yay -S brave-bin",
+      "brew": "brew install --cask brave-browser"
+    },
+    "website": "https://brave.com",
+    "description": "Privacy-first Chromium browser with built-in ad blocking and optional crypto rewards."
+  },
+  {
+    "name": "Opera",
+    "slug": "opera",
+    "vendor": "Opera Software",
+    "engine": "Blink",
+    "js_engine": "V8",
+    "year": 1995,
+    "open_source": false,
+    "platforms": ["windows", "macos", "linux", "android", "ios"],
+    "market_share_pct": 2.4,
+    "latest_stable": "111",
+    "install": {
+      "debian": "apt install opera-stable",
+      "brew": "brew install --cask opera"
+    },
+    "website": "https://opera.com",
+    "description": "Feature-rich Chromium browser with built-in VPN, ad blocker, and sidebar workspaces."
+  },
+  {
+    "name": "Vivaldi",
+    "slug": "vivaldi",
+    "vendor": "Vivaldi Technologies",
+    "engine": "Blink",
+    "js_engine": "V8",
+    "year": 2016,
+    "open_source": false,
+    "platforms": ["windows", "macos", "linux", "android"],
+    "market_share_pct": 0.3,
+    "latest_stable": "7.0",
+    "install": {
+      "debian": "apt install vivaldi-stable",
+      "arch": "yay -S vivaldi",
+      "brew": "brew install --cask vivaldi"
+    },
+    "website": "https://vivaldi.com",
+    "description": "Highly customisable power-user browser with tab stacking, tiling, and built-in tools."
+  },
+  {
+    "name": "Tor Browser",
+    "slug": "tor",
+    "vendor": "Tor Project",
+    "engine": "Gecko",
+    "js_engine": "SpiderMonkey",
+    "year": 2002,
+    "open_source": true,
+    "platforms": ["windows", "macos", "linux", "android"],
+    "market_share_pct": 0.1,
+    "latest_stable": "14.0",
+    "install": {
+      "brew": "brew install --cask tor-browser"
+    },
+    "website": "https://torproject.org",
+    "description": "Firefox-based browser routing all traffic through the Tor anonymity network."
+  },
+  {
+    "name": "Arc",
+    "slug": "arc",
+    "vendor": "The Browser Company",
+    "engine": "Blink",
+    "js_engine": "V8",
+    "year": 2022,
+    "open_source": false,
+    "platforms": ["macos", "windows", "ios"],
+    "market_share_pct": 0.2,
+    "latest_stable": "1.60",
+    "install": {
+      "brew": "brew install --cask arc"
+    },
+    "website": "https://arc.net",
+    "description": "Reinvented browser with spaces, split view, and AI tools, built on Chromium."
+  },
+  {
+    "name": "Zen Browser",
+    "slug": "zen",
+    "vendor": "Zen Team",
+    "engine": "Gecko",
+    "js_engine": "SpiderMonkey",
+    "year": 2024,
+    "open_source": true,
+    "platforms": ["windows", "macos", "linux"],
+    "market_share_pct": 0.05,
+    "latest_stable": "1.10",
+    "install": {
+      "brew": "brew install --cask zen-browser",
+      "arch": "yay -S zen-browser-bin"
+    },
+    "website": "https://zen-browser.app",
+    "description": "Privacy-focused Firefox fork with a vertical sidebar UI and workspace support."
+  },
+  {
+    "name": "Lynx",
+    "slug": "lynx",
+    "vendor": "Open source",
+    "engine": "Custom (text-only)",
+    "js_engine": null,
+    "year": 1992,
+    "open_source": true,
+    "platforms": ["linux", "windows", "macos"],
+    "market_share_pct": 0.01,
+    "latest_stable": "2.9.2",
+    "install": {
+      "debian": "apt install lynx",
+      "arch": "pacman -S lynx",
+      "brew": "brew install lynx"
+    },
+    "website": "https://lynx.invisible-island.net",
+    "description": "The oldest surviving browser — a terminal-based text-only web browser."
+  },
+  {
+    "name": "w3m",
+    "slug": "w3m",
+    "vendor": "Open source",
+    "engine": "Custom (text-only)",
+    "js_engine": null,
+    "year": 1995,
+    "open_source": true,
+    "platforms": ["linux", "macos"],
+    "market_share_pct": 0.01,
+    "latest_stable": "0.5.3",
+    "install": {
+      "debian": "apt install w3m",
+      "arch": "pacman -S w3m",
+      "brew": "brew install w3m"
+    },
+    "website": "https://w3m.sourceforge.net",
+    "description": "Text-based browser and pager with basic image rendering in capable terminals."
+  }
+]

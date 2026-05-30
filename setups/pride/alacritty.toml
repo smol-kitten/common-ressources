@@ -1,0 +1,70 @@
+# ── pride Alacritty config — Trans Pride + Rainbow ─────────────
+
+[window]
+padding    = { x = 16, y = 12 }
+decorations = "buttonless"
+opacity    = 0.95
+blur       = true
+title      = "Terminal"
+dynamic_title = true
+
+[font]
+normal  = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold    = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic  = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size    = 13.0
+
+[cursor]
+style    = { shape = "Beam", blinking = "On" }
+blink_interval = 500
+
+[scrolling]
+history   = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+# ── Trans Pride + dark purple base colors ──────────────────────
+[colors.primary]
+background = "#0d0221"
+foreground = "#ffffff"
+dim_foreground = "#d4b8e0"
+bright_foreground = "#ffffff"
+
+[colors.cursor]
+text   = "#0d0221"
+cursor = "#55cdfc"
+
+[colors.vi_mode_cursor]
+text   = "#0d0221"
+cursor = "#f7a8b8"
+
+[colors.selection]
+text       = "#0d0221"
+background = "#55cdfc"
+
+[colors.search.matches]
+foreground = "#0d0221"
+background = "#ffdd57"
+
+# ── Normal: rainbow palette ─────────────────────────────────────
+[colors.normal]
+black   = "#2a1052"
+red     = "#ff4d4d"
+green   = "#57e389"
+yellow  = "#ffdd57"
+blue    = "#55cdfc"
+magenta = "#f7a8b8"
+cyan    = "#4db6e8"
+white   = "#d4b8e0"
+
+[colors.bright]
+black   = "#4a2080"
+red     = "#ff6b6b"
+green   = "#6ef7a0"
+yellow  = "#ffe57d"
+blue    = "#7ddeff"
+magenta = "#ffc0cb"
+cyan    = "#70ccf0"
+white   = "#ffffff"

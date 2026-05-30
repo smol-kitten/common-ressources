@@ -1,0 +1,39 @@
+{
+  "id": "windows-like",
+  "name": "Windows 11-like",
+  "description": "A dark desktop inspired by Windows 11: bottom taskbar with centered icons, Start-menu-style launcher, frosted-glass acrylic surfaces, Windows blue accent.",
+  "color_scheme": "Material Dark + Windows Blue",
+  "colors": {
+    "bg":          "#202020",
+    "surface":     "#2d2d2d",
+    "surface2":    "#3a3a3a",
+    "border":      "#404040",
+    "fg":          "#ffffff",
+    "subtext":     "#ababab",
+    "accent":      "#0078d4",
+    "accent_dim":  "#005a9e",
+    "green":       "#0f7b0f",
+    "red":         "#c42b1c",
+    "yellow":      "#9d5d00",
+    "taskbar_bg":  "rgba(32,32,32,0.92)"
+  },
+  "files": [
+    { "source": "hyprland.conf",  "target": "~/.config/hypr/hyprland.conf",          "description": "Hyprland window manager config" },
+    { "source": "waybar.json",    "target": "~/.config/waybar/config",                "description": "Waybar taskbar layout (bottom)" },
+    { "source": "waybar.css",     "target": "~/.config/waybar/style.css",             "description": "Waybar CSS theme (Windows 11 style)" },
+    { "source": "alacritty.toml", "target": "~/.config/alacritty/alacritty.toml",     "description": "Alacritty terminal emulator config" },
+    { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",             "description": "Rofi Start menu launcher" },
+    { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",                "description": "Dunst notification daemon (bottom-right)" },
+    { "source": "zshrc",          "target": "~/.zshrc",                               "description": "Zsh shell config" }
+  ],
+  "recommended_packages": {
+    "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh"],
+    "optional": ["swww", "nwg-panel", "ttf-segoe-ui-variable", "ttf-jetbrains-mono-nerd", "papirus-icon-theme", "grimblast", "cliphist", "wl-clipboard"],
+    "aur": ["windows-11-icon-theme", "fluent-gtk-theme"]
+  },
+  "wallpaper_hint": "Use a Windows 11 Bloom wallpaper or a dark abstract. swww img ~/wallpaper.jpg",
+  "gtk_theme": "Fluent-Dark",
+  "icon_theme": "Windows-11",
+  "cursor_theme": "Windows-10-Cursor",
+  "font": { "ui": "Segoe UI Variable 11", "mono": "JetBrainsMono Nerd Font 12" }
+}

@@ -1,0 +1,26 @@
+/* Theme: Catppuccin Latte */
+/* Source: https://catppuccin.com */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #eff1f5;
+    foreground:                    #4c4f69;
+
+    normal-background:             #eff1f5;
+    normal-foreground:             #4c4f69;
+    selected-normal-background:    #1e66f5;
+    selected-normal-foreground:    #eff1f5;
+
+    active-background:             #40a02b;
+    active-foreground:             #eff1f5;
+    selected-active-background:    #40a02b;
+    selected-active-foreground:    #eff1f5;
+
+    urgent-background:             #d20f39;
+    urgent-foreground:             #eff1f5;
+    selected-urgent-background:    #d20f39;
+    selected-urgent-foreground:    #eff1f5;
+
+    border-color:                  #6c6f85;
+    separatorcolor:                #6c6f85;
+}

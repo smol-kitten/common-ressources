@@ -1,0 +1,26 @@
+/* Theme: Palenight */
+/* Source: https://github.com/whizkydee/vscode-palenight-theme */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #292d3e;
+    foreground:                    #a6accd;
+
+    normal-background:             #292d3e;
+    normal-foreground:             #a6accd;
+    selected-normal-background:    #82aaff;
+    selected-normal-foreground:    #292d3e;
+
+    active-background:             #c3e88d;
+    active-foreground:             #292d3e;
+    selected-active-background:    #ddffa7;
+    selected-active-foreground:    #292d3e;
+
+    urgent-background:             #f07178;
+    urgent-foreground:             #292d3e;
+    selected-urgent-background:    #ff8b92;
+    selected-urgent-foreground:    #292d3e;
+
+    border-color:                  #434758;
+    separatorcolor:                #434758;
+}

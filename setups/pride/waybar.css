@@ -1,0 +1,131 @@
+/* ── pride Waybar theme — Trans Pride + Rainbow ───────────────── */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Noto Color Emoji", "Noto Sans", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+window#waybar {
+    background: rgba(13, 2, 33, 0.88);
+    color: #ffffff;
+    border-radius: 14px;
+    border: 1px solid rgba(85, 205, 252, 0.3);
+}
+
+/* ── Workspaces ── */
+#workspaces {
+    background: transparent;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #d4b8e0;
+    padding: 2px 8px;
+    border-radius: 50%;
+    min-width: 10px;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+#workspaces button:hover {
+    background: rgba(85, 205, 252, 0.15);
+    color: #55cdfc;
+}
+
+#workspaces button.active {
+    color: #f7a8b8;
+    background: rgba(247, 168, 184, 0.15);
+}
+
+#workspaces button.urgent {
+    color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.12);
+}
+
+/* ── Window title ── */
+#window {
+    color: #d4b8e0;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+/* ── Clock — trans flag gradient text simulation ── */
+#clock {
+    font-weight: 600;
+    color: #55cdfc;
+    padding: 0 12px;
+}
+
+/* ── Right modules shared ── */
+#cpu,
+#memory,
+#pulseaudio,
+#network,
+#battery,
+#tray,
+#custom-power {
+    padding: 0 8px;
+    border-radius: 10px;
+    margin: 4px 2px;
+    transition: background 0.2s ease;
+}
+
+/* Rainbow accent per-module */
+#cpu        { color: #ff4d4d;  background: rgba(255,  77,  77, 0.12); }
+#memory     { color: #57e389;  background: rgba( 87, 227, 137, 0.12); }
+#pulseaudio { color: #c061cb;  background: rgba(192,  97, 203, 0.12); }
+#network    { color: #4db6e8;  background: rgba( 77, 182, 232, 0.12); }
+#battery    { color: #55cdfc;  background: rgba( 85, 205, 252, 0.12); }
+
+#cpu:hover        { background: rgba(255,  77,  77, 0.25); }
+#memory:hover     { background: rgba( 87, 227, 137, 0.25); }
+#pulseaudio:hover { background: rgba(192,  97, 203, 0.25); }
+#network:hover    { background: rgba( 77, 182, 232, 0.25); }
+#battery:hover    { background: rgba( 85, 205, 252, 0.25); }
+
+/* ── Battery states ── */
+#battery.warning { color: #ffdd57; background: rgba(255, 221, 87, 0.12); }
+#battery.critical {
+    color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.15);
+    animation: blink-rainbow 2s linear infinite;
+}
+
+@keyframes blink-rainbow {
+    0%   { border-color: #ff4d4d; }
+    17%  { border-color: #ff9a3c; }
+    33%  { border-color: #ffdd57; }
+    50%  { border-color: #57e389; }
+    67%  { border-color: #4db6e8; }
+    83%  { border-color: #c061cb; }
+    100% { border-color: #ff4d4d; }
+}
+
+/* ── Power button ── */
+#custom-power {
+    color: #f7a8b8;
+    font-size: 15px;
+    padding: 0 10px;
+    background: rgba(247, 168, 184, 0.10);
+}
+
+#custom-power:hover {
+    color: #ff4d4d;
+    background: rgba(255, 77, 77, 0.15);
+}
+
+/* ── Tray ── */
+#tray {
+    background: transparent;
+}
+
+#tray > .passive { -gtk-icon-effect: dim; }
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: rgba(255, 77, 77, 0.1);
+}

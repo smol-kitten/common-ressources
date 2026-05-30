@@ -1,0 +1,227 @@
+[
+  {
+    "slug": "meter",
+    "name": "Meter",
+    "symbol": "m",
+    "quantity": "length",
+    "system": "SI",
+    "to_si_factor": 1,
+    "notes": "SI base unit of length"
+  },
+  {
+    "slug": "kilometer",
+    "name": "Kilometer",
+    "symbol": "km",
+    "quantity": "length",
+    "system": "SI",
+    "to_si_factor": 1000,
+    "notes": "1 km = 1000 m"
+  },
+  {
+    "slug": "centimeter",
+    "name": "Centimeter",
+    "symbol": "cm",
+    "quantity": "length",
+    "system": "SI",
+    "to_si_factor": 0.01,
+    "notes": "1 cm = 0.01 m"
+  },
+  {
+    "slug": "millimeter",
+    "name": "Millimeter",
+    "symbol": "mm",
+    "quantity": "length",
+    "system": "SI",
+    "to_si_factor": 0.001,
+    "notes": "1 mm = 0.001 m"
+  },
+  {
+    "slug": "inch",
+    "name": "Inch",
+    "symbol": "in",
+    "quantity": "length",
+    "system": "imperial",
+    "to_si_factor": 0.0254,
+    "notes": "1 in = 0.0254 m"
+  },
+  {
+    "slug": "foot",
+    "name": "Foot",
+    "symbol": "ft",
+    "quantity": "length",
+    "system": "imperial",
+    "to_si_factor": 0.3048,
+    "notes": "1 ft = 0.3048 m"
+  },
+  {
+    "slug": "mile",
+    "name": "Mile",
+    "symbol": "mi",
+    "quantity": "length",
+    "system": "imperial",
+    "to_si_factor": 1609.344,
+    "notes": "1 mi = 1609.344 m"
+  },
+  {
+    "slug": "kilogram",
+    "name": "Kilogram",
+    "symbol": "kg",
+    "quantity": "mass",
+    "system": "SI",
+    "to_si_factor": 1,
+    "notes": "SI base unit of mass"
+  },
+  {
+    "slug": "gram",
+    "name": "Gram",
+    "symbol": "g",
+    "quantity": "mass",
+    "system": "SI",
+    "to_si_factor": 0.001,
+    "notes": "1 g = 0.001 kg"
+  },
+  {
+    "slug": "pound",
+    "name": "Pound",
+    "symbol": "lb",
+    "quantity": "mass",
+    "system": "imperial",
+    "to_si_factor": 0.453592,
+    "notes": "1 lb = 0.453592 kg"
+  },
+  {
+    "slug": "ounce",
+    "name": "Ounce",
+    "symbol": "oz",
+    "quantity": "mass",
+    "system": "imperial",
+    "to_si_factor": 0.0283495,
+    "notes": "1 oz = 0.0283495 kg"
+  },
+  {
+    "slug": "second",
+    "name": "Second",
+    "symbol": "s",
+    "quantity": "time",
+    "system": "SI",
+    "to_si_factor": 1,
+    "notes": "SI base unit of time"
+  },
+  {
+    "slug": "minute",
+    "name": "Minute",
+    "symbol": "min",
+    "quantity": "time",
+    "system": "SI",
+    "to_si_factor": 60,
+    "notes": "1 min = 60 s"
+  },
+  {
+    "slug": "hour",
+    "name": "Hour",
+    "symbol": "h",
+    "quantity": "time",
+    "system": "SI",
+    "to_si_factor": 3600,
+    "notes": "1 h = 3600 s"
+  },
+  {
+    "slug": "day",
+    "name": "Day",
+    "symbol": "d",
+    "quantity": "time",
+    "system": "SI",
+    "to_si_factor": 86400,
+    "notes": "1 d = 86400 s"
+  },
+  {
+    "slug": "kelvin",
+    "name": "Kelvin",
+    "symbol": "K",
+    "quantity": "temperature",
+    "system": "SI",
+    "to_si_factor": 1,
+    "notes": "SI base unit of temperature. T(K) = T(°C) + 273.15"
+  },
+  {
+    "slug": "celsius",
+    "name": "Celsius",
+    "symbol": "°C",
+    "quantity": "temperature",
+    "system": "SI",
+    "to_si_factor": null,
+    "notes": "T(K) = T(°C) + 273.15"
+  },
+  {
+    "slug": "fahrenheit",
+    "name": "Fahrenheit",
+    "symbol": "°F",
+    "quantity": "temperature",
+    "system": "imperial",
+    "to_si_factor": null,
+    "notes": "T(K) = (T(°F) + 459.67) × 5/9"
+  },
+  {
+    "slug": "joule",
+    "name": "Joule",
+    "symbol": "J",
+    "quantity": "energy",
+    "system": "SI",
+    "to_si_factor": 1,
+    "notes": "SI derived unit of energy"
+  },
+  {
+    "slug": "calorie",
+    "name": "Calorie",
+    "symbol": "cal",
+    "quantity": "energy",
+    "system": "CGS",
+    "to_si_factor": 4.184,
+    "notes": "1 cal = 4.184 J (thermochemical calorie)"
+  },
+  {
+    "slug": "watt",
+    "name": "Watt",
+    "symbol": "W",
+    "quantity": "power",
+    "system": "SI",
+    "to_si_factor": 1,
+    "notes": "SI derived unit of power. 1 W = 1 J/s"
+  },
+  {
+    "slug": "pascal",
+    "name": "Pascal",
+    "symbol": "Pa",
+    "quantity": "pressure",
+    "system": "SI",
+    "to_si_factor": 1,
+    "notes": "SI derived unit of pressure. 1 Pa = 1 N/m²"
+  },
+  {
+    "slug": "bar",
+    "name": "Bar",
+    "symbol": "bar",
+    "quantity": "pressure",
+    "system": "metric",
+    "to_si_factor": 100000,
+    "notes": "1 bar = 100,000 Pa"
+  },
+  {
+    "slug": "liter",
+    "name": "Liter",
+    "symbol": "L",
+    "quantity": "volume",
+    "system": "SI",
+    "to_si_factor": 0.001,
+    "notes": "1 L = 0.001 m³"
+  },
+  {
+    "slug": "gallon-us",
+    "name": "US Gallon",
+    "symbol": "gal",
+    "quantity": "volume",
+    "system": "imperial",
+    "to_si_factor": 0.003785,
+    "notes": "1 US gal = 3.785 L"
+  }
+]

@@ -1,0 +1,47 @@
+# Regenerates all PNG preview images and commits them back to the branch (Gitea).
+# Equivalent to .github/workflows/previews.yml
+
+name: Generate Previews
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - '**/*.json'
+      - '**/*.html'
+      - 'tests/generate-previews.js'
+      - 'tests/previews.spec.js'
+      - 'package.json'
+
+jobs:
+  generate:
+    runs-on: self-hosted
+    container:
+      image: mcr.microsoft.com/playwright:v1.44.0-jammy
+      options: --user root
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Run Playwright tests (generates screenshots)
+        run: npx playwright test --reporter=list
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+
+      - name: Commit generated previews
+        run: |
+          git config --global --add safe.directory '*'
+          git config --global user.email "noreply@gitea.local"
+          git config --global user.name "Gitea Actions"
+          git add $(find . -name "*.png" ! -path "./.git/*" ! -path "./node_modules/*" | head -50)
+          if git diff --staged --quiet; then
+            echo "No preview changes to commit."
+          else
+            git commit -m "chore: regenerate preview images [skip ci]"
+            git push origin HEAD
+          fi

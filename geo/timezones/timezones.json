@@ -1,0 +1,227 @@
+[
+  {
+    "iana": "UTC",
+    "utc_offset": "+00:00",
+    "dst_offset": "+00:00",
+    "dst": false,
+    "region": "Universal",
+    "abbreviation": "UTC",
+    "example_cities": ["Reykjavik", "Abidjan"]
+  },
+  {
+    "iana": "America/New_York",
+    "utc_offset": "-05:00",
+    "dst_offset": "-04:00",
+    "dst": true,
+    "region": "Americas",
+    "abbreviation": "EST/EDT",
+    "example_cities": ["New York", "Miami", "Toronto"]
+  },
+  {
+    "iana": "America/Chicago",
+    "utc_offset": "-06:00",
+    "dst_offset": "-05:00",
+    "dst": true,
+    "region": "Americas",
+    "abbreviation": "CST/CDT",
+    "example_cities": ["Chicago", "Dallas", "Mexico City"]
+  },
+  {
+    "iana": "America/Denver",
+    "utc_offset": "-07:00",
+    "dst_offset": "-06:00",
+    "dst": true,
+    "region": "Americas",
+    "abbreviation": "MST/MDT",
+    "example_cities": ["Denver", "Salt Lake City", "Phoenix"]
+  },
+  {
+    "iana": "America/Los_Angeles",
+    "utc_offset": "-08:00",
+    "dst_offset": "-07:00",
+    "dst": true,
+    "region": "Americas",
+    "abbreviation": "PST/PDT",
+    "example_cities": ["Los Angeles", "San Francisco", "Seattle"]
+  },
+  {
+    "iana": "America/Anchorage",
+    "utc_offset": "-09:00",
+    "dst_offset": "-08:00",
+    "dst": true,
+    "region": "Americas",
+    "abbreviation": "AKST/AKDT",
+    "example_cities": ["Anchorage", "Fairbanks"]
+  },
+  {
+    "iana": "Pacific/Honolulu",
+    "utc_offset": "-10:00",
+    "dst_offset": "-10:00",
+    "dst": false,
+    "region": "Pacific",
+    "abbreviation": "HST",
+    "example_cities": ["Honolulu", "Pearl City"]
+  },
+  {
+    "iana": "America/Sao_Paulo",
+    "utc_offset": "-03:00",
+    "dst_offset": "-03:00",
+    "dst": false,
+    "region": "Americas",
+    "abbreviation": "BRT",
+    "example_cities": ["São Paulo", "Rio de Janeiro", "Brasília"]
+  },
+  {
+    "iana": "America/Argentina/Buenos_Aires",
+    "utc_offset": "-03:00",
+    "dst_offset": "-03:00",
+    "dst": false,
+    "region": "Americas",
+    "abbreviation": "ART",
+    "example_cities": ["Buenos Aires", "Córdoba"]
+  },
+  {
+    "iana": "Europe/London",
+    "utc_offset": "+00:00",
+    "dst_offset": "+01:00",
+    "dst": true,
+    "region": "Europe",
+    "abbreviation": "GMT/BST",
+    "example_cities": ["London", "Dublin", "Lisbon"]
+  },
+  {
+    "iana": "Europe/Paris",
+    "utc_offset": "+01:00",
+    "dst_offset": "+02:00",
+    "dst": true,
+    "region": "Europe",
+    "abbreviation": "CET/CEST",
+    "example_cities": ["Paris", "Berlin", "Rome", "Madrid"]
+  },
+  {
+    "iana": "Europe/Helsinki",
+    "utc_offset": "+02:00",
+    "dst_offset": "+03:00",
+    "dst": true,
+    "region": "Europe",
+    "abbreviation": "EET/EEST",
+    "example_cities": ["Helsinki", "Kyiv", "Tallinn", "Riga"]
+  },
+  {
+    "iana": "Europe/Moscow",
+    "utc_offset": "+03:00",
+    "dst_offset": "+03:00",
+    "dst": false,
+    "region": "Europe",
+    "abbreviation": "MSK",
+    "example_cities": ["Moscow", "Saint Petersburg"]
+  },
+  {
+    "iana": "Asia/Dubai",
+    "utc_offset": "+04:00",
+    "dst_offset": "+04:00",
+    "dst": false,
+    "region": "Asia",
+    "abbreviation": "GST",
+    "example_cities": ["Dubai", "Abu Dhabi", "Muscat"]
+  },
+  {
+    "iana": "Asia/Karachi",
+    "utc_offset": "+05:00",
+    "dst_offset": "+05:00",
+    "dst": false,
+    "region": "Asia",
+    "abbreviation": "PKT",
+    "example_cities": ["Karachi", "Islamabad", "Lahore"]
+  },
+  {
+    "iana": "Asia/Kolkata",
+    "utc_offset": "+05:30",
+    "dst_offset": "+05:30",
+    "dst": false,
+    "region": "Asia",
+    "abbreviation": "IST",
+    "example_cities": ["Mumbai", "New Delhi", "Bengaluru"]
+  },
+  {
+    "iana": "Asia/Dhaka",
+    "utc_offset": "+06:00",
+    "dst_offset": "+06:00",
+    "dst": false,
+    "region": "Asia",
+    "abbreviation": "BST",
+    "example_cities": ["Dhaka", "Chittagong"]
+  },
+  {
+    "iana": "Asia/Bangkok",
+    "utc_offset": "+07:00",
+    "dst_offset": "+07:00",
+    "dst": false,
+    "region": "Asia",
+    "abbreviation": "ICT",
+    "example_cities": ["Bangkok", "Jakarta", "Ho Chi Minh City"]
+  },
+  {
+    "iana": "Asia/Shanghai",
+    "utc_offset": "+08:00",
+    "dst_offset": "+08:00",
+    "dst": false,
+    "region": "Asia",
+    "abbreviation": "CST",
+    "example_cities": ["Shanghai", "Beijing", "Hong Kong", "Singapore"]
+  },
+  {
+    "iana": "Asia/Tokyo",
+    "utc_offset": "+09:00",
+    "dst_offset": "+09:00",
+    "dst": false,
+    "region": "Asia",
+    "abbreviation": "JST",
+    "example_cities": ["Tokyo", "Osaka", "Seoul"]
+  },
+  {
+    "iana": "Australia/Sydney",
+    "utc_offset": "+10:00",
+    "dst_offset": "+11:00",
+    "dst": true,
+    "region": "Pacific",
+    "abbreviation": "AEST/AEDT",
+    "example_cities": ["Sydney", "Melbourne", "Brisbane"]
+  },
+  {
+    "iana": "Pacific/Auckland",
+    "utc_offset": "+12:00",
+    "dst_offset": "+13:00",
+    "dst": true,
+    "region": "Pacific",
+    "abbreviation": "NZST/NZDT",
+    "example_cities": ["Auckland", "Wellington"]
+  },
+  {
+    "iana": "Africa/Cairo",
+    "utc_offset": "+02:00",
+    "dst_offset": "+02:00",
+    "dst": false,
+    "region": "Africa",
+    "abbreviation": "EET",
+    "example_cities": ["Cairo", "Alexandria"]
+  },
+  {
+    "iana": "Africa/Lagos",
+    "utc_offset": "+01:00",
+    "dst_offset": "+01:00",
+    "dst": false,
+    "region": "Africa",
+    "abbreviation": "WAT",
+    "example_cities": ["Lagos", "Abuja", "Kinshasa"]
+  },
+  {
+    "iana": "Africa/Nairobi",
+    "utc_offset": "+03:00",
+    "dst_offset": "+03:00",
+    "dst": false,
+    "region": "Africa",
+    "abbreviation": "EAT",
+    "example_cities": ["Nairobi", "Addis Ababa", "Dar es Salaam"]
+  }
+]

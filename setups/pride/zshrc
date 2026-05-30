@@ -1,0 +1,101 @@
+# ── pride Zsh — Trans Pride + Rainbow prompt ──────────────────
+
+# ── Path ───────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
+
+# ── Zsh options ────────────────────────────────────────────────
+setopt AUTO_CD
+setopt GLOB_DOTS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+
+# ── Completion ─────────────────────────────────────────────────
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+# ── Plugins ────────────────────────────────────────────────────
+[[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#4a2080"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# Rainbow syntax highlighting colors
+ZSH_HIGHLIGHT_STYLES[command]="fg=#55cdfc,bold"
+ZSH_HIGHLIGHT_STYLES[builtin]="fg=#f7a8b8,bold"
+ZSH_HIGHLIGHT_STYLES[alias]="fg=#57e389"
+ZSH_HIGHLIGHT_STYLES[function]="fg=#ffdd57"
+ZSH_HIGHLIGHT_STYLES[path]="fg=#4db6e8,underline"
+ZSH_HIGHLIGHT_STYLES[string]="fg=#c061cb"
+ZSH_HIGHLIGHT_STYLES[comment]="fg=#4a2080"
+
+# ── zoxide ─────────────────────────────────────────────────────
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
+
+# ── fzf ────────────────────────────────────────────────────────
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="
+  --color=bg+:#1a0a2e,bg:#0d0221,spinner:#55cdfc,hl:#f7a8b8
+  --color=fg:#ffffff,header:#d4b8e0,info:#55cdfc,pointer:#f7a8b8
+  --color=marker:#57e389,fg+:#ffffff,prompt:#55cdfc,hl+:#f7a8b8
+  --border rounded --prompt '🌈 ' --pointer '❯' --marker '✓'
+  --height 45% --layout reverse"
+
+# ── Aliases ────────────────────────────────────────────────────
+alias ls='eza --icons --group-directories-first --color=always'
+alias ll='eza -lah --icons --group-directories-first --git --color=always'
+alias lt='eza --tree --icons --level=2'
+alias cat='bat --style=auto'
+alias grep='grep --color=auto'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias g='git'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate --all'
+alias gs='git status'
+alias lg='lazygit'
+alias vi='nvim'
+alias vim='nvim'
+alias top='btop'
+alias open='xdg-open'
+
+# ── Editor ─────────────────────────────────────────────────────
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+# ── Locale ─────────────────────────────────────────────────────
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# ── Rainbow prompt (trans flag colors + 🌈) ───────────────────
+# Uses Starship if available, otherwise an inline rainbow prompt
+command -v starship &>/dev/null && eval "$(starship init zsh)"
+
+if ! command -v starship &>/dev/null; then
+  # Inline prompt: trans blue → pink → white → pink → blue ❯
+  _pride_prompt() {
+    local dir="%F{#55cdfc}%~%f"
+    local arrow="%(?,%F{#f7a8b8}❯%F{#ffffff}❯%F{#55cdfc}❯%f,%F{#ff4d4d}❯❯❯%f)"
+    echo -n "$dir $arrow "
+  }
+  setopt PROMPT_SUBST
+  PROMPT='$(_pride_prompt) '
+  RPROMPT='%F{#d4b8e0}🌈 %*%f'
+fi

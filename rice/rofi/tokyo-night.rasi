@@ -1,0 +1,26 @@
+/* Theme: Tokyo Night */
+/* Source: https://github.com/enkia/tokyo-night-vscode-theme */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #1A1B26;
+    foreground:                    #C0CAF5;
+
+    normal-background:             #1A1B26;
+    normal-foreground:             #C0CAF5;
+    selected-normal-background:    #7AA2F7;
+    selected-normal-foreground:    #1A1B26;
+
+    active-background:             #9ECE6A;
+    active-foreground:             #1A1B26;
+    selected-active-background:    #9ECE6A;
+    selected-active-foreground:    #1A1B26;
+
+    urgent-background:             #F7768E;
+    urgent-foreground:             #1A1B26;
+    selected-urgent-background:    #F7768E;
+    selected-urgent-foreground:    #1A1B26;
+
+    border-color:                  #414868;
+    separatorcolor:                #414868;
+}

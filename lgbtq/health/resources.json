@@ -1,0 +1,345 @@
+[
+  {
+    "name": "Trevor Project",
+    "slug": "trevor-project",
+    "country": "US",
+    "type": "crisis-support",
+    "focus": ["youth", "crisis-intervention", "suicide-prevention"],
+    "contact": {
+      "phone": "1-866-488-7386",
+      "text": "Text START to 678-678",
+      "chat": "TheTrevorProject.org",
+      "hours": "24/7"
+    },
+    "website": "https://thetrevorproject.org",
+    "description": "The leading suicide prevention and crisis intervention organization for LGBTQ+ young people under 25. Operates TrevorLifeline, TrevorChat, and TrevorText.",
+    "founded": 1998
+  },
+  {
+    "name": "Trans Lifeline",
+    "slug": "trans-lifeline",
+    "country": "US/CA",
+    "type": "crisis-support",
+    "focus": ["transgender", "crisis-intervention", "peer-support"],
+    "contact": {
+      "phone_us": "877-565-8860",
+      "phone_ca": "877-330-6366",
+      "hours": "Variable — staffed by trans volunteers"
+    },
+    "website": "https://translifeline.org",
+    "description": "A peer support and crisis hotline run by and for trans people. Operators are always trans-identified. Also offers a microgrants program for legal name and gender marker changes.",
+    "founded": 2014
+  },
+  {
+    "name": "Crisis Text Line",
+    "slug": "crisis-text-line",
+    "country": "US",
+    "type": "crisis-support",
+    "focus": ["mental-health", "crisis-intervention", "text-based"],
+    "contact": {
+      "text": "Text HOME to 741741",
+      "hours": "24/7"
+    },
+    "website": "https://crisistextline.org",
+    "description": "Free 24/7 text-based crisis support. While not LGBTQ+-specific, it is widely used by LGBTQ+ people and trains counselors on LGBTQ+ issues.",
+    "founded": 2013
+  },
+  {
+    "name": "GLAAD",
+    "slug": "glaad",
+    "country": "US",
+    "type": "media-advocacy",
+    "focus": ["media-representation", "advocacy", "anti-defamation"],
+    "contact": {
+      "website": "glaad.org"
+    },
+    "website": "https://glaad.org",
+    "description": "Originally the Gay and Lesbian Alliance Against Defamation, GLAAD works through entertainment, news, and digital media to shape narratives and change culture for LGBTQ+ acceptance.",
+    "founded": 1985
+  },
+  {
+    "name": "Human Rights Campaign",
+    "slug": "hrc",
+    "country": "US",
+    "type": "advocacy",
+    "focus": ["federal-legislation", "corporate-equality", "advocacy"],
+    "contact": {
+      "website": "hrc.org",
+      "phone": "202-628-4160"
+    },
+    "website": "https://hrc.org",
+    "description": "The largest LGBTQ+ civil rights organization in the US, focused on federal legislation, the Corporate Equality Index, and electing pro-equality candidates.",
+    "founded": 1980
+  },
+  {
+    "name": "PFLAG",
+    "slug": "pflag",
+    "country": "US",
+    "type": "family-support",
+    "focus": ["family-support", "advocacy", "education"],
+    "contact": {
+      "helpline": "pflag.org/find-a-chapter",
+      "phone": "202-467-8180"
+    },
+    "website": "https://pflag.org",
+    "description": "The first and largest organization for LGBTQ+ people, their families, and allies. Provides support groups, educational resources, and advocacy. Has chapters in all 50 US states.",
+    "founded": 1972
+  },
+  {
+    "name": "Lambda Legal",
+    "slug": "lambda-legal",
+    "country": "US",
+    "type": "legal",
+    "focus": ["litigation", "legal-rights", "hiv-rights"],
+    "contact": {
+      "help_desk": "lambdalegal.org/helpdesk",
+      "phone": "212-809-8585"
+    },
+    "website": "https://lambdalegal.org",
+    "description": "The oldest and largest legal organization working for the civil rights of LGBTQ+ people and those living with HIV. Pursues litigation, education, and policy work.",
+    "founded": 1973
+  },
+  {
+    "name": "National Center for Transgender Equality",
+    "slug": "ncte",
+    "country": "US",
+    "type": "advocacy",
+    "focus": ["transgender", "policy", "advocacy"],
+    "contact": {
+      "website": "transequality.org"
+    },
+    "website": "https://transequality.org",
+    "description": "The leading social justice advocacy organization for transgender people in the US. Produces the National Transgender Discrimination Survey and advocates for federal policy changes.",
+    "founded": 2003
+  },
+  {
+    "name": "GLSEN",
+    "slug": "glsen",
+    "country": "US",
+    "type": "education",
+    "focus": ["K-12", "school-safety", "education", "youth"],
+    "contact": {
+      "website": "glsen.org",
+      "phone": "212-727-0135"
+    },
+    "website": "https://glsen.org",
+    "description": "Works to create safe and inclusive K-12 schools for LGBTQ+ students. Runs the GSA (Gender and Sexuality Alliance) Network and conducts the National School Climate Survey.",
+    "founded": 1990
+  },
+  {
+    "name": "It Gets Better Project",
+    "slug": "it-gets-better",
+    "country": "US",
+    "type": "youth-support",
+    "focus": ["youth", "mental-health", "storytelling"],
+    "contact": {
+      "website": "itgetsbetter.org"
+    },
+    "website": "https://itgetsbetter.org",
+    "description": "A non-profit that uplifts, empowers, and connects LGBTQ+ youth through storytelling. Founded in 2010 after Dan Savage and Terry Miller posted a YouTube video in response to a wave of LGBTQ+ youth suicides.",
+    "founded": 2010
+  },
+  {
+    "name": "ACLU LGBTQ Rights Project",
+    "slug": "aclu-lgbtq",
+    "country": "US",
+    "type": "legal",
+    "focus": ["litigation", "civil-rights", "advocacy"],
+    "contact": {
+      "website": "aclu.org/lgbtq-rights"
+    },
+    "website": "https://aclu.org/lgbtq-rights",
+    "description": "The ACLU's dedicated LGBTQ+ rights project pursues litigation and advocacy on a broad range of issues including marriage equality, adoption, employment discrimination, and anti-trans laws.",
+    "founded": 1986
+  },
+  {
+    "name": "Howard Brown Health",
+    "slug": "howard-brown-health",
+    "country": "US",
+    "type": "healthcare",
+    "focus": ["primary-care", "HIV", "mental-health", "LGBTQ+-affirming"],
+    "contact": {
+      "website": "howardbrown.org",
+      "phone": "773-388-1600"
+    },
+    "website": "https://howardbrown.org",
+    "description": "One of the nation's largest LGBTQ+-focused healthcare organizations, based in Chicago. Provides comprehensive primary care, HIV services, mental health, and research.",
+    "founded": 1974
+  },
+  {
+    "name": "Fenway Health",
+    "slug": "fenway-health",
+    "country": "US",
+    "type": "healthcare",
+    "focus": ["primary-care", "HIV", "research", "LGBTQ+-affirming"],
+    "contact": {
+      "website": "fenwayhealth.org",
+      "phone": "617-267-0900"
+    },
+    "website": "https://fenwayhealth.org",
+    "description": "LGBTQ+-focused community health center in Boston providing primary care, mental health, HIV/AIDS services, and conducting significant research on LGBTQ+ health disparities.",
+    "founded": 1971
+  },
+  {
+    "name": "ILGA World",
+    "slug": "ilga-world",
+    "country": "International",
+    "type": "advocacy",
+    "focus": ["global-rights", "decriminalization", "UN-advocacy"],
+    "contact": {
+      "website": "ilga.org"
+    },
+    "website": "https://ilga.org",
+    "description": "The International Lesbian, Gay, Bisexual, Trans and Intersex Association — a worldwide federation of over 1,700 member organizations. Publishes the annual State-Sponsored Homophobia report tracking criminalization globally.",
+    "founded": 1978
+  },
+  {
+    "name": "Stonewall UK",
+    "slug": "stonewall-uk",
+    "country": "GB",
+    "type": "advocacy",
+    "focus": ["advocacy", "workplace-equality", "legislation"],
+    "contact": {
+      "website": "stonewall.org.uk",
+      "info": "info@stonewall.org.uk"
+    },
+    "website": "https://stonewall.org.uk",
+    "description": "The largest LGBTQ+ charity in the UK and Europe. Known for its Workplace Equality Index and campaigns for legislative change including same-sex marriage in England and Wales.",
+    "founded": 1989
+  },
+  {
+    "name": "OutRight Action International",
+    "slug": "outright-action",
+    "country": "International",
+    "type": "advocacy",
+    "focus": ["UN-advocacy", "global-rights", "intersectionality"],
+    "contact": {
+      "website": "outrightinternational.org"
+    },
+    "website": "https://outrightinternational.org",
+    "description": "Advocates for the human rights of LGBTIQ+ people at the United Nations. Works to advance inclusion and protection within the international human rights framework.",
+    "founded": 1990
+  },
+  {
+    "name": "Rainbow Health Ontario",
+    "slug": "rainbow-health-ontario",
+    "country": "CA",
+    "type": "healthcare",
+    "focus": ["healthcare", "training", "research", "LGBTQ+-affirming"],
+    "contact": {
+      "website": "rainbowhealthontario.ca"
+    },
+    "website": "https://rainbowhealthontario.ca",
+    "description": "A provincial program that builds capacity in the Ontario health and social services sector to provide more effective services to LGBTQ+ communities through training, research, and resources.",
+    "founded": 2003
+  },
+  {
+    "name": "SAGE",
+    "slug": "sage-usa",
+    "country": "US",
+    "type": "elder-care",
+    "focus": ["aging", "elder-care", "advocacy", "social-services"],
+    "contact": {
+      "website": "sageusa.org",
+      "hotline": "1-877-360-LGBT (5428)"
+    },
+    "website": "https://sageusa.org",
+    "description": "The world's largest and oldest organization dedicated to improving the lives of LGBTQ+ older adults. Provides direct services, advocacy, and operates the SAGE National LGBT Elder Hotline.",
+    "founded": 1978
+  },
+  {
+    "name": "National Queer and Trans Therapists of Color Network",
+    "slug": "nqttcn",
+    "country": "US",
+    "type": "mental-health",
+    "focus": ["mental-health", "QTPOC", "therapist-directory", "healing"],
+    "contact": {
+      "website": "nqttcn.com"
+    },
+    "website": "https://nqttcn.com",
+    "description": "A healing justice organization committed to transforming mental health for queer and trans people of color. Maintains a directory of QTPOC therapists and organizes around collective healing.",
+    "founded": 2016
+  },
+  {
+    "name": "Intersex Human Rights Australia",
+    "slug": "ihra",
+    "country": "AU",
+    "type": "advocacy",
+    "focus": ["intersex", "human-rights", "health-advocacy"],
+    "contact": {
+      "website": "ihra.org.au"
+    },
+    "website": "https://ihra.org.au",
+    "description": "An intersex-led organization advocating for the human rights of intersex people in Australia. Created the intersex pride symbol and engages in UN treaty body processes.",
+    "founded": 1993
+  },
+  {
+    "name": "PFLAG Canada",
+    "slug": "pflag-canada",
+    "country": "CA",
+    "type": "family-support",
+    "focus": ["family-support", "advocacy", "education"],
+    "contact": {
+      "website": "pflagcanada.ca",
+      "helpline": "1-888-530-6777"
+    },
+    "website": "https://pflagcanada.ca",
+    "description": "Canada's only national organization that provides support, resources, and education to LGBTQ+ people and their families. Has chapters across Canada.",
+    "founded": 1981
+  },
+  {
+    "name": "Youth Line",
+    "slug": "youth-line",
+    "country": "CA",
+    "type": "crisis-support",
+    "focus": ["youth", "peer-support", "queer"],
+    "contact": {
+      "phone": "1-800-268-9688",
+      "text": "Text LGBTQ to 647-694-4275",
+      "hours": "Sun-Fri 4pm-9:30pm ET"
+    },
+    "website": "https://youthline.ca",
+    "description": "A peer-support community organization serving LGBTQ+ youth in Ontario, Canada. Offers phone, text, and online chat support from trained LGBTQ+ peer volunteers.",
+    "founded": 1993
+  },
+  {
+    "name": "AVEN (Asexual Visibility and Education Network)",
+    "slug": "aven",
+    "country": "International",
+    "type": "community",
+    "focus": ["asexuality", "aromanticism", "education", "community"],
+    "contact": {
+      "website": "asexuality.org"
+    },
+    "website": "https://asexuality.org",
+    "description": "The largest online community for asexual, aromantic, and questioning people. Provides educational resources and hosts the world's largest asexual community forum.",
+    "founded": 2001
+  },
+  {
+    "name": "Minus18",
+    "slug": "minus18",
+    "country": "AU",
+    "type": "youth-support",
+    "focus": ["youth", "events", "social-support", "education"],
+    "contact": {
+      "website": "minus18.org.au"
+    },
+    "website": "https://minus18.org.au",
+    "description": "Australia's largest youth-led organization for LGBTQ+ young people. Provides social events, mental health resources, and school programs to improve wellbeing for LGBTQ+ youth aged under 26.",
+    "founded": 1999
+  },
+  {
+    "name": "GLBTQ Legal Advocates & Defenders (GLAD)",
+    "slug": "glad",
+    "country": "US",
+    "type": "legal",
+    "focus": ["litigation", "legal-rights", "New-England"],
+    "contact": {
+      "website": "glad.org",
+      "legal_info_line": "1-800-455-GLAD"
+    },
+    "website": "https://glad.org",
+    "description": "New England's leading LGBTQ+ legal rights organization. Litigated Goodridge v. Department of Public Health (2003), which led to Massachusetts becoming the first US state to legalize same-sex marriage.",
+    "founded": 1978
+  }
+]

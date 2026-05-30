@@ -1,0 +1,94 @@
+{
+  "name": "Rose Piné",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#191724",
+    "editor.foreground": "#e0def4",
+    "editorCursor.foreground": "#e0def4",
+    "editor.selectionBackground": "#403d52",
+    "terminal.background": "#191724",
+    "terminal.foreground": "#e0def4",
+    "terminal.ansiBlack": "#26233a",
+    "terminal.ansiRed": "#eb6f92",
+    "terminal.ansiGreen": "#31748f",
+    "terminal.ansiYellow": "#f6c177",
+    "terminal.ansiBlue": "#9ccfd8",
+    "terminal.ansiMagenta": "#c4a7e7",
+    "terminal.ansiCyan": "#ebbcba",
+    "terminal.ansiWhite": "#e0def4",
+    "terminal.ansiBrightBlack": "#6e6a86",
+    "terminal.ansiBrightRed": "#eb6f92",
+    "terminal.ansiBrightGreen": "#31748f",
+    "terminal.ansiBrightYellow": "#f6c177",
+    "terminal.ansiBrightBlue": "#9ccfd8",
+    "terminal.ansiBrightMagenta": "#c4a7e7",
+    "terminal.ansiBrightCyan": "#ebbcba",
+    "terminal.ansiBrightWhite": "#e0def4",
+    "activityBar.background": "#191724",
+    "sideBar.background": "#191724",
+    "statusBar.background": "#9ccfd8",
+    "statusBar.foreground": "#191724",
+    "titleBar.activeBackground": "#191724",
+    "titleBar.activeForeground": "#e0def4"
+  },
+  "tokenColors": [
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#6e6a86",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "#31748f"
+      }
+    },
+    {
+      "scope": [
+        "keyword",
+        "storage"
+      ],
+      "settings": {
+        "foreground": "#c4a7e7"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function",
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#9ccfd8"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type",
+        "entity.name.class"
+      ],
+      "settings": {
+        "foreground": "#f6c177"
+      }
+    },
+    {
+      "scope": "variable",
+      "settings": {
+        "foreground": "#e0def4"
+      }
+    },
+    {
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#ebbcba"
+      }
+    },
+    {
+      "scope": "constant.language",
+      "settings": {
+        "foreground": "#eb6f92"
+      }
+    }
+  ]
+}

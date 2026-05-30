@@ -1,0 +1,34 @@
+# Theme: Tokyo Night
+# Source: https://github.com/enkia/tokyo-night-vscode-theme
+
+[colors.primary]
+background = "#1A1B26"
+foreground = "#C0CAF5"
+
+[colors.cursor]
+cursor = "#C0CAF5"
+text   = "#1A1B26"
+
+[colors.selection]
+background = "#283457"
+text       = "#C0CAF5"
+
+[colors.normal]
+black   = "#15161E"
+red     = "#F7768E"
+green   = "#9ECE6A"
+yellow  = "#E0AF68"
+blue    = "#7AA2F7"
+magenta = "#BB9AF7"
+cyan    = "#7DCFFF"
+white   = "#A9B1D6"
+
+[colors.bright]
+black   = "#414868"
+red     = "#F7768E"
+green   = "#9ECE6A"
+yellow  = "#E0AF68"
+blue    = "#7AA2F7"
+magenta = "#BB9AF7"
+cyan    = "#7DCFFF"
+white   = "#C0CAF5"

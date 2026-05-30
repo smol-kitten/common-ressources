@@ -1,0 +1,155 @@
+[
+  {
+    "slug": "iso8601-date",
+    "name": "ISO 8601 Date",
+    "format": "YYYY-MM-DD",
+    "example": "2025-05-24",
+    "category": "international",
+    "used_in": ["ISO 8601", "HTML date inputs", "APIs", "databases"],
+    "notes": "Universally recommended for data interchange"
+  },
+  {
+    "slug": "iso8601-datetime",
+    "name": "ISO 8601 DateTime (UTC)",
+    "format": "YYYY-MM-DDTHH:mm:ssZ",
+    "example": "2025-05-24T14:30:00Z",
+    "category": "international",
+    "used_in": ["ISO 8601", "REST APIs", "JSON timestamps"],
+    "notes": "Z suffix denotes UTC; +HH:mm for offset"
+  },
+  {
+    "slug": "iso8601-datetime-offset",
+    "name": "ISO 8601 DateTime with offset",
+    "format": "YYYY-MM-DDTHH:mm:ss+HH:mm",
+    "example": "2025-05-24T16:30:00+02:00",
+    "category": "international",
+    "used_in": ["ISO 8601", "calendar apps", "scheduling"],
+    "notes": "Explicit timezone offset; preferred over Z when local time matters"
+  },
+  {
+    "slug": "unix-timestamp",
+    "name": "Unix Timestamp (seconds)",
+    "format": "integer seconds since 1970-01-01T00:00:00Z",
+    "example": "1748096400",
+    "category": "machine",
+    "used_in": ["C", "Python", "PHP", "Unix systems", "JWT"],
+    "notes": "epoch time; always UTC; no timezone ambiguity"
+  },
+  {
+    "slug": "unix-ms",
+    "name": "Unix Timestamp (milliseconds)",
+    "format": "integer milliseconds since 1970-01-01T00:00:00Z",
+    "example": "1748096400000",
+    "category": "machine",
+    "used_in": ["JavaScript", "Java", "log systems"],
+    "notes": "Date.now() in JavaScript; multiply seconds timestamp by 1000"
+  },
+  {
+    "slug": "rfc2822",
+    "name": "RFC 2822",
+    "format": "ddd, DD MMM YYYY HH:mm:ss +HHMM",
+    "example": "Sat, 24 May 2025 14:30:00 +0000",
+    "category": "internet",
+    "used_in": ["email headers (Date:)", "HTTP Date headers (legacy)"],
+    "notes": "Used in email; human-readable with timezone"
+  },
+  {
+    "slug": "rfc7231",
+    "name": "RFC 7231 / HTTP-date",
+    "format": "ddd, DD MMM YYYY HH:mm:ss GMT",
+    "example": "Sat, 24 May 2025 14:30:00 GMT",
+    "category": "internet",
+    "used_in": ["HTTP headers (Last-Modified, Expires, Date)", "cookies"],
+    "notes": "Always GMT; required by HTTP spec"
+  },
+  {
+    "slug": "us-short",
+    "name": "US Short Date",
+    "format": "MM/DD/YYYY",
+    "example": "05/24/2025",
+    "category": "regional",
+    "used_in": ["United States", "Philippines", "Micronesia"],
+    "notes": "Month-first; avoid in international contexts due to ambiguity"
+  },
+  {
+    "slug": "eu-short",
+    "name": "European Short Date",
+    "format": "DD/MM/YYYY",
+    "example": "24/05/2025",
+    "category": "regional",
+    "used_in": ["UK", "EU", "Australia", "Latin America"],
+    "notes": "Day-first; ambiguous when month ≤ 12; common in forms"
+  },
+  {
+    "slug": "eu-dot",
+    "name": "European Dot Date",
+    "format": "DD.MM.YYYY",
+    "example": "24.05.2025",
+    "category": "regional",
+    "used_in": ["Germany", "Austria", "Switzerland", "Russia", "Poland"],
+    "notes": "Common in Central and Eastern Europe"
+  },
+  {
+    "slug": "iso-short",
+    "name": "ISO Short (no separator)",
+    "format": "YYYYMMDD",
+    "example": "20250524",
+    "category": "machine",
+    "used_in": ["file naming", "database keys", "ISO 8601 basic format"],
+    "notes": "Sorts lexicographically; safe for filenames"
+  },
+  {
+    "slug": "strftime-c",
+    "name": "C strftime full",
+    "format": "%a %b %e %H:%M:%S %Y",
+    "example": "Sat May 24 14:30:00 2025",
+    "category": "system",
+    "used_in": ["C", "C++", "Python strftime", "Unix date command"],
+    "notes": "Default output of 'date' command on many Unix systems"
+  },
+  {
+    "slug": "sql-datetime",
+    "name": "SQL DATETIME",
+    "format": "YYYY-MM-DD HH:mm:ss",
+    "example": "2025-05-24 14:30:00",
+    "category": "database",
+    "used_in": ["MySQL", "MariaDB", "PostgreSQL", "SQLite"],
+    "notes": "Space instead of T separator; no timezone designator"
+  },
+  {
+    "slug": "dotnet-sortable",
+    "name": ".NET Sortable Pattern",
+    "format": "yyyy-MM-ddTHH:mm:ss",
+    "example": "2025-05-24T14:30:00",
+    "category": "system",
+    "used_in": [".NET", "C#"],
+    "notes": "ISO 8601 without timezone; use 'o' specifier for full ISO round-trip"
+  },
+  {
+    "slug": "excel-us",
+    "name": "Excel US Format",
+    "format": "M/D/YYYY H:MM AM/PM",
+    "example": "5/24/2025 2:30 PM",
+    "category": "regional",
+    "used_in": ["Microsoft Excel (US locale)", "CSV files from US systems"],
+    "notes": "Month and day not zero-padded; 12-hour clock"
+  },
+  {
+    "slug": "japanese-era",
+    "name": "Japanese Imperial Era",
+    "format": "Gee年MM月DD日",
+    "example": "令和7年05月24日",
+    "category": "regional",
+    "used_in": ["Japan", "official Japanese documents"],
+    "notes": "Uses imperial era name (e.g. 令和=Reiwa); Reiwa started 2019-05-01"
+  },
+  {
+    "slug": "relative",
+    "name": "Relative / Human Friendly",
+    "format": "N [unit] ago / in N [unit]",
+    "example": "3 days ago",
+    "category": "display",
+    "used_in": ["social media", "UIs", "notifications"],
+    "notes": "Not a parse format; use libraries like dayjs/timeago for generation"
+  }
+]

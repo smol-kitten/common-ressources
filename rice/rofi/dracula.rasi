@@ -1,0 +1,26 @@
+/* Theme: Dracula */
+/* Source: https://draculatheme.com */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #282A36;
+    foreground:                    #F8F8F2;
+
+    normal-background:             #282A36;
+    normal-foreground:             #F8F8F2;
+    selected-normal-background:    #BD93F9;
+    selected-normal-foreground:    #282A36;
+
+    active-background:             #50FA7B;
+    active-foreground:             #282A36;
+    selected-active-background:    #69FF94;
+    selected-active-foreground:    #282A36;
+
+    urgent-background:             #FF5555;
+    urgent-foreground:             #282A36;
+    selected-urgent-background:    #FF6E6E;
+    selected-urgent-foreground:    #282A36;
+
+    border-color:                  #6272A4;
+    separatorcolor:                #6272A4;
+}

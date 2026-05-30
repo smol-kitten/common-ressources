@@ -1,0 +1,198 @@
+{
+  "note": "PC hardware form factor dimensions. Most are industry/consortium specifications (ATX = Intel; PCIe = PCI-SIG; JEDEC for RAM), not formal ISO standards. All dimensions in mm unless noted.",
+
+  "motherboards": {
+    "standard_body": "ATX specification family (Intel, 1995–present)",
+    "screw_hole_pattern": "ATX motherboards use M3 × 5 mm brass standoffs on a 6.35 mm grid",
+    "form_factors": [
+      { "name": "E-ATX",     "slug": "eatx",     "width_mm": 305, "depth_mm": 330, "max_expansion_slots": 8,  "notes": "Extended ATX — common for HEDT/workstation boards" },
+      { "name": "ATX",       "slug": "atx",      "width_mm": 305, "depth_mm": 244, "max_expansion_slots": 7,  "notes": "Full-size desktop standard" },
+      { "name": "Micro-ATX", "slug": "matx",     "width_mm": 244, "depth_mm": 244, "max_expansion_slots": 4,  "notes": "Most common mid-tower size" },
+      { "name": "Mini-ATX",  "slug": "mini-atx", "width_mm": 284, "depth_mm": 208, "max_expansion_slots": 4,  "notes": "Rare; not to be confused with Mini-ITX" },
+      { "name": "Mini-ITX",  "slug": "mini-itx", "width_mm": 170, "depth_mm": 170, "max_expansion_slots": 1,  "notes": "SFF (small form factor); single PCIe × 16 slot" },
+      { "name": "Nano-ITX",  "slug": "nano-itx", "width_mm": 120, "depth_mm": 120, "max_expansion_slots": 1,  "notes": "Embedded/industrial; soldered CPU common" },
+      { "name": "Pico-ITX",  "slug": "pico-itx", "width_mm": 100, "depth_mm": 72,  "max_expansion_slots": 0,  "notes": "Embedded; ultra-compact" },
+      { "name": "FlexATX",   "slug": "flex-atx", "width_mm": 229, "depth_mm": 191, "max_expansion_slots": 3,  "notes": "Used in slim/low-profile cases" },
+      { "name": "SSI CEB",   "slug": "ssi-ceb",  "width_mm": 305, "depth_mm": 267, "max_expansion_slots": 7,  "notes": "Server boards; SSI (Server System Infrastructure) spec" },
+      { "name": "SSI EEB",   "slug": "ssi-eeb",  "width_mm": 305, "depth_mm": 330, "max_expansion_slots": 7,  "notes": "Server boards; same size as E-ATX but different hole positions" }
+    ]
+  },
+
+  "power_supplies": {
+    "standard_body": "ATX specification / SFX specification",
+    "form_factors": [
+      { "name": "ATX",   "width_mm": 150, "height_mm": 86,   "depth_mm": 140,    "notes": "Standard; depth varies 140–180 mm. Fan: 120 or 140 mm" },
+      { "name": "ATX12VO","width_mm": 150, "height_mm": 86,  "depth_mm": 140,    "notes": "ATX 12V Only (2019 Intel spec); 12 V single rail, fewer cables" },
+      { "name": "SFX",   "width_mm": 100, "height_mm": 63.5, "depth_mm": 125,    "notes": "Small form factor; fan 80 mm" },
+      { "name": "SFX-L", "width_mm": 125, "height_mm": 63.5, "depth_mm": 130,    "notes": "SFX with 120 mm fan; higher wattage possible" },
+      { "name": "TFX",   "width_mm": 84,  "height_mm": 64,   "depth_mm": 175,    "notes": "Thin form factor; slim tower cases" },
+      { "name": "1U",    "width_mm": 150, "height_mm": 40,   "depth_mm": 220,    "notes": "Rack server 1U height" }
+    ]
+  },
+
+  "storage": {
+    "form_factors": [
+      {
+        "name": "3.5\" HDD",
+        "width_mm": 101.6, "height_mm": 26.1, "depth_mm": 147,
+        "interface": ["SATA", "SAS"],
+        "notes": "Standard desktop hard drive. 4-40 UNC or M3 mounting screws"
+      },
+      {
+        "name": "2.5\" HDD/SSD (7 mm)",
+        "width_mm": 69.85, "height_mm": 7.0,  "depth_mm": 100,
+        "interface": ["SATA", "SAS"],
+        "notes": "Slim laptop/SSD standard height"
+      },
+      {
+        "name": "2.5\" HDD/SSD (9.5 mm)",
+        "width_mm": 69.85, "height_mm": 9.5,  "depth_mm": 100,
+        "interface": ["SATA", "SAS"],
+        "notes": "Thicker; used in higher-capacity laptop drives"
+      },
+      {
+        "name": "2.5\" HDD (15 mm)",
+        "width_mm": 69.85, "height_mm": 15.0, "depth_mm": 100,
+        "interface": ["SATA", "SAS"],
+        "notes": "High-capacity enterprise 2.5\" drives"
+      },
+      {
+        "name": "M.2 2230",
+        "width_mm": 22, "length_mm": 30,
+        "interface": ["PCIe NVMe", "SATA"],
+        "notes": "Used in ultrabooks and the Steam Deck"
+      },
+      {
+        "name": "M.2 2242",
+        "width_mm": 22, "length_mm": 42,
+        "interface": ["PCIe NVMe", "SATA"],
+        "notes": "Small laptops, embedded systems"
+      },
+      {
+        "name": "M.2 2260",
+        "width_mm": 22, "length_mm": 60,
+        "interface": ["PCIe NVMe", "SATA"],
+        "notes": "Uncommon"
+      },
+      {
+        "name": "M.2 2280",
+        "width_mm": 22, "length_mm": 80,
+        "interface": ["PCIe NVMe", "SATA"],
+        "notes": "Most common desktop/laptop NVMe SSD size"
+      },
+      {
+        "name": "M.2 22110",
+        "width_mm": 22, "length_mm": 110,
+        "interface": ["PCIe NVMe", "SATA"],
+        "notes": "Enterprise / server M.2 drives"
+      },
+      {
+        "name": "U.2 (SFF-8639)",
+        "width_mm": 69.85, "height_mm": 15.0, "depth_mm": 100,
+        "interface": ["PCIe NVMe x4", "SATA", "SAS"],
+        "notes": "Enterprise NVMe; same physical size as 2.5\" 15 mm"
+      },
+      {
+        "name": "EDSFF E1.S",
+        "width_mm": 31.5, "height_mm": 7.5, "depth_mm": 111.5,
+        "interface": ["PCIe NVMe"],
+        "notes": "SNIA Enterprise and Datacenter SSD Form Factor; data centre"
+      }
+    ]
+  },
+
+  "expansion_cards": {
+    "standard_body": "PCI-SIG PCIe specification",
+    "bracket_heights": [
+      { "name": "Full height (ATX)", "bracket_height_mm": 120,  "card_depth_max_mm": 312, "notes": "Standard desktop PCIe card" },
+      { "name": "Low profile (LP)",  "bracket_height_mm": 79.2, "card_depth_max_mm": 167, "notes": "Half-height; for slim cases" }
+    ],
+    "card_lengths": [
+      { "name": "Short",       "length_mm": 167,  "notes": "Low-profile-compatible" },
+      { "name": "Half length", "length_mm": 167,  "notes": "Equivalent to short" },
+      { "name": "3/4 length",  "length_mm": 222,  "notes": "Uncommon" },
+      { "name": "Full length", "length_mm": 312,  "notes": "Maximum for standard ATX slot" }
+    ],
+    "slot_widths": [
+      { "lanes": "x1",  "connector_length_mm": 25  },
+      { "lanes": "x4",  "connector_length_mm": 39  },
+      { "lanes": "x8",  "connector_length_mm": 56  },
+      { "lanes": "x16", "connector_length_mm": 89  }
+    ]
+  },
+
+  "ram": {
+    "standard_body": "JEDEC standards (JESD21C series)",
+    "modules": [
+      {
+        "name": "DDR4 DIMM",
+        "width_mm": 133.35, "height_mm": 31.25, "thickness_mm": 3.8,
+        "pins": 288, "key_notch": "single",
+        "voltage_v": 1.2,
+        "speeds_common": ["2133", "2400", "2666", "3200", "3600"],
+        "notes": "Standard desktop DDR4"
+      },
+      {
+        "name": "DDR5 DIMM",
+        "width_mm": 133.35, "height_mm": 31.25, "thickness_mm": 3.8,
+        "pins": 288, "key_notch": "single (different position from DDR4)",
+        "voltage_v": 1.1,
+        "speeds_common": ["4800", "5600", "6000", "6400", "7200"],
+        "notes": "Standard desktop DDR5. Not backward-compatible with DDR4 slots"
+      },
+      {
+        "name": "DDR4 SO-DIMM",
+        "width_mm": 67.6, "height_mm": 30.0, "thickness_mm": 3.8,
+        "pins": 260, "key_notch": "single",
+        "voltage_v": 1.2,
+        "notes": "Laptop, NUC, mini-ITX DDR4"
+      },
+      {
+        "name": "DDR5 SO-DIMM",
+        "width_mm": 69.6, "height_mm": 30.0, "thickness_mm": 3.8,
+        "pins": 262, "key_notch": "single",
+        "voltage_v": 1.1,
+        "notes": "Laptop, SFF DDR5"
+      },
+      {
+        "name": "DDR4 ECC RDIMM",
+        "width_mm": 133.35, "height_mm": 31.25, "thickness_mm": 3.8,
+        "pins": 288, "key_notch": "single",
+        "notes": "Registered (buffered) ECC for server platforms"
+      },
+      {
+        "name": "DDR5 ECC RDIMM",
+        "width_mm": 133.35, "height_mm": 31.25, "thickness_mm": 3.8,
+        "pins": 288, "key_notch": "single",
+        "notes": "Registered ECC DDR5 for server platforms; on-module power management IC"
+      }
+    ]
+  },
+
+  "cpu_sockets": {
+    "note": "Socket dimensions set by CPU vendor, not ISO. Listed for reference.",
+    "sockets": [
+      { "name": "LGA1700", "vendor": "Intel", "pins": 1700, "width_mm": 45, "height_mm": 37.5, "compatible_cpus": ["12th-14th Gen Core", "Xeon W-3400"],               "notes": "Intel desktop LGA; contact pads on motherboard" },
+      { "name": "LGA1851", "vendor": "Intel", "pins": 1851, "width_mm": 45, "height_mm": 37.5, "compatible_cpus": ["Core Ultra 200 (Arrow Lake)"],                       "notes": "Intel next-gen desktop LGA" },
+      { "name": "AM5",     "vendor": "AMD",   "pins": 1718, "width_mm": 40, "height_mm": 40,   "compatible_cpus": ["Ryzen 7000/8000/9000 series", "Zen 4/5"],            "notes": "AMD first LGA socket (contact pads on board)" },
+      { "name": "AM4",     "vendor": "AMD",   "pins": 1331, "width_mm": 40, "height_mm": 40,   "compatible_cpus": ["Ryzen 1000–5000", "Athlon 3000G"],                  "notes": "PGA (pins on CPU); phased out 2022" },
+      { "name": "LGA4677", "vendor": "Intel", "pins": 4677, "width_mm": 76, "height_mm": 56.5, "compatible_cpus": ["Xeon Scalable (Sapphire Rapids, Emerald Rapids)"],   "notes": "Intel server socket" },
+      { "name": "SP5",     "vendor": "AMD",   "pins": 6096, "width_mm": 75.4,"height_mm": 58.5,"compatible_cpus": ["EPYC Genoa/Bergamo/Siena (Zen 4)"],                 "notes": "AMD server LGA socket" }
+    ]
+  },
+
+  "cooling_standards": {
+    "note": "Cooler mounting hole patterns vary by socket.",
+    "intel_lga1700_pattern": {
+      "hole_spacing_x_mm": 75, "hole_spacing_y_mm": 75,
+      "screw": "M4 into plastic backplate or M3.5 into metal standoff"
+    },
+    "amd_am4_am5_pattern": {
+      "hole_spacing_x_mm": 54, "hole_spacing_y_mm": 90,
+      "screw": "M4 into metal backplate; uses same backplate for AM4/AM5"
+    },
+    "standard_92mm_fan": { "width_mm": 92, "depth_mm": 92, "thickness_mm": 25, "screw_pattern_mm": 82.5 },
+    "standard_120mm_fan": { "width_mm": 120, "depth_mm": 120, "thickness_mm": 25, "screw_pattern_mm": 105 },
+    "standard_140mm_fan": { "width_mm": 140, "depth_mm": 140, "thickness_mm": 25, "screw_pattern_mm": 124.5 }
+  }
+}

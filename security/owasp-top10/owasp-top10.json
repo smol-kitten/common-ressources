@@ -1,0 +1,102 @@
+[
+  {
+    "id": "A01",
+    "rank": 1,
+    "name": "Broken Access Control",
+    "slug": "broken-access-control",
+    "description": "Restrictions on what authenticated users can do are not properly enforced. Attackers can exploit this to access unauthorized functionality or data.",
+    "examples": ["Modifying URL parameters to access other users' accounts", "Accessing admin pages without admin role", "IDOR (Insecure Direct Object Reference)"],
+    "mitigations": ["Deny by default", "Implement server-side access controls", "Log and alert on access control failures", "Rate limit API endpoints"],
+    "cwe": ["CWE-200", "CWE-284", "CWE-285"]
+  },
+  {
+    "id": "A02",
+    "rank": 2,
+    "name": "Cryptographic Failures",
+    "slug": "cryptographic-failures",
+    "description": "Failures related to cryptography that often lead to exposure of sensitive data. Previously called 'Sensitive Data Exposure'.",
+    "examples": ["Transmitting data in cleartext (HTTP not HTTPS)", "Using weak/deprecated algorithms (MD5, SHA1, DES)", "Hard-coded credentials", "Missing TLS certificate validation"],
+    "mitigations": ["Use TLS 1.2+ for all data in transit", "Use bcrypt/Argon2 for passwords", "Never store sensitive data unless necessary", "Disable caching for sensitive responses"],
+    "cwe": ["CWE-259", "CWE-327", "CWE-331"]
+  },
+  {
+    "id": "A03",
+    "rank": 3,
+    "name": "Injection",
+    "slug": "injection",
+    "description": "User-supplied data is not validated, filtered, or sanitized and is interpreted as commands or queries. Includes SQL, NoSQL, OS command, and LDAP injection.",
+    "examples": ["SQL injection via unsanitized form input", "OS command injection via filename parameters", "LDAP injection", "XPath injection"],
+    "mitigations": ["Use parameterized queries / prepared statements", "Use an ORM", "Validate and sanitize all input", "Use LIMIT to restrict records returned"],
+    "cwe": ["CWE-73", "CWE-89", "CWE-564"]
+  },
+  {
+    "id": "A04",
+    "rank": 4,
+    "name": "Insecure Design",
+    "slug": "insecure-design",
+    "description": "Missing or ineffective security controls in the design phase. Secure design requires threat modelling and security-focused design patterns from the start.",
+    "examples": ["Password reset via security questions", "No rate limiting on sensitive operations", "Excessive data collection", "Missing business logic validation"],
+    "mitigations": ["Threat modelling during design", "Use secure design patterns", "Write security stories / abuse cases", "Limit resource consumption by user/session"],
+    "cwe": ["CWE-209", "CWE-256", "CWE-501"]
+  },
+  {
+    "id": "A05",
+    "rank": 5,
+    "name": "Security Misconfiguration",
+    "slug": "security-misconfiguration",
+    "description": "The most common issue. Includes insecure defaults, incomplete configurations, open cloud storage, verbose error messages, and unpatched systems.",
+    "examples": ["Default credentials unchanged", "Directory listing enabled", "Stack traces exposed to users", "Unnecessary features enabled (ports, services, pages)"],
+    "mitigations": ["Minimal platform — remove unused features", "Review cloud storage permissions", "Disable debug features in production", "Automated configuration review"],
+    "cwe": ["CWE-16", "CWE-611"]
+  },
+  {
+    "id": "A06",
+    "rank": 6,
+    "name": "Vulnerable and Outdated Components",
+    "slug": "vulnerable-outdated-components",
+    "description": "Using components (libraries, frameworks, OS) with known vulnerabilities. Can undermine even the most carefully written application.",
+    "examples": ["Running an unpatched web server", "Dependencies with CVEs", "Unused/unsupported software", "Not tracking component versions"],
+    "mitigations": ["Continuously inventory components", "Subscribe to CVE alerts (dependabot, snyk)", "Remove unused dependencies", "Use components from official sources only"],
+    "cwe": ["CWE-1035", "CWE-937"]
+  },
+  {
+    "id": "A07",
+    "rank": 7,
+    "name": "Identification and Authentication Failures",
+    "slug": "identification-authentication-failures",
+    "description": "Weaknesses in authentication that allow attackers to compromise passwords, keys, or session tokens. Previously called 'Broken Authentication'.",
+    "examples": ["Credential stuffing without brute-force protection", "Weak passwords allowed", "Sessions not invalidated on logout", "Missing MFA"],
+    "mitigations": ["Implement MFA", "Do not ship default credentials", "Enforce strong password policy", "Use secure session management (server-side, random IDs)"],
+    "cwe": ["CWE-287", "CWE-297", "CWE-384"]
+  },
+  {
+    "id": "A08",
+    "rank": 8,
+    "name": "Software and Data Integrity Failures",
+    "slug": "software-data-integrity-failures",
+    "description": "Code and infrastructure that does not protect against integrity violations. Includes insecure deserialization and CI/CD pipeline attacks.",
+    "examples": ["Auto-updating software without integrity checks", "Deserialization of untrusted data", "Compromised npm packages (supply chain)", "Unsigned firmware updates"],
+    "mitigations": ["Use digital signatures to verify software", "Review dependencies for unexpected changes", "Ensure CI/CD pipelines have integrity controls", "Avoid insecure deserialization of untrusted data"],
+    "cwe": ["CWE-502", "CWE-829", "CWE-494"]
+  },
+  {
+    "id": "A09",
+    "rank": 9,
+    "name": "Security Logging and Monitoring Failures",
+    "slug": "security-logging-monitoring-failures",
+    "description": "Insufficient logging, monitoring, and alerting allows breaches to go undetected. The average time to detect a breach is over 200 days.",
+    "examples": ["Login failures not logged", "Logs not monitored for suspicious activity", "Logs stored only locally (can be erased by attacker)", "No alerting on penetration testing events"],
+    "mitigations": ["Log all authentication and access control failures", "Log with sufficient context (who, what, when)", "Use a centralised log management system", "Establish incident response plan"],
+    "cwe": ["CWE-778", "CWE-117"]
+  },
+  {
+    "id": "A10",
+    "rank": 10,
+    "name": "Server-Side Request Forgery (SSRF)",
+    "slug": "ssrf",
+    "description": "The web application fetches a remote resource without validating the user-supplied URL, allowing attackers to force the server to make requests to internal services.",
+    "examples": ["Reading cloud metadata (http://169.254.169.254)", "Port scanning internal services", "Accessing internal admin panels via server", "Bypassing firewalls using the server as a proxy"],
+    "mitigations": ["Sanitize and validate all client-supplied URLs", "Use an allowlist of permitted destinations", "Disable HTTP redirections", "Do not send raw responses to clients"],
+    "cwe": ["CWE-918"]
+  }
+]

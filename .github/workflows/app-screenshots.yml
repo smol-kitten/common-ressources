@@ -1,0 +1,136 @@
+# Terminal theme screenshots via pure ImageMagick composition.
+# Runs directly on the self-hosted runner — no Docker required.
+#
+# Triggered automatically on PRs when theme data, rice configs, or Docker
+# files change, and on push to main/master.
+
+name: Generate App Screenshots
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'colors/terminal/themes.json'
+      - 'rice/**'
+      - 'docker/Dockerfile.rice-wayland'
+      - 'docker/rice-wayland.sh'
+      - 'docker/styles/**'
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'colors/terminal/themes.json'
+      - 'rice/**'
+      - 'docker/Dockerfile.rice-wayland'
+      - 'docker/rice-wayland.sh'
+      - 'docker/styles/**'
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'Theme slug (empty = all)'
+        required: false
+        default: ''
+      style:
+        description: 'Force a display style (cyberpunk|scp|anime|science|retro|macos|neofetch|windows|minimal)'
+        required: false
+        default: ''
+      win_w:
+        description: 'Window width px'
+        required: false
+        default: '900'
+      win_h:
+        description: 'Window height px'
+        required: false
+        default: '520'
+      win_x:
+        description: 'Window X position'
+        required: false
+        default: '40'
+      win_y:
+        description: 'Window Y position'
+        required: false
+        default: '40'
+
+jobs:
+  screenshots:
+    runs-on: self-hosted
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          # Install ImageMagick, jq, Node.js and the DejaVu font used by the script.
+          # apt-get is idempotent — already-installed packages are skipped.
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            imagemagick jq nodejs npm fonts-dejavu-core ca-certificates
+          echo "==> ImageMagick $(convert --version | head -1)"
+          echo "==> Node $(node --version)"
+          echo "==> jq $(jq --version)"
+
+      - name: Run screenshot capture
+        run: |
+          set -o pipefail
+          export WIN_W="${{ github.event.inputs.win_w || '900' }}"
+          export WIN_H="${{ github.event.inputs.win_h || '520' }}"
+          export WIN_X="${{ github.event.inputs.win_x || '40' }}"
+          export WIN_Y="${{ github.event.inputs.win_y || '40' }}"
+          export STYLE="${{ github.event.inputs.style || '' }}"
+          bash docker/rice-wayland.sh ${{ github.event.inputs.slug || '' }} \
+            2>&1 | tee /tmp/rice-screenshots.log
+
+      - name: List generated screenshots
+        if: always()
+        run: |
+          echo "Generated screenshots:"
+          find rice/screenshots -name "*.png" | sort || echo "(none)"
+
+      - name: Commit screenshots
+        if: always()
+        run: |
+          git config --global --add safe.directory '*'
+          git config --global user.email "noreply@github.com"
+          git config --global user.name "github-actions[bot]"
+          git remote set-url origin \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          BRANCH="${{ github.event.pull_request.head.ref || github.ref_name }}"
+          git stash --include-untracked 2>/dev/null || true
+          git pull --rebase origin "$BRANCH" || true
+          git stash pop 2>/dev/null || true
+          git add rice/screenshots/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No screenshot changes."
+          else
+            git commit -m "chore: regenerate rice theme screenshots [skip ci]"
+            git push origin "HEAD:$BRANCH"
+          fi
+
+      - name: Comment failure summary on PR
+        if: failure() && github.event_name == 'pull_request'
+        env:
+          PR_NUM: ${{ github.event.pull_request.number }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 -c "
+          import json,urllib.request,os
+          log_file='/tmp/rice-screenshots.log'
+          try:
+              log=open(log_file).read()[-3000:]
+          except Exception:
+              log='(log not captured)'
+          run_url=os.environ['RUN_URL']
+          body='**Screenshot generation failed**\n\n<pre>\n'+log+'\n</pre>\n\n[Full logs]('+run_url+')'
+          data=json.dumps({'body':body}).encode()
+          req=urllib.request.Request('https://api.github.com/repos/'+os.environ['REPO']+'/issues/'+os.environ['PR_NUM']+'/comments',data=data,headers={'Authorization':'token '+os.environ['GH_TOKEN'],'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'})
+          urllib.request.urlopen(req)
+          print('Failure comment posted to PR #'+os.environ['PR_NUM'])
+          "

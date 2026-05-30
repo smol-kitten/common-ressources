@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Alanine",
+    "symbol_1": "A",
+    "symbol_3": "Ala",
+    "mw": 89.09,
+    "charge": "neutral",
+    "polarity": "nonpolar",
+    "essential": false,
+    "side_chain": "methyl",
+    "category": "aliphatic"
+  },
+  {
+    "name": "Arginine",
+    "symbol_1": "R",
+    "symbol_3": "Arg",
+    "mw": 174.20,
+    "charge": "positive",
+    "polarity": "polar",
+    "essential": true,
+    "side_chain": "guanidinium",
+    "category": "basic"
+  },
+  {
+    "name": "Asparagine",
+    "symbol_1": "N",
+    "symbol_3": "Asn",
+    "mw": 132.12,
+    "charge": "neutral",
+    "polarity": "polar",
+    "essential": false,
+    "side_chain": "amide",
+    "category": "amide"
+  },
+  {
+    "name": "Aspartic acid",
+    "symbol_1": "D",
+    "symbol_3": "Asp",
+    "mw": 133.10,
+    "charge": "negative",
+    "polarity": "polar",
+    "essential": false,
+    "side_chain": "carboxyl",
+    "category": "acidic"
+  },
+  {
+    "name": "Cysteine",
+    "symbol_1": "C",
+    "symbol_3": "Cys",
+    "mw": 121.16,
+    "charge": "neutral",
+    "polarity": "polar",
+    "essential": false,
+    "side_chain": "thiol",
+    "category": "sulfur"
+  },
+  {
+    "name": "Glutamic acid",
+    "symbol_1": "E",
+    "symbol_3": "Glu",
+    "mw": 147.13,
+    "charge": "negative",
+    "polarity": "polar",
+    "essential": false,
+    "side_chain": "carboxyl",
+    "category": "acidic"
+  },
+  {
+    "name": "Glutamine",
+    "symbol_1": "Q",
+    "symbol_3": "Gln",
+    "mw": 146.15,
+    "charge": "neutral",
+    "polarity": "polar",
+    "essential": false,
+    "side_chain": "amide",
+    "category": "amide"
+  },
+  {
+    "name": "Glycine",
+    "symbol_1": "G",
+    "symbol_3": "Gly",
+    "mw": 75.03,
+    "charge": "neutral",
+    "polarity": "nonpolar",
+    "essential": false,
+    "side_chain": "hydrogen",
+    "category": "aliphatic"
+  },
+  {
+    "name": "Histidine",
+    "symbol_1": "H",
+    "symbol_3": "His",
+    "mw": 155.16,
+    "charge": "positive",
+    "polarity": "polar",
+    "essential": true,
+    "side_chain": "imidazole",
+    "category": "basic"
+  },
+  {
+    "name": "Isoleucine",
+    "symbol_1": "I",
+    "symbol_3": "Ile",
+    "mw": 131.17,
+    "charge": "neutral",
+    "polarity": "nonpolar",
+    "essential": true,
+    "side_chain": "isobutyl",
+    "category": "aliphatic"
+  },
+  {
+    "name": "Leucine",
+    "symbol_1": "L",
+    "symbol_3": "Leu",
+    "mw": 131.17,
+    "charge": "neutral",
+    "polarity": "nonpolar",
+    "essential": true,
+    "side_chain": "isobutyl",
+    "category": "aliphatic"
+  },
+  {
+    "name": "Lysine",
+    "symbol_1": "K",
+    "symbol_3": "Lys",
+    "mw": 146.19,
+    "charge": "positive",
+    "polarity": "polar",
+    "essential": true,
+    "side_chain": "amino",
+    "category": "basic"
+  },
+  {
+    "name": "Methionine",
+    "symbol_1": "M",
+    "symbol_3": "Met",
+    "mw": 149.21,
+    "charge": "neutral",
+    "polarity": "nonpolar",
+    "essential": true,
+    "side_chain": "thioether",
+    "category": "sulfur"
+  },
+  {
+    "name": "Phenylalanine",
+    "symbol_1": "F",
+    "symbol_3": "Phe",
+    "mw": 165.19,
+    "charge": "neutral",
+    "polarity": "nonpolar",
+    "essential": true,
+    "side_chain": "benzyl",
+    "category": "aromatic"
+  },
+  {
+    "name": "Proline",
+    "symbol_1": "P",
+    "symbol_3": "Pro",
+    "mw": 115.13,
+    "charge": "neutral",
+    "polarity": "nonpolar",
+    "essential": false,
+    "side_chain": "pyrrolidine",
+    "category": "cyclic"
+  },
+  {
+    "name": "Serine",
+    "symbol_1": "S",
+    "symbol_3": "Ser",
+    "mw": 105.09,
+    "charge": "neutral",
+    "polarity": "polar",
+    "essential": false,
+    "side_chain": "hydroxymethyl",
+    "category": "hydroxyl"
+  },
+  {
+    "name": "Threonine",
+    "symbol_1": "T",
+    "symbol_3": "Thr",
+    "mw": 119.12,
+    "charge": "neutral",
+    "polarity": "polar",
+    "essential": true,
+    "side_chain": "hydroxyethyl",
+    "category": "hydroxyl"
+  },
+  {
+    "name": "Tryptophan",
+    "symbol_1": "W",
+    "symbol_3": "Trp",
+    "mw": 204.23,
+    "charge": "neutral",
+    "polarity": "nonpolar",
+    "essential": true,
+    "side_chain": "indole",
+    "category": "aromatic"
+  },
+  {
+    "name": "Tyrosine",
+    "symbol_1": "Y",
+    "symbol_3": "Tyr",
+    "mw": 181.19,
+    "charge": "neutral",
+    "polarity": "polar",
+    "essential": false,
+    "side_chain": "phenol",
+    "category": "aromatic"
+  },
+  {
+    "name": "Valine",
+    "symbol_1": "V",
+    "symbol_3": "Val",
+    "mw": 117.15,
+    "charge": "neutral",
+    "polarity": "nonpolar",
+    "essential": true,
+    "side_chain": "isopropyl",
+    "category": "aliphatic"
+  }
+]

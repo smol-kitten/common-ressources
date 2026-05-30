@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Retro BBS / mainframe style — pairs with warm classic themes (Gruvbox, Solarized Dark)
+THEME="${1:-theme}"
+clear
+printf "\033[2J\033[H"
+printf "\033[32m"
+printf "  ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n"
+printf "  █  ARCH BBS v4.2  ·  NODE 7  ·  %-14s  █\n" "$THEME"
+printf "  ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\033[0m\n"
+printf "\n"
+printf "  \033[32mWELCOME TO THE ARCHNET BULLETIN BOARD SYSTEM\033[0m\n"
+printf "  \033[90mConnected at 56600 baud  ·  01 JUN 2024 12:34:56\033[0m\n"
+printf "\n"
+printf "  \033[32mL)\033[0m List files\n"
+printf "  \033[32mD)\033[0m Download\n"
+printf "  \033[32mC)\033[0m Chat room\n"
+printf "  \033[32mQ)\033[0m Quit\n"
+printf "\n"
+printf "  \033[90mCommand:\033[0m \033[32mL\033[0m\n"
+printf "\n"
+printf "  \033[32m%-30s  %-8s  %-12s\033[0m\n" "FILENAME" "SIZE" "DATE"
+printf "  \033[90m──────────────────────────────────────────────────\033[0m\n"
+printf "  \033[37mARCH_SETUP.ZIP\033[0m                \033[33m4.2 MB\033[0m   \033[90m01-JUN-24\033[0m\n"
+printf "  \033[37mDOTFILES.TAR.GZ\033[0m               \033[33m128 KB\033[0m   \033[90m01-JUN-24\033[0m\n"
+printf "  \033[37mRICE_THEMES_V3.ZIP\033[0m             \033[33m256 KB\033[0m   \033[90m01-JUN-24\033[0m\n"
+printf "\n"
+printf "  \033[90mCommand:\033[0m \033[32m█\033[0m\n"
+sleep 999

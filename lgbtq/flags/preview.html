@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pride Flags</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0f0f12;
+    font-family: system-ui, -apple-system, sans-serif;
+    padding: 28px;
+    color: #ccc;
+  }
+  h1 {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+  }
+  .flag-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.65);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .flag {
+    width: 100%;
+    height: 72px;
+    overflow: hidden;
+    position: relative;
+  }
+  .flag-meta {
+    background: #1a1a1f;
+    padding: 6px 9px;
+  }
+  .flag-name {
+    font-size: 10px;
+    color: #ddd;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .flag-type {
+    font-size: 8px;
+    color: #555;
+    margin-top: 1px;
+    letter-spacing: 0.04em;
+  }
+</style>
+</head>
+<body>
+<h1>Pride Flags — common-ressources</h1>
+<div class="grid" id="grid"></div>
+
+<script>
+const FLAGS = "__FLAGS__";
+
+function renderFlag(flag, w, h) {
+  const type = flag.type || 'horizontal-stripes';
+  const colors = flag.colors;
+
+  // Diagonal stripes via SVG polygon
+  const angleMatch = type.match(/^(\d+)-degree-stripes$/);
+  if (angleMatch) {
+    const angle = parseInt(angleMatch[1]);
+    const n = colors.length;
+    const diag = Math.sqrt(w*w + h*h);
+    const sw = diag / n;
+    const rad = angle * Math.PI / 180;
+    const dx = Math.cos(rad), dy = Math.sin(rad);
+    const nx = -dy, ny = dx;
+    const polys = colors.map((color, i) => {
+      const ci = i - (n - 1) / 2;
+      const cx = w/2 + nx*ci*sw, cy = h/2 + ny*ci*sw;
+      const half = diag, wh = sw/2;
+      const pts = [
+        [cx - dx*half - nx*wh, cy - dy*half - ny*wh],
+        [cx - dx*half + nx*wh, cy - dy*half + ny*wh],
+        [cx + dx*half + nx*wh, cy + dy*half + ny*wh],
+        [cx + dx*half - nx*wh, cy + dy*half - ny*wh],
+      ];
+      return `<polygon points="${pts.map(p=>p.map(Math.round).join(',')).join(' ')}" fill="${color}"/>`;
+    }).join('');
+    return `<svg width="${w}" height="${h}" style="display:block">${polys}</svg>`;
+  }
+
+  if (type === 'vertical-stripes') {
+    const sw = w / colors.length;
+    return `<div style="display:flex;height:${h}px">${colors.map(c=>`<div style="background:${c};flex:1"></div>`).join('')}</div>`;
+  }
+
+  // Default: horizontal stripes
+  const sh = h / colors.length;
+  return `<div style="display:flex;flex-direction:column;height:${h}px">${colors.map(c=>`<div style="background:${c};flex:1"></div>`).join('')}</div>`;
+}
+
+function card(flag) {
+  return `<div class="flag-card">
+    <div class="flag">${renderFlag(flag, 130, 72)}</div>
+    <div class="flag-meta">
+      <div class="flag-name">${flag.name}</div>
+      <div class="flag-type">${flag.pridetype || ''}</div>
+    </div>
+  </div>`;
+}
+
+document.getElementById('grid').innerHTML = FLAGS.map(card).join('');
+</script>
+</body>
+</html>

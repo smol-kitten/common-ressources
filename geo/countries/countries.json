@@ -1,0 +1,252 @@
+[
+  {
+    "iso2": "US",
+    "iso3": "USA",
+    "name": "United States",
+    "capital": "Washington D.C.",
+    "continent": "Americas",
+    "dial_code": "+1",
+    "currency_code": "USD",
+    "population_approx": 331000000
+  },
+  {
+    "iso2": "GB",
+    "iso3": "GBR",
+    "name": "United Kingdom",
+    "capital": "London",
+    "continent": "Europe",
+    "dial_code": "+44",
+    "currency_code": "GBP",
+    "population_approx": 67000000
+  },
+  {
+    "iso2": "DE",
+    "iso3": "DEU",
+    "name": "Germany",
+    "capital": "Berlin",
+    "continent": "Europe",
+    "dial_code": "+49",
+    "currency_code": "EUR",
+    "population_approx": 83000000
+  },
+  {
+    "iso2": "FR",
+    "iso3": "FRA",
+    "name": "France",
+    "capital": "Paris",
+    "continent": "Europe",
+    "dial_code": "+33",
+    "currency_code": "EUR",
+    "population_approx": 68000000
+  },
+  {
+    "iso2": "JP",
+    "iso3": "JPN",
+    "name": "Japan",
+    "capital": "Tokyo",
+    "continent": "Asia",
+    "dial_code": "+81",
+    "currency_code": "JPY",
+    "population_approx": 125000000
+  },
+  {
+    "iso2": "CN",
+    "iso3": "CHN",
+    "name": "China",
+    "capital": "Beijing",
+    "continent": "Asia",
+    "dial_code": "+86",
+    "currency_code": "CNY",
+    "population_approx": 1412000000
+  },
+  {
+    "iso2": "IN",
+    "iso3": "IND",
+    "name": "India",
+    "capital": "New Delhi",
+    "continent": "Asia",
+    "dial_code": "+91",
+    "currency_code": "INR",
+    "population_approx": 1400000000
+  },
+  {
+    "iso2": "BR",
+    "iso3": "BRA",
+    "name": "Brazil",
+    "capital": "Brasília",
+    "continent": "Americas",
+    "dial_code": "+55",
+    "currency_code": "BRL",
+    "population_approx": 215000000
+  },
+  {
+    "iso2": "CA",
+    "iso3": "CAN",
+    "name": "Canada",
+    "capital": "Ottawa",
+    "continent": "Americas",
+    "dial_code": "+1",
+    "currency_code": "CAD",
+    "population_approx": 38000000
+  },
+  {
+    "iso2": "AU",
+    "iso3": "AUS",
+    "name": "Australia",
+    "capital": "Canberra",
+    "continent": "Oceania",
+    "dial_code": "+61",
+    "currency_code": "AUD",
+    "population_approx": 26000000
+  },
+  {
+    "iso2": "MX",
+    "iso3": "MEX",
+    "name": "Mexico",
+    "capital": "Mexico City",
+    "continent": "Americas",
+    "dial_code": "+52",
+    "currency_code": "MXN",
+    "population_approx": 130000000
+  },
+  {
+    "iso2": "ZA",
+    "iso3": "ZAF",
+    "name": "South Africa",
+    "capital": "Pretoria",
+    "continent": "Africa",
+    "dial_code": "+27",
+    "currency_code": "ZAR",
+    "population_approx": 60000000
+  },
+  {
+    "iso2": "NG",
+    "iso3": "NGA",
+    "name": "Nigeria",
+    "capital": "Abuja",
+    "continent": "Africa",
+    "dial_code": "+234",
+    "currency_code": "NGN",
+    "population_approx": 218000000
+  },
+  {
+    "iso2": "EG",
+    "iso3": "EGY",
+    "name": "Egypt",
+    "capital": "Cairo",
+    "continent": "Africa",
+    "dial_code": "+20",
+    "currency_code": "EGP",
+    "population_approx": 104000000
+  },
+  {
+    "iso2": "AR",
+    "iso3": "ARG",
+    "name": "Argentina",
+    "capital": "Buenos Aires",
+    "continent": "Americas",
+    "dial_code": "+54",
+    "currency_code": "ARS",
+    "population_approx": 45000000
+  },
+  {
+    "iso2": "RU",
+    "iso3": "RUS",
+    "name": "Russia",
+    "capital": "Moscow",
+    "continent": "Europe",
+    "dial_code": "+7",
+    "currency_code": "RUB",
+    "population_approx": 144000000
+  },
+  {
+    "iso2": "KR",
+    "iso3": "KOR",
+    "name": "South Korea",
+    "capital": "Seoul",
+    "continent": "Asia",
+    "dial_code": "+82",
+    "currency_code": "KRW",
+    "population_approx": 52000000
+  },
+  {
+    "iso2": "SE",
+    "iso3": "SWE",
+    "name": "Sweden",
+    "capital": "Stockholm",
+    "continent": "Europe",
+    "dial_code": "+46",
+    "currency_code": "SEK",
+    "population_approx": 10000000
+  },
+  {
+    "iso2": "NL",
+    "iso3": "NLD",
+    "name": "Netherlands",
+    "capital": "Amsterdam",
+    "continent": "Europe",
+    "dial_code": "+31",
+    "currency_code": "EUR",
+    "population_approx": 17000000
+  },
+  {
+    "iso2": "CH",
+    "iso3": "CHE",
+    "name": "Switzerland",
+    "capital": "Bern",
+    "continent": "Europe",
+    "dial_code": "+41",
+    "currency_code": "CHF",
+    "population_approx": 8700000
+  },
+  {
+    "iso2": "SG",
+    "iso3": "SGP",
+    "name": "Singapore",
+    "capital": "Singapore",
+    "continent": "Asia",
+    "dial_code": "+65",
+    "currency_code": "SGD",
+    "population_approx": 5900000
+  },
+  {
+    "iso2": "PL",
+    "iso3": "POL",
+    "name": "Poland",
+    "capital": "Warsaw",
+    "continent": "Europe",
+    "dial_code": "+48",
+    "currency_code": "PLN",
+    "population_approx": 38000000
+  },
+  {
+    "iso2": "ID",
+    "iso3": "IDN",
+    "name": "Indonesia",
+    "capital": "Jakarta",
+    "continent": "Asia",
+    "dial_code": "+62",
+    "currency_code": "IDR",
+    "population_approx": 277000000
+  },
+  {
+    "iso2": "PK",
+    "iso3": "PAK",
+    "name": "Pakistan",
+    "capital": "Islamabad",
+    "continent": "Asia",
+    "dial_code": "+92",
+    "currency_code": "PKR",
+    "population_approx": 231000000
+  },
+  {
+    "iso2": "UA",
+    "iso3": "UKR",
+    "name": "Ukraine",
+    "capital": "Kyiv",
+    "continent": "Europe",
+    "dial_code": "+380",
+    "currency_code": "UAH",
+    "population_approx": 44000000
+  }
+]

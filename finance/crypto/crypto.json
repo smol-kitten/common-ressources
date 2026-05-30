@@ -1,0 +1,202 @@
+[
+  {
+    "rank": 1,
+    "ticker": "BTC",
+    "name": "Bitcoin",
+    "decimals": 8,
+    "consensus": "proof-of-work",
+    "layer": 1,
+    "founded_year": 2009,
+    "notes": "First and largest cryptocurrency by market cap"
+  },
+  {
+    "rank": 2,
+    "ticker": "ETH",
+    "name": "Ethereum",
+    "decimals": 18,
+    "consensus": "proof-of-stake",
+    "layer": 1,
+    "founded_year": 2015,
+    "notes": "Smart contract platform; transitioned to PoS in 2022 (The Merge)"
+  },
+  {
+    "rank": 3,
+    "ticker": "USDT",
+    "name": "Tether",
+    "decimals": 6,
+    "consensus": "delegated-proof-of-stake",
+    "layer": 2,
+    "founded_year": 2014,
+    "notes": "USD-pegged stablecoin; largest stablecoin by volume"
+  },
+  {
+    "rank": 4,
+    "ticker": "BNB",
+    "name": "BNB",
+    "decimals": 18,
+    "consensus": "proof-of-staked-authority",
+    "layer": 1,
+    "founded_year": 2017,
+    "notes": "Native token of BNB Chain; used for Binance exchange fees"
+  },
+  {
+    "rank": 5,
+    "ticker": "SOL",
+    "name": "Solana",
+    "decimals": 9,
+    "consensus": "proof-of-history",
+    "layer": 1,
+    "founded_year": 2020,
+    "notes": "High-throughput smart contract platform; ~65,000 TPS"
+  },
+  {
+    "rank": 6,
+    "ticker": "USDC",
+    "name": "USD Coin",
+    "decimals": 6,
+    "consensus": "proof-of-stake",
+    "layer": 2,
+    "founded_year": 2018,
+    "notes": "USD-pegged stablecoin by Circle; multi-chain"
+  },
+  {
+    "rank": 7,
+    "ticker": "XRP",
+    "name": "XRP",
+    "decimals": 6,
+    "consensus": "federated-byzantine-agreement",
+    "layer": 1,
+    "founded_year": 2012,
+    "notes": "XRP Ledger; fast cross-border payments"
+  },
+  {
+    "rank": 8,
+    "ticker": "ADA",
+    "name": "Cardano",
+    "decimals": 6,
+    "consensus": "proof-of-stake",
+    "layer": 1,
+    "founded_year": 2017,
+    "notes": "Peer-reviewed smart contract platform using Ouroboros PoS"
+  },
+  {
+    "rank": 9,
+    "ticker": "AVAX",
+    "name": "Avalanche",
+    "decimals": 18,
+    "consensus": "proof-of-stake",
+    "layer": 1,
+    "founded_year": 2020,
+    "notes": "Multi-chain smart contract platform; sub-second finality"
+  },
+  {
+    "rank": 10,
+    "ticker": "DOGE",
+    "name": "Dogecoin",
+    "decimals": 8,
+    "consensus": "proof-of-work",
+    "layer": 1,
+    "founded_year": 2013,
+    "notes": "Originally a meme coin; merged mining with Litecoin"
+  },
+  {
+    "rank": 11,
+    "ticker": "DOT",
+    "name": "Polkadot",
+    "decimals": 10,
+    "consensus": "nominated-proof-of-stake",
+    "layer": 0,
+    "founded_year": 2020,
+    "notes": "Cross-chain interoperability protocol; parachain architecture"
+  },
+  {
+    "rank": 12,
+    "ticker": "MATIC",
+    "name": "Polygon",
+    "decimals": 18,
+    "consensus": "proof-of-stake",
+    "layer": 2,
+    "founded_year": 2019,
+    "notes": "Ethereum Layer 2 scaling; now rebranding to POL"
+  },
+  {
+    "rank": 13,
+    "ticker": "LTC",
+    "name": "Litecoin",
+    "decimals": 8,
+    "consensus": "proof-of-work",
+    "layer": 1,
+    "founded_year": 2011,
+    "notes": "Bitcoin fork; faster blocks (2.5 min), Scrypt PoW"
+  },
+  {
+    "rank": 14,
+    "ticker": "LINK",
+    "name": "Chainlink",
+    "decimals": 18,
+    "consensus": "proof-of-stake",
+    "layer": 2,
+    "founded_year": 2017,
+    "notes": "Decentralized oracle network; feeds real-world data to blockchains"
+  },
+  {
+    "rank": 15,
+    "ticker": "UNI",
+    "name": "Uniswap",
+    "decimals": 18,
+    "consensus": "proof-of-stake",
+    "layer": 2,
+    "founded_year": 2018,
+    "notes": "Governance token of the Uniswap decentralized exchange (DEX)"
+  },
+  {
+    "rank": 16,
+    "ticker": "ATOM",
+    "name": "Cosmos",
+    "decimals": 6,
+    "consensus": "tendermint-bft",
+    "layer": 1,
+    "founded_year": 2019,
+    "notes": "Internet of blockchains; IBC protocol for cross-chain communication"
+  },
+  {
+    "rank": 17,
+    "ticker": "XMR",
+    "name": "Monero",
+    "decimals": 12,
+    "consensus": "proof-of-work",
+    "layer": 1,
+    "founded_year": 2014,
+    "notes": "Privacy-focused cryptocurrency; RingCT, stealth addresses"
+  },
+  {
+    "rank": 18,
+    "ticker": "XLM",
+    "name": "Stellar",
+    "decimals": 7,
+    "consensus": "stellar-consensus-protocol",
+    "layer": 1,
+    "founded_year": 2014,
+    "notes": "Fast, low-cost cross-border payments; Stellar Development Foundation"
+  },
+  {
+    "rank": 19,
+    "ticker": "ALGO",
+    "name": "Algorand",
+    "decimals": 6,
+    "consensus": "pure-proof-of-stake",
+    "layer": 1,
+    "founded_year": 2019,
+    "notes": "Pure PoS blockchain; instant finality, no forks by design"
+  },
+  {
+    "rank": 20,
+    "ticker": "FIL",
+    "name": "Filecoin",
+    "decimals": 18,
+    "consensus": "proof-of-replication",
+    "layer": 1,
+    "founded_year": 2020,
+    "notes": "Decentralized storage network; incentivizes IPFS storage providers"
+  }
+]
