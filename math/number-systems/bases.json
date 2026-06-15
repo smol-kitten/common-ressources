@@ -1,0 +1,105 @@
+[
+  {
+    "name": "Binary",
+    "slug": "binary",
+    "base": 2,
+    "digits": "0-1",
+    "prefix": "0b",
+    "example_value": 42,
+    "example_repr": "0b101010",
+    "description": "Base-2 numeral system using only digits 0 and 1. Each digit represents a power of 2 (bit). The fundamental number system of digital computers since all electronic logic can be represented as on/off states.",
+    "use_cases": [
+      "Digital logic and hardware circuits",
+      "CPU instruction sets and machine code",
+      "Bitwise operations and bit masking",
+      "Data storage at the hardware level",
+      "Network subnet masks and IP addressing"
+    ]
+  },
+  {
+    "name": "Octal",
+    "slug": "octal",
+    "base": 8,
+    "digits": "0-7",
+    "prefix": "0o",
+    "example_value": 42,
+    "example_repr": "0o52",
+    "description": "Base-8 numeral system using digits 0 through 7. Each octal digit corresponds to exactly 3 binary bits, making it a compact representation of binary. Historically used in computing before hexadecimal became dominant.",
+    "use_cases": [
+      "Unix/Linux file permission modes (e.g., chmod 755)",
+      "Compact representation of binary groups of 3 bits",
+      "Legacy computing systems (PDP-11, CDC 6000)",
+      "Some programming language numeric literals"
+    ]
+  },
+  {
+    "name": "Decimal",
+    "slug": "decimal",
+    "base": 10,
+    "digits": "0-9",
+    "prefix": "",
+    "example_value": 42,
+    "example_repr": "42",
+    "description": "Base-10 numeral system using digits 0 through 9. The standard system for everyday arithmetic, likely originating from counting on ten fingers. All other positional number systems are typically converted to/from decimal for human comprehension.",
+    "use_cases": [
+      "Everyday arithmetic and general mathematics",
+      "Financial calculations and currency",
+      "Scientific measurements and reporting",
+      "Human-readable numeric output in software",
+      "Default number system in most programming contexts"
+    ]
+  },
+  {
+    "name": "Hexadecimal",
+    "slug": "hexadecimal",
+    "base": 16,
+    "digits": "0-9, A-F",
+    "prefix": "0x",
+    "example_value": 42,
+    "example_repr": "0x2A",
+    "description": "Base-16 numeral system using digits 0-9 and letters A-F (representing 10-15). Each hex digit represents exactly 4 binary bits (one nibble), making it extremely convenient for representing binary data compactly. Universally used in computing for memory addresses and color codes.",
+    "use_cases": [
+      "Memory addresses and pointers in debugging",
+      "RGB color codes in web and graphics (e.g., #FF5733)",
+      "Byte representation in hex editors and network dumps",
+      "Cryptographic hash outputs (MD5, SHA-256)",
+      "CPU register and hardware register values",
+      "Unicode code points (e.g., U+1F600)"
+    ]
+  },
+  {
+    "name": "Base32",
+    "slug": "base32",
+    "base": 32,
+    "digits": "A-Z, 2-7",
+    "prefix": "",
+    "example_value": 42,
+    "example_repr": "BI======",
+    "description": "Base-32 encoding using uppercase letters A-Z and digits 2-7, defined in RFC 4648. Encodes binary data into a subset of printable ASCII characters that are case-insensitive and avoid visually ambiguous characters.",
+    "use_cases": [
+      "TOTP and HOTP secret keys in two-factor authentication (Google Authenticator)",
+      "Case-insensitive data encoding in file names",
+      "Encoded data in environments where lowercase is unavailable",
+      "Geohash geographic coordinate encoding",
+      "Crockford Base32 for human-friendly identifiers"
+    ]
+  },
+  {
+    "name": "Base64",
+    "slug": "base64",
+    "base": 64,
+    "digits": "A-Z, a-z, 0-9, +, /",
+    "prefix": "",
+    "example_value": 42,
+    "example_repr": "Kg==",
+    "description": "Base-64 encoding using uppercase, lowercase letters, digits, plus (+) and slash (/), with = as padding, defined in RFC 4648. Encodes binary data into ASCII text, increasing size by ~33% but ensuring safe transmission through text-based protocols.",
+    "use_cases": [
+      "Embedding binary data in JSON, XML, or HTML",
+      "Email attachments via MIME encoding",
+      "HTTP Basic Authentication credentials",
+      "JWT (JSON Web Token) encoding",
+      "Data URIs for embedding images in CSS/HTML",
+      "PEM-encoded TLS certificates and SSH keys"
+    ]
+  }
+]

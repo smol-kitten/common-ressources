@@ -1,0 +1,62 @@
+/* ── minimal Waybar theme — Monochrome Grayscale ─────────────── */
+
+* {
+    font-family: monospace;
+    font-size: 11px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+window#waybar {
+    background: #0a0a0a;
+    color: #e8e8e8;
+    border-bottom: 1px solid #333333;
+}
+
+/* ── Workspaces ── */
+#workspaces {
+    background: transparent;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #555555;
+    padding: 0 6px;
+    min-width: 16px;
+    border-radius: 0;
+    transition: color 0.1s;
+}
+
+#workspaces button:hover {
+    background: #1a1a1a;
+    color: #888888;
+}
+
+#workspaces button.active {
+    color: #e8e8e8;
+    background: transparent;
+}
+
+#workspaces button.urgent {
+    color: #888888;
+}
+
+/* ── Clock ── */
+#clock {
+    color: #e8e8e8;
+    padding: 0 8px;
+}
+
+/* ── Power ── */
+#custom-power {
+    color: #555555;
+    padding: 0 8px;
+    font-size: 11px;
+}
+
+#custom-power:hover {
+    color: #888888;
+}

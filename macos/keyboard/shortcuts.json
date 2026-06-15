@@ -1,0 +1,410 @@
+[
+  {
+    "name": "Spotlight Search",
+    "slug": "spotlight-search",
+    "category": "spotlight",
+    "mac": "Cmd+Space",
+    "description": "Opens the Spotlight search bar for searching files, apps, contacts, calculations, and web results.",
+    "context": "global"
+  },
+  {
+    "name": "Siri",
+    "slug": "siri",
+    "category": "spotlight",
+    "mac": "Cmd+Space (hold)",
+    "description": "Activates Siri by holding the Spotlight shortcut, or can be mapped to Cmd+Option+Space.",
+    "context": "global"
+  },
+  {
+    "name": "Application Switcher",
+    "slug": "app-switcher",
+    "category": "system",
+    "mac": "Cmd+Tab",
+    "description": "Cycles forward through open applications in the app switcher overlay.",
+    "context": "global"
+  },
+  {
+    "name": "Application Switcher (Reverse)",
+    "slug": "app-switcher-reverse",
+    "category": "system",
+    "mac": "Cmd+Shift+Tab",
+    "description": "Cycles backward through open applications in the app switcher overlay.",
+    "context": "global"
+  },
+  {
+    "name": "Force Quit Application",
+    "slug": "force-quit",
+    "category": "system",
+    "mac": "Cmd+Option+Esc",
+    "description": "Opens the Force Quit Applications dialog to forcefully terminate unresponsive apps.",
+    "context": "global"
+  },
+  {
+    "name": "Quit Application",
+    "slug": "quit-app",
+    "category": "system",
+    "mac": "Cmd+Q",
+    "description": "Quits the currently active application entirely (not just closes the window).",
+    "context": "global"
+  },
+  {
+    "name": "Hide Application",
+    "slug": "hide-app",
+    "category": "system",
+    "mac": "Cmd+H",
+    "description": "Hides the currently active application, sending it to the background without quitting.",
+    "context": "global"
+  },
+  {
+    "name": "Hide Other Applications",
+    "slug": "hide-other-apps",
+    "category": "system",
+    "mac": "Cmd+Option+H",
+    "description": "Hides all applications except the currently active one, clearing your visual workspace.",
+    "context": "global"
+  },
+  {
+    "name": "System Preferences / Settings",
+    "slug": "system-preferences",
+    "category": "system",
+    "mac": "No default",
+    "description": "Opens System Settings (macOS 13+) or System Preferences. Typically launched via Spotlight or Apple menu.",
+    "context": "global"
+  },
+  {
+    "name": "Lock Screen",
+    "slug": "lock-screen",
+    "category": "system",
+    "mac": "Cmd+Ctrl+Q",
+    "description": "Immediately locks the screen and requires authentication to regain access.",
+    "context": "global"
+  },
+  {
+    "name": "Emoji & Symbols Picker",
+    "slug": "emoji-picker",
+    "category": "system",
+    "mac": "Ctrl+Cmd+Space",
+    "description": "Opens the Character Viewer panel for browsing and inserting emoji and special Unicode characters.",
+    "context": "global"
+  },
+  {
+    "name": "Dictionary Lookup",
+    "slug": "dictionary-lookup",
+    "category": "system",
+    "mac": "Ctrl+Cmd+D",
+    "description": "Shows a popover dictionary definition for the word under the cursor in supported apps.",
+    "context": "global"
+  },
+  {
+    "name": "Screenshot — Full Screen",
+    "slug": "screenshot-full-screen",
+    "category": "screenshot",
+    "mac": "Cmd+Shift+3",
+    "description": "Captures the entire screen and saves it as a file on the Desktop.",
+    "context": "global"
+  },
+  {
+    "name": "Screenshot — Full Screen to Clipboard",
+    "slug": "screenshot-full-screen-clipboard",
+    "category": "screenshot",
+    "mac": "Cmd+Ctrl+Shift+3",
+    "description": "Captures the entire screen and copies the image to the clipboard instead of saving a file.",
+    "context": "global"
+  },
+  {
+    "name": "Screenshot — Selected Area",
+    "slug": "screenshot-area",
+    "category": "screenshot",
+    "mac": "Cmd+Shift+4",
+    "description": "Activates a crosshair cursor to drag and select a rectangular region to capture and save to Desktop.",
+    "context": "global"
+  },
+  {
+    "name": "Screenshot — Selected Area to Clipboard",
+    "slug": "screenshot-area-clipboard",
+    "category": "screenshot",
+    "mac": "Cmd+Ctrl+Shift+4",
+    "description": "Captures the selected area and copies the image to the clipboard instead of saving a file.",
+    "context": "global"
+  },
+  {
+    "name": "Screenshot — Window",
+    "slug": "screenshot-window",
+    "category": "screenshot",
+    "mac": "Cmd+Shift+4, then Space",
+    "description": "After pressing Cmd+Shift+4, pressing Space switches to window capture mode to screenshot a specific window.",
+    "context": "global"
+  },
+  {
+    "name": "Screenshot — Screenshot Toolbar",
+    "slug": "screenshot-toolbar",
+    "category": "screenshot",
+    "mac": "Cmd+Shift+5",
+    "description": "Opens the screenshot toolbar with options for full screen, window, area capture, and screen recording.",
+    "context": "global"
+  },
+  {
+    "name": "Screen Recording — Start/Stop",
+    "slug": "screen-recording",
+    "category": "screenshot",
+    "mac": "Cmd+Shift+5",
+    "description": "Accessed via the screenshot toolbar (Cmd+Shift+5); select record entire screen or selected portion.",
+    "context": "global"
+  },
+  {
+    "name": "Screenshot — Touch Bar",
+    "slug": "screenshot-touch-bar",
+    "category": "screenshot",
+    "mac": "Cmd+Shift+6",
+    "description": "Captures a screenshot of the Touch Bar on MacBook Pro models equipped with a Touch Bar.",
+    "context": "global"
+  },
+  {
+    "name": "Mission Control",
+    "slug": "mission-control",
+    "category": "mission-control",
+    "mac": "Ctrl+Up",
+    "description": "Opens Mission Control, showing all open windows, spaces, and full-screen apps for easy navigation.",
+    "context": "global"
+  },
+  {
+    "name": "Application Exposé (Show All Windows)",
+    "slug": "app-expose",
+    "category": "mission-control",
+    "mac": "Ctrl+Down",
+    "description": "Shows all windows of the currently active application in a spread-out Exposé view.",
+    "context": "global"
+  },
+  {
+    "name": "Show Desktop",
+    "slug": "show-desktop",
+    "category": "mission-control",
+    "mac": "Fn+F11",
+    "description": "Moves all windows aside to reveal the desktop. Press again to restore the windows.",
+    "context": "global"
+  },
+  {
+    "name": "Switch to Space Left",
+    "slug": "switch-space-left",
+    "category": "mission-control",
+    "mac": "Ctrl+Left",
+    "description": "Moves to the desktop Space immediately to the left of the current one.",
+    "context": "global"
+  },
+  {
+    "name": "Switch to Space Right",
+    "slug": "switch-space-right",
+    "category": "mission-control",
+    "mac": "Ctrl+Right",
+    "description": "Moves to the desktop Space immediately to the right of the current one.",
+    "context": "global"
+  },
+  {
+    "name": "Notification Center",
+    "slug": "notification-center",
+    "category": "system",
+    "mac": "No default (swipe left from right edge on trackpad)",
+    "description": "Opens the Notification Center sidebar; on trackpad, swipe left with two fingers from the right edge.",
+    "context": "global"
+  },
+  {
+    "name": "Minimize Window",
+    "slug": "window-minimize",
+    "category": "window",
+    "mac": "Cmd+M",
+    "description": "Minimizes the current window to the Dock.",
+    "context": "global"
+  },
+  {
+    "name": "Zoom / Maximize Window",
+    "slug": "window-zoom",
+    "category": "window",
+    "mac": "Cmd+Ctrl+F",
+    "description": "Toggles full-screen mode for the current window (app-specific). Cmd+= may zoom in some contexts.",
+    "context": "global"
+  },
+  {
+    "name": "Close Window / Tab",
+    "slug": "window-close",
+    "category": "window",
+    "mac": "Cmd+W",
+    "description": "Closes the current window or tab. In apps with tabs, closes only the active tab.",
+    "context": "global"
+  },
+  {
+    "name": "Close All Windows",
+    "slug": "window-close-all",
+    "category": "window",
+    "mac": "Cmd+Option+W",
+    "description": "Closes all windows of the currently active application at once.",
+    "context": "global"
+  },
+  {
+    "name": "New Window",
+    "slug": "new-window",
+    "category": "window",
+    "mac": "Cmd+N",
+    "description": "Opens a new window in the current application.",
+    "context": "global"
+  },
+  {
+    "name": "New Tab",
+    "slug": "new-tab",
+    "category": "window",
+    "mac": "Cmd+T",
+    "description": "Opens a new tab in the current application (browsers, Finder, Terminal, etc.).",
+    "context": "global"
+  },
+  {
+    "name": "Close Tab",
+    "slug": "close-tab",
+    "category": "window",
+    "mac": "Cmd+W",
+    "description": "Closes the currently active tab in apps that support tabs.",
+    "context": "global"
+  },
+  {
+    "name": "Undo",
+    "slug": "text-undo",
+    "category": "text",
+    "mac": "Cmd+Z",
+    "description": "Reverses the last action or text edit in the current context.",
+    "context": "global"
+  },
+  {
+    "name": "Redo",
+    "slug": "text-redo",
+    "category": "text",
+    "mac": "Cmd+Shift+Z",
+    "description": "Re-applies the last undone action. Some apps use Cmd+Y instead.",
+    "context": "global"
+  },
+  {
+    "name": "Cut",
+    "slug": "text-cut",
+    "category": "text",
+    "mac": "Cmd+X",
+    "description": "Removes the selected content and places it in the clipboard.",
+    "context": "global"
+  },
+  {
+    "name": "Copy",
+    "slug": "text-copy",
+    "category": "text",
+    "mac": "Cmd+C",
+    "description": "Copies the selected content to the clipboard without removing it.",
+    "context": "global"
+  },
+  {
+    "name": "Paste",
+    "slug": "text-paste",
+    "category": "text",
+    "mac": "Cmd+V",
+    "description": "Inserts the clipboard contents at the current cursor position.",
+    "context": "global"
+  },
+  {
+    "name": "Paste and Match Style",
+    "slug": "text-paste-match-style",
+    "category": "text",
+    "mac": "Cmd+Option+Shift+V",
+    "description": "Pastes clipboard text without preserving the source formatting, matching the destination style.",
+    "context": "global"
+  },
+  {
+    "name": "Select All",
+    "slug": "text-select-all",
+    "category": "text",
+    "mac": "Cmd+A",
+    "description": "Selects all content in the current context — text in a field, items in a list, or files in Finder.",
+    "context": "global"
+  },
+  {
+    "name": "Find",
+    "slug": "text-find",
+    "category": "text",
+    "mac": "Cmd+F",
+    "description": "Opens the Find bar for searching text in documents, web pages, or file names in Finder.",
+    "context": "global"
+  },
+  {
+    "name": "Find and Replace",
+    "slug": "text-find-replace",
+    "category": "text",
+    "mac": "Cmd+Option+F",
+    "description": "Opens the Find and Replace panel to search for text and substitute it with another string.",
+    "context": "global"
+  },
+  {
+    "name": "Print",
+    "slug": "system-print",
+    "category": "system",
+    "mac": "Cmd+P",
+    "description": "Opens the Print dialog for the current document or page.",
+    "context": "global"
+  },
+  {
+    "name": "Save",
+    "slug": "system-save",
+    "category": "system",
+    "mac": "Cmd+S",
+    "description": "Saves the current document. If unsaved, may prompt for a file name and location.",
+    "context": "global"
+  },
+  {
+    "name": "Save As",
+    "slug": "system-save-as",
+    "category": "system",
+    "mac": "Cmd+Shift+S",
+    "description": "Saves the current document under a new name or location, leaving the original unchanged.",
+    "context": "global"
+  },
+  {
+    "name": "Open",
+    "slug": "system-open",
+    "category": "system",
+    "mac": "Cmd+O",
+    "description": "Opens the file browser dialog to open a file in the current application.",
+    "context": "global"
+  },
+  {
+    "name": "Zoom In",
+    "slug": "accessibility-zoom-in",
+    "category": "accessibility",
+    "mac": "Cmd+Option+= (Zoom feature) or Cmd++ (in-app)",
+    "description": "Increases zoom level. In macOS Zoom accessibility feature, use Option+Cmd+= to zoom the screen.",
+    "context": "global"
+  },
+  {
+    "name": "Zoom Out",
+    "slug": "accessibility-zoom-out",
+    "category": "accessibility",
+    "mac": "Cmd+Option+- (Zoom feature) or Cmd+- (in-app)",
+    "description": "Decreases zoom level. In macOS Zoom accessibility feature, use Option+Cmd+- to zoom the screen out.",
+    "context": "global"
+  },
+  {
+    "name": "Toggle VoiceOver",
+    "slug": "accessibility-voiceover",
+    "category": "accessibility",
+    "mac": "Cmd+F5",
+    "description": "Enables or disables VoiceOver, macOS's built-in screen reader for visually impaired users.",
+    "context": "global"
+  },
+  {
+    "name": "Safari — Open Location",
+    "slug": "safari-open-location",
+    "category": "safari",
+    "mac": "Cmd+L",
+    "description": "Focuses the Safari address/search bar so you can type a URL or search query.",
+    "context": "safari"
+  },
+  {
+    "name": "Finder — Go to Folder",
+    "slug": "finder-go-to-folder",
+    "category": "finder",
+    "mac": "Cmd+Shift+G",
+    "description": "Opens a dialog to type or paste any folder path and navigate to it directly in Finder.",
+    "context": "finder"
+  }
+]

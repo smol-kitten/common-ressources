@@ -1,0 +1,26 @@
+/* Theme: Catppuccin Frappe */
+/* Source: https://github.com/catppuccin/catppuccin */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #303446;
+    foreground:                    #C6D0F5;
+
+    normal-background:             #303446;
+    normal-foreground:             #C6D0F5;
+    selected-normal-background:    #8CAAEE;
+    selected-normal-foreground:    #303446;
+
+    active-background:             #A6D189;
+    active-foreground:             #303446;
+    selected-active-background:    #A6D189;
+    selected-active-foreground:    #303446;
+
+    urgent-background:             #E78284;
+    urgent-foreground:             #303446;
+    selected-urgent-background:    #E78284;
+    selected-urgent-foreground:    #303446;
+
+    border-color:                  #626880;
+    separatorcolor:                #626880;
+}

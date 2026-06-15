@@ -1,0 +1,68 @@
+[
+  {
+    "version": "SSL 2.0",
+    "slug": "ssl-2-0",
+    "released_year": 1995,
+    "status": "broken",
+    "rfc": "No RFC (Netscape proprietary)",
+    "forward_secrecy": false,
+    "handshake_rtt": 2,
+    "description": "The original SSL protocol developed by Netscape. Contained severe design flaws including weak MAC construction, no protection against protocol version downgrade attacks, and use of the same key for authentication and encryption.",
+    "notes": "Prohibited by RFC 6176 (2011). All major browsers removed support by 2011. Must never be used. Vulnerable to DROWN attack when server keys are shared with SSLv2-capable servers."
+  },
+  {
+    "version": "SSL 3.0",
+    "slug": "ssl-3-0",
+    "released_year": 1996,
+    "status": "broken",
+    "rfc": "RFC 6101 (informational, documenting the protocol)",
+    "forward_secrecy": false,
+    "handshake_rtt": 2,
+    "description": "Major redesign of SSL 2.0 by Netscape. While significantly better than SSL 2.0, SSL 3.0 is vulnerable to the POODLE attack (Padding Oracle On Downgraded Legacy Encryption) which allows decryption of secure connections using CBC mode ciphers.",
+    "notes": "Deprecated by RFC 7568 (2015). Vulnerable to POODLE (CVE-2014-3566). Disabled in all modern browsers. TLS 1.0 fallback to SSL 3.0 should be explicitly blocked. Must never be used."
+  },
+  {
+    "version": "TLS 1.0",
+    "slug": "tls-1-0",
+    "released_year": 1999,
+    "status": "deprecated",
+    "rfc": "RFC 2246",
+    "forward_secrecy": false,
+    "handshake_rtt": 2,
+    "description": "The first version of TLS, essentially SSL 3.1. Introduced as an IETF standard upgrade to SSL 3.0 with improved MAC and key material derivation. Still vulnerable to BEAST, POODLE (when TLS 1.0 CBC downgrade is exploited), and cipher suite weaknesses.",
+    "notes": "Formally deprecated by RFC 8996 (2021). Disabled by PCI DSS since June 2018. Disabled by default in all major browsers since 2020. Not recommended; migrate to TLS 1.2 or 1.3."
+  },
+  {
+    "version": "TLS 1.1",
+    "slug": "tls-1-1",
+    "released_year": 2006,
+    "status": "deprecated",
+    "rfc": "RFC 4346",
+    "forward_secrecy": false,
+    "handshake_rtt": 2,
+    "description": "Incremental update to TLS 1.0 adding protection against CBC padding attacks by using explicit IVs and adding more supported fallback mechanisms. Did not gain wide adoption as TLS 1.2 followed quickly.",
+    "notes": "Formally deprecated by RFC 8996 (2021). Removed by Apple, Google, Microsoft, and Mozilla in 2020. Not recommended; offers minimal improvement over TLS 1.0. Migrate to TLS 1.2 or 1.3."
+  },
+  {
+    "version": "TLS 1.2",
+    "slug": "tls-1-2",
+    "released_year": 2008,
+    "status": "acceptable",
+    "rfc": "RFC 5246",
+    "forward_secrecy": true,
+    "handshake_rtt": 2,
+    "description": "Significant improvement introducing support for SHA-256, AEAD cipher suites (AES-GCM), and removing weaker algorithms. Remains widely deployed and acceptable when configured with strong cipher suites (ECDHE key exchange, AES-GCM, no RC4/3DES).",
+    "notes": "Still widely supported and acceptable when weak cipher suites are disabled. Supports forward secrecy via ECDHE and DHE key exchange. Required as a minimum by PCI DSS 3.2+. Should be accompanied by TLS 1.3 support where possible."
+  },
+  {
+    "version": "TLS 1.3",
+    "slug": "tls-1-3",
+    "released_year": 2018,
+    "status": "current",
+    "rfc": "RFC 8446",
+    "forward_secrecy": true,
+    "handshake_rtt": 1,
+    "description": "Major security and performance overhaul. Removed legacy cipher suites, RSA key transport, and weak DH parameters. The handshake is reduced to 1-RTT (0-RTT session resumption available). All handshake messages after the ServerHello are encrypted. Mandatory forward secrecy.",
+    "notes": "The recommended standard as of 2018. Supported by all modern browsers and servers. 0-RTT mode (early data) should be used cautiously as it is vulnerable to replay attacks. Removes support for CBC mode cipher suites, export ciphers, MD5, SHA-1, and RC4."
+  }
+]

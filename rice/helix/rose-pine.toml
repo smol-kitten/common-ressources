@@ -1,0 +1,103 @@
+# Theme: Rose Piné
+# Source: https://rosepinetheme.com
+# Usage: copy to ~/.config/helix/themes/rose-pine.toml
+#   then set theme = "rose-pine" in ~/.config/helix/config.toml
+
+"ui.background"           = { bg = "background" }
+"ui.background.separator" = { fg = "bright-black" }
+"ui.text"                 = { fg = "foreground" }
+"ui.text.focus"           = { fg = "foreground", modifiers = ["bold"] }
+"ui.cursor"               = { fg = "background", bg = "cursor" }
+"ui.cursor.match"         = { fg = "background", bg = "yellow" }
+"ui.cursor.insert"        = { fg = "background", bg = "green" }
+"ui.cursor.select"        = { fg = "background", bg = "blue" }
+"ui.selection"            = { bg = "selection" }
+"ui.linenr"               = { fg = "bright-black" }
+"ui.linenr.selected"      = { fg = "foreground", modifiers = ["bold"] }
+"ui.statusline"           = { fg = "foreground", bg = "black" }
+"ui.statusline.inactive"  = { fg = "bright-black", bg = "black" }
+"ui.statusline.normal"    = { fg = "background", bg = "blue", modifiers = ["bold"] }
+"ui.statusline.insert"    = { fg = "background", bg = "green", modifiers = ["bold"] }
+"ui.statusline.select"    = { fg = "background", bg = "magenta", modifiers = ["bold"] }
+"ui.popup"                = { bg = "black" }
+"ui.popup.info"           = { bg = "black" }
+"ui.window"               = { fg = "bright-black" }
+"ui.help"                 = { fg = "foreground", bg = "black" }
+"ui.menu"                 = { fg = "foreground", bg = "black" }
+"ui.menu.selected"        = { fg = "background", bg = "blue" }
+"ui.menu.scroll"          = { fg = "blue", bg = "black" }
+"ui.virtual.ruler"        = { bg = "black" }
+"ui.virtual.inlay-hint"   = { fg = "bright-black" }
+
+"diagnostic.error"   = { underline = { color = "red",    style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.info"    = { underline = { color = "blue",   style = "curl" } }
+"diagnostic.hint"    = { underline = { color = "cyan",   style = "curl" } }
+"error"   = { fg = "red" }
+"warning" = { fg = "yellow" }
+"info"    = { fg = "blue" }
+"hint"    = { fg = "cyan" }
+
+"comment"                = { fg = "bright-black", modifiers = ["italic"] }
+"string"                 = { fg = "green" }
+"string.regexp"          = { fg = "cyan" }
+"string.special"         = { fg = "cyan" }
+"constant"               = { fg = "red" }
+"constant.numeric"       = { fg = "cyan" }
+"constant.builtin"       = { fg = "red" }
+"constant.character"     = { fg = "yellow" }
+"keyword"                = { fg = "magenta", modifiers = ["bold"] }
+"keyword.function"       = { fg = "magenta" }
+"keyword.control"        = { fg = "magenta" }
+"keyword.control.return" = { fg = "magenta", modifiers = ["bold"] }
+"keyword.operator"       = { fg = "magenta" }
+"keyword.directive"      = { fg = "magenta" }
+"function"               = { fg = "blue" }
+"function.macro"         = { fg = "cyan" }
+"function.builtin"       = { fg = "cyan" }
+"type"                   = { fg = "yellow" }
+"type.builtin"           = { fg = "yellow", modifiers = ["italic"] }
+"constructor"            = { fg = "blue" }
+"variable"               = { fg = "foreground" }
+"variable.builtin"       = { fg = "red" }
+"variable.parameter"     = { fg = "foreground", modifiers = ["italic"] }
+"variable.other.member"  = { fg = "foreground" }
+"attribute"              = { fg = "blue" }
+"namespace"              = { fg = "cyan" }
+"label"                  = { fg = "blue" }
+"operator"               = { fg = "magenta" }
+"punctuation"            = { fg = "foreground" }
+"punctuation.delimiter"  = { fg = "foreground" }
+"punctuation.bracket"    = { fg = "foreground" }
+"tag"                    = { fg = "red" }
+"tag.attribute"          = { fg = "blue" }
+
+"markup.heading"         = { fg = "blue", modifiers = ["bold"] }
+"markup.raw"             = { fg = "green" }
+"markup.bold"            = { modifiers = ["bold"] }
+"markup.italic"          = { modifiers = ["italic"] }
+"markup.link.url"        = { fg = "cyan", modifiers = ["underlined"] }
+"markup.link.text"       = { fg = "blue" }
+"markup.quote"           = { fg = "bright-black", modifiers = ["italic"] }
+
+[palette]
+background  = "#191724"
+foreground  = "#e0def4"
+cursor      = "#e0def4"
+selection   = "#403d52"
+black       = "#26233a"
+red         = "#eb6f92"
+green       = "#31748f"
+yellow      = "#f6c177"
+blue        = "#9ccfd8"
+magenta     = "#c4a7e7"
+cyan        = "#ebbcba"
+white       = "#e0def4"
+bright-black    = "#6e6a86"
+bright-red      = "#eb6f92"
+bright-green    = "#31748f"
+bright-yellow   = "#f6c177"
+bright-blue     = "#9ccfd8"
+bright-magenta  = "#c4a7e7"
+bright-cyan     = "#ebbcba"
+bright-white    = "#e0def4"

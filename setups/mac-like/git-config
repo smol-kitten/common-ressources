@@ -1,0 +1,37 @@
+# mac-like git config — Catppuccin Latte
+# Usage: add to ~/.gitconfig:
+#   [include]
+#       path = ~/.config/git/rice.conf
+
+[alias]
+    l   = log --oneline --graph --decorate --all
+    s   = status --short --branch
+    co  = checkout
+    sw  = switch
+    br  = branch
+    aa  = add -A
+    cm  = commit -m
+    ca  = commit --amend --no-edit
+    pu  = push
+    puf = push --force-with-lease
+    pl  = pull --rebase
+    d   = diff
+    ds  = diff --staged
+    lg  = log --graph --pretty=format:'%C(auto)%h%d %s %C(dim)%an %ar'
+
+[color "status"]
+    added     = "#40a02b" bold
+    changed   = "#df8e1d"
+    untracked = "#d20f39"
+
+[core]
+    pager = delta
+
+[delta]
+    syntax-theme = Catppuccin-latte
+    line-numbers = true
+    side-by-side = false
+    navigate     = true
+
+[interactive]
+    diffFilter = delta --color-only

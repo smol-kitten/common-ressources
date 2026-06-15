@@ -1,0 +1,672 @@
+[
+  {
+    "name": "ripgrep",
+    "slug": "ripgrep",
+    "brew_id": "ripgrep",
+    "cask": false,
+    "category": "cli",
+    "description": "Blazingly fast line-oriented search tool that recursively searches directories using regex patterns, respecting gitignore rules.",
+    "homepage": "https://github.com/BurntSushi/ripgrep",
+    "tags": ["search", "grep", "fast", "rust"]
+  },
+  {
+    "name": "fd",
+    "slug": "fd",
+    "brew_id": "fd",
+    "cask": false,
+    "category": "cli",
+    "description": "Simple, fast, and user-friendly alternative to the `find` command with intuitive syntax and colorized output.",
+    "homepage": "https://github.com/sharkdp/fd",
+    "tags": ["find", "search", "files", "rust"]
+  },
+  {
+    "name": "fzf",
+    "slug": "fzf",
+    "brew_id": "fzf",
+    "cask": false,
+    "category": "cli",
+    "description": "General-purpose command-line fuzzy finder that can be integrated with any list-producing command for interactive filtering.",
+    "homepage": "https://github.com/junegunn/fzf",
+    "tags": ["fuzzy", "search", "interactive", "filter"]
+  },
+  {
+    "name": "bat",
+    "slug": "bat",
+    "brew_id": "bat",
+    "cask": false,
+    "category": "cli",
+    "description": "A `cat` clone with syntax highlighting, line numbers, Git integration, and a pager for comfortable reading in the terminal.",
+    "homepage": "https://github.com/sharkdp/bat",
+    "tags": ["cat", "syntax-highlight", "pager", "rust"]
+  },
+  {
+    "name": "eza",
+    "slug": "eza",
+    "brew_id": "eza",
+    "cask": false,
+    "category": "cli",
+    "description": "Modern, maintained replacement for `ls` with icons, colors, Git-aware output, and tree-view support.",
+    "homepage": "https://github.com/eza-community/eza",
+    "tags": ["ls", "files", "icons", "git"]
+  },
+  {
+    "name": "delta",
+    "slug": "delta",
+    "brew_id": "git-delta",
+    "cask": false,
+    "category": "cli",
+    "description": "Syntax-highlighting pager for git and diff output, with side-by-side views, line numbers, and themes.",
+    "homepage": "https://github.com/dandavison/delta",
+    "tags": ["git", "diff", "syntax-highlight", "pager"]
+  },
+  {
+    "name": "starship",
+    "slug": "starship",
+    "brew_id": "starship",
+    "cask": false,
+    "category": "cli",
+    "description": "Minimal, blazing-fast, and infinitely customizable cross-shell prompt written in Rust.",
+    "homepage": "https://starship.rs",
+    "tags": ["prompt", "shell", "cross-shell", "rust"]
+  },
+  {
+    "name": "tmux",
+    "slug": "tmux",
+    "brew_id": "tmux",
+    "cask": false,
+    "category": "cli",
+    "description": "Terminal multiplexer that lets you switch between several programs in one terminal, detach and reattach sessions.",
+    "homepage": "https://github.com/tmux/tmux",
+    "tags": ["terminal", "multiplexer", "sessions", "windows"]
+  },
+  {
+    "name": "Neovim",
+    "slug": "neovim",
+    "brew_id": "neovim",
+    "cask": false,
+    "category": "cli",
+    "description": "Hyperextensible Vim-based text editor focused on extensibility and usability with a first-class Lua plugin API.",
+    "homepage": "https://neovim.io",
+    "tags": ["editor", "vim", "lua", "lsp"]
+  },
+  {
+    "name": "Helix",
+    "slug": "helix",
+    "brew_id": "helix",
+    "cask": false,
+    "category": "cli",
+    "description": "Post-modern modal text editor with built-in LSP and tree-sitter support, no plugin system required.",
+    "homepage": "https://helix-editor.com",
+    "tags": ["editor", "modal", "lsp", "tree-sitter"]
+  },
+  {
+    "name": "htop",
+    "slug": "htop",
+    "brew_id": "htop",
+    "cask": false,
+    "category": "cli",
+    "description": "Interactive process viewer and system monitor — a friendlier, more visual alternative to the classic `top` command.",
+    "homepage": "https://htop.dev",
+    "tags": ["monitor", "processes", "system", "top"]
+  },
+  {
+    "name": "btop",
+    "slug": "btop",
+    "brew_id": "btop",
+    "cask": false,
+    "category": "cli",
+    "description": "Resource monitor with a beautiful terminal UI showing CPU, memory, disk, network, and processes at a glance.",
+    "homepage": "https://github.com/aristocratos/btop",
+    "tags": ["monitor", "resources", "cpu", "memory"]
+  },
+  {
+    "name": "jq",
+    "slug": "jq",
+    "brew_id": "jq",
+    "cask": false,
+    "category": "cli",
+    "description": "Lightweight and flexible command-line JSON processor for slicing, filtering, mapping, and transforming JSON data.",
+    "homepage": "https://jqlang.github.io/jq",
+    "tags": ["json", "processor", "filter", "transform"]
+  },
+  {
+    "name": "yq",
+    "slug": "yq",
+    "brew_id": "yq",
+    "cask": false,
+    "category": "cli",
+    "description": "Portable command-line YAML, JSON, XML, CSV, and TOML processor — like jq but for YAML and more.",
+    "homepage": "https://github.com/mikefarah/yq",
+    "tags": ["yaml", "json", "processor", "filter"]
+  },
+  {
+    "name": "curl",
+    "slug": "curl",
+    "brew_id": "curl",
+    "cask": false,
+    "category": "network",
+    "description": "Command-line tool for transferring data with URLs, supporting HTTP, HTTPS, FTP, and many other protocols.",
+    "homepage": "https://curl.se",
+    "tags": ["http", "transfer", "url", "network"]
+  },
+  {
+    "name": "wget",
+    "slug": "wget",
+    "brew_id": "wget",
+    "cask": false,
+    "category": "network",
+    "description": "Non-interactive network downloader supporting HTTP, HTTPS, and FTP with recursive download and resume capabilities.",
+    "homepage": "https://www.gnu.org/software/wget",
+    "tags": ["download", "http", "ftp", "network"]
+  },
+  {
+    "name": "git",
+    "slug": "git",
+    "brew_id": "git",
+    "cask": false,
+    "category": "development",
+    "description": "The world's most widely used distributed version control system for tracking source code changes.",
+    "homepage": "https://git-scm.com",
+    "tags": ["vcs", "version-control", "distributed"]
+  },
+  {
+    "name": "GitHub CLI",
+    "slug": "gh",
+    "brew_id": "gh",
+    "cask": false,
+    "category": "development",
+    "description": "Official GitHub command-line tool for managing PRs, issues, repositories, and GitHub Actions from the terminal.",
+    "homepage": "https://cli.github.com",
+    "tags": ["github", "cli", "pr", "issues"]
+  },
+  {
+    "name": "lazygit",
+    "slug": "lazygit",
+    "brew_id": "lazygit",
+    "cask": false,
+    "category": "development",
+    "description": "Simple terminal UI for git commands, making staging, branching, and rebasing visual and intuitive.",
+    "homepage": "https://github.com/jesseduffield/lazygit",
+    "tags": ["git", "tui", "interactive", "ui"]
+  },
+  {
+    "name": "zoxide",
+    "slug": "zoxide",
+    "brew_id": "zoxide",
+    "cask": false,
+    "category": "cli",
+    "description": "Smarter cd command that learns your most-visited directories and lets you jump to them with minimal keystrokes.",
+    "homepage": "https://github.com/ajeetdsouza/zoxide",
+    "tags": ["navigation", "cd", "directories", "jump"]
+  },
+  {
+    "name": "nvm",
+    "slug": "nvm",
+    "brew_id": "nvm",
+    "cask": false,
+    "category": "development",
+    "description": "Node Version Manager — lets you install and switch between multiple versions of Node.js on the same machine.",
+    "homepage": "https://github.com/nvm-sh/nvm",
+    "tags": ["node", "version-manager", "javascript"]
+  },
+  {
+    "name": "pyenv",
+    "slug": "pyenv",
+    "brew_id": "pyenv",
+    "cask": false,
+    "category": "development",
+    "description": "Simple Python version management tool for installing and switching between multiple Python versions.",
+    "homepage": "https://github.com/pyenv/pyenv",
+    "tags": ["python", "version-manager", "environments"]
+  },
+  {
+    "name": "rbenv",
+    "slug": "rbenv",
+    "brew_id": "rbenv",
+    "cask": false,
+    "category": "development",
+    "description": "Lightweight Ruby version manager that hooks into your shell for per-project Ruby version selection.",
+    "homepage": "https://github.com/rbenv/rbenv",
+    "tags": ["ruby", "version-manager", "environments"]
+  },
+  {
+    "name": "Go",
+    "slug": "go",
+    "brew_id": "go",
+    "cask": false,
+    "category": "development",
+    "description": "Open source programming language by Google — statically typed, compiled, with built-in concurrency and garbage collection.",
+    "homepage": "https://go.dev",
+    "tags": ["language", "compiled", "concurrency", "google"]
+  },
+  {
+    "name": "rustup",
+    "slug": "rustup",
+    "brew_id": "rustup",
+    "cask": false,
+    "category": "development",
+    "description": "The Rust toolchain installer — manages Rust versions, the standard library, and associated tools like cargo.",
+    "homepage": "https://rustup.rs",
+    "tags": ["rust", "toolchain", "installer", "cargo"]
+  },
+  {
+    "name": "Node.js",
+    "slug": "node",
+    "brew_id": "node",
+    "cask": false,
+    "category": "development",
+    "description": "JavaScript runtime built on Chrome's V8 engine for building scalable server-side and network applications.",
+    "homepage": "https://nodejs.org",
+    "tags": ["javascript", "runtime", "server", "npm"]
+  },
+  {
+    "name": "Python",
+    "slug": "python",
+    "brew_id": "python",
+    "cask": false,
+    "category": "development",
+    "description": "General-purpose, interpreted programming language known for clear syntax and broad ecosystem of libraries.",
+    "homepage": "https://www.python.org",
+    "tags": ["language", "scripting", "data-science", "ml"]
+  },
+  {
+    "name": "Deno",
+    "slug": "deno",
+    "brew_id": "deno",
+    "cask": false,
+    "category": "development",
+    "description": "Secure JavaScript/TypeScript runtime with native TypeScript support, built-in tooling, and no node_modules.",
+    "homepage": "https://deno.land",
+    "tags": ["javascript", "typescript", "runtime", "secure"]
+  },
+  {
+    "name": "Bun",
+    "slug": "bun",
+    "brew_id": "bun",
+    "cask": false,
+    "category": "development",
+    "description": "Fast all-in-one JavaScript runtime and toolkit including bundler, test runner, and npm-compatible package manager.",
+    "homepage": "https://bun.sh",
+    "tags": ["javascript", "runtime", "bundler", "fast"]
+  },
+  {
+    "name": "FFmpeg",
+    "slug": "ffmpeg",
+    "brew_id": "ffmpeg",
+    "cask": false,
+    "category": "media",
+    "description": "Complete, cross-platform solution for recording, converting, streaming, and editing audio and video.",
+    "homepage": "https://ffmpeg.org",
+    "tags": ["video", "audio", "convert", "stream"]
+  },
+  {
+    "name": "ImageMagick",
+    "slug": "imagemagick",
+    "brew_id": "imagemagick",
+    "cask": false,
+    "category": "media",
+    "description": "Powerful command-line tool for creating, editing, composing, and converting bitmap images in over 200 formats.",
+    "homepage": "https://imagemagick.org",
+    "tags": ["images", "convert", "resize", "process"]
+  },
+  {
+    "name": "p7zip",
+    "slug": "p7zip",
+    "brew_id": "p7zip",
+    "cask": false,
+    "category": "cli",
+    "description": "Port of 7-Zip for POSIX systems with support for 7z, ZIP, GZIP, BZIP2, TAR, RAR, and many more archive formats.",
+    "homepage": "https://p7zip.sourceforge.net",
+    "tags": ["archive", "compress", "zip", "7z"]
+  },
+  {
+    "name": "GnuPG",
+    "slug": "gnupg",
+    "brew_id": "gnupg",
+    "cask": false,
+    "category": "security",
+    "description": "Complete implementation of the OpenPGP standard for encrypting and signing data and communications.",
+    "homepage": "https://gnupg.org",
+    "tags": ["encryption", "pgp", "signing", "security"]
+  },
+  {
+    "name": "age",
+    "slug": "age",
+    "brew_id": "age",
+    "cask": false,
+    "category": "security",
+    "description": "Simple, modern, and secure file encryption tool with small explicit keys, no config options, and Unix-style composability.",
+    "homepage": "https://age-encryption.org",
+    "tags": ["encryption", "files", "modern", "security"]
+  },
+  {
+    "name": "mkcert",
+    "slug": "mkcert",
+    "brew_id": "mkcert",
+    "cask": false,
+    "category": "security",
+    "description": "Zero-config tool for making locally-trusted development certificates with any hostnames you like.",
+    "homepage": "https://github.com/FiloSottile/mkcert",
+    "tags": ["ssl", "certificates", "development", "https"]
+  },
+  {
+    "name": "nmap",
+    "slug": "nmap",
+    "brew_id": "nmap",
+    "cask": false,
+    "category": "network",
+    "description": "Network exploration tool and security scanner for discovering hosts, services, and vulnerabilities on a network.",
+    "homepage": "https://nmap.org",
+    "tags": ["network", "scanner", "security", "ports"]
+  },
+  {
+    "name": "HTTPie",
+    "slug": "httpie",
+    "brew_id": "httpie",
+    "cask": false,
+    "category": "network",
+    "description": "User-friendly command-line HTTP client with JSON support, syntax highlighting, and intuitive syntax for REST APIs.",
+    "homepage": "https://httpie.io",
+    "tags": ["http", "api", "rest", "json"]
+  },
+  {
+    "name": "Alacritty",
+    "slug": "alacritty",
+    "brew_id": "alacritty",
+    "cask": true,
+    "category": "gui-apps",
+    "description": "GPU-accelerated terminal emulator written in Rust, focused on simplicity and performance.",
+    "homepage": "https://alacritty.org",
+    "tags": ["terminal", "gpu", "fast", "rust"]
+  },
+  {
+    "name": "Kitty",
+    "slug": "kitty",
+    "brew_id": "kitty",
+    "cask": true,
+    "category": "gui-apps",
+    "description": "Fast, featureful, GPU-based terminal emulator with tiling, tabs, and an extensible plugin system.",
+    "homepage": "https://sw.kovidgoyal.net/kitty",
+    "tags": ["terminal", "gpu", "tiling", "extensible"]
+  },
+  {
+    "name": "WezTerm",
+    "slug": "wezterm",
+    "brew_id": "wezterm",
+    "cask": true,
+    "category": "gui-apps",
+    "description": "GPU-accelerated cross-platform terminal emulator and multiplexer written in Rust, configured with Lua.",
+    "homepage": "https://wezfurlong.org/wezterm",
+    "tags": ["terminal", "gpu", "multiplexer", "lua"]
+  },
+  {
+    "name": "iTerm2",
+    "slug": "iterm2",
+    "brew_id": "iterm2",
+    "cask": true,
+    "category": "gui-apps",
+    "description": "macOS terminal emulator with rich features including split panes, search, autocomplete, and shell integration.",
+    "homepage": "https://iterm2.com",
+    "tags": ["terminal", "macos", "split-panes", "autocomplete"]
+  },
+  {
+    "name": "Firefox",
+    "slug": "firefox",
+    "brew_id": "firefox",
+    "cask": true,
+    "category": "gui-apps",
+    "description": "Free and open-source web browser from Mozilla focused on privacy, security, and web standards.",
+    "homepage": "https://www.mozilla.org/firefox",
+    "tags": ["browser", "privacy", "open-source", "mozilla"]
+  },
+  {
+    "name": "Brave Browser",
+    "slug": "brave-browser",
+    "brew_id": "brave-browser",
+    "cask": true,
+    "category": "gui-apps",
+    "description": "Chromium-based browser with built-in ad blocking, tracker protection, and optional crypto rewards.",
+    "homepage": "https://brave.com",
+    "tags": ["browser", "privacy", "ad-blocker", "chromium"]
+  },
+  {
+    "name": "Visual Studio Code",
+    "slug": "visual-studio-code",
+    "brew_id": "visual-studio-code",
+    "cask": true,
+    "category": "gui-apps",
+    "description": "Lightweight but powerful source code editor by Microsoft with built-in Git, debugging, and vast extension ecosystem.",
+    "homepage": "https://code.visualstudio.com",
+    "tags": ["editor", "ide", "microsoft", "extensions"]
+  },
+  {
+    "name": "Neovide",
+    "slug": "neovide",
+    "brew_id": "neovide",
+    "cask": true,
+    "category": "gui-apps",
+    "description": "No-nonsense Neovim GUI client with smooth cursor animations and GPU-accelerated rendering.",
+    "homepage": "https://neovide.dev",
+    "tags": ["neovim", "gui", "editor", "gpu"]
+  },
+  {
+    "name": "Rectangle",
+    "slug": "rectangle",
+    "brew_id": "rectangle",
+    "cask": true,
+    "category": "productivity",
+    "description": "Window management app for macOS using keyboard shortcuts to snap, resize, and organize application windows.",
+    "homepage": "https://rectangleapp.com",
+    "tags": ["window-management", "keyboard", "productivity", "tiling"]
+  },
+  {
+    "name": "Raycast",
+    "slug": "raycast",
+    "brew_id": "raycast",
+    "cask": true,
+    "category": "productivity",
+    "description": "Blazingly fast Spotlight replacement with extensible plugins, script commands, and AI integration.",
+    "homepage": "https://raycast.com",
+    "tags": ["launcher", "spotlight", "productivity", "plugins"]
+  },
+  {
+    "name": "AltTab",
+    "slug": "alt-tab",
+    "brew_id": "alt-tab",
+    "cask": true,
+    "category": "productivity",
+    "description": "Brings Windows-style alt-tab window switcher to macOS with window previews and keyboard navigation.",
+    "homepage": "https://alt-tab-macos.netlify.app",
+    "tags": ["window-switcher", "productivity", "keyboard", "macos"]
+  },
+  {
+    "name": "Karabiner-Elements",
+    "slug": "karabiner-elements",
+    "brew_id": "karabiner-elements",
+    "cask": true,
+    "category": "productivity",
+    "description": "Powerful keyboard customizer for macOS enabling complex key remappings and modifier key modifications.",
+    "homepage": "https://karabiner-elements.pqrs.org",
+    "tags": ["keyboard", "remapping", "customization", "macos"]
+  },
+  {
+    "name": "Hammerspoon",
+    "slug": "hammerspoon",
+    "brew_id": "hammerspoon",
+    "cask": true,
+    "category": "productivity",
+    "description": "Powerful macOS automation tool using a Lua scripting bridge to control the OS, windows, and system events.",
+    "homepage": "https://www.hammerspoon.org",
+    "tags": ["automation", "lua", "scripting", "macos"]
+  },
+  {
+    "name": "Maccy",
+    "slug": "maccy",
+    "brew_id": "maccy",
+    "cask": true,
+    "category": "productivity",
+    "description": "Lightweight clipboard manager for macOS that stores history of copied items and lets you search and paste them.",
+    "homepage": "https://maccy.app",
+    "tags": ["clipboard", "history", "productivity", "macos"]
+  },
+  {
+    "name": "Shottr",
+    "slug": "shottr",
+    "brew_id": "shottr",
+    "cask": true,
+    "category": "productivity",
+    "description": "Fast, lightweight screenshot tool for macOS with scrolling capture, annotation, OCR, and measurement tools.",
+    "homepage": "https://shottr.cc",
+    "tags": ["screenshot", "annotation", "ocr", "macos"]
+  },
+  {
+    "name": "CleanShot X",
+    "slug": "cleanshot",
+    "brew_id": "cleanshot",
+    "cask": true,
+    "category": "productivity",
+    "description": "Professional screenshot and screen recording app with a rich annotation toolkit, cloud upload, and scrolling capture.",
+    "homepage": "https://cleanshot.com",
+    "tags": ["screenshot", "recording", "annotation", "cloud"]
+  },
+  {
+    "name": "Obsidian",
+    "slug": "obsidian",
+    "brew_id": "obsidian",
+    "cask": true,
+    "category": "productivity",
+    "description": "Powerful knowledge base and note-taking app that works on local Markdown files with a rich plugin ecosystem.",
+    "homepage": "https://obsidian.md",
+    "tags": ["notes", "markdown", "knowledge-base", "pkm"]
+  },
+  {
+    "name": "Notion",
+    "slug": "notion",
+    "brew_id": "notion",
+    "cask": true,
+    "category": "productivity",
+    "description": "All-in-one workspace combining notes, databases, kanban boards, wikis, and project management in one app.",
+    "homepage": "https://notion.so",
+    "tags": ["notes", "database", "collaboration", "productivity"]
+  },
+  {
+    "name": "1Password",
+    "slug": "1password",
+    "brew_id": "1password",
+    "cask": true,
+    "category": "security",
+    "description": "Industry-leading password manager for storing, managing, and auto-filling passwords, cards, and secure notes.",
+    "homepage": "https://1password.com",
+    "tags": ["password-manager", "security", "autofill", "vault"]
+  },
+  {
+    "name": "Bitwarden",
+    "slug": "bitwarden",
+    "brew_id": "bitwarden",
+    "cask": true,
+    "category": "security",
+    "description": "Free and open-source password manager with end-to-end encryption, cross-platform sync, and self-hosting option.",
+    "homepage": "https://bitwarden.com",
+    "tags": ["password-manager", "open-source", "security", "sync"]
+  },
+  {
+    "name": "VLC",
+    "slug": "vlc",
+    "brew_id": "vlc",
+    "cask": true,
+    "category": "media",
+    "description": "Free and open-source cross-platform multimedia player supporting virtually all audio and video formats.",
+    "homepage": "https://videolan.org/vlc",
+    "tags": ["video", "audio", "player", "open-source"]
+  },
+  {
+    "name": "IINA",
+    "slug": "iina",
+    "brew_id": "iina",
+    "cask": true,
+    "category": "media",
+    "description": "Modern macOS-native media player built on mpv with a clean interface, picture-in-picture, and Touch Bar support.",
+    "homepage": "https://iina.io",
+    "tags": ["video", "player", "macos", "mpv"]
+  },
+  {
+    "name": "HandBrake",
+    "slug": "handbrake",
+    "brew_id": "handbrake",
+    "cask": true,
+    "category": "media",
+    "description": "Open-source video transcoder for converting video files between formats with fine-grained encoding controls.",
+    "homepage": "https://handbrake.fr",
+    "tags": ["video", "convert", "transcode", "open-source"]
+  },
+  {
+    "name": "Signal",
+    "slug": "signal",
+    "brew_id": "signal",
+    "cask": true,
+    "category": "productivity",
+    "description": "Private, end-to-end encrypted messaging app for text, voice, and video calls with minimal data collection.",
+    "homepage": "https://signal.org",
+    "tags": ["messaging", "encrypted", "privacy", "voip"]
+  },
+  {
+    "name": "Discord",
+    "slug": "discord",
+    "brew_id": "discord",
+    "cask": true,
+    "category": "productivity",
+    "description": "Voice, video, and text communication platform popular with gaming, developer, and online communities.",
+    "homepage": "https://discord.com",
+    "tags": ["messaging", "voice", "community", "gaming"]
+  },
+  {
+    "name": "Slack",
+    "slug": "slack",
+    "brew_id": "slack",
+    "cask": true,
+    "category": "productivity",
+    "description": "Business messaging and collaboration platform with channels, threads, integrations, and file sharing.",
+    "homepage": "https://slack.com",
+    "tags": ["messaging", "collaboration", "business", "channels"]
+  },
+  {
+    "name": "Docker Desktop",
+    "slug": "docker",
+    "brew_id": "docker",
+    "cask": true,
+    "category": "development",
+    "description": "Platform for building, sharing, and running containerized applications with a GUI dashboard and Docker Engine.",
+    "homepage": "https://docker.com",
+    "tags": ["containers", "docker", "devops", "virtualization"]
+  },
+  {
+    "name": "TablePlus",
+    "slug": "tableplus",
+    "brew_id": "tableplus",
+    "cask": true,
+    "category": "development",
+    "description": "Modern, native database management tool supporting PostgreSQL, MySQL, SQLite, Redis, and many more.",
+    "homepage": "https://tableplus.com",
+    "tags": ["database", "sql", "gui", "postgresql"]
+  },
+  {
+    "name": "Insomnia",
+    "slug": "insomnia",
+    "brew_id": "insomnia",
+    "cask": true,
+    "category": "development",
+    "description": "Open-source API client for designing, debugging, and testing REST, GraphQL, WebSocket, and gRPC requests.",
+    "homepage": "https://insomnia.rest",
+    "tags": ["api", "rest", "graphql", "testing"]
+  },
+  {
+    "name": "Proxyman",
+    "slug": "proxyman",
+    "brew_id": "proxyman",
+    "cask": true,
+    "category": "network",
+    "description": "Native macOS app for intercepting and debugging HTTP/HTTPS network requests with a beautiful UI.",
+    "homepage": "https://proxyman.io",
+    "tags": ["proxy", "debug", "http", "network"]
+  }
+]

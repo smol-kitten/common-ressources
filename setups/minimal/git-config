@@ -1,0 +1,38 @@
+# ── minimal git config snippet — monochrome ─────────────────────
+# Include in ~/.gitconfig: [include] path = ~/.config/git/rice.conf
+# Or: git config --global include.path ~/.config/git/rice.conf
+
+[alias]
+    s   = status -sb
+    l   = log --oneline --graph --decorate --all
+    ll  = log --pretty=format:"%h %ad %s %d" --date=short
+    a   = add
+    aa  = add -A
+    c   = commit
+    cm  = commit -m
+    ca  = commit --amend --no-edit
+    p   = push
+    pf  = push --force-with-lease
+    pl  = pull --rebase
+    co  = checkout
+    cb  = checkout -b
+    d   = diff
+    ds  = diff --staged
+    r   = reset HEAD~1
+
+[color "status"]
+    added     = green
+    changed   = yellow
+    untracked = white
+    branch    = white bold
+
+[delta]
+    syntax-theme   = base16
+    line-numbers   = true
+    side-by-side   = false
+    navigate       = true
+    dark           = true
+    file-style     = bold white
+    hunk-header-style = syntax
+    plus-style     = syntax "#0d2a0d"
+    minus-style    = syntax "#2a0d0d"

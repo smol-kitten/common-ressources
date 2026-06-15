@@ -1,0 +1,103 @@
+/* ── gaming Waybar theme — Gruvbox Dark ─────────────────────── */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+window#waybar {
+    background: #282828;
+    color: #ebdbb2;
+    border-top: 2px solid #3c3836;
+}
+
+/* ── Workspaces ── */
+#workspaces {
+    background: transparent;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: #928374;
+    padding: 2px 8px;
+    min-width: 20px;
+    border-radius: 0;
+    transition: all 0.15s;
+}
+
+#workspaces button:hover {
+    background: #3c3836;
+    color: #ebdbb2;
+}
+
+#workspaces button.active {
+    color: #fe8019;
+    background: #3c3836;
+    border-bottom: 2px solid #fe8019;
+}
+
+#workspaces button.urgent {
+    color: #cc241d;
+}
+
+/* ── Window title ── */
+#window {
+    color: #a89984;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+/* ── Right modules shared ── */
+#cpu,
+#memory,
+#network,
+#battery,
+#tray,
+#custom-power {
+    padding: 0 10px;
+    color: #ebdbb2;
+    margin: 3px 2px;
+    background: #3c3836;
+    border-radius: 3px;
+    transition: background 0.15s;
+}
+
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#battery:hover {
+    background: #504945;
+    color: #fe8019;
+}
+
+/* ── Battery states ── */
+#battery.warning { color: #d79921; }
+#battery.critical {
+    color: #cc241d;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    to { background: rgba(204, 36, 29, 0.2); }
+}
+
+/* ── Power button ── */
+#custom-power {
+    color: #928374;
+    font-size: 14px;
+}
+
+#custom-power:hover {
+    color: #cc241d;
+    background: #504945;
+}
+
+/* ── Tray ── */
+#tray {
+    background: transparent;
+}

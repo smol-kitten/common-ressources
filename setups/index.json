@@ -43,6 +43,36 @@
       "style": "dark, colorful, expressive, animated",
       "recommended_packages": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "swww"],
       "file": "setups/pride/setup.json"
+    },
+    {
+      "id": "minimal",
+      "name": "Minimal",
+      "tagline": "Ultra-minimal monochrome desktop. No blur, no shadows, no distractions.",
+      "theme_colors": { "bg": "#0a0a0a", "fg": "#e8e8e8", "accent": "#888888", "surface": "#1a1a1a" },
+      "bar_position": "top",
+      "style": "monochrome, flat, no effects, no animations",
+      "recommended_packages": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh"],
+      "file": "setups/minimal/setup.json"
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming",
+      "tagline": "Gruvbox Dark, master layout, gamemode + MangoHud ready, performance-first",
+      "theme_colors": { "bg": "#282828", "fg": "#ebdbb2", "accent": "#fe8019", "surface": "#3c3836" },
+      "bar_position": "bottom",
+      "style": "dark, performance-first, no compositor effects",
+      "recommended_packages": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "gamemode", "mangohud", "steam"],
+      "file": "setups/gaming/setup.json"
+    },
+    {
+      "id": "catppuccin-mocha",
+      "name": "Catppuccin Mocha",
+      "tagline": "Dark, cozy Catppuccin Mocha — gradient borders, blur, Starship prompt",
+      "theme_colors": { "bg": "#1e1e2e", "fg": "#cdd6f4", "accent": "#cba6f7", "surface": "#313244" },
+      "bar_position": "top",
+      "style": "dark, rounded, blurred, gradient borders",
+      "recommended_packages": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "starship", "swww", "catppuccin-gtk-theme-mocha"],
+      "file": "setups/catppuccin-mocha/setup.json"
     }
   ]
 }

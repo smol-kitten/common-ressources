@@ -1,0 +1,34 @@
+# Theme: Nightfox
+# Source: https://github.com/EdenEast/nightfox.nvim
+
+[colors.primary]
+background = "#192330"
+foreground = "#CDCECF"
+
+[colors.cursor]
+cursor = "#CDCECF"
+text   = "#192330"
+
+[colors.selection]
+background = "#2B3B51"
+text       = "#CDCECF"
+
+[colors.normal]
+black   = "#393B44"
+red     = "#C94F6D"
+green   = "#81B29A"
+yellow  = "#DBC074"
+blue    = "#719CD6"
+magenta = "#9D79D6"
+cyan    = "#63CDCF"
+white   = "#DFDFE0"
+
+[colors.bright]
+black   = "#575860"
+red     = "#D16983"
+green   = "#8EBD9B"
+yellow  = "#E0C989"
+blue    = "#86ABDC"
+magenta = "#B48EAD"
+cyan    = "#7AD5D6"
+white   = "#E4E4E5"

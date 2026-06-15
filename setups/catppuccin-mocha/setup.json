@@ -1,0 +1,50 @@
+{
+  "id": "catppuccin-mocha",
+  "name": "Catppuccin Mocha",
+  "description": "Dark, cozy Catppuccin Mocha desktop. Gradient borders, blur, rounded corners, Starship prompt with Mocha palette.",
+  "color_scheme": "Catppuccin Mocha",
+  "colors": {
+    "base":     "#1e1e2e",
+    "mantle":   "#181825",
+    "crust":    "#11111b",
+    "surface0": "#313244",
+    "surface1": "#45475a",
+    "surface2": "#585b70",
+    "text":     "#cdd6f4",
+    "subtext0": "#a6adc8",
+    "subtext1": "#bac2de",
+    "mauve":    "#cba6f7",
+    "blue":     "#89b4fa",
+    "lavender": "#b4befe",
+    "red":      "#f38ba8",
+    "green":    "#a6e3a1",
+    "yellow":   "#f9e2af",
+    "peach":    "#fab387",
+    "teal":     "#94e2d5",
+    "sky":      "#89dceb",
+    "sapphire": "#74c7ec",
+    "pink":     "#f5c2e7",
+    "rosewater":"#f5e0dc"
+  },
+  "files": [
+    { "source": "hyprland.conf",  "target": "~/.config/hypr/hyprland.conf",       "description": "Hyprland config — gradient border, blur, Apple bezier animations" },
+    { "source": "waybar.json",    "target": "~/.config/waybar/config",             "description": "Waybar top bar layout" },
+    { "source": "waybar.css",     "target": "~/.config/waybar/style.css",          "description": "Waybar CSS — Catppuccin Mocha theme" },
+    { "source": "alacritty.toml", "target": "~/.config/alacritty/alacritty.toml", "description": "Alacritty terminal — Catppuccin Mocha colors" },
+    { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",          "description": "Rofi launcher — Mocha colors, centered" },
+    { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",             "description": "Dunst — Mocha colors, mauve frame" },
+    { "source": "zshrc",          "target": "~/.zshrc",                            "description": "Zsh with Starship prompt" },
+    { "source": "starship.toml",  "target": "~/.config/starship.toml",             "description": "Starship prompt — Catppuccin Mocha palette" }
+  ],
+  "recommended_packages": {
+    "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "starship"],
+    "optional": ["swww", "catppuccin-gtk-theme-mocha", "papirus-icon-theme", "noto-fonts", "ttf-jetbrains-mono-nerd", "grimblast", "cliphist", "wl-clipboard"],
+    "aur": ["catppuccin-gtk-theme-mocha"]
+  },
+  "wallpaper_hint": "Dark Catppuccin wallpaper: swww img /path/to/wallpaper.jpg --transition-type fade",
+  "gtk_theme": "Catppuccin-Mocha-Standard-Mauve-Dark",
+  "icon_theme": "Papirus-Dark",
+  "cursor_theme": "Bibata-Modern-Classic",
+  "starship_hint": "Apply Catppuccin preset: starship preset catppuccin-powerline > ~/.config/starship.toml (or use the included starship.toml)",
+  "font": { "ui": "Noto Sans 11", "mono": "JetBrainsMono Nerd Font 13" }
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "system": "Tailwind CSS",
+    "slug": "tailwind",
+    "base_unit_px": 4,
+    "unit": "rem",
+    "description": "Tailwind's default spacing scale is based on a 4px (0.25rem) base unit. Scale keys are numeric and non-linear, covering fine-grained small values through large layout spacings. Used for padding, margin, gap, width, height, and more.",
+    "scale": {
+      "0": "0px",
+      "0.5": "2px",
+      "1": "4px",
+      "2": "8px",
+      "3": "12px",
+      "4": "16px",
+      "5": "20px",
+      "6": "24px",
+      "8": "32px",
+      "10": "40px",
+      "12": "48px",
+      "16": "64px",
+      "20": "80px",
+      "24": "96px",
+      "32": "128px",
+      "40": "160px",
+      "48": "192px",
+      "64": "256px"
+    }
+  },
+  {
+    "system": "Material Design",
+    "slug": "material",
+    "base_unit_px": 8,
+    "unit": "px",
+    "description": "Material Design uses an 8px base grid unit for spacing. All spacing values are multiples of 8px, ensuring visual consistency across components. Some fine-grained values (4px) are permitted for internal component spacing. The system is used in MUI via the theme.spacing() function.",
+    "scale": {
+      "0": "0px",
+      "1": "8px",
+      "2": "16px",
+      "3": "24px",
+      "4": "32px",
+      "5": "40px",
+      "6": "48px",
+      "7": "56px",
+      "8": "64px",
+      "10": "80px",
+      "12": "96px"
+    }
+  },
+  {
+    "system": "Bootstrap 5",
+    "slug": "bootstrap-5",
+    "base_unit_px": 4,
+    "unit": "rem",
+    "description": "Bootstrap 5 uses a 6-step spacing scale (0–5) built on a 4px base unit (1rem = 16px, $spacer = 1rem). Steps grow non-linearly: 0, .25rem, .5rem, 1rem, 1.5rem, 3rem. These are used in utility classes like p-3, mt-2, gap-4, and also with named size suffixes (xs, sm, md, lg, xl) for responsive variants.",
+    "scale": {
+      "0": "0px",
+      "1": "4px",
+      "2": "8px",
+      "3": "16px",
+      "4": "24px",
+      "5": "48px"
+    }
+  }
+]

@@ -1,0 +1,98 @@
+/* ── minimal Rofi — Monochrome Grayscale — flat, no icons ──── */
+
+configuration {
+    modi:           "drun,run,window";
+    show-icons:     false;
+    drun-display-format: "{name}";
+    font:           "monospace 11";
+    terminal:       "alacritty";
+}
+
+@theme "blank"
+
+* {
+    bg:      #0a0a0a;
+    bg2:     #1a1a1a;
+    border:  #333333;
+    text:    #e8e8e8;
+    subtext: #555555;
+    accent:  #888888;
+
+    background-color: transparent;
+    text-color:       @text;
+}
+
+window {
+    background-color: @bg;
+    border-color:     @border;
+    border:           1px;
+    border-radius:    4px;
+    width:            480px;
+    padding:          0;
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          0;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @bg;
+    border-color:     @border;
+    border-radius:    4px 4px 0 0;
+    border:           0 0 1px 0;
+    padding:          8px 12px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    padding:          0 6px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @text;
+    placeholder:      "run";
+    placeholder-color: @subtext;
+    cursor:           text;
+}
+
+listview {
+    background-color: transparent;
+    padding:          4px 2px;
+    lines:            8;
+    columns:          1;
+    scrollbar:        false;
+    spacing:          0;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    2px;
+    padding:          6px 10px;
+    orientation:      horizontal;
+}
+
+element.selected.normal {
+    background-color: #1a1a1a;
+    text-color:       #e8e8e8;
+}
+
+element.urgent {
+    text-color: @accent;
+}
+
+element.active {
+    text-color: @accent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}

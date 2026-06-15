@@ -264,6 +264,284 @@ if [ -f "linux/system/pacman-mirrors.json" ]; then
     [ "$MISSING_CODE" != "0" ] && echo " WARN linux/system/pacman-mirrors.json — $MISSING_CODE entries missing field 'code'"
 fi
 
+# Design
+if [ -f "design/breakpoints/breakpoints.json" ]; then
+    echo "  Checking design/breakpoints/breakpoints.json..."
+    COUNT=$(jq 'length' design/breakpoints/breakpoints.json)
+    echo "    $COUNT breakpoint systems"
+    require_fields "design/breakpoints/breakpoints.json" slug system approach
+fi
+
+if [ -f "design/spacing/scales.json" ]; then
+    echo "  Checking design/spacing/scales.json..."
+    COUNT=$(jq 'length' design/spacing/scales.json)
+    echo "    $COUNT spacing systems"
+    require_fields "design/spacing/scales.json" slug system
+fi
+
+if [ -f "design/z-index/conventions.json" ]; then
+    echo "  Checking design/z-index/conventions.json..."
+    COUNT=$(jq 'length' design/z-index/conventions.json)
+    echo "    $COUNT z-index layers"
+    require_fields "design/z-index/conventions.json" slug name value
+fi
+
+# Database
+if [ -f "database/sql-keywords/keywords.json" ]; then
+    echo "  Checking database/sql-keywords/keywords.json..."
+    COUNT=$(jq 'length' database/sql-keywords/keywords.json)
+    echo "    $COUNT SQL keywords"
+    require_fields "database/sql-keywords/keywords.json" slug keyword category
+fi
+
+if [ -f "database/engines/engines.json" ]; then
+    echo "  Checking database/engines/engines.json..."
+    COUNT=$(jq 'length' database/engines/engines.json)
+    echo "    $COUNT database engines"
+    require_fields "database/engines/engines.json" slug name type
+fi
+
+# Security
+if [ -f "security/headers/security-headers.json" ]; then
+    echo "  Checking security/headers/security-headers.json..."
+    COUNT=$(jq 'length' security/headers/security-headers.json)
+    echo "    $COUNT security headers"
+    require_fields "security/headers/security-headers.json" slug name header
+fi
+
+if [ -f "security/tls/versions.json" ]; then
+    echo "  Checking security/tls/versions.json..."
+    COUNT=$(jq 'length' security/tls/versions.json)
+    echo "    $COUNT TLS/SSL versions"
+    require_fields "security/tls/versions.json" slug version status
+fi
+
+# DevOps
+if [ -f "devops/docker/objects.json" ]; then
+    echo "  Checking devops/docker/objects.json..."
+    COUNT=$(jq 'length' devops/docker/objects.json)
+    echo "    $COUNT Docker objects/instructions"
+    require_fields "devops/docker/objects.json" slug name category
+fi
+
+if [ -f "devops/kubernetes/objects.json" ]; then
+    echo "  Checking devops/kubernetes/objects.json..."
+    COUNT=$(jq 'length' devops/kubernetes/objects.json)
+    echo "    $COUNT Kubernetes resource kinds"
+    require_fields "devops/kubernetes/objects.json" slug kind category
+fi
+
+if [ -f "devops/ci-platforms/platforms.json" ]; then
+    echo "  Checking devops/ci-platforms/platforms.json..."
+    COUNT=$(jq 'length' devops/ci-platforms/platforms.json)
+    echo "    $COUNT CI platforms"
+    require_fields "devops/ci-platforms/platforms.json" slug name config_file
+fi
+
+# Math
+if [ -f "math/formulas/formulas.json" ]; then
+    echo "  Checking math/formulas/formulas.json..."
+    COUNT=$(jq 'length' math/formulas/formulas.json)
+    echo "    $COUNT math formulas"
+    require_fields "math/formulas/formulas.json" slug name category formula
+fi
+
+if [ -f "math/symbols/symbols.json" ]; then
+    echo "  Checking math/symbols/symbols.json..."
+    COUNT=$(jq 'length' math/symbols/symbols.json)
+    echo "    $COUNT math symbols"
+    require_fields "math/symbols/symbols.json" slug name symbol
+fi
+
+if [ -f "math/number-systems/bases.json" ]; then
+    echo "  Checking math/number-systems/bases.json..."
+    COUNT=$(jq 'length' math/number-systems/bases.json)
+    echo "    $COUNT number systems"
+    require_fields "math/number-systems/bases.json" slug name base
+fi
+
+# Airports
+if [ -f "geo/airports/airports.json" ]; then
+    echo "  Checking geo/airports/airports.json..."
+    COUNT=$(jq 'length' geo/airports/airports.json)
+    echo "    $COUNT airports"
+    require_fields "geo/airports/airports.json" iata name city country_iso2
+    MISSING_IATA=$(jq '[.[] | select(.iata | test("^[A-Z]{3}$") | not)] | length' geo/airports/airports.json)
+    [ "$MISSING_IATA" != "0" ] && echo " WARN geo/airports/airports.json — $MISSING_IATA entries with invalid IATA code"
+fi
+
+# Finance
+if [ -f "finance/forex/pairs.json" ]; then
+    echo "  Checking finance/forex/pairs.json..."
+    COUNT=$(jq 'length' finance/forex/pairs.json)
+    echo "    $COUNT forex pairs"
+    require_fields "finance/forex/pairs.json" slug pair base quote category
+fi
+
+if [ -f "finance/indices/indices.json" ]; then
+    echo "  Checking finance/indices/indices.json..."
+    COUNT=$(jq 'length' finance/indices/indices.json)
+    echo "    $COUNT market indices"
+    require_fields "finance/indices/indices.json" slug name ticker exchange
+fi
+
+# macOS
+if [ -f "macos/defaults/commands.json" ]; then
+    echo "  Checking macos/defaults/commands.json..."
+    COUNT=$(jq 'length' macos/defaults/commands.json)
+    echo "    $COUNT macOS defaults commands"
+    require_fields "macos/defaults/commands.json" slug name category command
+fi
+
+if [ -f "macos/homebrew/packages.json" ]; then
+    echo "  Checking macos/homebrew/packages.json..."
+    COUNT=$(jq 'length' macos/homebrew/packages.json)
+    echo "    $COUNT Homebrew packages"
+    require_fields "macos/homebrew/packages.json" slug name category
+fi
+
+if [ -f "macos/keyboard/shortcuts.json" ]; then
+    echo "  Checking macos/keyboard/shortcuts.json..."
+    COUNT=$(jq 'length' macos/keyboard/shortcuts.json)
+    echo "    $COUNT macOS shortcuts"
+    require_fields "macos/keyboard/shortcuts.json" slug name category
+fi
+
+# Unicode
+if [ -f "unicode/blocks/blocks.json" ]; then
+    echo "  Checking unicode/blocks/blocks.json..."
+    COUNT=$(jq 'length' unicode/blocks/blocks.json)
+    echo "    $COUNT Unicode blocks"
+    require_fields "unicode/blocks/blocks.json" slug name start end
+fi
+
+if [ -f "unicode/symbols/special-chars.json" ]; then
+    echo "  Checking unicode/symbols/special-chars.json..."
+    COUNT=$(jq 'length' unicode/symbols/special-chars.json)
+    echo "    $COUNT special characters"
+    require_fields "unicode/symbols/special-chars.json" slug name char codepoint
+fi
+
+# Typography
+if [ -f "typography/type-scale/scales.json" ]; then
+    echo "  Checking typography/type-scale/scales.json..."
+    COUNT=$(jq 'length' typography/type-scale/scales.json)
+    echo "    $COUNT type scales"
+    require_fields "typography/type-scale/scales.json" slug name ratio
+fi
+
+if [ -f "typography/font-weights/weights.json" ]; then
+    echo "  Checking typography/font-weights/weights.json..."
+    COUNT=$(jq 'length' typography/font-weights/weights.json)
+    echo "    $COUNT font weights"
+    require_fields "typography/font-weights/weights.json" slug name numeric
+fi
+
+if [ -f "typography/line-height/guidelines.json" ]; then
+    echo "  Checking typography/line-height/guidelines.json..."
+    COUNT=$(jq 'length' typography/line-height/guidelines.json)
+    echo "    $COUNT line-height guidelines"
+    require_fields "typography/line-height/guidelines.json" slug name value
+fi
+
+# Keyboard shortcuts
+if [ -f "keyboard/vscode/shortcuts.json" ]; then
+    echo "  Checking keyboard/vscode/shortcuts.json..."
+    COUNT=$(jq 'length' keyboard/vscode/shortcuts.json)
+    echo "    $COUNT VS Code shortcuts"
+    require_fields "keyboard/vscode/shortcuts.json" slug name category
+fi
+
+if [ -f "keyboard/browser/shortcuts.json" ]; then
+    echo "  Checking keyboard/browser/shortcuts.json..."
+    COUNT=$(jq 'length' keyboard/browser/shortcuts.json)
+    echo "    $COUNT browser shortcuts"
+    require_fields "keyboard/browser/shortcuts.json" slug name category
+fi
+
+if [ -f "keyboard/terminal-multiplexers/shortcuts.json" ]; then
+    echo "  Checking keyboard/terminal-multiplexers/shortcuts.json..."
+    COUNT=$(jq 'length' keyboard/terminal-multiplexers/shortcuts.json)
+    echo "    $COUNT terminal multiplexer shortcuts"
+    require_fields "keyboard/terminal-multiplexers/shortcuts.json" slug name
+fi
+
+# Networking
+if [ -f "networking/subnets/cidr.json" ]; then
+    echo "  Checking networking/subnets/cidr.json..."
+    COUNT=$(jq 'length' networking/subnets/cidr.json)
+    echo "    $COUNT CIDR ranges"
+    require_fields "networking/subnets/cidr.json" cidr subnet_mask total_hosts
+fi
+
+if [ -f "networking/protocols/ip-protocols.json" ]; then
+    echo "  Checking networking/protocols/ip-protocols.json..."
+    COUNT=$(jq 'length' networking/protocols/ip-protocols.json)
+    echo "    $COUNT IP protocols"
+    require_fields "networking/protocols/ip-protocols.json" slug name number
+fi
+
+if [ -f "networking/devices/device-types.json" ]; then
+    echo "  Checking networking/devices/device-types.json..."
+    COUNT=$(jq 'length' networking/devices/device-types.json)
+    echo "    $COUNT device types"
+    require_fields "networking/devices/device-types.json" slug name osi_layer
+fi
+
+# Astronomy
+if [ -f "astronomy/moons/moons.json" ]; then
+    echo "  Checking astronomy/moons/moons.json..."
+    COUNT=$(jq 'length' astronomy/moons/moons.json)
+    echo "    $COUNT moons"
+    require_fields "astronomy/moons/moons.json" slug name planet
+fi
+
+if [ -f "astronomy/stars/notable-stars.json" ]; then
+    echo "  Checking astronomy/stars/notable-stars.json..."
+    COUNT=$(jq 'length' astronomy/stars/notable-stars.json)
+    echo "    $COUNT notable stars"
+    require_fields "astronomy/stars/notable-stars.json" slug name constellation
+fi
+
+if [ -f "astronomy/constellations/constellations.json" ]; then
+    echo "  Checking astronomy/constellations/constellations.json..."
+    COUNT=$(jq 'length' astronomy/constellations/constellations.json)
+    echo "    $COUNT constellations"
+    require_fields "astronomy/constellations/constellations.json" slug name iau_abbreviation
+fi
+
+# Expanded datasets
+if [ -f "geo/countries/countries.json" ]; then
+    echo "  Checking geo/countries/countries.json..."
+    COUNT=$(jq 'length' geo/countries/countries.json)
+    echo "    $COUNT countries"
+    [ "$COUNT" -lt 190 ] && echo " WARN geo/countries/countries.json — expected ~195 countries, got $COUNT"
+    require_fields "geo/countries/countries.json" iso2 iso3 name capital continent
+fi
+
+if [ -f "science/elements/elements.json" ]; then
+    echo "  Checking science/elements/elements.json..."
+    COUNT=$(jq 'length' science/elements/elements.json)
+    echo "    $COUNT elements"
+    [ "$COUNT" -lt 118 ] && echo " WARN science/elements/elements.json — expected 118 elements, got $COUNT"
+    require_fields "science/elements/elements.json" number symbol name mass
+fi
+
+if [ -f "geo/timezones/timezones.json" ]; then
+    echo "  Checking geo/timezones/timezones.json..."
+    COUNT=$(jq 'length' geo/timezones/timezones.json)
+    echo "    $COUNT timezones"
+    [ "$COUNT" -lt 90 ] && echo " WARN geo/timezones/timezones.json — expected ~100+ timezones, got $COUNT"
+    require_fields "geo/timezones/timezones.json" iana utc_offset
+fi
+
+if [ -f "ai/models.json" ]; then
+    echo "  Checking ai/models.json..."
+    COUNT=$(jq 'length' ai/models.json)
+    echo "    $COUNT AI models"
+    require_fields "ai/models.json" slug name provider
+fi
+
 echo ""
 echo "=== Summary ==="
 echo "  JSON files checked: $JSON_COUNT"

@@ -17,9 +17,21 @@ AVAILABLE_SLUGS=(
   monokai
   gruvbox-dark
   catppuccin-mocha
+  catppuccin-latte
+  catppuccin-frappe
   tokyo-night
   one-dark
   material-dark
+  rose-pine
+  rose-pine-moon
+  everforest-dark
+  kanagawa
+  ayu-dark
+  ayu-light
+  palenight
+  flexoki-dark
+  nightfox
+  modus-vivendi
 )
 
 # ── helpers ───────────────────────────────────────────────────────────────────
@@ -98,6 +110,10 @@ download "${RAW_BASE}/waybar/${SLUG}.css"         "${TMPDIR}/${SLUG}-waybar.css"
 download "${RAW_BASE}/rofi/${SLUG}.rasi"          "${TMPDIR}/${SLUG}-rofi.rasi"
 download "${RAW_BASE}/dunst/${SLUG}.conf"         "${TMPDIR}/${SLUG}-dunst.conf"
 download "${RAW_BASE}/wezterm/${SLUG}.lua"        "${TMPDIR}/${SLUG}-wezterm.lua"
+download "${RAW_BASE}/helix/${SLUG}.toml"         "${TMPDIR}/${SLUG}-helix.toml"
+download "${RAW_BASE}/foot/${SLUG}.ini"           "${TMPDIR}/${SLUG}-foot.ini"
+download "${RAW_BASE}/nvim/${SLUG}.lua"           "${TMPDIR}/${SLUG}-nvim.lua"
+download "${RAW_BASE}/fish/${SLUG}.fish"          "${TMPDIR}/${SLUG}-fish.fish"
 
 success "All config files downloaded."
 echo ""
@@ -223,6 +239,42 @@ if ensure_dir "$WEZTERM_DIR"; then
   echo ""
 fi
 
+# ── helix ────────────────────────────────────────────────────────────────────
+
+HELIX_THEMES_DIR="${HOME}/.config/helix/themes"
+if ensure_dir "$HELIX_THEMES_DIR"; then
+  cp "${TMPDIR}/${SLUG}-helix.toml" "${HELIX_THEMES_DIR}/${SLUG}.toml"
+  success "Helix → ${HELIX_THEMES_DIR}/${SLUG}.toml"
+  warn "Add 'theme = \"${SLUG}\"' to your ~/.config/helix/config.toml"
+fi
+
+# ── foot ──────────────────────────────────────────────────────────────────────
+
+FOOT_THEMES_DIR="${HOME}/.config/foot/themes"
+if ensure_dir "$FOOT_THEMES_DIR"; then
+  cp "${TMPDIR}/${SLUG}-foot.ini" "${FOOT_THEMES_DIR}/${SLUG}.ini"
+  success "Foot → ${FOOT_THEMES_DIR}/${SLUG}.ini"
+  warn "Add 'include=~/.config/foot/themes/${SLUG}.ini' to your foot.ini [colors] section"
+fi
+
+# ── neovim ────────────────────────────────────────────────────────────────────
+
+NVIM_COLORS_DIR="${HOME}/.config/nvim/colors"
+if ensure_dir "$NVIM_COLORS_DIR"; then
+  cp "${TMPDIR}/${SLUG}-nvim.lua" "${NVIM_COLORS_DIR}/${SLUG}.lua"
+  success "Neovim → ${NVIM_COLORS_DIR}/${SLUG}.lua"
+  warn "Run ':colorscheme ${SLUG}' in Neovim, or add 'vim.cmd.colorscheme(\"${SLUG}\")' to your init.lua"
+fi
+
+# ── fish ──────────────────────────────────────────────────────────────────────
+
+FISH_THEMES_DIR="${HOME}/.config/fish/themes"
+if ensure_dir "$FISH_THEMES_DIR"; then
+  cp "${TMPDIR}/${SLUG}-fish.fish" "${FISH_THEMES_DIR}/${SLUG}.fish"
+  success "Fish → ${FISH_THEMES_DIR}/${SLUG}.fish"
+  warn "Add 'source ~/.config/fish/themes/${SLUG}.fish' to your config.fish"
+fi
+
 # ── summary ───────────────────────────────────────────────────────────────────
 
 echo ""
@@ -237,6 +289,10 @@ echo "    ~/.config/waybar/colors.css"
 echo "    ~/.config/rofi/colors.rasi"
 echo "    ~/.config/dunst/colors.conf"
 echo "    ~/.config/wezterm/colors.lua"
+echo "    ~/.config/helix/themes/${SLUG}.toml"
+echo "    ~/.config/foot/themes/${SLUG}.ini"
+echo "    ~/.config/nvim/colors/${SLUG}.lua"
+echo "    ~/.config/fish/themes/${SLUG}.fish"
 echo ""
 echo "  Restart your terminals / reload your compositor"
 echo "  to see the new colors take effect."

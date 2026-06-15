@@ -1,0 +1,106 @@
+/* ── gaming Rofi — Gruvbox Dark ─────────────────────────────── */
+
+configuration {
+    modi:           "drun,run,window";
+    show-icons:     true;
+    drun-display-format: "{name}";
+    font:           "JetBrainsMono Nerd Font 12";
+    terminal:       "alacritty";
+}
+
+@theme "blank"
+
+* {
+    bg:      #282828;
+    bg2:     #3c3836;
+    border:  #504945;
+    text:    #ebdbb2;
+    subtext: #928374;
+    accent:  #fe8019;
+    urgent:  #cc241d;
+
+    background-color: transparent;
+    text-color:       @text;
+}
+
+window {
+    background-color: @bg;
+    border-color:     @border;
+    border:           2px;
+    border-radius:    4px;
+    width:            560px;
+    padding:          0;
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          0;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @bg2;
+    border-color:     @border;
+    border-radius:    4px 4px 0 0;
+    border:           0 0 1px 0;
+    padding:          10px 14px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    padding:          0 8px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @text;
+    placeholder:      "Search…";
+    placeholder-color: @subtext;
+    cursor:           text;
+}
+
+listview {
+    background-color: transparent;
+    padding:          6px 4px;
+    lines:            8;
+    columns:          1;
+    scrollbar:        false;
+    spacing:          2px;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    3px;
+    padding:          8px 12px;
+    spacing:          10px;
+    children:         [ element-icon, element-text ];
+    orientation:      horizontal;
+}
+
+element.selected.normal {
+    background-color: #3c3836;
+    text-color:       @accent;
+}
+
+element.urgent {
+    text-color: @urgent;
+}
+
+element.active {
+    text-color: @accent;
+}
+
+element-icon {
+    size:             20px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}

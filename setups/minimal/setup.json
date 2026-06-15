@@ -1,0 +1,29 @@
+{
+  "id": "minimal",
+  "name": "Minimal",
+  "description": "Ultra-minimal monochrome desktop. No blur, no shadows, no distractions.",
+  "color_scheme": "Monochrome Grayscale",
+  "colors": {
+    "bg":      "#0a0a0a",
+    "fg":      "#e8e8e8",
+    "accent":  "#888888",
+    "surface": "#1a1a1a",
+    "border":  "#333333"
+  },
+  "files": [
+    { "source": "hyprland.conf",  "target": "~/.config/hypr/hyprland.conf",      "description": "Hyprland window manager config" },
+    { "source": "waybar.json",    "target": "~/.config/waybar/config",            "description": "Waybar status bar layout" },
+    { "source": "waybar.css",     "target": "~/.config/waybar/style.css",         "description": "Waybar CSS theme" },
+    { "source": "alacritty.toml", "target": "~/.config/alacritty/alacritty.toml","description": "Alacritty terminal emulator config" },
+    { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",         "description": "Rofi app launcher config" },
+    { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",            "description": "Dunst notification daemon config" },
+    { "source": "zshrc",          "target": "~/.zshrc",                           "description": "Zsh shell config — bare prompt, no plugins" }
+  ],
+  "recommended_packages": {
+    "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh"],
+    "optional": ["swww", "ttf-jetbrains-mono-nerd", "grimblast", "wl-clipboard"],
+    "aur": []
+  },
+  "wallpaper_hint": "Solid dark: swww img /path/to/wallpaper.jpg --transition-type fade",
+  "font": { "ui": "monospace 11", "mono": "JetBrainsMono Nerd Font 11" }
+}

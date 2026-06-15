@@ -1,0 +1,34 @@
+# Theme: Ayu Light
+# Source: https://github.com/dempfi/ayu
+
+[colors.primary]
+background = "#FAFAFA"
+foreground = "#575F66"
+
+[colors.cursor]
+cursor = "#FF6A00"
+text   = "#FAFAFA"
+
+[colors.selection]
+background = "#D3D3D3"
+text       = "#575F66"
+
+[colors.normal]
+black   = "#0A0E14"
+red     = "#FF3333"
+green   = "#86B300"
+yellow  = "#F29718"
+blue    = "#41A6D9"
+magenta = "#A37ACC"
+cyan    = "#4DBF99"
+white   = "#BFBDB6"
+
+[colors.bright]
+black   = "#5C6773"
+red     = "#FF6565"
+green   = "#B8CC52"
+yellow  = "#FFB454"
+blue    = "#73D8FF"
+magenta = "#D4BFFF"
+cyan    = "#95E6CB"
+white   = "#FFFFFF"

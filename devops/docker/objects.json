@@ -1,0 +1,326 @@
+[
+  {
+    "name": "FROM",
+    "slug": "from",
+    "category": "instruction",
+    "syntax": "FROM <image>[:<tag>] [AS <name>]",
+    "description": "Sets the base image for subsequent instructions. Every valid Dockerfile must start with a FROM instruction. Multi-stage builds can use multiple FROM instructions.",
+    "example": "FROM ubuntu:22.04 AS builder",
+    "notes": "Use a specific tag rather than 'latest' for reproducible builds. The AS name is used in multi-stage builds to copy artifacts between stages."
+  },
+  {
+    "name": "RUN",
+    "slug": "run",
+    "category": "instruction",
+    "syntax": "RUN <command> (shell form) | RUN [\"executable\", \"param1\", \"param2\"] (exec form)",
+    "description": "Executes commands in a new layer on top of the current image and commits the results. The resulting committed image is used for the next step in the Dockerfile.",
+    "example": "RUN apt-get update && apt-get install -y curl",
+    "notes": "Combine multiple commands with && to reduce image layers. Use --mount=type=cache to cache package manager directories."
+  },
+  {
+    "name": "CMD",
+    "slug": "cmd",
+    "category": "instruction",
+    "syntax": "CMD [\"executable\",\"param1\",\"param2\"] | CMD [\"param1\",\"param2\"] | CMD command param1 param2",
+    "description": "Provides defaults for an executing container. There can only be one CMD instruction in a Dockerfile; if listed more than once, only the last takes effect.",
+    "example": "CMD [\"node\", \"server.js\"]",
+    "notes": "CMD is overridden by arguments passed to 'docker run'. Use exec form to avoid shell string munging. If ENTRYPOINT is defined, CMD provides default arguments to it."
+  },
+  {
+    "name": "ENTRYPOINT",
+    "slug": "entrypoint",
+    "category": "instruction",
+    "syntax": "ENTRYPOINT [\"executable\", \"param1\", \"param2\"] | ENTRYPOINT command param1 param2",
+    "description": "Configures a container to run as an executable. Unlike CMD, ENTRYPOINT is not overridden by docker run arguments; instead those arguments are appended.",
+    "example": "ENTRYPOINT [\"/usr/bin/nginx\", \"-g\", \"daemon off;\"]",
+    "notes": "Use exec form to ensure the process receives OS signals. Can be overridden with --entrypoint flag. Combine with CMD to provide default but overridable arguments."
+  },
+  {
+    "name": "COPY",
+    "slug": "copy",
+    "category": "instruction",
+    "syntax": "COPY [--chown=<user>:<group>] [--chmod=<perms>] <src>... <dest>",
+    "description": "Copies files or directories from the build context (or a named build stage) into the container filesystem at the specified path.",
+    "example": "COPY --chown=node:node ./src /app/src",
+    "notes": "Preferred over ADD for simple file copies. Use --from=<stage> to copy from a previous build stage. Paths relative to WORKDIR."
+  },
+  {
+    "name": "ADD",
+    "slug": "add",
+    "category": "instruction",
+    "syntax": "ADD [--chown=<user>:<group>] <src>... <dest>",
+    "description": "Copies files, directories, or remote URLs from the source to the container filesystem. Also automatically extracts local tar archives.",
+    "example": "ADD https://example.com/app.tar.gz /opt/",
+    "notes": "Use COPY instead unless you specifically need URL fetching or automatic tar extraction. ADD with a URL does not support authentication."
+  },
+  {
+    "name": "EXPOSE",
+    "slug": "expose",
+    "category": "instruction",
+    "syntax": "EXPOSE <port>[/<protocol>]",
+    "description": "Informs Docker that the container listens on the specified network ports at runtime. It is documentation only and does not actually publish the port.",
+    "example": "EXPOSE 8080/tcp",
+    "notes": "Does not make ports accessible from the host. Use -p or -P flags with 'docker run' or port mappings in docker-compose to publish ports."
+  },
+  {
+    "name": "ENV",
+    "slug": "env",
+    "category": "instruction",
+    "syntax": "ENV <key>=<value> ...",
+    "description": "Sets environment variables that persist in the container at runtime. These variables are available to all subsequent instructions and to the running container.",
+    "example": "ENV NODE_ENV=production PORT=3000",
+    "notes": "Environment variables set with ENV persist in the container. Use ARG for build-time only variables. Can be overridden at runtime with -e flag."
+  },
+  {
+    "name": "ARG",
+    "slug": "arg",
+    "category": "instruction",
+    "syntax": "ARG <name>[=<default value>]",
+    "description": "Defines a variable that users can pass at build-time to the builder with the --build-arg flag. Unlike ENV, ARG values are not available in the running container.",
+    "example": "ARG VERSION=1.0.0\nFROM myapp:${VERSION}",
+    "notes": "ARG variables are not persisted into the final image. Pre-defined ARGs like HTTP_PROXY, HTTPS_PROXY are available without declaration. Scope is from definition line to end of build stage."
+  },
+  {
+    "name": "WORKDIR",
+    "slug": "workdir",
+    "category": "instruction",
+    "syntax": "WORKDIR /path/to/workdir",
+    "description": "Sets the working directory for any subsequent RUN, CMD, ENTRYPOINT, COPY, and ADD instructions. If the directory does not exist, it is created automatically.",
+    "example": "WORKDIR /app",
+    "notes": "Can be used multiple times. If a relative path is provided, it is relative to the previous WORKDIR. Prefer WORKDIR over RUN cd ... for clarity."
+  },
+  {
+    "name": "USER",
+    "slug": "user",
+    "category": "instruction",
+    "syntax": "USER <user>[:<group>] | USER <UID>[:<GID>]",
+    "description": "Sets the user name (or UID) and optionally the user group (or GID) to use for all subsequent RUN, CMD, and ENTRYPOINT instructions.",
+    "example": "USER node:node",
+    "notes": "Best practice for security: don't run containers as root. The user must exist in /etc/passwd or be created with RUN useradd/adduser before this instruction."
+  },
+  {
+    "name": "VOLUME",
+    "slug": "volume",
+    "category": "instruction",
+    "syntax": "VOLUME [\"/data\"] | VOLUME /data /logs",
+    "description": "Creates a mount point with the specified name and marks it as holding externally mounted volumes from the native host or other containers.",
+    "example": "VOLUME [\"/var/lib/mysql\"]",
+    "notes": "Any data written to a VOLUME path after this instruction is discarded. Data in volumes is not part of the image and persists across container restarts."
+  },
+  {
+    "name": "LABEL",
+    "slug": "label",
+    "category": "instruction",
+    "syntax": "LABEL <key>=<value> <key>=<value> ...",
+    "description": "Adds metadata to an image as key-value pairs. Labels are inherited by child images and can be queried with 'docker inspect'.",
+    "example": "LABEL maintainer=\"ops@example.com\" version=\"1.0\" description=\"My App\"",
+    "notes": "Use OCI standard label keys where applicable: org.opencontainers.image.title, .version, .description, .source, etc."
+  },
+  {
+    "name": "HEALTHCHECK",
+    "slug": "healthcheck",
+    "category": "instruction",
+    "syntax": "HEALTHCHECK [OPTIONS] CMD <command> | HEALTHCHECK NONE",
+    "description": "Tells Docker how to test a container to check that it is still working. Allows Docker to detect containers that are running but not serving correctly.",
+    "example": "HEALTHCHECK --interval=30s --timeout=3s CMD curl -f http://localhost/ || exit 1",
+    "notes": "Options: --interval (default 30s), --timeout (default 30s), --start-period (default 0s), --retries (default 3). Exit code 0 = healthy, 1 = unhealthy."
+  },
+  {
+    "name": "ONBUILD",
+    "slug": "onbuild",
+    "category": "instruction",
+    "syntax": "ONBUILD <INSTRUCTION>",
+    "description": "Adds a trigger instruction to the image that executes when the image is used as a base for another build. Useful for base images that need to inject build logic into child images.",
+    "example": "ONBUILD COPY . /app/src\nONBUILD RUN npm install",
+    "notes": "ONBUILD triggers fire immediately after FROM in the child Dockerfile. They are not inherited by grandchild images. Visible in 'docker inspect' output."
+  },
+  {
+    "name": "STOPSIGNAL",
+    "slug": "stopsignal",
+    "category": "instruction",
+    "syntax": "STOPSIGNAL <signal>",
+    "description": "Sets the system call signal that will be sent to the container to exit. Can be a signal name (SIGTERM) or unsigned number (15).",
+    "example": "STOPSIGNAL SIGQUIT",
+    "notes": "Default is SIGTERM. Overridable at runtime with --stop-signal. Important for graceful shutdown: ensure your process handles the configured signal."
+  },
+  {
+    "name": "SHELL",
+    "slug": "shell",
+    "category": "instruction",
+    "syntax": "SHELL [\"executable\", \"parameters\"]",
+    "description": "Overrides the default shell used for the shell form of commands in RUN, CMD, and ENTRYPOINT instructions. Default on Linux is [\"/bin/sh\", \"-c\"].",
+    "example": "SHELL [\"/bin/bash\", \"-o\", \"pipefail\", \"-c\"]",
+    "notes": "On Windows, default is [\"cmd\", \"/S\", \"/C\"]. Using bash with pipefail ensures non-zero exit codes from piped commands are properly propagated."
+  },
+  {
+    "name": "MAINTAINER",
+    "slug": "maintainer",
+    "category": "instruction",
+    "syntax": "MAINTAINER <name>",
+    "description": "Sets the author field of the generated image. This instruction is deprecated in favor of using LABEL with org.opencontainers.image.authors.",
+    "example": "MAINTAINER John Doe <john@example.com>",
+    "notes": "Deprecated. Use LABEL maintainer=\"...\" or LABEL org.opencontainers.image.authors=\"...\" instead."
+  },
+  {
+    "name": "image",
+    "slug": "image",
+    "category": "object",
+    "syntax": null,
+    "description": "A read-only template containing instructions for creating a Docker container. Built from a Dockerfile and stored in a registry or local cache. Images are layered for efficiency.",
+    "example": "docker pull nginx:alpine\ndocker build -t myapp:1.0 .",
+    "notes": "Images are immutable. Layers are shared between images to save disk space. Tagged with name:tag format; 'latest' is the default tag."
+  },
+  {
+    "name": "container",
+    "slug": "container",
+    "category": "object",
+    "syntax": null,
+    "description": "A runnable instance of a Docker image. Containers are isolated processes with their own filesystem, networking, and process space, created from images.",
+    "example": "docker run -d --name myapp -p 8080:80 nginx",
+    "notes": "Containers are ephemeral by default. State is lost when removed unless volumes are used. Managed individually or via orchestrators like Docker Compose or Kubernetes."
+  },
+  {
+    "name": "volume",
+    "slug": "volume",
+    "category": "object",
+    "syntax": null,
+    "description": "A Docker-managed persistent storage mechanism that exists independently of containers. Volumes survive container removal and can be shared between containers.",
+    "example": "docker volume create mydata\ndocker run -v mydata:/data myapp",
+    "notes": "Preferred for persisting data. Stored in Docker's storage area (/var/lib/docker/volumes/). Supports volume drivers for remote storage (NFS, cloud, etc.)."
+  },
+  {
+    "name": "network",
+    "slug": "network",
+    "category": "object",
+    "syntax": null,
+    "description": "A Docker-managed virtual network that enables communication between containers. Docker creates bridge, host, and none networks by default.",
+    "example": "docker network create mynet\ndocker run --network mynet myapp",
+    "notes": "Containers on the same user-defined network can resolve each other by name. Swarm mode adds overlay networks for cross-host communication."
+  },
+  {
+    "name": "service",
+    "slug": "service",
+    "category": "object",
+    "syntax": null,
+    "description": "A Docker Swarm abstraction representing a desired state of a container across a cluster. Services manage replicas, rolling updates, and placement constraints.",
+    "example": "docker service create --replicas 3 --name web nginx",
+    "notes": "Services are a Swarm mode concept. In Docker Compose, 'services' are the building blocks but without Swarm-level scheduling."
+  },
+  {
+    "name": "stack",
+    "slug": "stack",
+    "category": "object",
+    "syntax": null,
+    "description": "A Docker Swarm object representing a collection of services defined in a Compose file and deployed together as a unit.",
+    "example": "docker stack deploy -c docker-compose.yml mystack",
+    "notes": "Stacks are the Swarm equivalent of Docker Compose applications. They group related services, networks, and volumes for a complete application."
+  },
+  {
+    "name": "secret",
+    "slug": "secret",
+    "category": "object",
+    "syntax": null,
+    "description": "A Docker Swarm object for securely storing sensitive data such as passwords, TLS certificates, and API keys, available only to services that are explicitly granted access.",
+    "example": "echo 'mysecretpassword' | docker secret create db_password -",
+    "notes": "Secrets are encrypted at rest and in transit. They are mounted as files in /run/secrets/ inside containers. Available in Swarm mode and Docker Compose v3+."
+  },
+  {
+    "name": "config",
+    "slug": "config",
+    "category": "object",
+    "syntax": null,
+    "description": "A Docker Swarm object similar to secrets but for non-sensitive configuration data. Configs are stored in plain text and can be inspected.",
+    "example": "docker config create nginx_config nginx.conf",
+    "notes": "Unlike secrets, configs are not encrypted at rest. Use for configuration files that need to be distributed to services but don't contain sensitive data."
+  },
+  {
+    "name": "plugin",
+    "slug": "plugin",
+    "category": "object",
+    "syntax": null,
+    "description": "An extension to Docker that provides additional capabilities such as custom network drivers, volume drivers, or logging drivers.",
+    "example": "docker plugin install vieux/sshfs\ndocker plugin enable vieux/sshfs",
+    "notes": "Plugins run as privileged containers. Volume plugins allow Docker volumes to be backed by remote storage systems like NFS, S3, or cloud block storage."
+  },
+  {
+    "name": "context",
+    "slug": "context",
+    "category": "object",
+    "syntax": null,
+    "description": "A Docker CLI feature for managing connections to different Docker endpoints (local daemon, remote hosts, Kubernetes clusters) and switching between them.",
+    "example": "docker context create myremote --docker host=ssh://user@remote\ndocker context use myremote",
+    "notes": "Contexts store connection configuration for Docker hosts. Useful for managing multiple environments without changing environment variables."
+  },
+  {
+    "name": "bridge",
+    "slug": "bridge",
+    "category": "network-mode",
+    "syntax": "--network bridge",
+    "description": "The default network mode. Creates a virtual network interface (docker0) on the host. Containers on the same bridge network can communicate; external access requires port publishing.",
+    "example": "docker run --network bridge nginx",
+    "notes": "The default bridge network lacks automatic DNS resolution between containers. User-defined bridge networks support DNS by container name and are the recommended approach."
+  },
+  {
+    "name": "host",
+    "slug": "host",
+    "category": "network-mode",
+    "syntax": "--network host",
+    "description": "Removes network isolation between the container and the Docker host. The container shares the host's network stack directly, with no port translation.",
+    "example": "docker run --network host nginx",
+    "notes": "Only available on Linux. Provides best network performance but reduces isolation. Useful for applications needing low latency or that manage their own port binding."
+  },
+  {
+    "name": "none",
+    "slug": "none",
+    "category": "network-mode",
+    "syntax": "--network none",
+    "description": "Disables all networking for a container. The container only has a loopback interface and cannot communicate with other containers or the outside world.",
+    "example": "docker run --network none myapp",
+    "notes": "Use for maximum isolation of containers that don't need network access, such as batch processing jobs or security-sensitive workloads."
+  },
+  {
+    "name": "overlay",
+    "slug": "overlay",
+    "category": "network-mode",
+    "syntax": "--network overlay",
+    "description": "Creates a distributed network spanning multiple Docker daemon hosts. Used in Docker Swarm mode to enable communication between services across nodes.",
+    "example": "docker network create --driver overlay myoverlay",
+    "notes": "Requires Swarm mode or key-value store. Encrypts traffic between nodes with --opt encrypted. Supports VXLAN encapsulation for cross-host container communication."
+  },
+  {
+    "name": "macvlan",
+    "slug": "macvlan",
+    "category": "network-mode",
+    "syntax": "--network macvlan",
+    "description": "Assigns a MAC address to each container, making it appear as a physical device on the network. Allows containers to be directly accessible on the LAN.",
+    "example": "docker network create --driver macvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 -o parent=eth0 mymacvlan",
+    "notes": "Requires the host's NIC to support promiscuous mode. Useful for legacy applications that need a physical network presence. Does not support communication with the Docker host by default."
+  },
+  {
+    "name": "named-volume",
+    "slug": "named-volume",
+    "category": "volume-type",
+    "syntax": "-v <volume-name>:<container-path>",
+    "description": "A Docker-managed volume identified by a name. Docker handles storage location and lifecycle. Named volumes persist after container removal and can be shared between containers.",
+    "example": "docker run -v mydata:/var/lib/mysql mysql",
+    "notes": "Preferred for persistent application data. Easier to manage than bind mounts on Windows and Mac (no path translation issues). Can use volume drivers for remote storage."
+  },
+  {
+    "name": "bind-mount",
+    "slug": "bind-mount",
+    "category": "volume-type",
+    "syntax": "-v <host-path>:<container-path>[:<options>] | --mount type=bind,src=<host-path>,dst=<container-path>",
+    "description": "Maps a file or directory from the host machine into the container. Changes are immediately reflected on both sides, making it ideal for development.",
+    "example": "docker run -v /home/user/code:/app node",
+    "notes": "Performance varies by OS. On Mac/Windows, file system events may not propagate correctly. Use :ro (read-only) suffix for security. Not recommended for production data storage."
+  },
+  {
+    "name": "tmpfs",
+    "slug": "tmpfs",
+    "category": "volume-type",
+    "syntax": "--tmpfs <container-path> | --mount type=tmpfs,dst=<container-path>",
+    "description": "Mounts a temporary filesystem stored in the host's memory. Data is not persisted to disk and is lost when the container stops. Useful for sensitive or ephemeral data.",
+    "example": "docker run --tmpfs /tmp:rw,noexec,nosuid,size=100m myapp",
+    "notes": "Only available on Linux. Useful for writing temporary files that should not be persisted (session data, sensitive files). Does not increase image size."
+  }
+]

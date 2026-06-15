@@ -1,0 +1,579 @@
+[
+  {
+    "name": "Basic Latin",
+    "slug": "basic-latin",
+    "start": "U+0000",
+    "end": "U+007F",
+    "count": 128,
+    "category": "scripts",
+    "description": "The foundational ASCII character set including control characters, digits, uppercase and lowercase Latin letters, and basic punctuation."
+  },
+  {
+    "name": "Latin-1 Supplement",
+    "slug": "latin-1-supplement",
+    "start": "U+0080",
+    "end": "U+00FF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Extended Latin characters for Western European languages including accented vowels, ligatures, and additional symbols."
+  },
+  {
+    "name": "Latin Extended-A",
+    "slug": "latin-extended-a",
+    "start": "U+0100",
+    "end": "U+017F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Additional Latin characters for Central and Eastern European languages including Polish, Czech, Slovak, and Baltic alphabets."
+  },
+  {
+    "name": "Latin Extended-B",
+    "slug": "latin-extended-b",
+    "start": "U+0180",
+    "end": "U+024F",
+    "count": 208,
+    "category": "scripts",
+    "description": "Further Latin extensions for African languages, phonetic transcriptions, and additional European language support."
+  },
+  {
+    "name": "IPA Extensions",
+    "slug": "ipa-extensions",
+    "start": "U+0250",
+    "end": "U+02AF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Characters used in the International Phonetic Alphabet for representing the sounds of spoken language."
+  },
+  {
+    "name": "Spacing Modifier Letters",
+    "slug": "spacing-modifier-letters",
+    "start": "U+02B0",
+    "end": "U+02FF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Spacing modifier letters used in phonetics and linguistic notation to mark phonetic features of adjacent letters."
+  },
+  {
+    "name": "Combining Diacritical Marks",
+    "slug": "combining-diacritical-marks",
+    "start": "U+0300",
+    "end": "U+036F",
+    "count": 112,
+    "category": "scripts",
+    "description": "Non-spacing combining marks including accents, diacritics, and other marks that attach to a preceding base character."
+  },
+  {
+    "name": "Greek and Coptic",
+    "slug": "greek-and-coptic",
+    "start": "U+0370",
+    "end": "U+03FF",
+    "count": 144,
+    "category": "scripts",
+    "description": "Letters and symbols of the Greek and Coptic scripts, including classical and modern Greek alphabets."
+  },
+  {
+    "name": "Cyrillic",
+    "slug": "cyrillic",
+    "start": "U+0400",
+    "end": "U+04FF",
+    "count": 256,
+    "category": "scripts",
+    "description": "The Cyrillic script used for Russian, Ukrainian, Bulgarian, Serbian, and many other Slavic and non-Slavic languages."
+  },
+  {
+    "name": "Cyrillic Supplement",
+    "slug": "cyrillic-supplement",
+    "start": "U+0500",
+    "end": "U+052F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Additional Cyrillic characters for minority languages of the former Soviet Union not covered by the main Cyrillic block."
+  },
+  {
+    "name": "Hebrew",
+    "slug": "hebrew",
+    "start": "U+0590",
+    "end": "U+05FF",
+    "count": 112,
+    "category": "scripts",
+    "description": "The Hebrew script used for writing Hebrew, Yiddish, Ladino, and other Jewish languages, written right-to-left."
+  },
+  {
+    "name": "Arabic",
+    "slug": "arabic",
+    "start": "U+0600",
+    "end": "U+06FF",
+    "count": 256,
+    "category": "scripts",
+    "description": "The Arabic script used for Arabic, Persian, Urdu, Pashto, and many other languages written right-to-left."
+  },
+  {
+    "name": "Syriac",
+    "slug": "syriac",
+    "start": "U+0700",
+    "end": "U+074F",
+    "count": 80,
+    "category": "scripts",
+    "description": "The Syriac abjad script used for Classical Syriac and modern Neo-Aramaic dialects, written right-to-left."
+  },
+  {
+    "name": "Thaana",
+    "slug": "thaana",
+    "start": "U+0780",
+    "end": "U+07BF",
+    "count": 64,
+    "category": "scripts",
+    "description": "The Thaana script used for writing the Dhivehi (Maldivian) language, written right-to-left."
+  },
+  {
+    "name": "Devanagari",
+    "slug": "devanagari",
+    "start": "U+0900",
+    "end": "U+097F",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Devanagari script used for Hindi, Sanskrit, Marathi, Nepali, and many other South Asian languages."
+  },
+  {
+    "name": "Bengali",
+    "slug": "bengali",
+    "start": "U+0980",
+    "end": "U+09FF",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Bengali script (Bangla) used for writing Bengali, Assamese, and some other languages of eastern South Asia."
+  },
+  {
+    "name": "Gurmukhi",
+    "slug": "gurmukhi",
+    "start": "U+0A00",
+    "end": "U+0A7F",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Gurmukhi script used to write Punjabi, the official script of Punjab state in India."
+  },
+  {
+    "name": "Gujarati",
+    "slug": "gujarati",
+    "start": "U+0A80",
+    "end": "U+0AFF",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Gujarati script used for writing the Gujarati language spoken primarily in Gujarat state, India."
+  },
+  {
+    "name": "Tamil",
+    "slug": "tamil",
+    "start": "U+0B80",
+    "end": "U+0BFF",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Tamil script, one of the oldest writing systems still in use, for the Tamil language of South India and Sri Lanka."
+  },
+  {
+    "name": "Telugu",
+    "slug": "telugu",
+    "start": "U+0C00",
+    "end": "U+0C7F",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Telugu script for writing the Telugu language, primarily spoken in Andhra Pradesh and Telangana, India."
+  },
+  {
+    "name": "Kannada",
+    "slug": "kannada",
+    "start": "U+0C80",
+    "end": "U+0CFF",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Kannada script for writing the Kannada language, primarily spoken in Karnataka state, India."
+  },
+  {
+    "name": "Malayalam",
+    "slug": "malayalam",
+    "start": "U+0D00",
+    "end": "U+0D7F",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Malayalam script for writing the Malayalam language spoken in Kerala state, India."
+  },
+  {
+    "name": "Thai",
+    "slug": "thai",
+    "start": "U+0E00",
+    "end": "U+0E7F",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Thai script (Abugida) for writing the Thai language, including letters, vowel signs, tone marks, and digits."
+  },
+  {
+    "name": "Hangul Jamo",
+    "slug": "hangul-jamo",
+    "start": "U+1100",
+    "end": "U+11FF",
+    "count": 256,
+    "category": "cjk",
+    "description": "Individual Hangul consonants (jamo) and vowels used as building blocks for Korean syllable composition."
+  },
+  {
+    "name": "Ethiopic",
+    "slug": "ethiopic",
+    "start": "U+1200",
+    "end": "U+137F",
+    "count": 384,
+    "category": "scripts",
+    "description": "The Ethiopic (Ge'ez) script used for Amharic, Tigrinya, Oromo, and other languages of Ethiopia and Eritrea."
+  },
+  {
+    "name": "Cherokee",
+    "slug": "cherokee",
+    "start": "U+13A0",
+    "end": "U+13FF",
+    "count": 96,
+    "category": "scripts",
+    "description": "The syllabary invented by Sequoyah for writing the Cherokee language, one of few indigenous North American scripts."
+  },
+  {
+    "name": "Khmer",
+    "slug": "khmer",
+    "start": "U+1780",
+    "end": "U+17FF",
+    "count": 128,
+    "category": "scripts",
+    "description": "The Khmer (Cambodian) script, an abugida derived from the ancient Brahmi script, used for the Khmer language."
+  },
+  {
+    "name": "Mongolian",
+    "slug": "mongolian",
+    "start": "U+1800",
+    "end": "U+18AF",
+    "count": 176,
+    "category": "scripts",
+    "description": "The traditional Mongolian script written top-to-bottom, left-to-right, used in Inner Mongolia and historical texts."
+  },
+  {
+    "name": "Hiragana",
+    "slug": "hiragana",
+    "start": "U+3040",
+    "end": "U+309F",
+    "count": 96,
+    "category": "cjk",
+    "description": "The Japanese syllabary Hiragana, used for native Japanese words, grammatical elements, and as furigana readings."
+  },
+  {
+    "name": "Katakana",
+    "slug": "katakana",
+    "start": "U+30A0",
+    "end": "U+30FF",
+    "count": 96,
+    "category": "cjk",
+    "description": "The Japanese syllabary Katakana, used primarily for foreign loanwords, technical terms, and onomatopoeia."
+  },
+  {
+    "name": "Bopomofo",
+    "slug": "bopomofo",
+    "start": "U+3100",
+    "end": "U+312F",
+    "count": 48,
+    "category": "cjk",
+    "description": "The Zhuyin fuhao (Bopomofo) phonetic script used in Taiwan for annotating Mandarin Chinese pronunciation."
+  },
+  {
+    "name": "Hangul Compatibility Jamo",
+    "slug": "hangul-compatibility-jamo",
+    "start": "U+3130",
+    "end": "U+318F",
+    "count": 96,
+    "category": "cjk",
+    "description": "Hangul jamo characters in their standalone compatibility form, maintained for backward compatibility with older encodings."
+  },
+  {
+    "name": "CJK Unified Ideographs",
+    "slug": "cjk-unified-ideographs",
+    "start": "U+4E00",
+    "end": "U+9FFF",
+    "count": 20992,
+    "category": "cjk",
+    "description": "The core block of unified Chinese, Japanese, and Korean (CJK) ideographic characters for modern use."
+  },
+  {
+    "name": "CJK Compatibility",
+    "slug": "cjk-compatibility",
+    "start": "U+F900",
+    "end": "U+FAFF",
+    "count": 512,
+    "category": "cjk",
+    "description": "CJK characters maintained for compatibility with legacy character sets; most are canonical equivalents of unified ideographs."
+  },
+  {
+    "name": "Hangul Syllables",
+    "slug": "hangul-syllables",
+    "start": "U+AC00",
+    "end": "U+D7AF",
+    "count": 11184,
+    "category": "cjk",
+    "description": "All precomposed Hangul syllable blocks for the Korean writing system, algorithmically composable from Jamo."
+  },
+  {
+    "name": "High Surrogates",
+    "slug": "high-surrogates",
+    "start": "U+D800",
+    "end": "U+DB7F",
+    "count": 896,
+    "category": "technical",
+    "description": "High surrogate code units used in UTF-16 encoding to represent supplementary characters above U+FFFF."
+  },
+  {
+    "name": "Low Surrogates",
+    "slug": "low-surrogates",
+    "start": "U+DC00",
+    "end": "U+DFFF",
+    "count": 1024,
+    "category": "technical",
+    "description": "Low surrogate code units used in UTF-16 encoding as the second half of a surrogate pair for supplementary characters."
+  },
+  {
+    "name": "Private Use Area",
+    "slug": "private-use-area",
+    "start": "U+E000",
+    "end": "U+F8FF",
+    "count": 6400,
+    "category": "technical",
+    "description": "Code points reserved for private agreements; commonly used for custom icons, emoji variants, and corporate symbols."
+  },
+  {
+    "name": "Letterlike Symbols",
+    "slug": "letterlike-symbols",
+    "start": "U+2100",
+    "end": "U+214F",
+    "count": 80,
+    "category": "symbols",
+    "description": "Symbols derived from letters, including trademark, copyright, registered sign, currency-like symbols, and mathematical scripts."
+  },
+  {
+    "name": "Number Forms",
+    "slug": "number-forms",
+    "start": "U+2150",
+    "end": "U+218F",
+    "count": 64,
+    "category": "symbols",
+    "description": "Vulgar fraction characters, Roman numerals, and other specialized numeric notation forms."
+  },
+  {
+    "name": "Arrows",
+    "slug": "arrows",
+    "start": "U+2190",
+    "end": "U+21FF",
+    "count": 112,
+    "category": "symbols",
+    "description": "Directional arrow symbols pointing in all directions, used in mathematics, logic, diagrams, and UI design."
+  },
+  {
+    "name": "Mathematical Operators",
+    "slug": "mathematical-operators",
+    "start": "U+2200",
+    "end": "U+22FF",
+    "count": 256,
+    "category": "technical",
+    "description": "Mathematical and logical operator symbols including set notation, quantifiers, relations, and arithmetic operators."
+  },
+  {
+    "name": "Miscellaneous Technical",
+    "slug": "miscellaneous-technical",
+    "start": "U+2300",
+    "end": "U+23FF",
+    "count": 256,
+    "category": "technical",
+    "description": "Technical symbols used in computing, telecommunications, and engineering including keyboard symbols and projective symbols."
+  },
+  {
+    "name": "Control Pictures",
+    "slug": "control-pictures",
+    "start": "U+2400",
+    "end": "U+243F",
+    "count": 64,
+    "category": "control",
+    "description": "Visible representations of ASCII control characters (NUL, SOH, STX, etc.) for documentation and reference purposes."
+  },
+  {
+    "name": "Box Drawing",
+    "slug": "box-drawing",
+    "start": "U+2500",
+    "end": "U+257F",
+    "count": 128,
+    "category": "technical",
+    "description": "Line-drawing characters for constructing text-mode boxes, tables, and UI borders in terminal applications."
+  },
+  {
+    "name": "Block Elements",
+    "slug": "block-elements",
+    "start": "U+2580",
+    "end": "U+259F",
+    "count": 32,
+    "category": "technical",
+    "description": "Block element characters for pixel-art style graphics in terminals, including half-blocks and quarter-blocks."
+  },
+  {
+    "name": "Geometric Shapes",
+    "slug": "geometric-shapes",
+    "start": "U+25A0",
+    "end": "U+25FF",
+    "count": 96,
+    "category": "symbols",
+    "description": "Geometric shape symbols including squares, triangles, circles, diamonds, and other polygons in filled and outline forms."
+  },
+  {
+    "name": "Miscellaneous Symbols",
+    "slug": "miscellaneous-symbols",
+    "start": "U+2600",
+    "end": "U+26FF",
+    "count": 256,
+    "category": "symbols",
+    "description": "General-purpose symbols including weather, celestial bodies, card suits, chess pieces, recycling, and many others."
+  },
+  {
+    "name": "Dingbats",
+    "slug": "dingbats",
+    "start": "U+2700",
+    "end": "U+27BF",
+    "count": 192,
+    "category": "symbols",
+    "description": "Ornamental characters and typographic dingbats including checkmarks, crosses, stars, arrows, and decorative marks."
+  },
+  {
+    "name": "Supplemental Arrows-A",
+    "slug": "supplemental-arrows-a",
+    "start": "U+27F0",
+    "end": "U+27FF",
+    "count": 16,
+    "category": "symbols",
+    "description": "Additional arrow symbols supplementing the main Arrows block, including long arrows and arrow combining marks."
+  },
+  {
+    "name": "Supplemental Mathematical Operators",
+    "slug": "supplemental-mathematical-operators",
+    "start": "U+2A00",
+    "end": "U+2AFF",
+    "count": 256,
+    "category": "technical",
+    "description": "Additional mathematical operators not included in the main Mathematical Operators block for advanced mathematics."
+  },
+  {
+    "name": "Miscellaneous Symbols and Arrows",
+    "slug": "miscellaneous-symbols-and-arrows",
+    "start": "U+2B00",
+    "end": "U+2BFF",
+    "count": 256,
+    "category": "symbols",
+    "description": "Additional symbols and arrows for use in various technical, mathematical, and general-purpose contexts."
+  },
+  {
+    "name": "CJK Radicals Supplement",
+    "slug": "cjk-radicals-supplement",
+    "start": "U+2E80",
+    "end": "U+2EFF",
+    "count": 128,
+    "category": "cjk",
+    "description": "Supplementary forms of the Kangxi radicals used in Chinese-Japanese-Korean dictionaries and ideograph indexing."
+  },
+  {
+    "name": "Kangxi Radicals",
+    "slug": "kangxi-radicals",
+    "start": "U+2F00",
+    "end": "U+2FDF",
+    "count": 224,
+    "category": "cjk",
+    "description": "The 214 traditional Kangxi radicals used for indexing Chinese characters in dictionaries."
+  },
+  {
+    "name": "Latin Extended Additional",
+    "slug": "latin-extended-additional",
+    "start": "U+1E00",
+    "end": "U+1EFF",
+    "count": 256,
+    "category": "scripts",
+    "description": "Additional Latin characters mainly for Vietnamese, Welsh, and other languages needing multiple diacritics on letters."
+  },
+  {
+    "name": "General Punctuation",
+    "slug": "general-punctuation",
+    "start": "U+2000",
+    "end": "U+206F",
+    "count": 112,
+    "category": "punctuation",
+    "description": "General punctuation marks including various dashes, quotation marks, spaces of different widths, and typographic symbols."
+  },
+  {
+    "name": "Currency Symbols",
+    "slug": "currency-symbols",
+    "start": "U+20A0",
+    "end": "U+20CF",
+    "count": 48,
+    "category": "symbols",
+    "description": "Currency symbols for monetary systems worldwide, including Euro, Pound, Yen, Rupee, Ruble, Bitcoin, and others."
+  },
+  {
+    "name": "Enclosed Alphanumerics",
+    "slug": "enclosed-alphanumerics",
+    "start": "U+2460",
+    "end": "U+24FF",
+    "count": 160,
+    "category": "symbols",
+    "description": "Circled and enclosed numbers and letters, used in lists, annotations, and as decorative or functional markers."
+  },
+  {
+    "name": "Mathematical Alphanumeric Symbols",
+    "slug": "mathematical-alphanumeric-symbols",
+    "start": "U+1D400",
+    "end": "U+1D7FF",
+    "count": 1024,
+    "category": "technical",
+    "description": "Mathematical alphabets in bold, italic, fraktur, script, double-struck, and other styles for typesetting mathematics.",
+    "_note": "Supplementary Multilingual Plane block"
+  },
+  {
+    "name": "Emoticons",
+    "slug": "emoticons",
+    "start": "U+1F600",
+    "end": "U+1F64F",
+    "count": 80,
+    "category": "emoji",
+    "description": "Emoji faces and people symbols including smileys, emotions, gestures, and simple human figure expressions."
+  },
+  {
+    "name": "Miscellaneous Symbols and Pictographs",
+    "slug": "miscellaneous-symbols-pictographs",
+    "start": "U+1F300",
+    "end": "U+1F5FF",
+    "count": 768,
+    "category": "emoji",
+    "description": "A wide range of emoji including nature, food, travel, activities, objects, and other pictographic symbols."
+  },
+  {
+    "name": "Transport and Map Symbols",
+    "slug": "transport-map-symbols",
+    "start": "U+1F680",
+    "end": "U+1F6FF",
+    "count": 128,
+    "category": "emoji",
+    "description": "Emoji symbols for vehicles, transportation modes, traffic signs, and map-related icons."
+  },
+  {
+    "name": "Supplemental Symbols and Pictographs",
+    "slug": "supplemental-symbols-pictographs",
+    "start": "U+1F900",
+    "end": "U+1F9FF",
+    "count": 256,
+    "category": "emoji",
+    "description": "Additional emoji including supplemental faces, hand gestures, clothing, animals, and food introduced in newer Unicode versions."
+  },
+  {
+    "name": "Symbols and Pictographs Extended-A",
+    "slug": "symbols-pictographs-extended-a",
+    "start": "U+1FA00",
+    "end": "U+1FA6F",
+    "count": 112,
+    "category": "emoji",
+    "description": "Extended emoji pictographs for chess pieces, board game symbols, and additional miscellaneous symbols."
+  }
+]

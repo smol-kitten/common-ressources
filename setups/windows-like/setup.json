@@ -24,7 +24,10 @@
     { "source": "alacritty.toml", "target": "~/.config/alacritty/alacritty.toml",     "description": "Alacritty terminal emulator config" },
     { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",             "description": "Rofi Start menu launcher" },
     { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",                "description": "Dunst notification daemon (bottom-right)" },
-    { "source": "zshrc",          "target": "~/.zshrc",                               "description": "Zsh shell config" }
+    { "source": "zshrc",          "target": "~/.zshrc",                               "description": "Zsh shell config" },
+    { "source": "foot.ini",       "target": "~/.config/foot/foot.ini",                "description": "Foot terminal — Material Dark colors" },
+    { "source": "tmux.conf",      "target": "~/.config/tmux/tmux.conf",               "description": "Tmux — default Ctrl+b prefix, Material Dark status bar" },
+    { "source": "git-config",     "target": "~/.config/git/rice.conf",                "description": "Git aliases and delta diff theme (include from ~/.gitconfig)" }
   ],
   "recommended_packages": {
     "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh"],

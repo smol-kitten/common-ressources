@@ -1,0 +1,692 @@
+[
+  {
+    "name": "Plus",
+    "slug": "plus",
+    "symbol": "+",
+    "codepoint": "U+002B",
+    "latex": "+",
+    "category": "operator",
+    "description": "Addition operator; also denotes positive sign or concatenation in some contexts.",
+    "read_as": "plus"
+  },
+  {
+    "name": "Minus",
+    "slug": "minus",
+    "symbol": "−",
+    "codepoint": "U+2212",
+    "latex": "-",
+    "category": "operator",
+    "description": "Subtraction operator; also denotes negative sign or set difference in some notations.",
+    "read_as": "minus"
+  },
+  {
+    "name": "Multiplication",
+    "slug": "multiplication",
+    "symbol": "×",
+    "codepoint": "U+00D7",
+    "latex": "\\times",
+    "category": "operator",
+    "description": "Multiplication operator for scalars; also used for cross product of vectors.",
+    "read_as": "times"
+  },
+  {
+    "name": "Division",
+    "slug": "division",
+    "symbol": "÷",
+    "codepoint": "U+00F7",
+    "latex": "\\div",
+    "category": "operator",
+    "description": "Division operator. In most mathematical writing, the fraction bar or slash is preferred.",
+    "read_as": "divided by"
+  },
+  {
+    "name": "Plus-Minus",
+    "slug": "plus-minus",
+    "symbol": "±",
+    "codepoint": "U+00B1",
+    "latex": "\\pm",
+    "category": "operator",
+    "description": "Indicates that a quantity may be either added or subtracted. Used in error margins and the quadratic formula.",
+    "read_as": "plus or minus"
+  },
+  {
+    "name": "Equals",
+    "slug": "equals",
+    "symbol": "=",
+    "codepoint": "U+003D",
+    "latex": "=",
+    "category": "relation",
+    "description": "Denotes equality between two expressions.",
+    "read_as": "equals"
+  },
+  {
+    "name": "Not Equal To",
+    "slug": "not-equal",
+    "symbol": "≠",
+    "codepoint": "U+2260",
+    "latex": "\\neq",
+    "category": "relation",
+    "description": "Denotes that two expressions are not equal.",
+    "read_as": "is not equal to"
+  },
+  {
+    "name": "Less Than",
+    "slug": "less-than",
+    "symbol": "<",
+    "codepoint": "U+003C",
+    "latex": "<",
+    "category": "relation",
+    "description": "Strict inequality: the left side is less than the right side.",
+    "read_as": "less than"
+  },
+  {
+    "name": "Greater Than",
+    "slug": "greater-than",
+    "symbol": ">",
+    "codepoint": "U+003E",
+    "latex": ">",
+    "category": "relation",
+    "description": "Strict inequality: the left side is greater than the right side.",
+    "read_as": "greater than"
+  },
+  {
+    "name": "Less Than or Equal To",
+    "slug": "less-than-or-equal",
+    "symbol": "≤",
+    "codepoint": "U+2264",
+    "latex": "\\leq",
+    "category": "relation",
+    "description": "Non-strict inequality: the left side is less than or equal to the right side.",
+    "read_as": "less than or equal to"
+  },
+  {
+    "name": "Greater Than or Equal To",
+    "slug": "greater-than-or-equal",
+    "symbol": "≥",
+    "codepoint": "U+2265",
+    "latex": "\\geq",
+    "category": "relation",
+    "description": "Non-strict inequality: the left side is greater than or equal to the right side.",
+    "read_as": "greater than or equal to"
+  },
+  {
+    "name": "Approximately Equal To",
+    "slug": "approximately-equal",
+    "symbol": "≈",
+    "codepoint": "U+2248",
+    "latex": "\\approx",
+    "category": "relation",
+    "description": "Indicates that two quantities are approximately equal, used when the exact value is not required or known.",
+    "read_as": "approximately equals"
+  },
+  {
+    "name": "Proportional To",
+    "slug": "proportional-to",
+    "symbol": "∝",
+    "codepoint": "U+221D",
+    "latex": "\\propto",
+    "category": "relation",
+    "description": "Indicates that one quantity is proportional to another, i.e., y ∝ x means y = kx for some constant k.",
+    "read_as": "is proportional to"
+  },
+  {
+    "name": "Infinity",
+    "slug": "infinity",
+    "symbol": "∞",
+    "codepoint": "U+221E",
+    "latex": "\\infty",
+    "category": "number",
+    "description": "Represents an unbounded quantity; used in limits, series, and set theory to denote values without an upper (or lower) bound.",
+    "read_as": "infinity"
+  },
+  {
+    "name": "Square Root",
+    "slug": "square-root",
+    "symbol": "√",
+    "codepoint": "U+221A",
+    "latex": "\\sqrt{}",
+    "category": "operator",
+    "description": "The principal square root operator. √x denotes the non-negative number whose square is x.",
+    "read_as": "square root of"
+  },
+  {
+    "name": "Summation",
+    "slug": "summation",
+    "symbol": "Σ",
+    "codepoint": "U+03A3",
+    "latex": "\\sum",
+    "category": "operator",
+    "description": "Denotes the sum of a sequence of terms. Used with index limits: Σᵢ₌₁ⁿ xᵢ means x₁ + x₂ + ... + xₙ.",
+    "read_as": "sum of"
+  },
+  {
+    "name": "Product",
+    "slug": "product",
+    "symbol": "∏",
+    "codepoint": "U+220F",
+    "latex": "\\prod",
+    "category": "operator",
+    "description": "Denotes the product of a sequence of terms. ∏ᵢ₌₁ⁿ xᵢ means x₁ × x₂ × ... × xₙ.",
+    "read_as": "product of"
+  },
+  {
+    "name": "Integral",
+    "slug": "integral",
+    "symbol": "∫",
+    "codepoint": "U+222B",
+    "latex": "\\int",
+    "category": "calculus",
+    "description": "The integral sign. ∫f(x)dx denotes the antiderivative or area under the curve f(x). Definite integrals have bounds.",
+    "read_as": "integral of"
+  },
+  {
+    "name": "Partial Derivative",
+    "slug": "partial-derivative",
+    "symbol": "∂",
+    "codepoint": "U+2202",
+    "latex": "\\partial",
+    "category": "calculus",
+    "description": "Denotes a partial derivative, used when differentiating a function of multiple variables with respect to one variable while holding others constant.",
+    "read_as": "partial"
+  },
+  {
+    "name": "Nabla (Del)",
+    "slug": "nabla",
+    "symbol": "∇",
+    "codepoint": "U+2207",
+    "latex": "\\nabla",
+    "category": "calculus",
+    "description": "The vector differential operator (del/nabla). Used for gradient (∇f), divergence (∇·F), and curl (∇×F) operations.",
+    "read_as": "del"
+  },
+  {
+    "name": "Delta (Uppercase)",
+    "slug": "delta-upper",
+    "symbol": "Δ",
+    "codepoint": "U+0394",
+    "latex": "\\Delta",
+    "category": "greek",
+    "description": "Uppercase Greek delta. Commonly denotes a change or difference in a quantity (Δx = x₂ - x₁). Also used for the discriminant in the quadratic formula.",
+    "read_as": "delta"
+  },
+  {
+    "name": "For All (Universal Quantifier)",
+    "slug": "for-all",
+    "symbol": "∀",
+    "codepoint": "U+2200",
+    "latex": "\\forall",
+    "category": "logic",
+    "description": "Universal quantifier in predicate logic. '∀x P(x)' means 'for all x, P(x) is true'.",
+    "read_as": "for all"
+  },
+  {
+    "name": "There Exists (Existential Quantifier)",
+    "slug": "there-exists",
+    "symbol": "∃",
+    "codepoint": "U+2203",
+    "latex": "\\exists",
+    "category": "logic",
+    "description": "Existential quantifier in predicate logic. '∃x P(x)' means 'there exists at least one x such that P(x) is true'.",
+    "read_as": "there exists"
+  },
+  {
+    "name": "Logical Not (Negation)",
+    "slug": "logical-not",
+    "symbol": "¬",
+    "codepoint": "U+00AC",
+    "latex": "\\neg",
+    "category": "logic",
+    "description": "Logical negation. ¬P is true when P is false, and false when P is true.",
+    "read_as": "not"
+  },
+  {
+    "name": "Logical And (Conjunction)",
+    "slug": "logical-and",
+    "symbol": "∧",
+    "codepoint": "U+2227",
+    "latex": "\\wedge",
+    "category": "logic",
+    "description": "Logical conjunction. P ∧ Q is true only when both P and Q are true.",
+    "read_as": "and"
+  },
+  {
+    "name": "Logical Or (Disjunction)",
+    "slug": "logical-or",
+    "symbol": "∨",
+    "codepoint": "U+2228",
+    "latex": "\\vee",
+    "category": "logic",
+    "description": "Logical disjunction. P ∨ Q is true when at least one of P or Q is true.",
+    "read_as": "or"
+  },
+  {
+    "name": "Exclusive Or (XOR)",
+    "slug": "xor",
+    "symbol": "⊕",
+    "codepoint": "U+2295",
+    "latex": "\\oplus",
+    "category": "logic",
+    "description": "Exclusive or (XOR). P ⊕ Q is true when exactly one of P or Q is true (not both). Also used for direct sum in algebra.",
+    "read_as": "exclusive or"
+  },
+  {
+    "name": "Element Of",
+    "slug": "element-of",
+    "symbol": "∈",
+    "codepoint": "U+2208",
+    "latex": "\\in",
+    "category": "set",
+    "description": "Denotes set membership. 'x ∈ S' means x is an element (member) of the set S.",
+    "read_as": "is an element of"
+  },
+  {
+    "name": "Not an Element Of",
+    "slug": "not-element-of",
+    "symbol": "∉",
+    "codepoint": "U+2209",
+    "latex": "\\notin",
+    "category": "set",
+    "description": "Denotes that an element does not belong to a set. 'x ∉ S' means x is not a member of set S.",
+    "read_as": "is not an element of"
+  },
+  {
+    "name": "Proper Subset",
+    "slug": "proper-subset",
+    "symbol": "⊂",
+    "codepoint": "U+2282",
+    "latex": "\\subset",
+    "category": "set",
+    "description": "Strict subset. 'A ⊂ B' means every element of A is in B, and A ≠ B.",
+    "read_as": "is a proper subset of"
+  },
+  {
+    "name": "Subset or Equal",
+    "slug": "subset-or-equal",
+    "symbol": "⊆",
+    "codepoint": "U+2286",
+    "latex": "\\subseteq",
+    "category": "set",
+    "description": "Non-strict subset. 'A ⊆ B' means every element of A is also in B (A may equal B).",
+    "read_as": "is a subset of or equal to"
+  },
+  {
+    "name": "Proper Superset",
+    "slug": "proper-superset",
+    "symbol": "⊃",
+    "codepoint": "U+2283",
+    "latex": "\\supset",
+    "category": "set",
+    "description": "Strict superset. 'A ⊃ B' means every element of B is in A, and A ≠ B.",
+    "read_as": "is a proper superset of"
+  },
+  {
+    "name": "Union",
+    "slug": "union",
+    "symbol": "∪",
+    "codepoint": "U+222A",
+    "latex": "\\cup",
+    "category": "set",
+    "description": "Set union. 'A ∪ B' is the set of all elements that are in A, in B, or in both.",
+    "read_as": "union"
+  },
+  {
+    "name": "Intersection",
+    "slug": "intersection",
+    "symbol": "∩",
+    "codepoint": "U+2229",
+    "latex": "\\cap",
+    "category": "set",
+    "description": "Set intersection. 'A ∩ B' is the set of elements that are in both A and B.",
+    "read_as": "intersection"
+  },
+  {
+    "name": "Empty Set",
+    "slug": "empty-set",
+    "symbol": "∅",
+    "codepoint": "U+2205",
+    "latex": "\\emptyset",
+    "category": "set",
+    "description": "The empty set (null set), containing no elements. For any set A: A ∩ ∅ = ∅ and A ∪ ∅ = A.",
+    "read_as": "the empty set"
+  },
+  {
+    "name": "Alpha",
+    "slug": "alpha",
+    "symbol": "α",
+    "codepoint": "U+03B1",
+    "latex": "\\alpha",
+    "category": "greek",
+    "description": "Lowercase Greek alpha. Commonly used for angles, significance levels in statistics, learning rates in machine learning, and the alpha coefficient.",
+    "read_as": "alpha"
+  },
+  {
+    "name": "Beta",
+    "slug": "beta",
+    "symbol": "β",
+    "codepoint": "U+03B2",
+    "latex": "\\beta",
+    "category": "greek",
+    "description": "Lowercase Greek beta. Used for regression coefficients, type II error probability in statistics, and beta functions.",
+    "read_as": "beta"
+  },
+  {
+    "name": "Gamma",
+    "slug": "gamma",
+    "symbol": "γ",
+    "codepoint": "U+03B3",
+    "latex": "\\gamma",
+    "category": "greek",
+    "description": "Lowercase Greek gamma. Used in physics for the Lorentz factor, in mathematics for the Euler-Mascheroni constant, and in statistics for the gamma distribution.",
+    "read_as": "gamma"
+  },
+  {
+    "name": "Delta (Lowercase)",
+    "slug": "delta-lower",
+    "symbol": "δ",
+    "codepoint": "U+03B4",
+    "latex": "\\delta",
+    "category": "greek",
+    "description": "Lowercase Greek delta. Used in calculus for the epsilon-delta definition of limits, small increments, and Dirac delta function.",
+    "read_as": "delta"
+  },
+  {
+    "name": "Epsilon",
+    "slug": "epsilon",
+    "symbol": "ε",
+    "codepoint": "U+03B5",
+    "latex": "\\varepsilon",
+    "category": "greek",
+    "description": "Lowercase Greek epsilon. Used in calculus (ε-δ definitions), error terms in approximations, and machine learning for small learning rates.",
+    "read_as": "epsilon"
+  },
+  {
+    "name": "Theta",
+    "slug": "theta",
+    "symbol": "θ",
+    "codepoint": "U+03B8",
+    "latex": "\\theta",
+    "category": "greek",
+    "description": "Lowercase Greek theta. Most commonly used to denote an angle in geometry and trigonometry; also used for parameters in statistics and machine learning.",
+    "read_as": "theta"
+  },
+  {
+    "name": "Lambda",
+    "slug": "lambda",
+    "symbol": "λ",
+    "codepoint": "U+03BB",
+    "latex": "\\lambda",
+    "category": "greek",
+    "description": "Lowercase Greek lambda. Used in eigenvalue problems (Ax = λx), Poisson distribution rate, regularization in machine learning, and wavelength in physics.",
+    "read_as": "lambda"
+  },
+  {
+    "name": "Mu",
+    "slug": "mu",
+    "symbol": "μ",
+    "codepoint": "U+03BC",
+    "latex": "\\mu",
+    "category": "greek",
+    "description": "Lowercase Greek mu. Universally used for the mean (expected value) of a distribution, and as the SI prefix for micro (10⁻⁶).",
+    "read_as": "mu"
+  },
+  {
+    "name": "Pi",
+    "slug": "pi",
+    "symbol": "π",
+    "codepoint": "U+03C0",
+    "latex": "\\pi",
+    "category": "greek",
+    "description": "Lowercase Greek pi. The mathematical constant equal to the ratio of a circle's circumference to its diameter, approximately 3.14159.",
+    "read_as": "pi"
+  },
+  {
+    "name": "Sigma (Lowercase)",
+    "slug": "sigma-lower",
+    "symbol": "σ",
+    "codepoint": "U+03C3",
+    "latex": "\\sigma",
+    "category": "greek",
+    "description": "Lowercase Greek sigma. Used for standard deviation, normal distribution parameter, and stress in physics.",
+    "read_as": "sigma"
+  },
+  {
+    "name": "Tau",
+    "slug": "tau",
+    "symbol": "τ",
+    "codepoint": "U+03C4",
+    "latex": "\\tau",
+    "category": "greek",
+    "description": "Lowercase Greek tau. Equal to 2π ≈ 6.28318. Used in time constants, Kendall's rank correlation coefficient, and topology.",
+    "read_as": "tau"
+  },
+  {
+    "name": "Phi (Lowercase)",
+    "slug": "phi-lower",
+    "symbol": "φ",
+    "codepoint": "U+03C6",
+    "latex": "\\varphi",
+    "category": "greek",
+    "description": "Lowercase Greek phi. Commonly used for the golden ratio (φ ≈ 1.618), angles in polar coordinates, and magnetic flux in physics.",
+    "read_as": "phi"
+  },
+  {
+    "name": "Psi (Lowercase)",
+    "slug": "psi-lower",
+    "symbol": "ψ",
+    "codepoint": "U+03C8",
+    "latex": "\\psi",
+    "category": "greek",
+    "description": "Lowercase Greek psi. Used for wave functions in quantum mechanics, digamma function in mathematics, and angles in geometry.",
+    "read_as": "psi"
+  },
+  {
+    "name": "Omega (Lowercase)",
+    "slug": "omega-lower",
+    "symbol": "ω",
+    "codepoint": "U+03C9",
+    "latex": "\\omega",
+    "category": "greek",
+    "description": "Lowercase Greek omega. Used for angular frequency in physics (ω = 2πf), roots of unity in algebra, and the smallest infinite ordinal in set theory.",
+    "read_as": "omega"
+  },
+  {
+    "name": "Gamma (Uppercase)",
+    "slug": "gamma-upper",
+    "symbol": "Γ",
+    "codepoint": "U+0393",
+    "latex": "\\Gamma",
+    "category": "greek",
+    "description": "Uppercase Greek gamma. Represents the Gamma function Γ(n) = (n-1)!, a generalization of factorial to complex numbers.",
+    "read_as": "Gamma"
+  },
+  {
+    "name": "Theta (Uppercase)",
+    "slug": "theta-upper",
+    "symbol": "Θ",
+    "codepoint": "U+0398",
+    "latex": "\\Theta",
+    "category": "greek",
+    "description": "Uppercase Greek theta. Used in Big-Theta notation for tight asymptotic bounds in algorithm complexity analysis.",
+    "read_as": "Theta"
+  },
+  {
+    "name": "Lambda (Uppercase)",
+    "slug": "lambda-upper",
+    "symbol": "Λ",
+    "codepoint": "U+039B",
+    "latex": "\\Lambda",
+    "category": "greek",
+    "description": "Uppercase Greek lambda. Used in physics for the cosmological constant and in linear algebra for a diagonal matrix of eigenvalues.",
+    "read_as": "Lambda"
+  },
+  {
+    "name": "Pi (Uppercase)",
+    "slug": "pi-upper",
+    "symbol": "Π",
+    "codepoint": "U+03A0",
+    "latex": "\\Pi",
+    "category": "greek",
+    "description": "Uppercase Greek pi. Used as the product operator Π, analogous to Σ for summation.",
+    "read_as": "Pi"
+  },
+  {
+    "name": "Phi (Uppercase)",
+    "slug": "phi-upper",
+    "symbol": "Φ",
+    "codepoint": "U+03A6",
+    "latex": "\\Phi",
+    "category": "greek",
+    "description": "Uppercase Greek phi. Represents the cumulative distribution function (CDF) of the standard normal distribution in statistics.",
+    "read_as": "Phi"
+  },
+  {
+    "name": "Psi (Uppercase)",
+    "slug": "psi-upper",
+    "symbol": "Ψ",
+    "codepoint": "U+03A8",
+    "latex": "\\Psi",
+    "category": "greek",
+    "description": "Uppercase Greek psi. Used for many-body wave functions in quantum mechanics and the reciprocal Fibonacci constant.",
+    "read_as": "Psi"
+  },
+  {
+    "name": "Omega (Uppercase)",
+    "slug": "omega-upper",
+    "symbol": "Ω",
+    "codepoint": "U+03A9",
+    "latex": "\\Omega",
+    "category": "greek",
+    "description": "Uppercase Greek omega. Used for ohms (unit of electrical resistance), sample space in probability, and Big-Omega complexity notation.",
+    "read_as": "Omega"
+  },
+  {
+    "name": "Implies",
+    "slug": "implies",
+    "symbol": "⟹",
+    "codepoint": "U+27F9",
+    "latex": "\\implies",
+    "category": "logic",
+    "description": "Logical implication (if...then). 'P ⟹ Q' means: if P is true, then Q must also be true.",
+    "read_as": "implies"
+  },
+  {
+    "name": "If and Only If",
+    "slug": "iff",
+    "symbol": "⟺",
+    "codepoint": "U+27FA",
+    "latex": "\\iff",
+    "category": "logic",
+    "description": "Biconditional (if and only if). 'P ⟺ Q' means P and Q are either both true or both false; they are logically equivalent.",
+    "read_as": "if and only if"
+  },
+  {
+    "name": "Therefore",
+    "slug": "therefore",
+    "symbol": "∴",
+    "codepoint": "U+2234",
+    "latex": "\\therefore",
+    "category": "logic",
+    "description": "Used in proofs and logical arguments to introduce a conclusion that follows from preceding statements.",
+    "read_as": "therefore"
+  },
+  {
+    "name": "Because",
+    "slug": "because",
+    "symbol": "∵",
+    "codepoint": "U+2235",
+    "latex": "\\because",
+    "category": "logic",
+    "description": "Used in mathematical arguments to introduce a reason or justification for a preceding statement.",
+    "read_as": "because"
+  },
+  {
+    "name": "Perpendicular",
+    "slug": "perpendicular",
+    "symbol": "⊥",
+    "codepoint": "U+22A5",
+    "latex": "\\perp",
+    "category": "geometry",
+    "description": "Indicates that two lines, planes, or vectors are perpendicular (at right angles to each other). Also used for logical falsehood (bottom).",
+    "read_as": "is perpendicular to"
+  },
+  {
+    "name": "Parallel",
+    "slug": "parallel",
+    "symbol": "∥",
+    "codepoint": "U+2225",
+    "latex": "\\parallel",
+    "category": "geometry",
+    "description": "Indicates that two lines or planes are parallel (never intersect and are always equidistant).",
+    "read_as": "is parallel to"
+  },
+  {
+    "name": "Angle",
+    "slug": "angle",
+    "symbol": "∠",
+    "codepoint": "U+2220",
+    "latex": "\\angle",
+    "category": "geometry",
+    "description": "Denotes an angle formed by two rays. '∠ABC' refers to the angle at vertex B formed by rays BA and BC.",
+    "read_as": "angle"
+  },
+  {
+    "name": "Degree",
+    "slug": "degree",
+    "symbol": "°",
+    "codepoint": "U+00B0",
+    "latex": "^\\circ",
+    "category": "geometry",
+    "description": "Unit of angular measure. One full rotation is 360°. Also used for temperature in Celsius and Fahrenheit.",
+    "read_as": "degrees"
+  },
+  {
+    "name": "Factorial",
+    "slug": "factorial",
+    "symbol": "!",
+    "codepoint": "U+0021",
+    "latex": "!",
+    "category": "operator",
+    "description": "Factorial operator. n! = n × (n-1) × ... × 2 × 1. By convention, 0! = 1. Used in combinatorics and series expansions.",
+    "read_as": "factorial"
+  },
+  {
+    "name": "Absolute Value",
+    "slug": "absolute-value",
+    "symbol": "|x|",
+    "codepoint": "U+007C",
+    "latex": "|x|",
+    "category": "operator",
+    "description": "The absolute value (modulus) of x: the non-negative value of x regardless of sign. |x| = x if x ≥ 0, and -x if x < 0.",
+    "read_as": "absolute value of x"
+  },
+  {
+    "name": "Floor",
+    "slug": "floor",
+    "symbol": "⌊x⌋",
+    "codepoint": "U+230A / U+230B",
+    "latex": "\\lfloor x \\rfloor",
+    "category": "operator",
+    "description": "The floor function returns the greatest integer less than or equal to x. ⌊3.7⌋ = 3, ⌊-1.2⌋ = -2.",
+    "read_as": "floor of x"
+  },
+  {
+    "name": "Ceiling",
+    "slug": "ceiling",
+    "symbol": "⌈x⌉",
+    "codepoint": "U+2308 / U+2309",
+    "latex": "\\lceil x \\rceil",
+    "category": "operator",
+    "description": "The ceiling function returns the smallest integer greater than or equal to x. ⌈3.2⌉ = 4, ⌈-1.7⌉ = -1.",
+    "read_as": "ceiling of x"
+  },
+  {
+    "name": "Percent",
+    "slug": "percent",
+    "symbol": "%",
+    "codepoint": "U+0025",
+    "latex": "\\%",
+    "category": "operator",
+    "description": "Denotes a proportion out of 100. 45% = 45/100 = 0.45. Also used as the modulo operator in programming languages.",
+    "read_as": "percent"
+  }
+]

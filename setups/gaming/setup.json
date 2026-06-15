@@ -1,0 +1,37 @@
+{
+  "id": "gaming",
+  "name": "Gaming",
+  "description": "Performance-first Gruvbox Dark desktop. Master layout, dedicated gaming workspace, no compositor effects. Includes hints for gamemode and MangoHud integration.",
+  "color_scheme": "Gruvbox Dark",
+  "colors": {
+    "bg":      "#282828",
+    "fg":      "#ebdbb2",
+    "accent":  "#fe8019",
+    "red":     "#cc241d",
+    "green":   "#98971a",
+    "yellow":  "#d79921",
+    "surface": "#3c3836",
+    "border":  "#504945"
+  },
+  "files": [
+    { "source": "hyprland.conf",  "target": "~/.config/hypr/hyprland.conf",       "description": "Hyprland window manager config — master layout, gaming rules" },
+    { "source": "waybar.json",    "target": "~/.config/waybar/config",             "description": "Waybar bottom bar layout" },
+    { "source": "waybar.css",     "target": "~/.config/waybar/style.css",          "description": "Waybar CSS — Gruvbox Dark theme" },
+    { "source": "alacritty.toml", "target": "~/.config/alacritty/alacritty.toml", "description": "Alacritty terminal — Gruvbox Dark" },
+    { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",          "description": "Rofi launcher — Gruvbox Dark" },
+    { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",             "description": "Dunst — bottom-right, short timeouts, won't block HUD" },
+    { "source": "zshrc",          "target": "~/.zshrc",                            "description": "Zsh with gaming aliases (gamemode, MangoHud, Steam)" }
+  ],
+  "recommended_packages": {
+    "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh"],
+    "optional": ["swww", "steam", "gamemode", "mangohud", "discord", "obs-studio", "gamescope", "ttf-jetbrains-mono-nerd", "grimblast"],
+    "aur": ["proton-ge-custom", "heroic-games-launcher-bin"]
+  },
+  "wallpaper_hint": "Dark wallpaper: swww img /path/to/wallpaper.jpg --transition-type fade",
+  "performance_hints": [
+    "Enable gamemode: install gamemode, add user to gamemode group (usermod -aG gamemode $USER)",
+    "MangoHud: install mangohud, launch games with: mangohud %command% in Steam launch options",
+    "Workspace 5 is dedicated for gaming — move game windows there with SUPER+SHIFT+5"
+  ],
+  "font": { "ui": "JetBrainsMono Nerd Font 12", "mono": "JetBrainsMono Nerd Font 12" }
+}

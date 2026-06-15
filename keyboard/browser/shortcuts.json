@@ -1,0 +1,392 @@
+[
+  {
+    "name": "New Tab",
+    "slug": "new-tab",
+    "category": "tabs",
+    "windows": "Ctrl+T",
+    "mac": "Cmd+T",
+    "linux": "Ctrl+T",
+    "description": "Opens a new browser tab with the default new tab page.",
+    "context": "global"
+  },
+  {
+    "name": "Close Tab",
+    "slug": "close-tab",
+    "category": "tabs",
+    "windows": "Ctrl+W",
+    "mac": "Cmd+W",
+    "linux": "Ctrl+W",
+    "description": "Closes the currently active browser tab.",
+    "context": "global"
+  },
+  {
+    "name": "Reopen Closed Tab",
+    "slug": "reopen-closed-tab",
+    "category": "tabs",
+    "windows": "Ctrl+Shift+T",
+    "mac": "Cmd+Shift+T",
+    "linux": "Ctrl+Shift+T",
+    "description": "Reopens the most recently closed tab, restoring its page and history.",
+    "context": "global"
+  },
+  {
+    "name": "Next Tab",
+    "slug": "next-tab",
+    "category": "tabs",
+    "windows": "Ctrl+Tab",
+    "mac": "Ctrl+Tab",
+    "linux": "Ctrl+Tab",
+    "description": "Switches focus to the next tab to the right.",
+    "context": "global"
+  },
+  {
+    "name": "Previous Tab",
+    "slug": "previous-tab",
+    "category": "tabs",
+    "windows": "Ctrl+Shift+Tab",
+    "mac": "Ctrl+Shift+Tab",
+    "linux": "Ctrl+Shift+Tab",
+    "description": "Switches focus to the next tab to the left.",
+    "context": "global"
+  },
+  {
+    "name": "Pin Tab",
+    "slug": "pin-tab",
+    "category": "tabs",
+    "windows": "Right-click tab → Pin",
+    "mac": "Right-click tab → Pin",
+    "linux": "Right-click tab → Pin",
+    "description": "Pins the current tab to keep it small and prevent accidental closure. No universal keyboard shortcut — accessed via context menu.",
+    "context": "global"
+  },
+  {
+    "name": "Mute Tab",
+    "slug": "mute-tab",
+    "category": "tabs",
+    "windows": "Right-click tab → Mute",
+    "mac": "Right-click tab → Mute",
+    "linux": "Right-click tab → Mute",
+    "description": "Mutes or unmutes audio playing in the current tab. Click the speaker icon on the tab or use the context menu.",
+    "context": "global"
+  },
+  {
+    "name": "Duplicate Tab",
+    "slug": "duplicate-tab",
+    "category": "tabs",
+    "windows": "Right-click tab → Duplicate",
+    "mac": "Right-click tab → Duplicate",
+    "linux": "Right-click tab → Duplicate",
+    "description": "Creates an exact copy of the current tab including its browsing history.",
+    "context": "global"
+  },
+  {
+    "name": "Move Tab to New Window",
+    "slug": "move-tab-new-window",
+    "category": "tabs",
+    "windows": "Right-click tab → Move to New Window",
+    "mac": "Right-click tab → Move to New Window",
+    "linux": "Right-click tab → Move to New Window",
+    "description": "Detaches the current tab into its own separate browser window.",
+    "context": "global"
+  },
+  {
+    "name": "New Window",
+    "slug": "new-window",
+    "category": "navigation",
+    "windows": "Ctrl+N",
+    "mac": "Cmd+N",
+    "linux": "Ctrl+N",
+    "description": "Opens a new regular browser window.",
+    "context": "global"
+  },
+  {
+    "name": "New Private Window",
+    "slug": "new-private-window",
+    "category": "navigation",
+    "windows": "Ctrl+Shift+N",
+    "mac": "Cmd+Shift+N",
+    "linux": "Ctrl+Shift+N",
+    "description": "Opens a new private/incognito browsing window where history and cookies are not saved after the session ends.",
+    "context": "global"
+  },
+  {
+    "name": "Open File",
+    "slug": "open-file",
+    "category": "navigation",
+    "windows": "Ctrl+O",
+    "mac": "Cmd+O",
+    "linux": "Ctrl+O",
+    "description": "Opens the OS file picker to open a local file directly in the browser.",
+    "context": "global"
+  },
+  {
+    "name": "Save Page",
+    "slug": "save-page",
+    "category": "page",
+    "windows": "Ctrl+S",
+    "mac": "Cmd+S",
+    "linux": "Ctrl+S",
+    "description": "Saves the current web page to disk as an HTML file, optionally with associated resources.",
+    "context": "global"
+  },
+  {
+    "name": "Print",
+    "slug": "print",
+    "category": "page",
+    "windows": "Ctrl+P",
+    "mac": "Cmd+P",
+    "linux": "Ctrl+P",
+    "description": "Opens the print dialog to send the current page to a printer or save as PDF.",
+    "context": "global"
+  },
+  {
+    "name": "Find on Page",
+    "slug": "find-on-page",
+    "category": "page",
+    "windows": "Ctrl+F",
+    "mac": "Cmd+F",
+    "linux": "Ctrl+F",
+    "description": "Opens the in-page search bar to find and highlight text on the current web page.",
+    "context": "global"
+  },
+  {
+    "name": "Select Address Bar",
+    "slug": "select-address-bar",
+    "category": "address-bar",
+    "windows": "Ctrl+L",
+    "mac": "Cmd+L",
+    "linux": "Ctrl+L",
+    "description": "Focuses and selects the entire URL in the address bar for quick navigation or copying. Also accessible via Alt+D.",
+    "context": "global"
+  },
+  {
+    "name": "Go Back",
+    "slug": "go-back",
+    "category": "navigation",
+    "windows": "Alt+Left",
+    "mac": "Cmd+[",
+    "linux": "Alt+Left",
+    "description": "Navigates back to the previous page in the current tab's browsing history.",
+    "context": "global"
+  },
+  {
+    "name": "Go Forward",
+    "slug": "go-forward",
+    "category": "navigation",
+    "windows": "Alt+Right",
+    "mac": "Cmd+]",
+    "linux": "Alt+Right",
+    "description": "Navigates forward to the next page in the current tab's browsing history.",
+    "context": "global"
+  },
+  {
+    "name": "Reload Page",
+    "slug": "reload",
+    "category": "navigation",
+    "windows": "Ctrl+R",
+    "mac": "Cmd+R",
+    "linux": "Ctrl+R",
+    "description": "Reloads the current page, using cached resources where available.",
+    "context": "global"
+  },
+  {
+    "name": "Hard Reload",
+    "slug": "hard-reload",
+    "category": "navigation",
+    "windows": "Ctrl+Shift+R",
+    "mac": "Cmd+Shift+R",
+    "linux": "Ctrl+Shift+R",
+    "description": "Forces a full reload of the current page, bypassing the cache to fetch fresh copies of all resources.",
+    "context": "global"
+  },
+  {
+    "name": "Stop Loading",
+    "slug": "stop-loading",
+    "category": "navigation",
+    "windows": "Esc",
+    "mac": "Esc",
+    "linux": "Esc",
+    "description": "Stops the current page from loading any further resources.",
+    "context": "global"
+  },
+  {
+    "name": "Zoom In",
+    "slug": "zoom-in",
+    "category": "page",
+    "windows": "Ctrl++",
+    "mac": "Cmd++",
+    "linux": "Ctrl++",
+    "description": "Increases the zoom level of the current page, making all content appear larger.",
+    "context": "global"
+  },
+  {
+    "name": "Zoom Out",
+    "slug": "zoom-out",
+    "category": "page",
+    "windows": "Ctrl+-",
+    "mac": "Cmd+-",
+    "linux": "Ctrl+-",
+    "description": "Decreases the zoom level of the current page, making all content appear smaller.",
+    "context": "global"
+  },
+  {
+    "name": "Reset Zoom",
+    "slug": "reset-zoom",
+    "category": "page",
+    "windows": "Ctrl+0",
+    "mac": "Cmd+0",
+    "linux": "Ctrl+0",
+    "description": "Resets the page zoom level to 100% (default view).",
+    "context": "global"
+  },
+  {
+    "name": "Scroll to Top",
+    "slug": "scroll-to-top",
+    "category": "page",
+    "windows": "Home",
+    "mac": "Cmd+Up",
+    "linux": "Home",
+    "description": "Scrolls instantly to the very top of the current page.",
+    "context": "global"
+  },
+  {
+    "name": "Scroll to Bottom",
+    "slug": "scroll-to-bottom",
+    "category": "page",
+    "windows": "End",
+    "mac": "Cmd+Down",
+    "linux": "End",
+    "description": "Scrolls instantly to the very bottom of the current page.",
+    "context": "global"
+  },
+  {
+    "name": "Developer Tools",
+    "slug": "developer-tools",
+    "category": "devtools",
+    "windows": "F12",
+    "mac": "Cmd+Option+I",
+    "linux": "F12",
+    "description": "Opens or closes the browser developer tools panel.",
+    "context": "global"
+  },
+  {
+    "name": "Console",
+    "slug": "console",
+    "category": "devtools",
+    "windows": "Ctrl+Shift+J",
+    "mac": "Cmd+Option+J",
+    "linux": "Ctrl+Shift+J",
+    "description": "Opens the browser developer tools and focuses the JavaScript Console tab.",
+    "context": "global"
+  },
+  {
+    "name": "Inspector / Elements",
+    "slug": "inspector-elements",
+    "category": "devtools",
+    "windows": "Ctrl+Shift+C",
+    "mac": "Cmd+Option+C",
+    "linux": "Ctrl+Shift+C",
+    "description": "Opens the developer tools with the element inspector tool active for selecting and inspecting DOM elements.",
+    "context": "global"
+  },
+  {
+    "name": "Network Panel",
+    "slug": "network-panel",
+    "category": "devtools",
+    "windows": "Ctrl+Shift+E",
+    "mac": "Cmd+Option+E",
+    "linux": "Ctrl+Shift+E",
+    "description": "Opens the developer tools and focuses the Network panel to monitor HTTP requests and responses.",
+    "context": "global"
+  },
+  {
+    "name": "View Page Source",
+    "slug": "view-source",
+    "category": "devtools",
+    "windows": "Ctrl+U",
+    "mac": "Cmd+U",
+    "linux": "Ctrl+U",
+    "description": "Opens the raw HTML source code of the current page in a new tab.",
+    "context": "global"
+  },
+  {
+    "name": "Bookmark Page",
+    "slug": "bookmark-page",
+    "category": "navigation",
+    "windows": "Ctrl+D",
+    "mac": "Cmd+D",
+    "linux": "Ctrl+D",
+    "description": "Adds the current page to the browser's bookmarks.",
+    "context": "global"
+  },
+  {
+    "name": "History",
+    "slug": "history",
+    "category": "navigation",
+    "windows": "Ctrl+H",
+    "mac": "Cmd+Y",
+    "linux": "Ctrl+H",
+    "description": "Opens the browser's browsing history page.",
+    "context": "global"
+  },
+  {
+    "name": "Downloads",
+    "slug": "downloads",
+    "category": "navigation",
+    "windows": "Ctrl+J",
+    "mac": "Cmd+Shift+J",
+    "linux": "Ctrl+J",
+    "description": "Opens the downloads page to see ongoing and completed file downloads.",
+    "context": "global"
+  },
+  {
+    "name": "Focus First Tab",
+    "slug": "focus-first-tab",
+    "category": "tabs",
+    "windows": "Ctrl+1",
+    "mac": "Cmd+1",
+    "linux": "Ctrl+1",
+    "description": "Switches focus to the first (leftmost) tab in the current window.",
+    "context": "global"
+  },
+  {
+    "name": "Full Screen",
+    "slug": "full-screen",
+    "category": "page",
+    "windows": "F11",
+    "mac": "Ctrl+Cmd+F",
+    "linux": "F11",
+    "description": "Toggles the browser between full-screen and windowed mode.",
+    "context": "global"
+  },
+  {
+    "name": "Reading Mode",
+    "slug": "reading-mode",
+    "category": "page",
+    "windows": "F9",
+    "mac": "Cmd+Shift+R",
+    "linux": "F9",
+    "description": "Toggles Firefox Reader View (Reading Mode), which strips page clutter for a clean reading experience. Firefox only.",
+    "context": "global"
+  },
+  {
+    "name": "Search Tabs",
+    "slug": "search-tabs",
+    "category": "tabs",
+    "windows": "Ctrl+Shift+A",
+    "mac": "Cmd+Shift+A",
+    "linux": "Ctrl+Shift+A",
+    "description": "Opens a tab search interface to quickly find and switch to an open tab by its title or URL.",
+    "context": "global"
+  },
+  {
+    "name": "Settings",
+    "slug": "settings",
+    "category": "navigation",
+    "windows": "Alt+E → S",
+    "mac": "Cmd+,",
+    "linux": "Alt+E → S",
+    "description": "Opens the browser settings page. On Windows/Linux via the menu shortcut; on macOS via the standard settings key.",
+    "context": "global"
+  }
+]

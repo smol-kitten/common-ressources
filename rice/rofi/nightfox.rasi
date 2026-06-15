@@ -1,0 +1,26 @@
+/* Theme: Nightfox */
+/* Source: https://github.com/EdenEast/nightfox.nvim */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #192330;
+    foreground:                    #CDCECF;
+
+    normal-background:             #192330;
+    normal-foreground:             #CDCECF;
+    selected-normal-background:    #719CD6;
+    selected-normal-foreground:    #192330;
+
+    active-background:             #81B29A;
+    active-foreground:             #192330;
+    selected-active-background:    #8EBD9B;
+    selected-active-foreground:    #192330;
+
+    urgent-background:             #C94F6D;
+    urgent-foreground:             #192330;
+    selected-urgent-background:    #D16983;
+    selected-urgent-foreground:    #192330;
+
+    border-color:                  #575860;
+    separatorcolor:                #575860;
+}

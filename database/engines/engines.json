@@ -1,0 +1,222 @@
+[
+  {
+    "name": "PostgreSQL",
+    "slug": "postgresql",
+    "type": "relational",
+    "license": "PostgreSQL License (open source)",
+    "acid_compliant": true,
+    "default_port": 5432,
+    "description": "Advanced open-source relational database known for standards compliance, extensibility, and rich feature set including JSONB, full-text search, window functions, CTEs, and support for complex queries.",
+    "notable_features": ["JSONB support", "Full-text search", "Window functions", "Table partitioning", "Logical replication", "PostGIS extension (geospatial)", "Row-level security"],
+    "use_cases": ["Web application backends", "Geospatial data", "Analytics and reporting", "Financial systems", "Complex OLTP workloads"]
+  },
+  {
+    "name": "MySQL",
+    "slug": "mysql",
+    "type": "relational",
+    "license": "GPL v2 / Commercial (Oracle)",
+    "acid_compliant": true,
+    "default_port": 3306,
+    "description": "Widely-used open-source relational database, the default choice for LAMP stack applications. Offers high read performance, replication, and broad hosting support. InnoDB is the default ACID-compliant storage engine.",
+    "notable_features": ["InnoDB storage engine", "Master-replica replication", "Group replication", "Full-text indexing", "JSON data type", "Partitioning"],
+    "use_cases": ["Web applications", "E-commerce platforms", "CMS backends (WordPress, Drupal)", "SaaS applications", "Read-heavy workloads"]
+  },
+  {
+    "name": "MariaDB",
+    "slug": "mariadb",
+    "type": "relational",
+    "license": "GPL v2 (open source)",
+    "acid_compliant": true,
+    "default_port": 3306,
+    "description": "Community-developed fork of MySQL, offering drop-in compatibility with additional features like Aria storage engine, columnar storage via MariaDB ColumnStore, and more liberal open-source licensing.",
+    "notable_features": ["MySQL compatibility", "Aria storage engine", "ColumnStore for analytics", "Galera Cluster support", "Temporal tables", "Dynamic columns"],
+    "use_cases": ["MySQL replacement", "High-availability clusters", "Hybrid OLTP/analytics", "Open-source deployments"]
+  },
+  {
+    "name": "SQLite",
+    "slug": "sqlite",
+    "type": "embedded",
+    "license": "Public Domain",
+    "acid_compliant": true,
+    "default_port": null,
+    "description": "Serverless, file-based relational database engine embedded directly in applications. The most widely deployed database engine in the world, used in browsers, mobile apps, IoT devices, and desktop software.",
+    "notable_features": ["Zero-configuration", "Single file database", "No server process", "Cross-platform", "Full SQL support", "WAL mode for concurrency"],
+    "use_cases": ["Mobile apps (iOS/Android)", "Desktop applications", "Embedded systems", "Browser storage", "Testing and prototyping", "Edge computing"]
+  },
+  {
+    "name": "Microsoft SQL Server",
+    "slug": "mssql",
+    "type": "relational",
+    "license": "Proprietary (Microsoft)",
+    "acid_compliant": true,
+    "default_port": 1433,
+    "description": "Enterprise relational database from Microsoft, tightly integrated with the Windows ecosystem and Azure cloud. Offers advanced features including Always On availability groups, columnstore indexes, and deep .NET and BI tooling integration.",
+    "notable_features": ["Always On Availability Groups", "Columnstore indexes", "In-memory OLTP", "T-SQL procedural language", "SQL Server Agent", "Integration Services (SSIS)", "Reporting Services (SSRS)"],
+    "use_cases": ["Enterprise applications", "Microsoft/.NET ecosystems", "Business intelligence", "ERP/CRM systems", "Azure-integrated workloads"]
+  },
+  {
+    "name": "Oracle Database",
+    "slug": "oracle",
+    "type": "relational",
+    "license": "Proprietary (Oracle)",
+    "acid_compliant": true,
+    "default_port": 1521,
+    "description": "Enterprise-grade relational database system known for high reliability, scalability, and advanced features such as Real Application Clusters (RAC), Autonomous Database, and Exadata. Dominant in large enterprise and financial sector deployments.",
+    "notable_features": ["Real Application Clusters (RAC)", "Automatic Storage Management", "Partitioning", "Advanced security", "PL/SQL procedural language", "Flashback technology", "Autonomous Database"],
+    "use_cases": ["Large enterprise systems", "Banking and financial services", "ERP systems (SAP, Oracle EBS)", "Mission-critical applications", "Data warehousing"]
+  },
+  {
+    "name": "MongoDB",
+    "slug": "mongodb",
+    "type": "document",
+    "license": "SSPL (Server Side Public License) / Commercial",
+    "acid_compliant": true,
+    "default_port": 27017,
+    "description": "Leading document-oriented database that stores data as flexible BSON documents. Provides a rich query language, horizontal scaling via sharding, and multi-document ACID transactions since version 4.0.",
+    "notable_features": ["Flexible BSON document model", "Aggregation pipeline", "Multi-document ACID transactions", "Atlas cloud platform", "Change streams", "Time-series collections", "Automatic sharding"],
+    "use_cases": ["Content management", "Catalogs and product data", "Real-time analytics", "Mobile backends", "IoT data", "Flexible schema applications"]
+  },
+  {
+    "name": "CouchDB",
+    "slug": "couchdb",
+    "type": "document",
+    "license": "Apache License 2.0",
+    "acid_compliant": false,
+    "default_port": 5984,
+    "description": "Apache document database designed for offline-first and sync scenarios. Uses JSON documents, MapReduce views, and an HTTP/REST API. Offers built-in multi-master replication with conflict detection.",
+    "notable_features": ["Multi-master replication", "HTTP/REST native API", "Offline-first with sync", "MapReduce views", "Eventual consistency", "Couch Replication Protocol"],
+    "use_cases": ["Offline-capable mobile apps", "Distributed sync systems", "IoT with intermittent connectivity", "CMS and document stores"]
+  },
+  {
+    "name": "Redis",
+    "slug": "redis",
+    "type": "key-value",
+    "license": "RSALv2 / SSPLv1 (post-2024) / BSD (older versions)",
+    "acid_compliant": false,
+    "default_port": 6379,
+    "description": "In-memory data structure store used as a cache, message broker, and primary database. Supports rich data types (strings, hashes, lists, sets, sorted sets, streams) with optional persistence and Lua scripting.",
+    "notable_features": ["In-memory speed", "Rich data structures", "Pub/Sub messaging", "Streams", "Lua scripting", "Cluster mode", "Optional persistence (RDB/AOF)", "Redis Modules"],
+    "use_cases": ["Caching", "Session storage", "Real-time leaderboards", "Rate limiting", "Message queuing", "Pub/Sub systems", "Distributed locks"]
+  },
+  {
+    "name": "Memcached",
+    "slug": "memcached",
+    "type": "key-value",
+    "license": "BSD",
+    "acid_compliant": false,
+    "default_port": 11211,
+    "description": "High-performance, distributed memory caching system designed for simplicity. Stores only string key-value pairs with no persistence, making it extremely fast for pure caching workloads. Often used alongside relational databases.",
+    "notable_features": ["Extremely low latency", "Horizontal scaling", "Simple string-only storage", "Consistent hashing", "Multi-threaded"],
+    "use_cases": ["Read-heavy caching", "Database query result caching", "HTML fragment caching", "Session caching"]
+  },
+  {
+    "name": "Apache Cassandra",
+    "slug": "cassandra",
+    "type": "column",
+    "license": "Apache License 2.0",
+    "acid_compliant": false,
+    "default_port": 9042,
+    "description": "Distributed wide-column database designed for massive scale with no single point of failure. Uses a peer-to-peer ring architecture with tunable consistency. Excellent write throughput and linear horizontal scalability.",
+    "notable_features": ["Peer-to-peer distributed architecture", "Tunable consistency", "Linear write scalability", "Gossip protocol", "CQL (Cassandra Query Language)", "Time-series data support", "Multi-datacenter replication"],
+    "use_cases": ["IoT time-series data", "Write-heavy workloads", "Messaging at scale", "User activity tracking", "Recommendation engines"]
+  },
+  {
+    "name": "ScyllaDB",
+    "slug": "scylladb",
+    "type": "column",
+    "license": "AGPL v3 / Commercial",
+    "acid_compliant": false,
+    "default_port": 9042,
+    "description": "High-performance, Cassandra-compatible database written in C++ using a shard-per-core architecture. Delivers significantly lower latency and higher throughput than Cassandra on the same hardware, with full CQL and Cassandra API compatibility.",
+    "notable_features": ["Cassandra-compatible CQL API", "Shard-per-core architecture", "Lower P99 latency than Cassandra", "Compaction improvements", "Raft-based metadata consistency", "DynamoDB-compatible API (ScyllaDB Alternator)"],
+    "use_cases": ["High-throughput IoT", "Ad tech at scale", "Gaming leaderboards", "Replace Cassandra for lower latency"]
+  },
+  {
+    "name": "InfluxDB",
+    "slug": "influxdb",
+    "type": "time-series",
+    "license": "MIT (OSS) / Commercial (Cloud)",
+    "acid_compliant": false,
+    "default_port": 8086,
+    "description": "Purpose-built time-series database optimized for high-write-throughput metrics data. Offers a SQL-like query language (InfluxQL) and Flux scripting language, built-in data retention policies, and downsampling tasks.",
+    "notable_features": ["Line Protocol ingest", "InfluxQL and Flux query languages", "Retention policies", "Continuous queries and tasks", "Telegraf agent integration", "Grafana integration"],
+    "use_cases": ["Infrastructure and application metrics", "IoT sensor data", "Real-time monitoring", "DevOps observability", "Financial tick data"]
+  },
+  {
+    "name": "TimescaleDB",
+    "slug": "timescaledb",
+    "type": "time-series",
+    "license": "TSL (Timescale License) / Apache 2.0 (community)",
+    "acid_compliant": true,
+    "default_port": 5432,
+    "description": "Time-series database built as a PostgreSQL extension, providing automatic hypertable partitioning, columnar compression, and continuous aggregates while retaining full SQL and PostgreSQL compatibility.",
+    "notable_features": ["Built on PostgreSQL", "Automatic hypertable chunking", "Columnar compression", "Continuous aggregates", "Full SQL compatibility", "PostGIS support", "Downsampling policies"],
+    "use_cases": ["DevOps metrics", "Financial time series", "IoT and sensor data", "Log and event storage", "Existing PostgreSQL migrations"]
+  },
+  {
+    "name": "Neo4j",
+    "slug": "neo4j",
+    "type": "graph",
+    "license": "GPL v3 (Community) / Commercial (Enterprise)",
+    "acid_compliant": true,
+    "default_port": 7687,
+    "description": "Leading native graph database that stores data as nodes and relationships with properties. Uses the Cypher query language for expressive graph traversal queries. ACID-compliant with clustering support.",
+    "notable_features": ["Native graph storage and processing", "Cypher query language", "ACID transactions", "Graph algorithms library", "Causal clustering", "Graph Data Science library", "Bloom visualization"],
+    "use_cases": ["Fraud detection", "Knowledge graphs", "Recommendation engines", "Network and IT operations", "Identity and access management", "Social networks"]
+  },
+  {
+    "name": "Elasticsearch",
+    "slug": "elasticsearch",
+    "type": "search",
+    "license": "SSPL + Elastic License 2.0 / Apache 2.0 (older)",
+    "acid_compliant": false,
+    "default_port": 9200,
+    "description": "Distributed search and analytics engine built on Apache Lucene. Provides full-text search, structured search, and real-time analytics via a REST API. Core component of the Elastic Stack (ELK).",
+    "notable_features": ["Full-text search with relevance scoring", "Distributed and horizontally scalable", "REST API", "Aggregations for analytics", "Vector search (kNN)", "Machine learning features", "ECS schema"],
+    "use_cases": ["Full-text search", "Log and event data analytics", "Observability platforms", "Security information (SIEM)", "E-commerce product search", "Vector/semantic search"]
+  },
+  {
+    "name": "ClickHouse",
+    "slug": "clickhouse",
+    "type": "column",
+    "license": "Apache License 2.0",
+    "acid_compliant": false,
+    "default_port": 8123,
+    "description": "Open-source columnar OLAP database designed for real-time analytics on large datasets. Achieves extremely high query performance on aggregations through columnar storage, vectorized execution, and data compression.",
+    "notable_features": ["Columnar storage", "Vectorized query execution", "Real-time data ingestion", "MergeTree table engines", "Materialized views", "SQL support", "Distributed query processing", "Exceptional compression"],
+    "use_cases": ["Real-time analytics dashboards", "Ad tech reporting", "Product analytics", "Log analysis at scale", "Time-series analytics", "Business intelligence"]
+  },
+  {
+    "name": "DuckDB",
+    "slug": "duckdb",
+    "type": "embedded",
+    "license": "MIT",
+    "acid_compliant": true,
+    "default_port": null,
+    "description": "In-process analytical database designed for OLAP workloads. Runs embedded within applications (Python, R, Java, etc.) with no server required. Excels at querying Parquet, CSV, and JSON files directly with columnar vectorized execution.",
+    "notable_features": ["In-process / serverless", "Columnar vectorized engine", "Direct Parquet/CSV/JSON querying", "Full SQL with window functions", "Arrow and Pandas integration", "Parallel query execution", "Extensions ecosystem"],
+    "use_cases": ["Data science and analytics in Python/R", "Local ETL processing", "BI and ad-hoc analysis", "Replacing Pandas for large files", "Prototyping analytical pipelines"]
+  },
+  {
+    "name": "CockroachDB",
+    "slug": "cockroachdb",
+    "type": "relational",
+    "license": "BSL 1.1 / CCL / Apache 2.0 (CockroachDB Core)",
+    "acid_compliant": true,
+    "default_port": 26257,
+    "description": "Cloud-native distributed SQL database that combines the familiarity of PostgreSQL with horizontal scalability and automatic geographic distribution. Provides serializable isolation and survives node and datacenter failures.",
+    "notable_features": ["PostgreSQL-compatible wire protocol", "Distributed SQL", "Serializable isolation", "Multi-region deployments", "Automatic sharding", "Geo-partitioning", "Follower reads"],
+    "use_cases": ["Global applications requiring low latency", "Financial transactions at scale", "Multi-region SaaS", "Applications needing PostgreSQL + horizontal scale"]
+  },
+  {
+    "name": "SurrealDB",
+    "slug": "surrealdb",
+    "type": "multi-model",
+    "license": "BSL 1.1",
+    "acid_compliant": true,
+    "default_port": 8000,
+    "description": "Modern multi-model database combining relational, document, and graph capabilities in a single engine. Uses SurrealQL for unified querying across data models. Supports embedded and distributed deployment modes with built-in authentication and permissions.",
+    "notable_features": ["Multi-model (relational, document, graph)", "SurrealQL query language", "Built-in authentication and permissions", "Live queries (real-time push)", "Record links for graph traversal", "Embedded or distributed mode", "Schema-optional"],
+    "use_cases": ["Full-stack applications with single DB", "Real-time collaborative apps", "Graph-plus-document workloads", "Rapid prototyping", "Edge and serverless deployments"]
+  }
+]

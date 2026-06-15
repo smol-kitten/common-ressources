@@ -1,0 +1,262 @@
+[
+  {
+    "name": "GitHub Actions",
+    "slug": "github-actions",
+    "config_file": ".github/workflows/*.yml",
+    "config_language": "YAML",
+    "pricing_model": "per-minute",
+    "cloud_hosted": true,
+    "self_hosted": true,
+    "trigger_types": ["push", "pull_request", "schedule", "workflow_dispatch", "release", "issue_comment", "repository_dispatch"],
+    "website": "https://github.com/features/actions",
+    "description": "GitHub's integrated CI/CD platform built directly into the GitHub repository experience. Workflows are defined in YAML and triggered by GitHub events. Marketplace offers thousands of reusable actions.",
+    "notable_features": [
+      "Deep GitHub integration with automatic event triggers",
+      "Reusable Actions marketplace with 20,000+ actions",
+      "Matrix builds for parallel multi-version testing",
+      "Environments with manual approval gates and secrets",
+      "OIDC-based keyless cloud authentication",
+      "Composite actions and reusable workflows"
+    ]
+  },
+  {
+    "name": "GitLab CI/CD",
+    "slug": "gitlab-cicd",
+    "config_file": ".gitlab-ci.yml",
+    "config_language": "YAML",
+    "pricing_model": "per-minute",
+    "cloud_hosted": true,
+    "self_hosted": true,
+    "trigger_types": ["push", "merge_request", "schedule", "pipeline", "web", "api", "trigger"],
+    "website": "https://docs.gitlab.com/ee/ci/",
+    "description": "Fully integrated CI/CD solution built into GitLab. Tightly coupled with GitLab's source control, issue tracking, and container registry. Supports multi-project pipelines and Auto DevOps.",
+    "notable_features": [
+      "Tightly integrated with GitLab SCM, registry, and security scanning",
+      "Auto DevOps for zero-config deployments to Kubernetes",
+      "Multi-project and parent-child pipelines",
+      "Built-in container registry and package registry",
+      "DAG (Directed Acyclic Graph) job dependencies",
+      "Review Apps for ephemeral deployment previews"
+    ]
+  },
+  {
+    "name": "Jenkins",
+    "slug": "jenkins",
+    "config_file": "Jenkinsfile",
+    "config_language": "Groovy (DSL)",
+    "pricing_model": "self-hosted (free open source)",
+    "cloud_hosted": false,
+    "self_hosted": true,
+    "trigger_types": ["push", "pull_request", "schedule", "webhook", "manual", "upstream_job"],
+    "website": "https://www.jenkins.io",
+    "description": "The most widely deployed open-source automation server. Highly extensible via 1,800+ plugins. Supports both declarative and scripted Pipeline DSL. Requires self-hosting and operational overhead.",
+    "notable_features": [
+      "1,800+ community plugins for virtually any integration",
+      "Declarative and Scripted Pipeline DSL (Groovy)",
+      "Jenkins X for cloud-native Kubernetes CI/CD",
+      "Blue Ocean modern UI for pipeline visualization",
+      "Master/agent distributed build architecture",
+      "On-premises with full data sovereignty"
+    ]
+  },
+  {
+    "name": "CircleCI",
+    "slug": "circleci",
+    "config_file": ".circleci/config.yml",
+    "config_language": "YAML",
+    "pricing_model": "per-credit",
+    "cloud_hosted": true,
+    "self_hosted": true,
+    "trigger_types": ["push", "pull_request", "schedule", "api", "webhook"],
+    "website": "https://circleci.com",
+    "description": "A cloud-native CI/CD platform known for fast build times, Docker-first workflows, and a flexible orb ecosystem. Supports parallelism and test splitting to optimize pipeline speed.",
+    "notable_features": [
+      "Orbs: reusable, shareable configuration packages",
+      "Intelligent test splitting for parallel job execution",
+      "Resource classes with GPU, Arm, and large-memory options",
+      "Docker Layer Caching (DLC) for faster builds",
+      "Pipelines with fan-in/fan-out workflow support",
+      "Self-hosted runners for on-premises or custom environments"
+    ]
+  },
+  {
+    "name": "Travis CI",
+    "slug": "travis-ci",
+    "config_file": ".travis.yml",
+    "config_language": "YAML",
+    "pricing_model": "per-credit",
+    "cloud_hosted": true,
+    "self_hosted": false,
+    "trigger_types": ["push", "pull_request", "schedule", "api"],
+    "website": "https://www.travis-ci.com",
+    "description": "One of the first hosted CI services, popular in the open-source community. Simple YAML configuration and broad language support. Legacy platform that has declined in usage after pricing changes in 2020.",
+    "notable_features": [
+      "Simple, minimal YAML configuration to get started",
+      "Wide language and runtime support out of the box",
+      "Build matrix for multi-environment testing",
+      "GitHub integration with automatic PR status checks",
+      "macOS and Linux build environments available",
+      "Historical open-source CI pioneer"
+    ]
+  },
+  {
+    "name": "Drone CI",
+    "slug": "drone-ci",
+    "config_file": ".drone.yml",
+    "config_language": "YAML",
+    "pricing_model": "open-source (free self-hosted) / cloud subscription",
+    "cloud_hosted": true,
+    "self_hosted": true,
+    "trigger_types": ["push", "pull_request", "tag", "promote", "rollback", "cron"],
+    "website": "https://www.drone.io",
+    "description": "A container-native CI/CD platform where every pipeline step runs in an isolated Docker container. Lightweight and easy to deploy. Forked as Woodpecker CI after licensing changes. Harness-owned.",
+    "notable_features": [
+      "Every pipeline step runs in its own container",
+      "Plugin system using purpose-built Docker images",
+      "Native support for multiple SCM providers",
+      "Lightweight server with low resource requirements",
+      "Supports multiple runner types (Docker, Kubernetes, SSH, Exec)",
+      "Trusted and secure secret injection per repository"
+    ]
+  },
+  {
+    "name": "Buildkite",
+    "slug": "buildkite",
+    "config_file": ".buildkite/pipeline.yml",
+    "config_language": "YAML",
+    "pricing_model": "per-user",
+    "cloud_hosted": false,
+    "self_hosted": true,
+    "trigger_types": ["push", "pull_request", "schedule", "api", "webhook"],
+    "website": "https://buildkite.com",
+    "description": "A hybrid CI/CD platform where the orchestration layer is cloud-hosted but all build agents run on your own infrastructure. Excellent for large engineering organizations with high build volumes and custom hardware needs.",
+    "notable_features": [
+      "Agents run on your own infrastructure (any OS, GPU, bare metal)",
+      "Dynamic pipelines generated at runtime from scripts",
+      "Parallel matrix builds with automatic test splitting",
+      "Bazel and monorepo build optimization support",
+      "Audit logs, SSO, and enterprise compliance features",
+      "Plugin system with open-source community plugins"
+    ]
+  },
+  {
+    "name": "TeamCity",
+    "slug": "teamcity",
+    "config_file": ".teamcity/settings.kts",
+    "config_language": "Kotlin DSL / XML",
+    "pricing_model": "per-agent (free tier available)",
+    "cloud_hosted": true,
+    "self_hosted": true,
+    "trigger_types": ["push", "pull_request", "schedule", "vcs-check-in", "dependency", "remote-run"],
+    "website": "https://www.jetbrains.com/teamcity/",
+    "description": "JetBrains' enterprise-grade CI/CD server with deep IDE integrations, powerful build chain features, and configuration as code via Kotlin DSL. Available as cloud (TeamCity Cloud) or on-premises.",
+    "notable_features": [
+      "Kotlin DSL for version-controlled build configuration",
+      "Deep JetBrains IDE integration (IntelliJ IDEA, etc.)",
+      "Build chains for complex multi-project pipelines",
+      "Pre-tested (delayed) commits to keep the main branch green",
+      "Comprehensive build history and test flakiness detection",
+      "Personal builds for developer branch validation"
+    ]
+  },
+  {
+    "name": "Azure Pipelines",
+    "slug": "azure-pipelines",
+    "config_file": "azure-pipelines.yml",
+    "config_language": "YAML",
+    "pricing_model": "per-parallel-job",
+    "cloud_hosted": true,
+    "self_hosted": true,
+    "trigger_types": ["push", "pull_request", "schedule", "manual", "pipeline", "webhook"],
+    "website": "https://azure.microsoft.com/en-us/products/devops/pipelines",
+    "description": "Microsoft's CI/CD service, part of Azure DevOps. Supports any language, platform, and cloud. Integrates deeply with GitHub, Azure services, and Microsoft tooling. Free for open-source projects.",
+    "notable_features": [
+      "Cross-platform (Windows, Linux, macOS) hosted agents",
+      "Deep Azure and Microsoft ecosystem integration",
+      "Deployment environments with approval gates and audit history",
+      "YAML pipelines with templates and extends for reuse",
+      "Unlimited free parallel jobs for public open-source projects",
+      "Integrated artifact feeds and test reporting"
+    ]
+  },
+  {
+    "name": "Bitbucket Pipelines",
+    "slug": "bitbucket-pipelines",
+    "config_file": "bitbucket-pipelines.yml",
+    "config_language": "YAML",
+    "pricing_model": "per-minute",
+    "cloud_hosted": true,
+    "self_hosted": false,
+    "trigger_types": ["push", "pull_request", "tag", "schedule", "manual", "custom"],
+    "website": "https://bitbucket.org/product/features/pipelines",
+    "description": "Atlassian's integrated CI/CD solution for Bitbucket Cloud repositories. Docker-based builds with tight integration into Jira, Confluence, and the Atlassian ecosystem.",
+    "notable_features": [
+      "Native Bitbucket and Jira integration",
+      "Deployment tracking with Jira issue linking",
+      "Pipes: curated Docker-based tasks for common operations",
+      "Branch-specific and pull-request pipelines",
+      "Parallel steps for faster builds",
+      "Built-in deployment environments (test, staging, production)"
+    ]
+  },
+  {
+    "name": "Concourse CI",
+    "slug": "concourse-ci",
+    "config_file": "pipeline.yml",
+    "config_language": "YAML",
+    "pricing_model": "open-source (free self-hosted)",
+    "cloud_hosted": false,
+    "self_hosted": true,
+    "trigger_types": ["resource-change", "schedule", "manual"],
+    "website": "https://concourse-ci.org",
+    "description": "An open-source, container-native CI/CD system built around the concepts of tasks, jobs, and resources. Designed for correctness and reproducibility — every task runs in a container with no implicit state.",
+    "notable_features": [
+      "Stateless, reproducible builds with no implicit shared state",
+      "Resource abstraction for any external artifact (git, S3, registry, etc.)",
+      "Tasks are plain containers, shareable and testable locally via 'fly execute'",
+      "Fly CLI for full pipeline management from the command line",
+      "Visual pipeline graph in the web UI",
+      "Designed for large-scale, complex pipelines (CF Foundation origin)"
+    ]
+  },
+  {
+    "name": "Tekton",
+    "slug": "tekton",
+    "config_file": "tekton/*.yaml",
+    "config_language": "YAML",
+    "pricing_model": "open-source (free, runs on Kubernetes)",
+    "cloud_hosted": false,
+    "self_hosted": true,
+    "trigger_types": ["push", "pull_request", "webhook", "cron", "event-listener"],
+    "website": "https://tekton.dev",
+    "description": "A Kubernetes-native CI/CD framework from the CD Foundation. Defines pipelines as Kubernetes Custom Resources (Tasks, Pipelines, PipelineRuns). The engine underlying OpenShift Pipelines and other enterprise products.",
+    "notable_features": [
+      "Kubernetes-native CRDs for Tasks, Pipelines, and Triggers",
+      "Runs natively on any Kubernetes cluster",
+      "Tekton Hub for sharing reusable Tasks and Pipelines",
+      "Tekton Chains for supply chain security (SLSA provenance)",
+      "Highly extensible and modular component architecture",
+      "Underlying engine for Red Hat OpenShift Pipelines"
+    ]
+  },
+  {
+    "name": "Woodpecker CI",
+    "slug": "woodpecker-ci",
+    "config_file": ".woodpecker.yml",
+    "config_language": "YAML",
+    "pricing_model": "open-source (free self-hosted)",
+    "cloud_hosted": false,
+    "self_hosted": true,
+    "trigger_types": ["push", "pull_request", "tag", "deploy", "cron", "manual"],
+    "website": "https://woodpecker-ci.org",
+    "description": "A community fork of Drone CI created after Harness changed Drone's license. Maintains the original open-source spirit with Docker-native pipelines. Supports Gitea, GitHub, GitLab, Forgejo, and Bitbucket.",
+    "notable_features": [
+      "100% open-source community-driven Drone CI fork",
+      "Docker-native: every step runs in a container",
+      "Multi-platform agent support (Linux, Windows, macOS)",
+      "Supports multiple SCM providers including Gitea and Forgejo",
+      "Simple YAML configuration with plugin ecosystem",
+      "Secrets management per repository or globally"
+    ]
+  }
+]

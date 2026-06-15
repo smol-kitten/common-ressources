@@ -1,0 +1,254 @@
+[
+  {
+    "pair": "EUR/USD",
+    "slug": "eur-usd",
+    "base": "EUR",
+    "quote": "USD",
+    "category": "major",
+    "description": "Euro vs US Dollar — the world's most traded currency pair, representing two of the largest economies.",
+    "typical_spread_pips": 0.5
+  },
+  {
+    "pair": "GBP/USD",
+    "slug": "gbp-usd",
+    "base": "GBP",
+    "quote": "USD",
+    "category": "major",
+    "description": "British Pound vs US Dollar — nicknamed 'Cable', one of the oldest and most liquid forex pairs.",
+    "typical_spread_pips": 0.7
+  },
+  {
+    "pair": "USD/JPY",
+    "slug": "usd-jpy",
+    "base": "USD",
+    "quote": "JPY",
+    "category": "major",
+    "description": "US Dollar vs Japanese Yen — the second most traded pair, sensitive to risk sentiment and interest rate differentials.",
+    "typical_spread_pips": 0.5
+  },
+  {
+    "pair": "USD/CHF",
+    "slug": "usd-chf",
+    "base": "USD",
+    "quote": "CHF",
+    "category": "major",
+    "description": "US Dollar vs Swiss Franc — often seen as a safe-haven pair due to Switzerland's financial stability.",
+    "typical_spread_pips": 0.9
+  },
+  {
+    "pair": "AUD/USD",
+    "slug": "aud-usd",
+    "base": "AUD",
+    "quote": "USD",
+    "category": "major",
+    "description": "Australian Dollar vs US Dollar — nicknamed 'Aussie', closely tied to commodity prices and Asia-Pacific trade.",
+    "typical_spread_pips": 0.7
+  },
+  {
+    "pair": "USD/CAD",
+    "slug": "usd-cad",
+    "base": "USD",
+    "quote": "CAD",
+    "category": "major",
+    "description": "US Dollar vs Canadian Dollar — nicknamed 'Loonie', influenced heavily by oil prices and US-Canada trade flows.",
+    "typical_spread_pips": 0.9
+  },
+  {
+    "pair": "NZD/USD",
+    "slug": "nzd-usd",
+    "base": "NZD",
+    "quote": "USD",
+    "category": "major",
+    "description": "New Zealand Dollar vs US Dollar — nicknamed 'Kiwi', driven by dairy exports and risk appetite.",
+    "typical_spread_pips": 1.0
+  },
+  {
+    "pair": "EUR/GBP",
+    "slug": "eur-gbp",
+    "base": "EUR",
+    "quote": "GBP",
+    "category": "minor",
+    "description": "Euro vs British Pound — reflects the economic relationship between the Eurozone and the United Kingdom.",
+    "typical_spread_pips": 1.0
+  },
+  {
+    "pair": "EUR/JPY",
+    "slug": "eur-jpy",
+    "base": "EUR",
+    "quote": "JPY",
+    "category": "minor",
+    "description": "Euro vs Japanese Yen — a popular cross pair combining Eurozone fundamentals with Japanese monetary policy.",
+    "typical_spread_pips": 1.0
+  },
+  {
+    "pair": "EUR/CHF",
+    "slug": "eur-chf",
+    "base": "EUR",
+    "quote": "CHF",
+    "category": "minor",
+    "description": "Euro vs Swiss Franc — closely watched for SNB intervention and Eurozone economic signals.",
+    "typical_spread_pips": 1.2
+  },
+  {
+    "pair": "EUR/AUD",
+    "slug": "eur-aud",
+    "base": "EUR",
+    "quote": "AUD",
+    "category": "minor",
+    "description": "Euro vs Australian Dollar — reflects divergence between European monetary policy and commodity-linked AUD.",
+    "typical_spread_pips": 1.5
+  },
+  {
+    "pair": "EUR/CAD",
+    "slug": "eur-cad",
+    "base": "EUR",
+    "quote": "CAD",
+    "category": "minor",
+    "description": "Euro vs Canadian Dollar — sensitive to oil prices and Eurozone growth relative to Canada.",
+    "typical_spread_pips": 1.8
+  },
+  {
+    "pair": "GBP/JPY",
+    "slug": "gbp-jpy",
+    "base": "GBP",
+    "quote": "JPY",
+    "category": "minor",
+    "description": "British Pound vs Japanese Yen — nicknamed 'the Dragon', known for high volatility and large pip movements.",
+    "typical_spread_pips": 1.5
+  },
+  {
+    "pair": "GBP/CHF",
+    "slug": "gbp-chf",
+    "base": "GBP",
+    "quote": "CHF",
+    "category": "minor",
+    "description": "British Pound vs Swiss Franc — a volatile minor cross influenced by UK economic data and Swiss safe-haven flows.",
+    "typical_spread_pips": 2.0
+  },
+  {
+    "pair": "GBP/AUD",
+    "slug": "gbp-aud",
+    "base": "GBP",
+    "quote": "AUD",
+    "category": "minor",
+    "description": "British Pound vs Australian Dollar — driven by UK and Australian interest rate expectations and trade data.",
+    "typical_spread_pips": 2.5
+  },
+  {
+    "pair": "AUD/JPY",
+    "slug": "aud-jpy",
+    "base": "AUD",
+    "quote": "JPY",
+    "category": "minor",
+    "description": "Australian Dollar vs Japanese Yen — popular carry trade pair exploiting interest rate differentials.",
+    "typical_spread_pips": 1.3
+  },
+  {
+    "pair": "CHF/JPY",
+    "slug": "chf-jpy",
+    "base": "CHF",
+    "quote": "JPY",
+    "category": "minor",
+    "description": "Swiss Franc vs Japanese Yen — both safe-haven currencies, sensitive to global risk events.",
+    "typical_spread_pips": 1.8
+  },
+  {
+    "pair": "CAD/JPY",
+    "slug": "cad-jpy",
+    "base": "CAD",
+    "quote": "JPY",
+    "category": "minor",
+    "description": "Canadian Dollar vs Japanese Yen — influenced by oil prices and the Bank of Japan monetary policy.",
+    "typical_spread_pips": 1.7
+  },
+  {
+    "pair": "AUD/NZD",
+    "slug": "aud-nzd",
+    "base": "AUD",
+    "quote": "NZD",
+    "category": "minor",
+    "description": "Australian Dollar vs New Zealand Dollar — reflects economic divergence between two closely linked Pacific economies.",
+    "typical_spread_pips": 2.0
+  },
+  {
+    "pair": "USD/MXN",
+    "slug": "usd-mxn",
+    "base": "USD",
+    "quote": "MXN",
+    "category": "exotic",
+    "description": "US Dollar vs Mexican Peso — popular emerging market pair sensitive to NAFTA/USMCA relations and oil prices.",
+    "typical_spread_pips": 40.0
+  },
+  {
+    "pair": "USD/SGD",
+    "slug": "usd-sgd",
+    "base": "USD",
+    "quote": "SGD",
+    "category": "exotic",
+    "description": "US Dollar vs Singapore Dollar — reflects Singapore's status as a financial hub; managed by the MAS via exchange rate policy.",
+    "typical_spread_pips": 30.0
+  },
+  {
+    "pair": "USD/HKD",
+    "slug": "usd-hkd",
+    "base": "USD",
+    "quote": "HKD",
+    "category": "exotic",
+    "description": "US Dollar vs Hong Kong Dollar — the HKD is pegged to the USD in a narrow band of 7.75–7.85.",
+    "typical_spread_pips": 20.0
+  },
+  {
+    "pair": "USD/NOK",
+    "slug": "usd-nok",
+    "base": "USD",
+    "quote": "NOK",
+    "category": "exotic",
+    "description": "US Dollar vs Norwegian Krone — Norway's oil wealth makes the NOK sensitive to crude oil price movements.",
+    "typical_spread_pips": 60.0
+  },
+  {
+    "pair": "USD/SEK",
+    "slug": "usd-sek",
+    "base": "USD",
+    "quote": "SEK",
+    "category": "exotic",
+    "description": "US Dollar vs Swedish Krona — influenced by Riksbank policy, Swedish export economy and risk appetite.",
+    "typical_spread_pips": 60.0
+  },
+  {
+    "pair": "USD/DKK",
+    "slug": "usd-dkk",
+    "base": "USD",
+    "quote": "DKK",
+    "category": "exotic",
+    "description": "US Dollar vs Danish Krone — the DKK is pegged to the Euro via the ERM II mechanism, limiting volatility.",
+    "typical_spread_pips": 50.0
+  },
+  {
+    "pair": "USD/ZAR",
+    "slug": "usd-zar",
+    "base": "USD",
+    "quote": "ZAR",
+    "category": "exotic",
+    "description": "US Dollar vs South African Rand — highly volatile emerging market pair affected by gold prices and political risk.",
+    "typical_spread_pips": 100.0
+  },
+  {
+    "pair": "USD/TRY",
+    "slug": "usd-try",
+    "base": "USD",
+    "quote": "TRY",
+    "category": "exotic",
+    "description": "US Dollar vs Turkish Lira — historically volatile due to high Turkish inflation and unconventional monetary policy.",
+    "typical_spread_pips": 150.0
+  },
+  {
+    "pair": "USD/BRL",
+    "slug": "usd-brl",
+    "base": "USD",
+    "quote": "BRL",
+    "category": "exotic",
+    "description": "US Dollar vs Brazilian Real — Brazil's largest emerging market currency, sensitive to commodity prices and political risk.",
+    "typical_spread_pips": 120.0
+  }
+]

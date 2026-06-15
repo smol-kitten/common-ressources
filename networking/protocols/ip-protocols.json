@@ -1,0 +1,281 @@
+[
+  {
+    "number": 0,
+    "name": "HOPOPT",
+    "full_name": "IPv6 Hop-by-Hop Option",
+    "slug": "hopopt",
+    "rfc": "RFC 8200",
+    "description": "Used to carry optional information that must be processed by every node along the path of an IPv6 packet.",
+    "connection_oriented": false
+  },
+  {
+    "number": 1,
+    "name": "ICMP",
+    "full_name": "Internet Control Message Protocol",
+    "slug": "icmp",
+    "rfc": "RFC 792",
+    "description": "Used for error reporting and network diagnostics. Carries messages such as echo request/reply (ping), destination unreachable, and time exceeded.",
+    "connection_oriented": false
+  },
+  {
+    "number": 2,
+    "name": "IGMP",
+    "full_name": "Internet Group Management Protocol",
+    "slug": "igmp",
+    "rfc": "RFC 1112",
+    "description": "Used by IP hosts and adjacent routers to establish and manage multicast group memberships on a local network.",
+    "connection_oriented": false
+  },
+  {
+    "number": 4,
+    "name": "IPv4",
+    "full_name": "IPv4 Encapsulation",
+    "slug": "ipv4-encap",
+    "rfc": "RFC 2003",
+    "description": "IP-in-IP tunneling; encapsulates an IPv4 packet within another IPv4 packet for tunneling or VPN purposes.",
+    "connection_oriented": false
+  },
+  {
+    "number": 6,
+    "name": "TCP",
+    "full_name": "Transmission Control Protocol",
+    "slug": "tcp",
+    "rfc": "RFC 793",
+    "description": "Provides reliable, ordered, and error-checked delivery of a stream of bytes between applications. Used by HTTP, HTTPS, FTP, SSH, and most connection-oriented protocols.",
+    "connection_oriented": true
+  },
+  {
+    "number": 8,
+    "name": "EGP",
+    "full_name": "Exterior Gateway Protocol",
+    "slug": "egp",
+    "rfc": "RFC 904",
+    "description": "An obsolete inter-AS routing protocol used to exchange reachability information between autonomous systems. Superseded by BGP.",
+    "connection_oriented": false
+  },
+  {
+    "number": 9,
+    "name": "IGP",
+    "full_name": "Interior Gateway Protocol",
+    "slug": "igp",
+    "rfc": "N/A",
+    "description": "A reserved protocol number for any interior gateway routing protocol used within an autonomous system.",
+    "connection_oriented": false
+  },
+  {
+    "number": 17,
+    "name": "UDP",
+    "full_name": "User Datagram Protocol",
+    "slug": "udp",
+    "rfc": "RFC 768",
+    "description": "A simple, connectionless protocol that sends datagrams without establishing a connection or guaranteeing delivery. Used by DNS, DHCP, VoIP, video streaming, and gaming.",
+    "connection_oriented": false
+  },
+  {
+    "number": 27,
+    "name": "RDP",
+    "full_name": "Reliable Datagram Protocol",
+    "slug": "rdp-reliable",
+    "rfc": "RFC 908",
+    "description": "Provides reliable delivery of datagrams with sequencing and acknowledgement. Not to be confused with Microsoft Remote Desktop Protocol (which uses TCP/UDP port 3389).",
+    "connection_oriented": false
+  },
+  {
+    "number": 41,
+    "name": "IPv6",
+    "full_name": "IPv6 Encapsulation",
+    "slug": "ipv6-encap",
+    "rfc": "RFC 2473",
+    "description": "Carries IPv6 packets inside IPv4 packets for tunneling across IPv4-only infrastructure during IPv6 transition.",
+    "connection_oriented": false
+  },
+  {
+    "number": 43,
+    "name": "IPv6-Route",
+    "full_name": "Routing Header for IPv6",
+    "slug": "ipv6-route",
+    "rfc": "RFC 8200",
+    "description": "An IPv6 extension header that allows an IPv6 source to list intermediate nodes to be visited on the way to the destination.",
+    "connection_oriented": false
+  },
+  {
+    "number": 44,
+    "name": "IPv6-Frag",
+    "full_name": "Fragment Header for IPv6",
+    "slug": "ipv6-frag",
+    "rfc": "RFC 8200",
+    "description": "An IPv6 extension header used by the source node to send packets larger than the path MTU by fragmenting them.",
+    "connection_oriented": false
+  },
+  {
+    "number": 46,
+    "name": "RSVP",
+    "full_name": "Resource Reservation Protocol",
+    "slug": "rsvp",
+    "rfc": "RFC 2205",
+    "description": "A signaling protocol used to reserve network resources along a path for Quality of Service (QoS) guarantees.",
+    "connection_oriented": false
+  },
+  {
+    "number": 47,
+    "name": "GRE",
+    "full_name": "Generic Routing Encapsulation",
+    "slug": "gre",
+    "rfc": "RFC 2784",
+    "description": "Encapsulates a wide variety of network layer protocols inside IP tunnels. Widely used for VPNs, PPTP, and overlay networks.",
+    "connection_oriented": false
+  },
+  {
+    "number": 50,
+    "name": "ESP",
+    "full_name": "Encapsulating Security Payload",
+    "slug": "esp",
+    "rfc": "RFC 4303",
+    "description": "Provides confidentiality, data origin authentication, integrity, anti-replay protection, and limited traffic flow confidentiality as part of the IPsec suite.",
+    "connection_oriented": false
+  },
+  {
+    "number": 51,
+    "name": "AH",
+    "full_name": "Authentication Header",
+    "slug": "ah",
+    "rfc": "RFC 4302",
+    "description": "Provides connectionless data integrity, data origin authentication, and optional anti-replay protection for IP packets as part of the IPsec suite.",
+    "connection_oriented": false
+  },
+  {
+    "number": 58,
+    "name": "ICMPv6",
+    "full_name": "ICMP for IPv6",
+    "slug": "icmpv6",
+    "rfc": "RFC 4443",
+    "description": "The IPv6 equivalent of ICMP. Used for error reporting, diagnostics, and critical IPv6 functions including Neighbor Discovery and Router Solicitation.",
+    "connection_oriented": false
+  },
+  {
+    "number": 59,
+    "name": "IPv6-NoNxt",
+    "full_name": "No Next Header for IPv6",
+    "slug": "ipv6-nonxt",
+    "rfc": "RFC 8200",
+    "description": "Indicates that there is no next header following the current IPv6 extension header. Used when an IPv6 packet carries no payload.",
+    "connection_oriented": false
+  },
+  {
+    "number": 60,
+    "name": "IPv6-Opts",
+    "full_name": "Destination Options for IPv6",
+    "slug": "ipv6-opts",
+    "rfc": "RFC 8200",
+    "description": "An IPv6 extension header carrying optional information to be processed only by the packet's destination node.",
+    "connection_oriented": false
+  },
+  {
+    "number": 89,
+    "name": "OSPF",
+    "full_name": "Open Shortest Path First",
+    "slug": "ospf",
+    "rfc": "RFC 2328",
+    "description": "A link-state interior gateway routing protocol that uses Dijkstra's algorithm to find shortest paths. Widely used in enterprise and ISP core networks.",
+    "connection_oriented": false
+  },
+  {
+    "number": 103,
+    "name": "PIM",
+    "full_name": "Protocol Independent Multicast",
+    "slug": "pim",
+    "rfc": "RFC 7761",
+    "description": "A family of multicast routing protocols that build multicast distribution trees independent of any particular unicast routing protocol.",
+    "connection_oriented": false
+  },
+  {
+    "number": 108,
+    "name": "IPComp",
+    "full_name": "IP Payload Compression Protocol",
+    "slug": "ipcomp",
+    "rfc": "RFC 3173",
+    "description": "Reduces the size of IP datagrams by compressing the payload. Often used in conjunction with IPsec to improve throughput.",
+    "connection_oriented": false
+  },
+  {
+    "number": 112,
+    "name": "VRRP",
+    "full_name": "Virtual Router Redundancy Protocol",
+    "slug": "vrrp",
+    "rfc": "RFC 5798",
+    "description": "Provides automatic assignment of available routers to participating hosts, increasing the availability and reliability of default gateways.",
+    "connection_oriented": false
+  },
+  {
+    "number": 115,
+    "name": "L2TP",
+    "full_name": "Layer Two Tunneling Protocol",
+    "slug": "l2tp",
+    "rfc": "RFC 3931",
+    "description": "A tunneling protocol used to support VPNs and deliver ISP services. Does not provide encryption on its own; usually paired with IPsec.",
+    "connection_oriented": false
+  },
+  {
+    "number": 121,
+    "name": "SMP",
+    "full_name": "Simple Message Protocol",
+    "slug": "smp",
+    "rfc": "N/A",
+    "description": "A lightweight message-passing protocol assigned to IP protocol number 121, with limited documented deployment.",
+    "connection_oriented": false
+  },
+  {
+    "number": 132,
+    "name": "SCTP",
+    "full_name": "Stream Control Transmission Protocol",
+    "slug": "sctp",
+    "rfc": "RFC 4960",
+    "description": "A reliable, message-oriented transport protocol supporting multi-streaming and multi-homing. Used in telephony signalling (SS7 over IP) and WebRTC data channels.",
+    "connection_oriented": true
+  },
+  {
+    "number": 136,
+    "name": "UDPLite",
+    "full_name": "Lightweight User Datagram Protocol",
+    "slug": "udplite",
+    "rfc": "RFC 3828",
+    "description": "A variant of UDP providing optional partial checksum coverage, useful for multimedia applications where some data corruption is preferable to packet loss.",
+    "connection_oriented": false
+  },
+  {
+    "number": 137,
+    "name": "MPLS-in-IP",
+    "full_name": "MPLS in IP",
+    "slug": "mpls-in-ip",
+    "rfc": "RFC 4023",
+    "description": "Encapsulates MPLS label stacks in IP packets for transport over IP-only networks without requiring MPLS-capable infrastructure.",
+    "connection_oriented": false
+  },
+  {
+    "number": 143,
+    "name": "Ethernet",
+    "full_name": "Ethernet in IP",
+    "slug": "ethernet-in-ip",
+    "rfc": "RFC 3378",
+    "description": "Encapsulates Ethernet frames within IP packets, enabling Ethernet-over-IP tunneling for LAN extension across IP networks.",
+    "connection_oriented": false
+  },
+  {
+    "number": 253,
+    "name": "Experimentation-253",
+    "full_name": "Use for Experimentation and Testing",
+    "slug": "experimentation-253",
+    "rfc": "RFC 3692",
+    "description": "Reserved for use in experimentation and testing. Must not appear in production traffic and should never be assigned to any protocol specification.",
+    "connection_oriented": false
+  },
+  {
+    "number": 254,
+    "name": "Experimentation-254",
+    "full_name": "Use for Experimentation and Testing",
+    "slug": "experimentation-254",
+    "rfc": "RFC 3692",
+    "description": "Reserved for use in experimentation and testing. Must not appear in production traffic and should never be assigned to any protocol specification.",
+    "connection_oriented": false
+  }
+]

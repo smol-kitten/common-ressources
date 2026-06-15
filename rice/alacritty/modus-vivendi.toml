@@ -1,0 +1,34 @@
+# Theme: Modus Vivendi
+# Source: https://protesilaos.com/emacs/modus-themes
+
+[colors.primary]
+background = "#000000"
+foreground = "#FFFFFF"
+
+[colors.cursor]
+cursor = "#FFFFFF"
+text   = "#000000"
+
+[colors.selection]
+background = "#2C2C2C"
+text       = "#FFFFFF"
+
+[colors.normal]
+black   = "#1E1E1E"
+red     = "#FF5F5F"
+green   = "#44BC44"
+yellow  = "#D0BC00"
+blue    = "#2FAFFF"
+magenta = "#FEACD0"
+cyan    = "#00D3D0"
+white   = "#D0D0D0"
+
+[colors.bright]
+black   = "#595959"
+red     = "#FF7F9F"
+green   = "#70C900"
+yellow  = "#EFEF00"
+blue    = "#79A8FF"
+magenta = "#F78FE7"
+cyan    = "#4AE2F0"
+white   = "#FFFFFF"

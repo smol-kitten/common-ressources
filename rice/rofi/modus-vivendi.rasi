@@ -1,0 +1,26 @@
+/* Theme: Modus Vivendi */
+/* Source: https://protesilaos.com/emacs/modus-themes */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #000000;
+    foreground:                    #FFFFFF;
+
+    normal-background:             #000000;
+    normal-foreground:             #FFFFFF;
+    selected-normal-background:    #2FAFFF;
+    selected-normal-foreground:    #000000;
+
+    active-background:             #44BC44;
+    active-foreground:             #000000;
+    selected-active-background:    #70C900;
+    selected-active-foreground:    #000000;
+
+    urgent-background:             #FF5F5F;
+    urgent-foreground:             #000000;
+    selected-urgent-background:    #FF7F9F;
+    selected-urgent-foreground:    #000000;
+
+    border-color:                  #595959;
+    separatorcolor:                #595959;
+}
