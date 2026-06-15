@@ -1,0 +1,569 @@
+[
+  {
+    "keyword": "SELECT",
+    "slug": "select",
+    "category": "DQL",
+    "description": "Retrieves rows from one or more tables or views. The fundamental read operation in SQL.",
+    "syntax": "SELECT column1, column2, ... FROM table_name",
+    "example": "SELECT name, age FROM users WHERE active = true;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "FROM",
+    "slug": "from",
+    "category": "DQL",
+    "description": "Specifies the table, view, subquery, or join source from which to retrieve data.",
+    "syntax": "SELECT ... FROM table_name [alias]",
+    "example": "SELECT * FROM orders o JOIN users u ON o.user_id = u.id;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "WHERE",
+    "slug": "where",
+    "category": "DQL",
+    "description": "Filters rows based on a condition. Applied before grouping and aggregation.",
+    "syntax": "SELECT ... FROM table WHERE condition",
+    "example": "SELECT * FROM products WHERE price > 100 AND in_stock = true;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "JOIN",
+    "slug": "join",
+    "category": "DQL",
+    "description": "Combines rows from two or more tables based on a related column. INNER JOIN is the default when JOIN is used without a qualifier.",
+    "syntax": "SELECT ... FROM table1 JOIN table2 ON table1.col = table2.col",
+    "example": "SELECT u.name, o.total FROM users u JOIN orders o ON u.id = o.user_id;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "LEFT JOIN",
+    "slug": "left-join",
+    "category": "DQL",
+    "description": "Returns all rows from the left table and matched rows from the right table. Unmatched right-table columns are NULL.",
+    "syntax": "SELECT ... FROM table1 LEFT JOIN table2 ON table1.col = table2.col",
+    "example": "SELECT u.name, o.id FROM users u LEFT JOIN orders o ON u.id = o.user_id;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "RIGHT JOIN",
+    "slug": "right-join",
+    "category": "DQL",
+    "description": "Returns all rows from the right table and matched rows from the left table. Unmatched left-table columns are NULL.",
+    "syntax": "SELECT ... FROM table1 RIGHT JOIN table2 ON table1.col = table2.col",
+    "example": "SELECT u.name, o.id FROM users u RIGHT JOIN orders o ON u.id = o.user_id;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "FULL OUTER JOIN",
+    "slug": "full-outer-join",
+    "category": "DQL",
+    "description": "Returns all rows from both tables. Where there is no match, NULLs fill in the missing side.",
+    "syntax": "SELECT ... FROM table1 FULL OUTER JOIN table2 ON table1.col = table2.col",
+    "example": "SELECT a.id, b.id FROM table_a a FULL OUTER JOIN table_b b ON a.key = b.key;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "INNER JOIN",
+    "slug": "inner-join",
+    "category": "DQL",
+    "description": "Returns only rows where the join condition is met in both tables. Equivalent to plain JOIN.",
+    "syntax": "SELECT ... FROM table1 INNER JOIN table2 ON table1.col = table2.col",
+    "example": "SELECT p.name, c.name FROM products p INNER JOIN categories c ON p.category_id = c.id;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "CROSS JOIN",
+    "slug": "cross-join",
+    "category": "DQL",
+    "description": "Produces a Cartesian product of two tables, returning every combination of rows from both tables.",
+    "syntax": "SELECT ... FROM table1 CROSS JOIN table2",
+    "example": "SELECT colors.name, sizes.label FROM colors CROSS JOIN sizes;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "GROUP BY",
+    "slug": "group-by",
+    "category": "DQL",
+    "description": "Groups rows sharing the same values in specified columns so aggregate functions can be applied per group.",
+    "syntax": "SELECT col, AGG(col2) FROM table GROUP BY col",
+    "example": "SELECT department, COUNT(*) AS headcount FROM employees GROUP BY department;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "HAVING",
+    "slug": "having",
+    "category": "DQL",
+    "description": "Filters groups produced by GROUP BY based on aggregate conditions. Applied after grouping, unlike WHERE.",
+    "syntax": "SELECT col, AGG(col2) FROM table GROUP BY col HAVING condition",
+    "example": "SELECT department, AVG(salary) FROM employees GROUP BY department HAVING AVG(salary) > 70000;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "ORDER BY",
+    "slug": "order-by",
+    "category": "DQL",
+    "description": "Sorts the result set by one or more columns in ascending (ASC, default) or descending (DESC) order.",
+    "syntax": "SELECT ... ORDER BY column [ASC|DESC]",
+    "example": "SELECT name, created_at FROM posts ORDER BY created_at DESC;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "LIMIT",
+    "slug": "limit",
+    "category": "DQL",
+    "description": "Restricts the number of rows returned by a query. Widely supported; equivalent to TOP in SQL Server or FETCH FIRST in ANSI SQL.",
+    "syntax": "SELECT ... LIMIT n",
+    "example": "SELECT * FROM products ORDER BY popularity DESC LIMIT 10;",
+    "ansi_sql": false
+  },
+  {
+    "keyword": "OFFSET",
+    "slug": "offset",
+    "category": "DQL",
+    "description": "Skips a specified number of rows before returning results. Commonly used with LIMIT for pagination.",
+    "syntax": "SELECT ... LIMIT n OFFSET m",
+    "example": "SELECT * FROM articles ORDER BY published_at DESC LIMIT 20 OFFSET 40;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "UNION",
+    "slug": "union",
+    "category": "DQL",
+    "description": "Combines result sets of two SELECT statements, removing duplicate rows. Both queries must have the same number and compatible column types.",
+    "syntax": "SELECT ... UNION SELECT ...",
+    "example": "SELECT email FROM customers UNION SELECT email FROM newsletter_subscribers;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "UNION ALL",
+    "slug": "union-all",
+    "category": "DQL",
+    "description": "Combines result sets of two SELECT statements including all duplicates. Faster than UNION as no deduplication is performed.",
+    "syntax": "SELECT ... UNION ALL SELECT ...",
+    "example": "SELECT id FROM table_a UNION ALL SELECT id FROM table_b;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "INTERSECT",
+    "slug": "intersect",
+    "category": "DQL",
+    "description": "Returns only rows that appear in both SELECT result sets.",
+    "syntax": "SELECT ... INTERSECT SELECT ...",
+    "example": "SELECT user_id FROM premium_users INTERSECT SELECT user_id FROM active_users;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "EXCEPT",
+    "slug": "except",
+    "category": "DQL",
+    "description": "Returns rows from the first SELECT result set that are not present in the second. Known as MINUS in Oracle.",
+    "syntax": "SELECT ... EXCEPT SELECT ...",
+    "example": "SELECT user_id FROM all_users EXCEPT SELECT user_id FROM banned_users;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "DISTINCT",
+    "slug": "distinct",
+    "category": "DQL",
+    "description": "Eliminates duplicate rows from the result set. Applied after SELECT to return only unique combinations of selected columns.",
+    "syntax": "SELECT DISTINCT column1, ... FROM table",
+    "example": "SELECT DISTINCT country FROM customers ORDER BY country;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "AS",
+    "slug": "as",
+    "category": "DQL",
+    "description": "Creates an alias for a column or table name within a query. Aliases improve readability and are required when referencing calculated columns.",
+    "syntax": "SELECT expression AS alias_name",
+    "example": "SELECT first_name || ' ' || last_name AS full_name FROM employees;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "WITH",
+    "slug": "with",
+    "category": "DQL",
+    "description": "Defines one or more Common Table Expressions (CTEs) that can be referenced in the main query. Improves readability and enables recursive queries.",
+    "syntax": "WITH cte_name AS (SELECT ...) SELECT ... FROM cte_name",
+    "example": "WITH recent_orders AS (SELECT * FROM orders WHERE created_at > NOW() - INTERVAL '7 days') SELECT COUNT(*) FROM recent_orders;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "EXISTS",
+    "slug": "exists",
+    "category": "PREDICATE",
+    "description": "Tests for the existence of any row in a subquery. Returns TRUE if the subquery returns at least one row.",
+    "syntax": "SELECT ... WHERE EXISTS (SELECT 1 FROM ... WHERE condition)",
+    "example": "SELECT name FROM customers WHERE EXISTS (SELECT 1 FROM orders WHERE orders.customer_id = customers.id);",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "INSERT INTO",
+    "slug": "insert-into",
+    "category": "DML",
+    "description": "Adds new rows to a table. Can insert a single row with VALUES or multiple rows from a SELECT subquery.",
+    "syntax": "INSERT INTO table (col1, col2) VALUES (val1, val2)",
+    "example": "INSERT INTO users (name, email, created_at) VALUES ('Alice', 'alice@example.com', NOW());",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "VALUES",
+    "slug": "values",
+    "category": "DML",
+    "description": "Specifies the literal data rows to insert in an INSERT statement, or constructs a virtual table of values.",
+    "syntax": "INSERT INTO table (cols) VALUES (val1, val2), (val3, val4)",
+    "example": "INSERT INTO colors (name, hex) VALUES ('red', '#FF0000'), ('blue', '#0000FF');",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "UPDATE",
+    "slug": "update",
+    "category": "DML",
+    "description": "Modifies existing rows in a table. Always use a WHERE clause to avoid updating all rows unintentionally.",
+    "syntax": "UPDATE table SET col = value WHERE condition",
+    "example": "UPDATE products SET price = price * 1.1 WHERE category = 'electronics';",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "SET",
+    "slug": "set",
+    "category": "DML",
+    "description": "Specifies the column-value assignments in an UPDATE statement.",
+    "syntax": "UPDATE table SET col1 = val1, col2 = val2 WHERE condition",
+    "example": "UPDATE users SET last_login = NOW(), login_count = login_count + 1 WHERE id = 42;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "DELETE FROM",
+    "slug": "delete-from",
+    "category": "DML",
+    "description": "Removes rows from a table that match the WHERE condition. Without WHERE, deletes all rows (use TRUNCATE for full-table clears).",
+    "syntax": "DELETE FROM table WHERE condition",
+    "example": "DELETE FROM sessions WHERE expires_at < NOW();",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "MERGE",
+    "slug": "merge",
+    "category": "DML",
+    "description": "Performs INSERT, UPDATE, or DELETE on a target table based on matching rows in a source. Also known as UPSERT in some dialects.",
+    "syntax": "MERGE INTO target USING source ON condition WHEN MATCHED THEN ... WHEN NOT MATCHED THEN ...",
+    "example": "MERGE INTO inventory AS t USING updates AS s ON t.product_id = s.product_id WHEN MATCHED THEN UPDATE SET t.qty = s.qty WHEN NOT MATCHED THEN INSERT (product_id, qty) VALUES (s.product_id, s.qty);",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "TRUNCATE",
+    "slug": "truncate",
+    "category": "DDL",
+    "description": "Removes all rows from a table quickly by deallocating data pages rather than deleting row-by-row. Cannot be rolled back in most databases.",
+    "syntax": "TRUNCATE TABLE table_name",
+    "example": "TRUNCATE TABLE session_logs;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "CREATE TABLE",
+    "slug": "create-table",
+    "category": "DDL",
+    "description": "Defines a new table with its columns, data types, constraints, and other properties.",
+    "syntax": "CREATE TABLE table_name (col1 datatype constraints, ...)",
+    "example": "CREATE TABLE users (id SERIAL PRIMARY KEY, email VARCHAR(255) UNIQUE NOT NULL, created_at TIMESTAMPTZ DEFAULT NOW());",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "CREATE INDEX",
+    "slug": "create-index",
+    "category": "DDL",
+    "description": "Creates an index on one or more table columns to improve query performance for lookups, sorts, and joins.",
+    "syntax": "CREATE [UNIQUE] INDEX index_name ON table (column)",
+    "example": "CREATE INDEX idx_users_email ON users (email);",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "CREATE VIEW",
+    "slug": "create-view",
+    "category": "DDL",
+    "description": "Creates a named virtual table based on a SELECT query. Views can simplify complex queries and enforce access control.",
+    "syntax": "CREATE VIEW view_name AS SELECT ...",
+    "example": "CREATE VIEW active_users AS SELECT * FROM users WHERE deactivated_at IS NULL;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "ALTER TABLE",
+    "slug": "alter-table",
+    "category": "DDL",
+    "description": "Modifies an existing table's structure: adding/dropping columns, changing data types, adding/removing constraints.",
+    "syntax": "ALTER TABLE table_name ADD/DROP/MODIFY COLUMN ...",
+    "example": "ALTER TABLE products ADD COLUMN discount_pct NUMERIC(5,2) DEFAULT 0;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "DROP TABLE",
+    "slug": "drop-table",
+    "category": "DDL",
+    "description": "Permanently removes a table and all its data from the database. This operation is irreversible without a backup.",
+    "syntax": "DROP TABLE [IF EXISTS] table_name",
+    "example": "DROP TABLE IF EXISTS temp_import_data;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "DROP INDEX",
+    "slug": "drop-index",
+    "category": "DDL",
+    "description": "Removes an index from a table. Useful when an index is no longer needed or causes write overhead.",
+    "syntax": "DROP INDEX [IF EXISTS] index_name",
+    "example": "DROP INDEX IF EXISTS idx_old_search;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "GRANT",
+    "slug": "grant",
+    "category": "DCL",
+    "description": "Grants database privileges (SELECT, INSERT, UPDATE, DELETE, etc.) on objects to users or roles.",
+    "syntax": "GRANT privilege ON object TO user_or_role",
+    "example": "GRANT SELECT, INSERT ON orders TO app_user;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "REVOKE",
+    "slug": "revoke",
+    "category": "DCL",
+    "description": "Removes previously granted privileges from users or roles.",
+    "syntax": "REVOKE privilege ON object FROM user_or_role",
+    "example": "REVOKE DELETE ON customers FROM reporting_role;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "BEGIN",
+    "slug": "begin",
+    "category": "TCL",
+    "description": "Starts an explicit database transaction. Changes made after BEGIN are not visible to other sessions until committed.",
+    "syntax": "BEGIN [TRANSACTION]",
+    "example": "BEGIN; UPDATE accounts SET balance = balance - 100 WHERE id = 1; UPDATE accounts SET balance = balance + 100 WHERE id = 2; COMMIT;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "COMMIT",
+    "slug": "commit",
+    "category": "TCL",
+    "description": "Saves all changes made during the current transaction, making them permanent and visible to other sessions.",
+    "syntax": "COMMIT",
+    "example": "BEGIN; DELETE FROM temp_data; COMMIT;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "ROLLBACK",
+    "slug": "rollback",
+    "category": "TCL",
+    "description": "Undoes all changes made during the current transaction, restoring the database to the state before BEGIN.",
+    "syntax": "ROLLBACK [TO SAVEPOINT savepoint_name]",
+    "example": "BEGIN; UPDATE inventory SET qty = 0; ROLLBACK;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "SAVEPOINT",
+    "slug": "savepoint",
+    "category": "TCL",
+    "description": "Creates a named point within a transaction to which a partial ROLLBACK can be performed without aborting the entire transaction.",
+    "syntax": "SAVEPOINT savepoint_name",
+    "example": "BEGIN; INSERT INTO log (msg) VALUES ('start'); SAVEPOINT after_log; INSERT INTO orders (item) VALUES ('widget'); ROLLBACK TO after_log; COMMIT;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "IN",
+    "slug": "in",
+    "category": "PREDICATE",
+    "description": "Tests whether a value matches any value in a list or subquery. Equivalent to multiple OR conditions.",
+    "syntax": "column IN (value1, value2, ...) or column IN (SELECT ...)",
+    "example": "SELECT * FROM orders WHERE status IN ('pending', 'processing', 'shipped');",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "BETWEEN",
+    "slug": "between",
+    "category": "PREDICATE",
+    "description": "Tests whether a value falls within a range, inclusive of both endpoints.",
+    "syntax": "column BETWEEN low AND high",
+    "example": "SELECT * FROM products WHERE price BETWEEN 10.00 AND 50.00;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "LIKE",
+    "slug": "like",
+    "category": "PREDICATE",
+    "description": "Pattern-matches a string using wildcards: % for zero or more characters, _ for exactly one character. Case-sensitive in most engines.",
+    "syntax": "column LIKE 'pattern'",
+    "example": "SELECT * FROM users WHERE email LIKE '%@gmail.com';",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "ILIKE",
+    "slug": "ilike",
+    "category": "PREDICATE",
+    "description": "Case-insensitive pattern matching, equivalent to LIKE but ignoring case. Supported in PostgreSQL; use LOWER(col) LIKE in other databases.",
+    "syntax": "column ILIKE 'pattern'",
+    "example": "SELECT * FROM products WHERE name ILIKE '%laptop%';",
+    "ansi_sql": false
+  },
+  {
+    "keyword": "IS NULL",
+    "slug": "is-null",
+    "category": "PREDICATE",
+    "description": "Tests whether a column value is NULL. Cannot use = NULL because NULL comparisons always return UNKNOWN.",
+    "syntax": "column IS NULL",
+    "example": "SELECT * FROM customers WHERE phone IS NULL;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "IS NOT NULL",
+    "slug": "is-not-null",
+    "category": "PREDICATE",
+    "description": "Tests whether a column value is not NULL. Returns TRUE for any non-NULL value.",
+    "syntax": "column IS NOT NULL",
+    "example": "SELECT * FROM users WHERE email_verified_at IS NOT NULL;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "NOT",
+    "slug": "not",
+    "category": "PREDICATE",
+    "description": "Negates a boolean condition. Can be used with IN, LIKE, BETWEEN, EXISTS, and IS NULL.",
+    "syntax": "NOT condition",
+    "example": "SELECT * FROM products WHERE NOT category IN ('archived', 'discontinued');",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "AND",
+    "slug": "and",
+    "category": "PREDICATE",
+    "description": "Logical conjunction — returns TRUE only when both operands are TRUE. Evaluated after NOT but before OR in operator precedence.",
+    "syntax": "condition1 AND condition2",
+    "example": "SELECT * FROM employees WHERE department = 'Engineering' AND salary > 90000;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "OR",
+    "slug": "or",
+    "category": "PREDICATE",
+    "description": "Logical disjunction — returns TRUE when at least one operand is TRUE. Lower precedence than AND; use parentheses to control evaluation.",
+    "syntax": "condition1 OR condition2",
+    "example": "SELECT * FROM support_tickets WHERE status = 'open' OR priority = 'critical';",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "CASE WHEN",
+    "slug": "case-when",
+    "category": "DQL",
+    "description": "Conditional expression returning different values based on evaluated conditions. Acts like an if-else within a query.",
+    "syntax": "CASE WHEN condition THEN result [WHEN ...] [ELSE default] END",
+    "example": "SELECT name, CASE WHEN score >= 90 THEN 'A' WHEN score >= 80 THEN 'B' ELSE 'C' END AS grade FROM students;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "COALESCE",
+    "slug": "coalesce",
+    "category": "DQL",
+    "description": "Returns the first non-NULL value from a list of arguments. Useful for providing default values when a column may be NULL.",
+    "syntax": "COALESCE(value1, value2, ..., default)",
+    "example": "SELECT COALESCE(nickname, first_name, 'Anonymous') AS display_name FROM users;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "NULLIF",
+    "slug": "nullif",
+    "category": "DQL",
+    "description": "Returns NULL if two expressions are equal; otherwise returns the first expression. Useful to avoid division-by-zero errors.",
+    "syntax": "NULLIF(expression1, expression2)",
+    "example": "SELECT total / NULLIF(quantity, 0) AS unit_price FROM line_items;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "CAST",
+    "slug": "cast",
+    "category": "DQL",
+    "description": "Converts a value from one data type to another explicitly. Standard ANSI syntax; dialects also support :: (PostgreSQL) and CONVERT().",
+    "syntax": "CAST(expression AS target_type)",
+    "example": "SELECT CAST(price AS INTEGER) FROM products;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "OVER",
+    "slug": "over",
+    "category": "WINDOW",
+    "description": "Defines the window frame for a window function. Specifies PARTITION BY, ORDER BY, and frame boundaries.",
+    "syntax": "function() OVER ([PARTITION BY col] [ORDER BY col] [frame])",
+    "example": "SELECT name, salary, AVG(salary) OVER (PARTITION BY department) AS dept_avg FROM employees;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "PARTITION BY",
+    "slug": "partition-by",
+    "category": "WINDOW",
+    "description": "Divides the result set into partitions for window functions to operate on independently, similar to GROUP BY but without collapsing rows.",
+    "syntax": "function() OVER (PARTITION BY column)",
+    "example": "SELECT name, dept, RANK() OVER (PARTITION BY dept ORDER BY salary DESC) AS dept_rank FROM employees;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "ROW_NUMBER",
+    "slug": "row-number",
+    "category": "WINDOW",
+    "description": "Assigns a unique sequential integer to each row within its partition, starting at 1. Ties receive different numbers.",
+    "syntax": "ROW_NUMBER() OVER ([PARTITION BY col] ORDER BY col)",
+    "example": "SELECT *, ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY created_at) AS order_num FROM orders;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "RANK",
+    "slug": "rank",
+    "category": "WINDOW",
+    "description": "Assigns a rank to each row within its partition. Ties receive the same rank, and gaps are left in the sequence.",
+    "syntax": "RANK() OVER ([PARTITION BY col] ORDER BY col)",
+    "example": "SELECT name, score, RANK() OVER (ORDER BY score DESC) AS rank FROM leaderboard;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "DENSE_RANK",
+    "slug": "dense-rank",
+    "category": "WINDOW",
+    "description": "Like RANK but without gaps in ranking values after ties. Sequential integers are assigned with equal ranks for ties.",
+    "syntax": "DENSE_RANK() OVER ([PARTITION BY col] ORDER BY col)",
+    "example": "SELECT name, score, DENSE_RANK() OVER (ORDER BY score DESC) AS dense_rank FROM leaderboard;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "LAG",
+    "slug": "lag",
+    "category": "WINDOW",
+    "description": "Returns the value of a column from a previous row within the partition, without using a self-join. Useful for comparing a row to its predecessor.",
+    "syntax": "LAG(column, offset, default) OVER ([PARTITION BY col] ORDER BY col)",
+    "example": "SELECT date, revenue, LAG(revenue, 1) OVER (ORDER BY date) AS prev_revenue FROM daily_sales;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "LEAD",
+    "slug": "lead",
+    "category": "WINDOW",
+    "description": "Returns the value of a column from a following row within the partition. The complement of LAG.",
+    "syntax": "LEAD(column, offset, default) OVER ([PARTITION BY col] ORDER BY col)",
+    "example": "SELECT date, revenue, LEAD(revenue, 1) OVER (ORDER BY date) AS next_revenue FROM daily_sales;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "FIRST_VALUE",
+    "slug": "first-value",
+    "category": "WINDOW",
+    "description": "Returns the first value in an ordered window frame. Useful for retrieving the earliest or lowest value per partition.",
+    "syntax": "FIRST_VALUE(column) OVER ([PARTITION BY col] ORDER BY col [frame])",
+    "example": "SELECT name, salary, FIRST_VALUE(name) OVER (PARTITION BY dept ORDER BY salary DESC) AS top_earner FROM employees;",
+    "ansi_sql": true
+  },
+  {
+    "keyword": "LAST_VALUE",
+    "slug": "last-value",
+    "category": "WINDOW",
+    "description": "Returns the last value in an ordered window frame. Requires explicit frame specification (ROWS BETWEEN ... AND UNBOUNDED FOLLOWING) to work as expected.",
+    "syntax": "LAST_VALUE(column) OVER ([PARTITION BY col] ORDER BY col ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)",
+    "example": "SELECT name, salary, LAST_VALUE(name) OVER (PARTITION BY dept ORDER BY salary ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS lowest_earner FROM employees;",
+    "ansi_sql": true
+  }
+]

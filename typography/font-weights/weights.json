@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Thin",
+    "slug": "thin",
+    "numeric": 100,
+    "css_keyword": null,
+    "description": "The lightest possible font weight, sometimes called Hairline. Extremely delicate strokes that work best at large display sizes.",
+    "typical_uses": ["large display headings", "luxury brand aesthetics", "decorative typographic elements"]
+  },
+  {
+    "name": "ExtraLight",
+    "slug": "extralight",
+    "numeric": 200,
+    "css_keyword": null,
+    "description": "Also called UltraLight. Very light weight suitable for elegant, refined typographic presentations at medium to large sizes.",
+    "typical_uses": ["subheadings", "taglines", "refined UI labels", "fashion and lifestyle branding"]
+  },
+  {
+    "name": "Light",
+    "slug": "light",
+    "numeric": 300,
+    "css_keyword": null,
+    "description": "A lighter-than-normal weight that gives text a clean, modern, and airy feel. Readable at body sizes on high-resolution screens.",
+    "typical_uses": ["introductory paragraphs", "captions", "secondary body text", "modern UI interfaces"]
+  },
+  {
+    "name": "Regular",
+    "slug": "regular",
+    "numeric": 400,
+    "css_keyword": "normal",
+    "description": "The default font weight for body text across web and print. Balanced stroke width optimised for reading comfort at normal sizes.",
+    "typical_uses": ["body text", "paragraphs", "UI labels", "default reading text"]
+  },
+  {
+    "name": "Medium",
+    "slug": "medium",
+    "numeric": 500,
+    "css_keyword": null,
+    "description": "Slightly heavier than Regular, providing gentle emphasis without the full weight of Bold. Useful for subtle hierarchy within text.",
+    "typical_uses": ["navigation items", "button labels", "subheadings", "card titles", "form labels"]
+  },
+  {
+    "name": "SemiBold",
+    "slug": "semibold",
+    "numeric": 600,
+    "css_keyword": null,
+    "description": "Also called DemiBold. Noticeably heavier than Regular, adding clear emphasis while remaining less aggressive than Bold.",
+    "typical_uses": ["section headings", "sidebar headers", "highlighted UI elements", "table column headers"]
+  },
+  {
+    "name": "Bold",
+    "slug": "bold",
+    "numeric": 700,
+    "css_keyword": "bold",
+    "description": "The standard bold weight used for strong emphasis, headings, and drawing attention. The most universally available font weight.",
+    "typical_uses": ["headings", "call-to-action text", "strong emphasis", "article titles", "alert messages"]
+  },
+  {
+    "name": "ExtraBold",
+    "slug": "extrabold",
+    "numeric": 800,
+    "css_keyword": null,
+    "description": "Also called UltraBold. A very heavy weight for maximum emphasis in headlines and display contexts. Highly impactful at large sizes.",
+    "typical_uses": ["hero headings", "poster text", "campaign taglines", "high-impact display typography"]
+  },
+  {
+    "name": "Black",
+    "slug": "black",
+    "numeric": 900,
+    "css_keyword": null,
+    "description": "Also called Heavy or Ultra. The heaviest weight available, creating maximum visual impact. Best reserved for the largest display text.",
+    "typical_uses": ["super-sized display headings", "advertising banners", "impactful brand statements", "editorial cover typography"]
+  }
+]

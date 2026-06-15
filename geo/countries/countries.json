@@ -248,5 +248,1725 @@
     "dial_code": "+380",
     "currency_code": "UAH",
     "population_approx": 44000000
+  },
+  {
+    "iso2": "AL",
+    "iso3": "ALB",
+    "name": "Albania",
+    "capital": "Tirana",
+    "continent": "Europe",
+    "dial_code": "+355",
+    "currency_code": "ALL",
+    "population_approx": 2800000
+  },
+  {
+    "iso2": "AD",
+    "iso3": "AND",
+    "name": "Andorra",
+    "capital": "Andorra la Vella",
+    "continent": "Europe",
+    "dial_code": "+376",
+    "currency_code": "EUR",
+    "population_approx": 77000
+  },
+  {
+    "iso2": "AM",
+    "iso3": "ARM",
+    "name": "Armenia",
+    "capital": "Yerevan",
+    "continent": "Europe",
+    "dial_code": "+374",
+    "currency_code": "AMD",
+    "population_approx": 3000000
+  },
+  {
+    "iso2": "AT",
+    "iso3": "AUT",
+    "name": "Austria",
+    "capital": "Vienna",
+    "continent": "Europe",
+    "dial_code": "+43",
+    "currency_code": "EUR",
+    "population_approx": 9000000
+  },
+  {
+    "iso2": "AZ",
+    "iso3": "AZE",
+    "name": "Azerbaijan",
+    "capital": "Baku",
+    "continent": "Asia",
+    "dial_code": "+994",
+    "currency_code": "AZN",
+    "population_approx": 10000000
+  },
+  {
+    "iso2": "BY",
+    "iso3": "BLR",
+    "name": "Belarus",
+    "capital": "Minsk",
+    "continent": "Europe",
+    "dial_code": "+375",
+    "currency_code": "BYR",
+    "population_approx": 9400000
+  },
+  {
+    "iso2": "BE",
+    "iso3": "BEL",
+    "name": "Belgium",
+    "capital": "Brussels",
+    "continent": "Europe",
+    "dial_code": "+32",
+    "currency_code": "EUR",
+    "population_approx": 11500000
+  },
+  {
+    "iso2": "BA",
+    "iso3": "BIH",
+    "name": "Bosnia and Herzegovina",
+    "capital": "Sarajevo",
+    "continent": "Europe",
+    "dial_code": "+387",
+    "currency_code": "BAM",
+    "population_approx": 3200000
+  },
+  {
+    "iso2": "BG",
+    "iso3": "BGR",
+    "name": "Bulgaria",
+    "capital": "Sofia",
+    "continent": "Europe",
+    "dial_code": "+359",
+    "currency_code": "BGN",
+    "population_approx": 6500000
+  },
+  {
+    "iso2": "HR",
+    "iso3": "HRV",
+    "name": "Croatia",
+    "capital": "Zagreb",
+    "continent": "Europe",
+    "dial_code": "+385",
+    "currency_code": "EUR",
+    "population_approx": 4000000
+  },
+  {
+    "iso2": "CY",
+    "iso3": "CYP",
+    "name": "Cyprus",
+    "capital": "Nicosia",
+    "continent": "Europe",
+    "dial_code": "+357",
+    "currency_code": "EUR",
+    "population_approx": 1200000
+  },
+  {
+    "iso2": "CZ",
+    "iso3": "CZE",
+    "name": "Czech Republic",
+    "capital": "Prague",
+    "continent": "Europe",
+    "dial_code": "+420",
+    "currency_code": "CZK",
+    "population_approx": 10700000
+  },
+  {
+    "iso2": "DK",
+    "iso3": "DNK",
+    "name": "Denmark",
+    "capital": "Copenhagen",
+    "continent": "Europe",
+    "dial_code": "+45",
+    "currency_code": "DKK",
+    "population_approx": 5900000
+  },
+  {
+    "iso2": "EE",
+    "iso3": "EST",
+    "name": "Estonia",
+    "capital": "Tallinn",
+    "continent": "Europe",
+    "dial_code": "+372",
+    "currency_code": "EUR",
+    "population_approx": 1300000
+  },
+  {
+    "iso2": "FI",
+    "iso3": "FIN",
+    "name": "Finland",
+    "capital": "Helsinki",
+    "continent": "Europe",
+    "dial_code": "+358",
+    "currency_code": "EUR",
+    "population_approx": 5500000
+  },
+  {
+    "iso2": "GE",
+    "iso3": "GEO",
+    "name": "Georgia",
+    "capital": "Tbilisi",
+    "continent": "Asia",
+    "dial_code": "+995",
+    "currency_code": "GEL",
+    "population_approx": 3700000
+  },
+  {
+    "iso2": "GR",
+    "iso3": "GRC",
+    "name": "Greece",
+    "capital": "Athens",
+    "continent": "Europe",
+    "dial_code": "+30",
+    "currency_code": "EUR",
+    "population_approx": 10700000
+  },
+  {
+    "iso2": "HU",
+    "iso3": "HUN",
+    "name": "Hungary",
+    "capital": "Budapest",
+    "continent": "Europe",
+    "dial_code": "+36",
+    "currency_code": "HUF",
+    "population_approx": 9700000
+  },
+  {
+    "iso2": "IS",
+    "iso3": "ISL",
+    "name": "Iceland",
+    "capital": "Reykjavik",
+    "continent": "Europe",
+    "dial_code": "+354",
+    "currency_code": "ISK",
+    "population_approx": 370000
+  },
+  {
+    "iso2": "IE",
+    "iso3": "IRL",
+    "name": "Ireland",
+    "capital": "Dublin",
+    "continent": "Europe",
+    "dial_code": "+353",
+    "currency_code": "EUR",
+    "population_approx": 5100000
+  },
+  {
+    "iso2": "IT",
+    "iso3": "ITA",
+    "name": "Italy",
+    "capital": "Rome",
+    "continent": "Europe",
+    "dial_code": "+39",
+    "currency_code": "EUR",
+    "population_approx": 60000000
+  },
+  {
+    "iso2": "KZ",
+    "iso3": "KAZ",
+    "name": "Kazakhstan",
+    "capital": "Astana",
+    "continent": "Asia",
+    "dial_code": "+7",
+    "currency_code": "KZT",
+    "population_approx": 19000000
+  },
+  {
+    "iso2": "XK",
+    "iso3": "XKX",
+    "name": "Kosovo",
+    "capital": "Pristina",
+    "continent": "Europe",
+    "dial_code": "+383",
+    "currency_code": "EUR",
+    "population_approx": 1800000
+  },
+  {
+    "iso2": "LV",
+    "iso3": "LVA",
+    "name": "Latvia",
+    "capital": "Riga",
+    "continent": "Europe",
+    "dial_code": "+371",
+    "currency_code": "EUR",
+    "population_approx": 1800000
+  },
+  {
+    "iso2": "LI",
+    "iso3": "LIE",
+    "name": "Liechtenstein",
+    "capital": "Vaduz",
+    "continent": "Europe",
+    "dial_code": "+423",
+    "currency_code": "CHF",
+    "population_approx": 38000
+  },
+  {
+    "iso2": "LT",
+    "iso3": "LTU",
+    "name": "Lithuania",
+    "capital": "Vilnius",
+    "continent": "Europe",
+    "dial_code": "+370",
+    "currency_code": "EUR",
+    "population_approx": 2800000
+  },
+  {
+    "iso2": "LU",
+    "iso3": "LUX",
+    "name": "Luxembourg",
+    "capital": "Luxembourg City",
+    "continent": "Europe",
+    "dial_code": "+352",
+    "currency_code": "EUR",
+    "population_approx": 640000
+  },
+  {
+    "iso2": "MT",
+    "iso3": "MLT",
+    "name": "Malta",
+    "capital": "Valletta",
+    "continent": "Europe",
+    "dial_code": "+356",
+    "currency_code": "EUR",
+    "population_approx": 530000
+  },
+  {
+    "iso2": "MD",
+    "iso3": "MDA",
+    "name": "Moldova",
+    "capital": "Chișinău",
+    "continent": "Europe",
+    "dial_code": "+373",
+    "currency_code": "MDL",
+    "population_approx": 2600000
+  },
+  {
+    "iso2": "MC",
+    "iso3": "MCO",
+    "name": "Monaco",
+    "capital": "Monaco",
+    "continent": "Europe",
+    "dial_code": "+377",
+    "currency_code": "EUR",
+    "population_approx": 36000
+  },
+  {
+    "iso2": "ME",
+    "iso3": "MNE",
+    "name": "Montenegro",
+    "capital": "Podgorica",
+    "continent": "Europe",
+    "dial_code": "+382",
+    "currency_code": "EUR",
+    "population_approx": 620000
+  },
+  {
+    "iso2": "MK",
+    "iso3": "MKD",
+    "name": "North Macedonia",
+    "capital": "Skopje",
+    "continent": "Europe",
+    "dial_code": "+389",
+    "currency_code": "MKD",
+    "population_approx": 2100000
+  },
+  {
+    "iso2": "NO",
+    "iso3": "NOR",
+    "name": "Norway",
+    "capital": "Oslo",
+    "continent": "Europe",
+    "dial_code": "+47",
+    "currency_code": "NOK",
+    "population_approx": 5400000
+  },
+  {
+    "iso2": "PT",
+    "iso3": "PRT",
+    "name": "Portugal",
+    "capital": "Lisbon",
+    "continent": "Europe",
+    "dial_code": "+351",
+    "currency_code": "EUR",
+    "population_approx": 10300000
+  },
+  {
+    "iso2": "RO",
+    "iso3": "ROU",
+    "name": "Romania",
+    "capital": "Bucharest",
+    "continent": "Europe",
+    "dial_code": "+40",
+    "currency_code": "RON",
+    "population_approx": 19000000
+  },
+  {
+    "iso2": "SM",
+    "iso3": "SMR",
+    "name": "San Marino",
+    "capital": "San Marino",
+    "continent": "Europe",
+    "dial_code": "+378",
+    "currency_code": "EUR",
+    "population_approx": 34000
+  },
+  {
+    "iso2": "RS",
+    "iso3": "SRB",
+    "name": "Serbia",
+    "capital": "Belgrade",
+    "continent": "Europe",
+    "dial_code": "+381",
+    "currency_code": "RSD",
+    "population_approx": 7000000
+  },
+  {
+    "iso2": "SK",
+    "iso3": "SVK",
+    "name": "Slovakia",
+    "capital": "Bratislava",
+    "continent": "Europe",
+    "dial_code": "+421",
+    "currency_code": "EUR",
+    "population_approx": 5500000
+  },
+  {
+    "iso2": "SI",
+    "iso3": "SVN",
+    "name": "Slovenia",
+    "capital": "Ljubljana",
+    "continent": "Europe",
+    "dial_code": "+386",
+    "currency_code": "EUR",
+    "population_approx": 2100000
+  },
+  {
+    "iso2": "ES",
+    "iso3": "ESP",
+    "name": "Spain",
+    "capital": "Madrid",
+    "continent": "Europe",
+    "dial_code": "+34",
+    "currency_code": "EUR",
+    "population_approx": 47000000
+  },
+  {
+    "iso2": "TR",
+    "iso3": "TUR",
+    "name": "Turkey",
+    "capital": "Ankara",
+    "continent": "Asia",
+    "dial_code": "+90",
+    "currency_code": "TRY",
+    "population_approx": 85000000
+  },
+  {
+    "iso2": "VA",
+    "iso3": "VAT",
+    "name": "Vatican City",
+    "capital": "Vatican City",
+    "continent": "Europe",
+    "dial_code": "+39",
+    "currency_code": "EUR",
+    "population_approx": 800
+  },
+  {
+    "iso2": "AF",
+    "iso3": "AFG",
+    "name": "Afghanistan",
+    "capital": "Kabul",
+    "continent": "Asia",
+    "dial_code": "+93",
+    "currency_code": "AFN",
+    "population_approx": 40000000
+  },
+  {
+    "iso2": "BH",
+    "iso3": "BHR",
+    "name": "Bahrain",
+    "capital": "Manama",
+    "continent": "Asia",
+    "dial_code": "+973",
+    "currency_code": "BHD",
+    "population_approx": 1500000
+  },
+  {
+    "iso2": "BD",
+    "iso3": "BGD",
+    "name": "Bangladesh",
+    "capital": "Dhaka",
+    "continent": "Asia",
+    "dial_code": "+880",
+    "currency_code": "BDT",
+    "population_approx": 170000000
+  },
+  {
+    "iso2": "BT",
+    "iso3": "BTN",
+    "name": "Bhutan",
+    "capital": "Thimphu",
+    "continent": "Asia",
+    "dial_code": "+975",
+    "currency_code": "BTN",
+    "population_approx": 800000
+  },
+  {
+    "iso2": "BN",
+    "iso3": "BRN",
+    "name": "Brunei",
+    "capital": "Bandar Seri Begawan",
+    "continent": "Asia",
+    "dial_code": "+673",
+    "currency_code": "BND",
+    "population_approx": 440000
+  },
+  {
+    "iso2": "KH",
+    "iso3": "KHM",
+    "name": "Cambodia",
+    "capital": "Phnom Penh",
+    "continent": "Asia",
+    "dial_code": "+855",
+    "currency_code": "KHR",
+    "population_approx": 17000000
+  },
+  {
+    "iso2": "TL",
+    "iso3": "TLS",
+    "name": "East Timor",
+    "capital": "Dili",
+    "continent": "Asia",
+    "dial_code": "+670",
+    "currency_code": "USD",
+    "population_approx": 1300000
+  },
+  {
+    "iso2": "IR",
+    "iso3": "IRN",
+    "name": "Iran",
+    "capital": "Tehran",
+    "continent": "Asia",
+    "dial_code": "+98",
+    "currency_code": "IRR",
+    "population_approx": 87000000
+  },
+  {
+    "iso2": "IQ",
+    "iso3": "IRQ",
+    "name": "Iraq",
+    "capital": "Baghdad",
+    "continent": "Asia",
+    "dial_code": "+964",
+    "currency_code": "IQD",
+    "population_approx": 41000000
+  },
+  {
+    "iso2": "IL",
+    "iso3": "ISR",
+    "name": "Israel",
+    "capital": "Jerusalem",
+    "continent": "Asia",
+    "dial_code": "+972",
+    "currency_code": "ILS",
+    "population_approx": 9500000
+  },
+  {
+    "iso2": "JO",
+    "iso3": "JOR",
+    "name": "Jordan",
+    "capital": "Amman",
+    "continent": "Asia",
+    "dial_code": "+962",
+    "currency_code": "JOD",
+    "population_approx": 10000000
+  },
+  {
+    "iso2": "KW",
+    "iso3": "KWT",
+    "name": "Kuwait",
+    "capital": "Kuwait City",
+    "continent": "Asia",
+    "dial_code": "+965",
+    "currency_code": "KWD",
+    "population_approx": 4400000
+  },
+  {
+    "iso2": "KG",
+    "iso3": "KGZ",
+    "name": "Kyrgyzstan",
+    "capital": "Bishkek",
+    "continent": "Asia",
+    "dial_code": "+996",
+    "currency_code": "KGS",
+    "population_approx": 6600000
+  },
+  {
+    "iso2": "LA",
+    "iso3": "LAO",
+    "name": "Laos",
+    "capital": "Vientiane",
+    "continent": "Asia",
+    "dial_code": "+856",
+    "currency_code": "LAK",
+    "population_approx": 7300000
+  },
+  {
+    "iso2": "LB",
+    "iso3": "LBN",
+    "name": "Lebanon",
+    "capital": "Beirut",
+    "continent": "Asia",
+    "dial_code": "+961",
+    "currency_code": "LBP",
+    "population_approx": 5500000
+  },
+  {
+    "iso2": "MY",
+    "iso3": "MYS",
+    "name": "Malaysia",
+    "capital": "Kuala Lumpur",
+    "continent": "Asia",
+    "dial_code": "+60",
+    "currency_code": "MYR",
+    "population_approx": 33000000
+  },
+  {
+    "iso2": "MV",
+    "iso3": "MDV",
+    "name": "Maldives",
+    "capital": "Malé",
+    "continent": "Asia",
+    "dial_code": "+960",
+    "currency_code": "MVR",
+    "population_approx": 540000
+  },
+  {
+    "iso2": "MN",
+    "iso3": "MNG",
+    "name": "Mongolia",
+    "capital": "Ulaanbaatar",
+    "continent": "Asia",
+    "dial_code": "+976",
+    "currency_code": "MNT",
+    "population_approx": 3300000
+  },
+  {
+    "iso2": "MM",
+    "iso3": "MMR",
+    "name": "Myanmar",
+    "capital": "Naypyidaw",
+    "continent": "Asia",
+    "dial_code": "+95",
+    "currency_code": "MMK",
+    "population_approx": 55000000
+  },
+  {
+    "iso2": "NP",
+    "iso3": "NPL",
+    "name": "Nepal",
+    "capital": "Kathmandu",
+    "continent": "Asia",
+    "dial_code": "+977",
+    "currency_code": "NPR",
+    "population_approx": 30000000
+  },
+  {
+    "iso2": "KP",
+    "iso3": "PRK",
+    "name": "North Korea",
+    "capital": "Pyongyang",
+    "continent": "Asia",
+    "dial_code": "+850",
+    "currency_code": "KPW",
+    "population_approx": 25000000
+  },
+  {
+    "iso2": "OM",
+    "iso3": "OMN",
+    "name": "Oman",
+    "capital": "Muscat",
+    "continent": "Asia",
+    "dial_code": "+968",
+    "currency_code": "OMR",
+    "population_approx": 4600000
+  },
+  {
+    "iso2": "PS",
+    "iso3": "PSE",
+    "name": "Palestine",
+    "capital": "Ramallah",
+    "continent": "Asia",
+    "dial_code": "+970",
+    "currency_code": "ILS",
+    "population_approx": 5000000
+  },
+  {
+    "iso2": "PH",
+    "iso3": "PHL",
+    "name": "Philippines",
+    "capital": "Manila",
+    "continent": "Asia",
+    "dial_code": "+63",
+    "currency_code": "PHP",
+    "population_approx": 115000000
+  },
+  {
+    "iso2": "QA",
+    "iso3": "QAT",
+    "name": "Qatar",
+    "capital": "Doha",
+    "continent": "Asia",
+    "dial_code": "+974",
+    "currency_code": "QAR",
+    "population_approx": 2900000
+  },
+  {
+    "iso2": "SA",
+    "iso3": "SAU",
+    "name": "Saudi Arabia",
+    "capital": "Riyadh",
+    "continent": "Asia",
+    "dial_code": "+966",
+    "currency_code": "SAR",
+    "population_approx": 35000000
+  },
+  {
+    "iso2": "LK",
+    "iso3": "LKA",
+    "name": "Sri Lanka",
+    "capital": "Sri Jayawardenepura Kotte",
+    "continent": "Asia",
+    "dial_code": "+94",
+    "currency_code": "LKR",
+    "population_approx": 22000000
+  },
+  {
+    "iso2": "SY",
+    "iso3": "SYR",
+    "name": "Syria",
+    "capital": "Damascus",
+    "continent": "Asia",
+    "dial_code": "+963",
+    "currency_code": "SYP",
+    "population_approx": 21000000
+  },
+  {
+    "iso2": "TW",
+    "iso3": "TWN",
+    "name": "Taiwan",
+    "capital": "Taipei",
+    "continent": "Asia",
+    "dial_code": "+886",
+    "currency_code": "TWD",
+    "population_approx": 23500000
+  },
+  {
+    "iso2": "TJ",
+    "iso3": "TJK",
+    "name": "Tajikistan",
+    "capital": "Dushanbe",
+    "continent": "Asia",
+    "dial_code": "+992",
+    "currency_code": "TJS",
+    "population_approx": 9500000
+  },
+  {
+    "iso2": "TH",
+    "iso3": "THA",
+    "name": "Thailand",
+    "capital": "Bangkok",
+    "continent": "Asia",
+    "dial_code": "+66",
+    "currency_code": "THB",
+    "population_approx": 70000000
+  },
+  {
+    "iso2": "TM",
+    "iso3": "TKM",
+    "name": "Turkmenistan",
+    "capital": "Ashgabat",
+    "continent": "Asia",
+    "dial_code": "+993",
+    "currency_code": "TMT",
+    "population_approx": 6000000
+  },
+  {
+    "iso2": "AE",
+    "iso3": "ARE",
+    "name": "United Arab Emirates",
+    "capital": "Abu Dhabi",
+    "continent": "Asia",
+    "dial_code": "+971",
+    "currency_code": "AED",
+    "population_approx": 9900000
+  },
+  {
+    "iso2": "UZ",
+    "iso3": "UZB",
+    "name": "Uzbekistan",
+    "capital": "Tashkent",
+    "continent": "Asia",
+    "dial_code": "+998",
+    "currency_code": "UZS",
+    "population_approx": 35000000
+  },
+  {
+    "iso2": "VN",
+    "iso3": "VNM",
+    "name": "Vietnam",
+    "capital": "Hanoi",
+    "continent": "Asia",
+    "dial_code": "+84",
+    "currency_code": "VND",
+    "population_approx": 97000000
+  },
+  {
+    "iso2": "YE",
+    "iso3": "YEM",
+    "name": "Yemen",
+    "capital": "Sanaa",
+    "continent": "Asia",
+    "dial_code": "+967",
+    "currency_code": "YER",
+    "population_approx": 33000000
+  },
+  {
+    "iso2": "DZ",
+    "iso3": "DZA",
+    "name": "Algeria",
+    "capital": "Algiers",
+    "continent": "Africa",
+    "dial_code": "+213",
+    "currency_code": "DZD",
+    "population_approx": 45000000
+  },
+  {
+    "iso2": "AO",
+    "iso3": "AGO",
+    "name": "Angola",
+    "capital": "Luanda",
+    "continent": "Africa",
+    "dial_code": "+244",
+    "currency_code": "AOA",
+    "population_approx": 34000000
+  },
+  {
+    "iso2": "BJ",
+    "iso3": "BEN",
+    "name": "Benin",
+    "capital": "Porto-Novo",
+    "continent": "Africa",
+    "dial_code": "+229",
+    "currency_code": "XOF",
+    "population_approx": 13000000
+  },
+  {
+    "iso2": "BW",
+    "iso3": "BWA",
+    "name": "Botswana",
+    "capital": "Gaborone",
+    "continent": "Africa",
+    "dial_code": "+267",
+    "currency_code": "BWP",
+    "population_approx": 2600000
+  },
+  {
+    "iso2": "BF",
+    "iso3": "BFA",
+    "name": "Burkina Faso",
+    "capital": "Ouagadougou",
+    "continent": "Africa",
+    "dial_code": "+226",
+    "currency_code": "XOF",
+    "population_approx": 21000000
+  },
+  {
+    "iso2": "BI",
+    "iso3": "BDI",
+    "name": "Burundi",
+    "capital": "Gitega",
+    "continent": "Africa",
+    "dial_code": "+257",
+    "currency_code": "BIF",
+    "population_approx": 12000000
+  },
+  {
+    "iso2": "CM",
+    "iso3": "CMR",
+    "name": "Cameroon",
+    "capital": "Yaoundé",
+    "continent": "Africa",
+    "dial_code": "+237",
+    "currency_code": "XAF",
+    "population_approx": 27000000
+  },
+  {
+    "iso2": "CV",
+    "iso3": "CPV",
+    "name": "Cape Verde",
+    "capital": "Praia",
+    "continent": "Africa",
+    "dial_code": "+238",
+    "currency_code": "CVE",
+    "population_approx": 560000
+  },
+  {
+    "iso2": "CF",
+    "iso3": "CAF",
+    "name": "Central African Republic",
+    "capital": "Bangui",
+    "continent": "Africa",
+    "dial_code": "+236",
+    "currency_code": "XAF",
+    "population_approx": 5000000
+  },
+  {
+    "iso2": "TD",
+    "iso3": "TCD",
+    "name": "Chad",
+    "capital": "N'Djamena",
+    "continent": "Africa",
+    "dial_code": "+235",
+    "currency_code": "XAF",
+    "population_approx": 17000000
+  },
+  {
+    "iso2": "KM",
+    "iso3": "COM",
+    "name": "Comoros",
+    "capital": "Moroni",
+    "continent": "Africa",
+    "dial_code": "+269",
+    "currency_code": "KMF",
+    "population_approx": 870000
+  },
+  {
+    "iso2": "CD",
+    "iso3": "COD",
+    "name": "Congo (Democratic Republic)",
+    "capital": "Kinshasa",
+    "continent": "Africa",
+    "dial_code": "+243",
+    "currency_code": "CDF",
+    "population_approx": 100000000
+  },
+  {
+    "iso2": "CG",
+    "iso3": "COG",
+    "name": "Congo (Republic)",
+    "capital": "Brazzaville",
+    "continent": "Africa",
+    "dial_code": "+242",
+    "currency_code": "XAF",
+    "population_approx": 5800000
+  },
+  {
+    "iso2": "DJ",
+    "iso3": "DJI",
+    "name": "Djibouti",
+    "capital": "Djibouti",
+    "continent": "Africa",
+    "dial_code": "+253",
+    "currency_code": "DJF",
+    "population_approx": 1000000
+  },
+  {
+    "iso2": "GQ",
+    "iso3": "GNQ",
+    "name": "Equatorial Guinea",
+    "capital": "Malabo",
+    "continent": "Africa",
+    "dial_code": "+240",
+    "currency_code": "XAF",
+    "population_approx": 1500000
+  },
+  {
+    "iso2": "ER",
+    "iso3": "ERI",
+    "name": "Eritrea",
+    "capital": "Asmara",
+    "continent": "Africa",
+    "dial_code": "+291",
+    "currency_code": "ERN",
+    "population_approx": 3500000
+  },
+  {
+    "iso2": "SZ",
+    "iso3": "SWZ",
+    "name": "Eswatini",
+    "capital": "Mbabane",
+    "continent": "Africa",
+    "dial_code": "+268",
+    "currency_code": "SZL",
+    "population_approx": 1200000
+  },
+  {
+    "iso2": "ET",
+    "iso3": "ETH",
+    "name": "Ethiopia",
+    "capital": "Addis Ababa",
+    "continent": "Africa",
+    "dial_code": "+251",
+    "currency_code": "ETB",
+    "population_approx": 120000000
+  },
+  {
+    "iso2": "GA",
+    "iso3": "GAB",
+    "name": "Gabon",
+    "capital": "Libreville",
+    "continent": "Africa",
+    "dial_code": "+241",
+    "currency_code": "XAF",
+    "population_approx": 2300000
+  },
+  {
+    "iso2": "GM",
+    "iso3": "GMB",
+    "name": "Gambia",
+    "capital": "Banjul",
+    "continent": "Africa",
+    "dial_code": "+220",
+    "currency_code": "GMD",
+    "population_approx": 2600000
+  },
+  {
+    "iso2": "GH",
+    "iso3": "GHA",
+    "name": "Ghana",
+    "capital": "Accra",
+    "continent": "Africa",
+    "dial_code": "+233",
+    "currency_code": "GHS",
+    "population_approx": 32000000
+  },
+  {
+    "iso2": "GN",
+    "iso3": "GIN",
+    "name": "Guinea",
+    "capital": "Conakry",
+    "continent": "Africa",
+    "dial_code": "+224",
+    "currency_code": "GNF",
+    "population_approx": 13000000
+  },
+  {
+    "iso2": "GW",
+    "iso3": "GNB",
+    "name": "Guinea-Bissau",
+    "capital": "Bissau",
+    "continent": "Africa",
+    "dial_code": "+245",
+    "currency_code": "XOF",
+    "population_approx": 2000000
+  },
+  {
+    "iso2": "CI",
+    "iso3": "CIV",
+    "name": "Ivory Coast",
+    "capital": "Yamoussoukro",
+    "continent": "Africa",
+    "dial_code": "+225",
+    "currency_code": "XOF",
+    "population_approx": 27000000
+  },
+  {
+    "iso2": "KE",
+    "iso3": "KEN",
+    "name": "Kenya",
+    "capital": "Nairobi",
+    "continent": "Africa",
+    "dial_code": "+254",
+    "currency_code": "KES",
+    "population_approx": 54000000
+  },
+  {
+    "iso2": "LS",
+    "iso3": "LSO",
+    "name": "Lesotho",
+    "capital": "Maseru",
+    "continent": "Africa",
+    "dial_code": "+266",
+    "currency_code": "LSL",
+    "population_approx": 2100000
+  },
+  {
+    "iso2": "LR",
+    "iso3": "LBR",
+    "name": "Liberia",
+    "capital": "Monrovia",
+    "continent": "Africa",
+    "dial_code": "+231",
+    "currency_code": "LRD",
+    "population_approx": 5300000
+  },
+  {
+    "iso2": "LY",
+    "iso3": "LBY",
+    "name": "Libya",
+    "capital": "Tripoli",
+    "continent": "Africa",
+    "dial_code": "+218",
+    "currency_code": "LYD",
+    "population_approx": 7000000
+  },
+  {
+    "iso2": "MG",
+    "iso3": "MDG",
+    "name": "Madagascar",
+    "capital": "Antananarivo",
+    "continent": "Africa",
+    "dial_code": "+261",
+    "currency_code": "MGA",
+    "population_approx": 28000000
+  },
+  {
+    "iso2": "MW",
+    "iso3": "MWI",
+    "name": "Malawi",
+    "capital": "Lilongwe",
+    "continent": "Africa",
+    "dial_code": "+265",
+    "currency_code": "MWK",
+    "population_approx": 20000000
+  },
+  {
+    "iso2": "ML",
+    "iso3": "MLI",
+    "name": "Mali",
+    "capital": "Bamako",
+    "continent": "Africa",
+    "dial_code": "+223",
+    "currency_code": "XOF",
+    "population_approx": 22000000
+  },
+  {
+    "iso2": "MR",
+    "iso3": "MRT",
+    "name": "Mauritania",
+    "capital": "Nouakchott",
+    "continent": "Africa",
+    "dial_code": "+222",
+    "currency_code": "MRU",
+    "population_approx": 4600000
+  },
+  {
+    "iso2": "MU",
+    "iso3": "MUS",
+    "name": "Mauritius",
+    "capital": "Port Louis",
+    "continent": "Africa",
+    "dial_code": "+230",
+    "currency_code": "MUR",
+    "population_approx": 1300000
+  },
+  {
+    "iso2": "MA",
+    "iso3": "MAR",
+    "name": "Morocco",
+    "capital": "Rabat",
+    "continent": "Africa",
+    "dial_code": "+212",
+    "currency_code": "MAD",
+    "population_approx": 37000000
+  },
+  {
+    "iso2": "MZ",
+    "iso3": "MOZ",
+    "name": "Mozambique",
+    "capital": "Maputo",
+    "continent": "Africa",
+    "dial_code": "+258",
+    "currency_code": "MZN",
+    "population_approx": 32000000
+  },
+  {
+    "iso2": "NA",
+    "iso3": "NAM",
+    "name": "Namibia",
+    "capital": "Windhoek",
+    "continent": "Africa",
+    "dial_code": "+264",
+    "currency_code": "NAD",
+    "population_approx": 2600000
+  },
+  {
+    "iso2": "NE",
+    "iso3": "NER",
+    "name": "Niger",
+    "capital": "Niamey",
+    "continent": "Africa",
+    "dial_code": "+227",
+    "currency_code": "XOF",
+    "population_approx": 25000000
+  },
+  {
+    "iso2": "RW",
+    "iso3": "RWA",
+    "name": "Rwanda",
+    "capital": "Kigali",
+    "continent": "Africa",
+    "dial_code": "+250",
+    "currency_code": "RWF",
+    "population_approx": 13000000
+  },
+  {
+    "iso2": "ST",
+    "iso3": "STP",
+    "name": "São Tomé and Príncipe",
+    "capital": "São Tomé",
+    "continent": "Africa",
+    "dial_code": "+239",
+    "currency_code": "STN",
+    "population_approx": 220000
+  },
+  {
+    "iso2": "SN",
+    "iso3": "SEN",
+    "name": "Senegal",
+    "capital": "Dakar",
+    "continent": "Africa",
+    "dial_code": "+221",
+    "currency_code": "XOF",
+    "population_approx": 17000000
+  },
+  {
+    "iso2": "SC",
+    "iso3": "SYC",
+    "name": "Seychelles",
+    "capital": "Victoria",
+    "continent": "Africa",
+    "dial_code": "+248",
+    "currency_code": "SCR",
+    "population_approx": 100000
+  },
+  {
+    "iso2": "SL",
+    "iso3": "SLE",
+    "name": "Sierra Leone",
+    "capital": "Freetown",
+    "continent": "Africa",
+    "dial_code": "+232",
+    "currency_code": "SLL",
+    "population_approx": 8000000
+  },
+  {
+    "iso2": "SO",
+    "iso3": "SOM",
+    "name": "Somalia",
+    "capital": "Mogadishu",
+    "continent": "Africa",
+    "dial_code": "+252",
+    "currency_code": "SOS",
+    "population_approx": 16000000
+  },
+  {
+    "iso2": "SS",
+    "iso3": "SSD",
+    "name": "South Sudan",
+    "capital": "Juba",
+    "continent": "Africa",
+    "dial_code": "+211",
+    "currency_code": "SSP",
+    "population_approx": 11000000
+  },
+  {
+    "iso2": "SD",
+    "iso3": "SDN",
+    "name": "Sudan",
+    "capital": "Khartoum",
+    "continent": "Africa",
+    "dial_code": "+249",
+    "currency_code": "SDG",
+    "population_approx": 46000000
+  },
+  {
+    "iso2": "TZ",
+    "iso3": "TZA",
+    "name": "Tanzania",
+    "capital": "Dodoma",
+    "continent": "Africa",
+    "dial_code": "+255",
+    "currency_code": "TZS",
+    "population_approx": 63000000
+  },
+  {
+    "iso2": "TG",
+    "iso3": "TGO",
+    "name": "Togo",
+    "capital": "Lomé",
+    "continent": "Africa",
+    "dial_code": "+228",
+    "currency_code": "XOF",
+    "population_approx": 8600000
+  },
+  {
+    "iso2": "TN",
+    "iso3": "TUN",
+    "name": "Tunisia",
+    "capital": "Tunis",
+    "continent": "Africa",
+    "dial_code": "+216",
+    "currency_code": "TND",
+    "population_approx": 12000000
+  },
+  {
+    "iso2": "UG",
+    "iso3": "UGA",
+    "name": "Uganda",
+    "capital": "Kampala",
+    "continent": "Africa",
+    "dial_code": "+256",
+    "currency_code": "UGX",
+    "population_approx": 47000000
+  },
+  {
+    "iso2": "ZM",
+    "iso3": "ZMB",
+    "name": "Zambia",
+    "capital": "Lusaka",
+    "continent": "Africa",
+    "dial_code": "+260",
+    "currency_code": "ZMW",
+    "population_approx": 19000000
+  },
+  {
+    "iso2": "ZW",
+    "iso3": "ZWE",
+    "name": "Zimbabwe",
+    "capital": "Harare",
+    "continent": "Africa",
+    "dial_code": "+263",
+    "currency_code": "ZWL",
+    "population_approx": 16000000
+  },
+  {
+    "iso2": "AG",
+    "iso3": "ATG",
+    "name": "Antigua and Barbuda",
+    "capital": "Saint John's",
+    "continent": "Americas",
+    "dial_code": "+1268",
+    "currency_code": "XCD",
+    "population_approx": 100000
+  },
+  {
+    "iso2": "BS",
+    "iso3": "BHS",
+    "name": "Bahamas",
+    "capital": "Nassau",
+    "continent": "Americas",
+    "dial_code": "+1242",
+    "currency_code": "BSD",
+    "population_approx": 400000
+  },
+  {
+    "iso2": "BB",
+    "iso3": "BRB",
+    "name": "Barbados",
+    "capital": "Bridgetown",
+    "continent": "Americas",
+    "dial_code": "+1246",
+    "currency_code": "BBD",
+    "population_approx": 280000
+  },
+  {
+    "iso2": "BZ",
+    "iso3": "BLZ",
+    "name": "Belize",
+    "capital": "Belmopan",
+    "continent": "Americas",
+    "dial_code": "+501",
+    "currency_code": "BZD",
+    "population_approx": 400000
+  },
+  {
+    "iso2": "BO",
+    "iso3": "BOL",
+    "name": "Bolivia",
+    "capital": "Sucre",
+    "continent": "Americas",
+    "dial_code": "+591",
+    "currency_code": "BOB",
+    "population_approx": 12000000
+  },
+  {
+    "iso2": "CL",
+    "iso3": "CHL",
+    "name": "Chile",
+    "capital": "Santiago",
+    "continent": "Americas",
+    "dial_code": "+56",
+    "currency_code": "CLP",
+    "population_approx": 19000000
+  },
+  {
+    "iso2": "CO",
+    "iso3": "COL",
+    "name": "Colombia",
+    "capital": "Bogotá",
+    "continent": "Americas",
+    "dial_code": "+57",
+    "currency_code": "COP",
+    "population_approx": 51000000
+  },
+  {
+    "iso2": "CR",
+    "iso3": "CRI",
+    "name": "Costa Rica",
+    "capital": "San José",
+    "continent": "Americas",
+    "dial_code": "+506",
+    "currency_code": "CRC",
+    "population_approx": 5200000
+  },
+  {
+    "iso2": "CU",
+    "iso3": "CUB",
+    "name": "Cuba",
+    "capital": "Havana",
+    "continent": "Americas",
+    "dial_code": "+53",
+    "currency_code": "CUP",
+    "population_approx": 11000000
+  },
+  {
+    "iso2": "DM",
+    "iso3": "DMA",
+    "name": "Dominica",
+    "capital": "Roseau",
+    "continent": "Americas",
+    "dial_code": "+1767",
+    "currency_code": "XCD",
+    "population_approx": 72000
+  },
+  {
+    "iso2": "DO",
+    "iso3": "DOM",
+    "name": "Dominican Republic",
+    "capital": "Santo Domingo",
+    "continent": "Americas",
+    "dial_code": "+1809",
+    "currency_code": "DOP",
+    "population_approx": 11000000
+  },
+  {
+    "iso2": "EC",
+    "iso3": "ECU",
+    "name": "Ecuador",
+    "capital": "Quito",
+    "continent": "Americas",
+    "dial_code": "+593",
+    "currency_code": "USD",
+    "population_approx": 18000000
+  },
+  {
+    "iso2": "SV",
+    "iso3": "SLV",
+    "name": "El Salvador",
+    "capital": "San Salvador",
+    "continent": "Americas",
+    "dial_code": "+503",
+    "currency_code": "USD",
+    "population_approx": 6500000
+  },
+  {
+    "iso2": "GD",
+    "iso3": "GRD",
+    "name": "Grenada",
+    "capital": "Saint George's",
+    "continent": "Americas",
+    "dial_code": "+1473",
+    "currency_code": "XCD",
+    "population_approx": 113000
+  },
+  {
+    "iso2": "GT",
+    "iso3": "GTM",
+    "name": "Guatemala",
+    "capital": "Guatemala City",
+    "continent": "Americas",
+    "dial_code": "+502",
+    "currency_code": "GTQ",
+    "population_approx": 17000000
+  },
+  {
+    "iso2": "GY",
+    "iso3": "GUY",
+    "name": "Guyana",
+    "capital": "Georgetown",
+    "continent": "Americas",
+    "dial_code": "+592",
+    "currency_code": "GYD",
+    "population_approx": 800000
+  },
+  {
+    "iso2": "HT",
+    "iso3": "HTI",
+    "name": "Haiti",
+    "capital": "Port-au-Prince",
+    "continent": "Americas",
+    "dial_code": "+509",
+    "currency_code": "HTG",
+    "population_approx": 11000000
+  },
+  {
+    "iso2": "HN",
+    "iso3": "HND",
+    "name": "Honduras",
+    "capital": "Tegucigalpa",
+    "continent": "Americas",
+    "dial_code": "+504",
+    "currency_code": "HNL",
+    "population_approx": 10000000
+  },
+  {
+    "iso2": "JM",
+    "iso3": "JAM",
+    "name": "Jamaica",
+    "capital": "Kingston",
+    "continent": "Americas",
+    "dial_code": "+1876",
+    "currency_code": "JMD",
+    "population_approx": 3000000
+  },
+  {
+    "iso2": "NI",
+    "iso3": "NIC",
+    "name": "Nicaragua",
+    "capital": "Managua",
+    "continent": "Americas",
+    "dial_code": "+505",
+    "currency_code": "NIO",
+    "population_approx": 7000000
+  },
+  {
+    "iso2": "PA",
+    "iso3": "PAN",
+    "name": "Panama",
+    "capital": "Panama City",
+    "continent": "Americas",
+    "dial_code": "+507",
+    "currency_code": "PAB",
+    "population_approx": 4300000
+  },
+  {
+    "iso2": "PY",
+    "iso3": "PRY",
+    "name": "Paraguay",
+    "capital": "Asunción",
+    "continent": "Americas",
+    "dial_code": "+595",
+    "currency_code": "PYG",
+    "population_approx": 7400000
+  },
+  {
+    "iso2": "PE",
+    "iso3": "PER",
+    "name": "Peru",
+    "capital": "Lima",
+    "continent": "Americas",
+    "dial_code": "+51",
+    "currency_code": "PEN",
+    "population_approx": 33000000
+  },
+  {
+    "iso2": "KN",
+    "iso3": "KNA",
+    "name": "Saint Kitts and Nevis",
+    "capital": "Basseterre",
+    "continent": "Americas",
+    "dial_code": "+1869",
+    "currency_code": "XCD",
+    "population_approx": 53000
+  },
+  {
+    "iso2": "LC",
+    "iso3": "LCA",
+    "name": "Saint Lucia",
+    "capital": "Castries",
+    "continent": "Americas",
+    "dial_code": "+1758",
+    "currency_code": "XCD",
+    "population_approx": 180000
+  },
+  {
+    "iso2": "VC",
+    "iso3": "VCT",
+    "name": "Saint Vincent and the Grenadines",
+    "capital": "Kingstown",
+    "continent": "Americas",
+    "dial_code": "+1784",
+    "currency_code": "XCD",
+    "population_approx": 110000
+  },
+  {
+    "iso2": "SR",
+    "iso3": "SUR",
+    "name": "Suriname",
+    "capital": "Paramaribo",
+    "continent": "Americas",
+    "dial_code": "+597",
+    "currency_code": "SRD",
+    "population_approx": 600000
+  },
+  {
+    "iso2": "TT",
+    "iso3": "TTO",
+    "name": "Trinidad and Tobago",
+    "capital": "Port of Spain",
+    "continent": "Americas",
+    "dial_code": "+1868",
+    "currency_code": "TTD",
+    "population_approx": 1400000
+  },
+  {
+    "iso2": "UY",
+    "iso3": "URY",
+    "name": "Uruguay",
+    "capital": "Montevideo",
+    "continent": "Americas",
+    "dial_code": "+598",
+    "currency_code": "UYU",
+    "population_approx": 3500000
+  },
+  {
+    "iso2": "VE",
+    "iso3": "VEN",
+    "name": "Venezuela",
+    "capital": "Caracas",
+    "continent": "Americas",
+    "dial_code": "+58",
+    "currency_code": "VEF",
+    "population_approx": 28000000
+  },
+  {
+    "iso2": "FJ",
+    "iso3": "FJI",
+    "name": "Fiji",
+    "capital": "Suva",
+    "continent": "Oceania",
+    "dial_code": "+679",
+    "currency_code": "FJD",
+    "population_approx": 930000
+  },
+  {
+    "iso2": "KI",
+    "iso3": "KIR",
+    "name": "Kiribati",
+    "capital": "South Tarawa",
+    "continent": "Oceania",
+    "dial_code": "+686",
+    "currency_code": "AUD",
+    "population_approx": 120000
+  },
+  {
+    "iso2": "MH",
+    "iso3": "MHL",
+    "name": "Marshall Islands",
+    "capital": "Majuro",
+    "continent": "Oceania",
+    "dial_code": "+692",
+    "currency_code": "USD",
+    "population_approx": 42000
+  },
+  {
+    "iso2": "FM",
+    "iso3": "FSM",
+    "name": "Micronesia",
+    "capital": "Palikir",
+    "continent": "Oceania",
+    "dial_code": "+691",
+    "currency_code": "USD",
+    "population_approx": 115000
+  },
+  {
+    "iso2": "NR",
+    "iso3": "NRU",
+    "name": "Nauru",
+    "capital": "Yaren",
+    "continent": "Oceania",
+    "dial_code": "+674",
+    "currency_code": "AUD",
+    "population_approx": 10000
+  },
+  {
+    "iso2": "NZ",
+    "iso3": "NZL",
+    "name": "New Zealand",
+    "capital": "Wellington",
+    "continent": "Oceania",
+    "dial_code": "+64",
+    "currency_code": "NZD",
+    "population_approx": 5000000
+  },
+  {
+    "iso2": "PW",
+    "iso3": "PLW",
+    "name": "Palau",
+    "capital": "Ngerulmud",
+    "continent": "Oceania",
+    "dial_code": "+680",
+    "currency_code": "USD",
+    "population_approx": 18000
+  },
+  {
+    "iso2": "PG",
+    "iso3": "PNG",
+    "name": "Papua New Guinea",
+    "capital": "Port Moresby",
+    "continent": "Oceania",
+    "dial_code": "+675",
+    "currency_code": "PGK",
+    "population_approx": 10000000
+  },
+  {
+    "iso2": "WS",
+    "iso3": "WSM",
+    "name": "Samoa",
+    "capital": "Apia",
+    "continent": "Oceania",
+    "dial_code": "+685",
+    "currency_code": "WST",
+    "population_approx": 220000
+  },
+  {
+    "iso2": "SB",
+    "iso3": "SLB",
+    "name": "Solomon Islands",
+    "capital": "Honiara",
+    "continent": "Oceania",
+    "dial_code": "+677",
+    "currency_code": "SBD",
+    "population_approx": 720000
+  },
+  {
+    "iso2": "TO",
+    "iso3": "TON",
+    "name": "Tonga",
+    "capital": "Nukuʻalofa",
+    "continent": "Oceania",
+    "dial_code": "+676",
+    "currency_code": "TOP",
+    "population_approx": 100000
+  },
+  {
+    "iso2": "TV",
+    "iso3": "TUV",
+    "name": "Tuvalu",
+    "capital": "Funafuti",
+    "continent": "Oceania",
+    "dial_code": "+688",
+    "currency_code": "AUD",
+    "population_approx": 11000
+  },
+  {
+    "iso2": "VU",
+    "iso3": "VUT",
+    "name": "Vanuatu",
+    "capital": "Port Vila",
+    "continent": "Oceania",
+    "dial_code": "+678",
+    "currency_code": "VUV",
+    "population_approx": 320000
   }
 ]

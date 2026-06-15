@@ -1,0 +1,28 @@
+/* Theme: Nightfox */
+/* Source: https://github.com/EdenEast/nightfox.nvim */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #192330;
+  --foreground:        #CDCECF;
+  --cursor:            #CDCECF;
+  --selection:         #2B3B51;
+
+  --black:             #393B44;
+  --red:               #C94F6D;
+  --green:             #81B29A;
+  --yellow:            #DBC074;
+  --blue:              #719CD6;
+  --magenta:           #9D79D6;
+  --cyan:              #63CDCF;
+  --white:             #DFDFE0;
+
+  --bright-black:      #575860;
+  --bright-red:        #D16983;
+  --bright-green:      #8EBD9B;
+  --bright-yellow:     #E0C989;
+  --bright-blue:       #86ABDC;
+  --bright-magenta:    #B48EAD;
+  --bright-cyan:       #7AD5D6;
+  --bright-white:      #E4E4E5;
+}

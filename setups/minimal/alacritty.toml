@@ -1,0 +1,62 @@
+# ── minimal Alacritty config — Monochrome Grayscale ────────────
+
+[window]
+padding    = { x = 12, y = 8 }
+decorations = "none"
+opacity    = 1.0
+blur       = false
+title      = "Terminal"
+dynamic_title = true
+
+[font]
+normal  = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold    = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic  = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size    = 12.0
+
+[cursor]
+style    = { shape = "Block", blinking = "Off" }
+
+[scrolling]
+history   = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+# ── Monochrome Grayscale colors ─────────────────────────────────
+[colors.primary]
+background = "#0a0a0a"
+foreground = "#e8e8e8"
+
+[colors.cursor]
+text   = "#0a0a0a"
+cursor = "#888888"
+
+[colors.vi_mode_cursor]
+text   = "#0a0a0a"
+cursor = "#aaaaaa"
+
+[colors.selection]
+text       = "#0a0a0a"
+background = "#888888"
+
+[colors.normal]
+black   = "#0a0a0a"
+red     = "#888888"
+green   = "#aaaaaa"
+yellow  = "#999999"
+blue    = "#777777"
+magenta = "#666666"
+cyan    = "#bbbbbb"
+white   = "#cccccc"
+
+[colors.bright]
+black   = "#333333"
+red     = "#aaaaaa"
+green   = "#cccccc"
+yellow  = "#bbbbbb"
+blue    = "#999999"
+magenta = "#888888"
+cyan    = "#dddddd"
+white   = "#e8e8e8"

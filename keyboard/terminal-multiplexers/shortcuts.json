@@ -1,0 +1,272 @@
+[
+  {
+    "name": "New Window",
+    "slug": "new-window",
+    "category": "window",
+    "tmux": "Ctrl+b c",
+    "zellij": "Ctrl+t (then n)",
+    "screen": "Ctrl+a c",
+    "description": "Creates a new window (full-screen area) within the current session."
+  },
+  {
+    "name": "Next Window",
+    "slug": "next-window",
+    "category": "window",
+    "tmux": "Ctrl+b n",
+    "zellij": "Ctrl+t (then Tab)",
+    "screen": "Ctrl+a n",
+    "description": "Moves to the next window in the window list."
+  },
+  {
+    "name": "Previous Window",
+    "slug": "previous-window",
+    "category": "window",
+    "tmux": "Ctrl+b p",
+    "zellij": "Ctrl+t (then Shift+Tab)",
+    "screen": "Ctrl+a p",
+    "description": "Moves to the previous window in the window list."
+  },
+  {
+    "name": "Rename Window",
+    "slug": "rename-window",
+    "category": "window",
+    "tmux": "Ctrl+b ,",
+    "zellij": "Ctrl+t (then r)",
+    "screen": "Ctrl+a A",
+    "description": "Prompts to rename the current window to a custom label."
+  },
+  {
+    "name": "Kill Window",
+    "slug": "kill-window",
+    "category": "window",
+    "tmux": "Ctrl+b &",
+    "zellij": "Ctrl+t (then x)",
+    "screen": "Ctrl+a k",
+    "description": "Closes the current window and all panes within it."
+  },
+  {
+    "name": "Choose Window",
+    "slug": "choose-window",
+    "category": "window",
+    "tmux": "Ctrl+b w",
+    "zellij": "Ctrl+t (then w)",
+    "screen": "Ctrl+a '",
+    "description": "Opens an interactive list to visually select and switch to a window."
+  },
+  {
+    "name": "Split Pane Horizontal",
+    "slug": "split-horizontal",
+    "category": "pane",
+    "tmux": "Ctrl+b %",
+    "zellij": "Ctrl+p (then d)",
+    "screen": "Ctrl+a |",
+    "description": "Splits the current pane into two side-by-side panes (vertical split line)."
+  },
+  {
+    "name": "Split Pane Vertical",
+    "slug": "split-vertical",
+    "category": "pane",
+    "tmux": "Ctrl+b \"",
+    "zellij": "Ctrl+p (then D)",
+    "screen": "Ctrl+a S",
+    "description": "Splits the current pane into two stacked panes (horizontal split line)."
+  },
+  {
+    "name": "Select Pane Left",
+    "slug": "select-pane-left",
+    "category": "pane",
+    "tmux": "Ctrl+b Left",
+    "zellij": "Ctrl+p (then Left)",
+    "screen": "Ctrl+a Tab (cycle)",
+    "description": "Moves focus to the pane to the left of the current pane."
+  },
+  {
+    "name": "Select Pane Right",
+    "slug": "select-pane-right",
+    "category": "pane",
+    "tmux": "Ctrl+b Right",
+    "zellij": "Ctrl+p (then Right)",
+    "screen": "Ctrl+a Tab (cycle)",
+    "description": "Moves focus to the pane to the right of the current pane."
+  },
+  {
+    "name": "Select Pane Up",
+    "slug": "select-pane-up",
+    "category": "pane",
+    "tmux": "Ctrl+b Up",
+    "zellij": "Ctrl+p (then Up)",
+    "screen": "Ctrl+a Tab (cycle)",
+    "description": "Moves focus to the pane above the current pane."
+  },
+  {
+    "name": "Select Pane Down",
+    "slug": "select-pane-down",
+    "category": "pane",
+    "tmux": "Ctrl+b Down",
+    "zellij": "Ctrl+p (then Down)",
+    "screen": "Ctrl+a Tab (cycle)",
+    "description": "Moves focus to the pane below the current pane."
+  },
+  {
+    "name": "Kill Pane",
+    "slug": "kill-pane",
+    "category": "pane",
+    "tmux": "Ctrl+b x",
+    "zellij": "Ctrl+p (then x)",
+    "screen": "Ctrl+a X",
+    "description": "Closes the current pane. If it is the last pane in a window, the window is also closed."
+  },
+  {
+    "name": "Toggle Zoom (Fullscreen Pane)",
+    "slug": "toggle-zoom",
+    "category": "pane",
+    "tmux": "Ctrl+b z",
+    "zellij": "Ctrl+p (then f)",
+    "screen": "N/A",
+    "description": "Temporarily expands the current pane to fill the entire window. Press again to restore the layout."
+  },
+  {
+    "name": "Resize Pane Left",
+    "slug": "resize-pane-left",
+    "category": "pane",
+    "tmux": "Ctrl+b Ctrl+Left",
+    "zellij": "Ctrl+p (then H)",
+    "screen": "N/A",
+    "description": "Shrinks the current pane from the right, expanding the pane to the left."
+  },
+  {
+    "name": "Resize Pane Right",
+    "slug": "resize-pane-right",
+    "category": "pane",
+    "tmux": "Ctrl+b Ctrl+Right",
+    "zellij": "Ctrl+p (then L)",
+    "screen": "N/A",
+    "description": "Expands the current pane to the right, shrinking the pane on the right."
+  },
+  {
+    "name": "Detach Session",
+    "slug": "detach-session",
+    "category": "session",
+    "tmux": "Ctrl+b d",
+    "zellij": "Ctrl+q",
+    "screen": "Ctrl+a d",
+    "description": "Detaches from the current session, leaving it running in the background for later reattachment."
+  },
+  {
+    "name": "New Session",
+    "slug": "new-session",
+    "category": "session",
+    "tmux": "tmux new-session (CLI)",
+    "zellij": "zellij (CLI)",
+    "screen": "screen (CLI)",
+    "description": "Creates a new independent session. Typically invoked from the command line before attaching."
+  },
+  {
+    "name": "List Sessions",
+    "slug": "list-sessions",
+    "category": "session",
+    "tmux": "Ctrl+b s",
+    "zellij": "N/A",
+    "screen": "screen -ls (CLI)",
+    "description": "Lists all active sessions and allows switching between them interactively."
+  },
+  {
+    "name": "Rename Session",
+    "slug": "rename-session",
+    "category": "session",
+    "tmux": "Ctrl+b $",
+    "zellij": "N/A",
+    "screen": "N/A",
+    "description": "Prompts to rename the current session to a custom identifier."
+  },
+  {
+    "name": "Choose Session",
+    "slug": "choose-session",
+    "category": "session",
+    "tmux": "Ctrl+b s",
+    "zellij": "N/A",
+    "screen": "N/A",
+    "description": "Opens an interactive session switcher to visually browse and switch between sessions."
+  },
+  {
+    "name": "Enter Copy Mode",
+    "slug": "copy-mode",
+    "category": "copy-mode",
+    "tmux": "Ctrl+b [",
+    "zellij": "Ctrl+s",
+    "screen": "Ctrl+a [",
+    "description": "Enters copy/scroll mode, allowing keyboard navigation through the scrollback buffer."
+  },
+  {
+    "name": "Scroll Up in Copy Mode",
+    "slug": "scroll-up",
+    "category": "copy-mode",
+    "tmux": "Up / Ctrl+u",
+    "zellij": "Up / PageUp",
+    "screen": "Up / Ctrl+u",
+    "description": "Scrolls up through the scrollback buffer while in copy mode."
+  },
+  {
+    "name": "Scroll Down in Copy Mode",
+    "slug": "scroll-down",
+    "category": "copy-mode",
+    "tmux": "Down / Ctrl+d",
+    "zellij": "Down / PageDown",
+    "screen": "Down / Ctrl+d",
+    "description": "Scrolls down through the scrollback buffer while in copy mode."
+  },
+  {
+    "name": "Search in Copy Mode",
+    "slug": "search-copy-mode",
+    "category": "copy-mode",
+    "tmux": "/ (forward) or ? (backward)",
+    "zellij": "Ctrl+s (then type)",
+    "screen": "Ctrl+a s / Ctrl+a r",
+    "description": "Searches for text within the scrollback buffer while in copy mode."
+  },
+  {
+    "name": "Paste Buffer",
+    "slug": "paste-buffer",
+    "category": "copy-mode",
+    "tmux": "Ctrl+b ]",
+    "zellij": "Ctrl+s (then Enter)",
+    "screen": "Ctrl+a ]",
+    "description": "Pastes the most recently copied text from the multiplexer's internal clipboard buffer."
+  },
+  {
+    "name": "List Keys",
+    "slug": "list-keys",
+    "category": "misc",
+    "tmux": "Ctrl+b ?",
+    "zellij": "Ctrl+h",
+    "screen": "Ctrl+a ?",
+    "description": "Displays a list of all configured key bindings for the current mode."
+  },
+  {
+    "name": "Command Prompt",
+    "slug": "command-prompt",
+    "category": "misc",
+    "tmux": "Ctrl+b :",
+    "zellij": "N/A",
+    "screen": "Ctrl+a :",
+    "description": "Opens an internal command prompt to enter multiplexer commands directly."
+  },
+  {
+    "name": "Reload Config",
+    "slug": "reload-config",
+    "category": "misc",
+    "tmux": "Ctrl+b : source-file ~/.tmux.conf",
+    "zellij": "N/A (auto-reload on save)",
+    "screen": "N/A",
+    "description": "Reloads the multiplexer configuration file without restarting the session."
+  },
+  {
+    "name": "Show Clock",
+    "slug": "clock",
+    "category": "misc",
+    "tmux": "Ctrl+b t",
+    "zellij": "N/A",
+    "screen": "N/A",
+    "description": "Displays a large digital clock in the current pane."
+  }
+]

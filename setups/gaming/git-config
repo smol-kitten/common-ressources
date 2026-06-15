@@ -1,0 +1,39 @@
+# ── gaming git config snippet — Gruvbox Dark (delta) ───────────
+# Include in ~/.gitconfig: [include] path = ~/.config/git/rice.conf
+# Or: git config --global include.path ~/.config/git/rice.conf
+
+[alias]
+    s   = status -sb
+    l   = log --oneline --graph --decorate --all
+    ll  = log --pretty=format:"%C(yellow)%h%Creset %C(blue)%ad%Creset %s %C(red)%d%Creset" --date=short
+    a   = add
+    aa  = add -A
+    c   = commit
+    cm  = commit -m
+    ca  = commit --amend --no-edit
+    p   = push
+    pf  = push --force-with-lease
+    pl  = pull --rebase
+    co  = checkout
+    cb  = checkout -b
+    d   = diff
+    ds  = diff --staged
+    r   = reset HEAD~1
+    rh  = reset --hard
+
+[color "status"]
+    added     = green bold
+    changed   = yellow bold
+    untracked = brightblack bold
+    branch    = yellow bold
+
+[delta]
+    syntax-theme   = gruvbox-dark
+    line-numbers   = true
+    side-by-side   = false
+    navigate       = true
+    dark           = true
+    file-style     = bold yellow
+    hunk-header-style = syntax bold
+    plus-style     = syntax "#1d4a12"
+    minus-style    = syntax "#5c1c1c"

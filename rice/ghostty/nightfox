@@ -1,0 +1,27 @@
+# Theme: Nightfox
+# Source: https://github.com/EdenEast/nightfox.nvim
+# Usage: add to ~/.config/ghostty/config
+#   theme = nightfox
+
+background = 192330
+foreground = CDCECF
+cursor-color = CDCECF
+selection-background = 2B3B51
+selection-foreground = CDCECF
+
+palette = 0=#393B44
+palette = 1=#C94F6D
+palette = 2=#81B29A
+palette = 3=#DBC074
+palette = 4=#719CD6
+palette = 5=#9D79D6
+palette = 6=#63CDCF
+palette = 7=#DFDFE0
+palette = 8=#575860
+palette = 9=#D16983
+palette = 10=#8EBD9B
+palette = 11=#E0C989
+palette = 12=#86ABDC
+palette = 13=#B48EAD
+palette = 14=#7AD5D6
+palette = 15=#E4E4E5

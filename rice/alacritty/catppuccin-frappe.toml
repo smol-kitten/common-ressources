@@ -1,0 +1,34 @@
+# Theme: Catppuccin Frappe
+# Source: https://github.com/catppuccin/catppuccin
+
+[colors.primary]
+background = "#303446"
+foreground = "#C6D0F5"
+
+[colors.cursor]
+cursor = "#F2D5CF"
+text   = "#303446"
+
+[colors.selection]
+background = "#626880"
+text       = "#C6D0F5"
+
+[colors.normal]
+black   = "#51576D"
+red     = "#E78284"
+green   = "#A6D189"
+yellow  = "#E5C890"
+blue    = "#8CAAEE"
+magenta = "#F4B8E4"
+cyan    = "#81C8BE"
+white   = "#B5BFE2"
+
+[colors.bright]
+black   = "#626880"
+red     = "#E78284"
+green   = "#A6D189"
+yellow  = "#E5C890"
+blue    = "#8CAAEE"
+magenta = "#F4B8E4"
+cyan    = "#99D1DB"
+white   = "#A5ADCE"

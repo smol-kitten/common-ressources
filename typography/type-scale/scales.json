@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Minor Second",
+    "slug": "minor-second",
+    "ratio": 1.067,
+    "base_px": 16,
+    "steps": {
+      "xs": "14.05px",
+      "sm": "14.99px",
+      "base": "16px",
+      "md": "17.07px",
+      "lg": "18.21px",
+      "xl": "19.43px",
+      "2xl": "20.73px",
+      "3xl": "22.12px"
+    },
+    "description": "The smallest commonly used typographic scale, with very subtle size differences between steps. Creates a calm, restrained hierarchy.",
+    "use_case": "Dense UIs, data tables, dashboards where space is limited and subtle differentiation is needed"
+  },
+  {
+    "name": "Major Second",
+    "slug": "major-second",
+    "ratio": 1.125,
+    "base_px": 16,
+    "steps": {
+      "xs": "12.64px",
+      "sm": "14.22px",
+      "base": "16px",
+      "md": "18px",
+      "lg": "20.25px",
+      "xl": "22.78px",
+      "2xl": "25.63px",
+      "3xl": "28.83px"
+    },
+    "description": "A gentle scale with modest jumps between sizes. Provides clear hierarchy without dramatic contrast between levels.",
+    "use_case": "Corporate websites, documentation, editorial content requiring clear but understated hierarchy"
+  },
+  {
+    "name": "Minor Third",
+    "slug": "minor-third",
+    "ratio": 1.2,
+    "base_px": 16,
+    "steps": {
+      "xs": "11.11px",
+      "sm": "13.33px",
+      "base": "16px",
+      "md": "19.2px",
+      "lg": "23.04px",
+      "xl": "27.65px",
+      "2xl": "33.18px",
+      "3xl": "39.81px"
+    },
+    "description": "A popular, well-balanced scale with noticeable but not jarring size progression. Strikes a good balance between harmony and contrast.",
+    "use_case": "General-purpose web applications, blogs, marketing sites with moderate visual hierarchy needs"
+  },
+  {
+    "name": "Major Third",
+    "slug": "major-third",
+    "ratio": 1.25,
+    "base_px": 16,
+    "steps": {
+      "xs": "10.24px",
+      "sm": "12.8px",
+      "base": "16px",
+      "md": "20px",
+      "lg": "25px",
+      "xl": "31.25px",
+      "2xl": "39.06px",
+      "3xl": "48.83px"
+    },
+    "description": "A clearly defined scale with satisfying jumps between levels. Creates confident, legible hierarchy with strong visual rhythm.",
+    "use_case": "Landing pages, portfolios, marketing materials where strong visual contrast between type sizes is desired"
+  },
+  {
+    "name": "Perfect Fourth",
+    "slug": "perfect-fourth",
+    "ratio": 1.333,
+    "base_px": 16,
+    "steps": {
+      "xs": "9.01px",
+      "sm": "12.0px",
+      "base": "16px",
+      "md": "21.33px",
+      "lg": "28.43px",
+      "xl": "37.9px",
+      "2xl": "50.52px",
+      "3xl": "67.34px"
+    },
+    "description": "A dramatic scale that creates clear, bold hierarchical differences between size steps. Derived from the musical perfect fourth interval.",
+    "use_case": "Editorial design, magazine layouts, hero sections, large-display contexts where bold hierarchy is a design goal"
+  },
+  {
+    "name": "Augmented Fourth",
+    "slug": "augmented-fourth",
+    "ratio": 1.414,
+    "base_px": 16,
+    "steps": {
+      "xs": "8.0px",
+      "sm": "11.31px",
+      "base": "16px",
+      "md": "22.62px",
+      "lg": "32.0px",
+      "xl": "45.25px",
+      "2xl": "64.0px",
+      "3xl": "90.51px"
+    },
+    "description": "Based on the square root of 2 (the tritone), this scale creates a mathematically elegant progression with each level roughly 1.414x the previous.",
+    "use_case": "Design systems requiring mathematical precision, geometric layouts, poster design with large display headings"
+  },
+  {
+    "name": "Perfect Fifth",
+    "slug": "perfect-fifth",
+    "ratio": 1.5,
+    "base_px": 16,
+    "steps": {
+      "xs": "7.11px",
+      "sm": "10.67px",
+      "base": "16px",
+      "md": "24px",
+      "lg": "36px",
+      "xl": "54px",
+      "2xl": "81px",
+      "3xl": "121.5px"
+    },
+    "description": "A bold and highly contrasted scale producing very large display sizes relative to body text. The perfect fifth is a foundational musical harmonic.",
+    "use_case": "Hero sections, splash screens, large-format print, presentations where dramatic scale contrast is intentional"
+  },
+  {
+    "name": "Golden Ratio",
+    "slug": "golden-ratio",
+    "ratio": 1.618,
+    "base_px": 16,
+    "steps": {
+      "xs": "6.11px",
+      "sm": "9.89px",
+      "base": "16px",
+      "md": "25.89px",
+      "lg": "41.89px",
+      "xl": "67.77px",
+      "2xl": "109.65px",
+      "3xl": "177.41px"
+    },
+    "description": "Uses phi (φ ≈ 1.618), the golden ratio found throughout nature and classical art. Creates an aesthetically pleasing progression with rapid size growth.",
+    "use_case": "Artistic and luxury brand websites, design portfolios, contexts where the golden ratio aesthetic is a deliberate design statement"
+  },
+  {
+    "name": "Major Sixth",
+    "slug": "major-sixth",
+    "ratio": 1.667,
+    "base_px": 16,
+    "steps": {
+      "xs": "5.75px",
+      "sm": "9.6px",
+      "base": "16px",
+      "md": "26.67px",
+      "lg": "44.44px",
+      "xl": "74.07px",
+      "2xl": "123.46px",
+      "3xl": "205.77px"
+    },
+    "description": "An extreme scale derived from the major sixth musical interval. Produces very large headings that dwarf body text, creating stark visual impact.",
+    "use_case": "Splash pages, high-impact advertising, digital signage, or when a maximum contrast between body and display sizes is required"
+  },
+  {
+    "name": "Double Octave",
+    "slug": "double-octave",
+    "ratio": 2.0,
+    "base_px": 16,
+    "steps": {
+      "xs": "4px",
+      "sm": "8px",
+      "base": "16px",
+      "md": "32px",
+      "lg": "64px",
+      "xl": "128px",
+      "2xl": "256px",
+      "3xl": "512px"
+    },
+    "description": "Each step doubles the previous size, inspired by the musical octave. Produces extremely dramatic scale contrasts rarely used beyond a few levels.",
+    "use_case": "Large-format displays, experimental typography, contexts where only two or three size levels are used with maximum contrast"
+  }
+]

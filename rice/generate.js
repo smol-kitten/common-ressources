@@ -413,6 +413,348 @@ function genWindowsTerminal(theme) {
   write(path.join(RICE_DIR, 'windows-terminal', `${theme.slug}.json`), JSON.stringify(scheme, null, 2));
 }
 
+function genHelix(theme) {
+  const c = theme.colors;
+  const content = `# Theme: ${theme.name}
+# Source: ${theme.source}
+# Usage: copy to ~/.config/helix/themes/${theme.slug}.toml
+#   then set theme = "${theme.slug}" in ~/.config/helix/config.toml
+
+"ui.background"           = { bg = "background" }
+"ui.background.separator" = { fg = "bright-black" }
+"ui.text"                 = { fg = "foreground" }
+"ui.text.focus"           = { fg = "foreground", modifiers = ["bold"] }
+"ui.cursor"               = { fg = "background", bg = "cursor" }
+"ui.cursor.match"         = { fg = "background", bg = "yellow" }
+"ui.cursor.insert"        = { fg = "background", bg = "green" }
+"ui.cursor.select"        = { fg = "background", bg = "blue" }
+"ui.selection"            = { bg = "selection" }
+"ui.linenr"               = { fg = "bright-black" }
+"ui.linenr.selected"      = { fg = "foreground", modifiers = ["bold"] }
+"ui.statusline"           = { fg = "foreground", bg = "black" }
+"ui.statusline.inactive"  = { fg = "bright-black", bg = "black" }
+"ui.statusline.normal"    = { fg = "background", bg = "blue", modifiers = ["bold"] }
+"ui.statusline.insert"    = { fg = "background", bg = "green", modifiers = ["bold"] }
+"ui.statusline.select"    = { fg = "background", bg = "magenta", modifiers = ["bold"] }
+"ui.popup"                = { bg = "black" }
+"ui.popup.info"           = { bg = "black" }
+"ui.window"               = { fg = "bright-black" }
+"ui.help"                 = { fg = "foreground", bg = "black" }
+"ui.menu"                 = { fg = "foreground", bg = "black" }
+"ui.menu.selected"        = { fg = "background", bg = "blue" }
+"ui.menu.scroll"          = { fg = "blue", bg = "black" }
+"ui.virtual.ruler"        = { bg = "black" }
+"ui.virtual.inlay-hint"   = { fg = "bright-black" }
+
+"diagnostic.error"   = { underline = { color = "red",    style = "curl" } }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.info"    = { underline = { color = "blue",   style = "curl" } }
+"diagnostic.hint"    = { underline = { color = "cyan",   style = "curl" } }
+"error"   = { fg = "red" }
+"warning" = { fg = "yellow" }
+"info"    = { fg = "blue" }
+"hint"    = { fg = "cyan" }
+
+"comment"                = { fg = "bright-black", modifiers = ["italic"] }
+"string"                 = { fg = "green" }
+"string.regexp"          = { fg = "cyan" }
+"string.special"         = { fg = "cyan" }
+"constant"               = { fg = "red" }
+"constant.numeric"       = { fg = "cyan" }
+"constant.builtin"       = { fg = "red" }
+"constant.character"     = { fg = "yellow" }
+"keyword"                = { fg = "magenta", modifiers = ["bold"] }
+"keyword.function"       = { fg = "magenta" }
+"keyword.control"        = { fg = "magenta" }
+"keyword.control.return" = { fg = "magenta", modifiers = ["bold"] }
+"keyword.operator"       = { fg = "magenta" }
+"keyword.directive"      = { fg = "magenta" }
+"function"               = { fg = "blue" }
+"function.macro"         = { fg = "cyan" }
+"function.builtin"       = { fg = "cyan" }
+"type"                   = { fg = "yellow" }
+"type.builtin"           = { fg = "yellow", modifiers = ["italic"] }
+"constructor"            = { fg = "blue" }
+"variable"               = { fg = "foreground" }
+"variable.builtin"       = { fg = "red" }
+"variable.parameter"     = { fg = "foreground", modifiers = ["italic"] }
+"variable.other.member"  = { fg = "foreground" }
+"attribute"              = { fg = "blue" }
+"namespace"              = { fg = "cyan" }
+"label"                  = { fg = "blue" }
+"operator"               = { fg = "magenta" }
+"punctuation"            = { fg = "foreground" }
+"punctuation.delimiter"  = { fg = "foreground" }
+"punctuation.bracket"    = { fg = "foreground" }
+"tag"                    = { fg = "red" }
+"tag.attribute"          = { fg = "blue" }
+
+"markup.heading"         = { fg = "blue", modifiers = ["bold"] }
+"markup.raw"             = { fg = "green" }
+"markup.bold"            = { modifiers = ["bold"] }
+"markup.italic"          = { modifiers = ["italic"] }
+"markup.link.url"        = { fg = "cyan", modifiers = ["underlined"] }
+"markup.link.text"       = { fg = "blue" }
+"markup.quote"           = { fg = "bright-black", modifiers = ["italic"] }
+
+[palette]
+background  = "${theme.background}"
+foreground  = "${theme.foreground}"
+cursor      = "${theme.cursor}"
+selection   = "${theme['selection-background']}"
+black       = "${c['black']}"
+red         = "${c['red']}"
+green       = "${c['green']}"
+yellow      = "${c['yellow']}"
+blue        = "${c['blue']}"
+magenta     = "${c['magenta']}"
+cyan        = "${c['cyan']}"
+white       = "${c['white']}"
+bright-black    = "${c['bright-black']}"
+bright-red      = "${c['bright-red']}"
+bright-green    = "${c['bright-green']}"
+bright-yellow   = "${c['bright-yellow']}"
+bright-blue     = "${c['bright-blue']}"
+bright-magenta  = "${c['bright-magenta']}"
+bright-cyan     = "${c['bright-cyan']}"
+bright-white    = "${c['bright-white']}"
+`;
+  write(path.join(RICE_DIR, 'helix', `${theme.slug}.toml`), content);
+}
+
+function genFoot(theme) {
+  const c = theme.colors;
+  const sh = (hex) => hex.replace(/^#/, '');
+  const content = `# Theme: ${theme.name}
+# Source: ${theme.source}
+# Usage: include in ~/.config/foot/foot.ini:
+#   include=~/.config/foot/themes/${theme.slug}.ini
+
+[colors]
+background=${sh(theme.background)}
+foreground=${sh(theme.foreground)}
+
+selection-background=${sh(theme['selection-background'])}
+selection-foreground=${sh(theme.foreground)}
+
+regular0=${sh(c['black'])}
+regular1=${sh(c['red'])}
+regular2=${sh(c['green'])}
+regular3=${sh(c['yellow'])}
+regular4=${sh(c['blue'])}
+regular5=${sh(c['magenta'])}
+regular6=${sh(c['cyan'])}
+regular7=${sh(c['white'])}
+
+bright0=${sh(c['bright-black'])}
+bright1=${sh(c['bright-red'])}
+bright2=${sh(c['bright-green'])}
+bright3=${sh(c['bright-yellow'])}
+bright4=${sh(c['bright-blue'])}
+bright5=${sh(c['bright-magenta'])}
+bright6=${sh(c['bright-cyan'])}
+bright7=${sh(c['bright-white'])}
+`;
+  write(path.join(RICE_DIR, 'foot', `${theme.slug}.ini`), content);
+}
+
+function genNvim(theme) {
+  const c = theme.colors;
+  const content = `-- Theme: ${theme.name}
+-- Source: ${theme.source}
+-- Usage: dofile(vim.fn.stdpath("config") .. "/lua/rice/${theme.slug}.lua")
+--   or copy to ~/.config/nvim/colors/${theme.slug}.lua
+
+local hi = vim.api.nvim_set_hl
+
+vim.cmd("highlight clear")
+if vim.fn.exists("syntax_on") == 1 then vim.cmd("syntax reset") end
+vim.g.colors_name = "${theme.slug}"
+
+local is_light = ${parseInt(theme.background.slice(1, 3), 16) > 128}
+vim.o.background = is_light and "light" or "dark"
+
+-- Editor chrome
+hi(0, "Normal",       { bg = "${theme.background}", fg = "${theme.foreground}" })
+hi(0, "NormalFloat",  { bg = "${c['black']}", fg = "${theme.foreground}" })
+hi(0, "NormalNC",     { bg = "${theme.background}", fg = "${c['bright-black']}" })
+hi(0, "SignColumn",   { bg = "${theme.background}" })
+hi(0, "LineNr",       { fg = "${c['bright-black']}" })
+hi(0, "CursorLine",   { bg = "${theme['selection-background']}" })
+hi(0, "CursorLineNr", { fg = "${theme.foreground}", bold = true })
+hi(0, "CursorColumn", { bg = "${theme['selection-background']}" })
+hi(0, "Visual",       { bg = "${theme['selection-background']}" })
+hi(0, "VisualNOS",    { bg = "${theme['selection-background']}" })
+hi(0, "Search",       { bg = "${c['yellow']}", fg = "${theme.background}" })
+hi(0, "IncSearch",    { bg = "${c['bright-yellow']}", fg = "${theme.background}" })
+hi(0, "CurSearch",    { bg = "${c['bright-yellow']}", fg = "${theme.background}" })
+hi(0, "StatusLine",   { bg = "${c['black']}", fg = "${theme.foreground}" })
+hi(0, "StatusLineNC", { bg = "${c['black']}", fg = "${c['bright-black']}" })
+hi(0, "VertSplit",    { fg = "${c['bright-black']}" })
+hi(0, "WinSeparator", { fg = "${c['bright-black']}" })
+hi(0, "Folded",       { bg = "${c['black']}", fg = "${c['bright-black']}" })
+hi(0, "FoldColumn",   { fg = "${c['bright-black']}" })
+hi(0, "Conceal",      { fg = "${c['bright-black']}" })
+hi(0, "ColorColumn",  { bg = "${c['black']}" })
+hi(0, "Pmenu",        { bg = "${c['black']}", fg = "${theme.foreground}" })
+hi(0, "PmenuSel",     { bg = "${c['blue']}", fg = "${theme.background}" })
+hi(0, "PmenuSbar",    { bg = "${c['black']}" })
+hi(0, "PmenuThumb",   { bg = "${c['bright-black']}" })
+hi(0, "TabLine",      { bg = "${c['black']}", fg = "${c['bright-black']}" })
+hi(0, "TabLineSel",   { bg = "${theme.background}", fg = "${theme.foreground}", bold = true })
+hi(0, "TabLineFill",  { bg = "${c['black']}" })
+hi(0, "Title",        { fg = "${c['blue']}", bold = true })
+hi(0, "MatchParen",   { fg = "${c['cyan']}", bold = true })
+hi(0, "Question",     { fg = "${c['green']}" })
+hi(0, "Directory",    { fg = "${c['blue']}" })
+hi(0, "SpecialKey",   { fg = "${c['bright-black']}" })
+hi(0, "NonText",      { fg = "${c['bright-black']}" })
+hi(0, "Whitespace",   { fg = "${c['bright-black']}" })
+hi(0, "EndOfBuffer",  { fg = "${c['bright-black']}" })
+hi(0, "WildMenu",     { bg = "${c['blue']}", fg = "${theme.background}" })
+hi(0, "DiffAdd",      { bg = "${theme.background}", fg = "${c['green']}" })
+hi(0, "DiffChange",   { bg = "${theme.background}", fg = "${c['yellow']}" })
+hi(0, "DiffDelete",   { bg = "${theme.background}", fg = "${c['red']}" })
+hi(0, "DiffText",     { bg = "${c['yellow']}", fg = "${theme.background}" })
+hi(0, "ErrorMsg",     { fg = "${c['red']}", bold = true })
+hi(0, "WarningMsg",   { fg = "${c['yellow']}" })
+hi(0, "ModeMsg",      { fg = "${theme.foreground}", bold = true })
+hi(0, "MoreMsg",      { fg = "${c['green']}" })
+hi(0, "SpellBad",     { undercurl = true, sp = "${c['red']}" })
+hi(0, "SpellCap",     { undercurl = true, sp = "${c['yellow']}" })
+hi(0, "SpellLocal",   { undercurl = true, sp = "${c['cyan']}" })
+hi(0, "SpellRare",    { undercurl = true, sp = "${c['magenta']}" })
+
+-- Syntax
+hi(0, "Comment",      { fg = "${c['bright-black']}", italic = true })
+hi(0, "String",       { fg = "${c['green']}" })
+hi(0, "Character",    { fg = "${c['green']}" })
+hi(0, "Number",       { fg = "${c['cyan']}" })
+hi(0, "Float",        { fg = "${c['cyan']}" })
+hi(0, "Boolean",      { fg = "${c['red']}" })
+hi(0, "Keyword",      { fg = "${c['magenta']}", bold = true })
+hi(0, "Statement",    { fg = "${c['magenta']}" })
+hi(0, "Conditional",  { fg = "${c['magenta']}" })
+hi(0, "Repeat",       { fg = "${c['magenta']}" })
+hi(0, "Label",        { fg = "${c['blue']}" })
+hi(0, "Operator",     { fg = "${c['magenta']}" })
+hi(0, "Exception",    { fg = "${c['red']}" })
+hi(0, "Function",     { fg = "${c['blue']}" })
+hi(0, "Identifier",   { fg = "${c['cyan']}" })
+hi(0, "Type",         { fg = "${c['yellow']}" })
+hi(0, "StorageClass", { fg = "${c['magenta']}" })
+hi(0, "Structure",    { fg = "${c['yellow']}" })
+hi(0, "Typedef",      { fg = "${c['yellow']}" })
+hi(0, "Constant",     { fg = "${c['red']}" })
+hi(0, "PreProc",      { fg = "${c['cyan']}" })
+hi(0, "Include",      { fg = "${c['magenta']}" })
+hi(0, "Define",       { fg = "${c['magenta']}" })
+hi(0, "Macro",        { fg = "${c['cyan']}" })
+hi(0, "Special",      { fg = "${c['red']}" })
+hi(0, "SpecialChar",  { fg = "${c['cyan']}" })
+hi(0, "Delimiter",    { fg = "${theme.foreground}" })
+hi(0, "Tag",          { fg = "${c['red']}" })
+hi(0, "Debug",        { fg = "${c['red']}" })
+hi(0, "Error",        { fg = "${c['red']}", bold = true })
+hi(0, "Todo",         { bg = "${c['yellow']}", fg = "${theme.background}", bold = true })
+hi(0, "Underlined",   { underline = true })
+
+-- Treesitter
+hi(0, "@comment",            { link = "Comment" })
+hi(0, "@comment.todo",       { bg = "${c['yellow']}", fg = "${theme.background}", bold = true })
+hi(0, "@string",             { link = "String" })
+hi(0, "@string.regexp",      { fg = "${c['cyan']}" })
+hi(0, "@string.escape",      { fg = "${c['cyan']}" })
+hi(0, "@number",             { link = "Number" })
+hi(0, "@float",              { link = "Float" })
+hi(0, "@boolean",            { link = "Boolean" })
+hi(0, "@keyword",            { link = "Keyword" })
+hi(0, "@keyword.function",   { fg = "${c['magenta']}" })
+hi(0, "@keyword.return",     { fg = "${c['magenta']}", bold = true })
+hi(0, "@keyword.operator",   { fg = "${c['magenta']}" })
+hi(0, "@function",           { link = "Function" })
+hi(0, "@function.call",      { fg = "${c['blue']}" })
+hi(0, "@function.macro",     { fg = "${c['cyan']}" })
+hi(0, "@function.builtin",   { fg = "${c['cyan']}" })
+hi(0, "@method",             { fg = "${c['blue']}" })
+hi(0, "@method.call",        { fg = "${c['blue']}" })
+hi(0, "@constructor",        { fg = "${c['blue']}" })
+hi(0, "@type",               { link = "Type" })
+hi(0, "@type.builtin",       { fg = "${c['yellow']}", italic = true })
+hi(0, "@variable",           { fg = "${theme.foreground}" })
+hi(0, "@variable.builtin",   { fg = "${c['red']}" })
+hi(0, "@variable.parameter", { fg = "${theme.foreground}", italic = true })
+hi(0, "@property",           { fg = "${theme.foreground}" })
+hi(0, "@field",              { fg = "${theme.foreground}" })
+hi(0, "@constant",           { link = "Constant" })
+hi(0, "@constant.builtin",   { fg = "${c['red']}", italic = true })
+hi(0, "@namespace",          { fg = "${c['cyan']}" })
+hi(0, "@attribute",          { fg = "${c['blue']}" })
+hi(0, "@operator",           { fg = "${c['magenta']}" })
+hi(0, "@punctuation",        { fg = "${theme.foreground}" })
+hi(0, "@tag",                { fg = "${c['red']}" })
+hi(0, "@tag.attribute",      { fg = "${c['blue']}" })
+hi(0, "@tag.delimiter",      { fg = "${c['bright-black']}" })
+hi(0, "@text.uri",           { fg = "${c['cyan']}", underline = true })
+hi(0, "@text.reference",     { fg = "${c['blue']}" })
+
+-- LSP
+hi(0, "DiagnosticError",          { fg = "${c['red']}" })
+hi(0, "DiagnosticWarn",           { fg = "${c['yellow']}" })
+hi(0, "DiagnosticInfo",           { fg = "${c['blue']}" })
+hi(0, "DiagnosticHint",           { fg = "${c['cyan']}" })
+hi(0, "DiagnosticUnderlineError", { undercurl = true, sp = "${c['red']}" })
+hi(0, "DiagnosticUnderlineWarn",  { undercurl = true, sp = "${c['yellow']}" })
+hi(0, "LspReferenceText",         { bg = "${theme['selection-background']}" })
+hi(0, "LspReferenceRead",         { bg = "${theme['selection-background']}" })
+hi(0, "LspReferenceWrite",        { bg = "${theme['selection-background']}", bold = true })
+`;
+  write(path.join(RICE_DIR, 'nvim', `${theme.slug}.lua`), content);
+}
+
+function genFish(theme) {
+  const c = theme.colors;
+  const sh = (hex) => hex.replace(/^#/, '');
+  const sel = sh(theme['selection-background']);
+  const content = `# Theme: ${theme.name}
+# Source: ${theme.source}
+# Usage: source this file or copy to ~/.config/fish/conf.d/${theme.slug}.fish
+#   source ~/.config/fish/themes/${theme.slug}.fish
+
+# Fish color variables (hex without #)
+set -U fish_color_normal          ${sh(theme.foreground)}
+set -U fish_color_command         ${sh(c['blue'])}
+set -U fish_color_keyword         ${sh(c['magenta'])}
+set -U fish_color_quote           ${sh(c['green'])}
+set -U fish_color_redirection     ${sh(c['cyan'])}
+set -U fish_color_end             ${sh(c['magenta'])}
+set -U fish_color_error           ${sh(c['red'])}
+set -U fish_color_param           ${sh(theme.foreground)}
+set -U fish_color_valid_path      ${sh(c['cyan'])} --underline
+set -U fish_color_comment         ${sh(c['bright-black'])}
+set -U fish_color_selection       --background=${sel}
+set -U fish_color_operator        ${sh(c['magenta'])}
+set -U fish_color_escape          ${sh(c['yellow'])}
+set -U fish_color_autosuggestion  ${sh(c['bright-black'])}
+set -U fish_color_user            ${sh(c['green'])}
+set -U fish_color_host            ${sh(c['blue'])}
+set -U fish_color_host_remote     ${sh(c['cyan'])}
+set -U fish_color_status          ${sh(c['red'])}
+set -U fish_color_cancel          ${sh(c['red'])}
+set -U fish_color_search_match    --background=${sh(c['yellow'])}
+
+# Pager colors
+set -U fish_pager_color_progress             ${sh(c['bright-black'])}
+set -U fish_pager_color_prefix               ${sh(c['blue'])}
+set -U fish_pager_color_completion           ${sh(theme.foreground)}
+set -U fish_pager_color_description          ${sh(c['bright-black'])}
+set -U fish_pager_color_selected_background  --background=${sel}
+set -U fish_pager_color_selected_prefix      ${sh(c['blue'])} --bold
+set -U fish_pager_color_selected_completion  ${sh(theme.foreground)} --bold
+`;
+  write(path.join(RICE_DIR, 'fish', `${theme.slug}.fish`), content);
+}
+
 // ── interactive index page ─────────────────────────────────────────────────────
 
 function genIndex(themes) {
@@ -1110,8 +1452,12 @@ for (const theme of themes) {
   genGhostty(theme);
   genVSCode(theme);
   genWindowsTerminal(theme);
+  genHelix(theme);
+  genFoot(theme);
+  genNvim(theme);
+  genFish(theme);
 }
 
 genIndex(themes);
-const CONFIG_TYPES = 11;
+const CONFIG_TYPES = 15;
 console.log(`\nDone. Generated ${themes.length * CONFIG_TYPES + 1} files (configs + interactive index).`);

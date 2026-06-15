@@ -1,0 +1,76 @@
+[
+  {
+    "system": "Tailwind CSS",
+    "slug": "tailwind",
+    "approach": "mobile-first",
+    "media_query_type": "min-width",
+    "breakpoints": [
+      { "name": "sm", "min_width_px": 640, "description": "Small screens (landscape phones)" },
+      { "name": "md", "min_width_px": 768, "description": "Medium screens (tablets)" },
+      { "name": "lg", "min_width_px": 1024, "description": "Large screens (small laptops)" },
+      { "name": "xl", "min_width_px": 1280, "description": "Extra large screens (desktops)" },
+      { "name": "2xl", "min_width_px": 1536, "description": "2X extra large screens (large desktops)" }
+    ],
+    "description": "Tailwind CSS uses a mobile-first breakpoint system with five default screen size prefixes. Styles without a prefix apply to all screen sizes; prefixed styles apply at the specified breakpoint and above.",
+    "source": "https://tailwindcss.com/docs/responsive-design"
+  },
+  {
+    "system": "Bootstrap 5",
+    "slug": "bootstrap-5",
+    "approach": "mobile-first",
+    "media_query_type": "min-width",
+    "breakpoints": [
+      { "name": "sm", "min_width_px": 576, "description": "Small screens (landscape phones, ≥576px)" },
+      { "name": "md", "min_width_px": 768, "description": "Medium screens (tablets, ≥768px)" },
+      { "name": "lg", "min_width_px": 992, "description": "Large screens (desktops, ≥992px)" },
+      { "name": "xl", "min_width_px": 1200, "description": "Extra large screens (large desktops, ≥1200px)" },
+      { "name": "xxl", "min_width_px": 1400, "description": "Extra extra large screens (larger desktops, ≥1400px)" }
+    ],
+    "description": "Bootstrap 5 uses a mobile-first, responsive grid system with six breakpoint tiers (xs implicit + 5 named). Media queries are built on min-width, enabling styles to cascade up from smaller to larger breakpoints.",
+    "source": "https://getbootstrap.com/docs/5.3/layout/breakpoints/"
+  },
+  {
+    "system": "Material UI v5",
+    "slug": "material-ui-v5",
+    "approach": "mobile-first",
+    "media_query_type": "min-width",
+    "breakpoints": [
+      { "name": "xs", "min_width_px": 0, "description": "Extra small screens (all phone sizes, ≥0px)" },
+      { "name": "sm", "min_width_px": 600, "description": "Small screens (tablets, ≥600px)" },
+      { "name": "md", "min_width_px": 900, "description": "Medium screens (small laptops, ≥900px)" },
+      { "name": "lg", "min_width_px": 1200, "description": "Large screens (desktops, ≥1200px)" },
+      { "name": "xl", "min_width_px": 1536, "description": "Extra large screens (large desktops, ≥1536px)" }
+    ],
+    "description": "Material UI v5 exposes a theme.breakpoints API with five default breakpoints derived from Material Design guidelines. Developers can use breakpoints.up(), breakpoints.down(), and breakpoints.between() helpers in the sx prop or styled() API.",
+    "source": "https://mui.com/material-ui/customization/breakpoints/"
+  },
+  {
+    "system": "Bulma",
+    "slug": "bulma",
+    "approach": "mobile-first",
+    "media_query_type": "min-width",
+    "breakpoints": [
+      { "name": "tablet", "min_width_px": 769, "description": "Tablet and above (≥769px)" },
+      { "name": "desktop", "min_width_px": 1024, "description": "Desktop and above (≥1024px)" },
+      { "name": "widescreen", "min_width_px": 1216, "description": "Widescreen and above (≥1216px)" },
+      { "name": "fullhd", "min_width_px": 1408, "description": "Full HD and above (≥1408px)" }
+    ],
+    "description": "Bulma defines four named breakpoints above the default mobile size. The mobile tier (under 769px) is the implicit default. Bulma uses responsive suffix classes like -mobile, -tablet, -desktop to control visibility and layout per breakpoint.",
+    "source": "https://bulma.io/documentation/overview/responsiveness/"
+  },
+  {
+    "system": "Foundation 6",
+    "slug": "foundation-6",
+    "approach": "mobile-first",
+    "media_query_type": "min-width",
+    "breakpoints": [
+      { "name": "small", "min_width_px": 0, "description": "Small screens (all phones, ≥0px)" },
+      { "name": "medium", "min_width_px": 640, "description": "Medium screens (tablets, ≥640px)" },
+      { "name": "large", "min_width_px": 1024, "description": "Large screens (desktops, ≥1024px)" },
+      { "name": "xlarge", "min_width_px": 1200, "description": "Extra large screens (large desktops, ≥1200px)" },
+      { "name": "xxlarge", "min_width_px": 1440, "description": "Extra extra large screens (very large displays, ≥1440px)" }
+    ],
+    "description": "Foundation 6 by ZURB uses a mobile-first grid with five named breakpoints. Breakpoints are defined as Sass variables and used via the breakpoint() mixin. The grid, visibility classes, and responsive utilities all reference these tiers.",
+    "source": "https://get.foundation/sites/docs/media-queries.html"
+  }
+]

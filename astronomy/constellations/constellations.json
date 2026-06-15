@@ -1,0 +1,882 @@
+[
+  {
+    "name": "Andromeda",
+    "slug": "andromeda",
+    "iau_abbreviation": "And",
+    "hemisphere": "northern",
+    "area_sq_deg": 722,
+    "brightest_star": "Alpheratz",
+    "mythology": "In Greek mythology, Andromeda was the daughter of Queen Cassiopeia and King Cepheus of Ethiopia. She was chained to a rock as a sacrifice to the sea monster Cetus but was rescued by the hero Perseus, whom she later married.",
+    "best_visible": "November"
+  },
+  {
+    "name": "Antlia",
+    "slug": "antlia",
+    "iau_abbreviation": "Ant",
+    "hemisphere": "southern",
+    "area_sq_deg": 239,
+    "brightest_star": "Alpha Antliae",
+    "mythology": "Antlia is one of the modern constellations introduced by Nicolas Louis de Lacaille in the 18th century; it represents an air pump and has no mythological associations.",
+    "best_visible": "April"
+  },
+  {
+    "name": "Apus",
+    "slug": "apus",
+    "iau_abbreviation": "Aps",
+    "hemisphere": "southern",
+    "area_sq_deg": 206,
+    "brightest_star": "Alpha Apodis",
+    "mythology": "Apus is a modern constellation introduced in the 16th century by Dutch navigators Pieter Dirkszoon Keyser and Frederick de Houtman; it represents the bird of paradise from New Guinea.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Aquila",
+    "slug": "aquila",
+    "iau_abbreviation": "Aql",
+    "hemisphere": "both",
+    "area_sq_deg": 652,
+    "brightest_star": "Altair",
+    "mythology": "In Greek mythology, Aquila is the eagle that carried Zeus's thunderbolts and abducted the shepherd boy Ganymede to Olympus to serve as cupbearer to the gods.",
+    "best_visible": "September"
+  },
+  {
+    "name": "Aquarius",
+    "slug": "aquarius",
+    "iau_abbreviation": "Aqr",
+    "hemisphere": "both",
+    "area_sq_deg": 980,
+    "brightest_star": "Sadalsuud",
+    "mythology": "In Babylonian mythology, Aquarius represents GU.LA, the god of storms and floods. In Greek tradition it represents Ganymede, the youth Zeus transformed into an eagle and brought to Olympus to serve as his cupbearer.",
+    "best_visible": "October"
+  },
+  {
+    "name": "Ara",
+    "slug": "ara",
+    "iau_abbreviation": "Ara",
+    "hemisphere": "southern",
+    "area_sq_deg": 237,
+    "brightest_star": "Beta Arae",
+    "mythology": "In Greek mythology, Ara is the altar on which the gods of Olympus swore their allegiance before the battle against the Titans (Titanomachy). It was placed among the stars by Zeus after the victory.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Aries",
+    "slug": "aries",
+    "iau_abbreviation": "Ari",
+    "hemisphere": "northern",
+    "area_sq_deg": 441,
+    "brightest_star": "Hamal",
+    "mythology": "Aries represents the golden ram whose fleece was sought by Jason and the Argonauts; in one myth it rescued Phrixus and Helle from their wicked stepmother and was later sacrificed to Zeus, its golden fleece hung in a sacred grove in Colchis.",
+    "best_visible": "December"
+  },
+  {
+    "name": "Auriga",
+    "slug": "auriga",
+    "iau_abbreviation": "Aur",
+    "hemisphere": "northern",
+    "area_sq_deg": 657,
+    "brightest_star": "Capella",
+    "mythology": "Auriga is typically identified with Erichthonius, an Athenian king said to have invented the four-horse chariot (quadriga). He is shown holding a goat and her two kids, which are represented by the stars Epsilon and Zeta Aurigae.",
+    "best_visible": "February"
+  },
+  {
+    "name": "Boötes",
+    "slug": "bootes",
+    "iau_abbreviation": "Boo",
+    "hemisphere": "northern",
+    "area_sq_deg": 907,
+    "brightest_star": "Arcturus",
+    "mythology": "Boötes is variously identified as Arcas (son of Zeus and Callisto), as the inventor of the plough, or as the hunter who drives the Bears (Ursa Major and Minor) around the pole. Arcturus, its brightest star, means 'bear guardian'.",
+    "best_visible": "June"
+  },
+  {
+    "name": "Caelum",
+    "slug": "caelum",
+    "iau_abbreviation": "Cae",
+    "hemisphere": "southern",
+    "area_sq_deg": 125,
+    "brightest_star": "Alpha Caeli",
+    "mythology": "Caelum is one of Lacaille's southern constellations created in the 18th century, representing a sculptor's chisel. It has no mythological associations and is one of the faintest constellations in the sky.",
+    "best_visible": "January"
+  },
+  {
+    "name": "Camelopardalis",
+    "slug": "camelopardalis",
+    "iau_abbreviation": "Cam",
+    "hemisphere": "northern",
+    "area_sq_deg": 757,
+    "brightest_star": "Beta Camelopardalis",
+    "mythology": "Camelopardalis represents the giraffe; the name derives from the Greek words for camel and leopard, reflecting the ancient description of the giraffe as an animal resembling both creatures. It was introduced by Petrus Plancius in 1612.",
+    "best_visible": "February"
+  },
+  {
+    "name": "Capricornus",
+    "slug": "capricornus",
+    "iau_abbreviation": "Cap",
+    "hemisphere": "southern",
+    "area_sq_deg": 414,
+    "brightest_star": "Deneb Algedi",
+    "mythology": "Capricornus, the sea goat, originates in Babylonian mythology as Suhur-mas, the goat-fish. In Greek tradition it represents the god Pan, who transformed himself into a goat-fish to escape the monster Typhon.",
+    "best_visible": "September"
+  },
+  {
+    "name": "Carina",
+    "slug": "carina",
+    "iau_abbreviation": "Car",
+    "hemisphere": "southern",
+    "area_sq_deg": 494,
+    "brightest_star": "Canopus",
+    "mythology": "Carina represents the keel of the ship Argo, sailed by Jason and the Argonauts in their quest for the Golden Fleece. It was originally part of the large constellation Argo Navis, which was divided by Lacaille into Carina, Puppis, and Vela.",
+    "best_visible": "March"
+  },
+  {
+    "name": "Cassiopeia",
+    "slug": "cassiopeia",
+    "iau_abbreviation": "Cas",
+    "hemisphere": "northern",
+    "area_sq_deg": 598,
+    "brightest_star": "Schedar",
+    "mythology": "Cassiopeia was the vain queen of Ethiopia in Greek mythology who boasted that she and her daughter Andromeda were more beautiful than the sea nymphs, provoking Poseidon's wrath. As punishment she was placed in the sky to endlessly circle the pole, sometimes hanging upside down.",
+    "best_visible": "November"
+  },
+  {
+    "name": "Centaurus",
+    "slug": "centaurus",
+    "iau_abbreviation": "Cen",
+    "hemisphere": "southern",
+    "area_sq_deg": 1060,
+    "brightest_star": "Rigil Kentaurus",
+    "mythology": "Centaurus is associated with Chiron, the wise and noble centaur who was tutor to many heroes including Achilles, Jason, and Heracles. Chiron was accidentally wounded by a poisoned arrow and voluntarily gave up his immortality to end his suffering.",
+    "best_visible": "May"
+  },
+  {
+    "name": "Cepheus",
+    "slug": "cepheus",
+    "iau_abbreviation": "Cep",
+    "hemisphere": "northern",
+    "area_sq_deg": 588,
+    "brightest_star": "Alderamin",
+    "mythology": "Cepheus was the king of Ethiopia in Greek mythology, husband of Cassiopeia and father of Andromeda. He was powerless to stop Andromeda's sacrifice to the sea monster Cetus but was placed among the stars along with his family.",
+    "best_visible": "November"
+  },
+  {
+    "name": "Cetus",
+    "slug": "cetus",
+    "iau_abbreviation": "Cet",
+    "hemisphere": "both",
+    "area_sq_deg": 1231,
+    "brightest_star": "Diphda",
+    "mythology": "Cetus is the sea monster sent by Poseidon to devour Andromeda as punishment for Cassiopeia's vanity. The monster was turned to stone when Perseus showed it the head of Medusa; it was also the whale in the story of Jonah in some traditions.",
+    "best_visible": "November"
+  },
+  {
+    "name": "Chamaeleon",
+    "slug": "chamaeleon",
+    "iau_abbreviation": "Cha",
+    "hemisphere": "southern",
+    "area_sq_deg": 132,
+    "brightest_star": "Alpha Chamaeleontis",
+    "mythology": "Chamaeleon is a modern constellation introduced by Dutch navigators Keyser and de Houtman at the end of the 16th century; it represents the chameleon lizard and has no mythological associations.",
+    "best_visible": "April"
+  },
+  {
+    "name": "Circinus",
+    "slug": "circinus",
+    "iau_abbreviation": "Cir",
+    "hemisphere": "southern",
+    "area_sq_deg": 93,
+    "brightest_star": "Alpha Circini",
+    "mythology": "Circinus is one of the smallest constellations, introduced by Lacaille in 1756; it represents a draftsman's drawing compass (pair of compasses) and has no mythological associations.",
+    "best_visible": "June"
+  },
+  {
+    "name": "Canis Major",
+    "slug": "canis-major",
+    "iau_abbreviation": "CMa",
+    "hemisphere": "southern",
+    "area_sq_deg": 380,
+    "brightest_star": "Sirius",
+    "mythology": "Canis Major is one of Orion's two hunting dogs, accompanying him in the sky. It is also identified as the dog Laelaps, given to Europa by Zeus, which was so swift it could always catch its prey.",
+    "best_visible": "February"
+  },
+  {
+    "name": "Canis Minor",
+    "slug": "canis-minor",
+    "iau_abbreviation": "CMi",
+    "hemisphere": "northern",
+    "area_sq_deg": 183,
+    "brightest_star": "Procyon",
+    "mythology": "Canis Minor is Orion's smaller hunting dog. It has also been identified as Maera, the faithful dog of Icarius, a man taught winemaking by Dionysus, who died of grief after his master was killed.",
+    "best_visible": "March"
+  },
+  {
+    "name": "Cancer",
+    "slug": "cancer",
+    "iau_abbreviation": "Cnc",
+    "hemisphere": "northern",
+    "area_sq_deg": 506,
+    "brightest_star": "Al Tarf",
+    "mythology": "In Greek mythology, Cancer is the crab that pinched Heracles' foot during his battle with the Lernaean Hydra. Hera placed it among the stars as a reward for its service even though it was quickly crushed by the hero.",
+    "best_visible": "March"
+  },
+  {
+    "name": "Columba",
+    "slug": "columba",
+    "iau_abbreviation": "Col",
+    "hemisphere": "southern",
+    "area_sq_deg": 270,
+    "brightest_star": "Phact",
+    "mythology": "Columba represents the dove sent out by Noah to find land after the biblical flood, or alternatively the dove sent ahead of the Argo to help it navigate the clashing Symplegades rocks. It was introduced by Petrus Plancius in 1592.",
+    "best_visible": "February"
+  },
+  {
+    "name": "Coma Berenices",
+    "slug": "coma-berenices",
+    "iau_abbreviation": "Com",
+    "hemisphere": "northern",
+    "area_sq_deg": 386,
+    "brightest_star": "Beta Comae Berenices",
+    "mythology": "Coma Berenices commemorates the hair of Berenice II of Egypt, who cut off her beautiful long hair as a vow to Aphrodite in exchange for the safe return of her husband Ptolemy III from battle; the hair was said to have been placed among the stars by the goddess.",
+    "best_visible": "May"
+  },
+  {
+    "name": "Corona Australis",
+    "slug": "corona-australis",
+    "iau_abbreviation": "CrA",
+    "hemisphere": "southern",
+    "area_sq_deg": 128,
+    "brightest_star": "Alfecca Meridiana",
+    "mythology": "Corona Australis is the Southern Crown, which in Greek tradition was associated with the crown worn by the centaur Sagittarius or the crown placed by Zeus in the sky to commemorate a hero's triumph. It is one of the 48 constellations catalogued by Ptolemy.",
+    "best_visible": "August"
+  },
+  {
+    "name": "Corona Borealis",
+    "slug": "corona-borealis",
+    "iau_abbreviation": "CrB",
+    "hemisphere": "northern",
+    "area_sq_deg": 179,
+    "brightest_star": "Alphecca",
+    "mythology": "Corona Borealis is the crown given by the god Dionysus to the princess Ariadne of Crete, who helped Theseus escape the Minotaur's labyrinth. When Ariadne died, Dionysus threw the crown into the sky where it became a constellation.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Crater",
+    "slug": "crater",
+    "iau_abbreviation": "Crt",
+    "hemisphere": "southern",
+    "area_sq_deg": 282,
+    "brightest_star": "Alkes",
+    "mythology": "Crater is the cup of the sun god Apollo, placed in the sky next to Corvus the crow. In myth, Apollo sent the crow to fetch water in the cup, but the bird delayed; the crow, cup, and water snake (Hydra) were all placed in the sky as punishment.",
+    "best_visible": "April"
+  },
+  {
+    "name": "Crux",
+    "slug": "crux",
+    "iau_abbreviation": "Cru",
+    "hemisphere": "southern",
+    "area_sq_deg": 68,
+    "brightest_star": "Acrux",
+    "mythology": "Crux (the Southern Cross) was known to ancient Greeks and Romans as part of Centaurus, but was not recognized as a separate constellation until European explorers reached the Southern Hemisphere. It has great cultural significance for peoples of the southern hemisphere and appears on several national flags.",
+    "best_visible": "May"
+  },
+  {
+    "name": "Corvus",
+    "slug": "corvus",
+    "iau_abbreviation": "Crv",
+    "hemisphere": "southern",
+    "area_sq_deg": 184,
+    "brightest_star": "Gienah",
+    "mythology": "Corvus is the crow sent by Apollo to fetch water in the cup (Crater). According to myth, the crow delayed to eat figs and then lied to Apollo about why it was late, blaming a serpent. As punishment, Apollo placed the crow, cup, and serpent in the sky.",
+    "best_visible": "May"
+  },
+  {
+    "name": "Canes Venatici",
+    "slug": "canes-venatici",
+    "iau_abbreviation": "CVn",
+    "hemisphere": "northern",
+    "area_sq_deg": 465,
+    "brightest_star": "Cor Caroli",
+    "mythology": "Canes Venatici represents the two hunting dogs Asterion and Chara, held on a leash by the herdsman Boötes as they chase Ursa Major around the pole. The constellation was introduced by Johannes Hevelius in the 17th century.",
+    "best_visible": "May"
+  },
+  {
+    "name": "Cygnus",
+    "slug": "cygnus",
+    "iau_abbreviation": "Cyg",
+    "hemisphere": "northern",
+    "area_sq_deg": 804,
+    "brightest_star": "Deneb",
+    "mythology": "Cygnus represents the swan into which Zeus transformed himself to seduce Leda, or alternatively Orpheus transformed into a swan after his death and placed next to his lyre (Lyra). Its distinctive cross shape gives it the alternate name the Northern Cross.",
+    "best_visible": "September"
+  },
+  {
+    "name": "Delphinus",
+    "slug": "delphinus",
+    "iau_abbreviation": "Del",
+    "hemisphere": "northern",
+    "area_sq_deg": 189,
+    "brightest_star": "Rotanev",
+    "mythology": "Delphinus is the dolphin that found the sea nymph Amphitrite for Poseidon when she fled his advances, convincing her to return and marry him. As a reward, Poseidon placed the dolphin's image among the stars.",
+    "best_visible": "September"
+  },
+  {
+    "name": "Dorado",
+    "slug": "dorado",
+    "iau_abbreviation": "Dor",
+    "hemisphere": "southern",
+    "area_sq_deg": 179,
+    "brightest_star": "Alpha Doradus",
+    "mythology": "Dorado represents the swordfish (or dolphinfish), introduced by Dutch navigators Keyser and de Houtman in the late 16th century. It contains most of the Large Magellanic Cloud and has no mythological associations.",
+    "best_visible": "January"
+  },
+  {
+    "name": "Draco",
+    "slug": "draco",
+    "iau_abbreviation": "Dra",
+    "hemisphere": "northern",
+    "area_sq_deg": 1083,
+    "brightest_star": "Eltanin",
+    "mythology": "Draco is variously identified as Ladon, the dragon that guarded the golden apples in the garden of the Hesperides and was slain by Heracles, or as the dragon killed by the goddess Athena and flung into the sky during the Gigantomachy.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Equuleus",
+    "slug": "equuleus",
+    "iau_abbreviation": "Equ",
+    "hemisphere": "northern",
+    "area_sq_deg": 72,
+    "brightest_star": "Kitalpha",
+    "mythology": "Equuleus represents the foal Celeris, brother of Pegasus, given by Mercury to Castor. It is the second-smallest constellation in the sky and has a very faint appearance, but was one of the 48 ancient constellations listed by Ptolemy.",
+    "best_visible": "September"
+  },
+  {
+    "name": "Eridanus",
+    "slug": "eridanus",
+    "iau_abbreviation": "Eri",
+    "hemisphere": "both",
+    "area_sq_deg": 1138,
+    "brightest_star": "Achernar",
+    "mythology": "Eridanus is often identified as the river into which Phaëton fell after being struck by Zeus's thunderbolt while trying to drive the sun chariot. In other traditions it is the Nile, the Euphrates, or the mythical river that encircled the ancient world.",
+    "best_visible": "December"
+  },
+  {
+    "name": "Fornax",
+    "slug": "fornax",
+    "iau_abbreviation": "For",
+    "hemisphere": "southern",
+    "area_sq_deg": 398,
+    "brightest_star": "Dalim",
+    "mythology": "Fornax is a modern constellation introduced by Lacaille in the 18th century, representing a chemical furnace used in laboratories. It contains the Fornax Cluster of galaxies and has no mythological associations.",
+    "best_visible": "December"
+  },
+  {
+    "name": "Gemini",
+    "slug": "gemini",
+    "iau_abbreviation": "Gem",
+    "hemisphere": "northern",
+    "area_sq_deg": 514,
+    "brightest_star": "Pollux",
+    "mythology": "Gemini represents the divine twins Castor and Pollux (the Dioscuri), sons of Leda; Pollux was immortal (son of Zeus) while Castor was mortal. When Castor died, Pollux shared his immortality with his brother so they could be together, and Zeus placed them among the stars.",
+    "best_visible": "February"
+  },
+  {
+    "name": "Grus",
+    "slug": "grus",
+    "iau_abbreviation": "Gru",
+    "hemisphere": "southern",
+    "area_sq_deg": 366,
+    "brightest_star": "Alnair",
+    "mythology": "Grus represents the crane, a bird associated with intelligence and longevity in many cultures. It was introduced by Keyser and de Houtman in the late 16th century and has no ancient mythological associations.",
+    "best_visible": "October"
+  },
+  {
+    "name": "Hercules",
+    "slug": "hercules",
+    "iau_abbreviation": "Her",
+    "hemisphere": "northern",
+    "area_sq_deg": 1225,
+    "brightest_star": "Kornephoros",
+    "mythology": "Hercules is the greatest hero of Greek mythology, son of Zeus and Alcmene, famous for performing the Twelve Labours including slaying the Nemean Lion, the Hydra, and capturing Cerberus. He is depicted kneeling with his club raised.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Horologium",
+    "slug": "horologium",
+    "iau_abbreviation": "Hor",
+    "hemisphere": "southern",
+    "area_sq_deg": 249,
+    "brightest_star": "Alpha Horologii",
+    "mythology": "Horologium is a modern constellation introduced by Lacaille in the 18th century representing a pendulum clock. It has no mythological associations and is one of many utilitarian constellations created during the Age of Enlightenment.",
+    "best_visible": "December"
+  },
+  {
+    "name": "Hydra",
+    "slug": "hydra",
+    "iau_abbreviation": "Hya",
+    "hemisphere": "both",
+    "area_sq_deg": 1303,
+    "brightest_star": "Alphard",
+    "mythology": "Hydra is the nine-headed water serpent slain by Heracles as his second labour; each time a head was cut off, two more grew in its place until Heracles' nephew Iolaus cauterized each stump with a torch. It is the largest constellation in the sky.",
+    "best_visible": "April"
+  },
+  {
+    "name": "Hydrus",
+    "slug": "hydrus",
+    "iau_abbreviation": "Hyi",
+    "hemisphere": "southern",
+    "area_sq_deg": 243,
+    "brightest_star": "Beta Hydri",
+    "mythology": "Hydrus represents the small water snake, introduced by Keyser and de Houtman in the 16th century to distinguish it from the much larger Hydra. It has no ancient mythological associations.",
+    "best_visible": "December"
+  },
+  {
+    "name": "Indus",
+    "slug": "indus",
+    "iau_abbreviation": "Ind",
+    "hemisphere": "southern",
+    "area_sq_deg": 294,
+    "brightest_star": "Alpha Indi",
+    "mythology": "Indus represents a Native American or Indian man, introduced by Keyser and de Houtman to represent the peoples encountered by Dutch explorers in the East and West Indies during the 16th century.",
+    "best_visible": "September"
+  },
+  {
+    "name": "Lacerta",
+    "slug": "lacerta",
+    "iau_abbreviation": "Lac",
+    "hemisphere": "northern",
+    "area_sq_deg": 201,
+    "brightest_star": "Alpha Lacertae",
+    "mythology": "Lacerta, the lizard, was introduced by Johannes Hevelius in 1687. It is a small, faint constellation squeezed between Cygnus, Cassiopeia, and Andromeda, and has no mythological associations.",
+    "best_visible": "October"
+  },
+  {
+    "name": "Leo",
+    "slug": "leo",
+    "iau_abbreviation": "Leo",
+    "hemisphere": "northern",
+    "area_sq_deg": 947,
+    "brightest_star": "Regulus",
+    "mythology": "Leo represents the Nemean Lion, slain by Heracles as the first of his Twelve Labours. The lion had an impenetrable skin so Heracles had to strangle it; he wore its skin as armour thereafter. It is one of the oldest recognized constellations.",
+    "best_visible": "April"
+  },
+  {
+    "name": "Leo Minor",
+    "slug": "leo-minor",
+    "iau_abbreviation": "LMi",
+    "hemisphere": "northern",
+    "area_sq_deg": 232,
+    "brightest_star": "Praecipua",
+    "mythology": "Leo Minor is a small and faint constellation introduced by Johannes Hevelius in 1687, representing a small lion or lion cub. It has no ancient mythological associations and is one of the fainter constellations in the northern sky.",
+    "best_visible": "April"
+  },
+  {
+    "name": "Lepus",
+    "slug": "lepus",
+    "iau_abbreviation": "Lep",
+    "hemisphere": "southern",
+    "area_sq_deg": 290,
+    "brightest_star": "Arneb",
+    "mythology": "Lepus represents the hare being hunted by Orion and his dogs (Canis Major and Canis Minor). It is one of the 48 ancient constellations and was placed at Orion's feet in the sky.",
+    "best_visible": "January"
+  },
+  {
+    "name": "Libra",
+    "slug": "libra",
+    "iau_abbreviation": "Lib",
+    "hemisphere": "southern",
+    "area_sq_deg": 538,
+    "brightest_star": "Zubenelgenubi",
+    "mythology": "Libra represents the scales of justice held by Astraea (the goddess of justice, now identified with Virgo). The Babylonians associated it with the scales used to measure the length of day and night at the autumn equinox; it is the only zodiac constellation representing an inanimate object.",
+    "best_visible": "June"
+  },
+  {
+    "name": "Lupus",
+    "slug": "lupus",
+    "iau_abbreviation": "Lup",
+    "hemisphere": "southern",
+    "area_sq_deg": 334,
+    "brightest_star": "Alpha Lupi",
+    "mythology": "Lupus was associated in ancient times with the wolf or a wild animal impaled on a stake by the centaur Centaurus. In Babylonian astronomy it was identified as the Mad Dog; the Greeks and Romans saw it as a general wild beast (Therium or Bestia).",
+    "best_visible": "June"
+  },
+  {
+    "name": "Lynx",
+    "slug": "lynx",
+    "iau_abbreviation": "Lyn",
+    "hemisphere": "northern",
+    "area_sq_deg": 545,
+    "brightest_star": "Alpha Lyncis",
+    "mythology": "Lynx was introduced by Johannes Hevelius in 1687 in the gap between Ursa Major and Auriga. He named it the Lynx because one would need the sharp eyes of a lynx to see its faint stars; it has no mythological associations.",
+    "best_visible": "March"
+  },
+  {
+    "name": "Lyra",
+    "slug": "lyra",
+    "iau_abbreviation": "Lyr",
+    "hemisphere": "northern",
+    "area_sq_deg": 286,
+    "brightest_star": "Vega",
+    "mythology": "Lyra represents the lyre invented by Hermes and given to Orpheus, whose music was so beautiful it could charm animals, trees, and even rocks. After Orpheus was killed by the Maenads, his lyre was placed among the stars by Zeus.",
+    "best_visible": "August"
+  },
+  {
+    "name": "Mensa",
+    "slug": "mensa",
+    "iau_abbreviation": "Men",
+    "hemisphere": "southern",
+    "area_sq_deg": 153,
+    "brightest_star": "Alpha Mensae",
+    "mythology": "Mensa is the faintest constellation in the sky, introduced by Lacaille in the 18th century to honor Table Mountain in South Africa where he conducted his observations. It has no mythological associations.",
+    "best_visible": "January"
+  },
+  {
+    "name": "Microscopium",
+    "slug": "microscopium",
+    "iau_abbreviation": "Mic",
+    "hemisphere": "southern",
+    "area_sq_deg": 210,
+    "brightest_star": "Gamma Microscopii",
+    "mythology": "Microscopium is a modern constellation introduced by Lacaille in 1751, representing the microscope, one of the revolutionary scientific instruments of the 17th century. It has no mythological associations.",
+    "best_visible": "September"
+  },
+  {
+    "name": "Monoceros",
+    "slug": "monoceros",
+    "iau_abbreviation": "Mon",
+    "hemisphere": "both",
+    "area_sq_deg": 482,
+    "brightest_star": "Beta Monocerotis",
+    "mythology": "Monoceros, the unicorn, was introduced by Petrus Plancius in 1612 and popularized by Jakob Bartsch. Despite being a creature of ancient legend, the constellation itself is modern and occupies the large area of sky inside the Winter Triangle.",
+    "best_visible": "February"
+  },
+  {
+    "name": "Musca",
+    "slug": "musca",
+    "iau_abbreviation": "Mus",
+    "hemisphere": "southern",
+    "area_sq_deg": 138,
+    "brightest_star": "Alpha Muscae",
+    "mythology": "Musca, the fly, was introduced by Keyser and de Houtman in the late 16th century. Originally called Apis (the bee), it was renamed by Lacaille. It is the only insect represented among the 88 constellations and has no mythological associations.",
+    "best_visible": "May"
+  },
+  {
+    "name": "Norma",
+    "slug": "norma",
+    "iau_abbreviation": "Nor",
+    "hemisphere": "southern",
+    "area_sq_deg": 165,
+    "brightest_star": "Gamma-2 Normae",
+    "mythology": "Norma is a modern constellation introduced by Lacaille in the 18th century representing a carpenter's or surveyor's square. It has no mythological associations and its brightest stars were assigned to Scorpius by Bayer.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Octans",
+    "slug": "octans",
+    "iau_abbreviation": "Oct",
+    "hemisphere": "southern",
+    "area_sq_deg": 291,
+    "brightest_star": "Nu Octantis",
+    "mythology": "Octans is a modern constellation introduced by Lacaille in the 18th century, representing the reflecting octant, a navigational instrument. It contains the south celestial pole (marked by the very faint Sigma Octantis) and has no mythological associations.",
+    "best_visible": "October"
+  },
+  {
+    "name": "Ophiuchus",
+    "slug": "ophiuchus",
+    "iau_abbreviation": "Oph",
+    "hemisphere": "both",
+    "area_sq_deg": 948,
+    "brightest_star": "Rasalhague",
+    "mythology": "Ophiuchus represents Asclepius, the god of medicine who learned the art of healing from the centaur Chiron and could even resurrect the dead. He is shown holding the serpent Serpens, symbolizing the renewal of life and wisdom of medicine.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Orion",
+    "slug": "orion",
+    "iau_abbreviation": "Ori",
+    "hemisphere": "both",
+    "area_sq_deg": 594,
+    "brightest_star": "Rigel",
+    "mythology": "Orion was a giant hunter in Greek mythology, son of Poseidon; he was either killed by the goddess Artemis or by a scorpion sent by Gaia. Zeus placed him in the sky where he continues to hunt with his dogs while fleeing Scorpius, which is on the opposite side of the sky.",
+    "best_visible": "January"
+  },
+  {
+    "name": "Pavo",
+    "slug": "pavo",
+    "iau_abbreviation": "Pav",
+    "hemisphere": "southern",
+    "area_sq_deg": 378,
+    "brightest_star": "Peacock",
+    "mythology": "Pavo, the peacock, was introduced by Keyser and de Houtman in the late 16th century. In Greek myth, peacocks were sacred to Hera; their tail feathers bore the eyes of the hundred-eyed giant Argus, slain by Hermes at Zeus's command.",
+    "best_visible": "August"
+  },
+  {
+    "name": "Pegasus",
+    "slug": "pegasus",
+    "iau_abbreviation": "Peg",
+    "hemisphere": "northern",
+    "area_sq_deg": 1121,
+    "brightest_star": "Enif",
+    "mythology": "Pegasus is the winged horse that sprang from the blood of Medusa when Perseus cut off her head. He was tamed by the hero Bellerophon, who rode him to defeat the Chimera, but was eventually struck down by Zeus when Bellerophon tried to fly to Olympus.",
+    "best_visible": "October"
+  },
+  {
+    "name": "Perseus",
+    "slug": "perseus",
+    "iau_abbreviation": "Per",
+    "hemisphere": "northern",
+    "area_sq_deg": 615,
+    "brightest_star": "Mirfak",
+    "mythology": "Perseus is the great hero who slew the Gorgon Medusa, rescued Andromeda from the sea monster Cetus, and founded the city of Mycenae. He is depicted holding the severed head of Medusa, represented by the famous variable star Algol.",
+    "best_visible": "December"
+  },
+  {
+    "name": "Phoenix",
+    "slug": "phoenix",
+    "iau_abbreviation": "Phe",
+    "hemisphere": "southern",
+    "area_sq_deg": 469,
+    "brightest_star": "Ankaa",
+    "mythology": "Phoenix represents the mythical firebird that cyclically burns itself to ashes and is reborn from those ashes; it was introduced by Keyser and de Houtman in the late 16th century. The phoenix appears in Egyptian, Greek, Chinese, and many other world mythologies.",
+    "best_visible": "November"
+  },
+  {
+    "name": "Pictor",
+    "slug": "pictor",
+    "iau_abbreviation": "Pic",
+    "hemisphere": "southern",
+    "area_sq_deg": 247,
+    "brightest_star": "Alpha Pictoris",
+    "mythology": "Pictor is a modern constellation introduced by Lacaille in 1751, originally called Equuleus Pictoris (the painter's easel). It contains Beta Pictoris, a young star surrounded by a disk of dust that is forming planets.",
+    "best_visible": "February"
+  },
+  {
+    "name": "Piscis Austrinus",
+    "slug": "piscis-austrinus",
+    "iau_abbreviation": "PsA",
+    "hemisphere": "southern",
+    "area_sq_deg": 245,
+    "brightest_star": "Fomalhaut",
+    "mythology": "Piscis Austrinus, the Southern Fish, represents the fish drinking the water poured by Aquarius. In Babylonian tradition it was the great fish that gave birth to the fish of the zodiacal constellation Pisces. It is one of Ptolemy's original 48 constellations.",
+    "best_visible": "October"
+  },
+  {
+    "name": "Pisces",
+    "slug": "pisces",
+    "iau_abbreviation": "Psc",
+    "hemisphere": "northern",
+    "area_sq_deg": 889,
+    "brightest_star": "Eta Piscium",
+    "mythology": "Pisces represents two fish tied together by a cord, traditionally identified as Aphrodite and Eros transformed into fish to escape the monster Typhon. They are tied together so they will not lose each other while swimming away.",
+    "best_visible": "November"
+  },
+  {
+    "name": "Puppis",
+    "slug": "puppis",
+    "iau_abbreviation": "Pup",
+    "hemisphere": "southern",
+    "area_sq_deg": 673,
+    "brightest_star": "Naos",
+    "mythology": "Puppis represents the stern of the great ship Argo used by Jason and the Argonauts. It was originally part of the large constellation Argo Navis, which Lacaille divided into Carina (keel), Puppis (stern), and Vela (sails).",
+    "best_visible": "February"
+  },
+  {
+    "name": "Pyxis",
+    "slug": "pyxis",
+    "iau_abbreviation": "Pyx",
+    "hemisphere": "southern",
+    "area_sq_deg": 221,
+    "brightest_star": "Alpha Pyxidis",
+    "mythology": "Pyxis represents the compass of the ship Argo, introduced by Lacaille in 1751. It was not part of the original Argo Navis constellation; Lacaille added it separately in the region of the sky between Puppis and Vela.",
+    "best_visible": "March"
+  },
+  {
+    "name": "Reticulum",
+    "slug": "reticulum",
+    "iau_abbreviation": "Ret",
+    "hemisphere": "southern",
+    "area_sq_deg": 114,
+    "brightest_star": "Alpha Reticuli",
+    "mythology": "Reticulum represents the reticle (crosshair eyepiece) used by Isaac Newton and other astronomers in their telescopes, introduced by Lacaille in the 18th century. The nearby system Zeta Reticuli is famous in UFO folklore.",
+    "best_visible": "January"
+  },
+  {
+    "name": "Sculptor",
+    "slug": "sculptor",
+    "iau_abbreviation": "Scl",
+    "hemisphere": "southern",
+    "area_sq_deg": 475,
+    "brightest_star": "Alpha Sculptoris",
+    "mythology": "Sculptor is a modern constellation introduced by Lacaille in 1751, originally called Apparatus Sculptoris (the sculptor's studio). It contains the south galactic pole and the nearby Sculptor Galaxy. It has no mythological associations.",
+    "best_visible": "November"
+  },
+  {
+    "name": "Scorpius",
+    "slug": "scorpius",
+    "iau_abbreviation": "Sco",
+    "hemisphere": "southern",
+    "area_sq_deg": 497,
+    "brightest_star": "Antares",
+    "mythology": "Scorpius is the scorpion sent by Gaia (or Artemis) to sting the boastful hunter Orion; Zeus placed both in the sky on opposite sides so they would never meet. It is one of the most ancient constellations and was recognized by the Babylonians as early as 4000 BCE.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Scutum",
+    "slug": "scutum",
+    "iau_abbreviation": "Sct",
+    "hemisphere": "southern",
+    "area_sq_deg": 109,
+    "brightest_star": "Alpha Scuti",
+    "mythology": "Scutum was introduced by Johannes Hevelius in 1684 to honor the shield of King John III Sobieski of Poland after his victory over the Turks at the Battle of Vienna. It is the only constellation named after a historical event.",
+    "best_visible": "August"
+  },
+  {
+    "name": "Serpens",
+    "slug": "serpens",
+    "iau_abbreviation": "Ser",
+    "hemisphere": "both",
+    "area_sq_deg": 637,
+    "brightest_star": "Unukalhai",
+    "mythology": "Serpens is the snake held by Ophiuchus (Asclepius) and is the only constellation divided into two parts: Serpens Caput (the head) and Serpens Cauda (the tail). The serpent represents the wisdom of healing arts and renewal, as snakes shed their skin.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Sextans",
+    "slug": "sextans",
+    "iau_abbreviation": "Sex",
+    "hemisphere": "both",
+    "area_sq_deg": 314,
+    "brightest_star": "Alpha Sextantis",
+    "mythology": "Sextans was introduced by Johannes Hevelius in 1687 to commemorate the sextant he used for precise stellar measurements before it was destroyed in a fire. It is a faint constellation with no mythological associations.",
+    "best_visible": "April"
+  },
+  {
+    "name": "Sagitta",
+    "slug": "sagitta",
+    "iau_abbreviation": "Sge",
+    "hemisphere": "northern",
+    "area_sq_deg": 80,
+    "brightest_star": "Gamma Sagittae",
+    "mythology": "Sagitta represents the arrow shot by Apollo to kill the Cyclopes (who had forged the thunderbolts that killed Asclepius), or the arrow of Heracles, Cupid, or Sagittarius. It is one of the smallest constellations but was known to the ancient Greeks.",
+    "best_visible": "August"
+  },
+  {
+    "name": "Sagittarius",
+    "slug": "sagittarius",
+    "iau_abbreviation": "Sgr",
+    "hemisphere": "southern",
+    "area_sq_deg": 867,
+    "brightest_star": "Kaus Australis",
+    "mythology": "Sagittarius is the centaur archer Crotus, son of the god Pan, who invented archery and is shown drawing a bow aimed at the scorpion Scorpius. The center of the Milky Way lies in the direction of Sagittarius.",
+    "best_visible": "August"
+  },
+  {
+    "name": "Taurus",
+    "slug": "taurus",
+    "iau_abbreviation": "Tau",
+    "hemisphere": "northern",
+    "area_sq_deg": 797,
+    "brightest_star": "Aldebaran",
+    "mythology": "Taurus represents the bull that Zeus became to abduct the Phoenician princess Europa, swimming with her across the sea to Crete. It is one of the oldest recognized constellations, with depictions dating back to the Lascaux cave paintings (17,000 BCE).",
+    "best_visible": "January"
+  },
+  {
+    "name": "Telescopium",
+    "slug": "telescopium",
+    "iau_abbreviation": "Tel",
+    "hemisphere": "southern",
+    "area_sq_deg": 252,
+    "brightest_star": "Alpha Telescopii",
+    "mythology": "Telescopium is a modern constellation introduced by Lacaille in 1751 to honor the telescope, the revolutionary astronomical instrument. It has no mythological associations.",
+    "best_visible": "August"
+  },
+  {
+    "name": "Triangulum Australe",
+    "slug": "triangulum-australe",
+    "iau_abbreviation": "TrA",
+    "hemisphere": "southern",
+    "area_sq_deg": 110,
+    "brightest_star": "Atria",
+    "mythology": "Triangulum Australe, the Southern Triangle, was introduced by Keyser and de Houtman in the late 16th century to distinguish it from the northern Triangulum. It has no mythological associations and forms a conspicuous pattern of three bright stars.",
+    "best_visible": "July"
+  },
+  {
+    "name": "Triangulum",
+    "slug": "triangulum",
+    "iau_abbreviation": "Tri",
+    "hemisphere": "northern",
+    "area_sq_deg": 132,
+    "brightest_star": "Beta Trianguli",
+    "mythology": "Triangulum represents the island of Sicily (ancient Trinacria) according to some accounts, or simply a geometric triangle. It was known to the ancient Greeks and is one of Ptolemy's original 48 constellations. The Triangulum Galaxy (M33) lies within its borders.",
+    "best_visible": "December"
+  },
+  {
+    "name": "Tucana",
+    "slug": "tucana",
+    "iau_abbreviation": "Tuc",
+    "hemisphere": "southern",
+    "area_sq_deg": 295,
+    "brightest_star": "Alpha Tucanae",
+    "mythology": "Tucana represents the toucan, the large-billed bird of South America, introduced by Keyser and de Houtman in the late 16th century. It contains the Small Magellanic Cloud and the globular cluster 47 Tucanae.",
+    "best_visible": "November"
+  },
+  {
+    "name": "Ursa Major",
+    "slug": "ursa-major",
+    "iau_abbreviation": "UMa",
+    "hemisphere": "northern",
+    "area_sq_deg": 1280,
+    "brightest_star": "Alioth",
+    "mythology": "Ursa Major is the great bear, identified as Callisto, a nymph transformed into a bear by Zeus (or Hera out of jealousy) and placed in the sky along with her son Arcas as Ursa Minor. The Big Dipper (Plough) asterism forms the bear's body and tail.",
+    "best_visible": "April"
+  },
+  {
+    "name": "Ursa Minor",
+    "slug": "ursa-minor",
+    "iau_abbreviation": "UMi",
+    "hemisphere": "northern",
+    "area_sq_deg": 256,
+    "brightest_star": "Polaris",
+    "mythology": "Ursa Minor is the little bear, representing Arcas, the son of Callisto, who was transformed into a bear by Zeus and placed in the sky next to his mother. Its brightest star, Polaris, currently marks the north celestial pole.",
+    "best_visible": "June"
+  },
+  {
+    "name": "Vela",
+    "slug": "vela",
+    "iau_abbreviation": "Vel",
+    "hemisphere": "southern",
+    "area_sq_deg": 500,
+    "brightest_star": "Gamma Velorum",
+    "mythology": "Vela represents the sails of the great ship Argo, sailed by Jason and the Argonauts. Like Carina and Puppis, it was once part of the ancient constellation Argo Navis, which Lacaille subdivided in the 18th century.",
+    "best_visible": "March"
+  },
+  {
+    "name": "Virgo",
+    "slug": "virgo",
+    "iau_abbreviation": "Vir",
+    "hemisphere": "both",
+    "area_sq_deg": 1294,
+    "brightest_star": "Spica",
+    "mythology": "Virgo is most often identified with Demeter, the goddess of harvest, or her daughter Persephone. When Persephone returns to the underworld for winter, Demeter (Virgo) disappears from the evening sky. It is the second-largest constellation and one of the oldest.",
+    "best_visible": "May"
+  },
+  {
+    "name": "Volans",
+    "slug": "volans",
+    "iau_abbreviation": "Vol",
+    "hemisphere": "southern",
+    "area_sq_deg": 141,
+    "brightest_star": "Beta Volantis",
+    "mythology": "Volans, the flying fish, was introduced by Keyser and de Houtman and represents the tropical flying fish that were seen leaping out of the sea by sailors on voyages to the southern hemisphere. It has no mythological associations.",
+    "best_visible": "March"
+  },
+  {
+    "name": "Vulpecula",
+    "slug": "vulpecula",
+    "iau_abbreviation": "Vul",
+    "hemisphere": "northern",
+    "area_sq_deg": 268,
+    "brightest_star": "Anser",
+    "mythology": "Vulpecula, the little fox, was introduced by Johannes Hevelius in 1687; he originally depicted it carrying a goose in its mouth, so it was called Vulpecula cum Ansere (the little fox with the goose). It contains the Dumbbell Nebula (M27), the first planetary nebula discovered.",
+    "best_visible": "September"
+  }
+]

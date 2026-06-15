@@ -1,0 +1,28 @@
+/* Theme: Modus Vivendi */
+/* Source: https://protesilaos.com/emacs/modus-themes */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #000000;
+  --foreground:        #FFFFFF;
+  --cursor:            #FFFFFF;
+  --selection:         #2C2C2C;
+
+  --black:             #1E1E1E;
+  --red:               #FF5F5F;
+  --green:             #44BC44;
+  --yellow:            #D0BC00;
+  --blue:              #2FAFFF;
+  --magenta:           #FEACD0;
+  --cyan:              #00D3D0;
+  --white:             #D0D0D0;
+
+  --bright-black:      #595959;
+  --bright-red:        #FF7F9F;
+  --bright-green:      #70C900;
+  --bright-yellow:     #EFEF00;
+  --bright-blue:       #79A8FF;
+  --bright-magenta:    #F78FE7;
+  --bright-cyan:       #4AE2F0;
+  --bright-white:      #FFFFFF;
+}

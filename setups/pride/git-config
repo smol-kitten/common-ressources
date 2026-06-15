@@ -1,0 +1,41 @@
+# pride git config — Trans Pride colors
+# Usage: add to ~/.gitconfig:
+#   [include]
+#       path = ~/.config/git/rice.conf
+
+[alias]
+    l   = log --oneline --graph --decorate --all
+    s   = status --short --branch
+    co  = checkout
+    sw  = switch
+    br  = branch
+    aa  = add -A
+    cm  = commit -m
+    ca  = commit --amend --no-edit
+    pu  = push
+    puf = push --force-with-lease
+    pl  = pull --rebase
+    d   = diff
+    ds  = diff --staged
+    lg  = log --graph --pretty=format:'%C(auto)%h%d %s %C(dim)%an %ar'
+
+[color "status"]
+    added     = "#57e389" bold
+    changed   = "#f7a8b8"
+    untracked = "#55cdfc"
+
+[core]
+    pager = delta
+
+[delta]
+    syntax-theme  = Nord
+    line-numbers  = true
+    side-by-side  = false
+    navigate      = true
+    plus-style    = "syntax #1a3a1a"
+    minus-style   = "syntax #3a0d0d"
+    line-numbers-plus-style  = "#57e389"
+    line-numbers-minus-style = "#ff4d4d"
+
+[interactive]
+    diffFilter = delta --color-only

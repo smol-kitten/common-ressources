@@ -1,0 +1,89 @@
+# ── catppuccin-mocha Zsh — Starship prompt ─────────────────────
+
+# ── Path ───────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
+
+# ── Zsh options ────────────────────────────────────────────────
+setopt AUTO_CD
+setopt GLOB_DOTS
+setopt EXTENDED_GLOB
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+
+# ── Completion ─────────────────────────────────────────────────
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*:descriptions' format '%F{105}── %d ──%f'
+
+# ── Plugins (sourced if present) ───────────────────────────────
+[[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#585b70"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# ── zoxide ─────────────────────────────────────────────────────
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
+
+# ── fzf ────────────────────────────────────────────────────────
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="
+  --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
+  --color=fg:#cdd6f4,header:#a6adc8,info:#cba6f7,pointer:#f5e0dc
+  --color=marker:#a6e3a1,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
+  --border rounded --prompt '  ' --pointer '' --marker ''
+  --height 40% --layout reverse"
+export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always {} 2>/dev/null || cat {}'"
+
+# ── Aliases ────────────────────────────────────────────────────
+alias ls='eza --icons --group-directories-first'
+alias ll='eza -lah --icons --group-directories-first --git'
+alias lt='eza --tree --icons --level=2'
+alias cat='bat --style=auto'
+alias grep='grep --color=auto'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias g='git'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate --all'
+alias gs='git status'
+alias gd='git diff'
+alias lg='lazygit'
+alias vi='nvim'
+alias vim='nvim'
+alias top='btop'
+alias df='df -h'
+alias du='du -sh'
+alias open='xdg-open'
+
+# ── Editor ─────────────────────────────────────────────────────
+export EDITOR='nvim'
+export VISUAL='nvim'
+export PAGER='bat --plain'
+
+# ── Language / locale ──────────────────────────────────────────
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# ── Starship prompt ────────────────────────────────────────────
+# Install: curl -sS https://starship.rs/install.sh | sh
+# Apply Catppuccin preset: starship preset catppuccin-powerline > ~/.config/starship.toml
+# Or use the included starship.toml from this setup
+command -v starship &>/dev/null && eval "$(starship init zsh)"

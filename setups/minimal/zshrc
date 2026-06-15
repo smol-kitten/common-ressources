@@ -1,0 +1,49 @@
+# ── minimal Zsh — bare prompt, no plugins ──────────────────────
+
+# ── Path ───────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
+
+# ── Zsh options ────────────────────────────────────────────────
+setopt AUTO_CD
+setopt GLOB_DOTS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+
+# ── Completion ─────────────────────────────────────────────────
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# ── Bare prompt ────────────────────────────────────────────────
+PS1='%F{8}%~%f %F{7}❯%f '
+
+# ── Aliases ────────────────────────────────────────────────────
+alias ls='ls --color=auto'
+alias ll='ls -lah --color=auto'
+alias grep='grep --color=auto'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias g='git'
+alias gs='git status'
+alias gl='git log --oneline --graph --decorate --all'
+alias vi='nvim'
+alias vim='nvim'
+alias df='df -h'
+alias du='du -sh'
+
+# ── Editor ─────────────────────────────────────────────────────
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+# ── Language / locale ──────────────────────────────────────────
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8

@@ -1,0 +1,37 @@
+# windows-like git config — Material Dark
+# Usage: add to ~/.gitconfig:
+#   [include]
+#       path = ~/.config/git/rice.conf
+
+[alias]
+    l   = log --oneline --graph --decorate --all
+    s   = status --short --branch
+    co  = checkout
+    sw  = switch
+    br  = branch
+    aa  = add -A
+    cm  = commit -m
+    ca  = commit --amend --no-edit
+    pu  = push
+    puf = push --force-with-lease
+    pl  = pull --rebase
+    d   = diff
+    ds  = diff --staged
+    lg  = log --graph --pretty=format:'%C(auto)%h%d %s %C(dim)%an %ar'
+
+[color "status"]
+    added     = "#69f0ae" bold
+    changed   = "#ffb300"
+    untracked = "#ff5252"
+
+[core]
+    pager = delta
+
+[delta]
+    syntax-theme = MaterialDark
+    line-numbers = true
+    side-by-side = false
+    navigate     = true
+
+[interactive]
+    diffFilter = delta --color-only

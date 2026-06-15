@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Tight",
+    "slug": "tight",
+    "value": 1.2,
+    "css_value": "1.2",
+    "suitable_for": ["headings", "display text", "large typographic elements", "single-line labels"],
+    "avoid_for": ["body text", "long-form content", "multi-line paragraphs", "small font sizes"],
+    "description": "A compact line-height of 1.1–1.2 that pulls lines of text close together. Works well for headings and display type where tight optical spacing is desirable, but causes readability issues in running text."
+  },
+  {
+    "name": "Snug",
+    "slug": "snug",
+    "value": 1.375,
+    "css_value": "1.375",
+    "suitable_for": ["short UI text", "card content", "tooltips", "compact list items", "navigation labels"],
+    "avoid_for": ["long paragraphs", "accessibility-sensitive contexts", "small screen body text"],
+    "description": "Tailwind CSS's 'snug' value at 1.375. Slightly looser than tight, providing a comfortable feel for brief UI copy and short text blocks without wasting vertical space."
+  },
+  {
+    "name": "Normal",
+    "slug": "normal",
+    "value": 1.5,
+    "css_value": "1.5",
+    "suitable_for": ["general body text", "articles", "blog posts", "standard UI copy", "default browser rendering"],
+    "avoid_for": ["very large display text", "single-line headings where vertical rhythm is tightly controlled"],
+    "description": "Tailwind CSS's 'normal' value and the default browser line-height recommendation. At 1.5, it matches WCAG 1.4.8 body text requirements and provides comfortable reading for most content types."
+  },
+  {
+    "name": "Relaxed",
+    "slug": "relaxed",
+    "value": 1.625,
+    "css_value": "1.625",
+    "suitable_for": ["comfortable long-form reading", "editorial content", "blog articles", "accessibility-enhanced text"],
+    "avoid_for": ["compact UIs", "space-constrained layouts", "large display headings"],
+    "description": "Tailwind CSS's 'relaxed' value at 1.625. Provides extra breathing room between lines for comfortable extended reading. A good choice when readability and reader comfort are the primary goals."
+  },
+  {
+    "name": "Loose",
+    "slug": "loose",
+    "value": 2.0,
+    "css_value": "2",
+    "suitable_for": ["poetry", "legibility-critical contexts", "code snippets", "accessibility overrides", "dyslexia-friendly layouts"],
+    "avoid_for": ["standard body text", "compact interfaces", "any context where vertical space is limited"],
+    "description": "Tailwind CSS's 'loose' value at 2.0 (double-spaced). Maximum spacing between lines creates a very airy, open feel. Best reserved for poetry, code, or situations where maximum readability trumps space efficiency."
+  },
+  {
+    "name": "WCAG Minimum",
+    "slug": "wcag-minimum",
+    "value": 1.5,
+    "css_value": "1.5",
+    "suitable_for": ["accessible body text", "WCAG 1.4.8 compliance", "public-sector websites", "government and legal documents"],
+    "avoid_for": ["decorative display text", "single-line headings", "contexts exempt from WCAG 1.4.8"],
+    "description": "The minimum line-height required by WCAG Success Criterion 1.4.8 (Visual Presentation) for body text. Ensures adequate spacing for users with cognitive or visual disabilities reading blocks of text."
+  }
+]

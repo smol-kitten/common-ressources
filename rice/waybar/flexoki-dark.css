@@ -1,0 +1,28 @@
+/* Theme: Flexoki Dark */
+/* Source: https://stephango.com/flexoki */
+/* Include in waybar/style.css: @import url("colors.css"); */
+
+:root {
+  --background:        #100F0F;
+  --foreground:        #CECDC3;
+  --cursor:            #CECDC3;
+  --selection:         #282726;
+
+  --black:             #1C1B1A;
+  --red:               #D14D41;
+  --green:             #879A39;
+  --yellow:            #D0A215;
+  --blue:              #4385BE;
+  --magenta:           #CE5D97;
+  --cyan:              #3AA99F;
+  --white:             #B7B5AC;
+
+  --bright-black:      #575653;
+  --bright-red:        #D14D41;
+  --bright-green:      #879A39;
+  --bright-yellow:     #D0A215;
+  --bright-blue:       #4385BE;
+  --bright-magenta:    #CE5D97;
+  --bright-cyan:       #3AA99F;
+  --bright-white:      #CECDC3;
+}

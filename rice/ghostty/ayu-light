@@ -1,0 +1,27 @@
+# Theme: Ayu Light
+# Source: https://github.com/dempfi/ayu
+# Usage: add to ~/.config/ghostty/config
+#   theme = ayu-light
+
+background = FAFAFA
+foreground = 575F66
+cursor-color = FF6A00
+selection-background = D3D3D3
+selection-foreground = 575F66
+
+palette = 0=#0A0E14
+palette = 1=#FF3333
+palette = 2=#86B300
+palette = 3=#F29718
+palette = 4=#41A6D9
+palette = 5=#A37ACC
+palette = 6=#4DBF99
+palette = 7=#BFBDB6
+palette = 8=#5C6773
+palette = 9=#FF6565
+palette = 10=#B8CC52
+palette = 11=#FFB454
+palette = 12=#73D8FF
+palette = 13=#D4BFFF
+palette = 14=#95E6CB
+palette = 15=#FFFFFF

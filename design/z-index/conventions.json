@@ -1,0 +1,200 @@
+[
+  {
+    "name": "base",
+    "slug": "base",
+    "value": 0,
+    "description": "Default stacking context. Normal document flow elements with no explicit z-index.",
+    "system": "bootstrap",
+    "above": [],
+    "below": ["raised-content", "sticky", "fixed", "modal", "tooltip"]
+  },
+  {
+    "name": "raised-content",
+    "slug": "raised-content",
+    "value": 1,
+    "description": "Slightly elevated content, such as cards with box-shadow or focused form elements that need to appear above siblings.",
+    "system": "bootstrap",
+    "above": ["base"],
+    "below": ["sticky", "fixed", "modal", "tooltip"]
+  },
+  {
+    "name": "dropdown",
+    "slug": "dropdown",
+    "value": 1000,
+    "description": "Dropdown menus and contextual overlays that must appear above regular page content but below navigation elements.",
+    "system": "custom",
+    "above": ["base", "raised-content"],
+    "below": ["sticky", "fixed", "modal", "tooltip"]
+  },
+  {
+    "name": "sticky",
+    "slug": "sticky",
+    "value": 1020,
+    "description": "Sticky-positioned elements such as sticky table headers or sidebars that remain in view during scroll. Bootstrap 5 value.",
+    "system": "bootstrap",
+    "above": ["base", "raised-content", "dropdown"],
+    "below": ["fixed", "offcanvas", "modal", "tooltip"]
+  },
+  {
+    "name": "fixed",
+    "slug": "fixed",
+    "value": 1030,
+    "description": "Fixed navigation bars and elements that remain in the viewport regardless of scroll position. Bootstrap 5 .fixed-top / .fixed-bottom value.",
+    "system": "bootstrap",
+    "above": ["base", "raised-content", "dropdown", "sticky"],
+    "below": ["offcanvas-backdrop", "offcanvas", "modal-backdrop", "modal", "tooltip"]
+  },
+  {
+    "name": "offcanvas-backdrop",
+    "slug": "offcanvas-backdrop",
+    "value": 1040,
+    "description": "Semi-transparent backdrop that appears behind an offcanvas panel, darkening the main content area.",
+    "system": "bootstrap",
+    "above": ["fixed"],
+    "below": ["offcanvas", "modal", "tooltip"]
+  },
+  {
+    "name": "offcanvas",
+    "slug": "offcanvas",
+    "value": 1045,
+    "description": "Offcanvas sidebar panels that slide in from the edge of the viewport, appearing above their backdrop.",
+    "system": "bootstrap",
+    "above": ["offcanvas-backdrop"],
+    "below": ["modal-backdrop", "modal", "tooltip"]
+  },
+  {
+    "name": "modal-backdrop",
+    "slug": "modal-backdrop",
+    "value": 1050,
+    "description": "Semi-transparent overlay backdrop behind modal dialogs. Prevents interaction with page content while a modal is open.",
+    "system": "bootstrap",
+    "above": ["offcanvas"],
+    "below": ["modal", "popover", "tooltip"]
+  },
+  {
+    "name": "modal",
+    "slug": "modal",
+    "value": 1055,
+    "description": "Modal dialog windows that require user attention before returning to the main interface.",
+    "system": "bootstrap",
+    "above": ["modal-backdrop"],
+    "below": ["popover", "tooltip"]
+  },
+  {
+    "name": "popover",
+    "slug": "popover",
+    "value": 1070,
+    "description": "Popover components containing richer content (title + body) anchored to a trigger element, appearing above modals.",
+    "system": "bootstrap",
+    "above": ["modal"],
+    "below": ["tooltip"]
+  },
+  {
+    "name": "tooltip",
+    "slug": "tooltip",
+    "value": 1080,
+    "description": "Tooltip overlays providing short contextual hints. Highest layer in the Bootstrap component stack to ensure they always appear on top.",
+    "system": "bootstrap",
+    "above": ["popover", "modal", "fixed"],
+    "below": ["notification-toast", "loading-spinner", "dev-tools-overlay"]
+  },
+  {
+    "name": "overlay",
+    "slug": "overlay",
+    "value": 100,
+    "description": "Generic overlay layer for custom image captions, hover effects, or light overlays on content sections. Sits above normal content but well below navigation and modals.",
+    "system": "custom",
+    "above": ["base"],
+    "below": ["dropdown", "sticky", "fixed", "modal"]
+  },
+  {
+    "name": "notification-toast",
+    "slug": "notification-toast",
+    "value": 9000,
+    "description": "Notification toasts and alert banners that must appear above all application UI including modals and tooltips.",
+    "system": "custom",
+    "above": ["tooltip", "modal", "fixed"],
+    "below": ["loading-spinner", "dev-tools-overlay"]
+  },
+  {
+    "name": "loading-spinner",
+    "slug": "loading-spinner",
+    "value": 9500,
+    "description": "Full-screen loading indicators and progress overlays that must block all interaction during async operations.",
+    "system": "custom",
+    "above": ["notification-toast"],
+    "below": ["dev-tools-overlay"]
+  },
+  {
+    "name": "tailwind-auto",
+    "slug": "tailwind-auto",
+    "value": -1,
+    "description": "Tailwind z-auto: resets z-index to browser default (auto), removing element from stacking context comparison.",
+    "system": "tailwind",
+    "above": [],
+    "below": ["tailwind-0"]
+  },
+  {
+    "name": "tailwind-0",
+    "slug": "tailwind-0",
+    "value": 0,
+    "description": "Tailwind z-0: explicit zero z-index, creating a new stacking context at base level.",
+    "system": "tailwind",
+    "above": ["tailwind-auto"],
+    "below": ["tailwind-10"]
+  },
+  {
+    "name": "tailwind-10",
+    "slug": "tailwind-10",
+    "value": 10,
+    "description": "Tailwind z-10: low-level elevation for dropdowns, floating labels, and elements needing slight precedence over document flow.",
+    "system": "tailwind",
+    "above": ["tailwind-0"],
+    "below": ["tailwind-20"]
+  },
+  {
+    "name": "tailwind-20",
+    "slug": "tailwind-20",
+    "value": 20,
+    "description": "Tailwind z-20: mid-level elevation for sticky sidebars, floating action buttons, and secondary overlays.",
+    "system": "tailwind",
+    "above": ["tailwind-10"],
+    "below": ["tailwind-30"]
+  },
+  {
+    "name": "tailwind-30",
+    "slug": "tailwind-30",
+    "value": 30,
+    "description": "Tailwind z-30: used for fixed headers, navigation bars, and elements that must float above most page content.",
+    "system": "tailwind",
+    "above": ["tailwind-20"],
+    "below": ["tailwind-40"]
+  },
+  {
+    "name": "tailwind-40",
+    "slug": "tailwind-40",
+    "value": 40,
+    "description": "Tailwind z-40: high-level overlays, modal backdrops, and drawers that overlay the entire page.",
+    "system": "tailwind",
+    "above": ["tailwind-30"],
+    "below": ["tailwind-50"]
+  },
+  {
+    "name": "tailwind-50",
+    "slug": "tailwind-50",
+    "value": 50,
+    "description": "Tailwind z-50: highest default Tailwind layer for modal dialogs, popovers, and tooltips that must appear above everything.",
+    "system": "tailwind",
+    "above": ["tailwind-40"],
+    "below": ["notification-toast", "dev-tools-overlay"]
+  },
+  {
+    "name": "dev-tools-overlay",
+    "slug": "dev-tools-overlay",
+    "value": 99999,
+    "description": "Reserved for development tools, debug overlays, and accessibility inspection panels that must float above all application UI at all times.",
+    "system": "custom",
+    "above": ["loading-spinner", "notification-toast"],
+    "below": []
+  }
+]

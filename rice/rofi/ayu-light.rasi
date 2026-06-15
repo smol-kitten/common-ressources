@@ -1,0 +1,26 @@
+/* Theme: Ayu Light */
+/* Source: https://github.com/dempfi/ayu */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #FAFAFA;
+    foreground:                    #575F66;
+
+    normal-background:             #FAFAFA;
+    normal-foreground:             #575F66;
+    selected-normal-background:    #41A6D9;
+    selected-normal-foreground:    #FAFAFA;
+
+    active-background:             #86B300;
+    active-foreground:             #FAFAFA;
+    selected-active-background:    #B8CC52;
+    selected-active-foreground:    #FAFAFA;
+
+    urgent-background:             #FF3333;
+    urgent-foreground:             #FAFAFA;
+    selected-urgent-background:    #FF6565;
+    selected-urgent-foreground:    #FAFAFA;
+
+    border-color:                  #5C6773;
+    separatorcolor:                #5C6773;
+}

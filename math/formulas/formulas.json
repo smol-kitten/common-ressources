@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Area of Circle",
+    "slug": "area-circle",
+    "category": "geometry",
+    "formula": "A = π r²",
+    "latex": "A = \\pi r^2",
+    "variables": { "A": "area", "π": "pi ≈ 3.14159", "r": "radius" },
+    "description": "Calculates the total area enclosed by a circle given its radius.",
+    "example": "A circle with radius 5 cm has area A = π × 5² = 25π ≈ 78.54 cm²"
+  },
+  {
+    "name": "Area of Triangle",
+    "slug": "area-triangle",
+    "category": "geometry",
+    "formula": "A = (1/2) b h",
+    "latex": "A = \\frac{1}{2} b h",
+    "variables": { "A": "area", "b": "base length", "h": "perpendicular height" },
+    "description": "Calculates the area of a triangle as half the product of its base and corresponding height.",
+    "example": "A triangle with base 8 m and height 5 m has area A = 0.5 × 8 × 5 = 20 m²"
+  },
+  {
+    "name": "Area of Rectangle",
+    "slug": "area-rectangle",
+    "category": "geometry",
+    "formula": "A = l × w",
+    "latex": "A = l \\times w",
+    "variables": { "A": "area", "l": "length", "w": "width" },
+    "description": "Calculates the area of a rectangle as the product of its length and width.",
+    "example": "A rectangle 6 m long and 4 m wide has area A = 6 × 4 = 24 m²"
+  },
+  {
+    "name": "Area of Trapezoid",
+    "slug": "area-trapezoid",
+    "category": "geometry",
+    "formula": "A = (1/2)(a + b) h",
+    "latex": "A = \\frac{1}{2}(a + b)h",
+    "variables": { "A": "area", "a": "length of parallel side 1", "b": "length of parallel side 2", "h": "perpendicular height" },
+    "description": "Calculates the area of a trapezoid (trapezium) using the average of the two parallel sides times the height.",
+    "example": "A trapezoid with parallel sides 6 and 10, height 4: A = 0.5 × (6+10) × 4 = 32 units²"
+  },
+  {
+    "name": "Circumference of Circle",
+    "slug": "circumference-circle",
+    "category": "geometry",
+    "formula": "C = 2 π r",
+    "latex": "C = 2\\pi r",
+    "variables": { "C": "circumference", "π": "pi ≈ 3.14159", "r": "radius" },
+    "description": "Calculates the perimeter (circumference) of a circle. Also expressible as C = πd where d is the diameter.",
+    "example": "A circle with radius 7 has circumference C = 2π × 7 = 14π ≈ 43.98 units"
+  },
+  {
+    "name": "Surface Area of Sphere",
+    "slug": "surface-area-sphere",
+    "category": "geometry",
+    "formula": "SA = 4 π r²",
+    "latex": "SA = 4\\pi r^2",
+    "variables": { "SA": "surface area", "π": "pi ≈ 3.14159", "r": "radius" },
+    "description": "Calculates the total curved surface area of a sphere.",
+    "example": "A sphere of radius 3 m has surface area SA = 4π × 3² = 36π ≈ 113.1 m²"
+  },
+  {
+    "name": "Volume of Sphere",
+    "slug": "volume-sphere",
+    "category": "geometry",
+    "formula": "V = (4/3) π r³",
+    "latex": "V = \\frac{4}{3}\\pi r^3",
+    "variables": { "V": "volume", "π": "pi ≈ 3.14159", "r": "radius" },
+    "description": "Calculates the volume of a sphere given its radius.",
+    "example": "A sphere of radius 3 m has volume V = (4/3)π × 27 = 36π ≈ 113.1 m³"
+  },
+  {
+    "name": "Volume of Cylinder",
+    "slug": "volume-cylinder",
+    "category": "geometry",
+    "formula": "V = π r² h",
+    "latex": "V = \\pi r^2 h",
+    "variables": { "V": "volume", "π": "pi ≈ 3.14159", "r": "radius of base", "h": "height" },
+    "description": "Calculates the volume of a right circular cylinder as the area of the circular base times the height.",
+    "example": "A cylinder with radius 2 and height 10: V = π × 4 × 10 = 40π ≈ 125.7 units³"
+  },
+  {
+    "name": "Volume of Cone",
+    "slug": "volume-cone",
+    "category": "geometry",
+    "formula": "V = (1/3) π r² h",
+    "latex": "V = \\frac{1}{3}\\pi r^2 h",
+    "variables": { "V": "volume", "π": "pi ≈ 3.14159", "r": "radius of base", "h": "height" },
+    "description": "Calculates the volume of a right circular cone. Equal to one-third the volume of a cylinder with the same base and height.",
+    "example": "A cone with radius 3 and height 9: V = (1/3) × π × 9 × 9 = 27π ≈ 84.8 units³"
+  },
+  {
+    "name": "Pythagorean Theorem",
+    "slug": "pythagorean-theorem",
+    "category": "geometry",
+    "formula": "a² + b² = c²",
+    "latex": "a^2 + b^2 = c^2",
+    "variables": { "a": "length of leg 1", "b": "length of leg 2", "c": "length of hypotenuse" },
+    "description": "In a right triangle, the square of the hypotenuse equals the sum of the squares of the other two sides.",
+    "example": "A right triangle with legs 3 and 4: c = √(9+16) = √25 = 5"
+  },
+  {
+    "name": "Quadratic Formula",
+    "slug": "quadratic-formula",
+    "category": "algebra",
+    "formula": "x = (-b ± √(b² - 4ac)) / (2a)",
+    "latex": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+    "variables": { "x": "solutions", "a": "coefficient of x²", "b": "coefficient of x", "c": "constant term" },
+    "description": "Gives the roots of any quadratic equation ax² + bx + c = 0. The discriminant (b²-4ac) determines the nature of roots.",
+    "example": "For x² - 5x + 6 = 0: x = (5 ± √(25-24))/2 = (5 ± 1)/2, giving x = 3 or x = 2"
+  },
+  {
+    "name": "Binomial Theorem",
+    "slug": "binomial-theorem",
+    "category": "algebra",
+    "formula": "(x + y)ⁿ = Σ C(n,k) xⁿ⁻ᵏ yᵏ  (k=0 to n)",
+    "latex": "(x + y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k",
+    "variables": { "n": "positive integer exponent", "k": "summation index", "C(n,k)": "binomial coefficient n choose k" },
+    "description": "Expands powers of a binomial expression into a polynomial sum using binomial coefficients.",
+    "example": "(x+y)³ = x³ + 3x²y + 3xy² + y³"
+  },
+  {
+    "name": "Sum of Arithmetic Series",
+    "slug": "sum-arithmetic-series",
+    "category": "algebra",
+    "formula": "Sₙ = n/2 × (a₁ + aₙ) = n/2 × (2a₁ + (n-1)d)",
+    "latex": "S_n = \\frac{n}{2}(a_1 + a_n) = \\frac{n}{2}(2a_1 + (n-1)d)",
+    "variables": { "Sₙ": "sum of n terms", "n": "number of terms", "a₁": "first term", "aₙ": "last term", "d": "common difference" },
+    "description": "Calculates the sum of a finite arithmetic sequence where each term differs from the previous by a constant amount d.",
+    "example": "Sum of 1+2+3+...+100: S₁₀₀ = 100/2 × (1+100) = 50 × 101 = 5050"
+  },
+  {
+    "name": "Sum of Geometric Series",
+    "slug": "sum-geometric-series",
+    "category": "algebra",
+    "formula": "Sₙ = a(1 - rⁿ) / (1 - r)  (r ≠ 1)",
+    "latex": "S_n = \\frac{a(1 - r^n)}{1 - r}",
+    "variables": { "Sₙ": "sum of n terms", "a": "first term", "r": "common ratio", "n": "number of terms" },
+    "description": "Calculates the sum of a finite geometric sequence. For |r|<1, the infinite sum converges to a/(1-r).",
+    "example": "Sum of 1 + 1/2 + 1/4 + ... (8 terms), a=1, r=1/2: S₈ = 1×(1-(1/2)⁸)/(1/2) ≈ 1.992"
+  },
+  {
+    "name": "Distance Formula",
+    "slug": "distance-formula",
+    "category": "algebra",
+    "formula": "d = √((x₂ - x₁)² + (y₂ - y₁)²)",
+    "latex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}",
+    "variables": { "d": "distance", "x₁, y₁": "coordinates of point 1", "x₂, y₂": "coordinates of point 2" },
+    "description": "Calculates the Euclidean distance between two points in a 2D plane, derived from the Pythagorean theorem.",
+    "example": "Distance between (1,2) and (4,6): d = √((4-1)²+(6-2)²) = √(9+16) = √25 = 5"
+  },
+  {
+    "name": "Slope Formula",
+    "slug": "slope-formula",
+    "category": "algebra",
+    "formula": "m = (y₂ - y₁) / (x₂ - x₁)",
+    "latex": "m = \\frac{y_2 - y_1}{x_2 - x_1}",
+    "variables": { "m": "slope (gradient)", "x₁, y₁": "coordinates of point 1", "x₂, y₂": "coordinates of point 2" },
+    "description": "Calculates the slope of a line passing through two points, representing the rate of change of y with respect to x.",
+    "example": "Slope between (1,2) and (3,8): m = (8-2)/(3-1) = 6/2 = 3"
+  },
+  {
+    "name": "Midpoint Formula",
+    "slug": "midpoint-formula",
+    "category": "algebra",
+    "formula": "M = ((x₁ + x₂)/2, (y₁ + y₂)/2)",
+    "latex": "M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)",
+    "variables": { "M": "midpoint coordinates", "x₁, y₁": "coordinates of point 1", "x₂, y₂": "coordinates of point 2" },
+    "description": "Finds the point exactly halfway between two given points in a coordinate plane.",
+    "example": "Midpoint of (2,4) and (8,10): M = ((2+8)/2, (4+10)/2) = (5, 7)"
+  },
+  {
+    "name": "Exponential Growth and Decay",
+    "slug": "exponential-growth-decay",
+    "category": "algebra",
+    "formula": "y = a · eᵏᵗ  (growth: k>0, decay: k<0)",
+    "latex": "y = a \\cdot e^{kt}",
+    "variables": { "y": "quantity at time t", "a": "initial quantity", "e": "Euler's number ≈ 2.71828", "k": "rate constant", "t": "time" },
+    "description": "Models quantities that change proportionally to their current value, such as population growth, radioactive decay, or compound interest continuously compounded.",
+    "example": "Population starting at 1000 with 3% continuous growth after 10 years: y = 1000 × e^(0.03×10) ≈ 1349.9"
+  },
+  {
+    "name": "Mean (Arithmetic Average)",
+    "slug": "mean",
+    "category": "statistics",
+    "formula": "μ = (Σ xᵢ) / n",
+    "latex": "\\mu = \\frac{\\sum_{i=1}^{n} x_i}{n}",
+    "variables": { "μ": "population mean (x̄ for sample)", "xᵢ": "each data value", "n": "number of values", "Σ": "summation" },
+    "description": "The arithmetic average of a set of values, calculated by summing all values and dividing by the count.",
+    "example": "Mean of {2, 4, 6, 8, 10}: μ = (2+4+6+8+10)/5 = 30/5 = 6"
+  },
+  {
+    "name": "Variance",
+    "slug": "variance",
+    "category": "statistics",
+    "formula": "σ² = Σ(xᵢ - μ)² / N  (population)  |  s² = Σ(xᵢ - x̄)² / (n-1)  (sample)",
+    "latex": "\\sigma^2 = \\frac{\\sum_{i=1}^{N}(x_i - \\mu)^2}{N}",
+    "variables": { "σ²": "population variance", "s²": "sample variance", "xᵢ": "data value", "μ": "population mean", "x̄": "sample mean", "N": "population size", "n": "sample size" },
+    "description": "Measures the average squared deviation from the mean, quantifying how spread out the data values are.",
+    "example": "For {2,4,6}: mean=4, variance = ((2-4)²+(4-4)²+(6-4)²)/3 = (4+0+4)/3 ≈ 2.67"
+  },
+  {
+    "name": "Standard Deviation",
+    "slug": "standard-deviation",
+    "category": "statistics",
+    "formula": "σ = √(Σ(xᵢ - μ)² / N)",
+    "latex": "\\sigma = \\sqrt{\\frac{\\sum_{i=1}^{N}(x_i - \\mu)^2}{N}}",
+    "variables": { "σ": "population standard deviation", "xᵢ": "data value", "μ": "mean", "N": "population size" },
+    "description": "The square root of variance. Measures dispersion in the same units as the original data. A low value indicates data points close to the mean.",
+    "example": "If variance is 4, standard deviation σ = √4 = 2"
+  },
+  {
+    "name": "Z-Score (Standard Score)",
+    "slug": "z-score",
+    "category": "statistics",
+    "formula": "z = (x - μ) / σ",
+    "latex": "z = \\frac{x - \\mu}{\\sigma}",
+    "variables": { "z": "z-score", "x": "observed value", "μ": "mean", "σ": "standard deviation" },
+    "description": "Measures how many standard deviations an element is from the mean. Used to standardize values from different distributions for comparison.",
+    "example": "If mean=70, σ=10, a score of 85: z = (85-70)/10 = 1.5 standard deviations above mean"
+  },
+  {
+    "name": "Pearson Correlation Coefficient",
+    "slug": "pearson-correlation",
+    "category": "statistics",
+    "formula": "r = Σ((xᵢ - x̄)(yᵢ - ȳ)) / √(Σ(xᵢ - x̄)² · Σ(yᵢ - ȳ)²)",
+    "latex": "r = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum(x_i-\\bar{x})^2 \\cdot \\sum(y_i-\\bar{y})^2}}",
+    "variables": { "r": "correlation coefficient (-1 to 1)", "xᵢ, yᵢ": "paired data values", "x̄, ȳ": "respective means" },
+    "description": "Measures the linear correlation between two variables. r=1 is perfect positive correlation, r=-1 is perfect negative, r=0 indicates no linear correlation.",
+    "example": "Height vs weight data showing r=0.85 indicates a strong positive linear relationship."
+  },
+  {
+    "name": "Linear Regression Slope",
+    "slug": "linear-regression-slope",
+    "category": "statistics",
+    "formula": "b₁ = Σ((xᵢ - x̄)(yᵢ - ȳ)) / Σ(xᵢ - x̄)²",
+    "latex": "b_1 = \\frac{\\sum(x_i - \\bar{x})(y_i - \\bar{y})}{\\sum(x_i - \\bar{x})^2}",
+    "variables": { "b₁": "slope of regression line", "xᵢ": "predictor values", "yᵢ": "response values", "x̄": "mean of x", "ȳ": "mean of y" },
+    "description": "The slope coefficient in simple linear regression y = b₀ + b₁x. Represents the change in y for each unit increase in x.",
+    "example": "If b₁ = 2.5, each 1-unit increase in x predicts a 2.5-unit increase in y."
+  },
+  {
+    "name": "Linear Regression Intercept",
+    "slug": "linear-regression-intercept",
+    "category": "statistics",
+    "formula": "b₀ = ȳ - b₁ x̄",
+    "latex": "b_0 = \\bar{y} - b_1 \\bar{x}",
+    "variables": { "b₀": "y-intercept", "ȳ": "mean of response variable", "b₁": "regression slope", "x̄": "mean of predictor variable" },
+    "description": "The intercept in simple linear regression, representing the predicted y value when x equals zero.",
+    "example": "With ȳ=50, b₁=2.5, x̄=10: b₀ = 50 - 2.5×10 = 25"
+  },
+  {
+    "name": "Combinations (nCr)",
+    "slug": "combinations-ncr",
+    "category": "statistics",
+    "formula": "C(n,r) = n! / (r!(n-r)!)",
+    "latex": "\\binom{n}{r} = \\frac{n!}{r!(n-r)!}",
+    "variables": { "n": "total number of items", "r": "number chosen", "!": "factorial" },
+    "description": "Counts the number of ways to choose r items from n items without regard to order.",
+    "example": "C(5,2) = 5!/(2!×3!) = 120/12 = 10 ways to choose 2 items from 5"
+  },
+  {
+    "name": "Permutations (nPr)",
+    "slug": "permutations-npr",
+    "category": "statistics",
+    "formula": "P(n,r) = n! / (n-r)!",
+    "latex": "P(n,r) = \\frac{n!}{(n-r)!}",
+    "variables": { "n": "total number of items", "r": "number arranged", "!": "factorial" },
+    "description": "Counts the number of ways to arrange r items from n items where order matters.",
+    "example": "P(5,2) = 5!/3! = 120/6 = 20 ordered arrangements of 2 from 5"
+  },
+  {
+    "name": "Bayes' Theorem",
+    "slug": "bayes-theorem",
+    "category": "statistics",
+    "formula": "P(A|B) = P(B|A) · P(A) / P(B)",
+    "latex": "P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}",
+    "variables": { "P(A|B)": "posterior probability of A given B", "P(B|A)": "likelihood of B given A", "P(A)": "prior probability of A", "P(B)": "marginal probability of B" },
+    "description": "Describes how to update the probability of a hypothesis given evidence. Fundamental to Bayesian statistics and machine learning.",
+    "example": "Medical test: P(Disease|Positive) = P(Positive|Disease)×P(Disease) / P(Positive)"
+  },
+  {
+    "name": "Normal Distribution PDF",
+    "slug": "normal-distribution-pdf",
+    "category": "statistics",
+    "formula": "f(x) = (1/(σ√(2π))) · e^(-(x-μ)²/(2σ²))",
+    "latex": "f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}",
+    "variables": { "f(x)": "probability density at x", "μ": "mean", "σ": "standard deviation", "π": "pi ≈ 3.14159", "e": "Euler's number" },
+    "description": "The probability density function of the Gaussian (normal) distribution, the most important continuous probability distribution in statistics.",
+    "example": "Standard normal (μ=0, σ=1): f(0) = 1/√(2π) ≈ 0.3989"
+  },
+  {
+    "name": "Sine Definition",
+    "slug": "sine-definition",
+    "category": "trigonometry",
+    "formula": "sin(θ) = opposite / hypotenuse",
+    "latex": "\\sin(\\theta) = \\frac{\\text{opposite}}{\\text{hypotenuse}}",
+    "variables": { "θ": "angle", "opposite": "side opposite to angle θ", "hypotenuse": "longest side of right triangle" },
+    "description": "The sine of an angle in a right triangle is the ratio of the length of the opposite side to the hypotenuse. Extends to the unit circle for all angles.",
+    "example": "In a 3-4-5 triangle, sin(θ) for the angle opposite the side of length 3: sin(θ) = 3/5 = 0.6"
+  },
+  {
+    "name": "Cosine Definition",
+    "slug": "cosine-definition",
+    "category": "trigonometry",
+    "formula": "cos(θ) = adjacent / hypotenuse",
+    "latex": "\\cos(\\theta) = \\frac{\\text{adjacent}}{\\text{hypotenuse}}",
+    "variables": { "θ": "angle", "adjacent": "side adjacent to angle θ", "hypotenuse": "longest side of right triangle" },
+    "description": "The cosine of an angle in a right triangle is the ratio of the adjacent side to the hypotenuse.",
+    "example": "In a 3-4-5 triangle: cos(θ) for the angle between the hypotenuse and side 4: cos(θ) = 4/5 = 0.8"
+  },
+  {
+    "name": "Tangent Definition",
+    "slug": "tangent-definition",
+    "category": "trigonometry",
+    "formula": "tan(θ) = opposite / adjacent = sin(θ) / cos(θ)",
+    "latex": "\\tan(\\theta) = \\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sin\\theta}{\\cos\\theta}",
+    "variables": { "θ": "angle", "opposite": "side opposite to angle θ", "adjacent": "side adjacent to angle θ" },
+    "description": "The tangent is the ratio of the opposite to adjacent side, or equivalently sin divided by cos. Represents the slope of the line at angle θ.",
+    "example": "In a 3-4-5 triangle: tan(θ) opposite side 3: tan(θ) = 3/4 = 0.75"
+  },
+  {
+    "name": "Law of Sines",
+    "slug": "law-of-sines",
+    "category": "trigonometry",
+    "formula": "a/sin(A) = b/sin(B) = c/sin(C)",
+    "latex": "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C}",
+    "variables": { "a,b,c": "side lengths opposite to angles A, B, C", "A,B,C": "interior angles of the triangle" },
+    "description": "Relates the lengths of the sides of a triangle to the sines of its angles. Useful for solving non-right triangles (AAS, ASA, SSA cases).",
+    "example": "Triangle with A=30°, a=5, B=45°: b = 5×sin(45°)/sin(30°) = 5×0.707/0.5 ≈ 7.07"
+  },
+  {
+    "name": "Law of Cosines",
+    "slug": "law-of-cosines",
+    "category": "trigonometry",
+    "formula": "c² = a² + b² - 2ab cos(C)",
+    "latex": "c^2 = a^2 + b^2 - 2ab\\cos(C)",
+    "variables": { "a,b,c": "side lengths", "C": "angle opposite side c" },
+    "description": "Generalizes the Pythagorean theorem to non-right triangles. Used when two sides and the included angle (SAS) or all three sides (SSS) are known.",
+    "example": "Triangle a=5, b=7, C=60°: c² = 25+49-2×5×7×0.5 = 74-35 = 39, c ≈ 6.24"
+  },
+  {
+    "name": "Pythagorean Identity",
+    "slug": "pythagorean-identity",
+    "category": "trigonometry",
+    "formula": "sin²(θ) + cos²(θ) = 1",
+    "latex": "\\sin^2(\\theta) + \\cos^2(\\theta) = 1",
+    "variables": { "θ": "angle", "sin²": "sine squared", "cos²": "cosine squared" },
+    "description": "The fundamental trigonometric identity, derived from the Pythagorean theorem applied to the unit circle. Used to simplify trig expressions.",
+    "example": "If sin(θ) = 0.6, then cos²(θ) = 1 - 0.36 = 0.64, so cos(θ) = 0.8"
+  },
+  {
+    "name": "Double Angle Formula for Sine",
+    "slug": "double-angle-sin",
+    "category": "trigonometry",
+    "formula": "sin(2θ) = 2 sin(θ) cos(θ)",
+    "latex": "\\sin(2\\theta) = 2\\sin(\\theta)\\cos(\\theta)",
+    "variables": { "θ": "angle" },
+    "description": "Expresses the sine of a double angle in terms of the sine and cosine of the original angle.",
+    "example": "sin(60°) = 2×sin(30°)×cos(30°) = 2×0.5×(√3/2) = √3/2 ≈ 0.866"
+  },
+  {
+    "name": "Double Angle Formula for Cosine",
+    "slug": "double-angle-cos",
+    "category": "trigonometry",
+    "formula": "cos(2θ) = cos²(θ) - sin²(θ) = 2cos²(θ) - 1 = 1 - 2sin²(θ)",
+    "latex": "\\cos(2\\theta) = \\cos^2(\\theta) - \\sin^2(\\theta)",
+    "variables": { "θ": "angle" },
+    "description": "Expresses the cosine of a double angle. Has three equivalent forms depending on which is most useful for simplification.",
+    "example": "cos(90°) = cos²(45°) - sin²(45°) = 0.5 - 0.5 = 0"
+  },
+  {
+    "name": "Euler's Formula",
+    "slug": "eulers-formula",
+    "category": "trigonometry",
+    "formula": "e^(iθ) = cos(θ) + i sin(θ)",
+    "latex": "e^{i\\theta} = \\cos(\\theta) + i\\sin(\\theta)",
+    "variables": { "e": "Euler's number ≈ 2.71828", "i": "imaginary unit (√-1)", "θ": "angle in radians" },
+    "description": "Establishes the deep relationship between the complex exponential function and trigonometry. Setting θ=π gives Euler's identity: e^(iπ) + 1 = 0.",
+    "example": "e^(iπ) = cos(π) + i×sin(π) = -1 + 0 = -1, yielding the famous identity e^(iπ) + 1 = 0"
+  },
+  {
+    "name": "Derivative Power Rule",
+    "slug": "derivative-power-rule",
+    "category": "calculus",
+    "formula": "d/dx [xⁿ] = n xⁿ⁻¹",
+    "latex": "\\frac{d}{dx}[x^n] = nx^{n-1}",
+    "variables": { "x": "variable", "n": "real number exponent" },
+    "description": "The most basic differentiation rule. The derivative of x to the power n is n times x to the power (n-1).",
+    "example": "d/dx [x⁵] = 5x⁴  |  d/dx [x²] = 2x  |  d/dx [x] = 1"
+  },
+  {
+    "name": "Product Rule",
+    "slug": "product-rule",
+    "category": "calculus",
+    "formula": "d/dx [f(x)g(x)] = f'(x)g(x) + f(x)g'(x)",
+    "latex": "\\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)",
+    "variables": { "f(x)": "first function", "g(x)": "second function", "f'(x)": "derivative of f", "g'(x)": "derivative of g" },
+    "description": "Rule for differentiating the product of two functions: derivative of first times second plus first times derivative of second.",
+    "example": "d/dx [x² sin(x)] = 2x sin(x) + x² cos(x)"
+  },
+  {
+    "name": "Quotient Rule",
+    "slug": "quotient-rule",
+    "category": "calculus",
+    "formula": "d/dx [f(x)/g(x)] = (f'(x)g(x) - f(x)g'(x)) / g(x)²",
+    "latex": "\\frac{d}{dx}\\left[\\frac{f(x)}{g(x)}\\right] = \\frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}",
+    "variables": { "f(x)": "numerator function", "g(x)": "denominator function (≠0)", "f'(x)": "derivative of f", "g'(x)": "derivative of g" },
+    "description": "Rule for differentiating a ratio of two functions. Mnemonic: 'low d-high minus high d-low over low-squared'.",
+    "example": "d/dx [sin(x)/x] = (cos(x)·x - sin(x)·1) / x² = (x cos(x) - sin(x)) / x²"
+  },
+  {
+    "name": "Chain Rule",
+    "slug": "chain-rule",
+    "category": "calculus",
+    "formula": "d/dx [f(g(x))] = f'(g(x)) · g'(x)",
+    "latex": "\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)",
+    "variables": { "f": "outer function", "g": "inner function", "f'": "derivative of outer", "g'": "derivative of inner" },
+    "description": "Rule for differentiating composite functions. The derivative of a composition is the derivative of the outer function evaluated at the inner, times the derivative of the inner.",
+    "example": "d/dx [sin(x²)] = cos(x²) · 2x"
+  },
+  {
+    "name": "Integral Power Rule",
+    "slug": "integral-power-rule",
+    "category": "calculus",
+    "formula": "∫ xⁿ dx = xⁿ⁺¹ / (n+1) + C  (n ≠ -1)",
+    "latex": "\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C",
+    "variables": { "x": "variable", "n": "exponent (not -1)", "C": "constant of integration" },
+    "description": "The reverse of the power rule for differentiation. Raises the exponent by 1 and divides by the new exponent. The constant C accounts for all antiderivatives.",
+    "example": "∫ x³ dx = x⁴/4 + C  |  ∫ x dx = x²/2 + C"
+  },
+  {
+    "name": "Fundamental Theorem of Calculus",
+    "slug": "fundamental-theorem-calculus",
+    "category": "calculus",
+    "formula": "∫ₐᵇ f(x) dx = F(b) - F(a)  where F'(x) = f(x)",
+    "latex": "\\int_a^b f(x)\\,dx = F(b) - F(a)",
+    "variables": { "f(x)": "integrand", "F(x)": "antiderivative of f", "a,b": "limits of integration" },
+    "description": "Links differentiation and integration. The definite integral of f from a to b equals the antiderivative evaluated at b minus at a.",
+    "example": "∫₀² x² dx = [x³/3]₀² = 8/3 - 0 = 8/3"
+  },
+  {
+    "name": "Area Under Curve",
+    "slug": "area-under-curve",
+    "category": "calculus",
+    "formula": "A = ∫ₐᵇ |f(x)| dx",
+    "latex": "A = \\int_a^b |f(x)| \\, dx",
+    "variables": { "A": "area", "f(x)": "function", "a,b": "integration bounds" },
+    "description": "The definite integral of f(x) between a and b gives the signed area between the curve and the x-axis. Use |f(x)| to always get positive area.",
+    "example": "Area under y=x² from 0 to 3: ∫₀³ x² dx = [x³/3]₀³ = 9"
+  },
+  {
+    "name": "Taylor Series",
+    "slug": "taylor-series",
+    "category": "calculus",
+    "formula": "f(x) = Σ f⁽ⁿ⁾(a)/n! · (x-a)ⁿ  (n=0 to ∞)",
+    "latex": "f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n",
+    "variables": { "f⁽ⁿ⁾(a)": "nth derivative of f evaluated at a", "n!": "n factorial", "a": "center of expansion", "x": "variable" },
+    "description": "Represents a smooth function as an infinite sum of polynomial terms derived from its derivatives at a single point a. When a=0, called Maclaurin series.",
+    "example": "eˣ = 1 + x + x²/2! + x³/3! + ...  |  sin(x) = x - x³/3! + x⁵/5! - ..."
+  },
+  {
+    "name": "Greatest Common Divisor (Euclidean Algorithm)",
+    "slug": "gcd-euclidean",
+    "category": "number-theory",
+    "formula": "gcd(a, b) = gcd(b, a mod b)  until b = 0",
+    "latex": "\\gcd(a, b) = \\gcd(b, a \\bmod b)",
+    "variables": { "a,b": "positive integers", "mod": "modulo operation (remainder)" },
+    "description": "Efficiently computes the largest integer that divides both a and b without remainder by repeatedly applying the modulo operation.",
+    "example": "gcd(48, 18): gcd(48,18) → gcd(18,12) → gcd(12,6) → gcd(6,0) = 6"
+  },
+  {
+    "name": "Prime Counting Approximation",
+    "slug": "prime-counting-approximation",
+    "category": "number-theory",
+    "formula": "π(n) ≈ n / ln(n)",
+    "latex": "\\pi(n) \\approx \\frac{n}{\\ln(n)}",
+    "variables": { "π(n)": "number of primes ≤ n", "ln(n)": "natural logarithm of n" },
+    "description": "The Prime Number Theorem states that the number of primes up to n is approximately n divided by the natural log of n. The approximation improves for larger n.",
+    "example": "Primes up to 1000: π(1000) ≈ 1000/ln(1000) ≈ 1000/6.908 ≈ 145 (actual: 168)"
+  },
+  {
+    "name": "Fermat's Little Theorem",
+    "slug": "fermats-little-theorem",
+    "category": "number-theory",
+    "formula": "aᵖ ≡ a (mod p)  ⟺  aᵖ⁻¹ ≡ 1 (mod p)  (p prime, gcd(a,p)=1)",
+    "latex": "a^p \\equiv a \\pmod{p}",
+    "variables": { "a": "integer not divisible by p", "p": "prime number", "≡": "congruent modulo" },
+    "description": "If p is prime and a is not divisible by p, then a raised to the power p-1 is congruent to 1 modulo p. Used in primality testing and RSA cryptography.",
+    "example": "a=3, p=7: 3⁶ = 729 = 104×7 + 1, so 3⁶ ≡ 1 (mod 7)"
+  },
+  {
+    "name": "Modular Arithmetic",
+    "slug": "modular-arithmetic",
+    "category": "number-theory",
+    "formula": "a ≡ b (mod m)  ⟺  m | (a - b)",
+    "latex": "a \\equiv b \\pmod{m} \\iff m \\mid (a - b)",
+    "variables": { "a,b": "integers", "m": "modulus (positive integer)", "≡": "congruent", "|": "divides" },
+    "description": "Two integers are congruent modulo m if they have the same remainder when divided by m. Arithmetic operations are preserved under congruence.",
+    "example": "17 ≡ 2 (mod 5) since 17-2=15 is divisible by 5. In clock arithmetic: 14:00 ≡ 2 (mod 12)"
+  }
+]

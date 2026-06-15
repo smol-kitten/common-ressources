@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Show Hidden Files in Finder",
+    "slug": "finder-show-hidden",
+    "category": "finder",
+    "command": "defaults write com.apple.finder AppleShowAllFiles -bool true",
+    "revert_command": "defaults write com.apple.finder AppleShowAllFiles -bool false",
+    "requires_restart": "Finder",
+    "description": "Reveals hidden files and folders (those starting with a dot) in Finder windows.",
+    "macos_versions": "10.12+"
+  },
+  {
+    "name": "Show Path Bar in Finder",
+    "slug": "finder-show-path-bar",
+    "category": "finder",
+    "command": "defaults write com.apple.finder ShowPathbar -bool true",
+    "revert_command": "defaults write com.apple.finder ShowPathbar -bool false",
+    "requires_restart": "Finder",
+    "description": "Displays the full path breadcrumb bar at the bottom of every Finder window.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Show Status Bar in Finder",
+    "slug": "finder-show-status-bar",
+    "category": "finder",
+    "command": "defaults write com.apple.finder ShowStatusBar -bool true",
+    "revert_command": "defaults write com.apple.finder ShowStatusBar -bool false",
+    "requires_restart": "Finder",
+    "description": "Shows the status bar at the bottom of Finder windows displaying item count and available disk space.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Always Show File Extensions",
+    "slug": "finder-show-extensions",
+    "category": "finder",
+    "command": "defaults write NSGlobalDomain AppleShowAllExtensions -bool true",
+    "revert_command": "defaults write NSGlobalDomain AppleShowAllExtensions -bool false",
+    "requires_restart": "Finder",
+    "description": "Forces Finder to always display file extensions for all files, regardless of individual file settings.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Disable Warning When Changing Extension",
+    "slug": "finder-disable-extension-warning",
+    "category": "finder",
+    "command": "defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false",
+    "revert_command": "defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true",
+    "requires_restart": "Finder",
+    "description": "Suppresses the confirmation dialog that appears when you rename a file and change its extension.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Show Full POSIX Path in Finder Title",
+    "slug": "finder-posix-title",
+    "category": "finder",
+    "command": "defaults write com.apple.finder _FXShowPosixPathInTitle -bool true",
+    "revert_command": "defaults write com.apple.finder _FXShowPosixPathInTitle -bool false",
+    "requires_restart": "Finder",
+    "description": "Displays the full POSIX file path of the current folder in the Finder window title bar.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Default Finder View to List",
+    "slug": "finder-default-list-view",
+    "category": "finder",
+    "command": "defaults write com.apple.finder FXPreferredViewStyle -string 'Nlsv'",
+    "revert_command": "defaults write com.apple.finder FXPreferredViewStyle -string 'icnv'",
+    "requires_restart": "Finder",
+    "description": "Sets the default Finder view style to list view (Nlsv). Other options: icnv (icon), clmv (column), glyv (gallery).",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Show ~/Library Folder",
+    "slug": "finder-show-library",
+    "category": "finder",
+    "command": "chflags nohidden ~/Library",
+    "revert_command": "chflags hidden ~/Library",
+    "requires_restart": "Finder",
+    "description": "Makes the user's Library folder visible in Finder by removing the hidden flag.",
+    "macos_versions": "10.7+"
+  },
+  {
+    "name": "Enable Dock Autohide",
+    "slug": "dock-autohide",
+    "category": "dock",
+    "command": "defaults write com.apple.dock autohide -bool true",
+    "revert_command": "defaults write com.apple.dock autohide -bool false",
+    "requires_restart": "Dock",
+    "description": "Automatically hides and shows the Dock when the cursor moves to the screen edge.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Disable Recent Apps in Dock",
+    "slug": "dock-disable-recent-apps",
+    "category": "dock",
+    "command": "defaults write com.apple.dock show-recents -bool false",
+    "revert_command": "defaults write com.apple.dock show-recents -bool true",
+    "requires_restart": "Dock",
+    "description": "Removes the 'Recent Applications' section from the Dock for a cleaner layout.",
+    "macos_versions": "10.14+"
+  },
+  {
+    "name": "Minimize Windows to Application Icon",
+    "slug": "dock-minimize-to-app",
+    "category": "dock",
+    "command": "defaults write com.apple.dock minimize-to-application -bool true",
+    "revert_command": "defaults write com.apple.dock minimize-to-application -bool false",
+    "requires_restart": "Dock",
+    "description": "When minimizing a window, it collapses into the application's Dock icon rather than creating a separate thumbnail.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Set Dock Tile Size to 36px",
+    "slug": "dock-tile-size",
+    "category": "dock",
+    "command": "defaults write com.apple.dock tilesize -int 36",
+    "revert_command": "defaults write com.apple.dock tilesize -int 48",
+    "requires_restart": "Dock",
+    "description": "Sets the size of Dock icons to 36 pixels. Adjust the integer value for your preferred size.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Speed Up Dock Show/Hide Animation",
+    "slug": "dock-animation-speed",
+    "category": "dock",
+    "command": "defaults write com.apple.dock autohide-delay -float 0 && defaults write com.apple.dock autohide-time-modifier -float 0.25",
+    "revert_command": "defaults delete com.apple.dock autohide-delay && defaults delete com.apple.dock autohide-time-modifier",
+    "requires_restart": "Dock",
+    "description": "Removes the autohide delay and speeds up the show/hide animation so the Dock appears instantly.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Set Dock Position to Left",
+    "slug": "dock-position-left",
+    "category": "dock",
+    "command": "defaults write com.apple.dock orientation -string left",
+    "revert_command": "defaults write com.apple.dock orientation -string bottom",
+    "requires_restart": "Dock",
+    "description": "Moves the Dock to the left side of the screen. Options: left, right, bottom.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Set Dock Position to Right",
+    "slug": "dock-position-right",
+    "category": "dock",
+    "command": "defaults write com.apple.dock orientation -string right",
+    "revert_command": "defaults write com.apple.dock orientation -string bottom",
+    "requires_restart": "Dock",
+    "description": "Moves the Dock to the right side of the screen. Options: left, right, bottom.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Change Screenshot Save Location",
+    "slug": "screenshot-save-location",
+    "category": "screenshot",
+    "command": "defaults write com.apple.screencapture location -string '~/Desktop/Screenshots'",
+    "revert_command": "defaults write com.apple.screencapture location -string '~/Desktop'",
+    "requires_restart": null,
+    "description": "Changes the default folder where screenshots are saved. Replace the path with any desired directory.",
+    "macos_versions": "10.12+"
+  },
+  {
+    "name": "Change Screenshot Format to JPG",
+    "slug": "screenshot-format-jpg",
+    "category": "screenshot",
+    "command": "defaults write com.apple.screencapture type -string jpg",
+    "revert_command": "defaults write com.apple.screencapture type -string png",
+    "requires_restart": null,
+    "description": "Changes the screenshot file format to JPEG. Options: png, jpg, gif, pdf, tiff.",
+    "macos_versions": "10.12+"
+  },
+  {
+    "name": "Disable Screenshot Shadow",
+    "slug": "screenshot-disable-shadow",
+    "category": "screenshot",
+    "command": "defaults write com.apple.screencapture disable-shadow -bool true",
+    "revert_command": "defaults write com.apple.screencapture disable-shadow -bool false",
+    "requires_restart": null,
+    "description": "Removes the drop shadow from window screenshots, producing cleaner image exports.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Disable Screenshot Floating Thumbnail",
+    "slug": "screenshot-disable-thumbnail",
+    "category": "screenshot",
+    "command": "defaults write com.apple.screencapture show-thumbnail -bool false",
+    "revert_command": "defaults write com.apple.screencapture show-thumbnail -bool true",
+    "requires_restart": null,
+    "description": "Disables the floating thumbnail preview that appears in the corner after taking a screenshot.",
+    "macos_versions": "10.14+"
+  },
+  {
+    "name": "Disable Crash Reporter",
+    "slug": "system-disable-crash-reporter",
+    "category": "system",
+    "command": "defaults write com.apple.CrashReporter DialogType -string none",
+    "revert_command": "defaults write com.apple.CrashReporter DialogType -string prompt",
+    "requires_restart": null,
+    "description": "Prevents the crash reporter dialog from appearing when an application crashes.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Enable Tap to Click (Trackpad)",
+    "slug": "system-tap-to-click",
+    "category": "system",
+    "command": "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true && defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1",
+    "revert_command": "defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool false && defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 0",
+    "requires_restart": null,
+    "description": "Enables tap-to-click on the trackpad, so a light tap registers as a click without pressing down.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Disable Auto-Correct",
+    "slug": "system-disable-autocorrect",
+    "category": "system",
+    "command": "defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false",
+    "revert_command": "defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool true",
+    "requires_restart": null,
+    "description": "Turns off automatic spelling correction system-wide, useful for technical writing and coding.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Disable Smart Quotes",
+    "slug": "system-disable-smart-quotes",
+    "category": "system",
+    "command": "defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false",
+    "revert_command": "defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool true",
+    "requires_restart": null,
+    "description": "Disables the automatic replacement of straight quotes with typographic (curly) quote characters.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Disable Smart Dashes",
+    "slug": "system-disable-smart-dashes",
+    "category": "system",
+    "command": "defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false",
+    "revert_command": "defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool true",
+    "requires_restart": null,
+    "description": "Disables automatic replacement of double hyphens (--) with em dashes (—).",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Set Faster Key Repeat Rate",
+    "slug": "system-key-repeat-fast",
+    "category": "system",
+    "command": "defaults write NSGlobalDomain KeyRepeat -int 2 && defaults write NSGlobalDomain InitialKeyRepeat -int 15",
+    "revert_command": "defaults write NSGlobalDomain KeyRepeat -int 6 && defaults write NSGlobalDomain InitialKeyRepeat -int 25",
+    "requires_restart": null,
+    "description": "Speeds up keyboard repeat rate and reduces the initial delay before repeat kicks in. Useful for power users.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Enable Reduce Motion",
+    "slug": "system-reduce-motion",
+    "category": "system",
+    "command": "defaults write com.apple.universalaccess reduceMotion -bool true",
+    "revert_command": "defaults write com.apple.universalaccess reduceMotion -bool false",
+    "requires_restart": null,
+    "description": "Reduces animated transitions throughout the UI, which can improve performance and reduce eye strain.",
+    "macos_versions": "10.12+"
+  },
+  {
+    "name": "Enable Dark Mode",
+    "slug": "appearance-dark-mode",
+    "category": "appearance",
+    "command": "defaults write NSGlobalDomain AppleInterfaceStyle -string Dark",
+    "revert_command": "defaults delete NSGlobalDomain AppleInterfaceStyle",
+    "requires_restart": null,
+    "description": "Switches the system-wide appearance to Dark Mode, affecting the menu bar, Dock, and supported apps.",
+    "macos_versions": "10.14+"
+  },
+  {
+    "name": "Enable Reduce Transparency",
+    "slug": "appearance-reduce-transparency",
+    "category": "appearance",
+    "command": "defaults write com.apple.universalaccess reduceTransparency -bool true",
+    "revert_command": "defaults write com.apple.universalaccess reduceTransparency -bool false",
+    "requires_restart": null,
+    "description": "Reduces the translucency effect on menus, sidebars, and other UI elements, improving readability.",
+    "macos_versions": "10.10+"
+  },
+  {
+    "name": "Enable Mission Control — Group Windows by App",
+    "slug": "mission-control-group-by-app",
+    "category": "mission-control",
+    "command": "defaults write com.apple.dock expose-group-by-app -bool true",
+    "revert_command": "defaults write com.apple.dock expose-group-by-app -bool false",
+    "requires_restart": "Dock",
+    "description": "Groups windows from the same application together in Mission Control rather than showing them individually.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Disable Automatic Space Switching",
+    "slug": "mission-control-no-auto-spaces",
+    "category": "mission-control",
+    "command": "defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool false",
+    "revert_command": "defaults write NSGlobalDomain AppleSpacesSwitchOnActivate -bool true",
+    "requires_restart": null,
+    "description": "Prevents macOS from automatically switching to the Space where an app has open windows when you activate it.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Safari — Show Full URL in Address Bar",
+    "slug": "safari-show-full-url",
+    "category": "safari",
+    "command": "defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true",
+    "revert_command": "defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool false",
+    "requires_restart": "Safari",
+    "description": "Shows the complete URL including protocol in the Safari address bar instead of just the domain name.",
+    "macos_versions": "10.10+"
+  },
+  {
+    "name": "Safari — Enable Developer Menu",
+    "slug": "safari-developer-menu",
+    "category": "safari",
+    "command": "defaults write com.apple.Safari IncludeDevelopMenu -bool true && defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true",
+    "revert_command": "defaults write com.apple.Safari IncludeDevelopMenu -bool false && defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool false",
+    "requires_restart": "Safari",
+    "description": "Adds the Develop menu to Safari's menu bar, enabling web inspector, console, and other developer tools.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Safari — Disable Thumbnail Cache for History",
+    "slug": "safari-disable-thumbnail-cache",
+    "category": "safari",
+    "command": "defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2",
+    "revert_command": "defaults delete com.apple.Safari DebugSnapshotsUpdatePolicy",
+    "requires_restart": "Safari",
+    "description": "Disables the caching of page thumbnails used in the Top Sites and history views.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Safari — Disable AutoFill",
+    "slug": "safari-disable-autofill",
+    "category": "safari",
+    "command": "defaults write com.apple.Safari AutoFillFromAddressBook -bool false && defaults write com.apple.Safari AutoFillPasswords -bool false",
+    "revert_command": "defaults write com.apple.Safari AutoFillFromAddressBook -bool true && defaults write com.apple.Safari AutoFillPasswords -bool true",
+    "requires_restart": "Safari",
+    "description": "Disables Safari's autofill for contact information and passwords.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Safari — Enable Do Not Track",
+    "slug": "safari-do-not-track",
+    "category": "safari",
+    "command": "defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true",
+    "revert_command": "defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool false",
+    "requires_restart": "Safari",
+    "description": "Sends a Do Not Track HTTP header with every web request, asking websites not to track browsing activity.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Require Password Immediately After Sleep",
+    "slug": "security-password-after-sleep",
+    "category": "security",
+    "command": "defaults write com.apple.screensaver askForPassword -int 1 && defaults write com.apple.screensaver askForPasswordDelay -int 0",
+    "revert_command": "defaults write com.apple.screensaver askForPassword -int 0",
+    "requires_restart": null,
+    "description": "Requires your password immediately when the screen is locked or the screensaver activates.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Enable Firewall",
+    "slug": "security-enable-firewall",
+    "category": "security",
+    "command": "sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on",
+    "revert_command": "sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off",
+    "requires_restart": null,
+    "description": "Enables the macOS application firewall to block unauthorized incoming network connections.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Disable Remote Apple Events",
+    "slug": "security-disable-remote-events",
+    "category": "security",
+    "command": "sudo systemsetup -setremoteappleevents off",
+    "revert_command": "sudo systemsetup -setremoteappleevents on",
+    "requires_restart": null,
+    "description": "Prevents other computers from sending Apple Events to your Mac, reducing the remote attack surface.",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Configure Network Interface MTU",
+    "slug": "network-mtu",
+    "category": "network",
+    "command": "sudo networksetup -setMTU en0 1500",
+    "revert_command": "sudo networksetup -setMTU en0 1500",
+    "requires_restart": null,
+    "description": "Sets the Maximum Transmission Unit size for a network interface (en0 = Wi-Fi or Ethernet).",
+    "macos_versions": "10.9+"
+  },
+  {
+    "name": "Flush DNS Cache",
+    "slug": "network-flush-dns",
+    "category": "network",
+    "command": "sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder",
+    "revert_command": null,
+    "requires_restart": null,
+    "description": "Flushes the local DNS resolver cache, useful after changing DNS settings or troubleshooting name resolution.",
+    "macos_versions": "10.12+"
+  }
+]

@@ -1,0 +1,80 @@
+# ── gaming Zsh — Gruvbox Dark + gaming aliases ─────────────────
+
+# ── Path ───────────────────────────────────────────────────────
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
+
+# ── Zsh options ────────────────────────────────────────────────
+setopt AUTO_CD
+setopt GLOB_DOTS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=20000
+SAVEHIST=20000
+
+# ── Completion ─────────────────────────────────────────────────
+autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+# ── Plugins (sourced if present) ───────────────────────────────
+[[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#928374"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# ── Prompt ─────────────────────────────────────────────────────
+PS1='%F{208}%~%f %F{3}❯%f '
+
+# ── Gaming aliases ─────────────────────────────────────────────
+# gamemode: prefix any command with gamemoderun for CPU governor boost
+alias gm='gamemoderun'
+# MangoHud: overlay showing FPS, CPU, GPU stats
+alias mangohud-run='mangohud'
+# Steam Proton: set PROTON_USE_WINED3D=1 %command% in Steam launch options for DX9
+# Useful Steam env hints (add to game launch options in Steam):
+#   PROTON_LOG=1 %command%            — enable Proton logging
+#   DXVK_HUD=1 %command%              — show DXVK HUD
+#   gamemoderun %command%             — enable gamemode for this game
+#   mangohud %command%                — enable MangoHud overlay
+alias steam-native='steam-native'
+alias gs-run='gamescope -w 1920 -h 1080 -r 60 --'
+
+# Lutris / Heroic helpers
+alias lutris-run='lutris'
+alias heroic='heroic-games-launcher'
+
+# General aliases
+alias ls='ls --color=auto'
+alias ll='ls -lah --color=auto'
+alias grep='grep --color=auto'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias mkdir='mkdir -pv'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias g='git'
+alias gs='git status'
+alias gl='git log --oneline --graph --decorate --all'
+alias vi='nvim'
+alias vim='nvim'
+alias top='btop'
+alias df='df -h'
+alias du='du -sh'
+
+# ── Editor ─────────────────────────────────────────────────────
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+# ── Language / locale ──────────────────────────────────────────
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# ── MangoHud config path ────────────────────────────────────────
+export MANGOHUD_CONFIG="$HOME/.config/MangoHud/MangoHud.conf"

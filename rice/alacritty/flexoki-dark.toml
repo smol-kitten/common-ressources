@@ -1,0 +1,34 @@
+# Theme: Flexoki Dark
+# Source: https://stephango.com/flexoki
+
+[colors.primary]
+background = "#100F0F"
+foreground = "#CECDC3"
+
+[colors.cursor]
+cursor = "#CECDC3"
+text   = "#100F0F"
+
+[colors.selection]
+background = "#282726"
+text       = "#CECDC3"
+
+[colors.normal]
+black   = "#1C1B1A"
+red     = "#D14D41"
+green   = "#879A39"
+yellow  = "#D0A215"
+blue    = "#4385BE"
+magenta = "#CE5D97"
+cyan    = "#3AA99F"
+white   = "#B7B5AC"
+
+[colors.bright]
+black   = "#575653"
+red     = "#D14D41"
+green   = "#879A39"
+yellow  = "#D0A215"
+blue    = "#4385BE"
+magenta = "#CE5D97"
+cyan    = "#3AA99F"
+white   = "#CECDC3"

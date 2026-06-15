@@ -1,0 +1,222 @@
+[
+  {
+    "name": "Strict-Transport-Security",
+    "slug": "hsts",
+    "header": "Strict-Transport-Security",
+    "category": "transport",
+    "recommended_value": "max-age=31536000; includeSubDomains; preload",
+    "description": "Forces browsers to connect to the site over HTTPS only for the duration specified by max-age. Once received, browsers will refuse plain HTTP connections and automatically upgrade requests to HTTPS.",
+    "risk_if_missing": "Users may connect over unencrypted HTTP, exposing session tokens, credentials, and data to network interception and man-in-the-middle attacks.",
+    "source": "RFC 6797",
+    "example": "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
+  },
+  {
+    "name": "X-Frame-Options",
+    "slug": "x-frame-options",
+    "header": "X-Frame-Options",
+    "category": "clickjacking",
+    "recommended_value": "DENY",
+    "description": "Prevents the page from being rendered inside a frame, iframe, embed, or object element. DENY blocks all framing; SAMEORIGIN allows framing only by the same origin. Superseded by Content-Security-Policy frame-ancestors but still widely supported.",
+    "risk_if_missing": "The site can be embedded in an attacker's iframe, enabling clickjacking attacks that trick users into performing unintended actions.",
+    "source": "RFC 7034",
+    "example": "X-Frame-Options: DENY"
+  },
+  {
+    "name": "X-Content-Type-Options",
+    "slug": "x-content-type-options",
+    "header": "X-Content-Type-Options",
+    "category": "content",
+    "recommended_value": "nosniff",
+    "description": "Prevents browsers from MIME-sniffing a response's content type away from the declared Content-Type. With nosniff, browsers will block requests if the MIME type does not match the expected type for the resource context.",
+    "risk_if_missing": "Browsers may interpret files with incorrect MIME types as executable scripts, enabling content injection and cross-site scripting via uploaded files.",
+    "source": "WHATWG Fetch Standard",
+    "example": "X-Content-Type-Options: nosniff"
+  },
+  {
+    "name": "X-XSS-Protection",
+    "slug": "x-xss-protection",
+    "header": "X-XSS-Protection",
+    "category": "content",
+    "recommended_value": "0",
+    "description": "Legacy header that activated the built-in reflected XSS filter in older browsers (IE, older Chrome/Safari). Modern recommendation is to set it to 0 (disabled) and rely on Content-Security-Policy instead, as the filter itself introduced vulnerabilities.",
+    "risk_if_missing": "Not setting it explicitly may leave it in an inconsistent state in old browsers. Setting 1; mode=block on old sites added a partial XSS defense but is obsolete.",
+    "source": "OWASP Secure Headers Project",
+    "example": "X-XSS-Protection: 0"
+  },
+  {
+    "name": "Content-Security-Policy",
+    "slug": "csp",
+    "header": "Content-Security-Policy",
+    "category": "content",
+    "recommended_value": "default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'",
+    "description": "Defines trusted sources for all resource types (scripts, styles, images, fonts, frames, etc.). Effectively mitigates cross-site scripting (XSS), data injection, and clickjacking by restricting what the browser is permitted to load and execute.",
+    "risk_if_missing": "Without CSP, injected inline scripts execute freely, enabling XSS attacks that can steal cookies, credentials, and sensitive data or perform actions on behalf of the user.",
+    "source": "W3C Content Security Policy Level 3",
+    "example": "Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-abc123'; object-src 'none'"
+  },
+  {
+    "name": "Content-Security-Policy-Report-Only",
+    "slug": "csp-report-only",
+    "header": "Content-Security-Policy-Report-Only",
+    "category": "reporting",
+    "recommended_value": "default-src 'self'; report-uri /csp-violation-report",
+    "description": "Like Content-Security-Policy but does not enforce — it only reports violations to the specified report-uri or report-to endpoint. Used to test CSP policies before enforcing them in production.",
+    "risk_if_missing": "Without this header, organizations cannot gather violation reports to iteratively build a CSP policy without risk of breaking the site.",
+    "source": "W3C Content Security Policy Level 3",
+    "example": "Content-Security-Policy-Report-Only: default-src 'self'; report-to csp-endpoint"
+  },
+  {
+    "name": "Referrer-Policy",
+    "slug": "referrer-policy",
+    "header": "Referrer-Policy",
+    "category": "content",
+    "recommended_value": "strict-origin-when-cross-origin",
+    "description": "Controls how much referrer information is sent with requests. strict-origin-when-cross-origin sends full URL for same-origin, only the origin for cross-origin HTTPS, and nothing for HTTP destinations from HTTPS.",
+    "risk_if_missing": "The Referer header may leak sensitive URL parameters (tokens, IDs, search terms) to third-party sites loaded on your pages.",
+    "source": "W3C Referrer Policy",
+    "example": "Referrer-Policy: strict-origin-when-cross-origin"
+  },
+  {
+    "name": "Permissions-Policy",
+    "slug": "permissions-policy",
+    "header": "Permissions-Policy",
+    "category": "permissions",
+    "recommended_value": "geolocation=(), microphone=(), camera=(), payment=(), usb=()",
+    "description": "Formerly Feature-Policy. Controls which browser features and APIs the page and embedded iframes are allowed to use (camera, microphone, geolocation, payment, etc.). Disabling unused features reduces the attack surface.",
+    "risk_if_missing": "Embedded third-party scripts and iframes can access powerful browser APIs without restriction, enabling potential privacy violations and capability abuse.",
+    "source": "W3C Permissions Policy",
+    "example": "Permissions-Policy: camera=(), microphone=(), geolocation=(self)"
+  },
+  {
+    "name": "Cross-Origin-Embedder-Policy",
+    "slug": "coep",
+    "header": "Cross-Origin-Embedder-Policy",
+    "category": "cors",
+    "recommended_value": "require-corp",
+    "description": "Prevents a document from loading cross-origin resources that do not grant explicit permission via CORS or CORP headers. Required alongside COOP to enable SharedArrayBuffer and high-resolution timers.",
+    "risk_if_missing": "Without COEP (in conjunction with COOP), access to SharedArrayBuffer and precise timers is blocked by browsers as a Spectre mitigation.",
+    "source": "HTML Living Standard / WHATWG",
+    "example": "Cross-Origin-Embedder-Policy: require-corp"
+  },
+  {
+    "name": "Cross-Origin-Opener-Policy",
+    "slug": "coop",
+    "header": "Cross-Origin-Opener-Policy",
+    "category": "cors",
+    "recommended_value": "same-origin",
+    "description": "Isolates the browsing context group so cross-origin windows cannot reference this page via window.opener. Prevents Spectre-based cross-origin information leaks and enables use of SharedArrayBuffer.",
+    "risk_if_missing": "Cross-origin popups can access the window object, enabling Spectre-based side-channel attacks and unauthorized cross-origin script access.",
+    "source": "HTML Living Standard / WHATWG",
+    "example": "Cross-Origin-Opener-Policy: same-origin"
+  },
+  {
+    "name": "Cross-Origin-Resource-Policy",
+    "slug": "corp",
+    "header": "Cross-Origin-Resource-Policy",
+    "category": "cors",
+    "recommended_value": "same-origin",
+    "description": "Prevents other origins from loading this response's resource via no-cors requests. Defends against Spectre attacks where cross-origin resources are read via timing side channels.",
+    "risk_if_missing": "Resources (images, scripts, APIs) can be loaded by cross-origin pages in no-cors mode, potentially leaking sensitive data via timing attacks.",
+    "source": "Fetch Living Standard / WHATWG",
+    "example": "Cross-Origin-Resource-Policy: same-site"
+  },
+  {
+    "name": "Cache-Control",
+    "slug": "cache-control",
+    "header": "Cache-Control",
+    "category": "caching",
+    "recommended_value": "no-store",
+    "description": "Controls how responses are cached by browsers and intermediary proxies. For sensitive pages (authentication, account data), no-store prevents any caching. For static assets, max-age with immutable is recommended.",
+    "risk_if_missing": "Sensitive pages or API responses may be cached by browsers or shared proxies, allowing subsequent users on shared devices to view another user's data.",
+    "source": "RFC 9111",
+    "example": "Cache-Control: no-store, no-cache, must-revalidate"
+  },
+  {
+    "name": "Clear-Site-Data",
+    "slug": "clear-site-data",
+    "header": "Clear-Site-Data",
+    "category": "caching",
+    "recommended_value": "\"cache\", \"cookies\", \"storage\"",
+    "description": "Instructs the browser to clear cookies, localStorage, sessionStorage, and caches for the origin when this response is received. Typically sent on logout endpoints to ensure complete session termination.",
+    "risk_if_missing": "After logout, residual cookies, cached data, or stored tokens may persist and be reused to re-authenticate without credentials.",
+    "source": "W3C Clear Site Data",
+    "example": "Clear-Site-Data: \"cache\", \"cookies\", \"storage\""
+  },
+  {
+    "name": "NEL",
+    "slug": "nel",
+    "header": "NEL",
+    "category": "reporting",
+    "recommended_value": "{\"report_to\":\"default\",\"max_age\":31536000,\"include_subdomains\":true}",
+    "description": "Network Error Logging — instructs browsers to report network-level errors (DNS failures, TCP resets, TLS errors) to a configured reporting endpoint. Helps diagnose connectivity and TLS issues affecting real users.",
+    "risk_if_missing": "Network-level failures affecting users are invisible to server-side monitoring, making it difficult to detect and diagnose connectivity issues.",
+    "source": "W3C Network Error Logging",
+    "example": "NEL: {\"report_to\":\"default\",\"max_age\":31536000}"
+  },
+  {
+    "name": "Report-To",
+    "slug": "report-to",
+    "header": "Report-To",
+    "category": "reporting",
+    "recommended_value": "{\"group\":\"default\",\"max_age\":31536000,\"endpoints\":[{\"url\":\"https://example.com/reports\"}]}",
+    "description": "Configures named reporting endpoints for use with CSP report-to, NEL, COEP, and COOP violation reports. Part of the Reporting API specification.",
+    "risk_if_missing": "Browser security policy violations and network errors cannot be reported to a centralized collection endpoint for monitoring and alerting.",
+    "source": "W3C Reporting API",
+    "example": "Report-To: {\"group\":\"csp-endpoint\",\"max_age\":10886400,\"endpoints\":[{\"url\":\"https://example.com/csp-reports\"}]}"
+  },
+  {
+    "name": "Access-Control-Allow-Origin",
+    "slug": "access-control-allow-origin",
+    "header": "Access-Control-Allow-Origin",
+    "category": "cors",
+    "recommended_value": "https://yourdomain.com",
+    "description": "Specifies which origins are permitted to read the response in cross-origin browser requests. Using * allows any origin; restrict to specific trusted origins for authenticated APIs.",
+    "risk_if_missing": "Browsers block cross-origin fetch/XHR responses by default (CORS). Without this header, legitimate cross-origin clients cannot access the API.",
+    "source": "Fetch Living Standard / W3C CORS",
+    "example": "Access-Control-Allow-Origin: https://app.example.com"
+  },
+  {
+    "name": "Access-Control-Allow-Methods",
+    "slug": "access-control-allow-methods",
+    "header": "Access-Control-Allow-Methods",
+    "category": "cors",
+    "recommended_value": "GET, POST, PUT, DELETE, OPTIONS",
+    "description": "In a CORS preflight response, lists the HTTP methods allowed for cross-origin requests. Sent in response to an OPTIONS preflight request.",
+    "risk_if_missing": "Cross-origin clients issuing non-simple methods (PUT, DELETE, PATCH) will be blocked by browsers after a preflight failure, breaking API functionality.",
+    "source": "Fetch Living Standard / W3C CORS",
+    "example": "Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS"
+  },
+  {
+    "name": "Access-Control-Allow-Headers",
+    "slug": "access-control-allow-headers",
+    "header": "Access-Control-Allow-Headers",
+    "category": "cors",
+    "recommended_value": "Content-Type, Authorization, X-Requested-With",
+    "description": "In a CORS preflight response, specifies which request headers the browser is permitted to include in cross-origin requests.",
+    "risk_if_missing": "Cross-origin requests with custom headers (Authorization, Content-Type for JSON, etc.) will be rejected by browsers during preflight checks.",
+    "source": "Fetch Living Standard / W3C CORS",
+    "example": "Access-Control-Allow-Headers: Content-Type, Authorization"
+  },
+  {
+    "name": "Access-Control-Max-Age",
+    "slug": "access-control-max-age",
+    "header": "Access-Control-Max-Age",
+    "category": "cors",
+    "recommended_value": "86400",
+    "description": "Specifies how long (in seconds) the browser should cache the results of a CORS preflight request, reducing the number of OPTIONS requests sent for subsequent cross-origin calls.",
+    "risk_if_missing": "Without caching, browsers send a preflight OPTIONS request before every cross-origin non-simple request, adding latency and server load.",
+    "source": "Fetch Living Standard / W3C CORS",
+    "example": "Access-Control-Max-Age: 86400"
+  },
+  {
+    "name": "Expect-CT",
+    "slug": "expect-ct",
+    "header": "Expect-CT",
+    "category": "transport",
+    "recommended_value": "max-age=86400, enforce",
+    "description": "Deprecated as of 2021. Previously instructed browsers to enforce and/or report Certificate Transparency requirements for the site's TLS certificate. Modern browsers enforce CT automatically, making this header unnecessary.",
+    "risk_if_missing": "No current risk — CT enforcement is now handled natively by browsers without this header. Keeping it is harmless but redundant.",
+    "source": "RFC 9163 (obsoleted)",
+    "example": "Expect-CT: max-age=86400, enforce, report-uri=\"https://example.com/ct-report\""
+  }
+]

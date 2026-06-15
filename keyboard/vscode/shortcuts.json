@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Quick Open File",
+    "slug": "quick-open-file",
+    "category": "navigation",
+    "windows": "Ctrl+P",
+    "mac": "Cmd+P",
+    "linux": "Ctrl+P",
+    "description": "Opens a fuzzy-search dialog to quickly navigate to any file in the workspace by typing part of its name.",
+    "context": "global"
+  },
+  {
+    "name": "Command Palette",
+    "slug": "command-palette",
+    "category": "navigation",
+    "windows": "Ctrl+Shift+P",
+    "mac": "Cmd+Shift+P",
+    "linux": "Ctrl+Shift+P",
+    "description": "Opens the Command Palette to search and execute any VS Code command by name.",
+    "context": "global"
+  },
+  {
+    "name": "Open Settings",
+    "slug": "open-settings",
+    "category": "view",
+    "windows": "Ctrl+,",
+    "mac": "Cmd+,",
+    "linux": "Ctrl+,",
+    "description": "Opens the Settings UI where preferences and configuration options can be searched and modified.",
+    "context": "global"
+  },
+  {
+    "name": "Toggle Sidebar",
+    "slug": "toggle-sidebar",
+    "category": "view",
+    "windows": "Ctrl+B",
+    "mac": "Cmd+B",
+    "linux": "Ctrl+B",
+    "description": "Shows or hides the primary sidebar (Explorer, Source Control, Extensions, etc.).",
+    "context": "global"
+  },
+  {
+    "name": "Toggle Terminal",
+    "slug": "toggle-terminal",
+    "category": "terminal",
+    "windows": "Ctrl+`",
+    "mac": "Ctrl+`",
+    "linux": "Ctrl+`",
+    "description": "Shows or hides the integrated terminal panel.",
+    "context": "global"
+  },
+  {
+    "name": "New File",
+    "slug": "new-file",
+    "category": "navigation",
+    "windows": "Ctrl+N",
+    "mac": "Cmd+N",
+    "linux": "Ctrl+N",
+    "description": "Creates a new untitled file in the editor.",
+    "context": "global"
+  },
+  {
+    "name": "Save",
+    "slug": "save",
+    "category": "editing",
+    "windows": "Ctrl+S",
+    "mac": "Cmd+S",
+    "linux": "Ctrl+S",
+    "description": "Saves the currently active file to disk.",
+    "context": "editor"
+  },
+  {
+    "name": "Save All",
+    "slug": "save-all",
+    "category": "editing",
+    "windows": "Ctrl+K S",
+    "mac": "Cmd+Option+S",
+    "linux": "Ctrl+K S",
+    "description": "Saves all open and modified files at once.",
+    "context": "global"
+  },
+  {
+    "name": "Close Editor",
+    "slug": "close-editor",
+    "category": "navigation",
+    "windows": "Ctrl+W",
+    "mac": "Cmd+W",
+    "linux": "Ctrl+W",
+    "description": "Closes the currently active editor tab.",
+    "context": "editor"
+  },
+  {
+    "name": "Close All Editors",
+    "slug": "close-all-editors",
+    "category": "navigation",
+    "windows": "Ctrl+K Ctrl+W",
+    "mac": "Cmd+K Cmd+W",
+    "linux": "Ctrl+K Ctrl+W",
+    "description": "Closes all open editor tabs simultaneously.",
+    "context": "global"
+  },
+  {
+    "name": "Split Editor",
+    "slug": "split-editor",
+    "category": "view",
+    "windows": "Ctrl+\\",
+    "mac": "Cmd+\\",
+    "linux": "Ctrl+\\",
+    "description": "Splits the current editor into two panels side by side.",
+    "context": "editor"
+  },
+  {
+    "name": "Focus Next Editor Group",
+    "slug": "focus-next-editor-group",
+    "category": "navigation",
+    "windows": "Ctrl+K Ctrl+Right",
+    "mac": "Cmd+K Cmd+Right",
+    "linux": "Ctrl+K Ctrl+Right",
+    "description": "Moves focus to the next editor group when the editor is split into multiple panels.",
+    "context": "editor"
+  },
+  {
+    "name": "Go to Line",
+    "slug": "go-to-line",
+    "category": "navigation",
+    "windows": "Ctrl+G",
+    "mac": "Ctrl+G",
+    "linux": "Ctrl+G",
+    "description": "Opens a prompt to jump directly to a specific line number in the current file.",
+    "context": "editor"
+  },
+  {
+    "name": "Go to Symbol",
+    "slug": "go-to-symbol",
+    "category": "navigation",
+    "windows": "Ctrl+Shift+O",
+    "mac": "Cmd+Shift+O",
+    "linux": "Ctrl+Shift+O",
+    "description": "Opens a fuzzy-search list of symbols (functions, classes, variables) in the current file for quick navigation.",
+    "context": "editor"
+  },
+  {
+    "name": "Find",
+    "slug": "find",
+    "category": "search",
+    "windows": "Ctrl+F",
+    "mac": "Cmd+F",
+    "linux": "Ctrl+F",
+    "description": "Opens the in-file search widget to find text in the current document.",
+    "context": "editor"
+  },
+  {
+    "name": "Replace",
+    "slug": "replace",
+    "category": "search",
+    "windows": "Ctrl+H",
+    "mac": "Cmd+Option+F",
+    "linux": "Ctrl+H",
+    "description": "Opens the in-file search and replace widget to find and substitute text in the current document.",
+    "context": "editor"
+  },
+  {
+    "name": "Find in Files",
+    "slug": "find-in-files",
+    "category": "search",
+    "windows": "Ctrl+Shift+F",
+    "mac": "Cmd+Shift+F",
+    "linux": "Ctrl+Shift+F",
+    "description": "Opens the global Search panel to find text across all files in the workspace.",
+    "context": "global"
+  },
+  {
+    "name": "Select All Occurrences",
+    "slug": "select-all-occurrences",
+    "category": "editing",
+    "windows": "Ctrl+Shift+L",
+    "mac": "Cmd+Shift+L",
+    "linux": "Ctrl+Shift+L",
+    "description": "Selects all instances of the currently selected text in the file, creating multiple cursors for simultaneous editing.",
+    "context": "editor"
+  },
+  {
+    "name": "Add Cursor at Click",
+    "slug": "add-cursor-click",
+    "category": "editing",
+    "windows": "Alt+Click",
+    "mac": "Option+Click",
+    "linux": "Alt+Click",
+    "description": "Adds an additional cursor at the clicked position, enabling multi-cursor editing at arbitrary locations.",
+    "context": "editor"
+  },
+  {
+    "name": "Add Cursor Below",
+    "slug": "add-cursor-below",
+    "category": "editing",
+    "windows": "Ctrl+Alt+Down",
+    "mac": "Cmd+Option+Down",
+    "linux": "Ctrl+Alt+Down",
+    "description": "Inserts an additional cursor on the line below the current cursor position.",
+    "context": "editor"
+  },
+  {
+    "name": "Add Cursor Above",
+    "slug": "add-cursor-above",
+    "category": "editing",
+    "windows": "Ctrl+Alt+Up",
+    "mac": "Cmd+Option+Up",
+    "linux": "Ctrl+Alt+Up",
+    "description": "Inserts an additional cursor on the line above the current cursor position.",
+    "context": "editor"
+  },
+  {
+    "name": "Move Line Down",
+    "slug": "move-line-down",
+    "category": "editing",
+    "windows": "Alt+Down",
+    "mac": "Option+Down",
+    "linux": "Alt+Down",
+    "description": "Moves the current line (or selection) down by one line.",
+    "context": "editor"
+  },
+  {
+    "name": "Move Line Up",
+    "slug": "move-line-up",
+    "category": "editing",
+    "windows": "Alt+Up",
+    "mac": "Option+Up",
+    "linux": "Alt+Up",
+    "description": "Moves the current line (or selection) up by one line.",
+    "context": "editor"
+  },
+  {
+    "name": "Copy Line Down",
+    "slug": "copy-line-down",
+    "category": "editing",
+    "windows": "Alt+Shift+Down",
+    "mac": "Option+Shift+Down",
+    "linux": "Alt+Shift+Down",
+    "description": "Duplicates the current line and inserts the copy immediately below.",
+    "context": "editor"
+  },
+  {
+    "name": "Copy Line Up",
+    "slug": "copy-line-up",
+    "category": "editing",
+    "windows": "Alt+Shift+Up",
+    "mac": "Option+Shift+Up",
+    "linux": "Alt+Shift+Up",
+    "description": "Duplicates the current line and inserts the copy immediately above.",
+    "context": "editor"
+  },
+  {
+    "name": "Delete Line",
+    "slug": "delete-line",
+    "category": "editing",
+    "windows": "Ctrl+Shift+K",
+    "mac": "Cmd+Shift+K",
+    "linux": "Ctrl+Shift+K",
+    "description": "Deletes the entire current line without leaving a blank line.",
+    "context": "editor"
+  },
+  {
+    "name": "Toggle Line Comment",
+    "slug": "toggle-line-comment",
+    "category": "editing",
+    "windows": "Ctrl+/",
+    "mac": "Cmd+/",
+    "linux": "Ctrl+/",
+    "description": "Toggles single-line comments on the current line or selected lines using the language-appropriate comment syntax.",
+    "context": "editor"
+  },
+  {
+    "name": "Toggle Block Comment",
+    "slug": "toggle-block-comment",
+    "category": "editing",
+    "windows": "Alt+Shift+A",
+    "mac": "Option+Shift+A",
+    "linux": "Alt+Shift+A",
+    "description": "Wraps or unwraps the selection in a block comment using the language-appropriate block comment syntax.",
+    "context": "editor"
+  },
+  {
+    "name": "Format Document",
+    "slug": "format-document",
+    "category": "editing",
+    "windows": "Shift+Alt+F",
+    "mac": "Shift+Option+F",
+    "linux": "Ctrl+Shift+I",
+    "description": "Runs the configured formatter on the entire active document to apply consistent code style.",
+    "context": "editor"
+  },
+  {
+    "name": "Rename Symbol",
+    "slug": "rename-symbol",
+    "category": "refactoring",
+    "windows": "F2",
+    "mac": "F2",
+    "linux": "F2",
+    "description": "Renames the symbol under the cursor across all references in the workspace using language server intelligence.",
+    "context": "editor"
+  },
+  {
+    "name": "Go to Definition",
+    "slug": "go-to-definition",
+    "category": "navigation",
+    "windows": "F12",
+    "mac": "F12",
+    "linux": "F12",
+    "description": "Navigates to the definition of the symbol under the cursor, jumping to the source file and line where it is declared.",
+    "context": "editor"
+  },
+  {
+    "name": "Peek Definition",
+    "slug": "peek-definition",
+    "category": "navigation",
+    "windows": "Alt+F12",
+    "mac": "Option+F12",
+    "linux": "Alt+F12",
+    "description": "Shows the definition of the symbol under the cursor inline in a peek widget without leaving the current file.",
+    "context": "editor"
+  },
+  {
+    "name": "Show References",
+    "slug": "show-references",
+    "category": "navigation",
+    "windows": "Shift+F12",
+    "mac": "Shift+F12",
+    "linux": "Shift+F12",
+    "description": "Finds and lists all references to the symbol under the cursor across the workspace.",
+    "context": "editor"
+  },
+  {
+    "name": "Quick Fix",
+    "slug": "quick-fix",
+    "category": "refactoring",
+    "windows": "Ctrl+.",
+    "mac": "Cmd+.",
+    "linux": "Ctrl+.",
+    "description": "Opens the Quick Fix menu with suggested code actions, refactors, and automated fixes for the current error or warning.",
+    "context": "editor"
+  },
+  {
+    "name": "Toggle Breakpoint",
+    "slug": "toggle-breakpoint",
+    "category": "debug",
+    "windows": "F9",
+    "mac": "F9",
+    "linux": "F9",
+    "description": "Adds or removes a debug breakpoint on the current line.",
+    "context": "editor"
+  },
+  {
+    "name": "Start Debugging",
+    "slug": "start-debugging",
+    "category": "debug",
+    "windows": "F5",
+    "mac": "F5",
+    "linux": "F5",
+    "description": "Starts a debug session using the active launch configuration, or continues execution when paused at a breakpoint.",
+    "context": "global"
+  },
+  {
+    "name": "Step Over",
+    "slug": "step-over",
+    "category": "debug",
+    "windows": "F10",
+    "mac": "F10",
+    "linux": "F10",
+    "description": "Executes the next line of code during a debug session without stepping into function calls.",
+    "context": "debug"
+  },
+  {
+    "name": "Step Into",
+    "slug": "step-into",
+    "category": "debug",
+    "windows": "F11",
+    "mac": "F11",
+    "linux": "F11",
+    "description": "Steps into the function call on the current line during a debug session to inspect its execution.",
+    "context": "debug"
+  },
+  {
+    "name": "Toggle Word Wrap",
+    "slug": "toggle-word-wrap",
+    "category": "view",
+    "windows": "Alt+Z",
+    "mac": "Option+Z",
+    "linux": "Alt+Z",
+    "description": "Toggles soft word wrap in the editor so long lines either wrap to the viewport width or extend horizontally.",
+    "context": "editor"
+  },
+  {
+    "name": "Increase Font Size",
+    "slug": "increase-font-size",
+    "category": "view",
+    "windows": "Ctrl+=",
+    "mac": "Cmd+=",
+    "linux": "Ctrl+=",
+    "description": "Increases the editor font size by one step.",
+    "context": "global"
+  },
+  {
+    "name": "Decrease Font Size",
+    "slug": "decrease-font-size",
+    "category": "view",
+    "windows": "Ctrl+-",
+    "mac": "Cmd+-",
+    "linux": "Ctrl+-",
+    "description": "Decreases the editor font size by one step.",
+    "context": "global"
+  },
+  {
+    "name": "Zen Mode",
+    "slug": "zen-mode",
+    "category": "view",
+    "windows": "Ctrl+K Z",
+    "mac": "Cmd+K Z",
+    "linux": "Ctrl+K Z",
+    "description": "Toggles Zen Mode, hiding all UI chrome for a distraction-free full-screen editing experience.",
+    "context": "global"
+  },
+  {
+    "name": "Source Control",
+    "slug": "source-control",
+    "category": "git",
+    "windows": "Ctrl+Shift+G",
+    "mac": "Ctrl+Shift+G",
+    "linux": "Ctrl+Shift+G",
+    "description": "Opens the Source Control panel in the sidebar to stage, commit, and manage Git changes.",
+    "context": "global"
+  },
+  {
+    "name": "Extensions",
+    "slug": "extensions",
+    "category": "view",
+    "windows": "Ctrl+Shift+X",
+    "mac": "Cmd+Shift+X",
+    "linux": "Ctrl+Shift+X",
+    "description": "Opens the Extensions panel to search, install, enable, and disable VS Code extensions.",
+    "context": "global"
+  },
+  {
+    "name": "Explorer",
+    "slug": "explorer",
+    "category": "view",
+    "windows": "Ctrl+Shift+E",
+    "mac": "Cmd+Shift+E",
+    "linux": "Ctrl+Shift+E",
+    "description": "Opens the Explorer panel in the sidebar to browse files and folders in the workspace.",
+    "context": "global"
+  },
+  {
+    "name": "Emmet Wrap with Abbreviation",
+    "slug": "emmet-wrap",
+    "category": "editing",
+    "windows": "Alt+Shift+W",
+    "mac": "Ctrl+Shift+G",
+    "linux": "Alt+Shift+W",
+    "description": "Opens the Emmet Wrap with Abbreviation prompt to wrap selected HTML content in an Emmet-generated element.",
+    "context": "editor"
+  },
+  {
+    "name": "Fold Region",
+    "slug": "fold-region",
+    "category": "editing",
+    "windows": "Ctrl+Shift+[",
+    "mac": "Cmd+Option+[",
+    "linux": "Ctrl+Shift+[",
+    "description": "Collapses the innermost foldable region (block, function, or structure) at the current cursor position.",
+    "context": "editor"
+  },
+  {
+    "name": "Unfold Region",
+    "slug": "unfold-region",
+    "category": "editing",
+    "windows": "Ctrl+Shift+]",
+    "mac": "Cmd+Option+]",
+    "linux": "Ctrl+Shift+]",
+    "description": "Expands the innermost collapsed region at the current cursor position.",
+    "context": "editor"
+  },
+  {
+    "name": "Select to End of Line",
+    "slug": "select-to-end-of-line",
+    "category": "editing",
+    "windows": "Shift+End",
+    "mac": "Shift+Cmd+Right",
+    "linux": "Shift+End",
+    "description": "Extends the selection from the current cursor position to the end of the line.",
+    "context": "editor"
+  },
+  {
+    "name": "New Terminal",
+    "slug": "new-terminal",
+    "category": "terminal",
+    "windows": "Ctrl+Shift+`",
+    "mac": "Ctrl+Shift+`",
+    "linux": "Ctrl+Shift+`",
+    "description": "Creates a new integrated terminal instance in the terminal panel.",
+    "context": "global"
+  }
+]

@@ -28,7 +28,10 @@
     { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",             "description": "Minimal fast launcher" },
     { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",                "description": "Compact build/CI notifications" },
     { "source": "zshrc",          "target": "~/.zshrc",                               "description": "Zsh with Starship, fzf, zoxide, aliases" },
-    { "source": "starship.toml",  "target": "~/.config/starship.toml",                "description": "Starship prompt config (Tokyo Night)" }
+    { "source": "starship.toml",  "target": "~/.config/starship.toml",                "description": "Starship prompt config (Tokyo Night)" },
+    { "source": "foot.ini",       "target": "~/.config/foot/foot.ini",                "description": "Foot terminal — Tokyo Night colors" },
+    { "source": "tmux.conf",      "target": "~/.config/tmux/tmux.conf",               "description": "Tmux — Ctrl+Space prefix, Alt+hjkl navigation, Tokyo Night status bar" },
+    { "source": "git-config",     "target": "~/.config/git/rice.conf",                "description": "Git aliases and delta diff theme (include from ~/.gitconfig)" }
   ],
   "recommended_packages": {
     "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh", "starship"],

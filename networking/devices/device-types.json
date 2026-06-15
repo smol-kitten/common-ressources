@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Hub",
+    "slug": "hub",
+    "osi_layer": 1,
+    "function": "Broadcasts incoming electrical signals to all connected ports",
+    "description": "A basic Layer 1 network device that repeats incoming signals to all other ports regardless of destination. Creates a single collision domain and is largely obsolete, replaced by switches.",
+    "protocols": ["Ethernet"],
+    "common_brands": ["Netgear", "TP-Link"]
+  },
+  {
+    "name": "Repeater",
+    "slug": "repeater",
+    "osi_layer": 1,
+    "function": "Amplifies and retransmits signals to extend network reach",
+    "description": "A Layer 1 device that regenerates and retransmits network signals to extend the distance they can travel without degradation. Used to overcome cable length limitations.",
+    "protocols": ["Ethernet", "Wi-Fi"],
+    "common_brands": ["TP-Link", "Netgear", "Belkin"]
+  },
+  {
+    "name": "Bridge",
+    "slug": "bridge",
+    "osi_layer": 2,
+    "function": "Connects two network segments and forwards frames based on MAC addresses",
+    "description": "A Layer 2 device that divides a network into segments, reducing collision domains. It learns MAC addresses and forwards frames only to the appropriate segment, improving efficiency.",
+    "protocols": ["Ethernet", "STP"],
+    "common_brands": ["Cisco", "Juniper"]
+  },
+  {
+    "name": "Layer 2 Switch",
+    "slug": "switch-l2",
+    "osi_layer": 2,
+    "function": "Forwards frames between devices using MAC address tables",
+    "description": "A Layer 2 device that creates a dedicated connection between sender and receiver by learning MAC addresses. Each port is its own collision domain, providing much better performance than hubs.",
+    "protocols": ["Ethernet", "STP", "RSTP", "VLAN (802.1Q)", "LACP"],
+    "common_brands": ["Cisco", "Juniper", "HP Aruba", "Netgear", "Ubiquiti"]
+  },
+  {
+    "name": "Layer 3 Switch",
+    "slug": "switch-l3",
+    "osi_layer": 3,
+    "function": "Performs both Layer 2 switching and Layer 3 routing in hardware",
+    "description": "A switch with built-in routing capability that can forward packets between VLANs and subnets using hardware-accelerated routing tables, combining the speed of a switch with the intelligence of a router.",
+    "protocols": ["Ethernet", "VLAN (802.1Q)", "OSPF", "BGP", "IP", "LACP"],
+    "common_brands": ["Cisco", "Juniper", "HP Aruba", "Extreme Networks"]
+  },
+  {
+    "name": "Router",
+    "slug": "router",
+    "osi_layer": 3,
+    "function": "Forwards packets between networks using IP routing tables",
+    "description": "A Layer 3 device that connects multiple networks and determines the best path for packet forwarding using routing protocols. The fundamental building block of inter-network connectivity.",
+    "protocols": ["IP", "BGP", "OSPF", "EIGRP", "RIP", "IS-IS", "MPLS"],
+    "common_brands": ["Cisco", "Juniper", "MikroTik", "Ubiquiti", "Huawei"]
+  },
+  {
+    "name": "Firewall",
+    "slug": "firewall",
+    "osi_layer": 4,
+    "function": "Filters network traffic based on security rules at L3/L4 (and up to L7 for NGFW)",
+    "description": "A security device that monitors and controls incoming and outgoing network traffic based on predefined rules. Stateful firewalls track connection state; next-generation firewalls (NGFW) also perform deep packet inspection up to Layer 7.",
+    "protocols": ["IP", "TCP", "UDP", "ICMP", "TLS"],
+    "common_brands": ["Palo Alto Networks", "Fortinet", "Cisco", "Check Point", "pfSense", "OPNsense"]
+  },
+  {
+    "name": "Wireless Access Point",
+    "slug": "wap",
+    "osi_layer": 2,
+    "function": "Connects wireless clients to a wired network using radio frequencies",
+    "description": "A Layer 2 device that creates a wireless local area network (WLAN) and bridges wireless clients to the wired Ethernet infrastructure. Acts as a central transmitter and receiver of wireless signals.",
+    "protocols": ["Wi-Fi (IEEE 802.11)", "Ethernet", "VLAN (802.1Q)"],
+    "common_brands": ["Ubiquiti", "Cisco Meraki", "Aruba", "Ruckus", "TP-Link"]
+  },
+  {
+    "name": "Load Balancer",
+    "slug": "load-balancer",
+    "osi_layer": 7,
+    "function": "Distributes incoming traffic across multiple servers to ensure availability and performance",
+    "description": "A device or software that distributes network or application traffic across multiple backend servers. Layer 4 load balancers work on TCP/UDP connections; Layer 7 load balancers can route based on HTTP content, cookies, and URLs.",
+    "protocols": ["TCP", "UDP", "HTTP", "HTTPS", "DNS"],
+    "common_brands": ["F5", "Citrix NetScaler", "HAProxy", "nginx", "AWS ELB", "Kemp"]
+  },
+  {
+    "name": "Proxy Server",
+    "slug": "proxy-server",
+    "osi_layer": 7,
+    "function": "Forwards client requests to external servers on behalf of clients",
+    "description": "A Layer 7 intermediary that receives client requests and forwards them to destination servers. Provides caching, content filtering, anonymisation, and access control. A forward proxy sits between clients and the internet.",
+    "protocols": ["HTTP", "HTTPS", "FTP", "SOCKS"],
+    "common_brands": ["Squid", "Blue Coat", "Zscaler", "Cisco WSA"]
+  },
+  {
+    "name": "Reverse Proxy",
+    "slug": "reverse-proxy",
+    "osi_layer": 7,
+    "function": "Sits in front of servers and forwards client requests to appropriate backend services",
+    "description": "A Layer 7 intermediary that accepts requests from clients and forwards them to backend servers, hiding the internal network topology. Provides TLS termination, caching, compression, and load balancing.",
+    "protocols": ["HTTP", "HTTPS", "WebSocket", "gRPC"],
+    "common_brands": ["nginx", "HAProxy", "Caddy", "Traefik", "AWS CloudFront", "Cloudflare"]
+  },
+  {
+    "name": "VPN Gateway",
+    "slug": "vpn-gateway",
+    "osi_layer": 3,
+    "function": "Creates encrypted tunnels between remote networks or clients over the internet",
+    "description": "A Layer 3 device that establishes secure Virtual Private Network tunnels using encryption protocols. Allows remote users or branch offices to securely access private networks over public infrastructure.",
+    "protocols": ["IPsec", "OpenVPN", "WireGuard", "L2TP", "SSL/TLS", "IKEv2"],
+    "common_brands": ["Cisco", "Fortinet", "Palo Alto", "OpenVPN AS", "WireGuard"]
+  },
+  {
+    "name": "IDS",
+    "slug": "ids",
+    "osi_layer": 7,
+    "function": "Monitors network traffic to detect and alert on suspicious activity",
+    "description": "An Intrusion Detection System passively analyses network traffic or host logs to detect known attack signatures and anomalies. It generates alerts but does not block traffic — a key distinction from IPS.",
+    "protocols": ["IP", "TCP", "UDP", "HTTP", "DNS"],
+    "common_brands": ["Snort", "Suricata", "Zeek (Bro)", "IBM QRadar", "Cisco Stealthwatch"]
+  },
+  {
+    "name": "IPS",
+    "slug": "ips",
+    "osi_layer": 7,
+    "function": "Monitors and actively blocks malicious network traffic in real time",
+    "description": "An Intrusion Prevention System sits inline in the network path and actively drops or rejects malicious packets and connections. Builds on IDS capabilities by adding automated blocking responses.",
+    "protocols": ["IP", "TCP", "UDP", "HTTP", "DNS", "TLS"],
+    "common_brands": ["Snort", "Suricata", "Palo Alto", "Cisco Firepower", "Trend Micro TippingPoint"]
+  },
+  {
+    "name": "Modem",
+    "slug": "modem",
+    "osi_layer": 1,
+    "function": "Converts digital data to analogue signals and vice versa for transmission over phone or cable lines",
+    "description": "A Layer 1 device (modulator-demodulator) that converts between digital network signals and analogue signals suitable for transmission over telephone lines, cable TV infrastructure, or fibre optic networks.",
+    "protocols": ["DSL", "DOCSIS", "ADSL", "VDSL", "G.fast"],
+    "common_brands": ["Arris", "Motorola", "Netgear", "TP-Link", "Huawei"]
+  }
+]

@@ -36,7 +36,10 @@
     { "source": "alacritty.toml", "target": "~/.config/alacritty/alacritty.toml",     "description": "Trans-flag themed terminal" },
     { "source": "rofi.rasi",      "target": "~/.config/rofi/config.rasi",             "description": "Pride-colored launcher" },
     { "source": "dunst.conf",     "target": "~/.config/dunst/dunstrc",                "description": "Colorful notifications" },
-    { "source": "zshrc",          "target": "~/.zshrc",                               "description": "Zsh with rainbow prompt" }
+    { "source": "zshrc",          "target": "~/.zshrc",                               "description": "Zsh with rainbow prompt" },
+    { "source": "foot.ini",       "target": "~/.config/foot/foot.ini",                "description": "Foot terminal — Trans Pride dark colors" },
+    { "source": "tmux.conf",      "target": "~/.config/tmux/tmux.conf",               "description": "Tmux — Ctrl+a prefix, Trans Pride blue/pink status bar" },
+    { "source": "git-config",     "target": "~/.config/git/rice.conf",                "description": "Git aliases and delta diff theme (include from ~/.gitconfig)" }
   ],
   "recommended_packages": {
     "required": ["hyprland", "waybar", "rofi-wayland", "dunst", "alacritty", "zsh"],

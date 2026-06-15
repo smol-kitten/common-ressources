@@ -1,0 +1,26 @@
+/* Theme: Flexoki Dark */
+/* Source: https://stephango.com/flexoki */
+/* Usage: rofi -theme ~/.config/rofi/colors.rasi */
+
+* {
+    background-color:              #100F0F;
+    foreground:                    #CECDC3;
+
+    normal-background:             #100F0F;
+    normal-foreground:             #CECDC3;
+    selected-normal-background:    #4385BE;
+    selected-normal-foreground:    #100F0F;
+
+    active-background:             #879A39;
+    active-foreground:             #100F0F;
+    selected-active-background:    #879A39;
+    selected-active-foreground:    #100F0F;
+
+    urgent-background:             #D14D41;
+    urgent-foreground:             #100F0F;
+    selected-urgent-background:    #D14D41;
+    selected-urgent-foreground:    #100F0F;
+
+    border-color:                  #575653;
+    separatorcolor:                #575653;
+}
