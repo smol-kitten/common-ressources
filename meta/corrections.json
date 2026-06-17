@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "description": "Tracks factual corrections applied to JSON data files. Each entry records what changed, why, and the source used to verify.",
+  "runs": [
+    {
+      "date": "2026-06-17",
+      "method": "web-search (Wikipedia, IUPAC, EU official sources)",
+      "files_checked": [
+        "flags/countries/flags.json",
+        "science/elements/elements.json",
+        "geo/countries/countries.json",
+        "ai/models.json"
+      ],
+      "corrections_count": 12
+    }
+  ],
+  "corrections": [
+    {
+      "date": "2026-06-17",
+      "file": "flags/countries/flags.json",
+      "entry": "Germany",
+      "field": "colors[1]",
+      "old_value": "#DD0000",
+      "new_value": "#FF0000",
+      "reason": "Official German flag uses pure red (#FF0000), not a darker red",
+      "source": "https://en.wikipedia.org/wiki/Flag_of_Germany"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "flags/countries/flags.json",
+      "entry": "France",
+      "field": "colors[0]",
+      "old_value": "#002395",
+      "new_value": "#0055A4",
+      "reason": "Traditional civil blue of French tricolor; previous value matched neither the traditional nor the 2020 official specification",
+      "source": "https://en.wikipedia.org/wiki/Flag_of_France"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "flags/countries/flags.json",
+      "entry": "France",
+      "field": "colors[2]",
+      "old_value": "#ED2939",
+      "new_value": "#EF4135",
+      "reason": "Traditional civil red of French tricolor; previous value was outside the expected Pantone/NCS range",
+      "source": "https://en.wikipedia.org/wiki/Flag_of_France"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "flags/countries/flags.json",
+      "entry": "Norway",
+      "field": "colors[0]",
+      "old_value": "#EF2B2D",
+      "new_value": "#BA0C2F",
+      "reason": "Official Pantone 200 C equivalent for Norwegian red",
+      "source": "https://en.wikipedia.org/wiki/Flag_of_Norway"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "flags/countries/flags.json",
+      "entry": "Norway",
+      "field": "colors[2]",
+      "old_value": "#002868",
+      "new_value": "#00205B",
+      "reason": "Official Pantone 281 C equivalent for Norwegian blue",
+      "source": "https://en.wikipedia.org/wiki/Flag_of_Norway"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "flags/countries/flags.json",
+      "entry": "Sweden",
+      "field": "colors[0]",
+      "old_value": "#006AA7",
+      "new_value": "#005583",
+      "reason": "NCS official color for Swedish flag blue",
+      "source": "https://en.wikipedia.org/wiki/Flag_of_Sweden"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "flags/countries/flags.json",
+      "entry": "Finland",
+      "field": "colors[1]",
+      "old_value": "#003580",
+      "new_value": "#002F6C",
+      "reason": "Official Finnish flag blue per Wikipedia specification",
+      "source": "https://en.wikipedia.org/wiki/Flag_of_Finland"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "flags/countries/flags.json",
+      "entry": "Iceland",
+      "field": "colors[0]",
+      "old_value": "#003897",
+      "new_value": "#02529C",
+      "reason": "Official Icelandic government blue specification",
+      "source": "https://en.wikipedia.org/wiki/Flag_of_Iceland"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "flags/countries/flags.json",
+      "entry": "Poland",
+      "field": "colors[1]",
+      "old_value": "#DC143C",
+      "new_value": "#D4213D",
+      "reason": "Statutory Polish red as specified in Polish law",
+      "source": "https://en.wikipedia.org/wiki/Flag_of_Poland"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "science/elements/elements.json",
+      "entry": "Helium (He)",
+      "field": "mass",
+      "old_value": 4.003,
+      "new_value": 4.0026,
+      "reason": "IUPAC 2021 standard atomic weight is 4.002602; 4.0026 is the correct 5-significant-figure abridged value",
+      "source": "https://iupac.qmul.ac.uk/AtWt/AtWt21.html"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "science/elements/elements.json",
+      "entry": "Gold (Au)",
+      "field": "mass",
+      "old_value": 196.967,
+      "new_value": 196.966,
+      "reason": "IUPAC 2021 value is 196.966570; rounded to 6 sig figs is 196.966, not 196.967",
+      "source": "https://iupac.qmul.ac.uk/AtWt/AtWt21.html"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "science/elements/elements.json",
+      "entry": "Uranium (U)",
+      "field": "mass",
+      "old_value": 238.029,
+      "new_value": 238.02891,
+      "reason": "IUPAC 2021 value is 238.028910; previous value 238.029 was incorrectly rounded",
+      "source": "https://iupac.qmul.ac.uk/AtWt/AtWt21.html"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "geo/countries/countries.json",
+      "entry": "Bulgaria (BG)",
+      "field": "currency_code",
+      "old_value": "BGN",
+      "new_value": "EUR",
+      "reason": "Bulgaria adopted the Euro on January 1, 2026, becoming the 21st Eurozone member",
+      "source": "https://en.wikipedia.org/wiki/Adoption_of_the_euro_in_Bulgaria"
+    }
+  ],
+  "no_action_items": [
+    {
+      "date": "2026-06-17",
+      "file": "ai/models.json",
+      "note": "All AI model context windows verified correct (Claude 3.5 Sonnet 200k, GPT-4o 128k, Gemini 1.5 Pro 2M, Llama 3.1 70B 128k, DeepSeek R1 128k). No corrections needed.",
+      "source": "Anthropic/OpenAI/Google/Meta official documentation"
+    },
+    {
+      "date": "2026-06-17",
+      "file": "geo/countries/countries.json",
+      "entry": "Indonesia (ID)",
+      "note": "Capital Jakarta confirmed correct as of June 2026. Transfer to Nusantara has not yet been formally completed; targeted for 2028.",
+      "source": "https://jakartaglobe.id/news/constitutional-court-confirms-jakarta-still-indonesias-capital-not-nusantara"
+    }
+  ]
+}

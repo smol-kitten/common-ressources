@@ -2,7 +2,7 @@
   {
     "name": "Germany",
     "iso": "DE",
-    "colors": ["#000000", "#DD0000", "#FFCE00"],
+    "colors": ["#000000", "#FF0000", "#FFCE00"],
     "flag-version": "common",
     "type": "horizontal-stripes",
     "description": "The German flag features three equal horizontal bands of black, red, and gold. The colors date to the early 19th century and were used by the Frankfurt Parliament in 1848.",
@@ -12,7 +12,7 @@
   {
     "name": "France",
     "iso": "FR",
-    "colors": ["#002395", "#FFFFFF", "#ED2939"],
+    "colors": ["#0055A4", "#FFFFFF", "#EF4135"],
     "flag-version": "common",
     "type": "vertical-stripes",
     "description": "The French tricolor features three equal vertical bands of blue, white, and red. Adopted during the French Revolution in 1794, the colors represent liberty, equality, and fraternity.",
@@ -62,7 +62,7 @@
   {
     "name": "Poland",
     "iso": "PL",
-    "colors": ["#FFFFFF", "#DC143C"],
+    "colors": ["#FFFFFF", "#D4213D"],
     "flag-version": "common",
     "type": "horizontal-stripes",
     "description": "The Polish flag has two equal horizontal bands of white over red. The colors come from the coat of arms of Poland — a white eagle on a red shield.",
@@ -232,7 +232,7 @@
   {
     "name": "Norway",
     "iso": "NO",
-    "colors": ["#EF2B2D", "#FFFFFF", "#002868"],
+    "colors": ["#BA0C2F", "#FFFFFF", "#00205B"],
     "flag-version": "common",
     "type": "nordic-cross",
     "description": "Red with a blue cross outlined in white. The cross — shifted toward the hoist — is the traditional Christian symbol of Scandinavia. Colors represent the country's past unions with Denmark and Sweden. Adopted 1821.",
@@ -242,7 +242,7 @@
   {
     "name": "Sweden",
     "iso": "SE",
-    "colors": ["#006AA7", "#FECC02"],
+    "colors": ["#005583", "#FECC02"],
     "flag-version": "common",
     "type": "nordic-cross",
     "description": "Blue with a yellow Nordic cross shifted toward the hoist. The gold cross on blue derives from the Swedish coat of arms. One of the oldest national flag designs, in continuous use since the 16th century.",
@@ -262,7 +262,7 @@
   {
     "name": "Finland",
     "iso": "FI",
-    "colors": ["#FFFFFF", "#003580"],
+    "colors": ["#FFFFFF", "#002F6C"],
     "flag-version": "common",
     "type": "nordic-cross",
     "description": "White with a blue Nordic cross shifted toward the hoist. The blue cross represents the lakes and sky of Finland; white represents snow. Adopted as the national flag in 1918 after independence from Russia.",
@@ -272,7 +272,7 @@
   {
     "name": "Iceland",
     "iso": "IS",
-    "colors": ["#003897", "#FFFFFF", "#DC1E35"],
+    "colors": ["#02529C", "#FFFFFF", "#DC1E35"],
     "flag-version": "common",
     "type": "nordic-cross",
     "description": "Blue with a white-outlined red Nordic cross shifted toward the hoist. Blue and white represent the sky, ice, and snow; red represents the volcanic fire of the island. Adopted 1944.",
@@ -332,6 +332,199 @@
     "cross_arm_width": 0.15,
     "description": "A diagonal gold cross (saltire) divides the flag into four triangles: green at top and bottom, black at left and right. Green symbolizes the land, gold represents natural wealth and sunlight, black stands for hardships overcome. Adopted 1962.",
     "source": "https://en.wikipedia.org/wiki/Flag_of_Jamaica",
+    "continent": "Americas"
+  },
+  {
+    "name": "Canada",
+    "iso": "CA",
+    "colors": ["#FF0000", "#FFFFFF", "#FF0000"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "Three equal vertical bands of red, white, and red. The white center band features a red maple leaf (not rendered here). Adopted in 1965, replacing the Canadian Red Ensign.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Canada",
+    "continent": "Americas"
+  },
+  {
+    "name": "Mexico",
+    "iso": "MX",
+    "colors": ["#006847", "#FFFFFF", "#CE1126"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "Three equal vertical bands of green, white, and red. Green represents hope, white purity, and red the blood of national heroes. The center bears the national coat of arms (not rendered here).",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Mexico",
+    "continent": "Americas"
+  },
+  {
+    "name": "Romania",
+    "iso": "RO",
+    "colors": ["#002B7F", "#FCD116", "#CE1126"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "Three equal vertical bands of blue, yellow, and red. The colors originate from the arms of the Danubian Principalities. The current design has been in use since 1866.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Romania",
+    "continent": "Europe"
+  },
+  {
+    "name": "India",
+    "iso": "IN",
+    "colors": ["#FF9933", "#FFFFFF", "#138808"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "Three equal horizontal bands of saffron, white, and India green. The white band features a navy blue Ashoka Chakra (not rendered here). Adopted at independence in 1947.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_India",
+    "continent": "Asia"
+  },
+  {
+    "name": "Serbia",
+    "iso": "RS",
+    "colors": ["#C6363C", "#0C4076", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "Three equal horizontal bands of red, blue, and white — the Pan-Slavic colors. The Serbian coat of arms appears on the hoist side (not rendered here). Adopted 2010.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Serbia",
+    "continent": "Europe"
+  },
+  {
+    "name": "Argentina",
+    "iso": "AR",
+    "colors": ["#74ACDF", "#FFFFFF", "#74ACDF"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "Three equal horizontal bands of light blue (celeste), white, and light blue. The white band bears a golden Sun of May (not rendered here). The design dates to the Argentine War of Independence in 1812.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Argentina",
+    "continent": "Americas"
+  },
+  {
+    "name": "Thailand",
+    "iso": "TH",
+    "colors": ["#A51931", "#F4F5F8", "#2D2A4A", "#F4F5F8", "#A51931"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "Five horizontal bands of red, white, dark blue (double width), white, and red. Red represents the nation, white religion, and dark blue the monarchy. Adopted 1917. (Rendered here with equal-width bands.)",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Thailand",
+    "continent": "Asia"
+  },
+  {
+    "name": "Peru",
+    "iso": "PE",
+    "colors": ["#D91023", "#FFFFFF", "#D91023"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "Three equal vertical bands of red, white, and red. The state flag bears the national coat of arms in the center (not rendered here). Adopted 1825.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Peru",
+    "continent": "Americas"
+  },
+  {
+    "name": "Nigeria",
+    "iso": "NG",
+    "colors": ["#008751", "#FFFFFF", "#008751"],
+    "flag-version": "common",
+    "type": "vertical-stripes",
+    "description": "Three equal vertical bands of green, white, and green. Green represents the forests and natural wealth; white symbolizes peace and unity. Adopted at independence in 1960.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Nigeria",
+    "continent": "Africa"
+  },
+  {
+    "name": "Ghana",
+    "iso": "GH",
+    "colors": ["#CF0921", "#FCD116", "#006B3F"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "Three equal horizontal bands of red, gold, and green with a black five-pointed star in the center of the gold band (not rendered here). Pan-African colors. Adopted 1957.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Ghana",
+    "continent": "Africa"
+  },
+  {
+    "name": "Tanzania",
+    "iso": "TZ",
+    "colors": ["#1EB53A", "#FCD116", "#000000", "#FCD116", "#00A3DD"],
+    "flag-version": "common",
+    "type": "326-degree-stripes",
+    "description": "Five diagonal bands (green, yellow, black, yellow, light blue) running from the upper hoist to the lower fly. Green represents the land, yellow mineral wealth, black the people, and light blue the coastal waters. Adopted 1964.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Tanzania",
+    "continent": "Africa"
+  },
+  {
+    "name": "Kenya",
+    "iso": "KE",
+    "colors": ["#000000", "#FFFFFF", "#BB0000", "#FFFFFF", "#006600"],
+    "flag-version": "common",
+    "type": "horizontal-stripes",
+    "description": "Five horizontal bands of black, white, red, white, and green. A Maasai warrior's shield and crossed spears appear in the center (not rendered here). Black represents the people, red the blood of freedom, and green the fertile land. Adopted 1963.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Kenya",
+    "continent": "Africa"
+  },
+  {
+    "name": "Turkey",
+    "iso": "TR",
+    "colors": ["#E30A17", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "crescent-star",
+    "crescent_x": 0.40,
+    "crescent_radius": 0.28,
+    "crescent_offset": 0.22,
+    "star_size": 0.10,
+    "star_offset": 0.70,
+    "description": "Red field with a white crescent moon and five-pointed star — traditional symbols of the Ottoman Empire. The current design has been in use since 1844.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Turkey",
+    "continent": "Asia"
+  },
+  {
+    "name": "Pakistan",
+    "iso": "PK",
+    "colors": ["#01411C", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "crescent-star",
+    "hoist_stripe": "#FFFFFF",
+    "hoist_stripe_width": 0.25,
+    "crescent_x": 0.62,
+    "crescent_radius": 0.25,
+    "crescent_offset": 0.20,
+    "star_size": 0.09,
+    "star_offset": 0.70,
+    "description": "Dark green field with a vertical white stripe on the hoist side and a white crescent and star. Green represents Islam; white represents religious minorities. Adopted at independence in 1947.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Pakistan",
+    "continent": "Asia"
+  },
+  {
+    "name": "Tunisia",
+    "iso": "TN",
+    "colors": ["#E70013", "#E70013", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "crescent-star",
+    "crescent_x": 0.50,
+    "crescent_radius": 0.22,
+    "crescent_offset": 0.18,
+    "backdrop_radius": 0.34,
+    "star_size": 0.08,
+    "star_offset": 0.60,
+    "description": "Red flag with a centered white circle containing a red crescent and star. Red symbolizes resistance; the crescent and star represent Islam. The design dates to 1831.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Tunisia",
+    "continent": "Africa"
+  },
+  {
+    "name": "South Africa",
+    "iso": "ZA",
+    "colors": ["#007A4D", "#DE3831", "#002395"],
+    "flag-version": "common",
+    "type": "pall",
+    "pall_left": "#000000",
+    "pall_border": "#FFB612",
+    "pall_x": 0.42,
+    "pall_width": 0.18,
+    "pall_border_width": 4,
+    "description": "A horizontal bicolor of red over blue with a central green Y-band bordered in gold, and a black triangle on the hoist bordered in gold. Adopted in 1994 to represent the new democratic South Africa.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_South_Africa",
+    "continent": "Africa"
+  },
+  {
+    "name": "Panama",
+    "iso": "PA",
+    "colors": ["#FFFFFF", "#D21034", "#003087", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "quarters",
+    "description": "Divided into four equal quarters: white (top-left), red (top-right), blue (bottom-left), and white (bottom-right). The quarters bear a blue star and a red star respectively (not rendered here). Blue represents the Conservative Party, red the Liberal Party, and white stands for peace. Adopted 1925.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Panama",
     "continent": "Americas"
   }
 ]

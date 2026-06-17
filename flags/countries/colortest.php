@@ -49,6 +49,17 @@ function hexToRgb($hex) {
 
 function xe($s) { return htmlspecialchars((string)$s, ENT_XML1 | ENT_QUOTES, 'UTF-8'); }
 
+// Returns SVG polygon points string for an n-pointed star, first point at top.
+function star_polygon_svg($cx, $cy, $outerR, $innerR, $n = 5) {
+    $pts = [];
+    for ($i = 0; $i < 2 * $n; $i++) {
+        $r = ($i % 2 === 0) ? $outerR : $innerR;
+        $a = -M_PI / 2 + ($i * M_PI / $n);
+        $pts[] = round($cx + $r * cos($a), 2) . ',' . round($cy + $r * sin($a), 2);
+    }
+    return implode(' ', $pts);
+}
+
 // ── SVG flag body renderer ─────────────────────────────────────────────────────
 // Returns inner SVG elements (no <svg> wrapper) for a $w × $h viewport.
 
@@ -165,6 +176,60 @@ function flagBodySVG($f, $w, $h) {
         $parts[] = sprintf('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s"/>',
             $w / 2, $h / 2, $r, xe($colors[1]));
 
+    } elseif ($type === 'quarters') {
+        $hw = $w / 2; $hh = $h / 2;
+        foreach ([[$colors[0],0,0],[$colors[1]??$colors[0],$hw,0],[$colors[2]??$colors[0],0,$hh],[$colors[3]??$colors[1]??$colors[0],$hw,$hh]] as [$c,$x,$y]) {
+            $parts[] = sprintf('<rect x="%.2f" y="%.2f" width="%.2f" height="%.2f" fill="%s"/>',
+                $x, $y, $hw, $hh, xe($c));
+        }
+
+    } elseif ($type === 'crescent-star') {
+        $bg($colors[0]);
+        if (!empty($f['hoist_stripe'])) {
+            $sw = ($f['hoist_stripe_width'] ?? 0.25) * $w;
+            $parts[] = sprintf('<rect x="0" y="0" width="%.2f" height="%d" fill="%s"/>', $sw, $h, xe($f['hoist_stripe']));
+        }
+        $cx  = ($f['crescent_x'] ?? (!empty($f['hoist_stripe']) ? 0.58 : 0.48)) * $w;
+        $cy  = $h / 2;
+        $r   = ($f['crescent_radius'] ?? 0.28) * $h;
+        $off = ($f['crescent_offset'] ?? 0.22) * $r * 2;
+        $cutC = ($n >= 3) ? $colors[2] : $colors[0];
+        if ($n >= 3) {
+            $br = ($f['backdrop_radius'] ?? 0.36) * $h;
+            $parts[] = sprintf('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s"/>', $cx, $cy, $br, xe($colors[2]));
+        }
+        $parts[] = sprintf('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s"/>', $cx, $cy, $r, xe($colors[1]));
+        $parts[] = sprintf('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s"/>', $cx - $off, $cy, $r * 0.83, xe($cutC));
+        $sx = $cx + $r * ($f['star_offset'] ?? 0.65);
+        $sr = ($f['star_size'] ?? 0.11) * $h;
+        $parts[] = '<polygon points="' . star_polygon_svg($sx, $cy, $sr, $sr * 0.42) . '" fill="' . xe($colors[1]) . '"/>';
+
+    } elseif ($type === 'pall') {
+        $jx    = ($f['pall_x']     ?? 0.45) * $w;
+        $jy    = $h / 2;
+        $phw   = ($f['pall_width'] ?? 0.17) * $h / 2;
+        $diag2 = sqrt($w * $w + $h * $h);
+        $leftC   = $f['pall_left']   ?? $colors[0];
+        $borderC = $f['pall_border'] ?? null;
+        $parts[] = sprintf('<rect x="0" y="0" width="%d" height="%.2f" fill="%s"/>', $w, $jy, xe($colors[1]));
+        $parts[] = sprintf('<rect x="0" y="%.2f" width="%d" height="%.2f" fill="%s"/>', $jy, $w, $jy, xe($colors[2]));
+        $parts[] = sprintf('<polygon points="0,0 %.2f,%.2f 0,%d" fill="%s"/>', $jx, $jy, $h, xe($leftC));
+        $arms = [M_PI, atan2(-$jy, $w - $jx), atan2($h - $jy, $w - $jx)];
+        $drawPallArm = function($hw, $col) use (&$parts, $jx, $jy, $diag2, $arms) {
+            foreach ($arms as $a) {
+                $dx = cos($a); $dy = sin($a); $nx = -$dy; $ny = $dx;
+                $pts = [
+                    round($jx-$dx*$diag2-$nx*$hw,2).','.round($jy-$dy*$diag2-$ny*$hw,2),
+                    round($jx-$dx*$diag2+$nx*$hw,2).','.round($jy-$dy*$diag2+$ny*$hw,2),
+                    round($jx+$dx*$diag2+$nx*$hw,2).','.round($jy+$dy*$diag2+$ny*$hw,2),
+                    round($jx+$dx*$diag2-$nx*$hw,2).','.round($jy+$dy*$diag2-$ny*$hw,2),
+                ];
+                $parts[] = '<polygon points="'.implode(' ',$pts).'" fill="'.xe($col).'"/>';
+            }
+        };
+        if ($borderC) $drawPallArm($phw + ($f['pall_border_width'] ?? 4), $borderC);
+        $drawPallArm($phw, $colors[0]);
+
     } else {
         // Default: horizontal stripes
         $sh = $h / max(1, $n);
@@ -277,6 +342,59 @@ function createFlagImage($f, $w, $h) {
         $r = (int) (($f['circle_radius'] ?? 0.3) * $h);
         imagefilledrectangle($img, 0, 0, $w-1, $h-1, $alloc($colors[0]));
         imagefilledellipse($img, (int)($w/2), (int)($h/2), $r*2, $r*2, $alloc($colors[1]));
+
+    } elseif ($type === 'quarters') {
+        $hw = (int)($w / 2); $hh = (int)($h / 2);
+        imagefilledrectangle($img, 0,  0,  $hw-1, $hh-1, $alloc($colors[0]));
+        imagefilledrectangle($img, $hw, 0,  $w-1,  $hh-1, $alloc($colors[1] ?? $colors[0]));
+        imagefilledrectangle($img, 0,  $hh, $hw-1, $h-1,  $alloc($colors[2] ?? $colors[0]));
+        imagefilledrectangle($img, $hw, $hh, $w-1, $h-1,  $alloc($colors[3] ?? $colors[1] ?? $colors[0]));
+
+    } elseif ($type === 'crescent-star') {
+        imagefilledrectangle($img, 0, 0, $w-1, $h-1, $alloc($colors[0]));
+        if (!empty($f['hoist_stripe'])) {
+            $sw = (int)(($f['hoist_stripe_width'] ?? 0.25) * $w);
+            imagefilledrectangle($img, 0, 0, $sw-1, $h-1, $alloc($f['hoist_stripe']));
+        }
+        $cx  = (int)(($f['crescent_x'] ?? (!empty($f['hoist_stripe']) ? 0.58 : 0.48)) * $w);
+        $cy  = (int)($h / 2);
+        $r   = (int)(($f['crescent_radius'] ?? 0.28) * $h);
+        $off = (int)(($f['crescent_offset'] ?? 0.22) * $r * 2);
+        $cutC = ($n >= 3) ? $colors[2] : $colors[0];
+        if ($n >= 3) {
+            $br = (int)(($f['backdrop_radius'] ?? 0.36) * $h);
+            imagefilledellipse($img, $cx, $cy, $br*2, $br*2, $alloc($colors[2]));
+        }
+        imagefilledellipse($img, $cx, $cy, $r*2, $r*2, $alloc($colors[1]));
+        imagefilledellipse($img, $cx-$off, $cy, (int)($r*0.83)*2, (int)($r*0.83)*2, $alloc($cutC));
+        $sx  = (int)($cx + $r * ($f['star_offset'] ?? 0.65));
+        $sr  = (int)(($f['star_size'] ?? 0.11) * $h);
+        $sir = (int)($sr * 0.42);
+        $sPts = [];
+        for ($i = 0; $i < 10; $i++) {
+            $rr = ($i % 2 === 0) ? $sr : $sir;
+            $a  = -M_PI / 2 + ($i * M_PI / 5);
+            $sPts[] = (int)round($sx + $rr * cos($a));
+            $sPts[] = (int)round($cy + $rr * sin($a));
+        }
+        imagefilledpolygon($img, $sPts, $alloc($colors[1]));
+
+    } elseif ($type === 'pall') {
+        $jx    = (int)(($f['pall_x']     ?? 0.45) * $w);
+        $jy    = (int)($h / 2);
+        $phw   = (int)(($f['pall_width'] ?? 0.17) * $h / 2);
+        $diag2 = sqrt($w * $w + $h * $h);
+        $leftC   = $f['pall_left']   ?? $colors[0];
+        $borderC = $f['pall_border'] ?? null;
+        imagefilledrectangle($img, 0, 0,   $w-1, $jy-1, $alloc($colors[1]));
+        imagefilledrectangle($img, 0, $jy, $w-1, $h-1,  $alloc($colors[2]));
+        imagefilledpolygon($img, [0, 0, $jx, $jy, 0, $h], $alloc($leftC));
+        $arms = [M_PI, atan2(-$jy, $w - $jx), atan2($h - $jy, $w - $jx)];
+        $drawPallArmGD = function($hw, $col) use ($img, $jx, $jy, $diag2, $arms, &$diagBand) {
+            foreach ($arms as $a) { $diagBand($jx, $jy, $a, $diag2, $hw, $col); }
+        };
+        if ($borderC) $drawPallArmGD($phw + ($f['pall_border_width'] ?? 4), $alloc($borderC));
+        $drawPallArmGD($phw, $alloc($colors[0]));
 
     } else {
         // Default: horizontal stripes

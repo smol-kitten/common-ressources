@@ -76,9 +76,21 @@ function buildTerminalCards(themes) {
   }).join('');
 }
 
+// 5-pointed star polygon points string; first point at top.
+function starPolygon(cx, cy, outerR, innerR, n = 5) {
+  const pts = [];
+  for (let i = 0; i < 2 * n; i++) {
+    const r = i % 2 === 0 ? outerR : innerR;
+    const a = -Math.PI / 2 + (i * Math.PI / n);
+    pts.push(`${(cx + r * Math.cos(a)).toFixed(2)},${(cy + r * Math.sin(a)).toFixed(2)}`);
+  }
+  return pts.join(' ');
+}
+
 // Render a flag as an inline SVG string for a $w×$h viewport.
 // Supports: horizontal-stripes, vertical-stripes, N-degree-stripes,
-//           nordic-cross, cross, saltire, triangle-hoist, circle.
+//           nordic-cross, cross, saltire, triangle-hoist, circle,
+//           quarters, crescent-star, pall.
 function flagToSVG(flag, w, h) {
   const colors = flag.colors || [];
   const type   = flag.type   || 'horizontal-stripes';
@@ -160,6 +172,61 @@ function flagToSVG(flag, w, h) {
     const r = (flag.circle_radius ?? 0.3) * h;
     parts.push(`<rect x="0" y="0" width="${w}" height="${h}" fill="${esc(colors[0])}"/>`);
     parts.push(`<circle cx="${(w/2).toFixed(1)}" cy="${(h/2).toFixed(1)}" r="${r.toFixed(1)}" fill="${esc(colors[1])}"/>`);
+
+  } else if (type === 'quarters') {
+    // colors: [top-left, top-right, bottom-left, bottom-right]
+    const hw = w / 2, hh = h / 2;
+    [[0,0,colors[0]],[hw,0,colors[1]??colors[0]],[0,hh,colors[2]??colors[0]],[hw,hh,colors[3]??colors[1]??colors[0]]].forEach(([x,y,c]) =>
+      parts.push(`<rect x="${x.toFixed(2)}" y="${y.toFixed(2)}" width="${hw.toFixed(2)}" height="${hh.toFixed(2)}" fill="${esc(c)}"/>`)
+    );
+
+  } else if (type === 'crescent-star') {
+    // colors[0]=bg, colors[1]=symbol; optional colors[2]=circle-backdrop+cutout (e.g. Tunisia)
+    // optional hoist_stripe, crescent_x, crescent_radius, crescent_offset, backdrop_radius, star_size, star_offset
+    parts.push(`<rect x="0" y="0" width="${w}" height="${h}" fill="${esc(colors[0])}"/>`);
+    if (flag.hoist_stripe) {
+      const sw = (flag.hoist_stripe_width ?? 0.25) * w;
+      parts.push(`<rect x="0" y="0" width="${sw.toFixed(2)}" height="${h}" fill="${esc(flag.hoist_stripe)}"/>`);
+    }
+    const cx  = (flag.crescent_x ?? (flag.hoist_stripe ? 0.58 : 0.48)) * w;
+    const cy  = h / 2;
+    const r   = (flag.crescent_radius ?? 0.28) * h;
+    const off = (flag.crescent_offset ?? 0.22) * r * 2;
+    const cutC = n >= 3 ? colors[2] : colors[0];
+    if (n >= 3) {
+      const br = (flag.backdrop_radius ?? 0.36) * h;
+      parts.push(`<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${br.toFixed(1)}" fill="${esc(colors[2])}"/>`);
+    }
+    parts.push(`<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r.toFixed(1)}" fill="${esc(colors[1])}"/>`);
+    parts.push(`<circle cx="${(cx - off).toFixed(1)}" cy="${cy.toFixed(1)}" r="${(r * 0.83).toFixed(1)}" fill="${esc(cutC)}"/>`);
+    const sx = cx + r * (flag.star_offset ?? 0.65);
+    const sr = (flag.star_size ?? 0.11) * h;
+    parts.push(`<polygon points="${starPolygon(sx, cy, sr, sr * 0.42)}" fill="${esc(colors[1])}"/>`);
+
+  } else if (type === 'pall') {
+    // Y-shaped division; colors[0]=Y-band, colors[1]=top-right, colors[2]=bottom-right
+    // optional pall_left (left triangle color), pall_border (outline color), pall_x, pall_width
+    const jx   = (flag.pall_x     ?? 0.45) * w;
+    const jy   = h / 2;
+    const phw  = (flag.pall_width ?? 0.17) * h / 2;
+    const diag2 = Math.sqrt(w * w + h * h);
+    const leftC   = flag.pall_left   ?? colors[0];
+    const borderC = flag.pall_border ?? null;
+    parts.push(`<rect x="0" y="0" width="${w}" height="${jy.toFixed(2)}" fill="${esc(colors[1])}"/>`);
+    parts.push(`<rect x="0" y="${jy.toFixed(2)}" width="${w}" height="${jy.toFixed(2)}" fill="${esc(colors[2])}"/>`);
+    parts.push(`<polygon points="0,0 ${jx.toFixed(2)},${jy.toFixed(2)} 0,${h}" fill="${esc(leftC)}"/>`);
+    const arms = [Math.PI, Math.atan2(-jy, w - jx), Math.atan2(h - jy, w - jx)];
+    const drawPallArm = (hw, col) => arms.forEach(a => {
+      const dx = Math.cos(a), dy = Math.sin(a), nx = -dy, ny = dx;
+      parts.push(`<polygon points="${[
+        `${(jx-dx*diag2-nx*hw).toFixed(2)},${(jy-dy*diag2-ny*hw).toFixed(2)}`,
+        `${(jx-dx*diag2+nx*hw).toFixed(2)},${(jy-dy*diag2+ny*hw).toFixed(2)}`,
+        `${(jx+dx*diag2+nx*hw).toFixed(2)},${(jy+dy*diag2+ny*hw).toFixed(2)}`,
+        `${(jx+dx*diag2-nx*hw).toFixed(2)},${(jy+dy*diag2-ny*hw).toFixed(2)}`,
+      ].join(' ')}" fill="${esc(col)}"/>`);
+    });
+    if (borderC) drawPallArm(phw + (flag.pall_border_width ?? 4), borderC);
+    drawPallArm(phw, colors[0]);
 
   } else {
     // Default: horizontal stripes
