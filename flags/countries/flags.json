@@ -228,5 +228,110 @@
     "description": "The Chadian flag has three equal vertical bands of blue, yellow, and red. Blue represents the sky and hope, yellow symbolizes the sun and desert, and red stands for progress and the blood of martyrs.",
     "source": "https://en.wikipedia.org/wiki/Flag_of_Chad",
     "continent": "Africa"
+  },
+  {
+    "name": "Norway",
+    "iso": "NO",
+    "colors": ["#EF2B2D", "#FFFFFF", "#002868"],
+    "flag-version": "common",
+    "type": "nordic-cross",
+    "description": "Red with a blue cross outlined in white. The cross — shifted toward the hoist — is the traditional Christian symbol of Scandinavia. Colors represent the country's past unions with Denmark and Sweden. Adopted 1821.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Norway",
+    "continent": "Europe"
+  },
+  {
+    "name": "Sweden",
+    "iso": "SE",
+    "colors": ["#006AA7", "#FECC02"],
+    "flag-version": "common",
+    "type": "nordic-cross",
+    "description": "Blue with a yellow Nordic cross shifted toward the hoist. The gold cross on blue derives from the Swedish coat of arms. One of the oldest national flag designs, in continuous use since the 16th century.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Sweden",
+    "continent": "Europe"
+  },
+  {
+    "name": "Denmark",
+    "iso": "DK",
+    "colors": ["#C60C30", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "nordic-cross",
+    "description": "Red with a white Nordic cross shifted toward the hoist. Known as the Dannebrog, it is one of the oldest national flags in the world, reportedly used since the 13th century.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Denmark",
+    "continent": "Europe"
+  },
+  {
+    "name": "Finland",
+    "iso": "FI",
+    "colors": ["#FFFFFF", "#003580"],
+    "flag-version": "common",
+    "type": "nordic-cross",
+    "description": "White with a blue Nordic cross shifted toward the hoist. The blue cross represents the lakes and sky of Finland; white represents snow. Adopted as the national flag in 1918 after independence from Russia.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Finland",
+    "continent": "Europe"
+  },
+  {
+    "name": "Iceland",
+    "iso": "IS",
+    "colors": ["#003897", "#FFFFFF", "#DC1E35"],
+    "flag-version": "common",
+    "type": "nordic-cross",
+    "description": "Blue with a white-outlined red Nordic cross shifted toward the hoist. Blue and white represent the sky, ice, and snow; red represents the volcanic fire of the island. Adopted 1944.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Iceland",
+    "continent": "Europe"
+  },
+  {
+    "name": "Switzerland",
+    "iso": "CH",
+    "colors": ["#FF0000", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "cross",
+    "cross_arm_width": 0.24,
+    "description": "Red square with a white centered Greek cross whose arms are one-sixth longer than wide. One of only two square national flags. The white cross on red has represented the Swiss Confederation since the 14th century.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Switzerland",
+    "continent": "Europe"
+  },
+  {
+    "name": "Japan",
+    "iso": "JP",
+    "colors": ["#FFFFFF", "#BC002D"],
+    "flag-version": "common",
+    "type": "circle",
+    "circle_radius": 0.3,
+    "description": "White with a centered red disc representing the sun — the Hinomaru, or 'circle of the sun'. Japan is historically called the 'Land of the Rising Sun'. The current proportions were standardized in 1999.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Japan",
+    "continent": "Asia"
+  },
+  {
+    "name": "Czech Republic",
+    "iso": "CZ",
+    "colors": ["#FFFFFF", "#D7141A", "#11457E"],
+    "flag-version": "common",
+    "type": "triangle-hoist",
+    "hoist_depth": 0.4,
+    "description": "Two equal horizontal bands of white over red with a blue isosceles triangle on the hoist side. Blue was added when Czechoslovakia was formed in 1920 to distinguish it from the Polish and Austrian flags.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_the_Czech_Republic",
+    "continent": "Europe"
+  },
+  {
+    "name": "Philippines",
+    "iso": "PH",
+    "colors": ["#0038A8", "#CE1126", "#FFFFFF"],
+    "flag-version": "common",
+    "type": "triangle-hoist",
+    "hoist_depth": 0.38,
+    "description": "Two equal horizontal bands of blue over red with a white equilateral triangle on the hoist. The blue and red bands are reversed during wartime. Adopted 1898 during the Philippine Revolution.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_the_Philippines",
+    "continent": "Asia"
+  },
+  {
+    "name": "Jamaica",
+    "iso": "JM",
+    "colors": ["#FED100", "#009B3A", "#000000"],
+    "flag-version": "common",
+    "type": "saltire",
+    "cross_arm_width": 0.15,
+    "description": "A diagonal gold cross (saltire) divides the flag into four triangles: green at top and bottom, black at left and right. Green symbolizes the land, gold represents natural wealth and sunlight, black stands for hardships overcome. Adopted 1962.",
+    "source": "https://en.wikipedia.org/wiki/Flag_of_Jamaica",
+    "continent": "Americas"
   }
 ]

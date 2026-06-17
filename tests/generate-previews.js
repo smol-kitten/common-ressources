@@ -76,20 +76,112 @@ function buildTerminalCards(themes) {
   }).join('');
 }
 
-// Pre-render country flag cards server-side to avoid client-JS issues
+// Render a flag as an inline SVG string for a $w×$h viewport.
+// Supports: horizontal-stripes, vertical-stripes, N-degree-stripes,
+//           nordic-cross, cross, saltire, triangle-hoist, circle.
+function flagToSVG(flag, w, h) {
+  const colors = flag.colors || [];
+  const type   = flag.type   || 'horizontal-stripes';
+  const n      = colors.length;
+  const parts  = [];
+
+  const esc = s => String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;');
+
+  const diagBand = (cx, cy, angle, diag, hw, fill) => {
+    const dx = Math.cos(angle), dy = Math.sin(angle);
+    const nx = -dy, ny = dx;
+    const pts = [
+      `${(cx-dx*diag-nx*hw).toFixed(2)},${(cy-dy*diag-ny*hw).toFixed(2)}`,
+      `${(cx-dx*diag+nx*hw).toFixed(2)},${(cy-dy*diag+ny*hw).toFixed(2)}`,
+      `${(cx+dx*diag+nx*hw).toFixed(2)},${(cy+dy*diag+ny*hw).toFixed(2)}`,
+      `${(cx+dx*diag-nx*hw).toFixed(2)},${(cy+dy*diag-ny*hw).toFixed(2)}`,
+    ].join(' ');
+    parts.push(`<polygon points="${pts}" fill="${esc(fill)}"/>`);
+  };
+
+  if (type === 'vertical-stripes') {
+    const sw = w / n;
+    colors.forEach((c, i) => parts.push(
+      `<rect x="${(i*sw).toFixed(2)}" y="0" width="${sw.toFixed(2)}" height="${h}" fill="${esc(c)}"/>`
+    ));
+
+  } else if (/^(\d+(?:\.\d+)?)-degree-stripes$/.test(type)) {
+    const deg  = parseFloat(type);
+    const rad  = deg * Math.PI / 180;
+    const dx   = Math.cos(rad), dy = Math.sin(rad);
+    const nx   = -dy, ny = dx;
+    const diag = Math.sqrt(w*w + h*h);
+    const sw   = diag / n;
+    for (let i = 0; i < n; i++) {
+      const ci = i - (n-1)/2;
+      diagBand(w/2 + nx*ci*sw, h/2 + ny*ci*sw, rad, diag, sw/2, colors[i]);
+    }
+
+  } else if (type === 'nordic-cross' || type === 'cross') {
+    const crossX = type === 'nordic-cross' ? (flag.cross_x ?? 0.4) : 0.5;
+    const armW   = (flag.cross_arm_width ?? 0.2) * h;
+    const vx = crossX * w, hy = h / 2;
+    parts.push(`<rect x="0" y="0" width="${w}" height="${h}" fill="${esc(colors[0])}"/>`);
+    const drawBar = (bw, bc) => {
+      parts.push(`<rect x="${(vx-bw/2).toFixed(2)}" y="0" width="${bw.toFixed(2)}" height="${h}" fill="${esc(bc)}"/>`);
+      parts.push(`<rect x="0" y="${(hy-bw/2).toFixed(2)}" width="${w}" height="${bw.toFixed(2)}" fill="${esc(bc)}"/>`);
+    };
+    if (n >= 3) { drawBar(armW, colors[1]); drawBar(armW * 0.58, colors[2]); }
+    else        { drawBar(armW, colors[1]); }
+
+  } else if (type === 'saltire') {
+    const hw   = (flag.cross_arm_width ?? 0.12) * h / 2;
+    const diag = Math.sqrt(w*w + h*h);
+    const cx   = w/2, cy = h/2;
+    if (n === 2) {
+      parts.push(`<rect x="0" y="0" width="${w}" height="${h}" fill="${esc(colors[0])}"/>`);
+      [Math.atan2(h,w), Math.atan2(-h,w)].forEach(a => diagBand(cx, cy, a, diag, hw, colors[1]));
+    } else {
+      // colors[0]=X, colors[1]=top/bottom triangles, colors[2]=left/right triangles
+      const p = (x,y) => `${x.toFixed(1)},${y.toFixed(1)}`;
+      parts.push(`<polygon points="0,0 ${w},0 ${p(cx,cy)}" fill="${esc(colors[1])}"/>`);
+      parts.push(`<polygon points="0,${h} ${w},${h} ${p(cx,cy)}" fill="${esc(colors[1])}"/>`);
+      parts.push(`<polygon points="0,0 0,${h} ${p(cx,cy)}" fill="${esc(colors[2])}"/>`);
+      parts.push(`<polygon points="${w},0 ${w},${h} ${p(cx,cy)}" fill="${esc(colors[2])}"/>`);
+      [Math.atan2(h,w), Math.atan2(-h,w)].forEach(a => diagBand(cx, cy, a, diag, hw, colors[0]));
+    }
+
+  } else if (type === 'triangle-hoist') {
+    const depth  = (flag.hoist_depth ?? 0.4) * w;
+    const stripe = colors.slice(0, -1);
+    const triC   = colors[n - 1];
+    const sh     = h / Math.max(1, stripe.length);
+    stripe.forEach((c, i) => parts.push(
+      `<rect x="0" y="${(i*sh).toFixed(2)}" width="${w}" height="${sh.toFixed(2)}" fill="${esc(c)}"/>`
+    ));
+    parts.push(`<polygon points="0,0 ${depth.toFixed(2)},${(h/2).toFixed(2)} 0,${h}" fill="${esc(triC)}"/>`);
+
+  } else if (type === 'circle') {
+    const r = (flag.circle_radius ?? 0.3) * h;
+    parts.push(`<rect x="0" y="0" width="${w}" height="${h}" fill="${esc(colors[0])}"/>`);
+    parts.push(`<circle cx="${(w/2).toFixed(1)}" cy="${(h/2).toFixed(1)}" r="${r.toFixed(1)}" fill="${esc(colors[1])}"/>`);
+
+  } else {
+    // Default: horizontal stripes
+    const sh = h / Math.max(1, n);
+    colors.forEach((c, i) => parts.push(
+      `<rect x="0" y="${(i*sh).toFixed(2)}" width="${w}" height="${sh.toFixed(2)}" fill="${esc(c)}"/>`
+    ));
+  }
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}">${parts.join('')}</svg>`;
+}
+
+// Pre-render country flag cards — inline SVG handles all shape types.
 function buildFlagCards(flags) {
   return flags.map(flag => {
-    const isVertical = (flag.type || '') === 'vertical-stripes';
-    const dir = isVertical ? 'row' : 'column';
-    const stripes = (flag.colors || []).map(c =>
-      `<div style="background:${c};flex:1"></div>`
-    ).join('');
+    const svg = flagToSVG(flag, 150, 100);
     return `<div class="flag-card">
-      <div class="flag" style="display:flex;flex-direction:${dir}">${stripes}</div>
+      <div class="flag">${svg}</div>
       <div class="flag-meta">
         <div class="flag-name">${flag.name}</div>
-        <div class="flag-iso">${flag.iso}</div>
-        <div class="flag-continent">${flag.continent}</div>
+        <div class="flag-iso">${flag.iso || ''}</div>
+        <div class="flag-continent">${flag.continent || ''}</div>
       </div>
     </div>`;
   }).join('');
