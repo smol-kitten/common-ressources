@@ -1,4 +1,5 @@
 node_modules/
 tests/results/
 tests/report/
-.claude/
+.claude/*
+!.claude/skills
