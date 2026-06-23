@@ -5,7 +5,7 @@
 # Run:    docker run --rm -v $PWD:/repo common-ressources-preview npx playwright test
 #         docker run --rm -v $PWD:/repo common-ressources-preview node tests/generate-previews.js
 
-FROM mcr.microsoft.com/playwright:v1.44.0-jammy
+FROM mcr.microsoft.com/playwright:v1.61.1-jammy
 
 # Add PHP (for legacy GD-based colortest.php scripts) and jq (for validate.sh)
 RUN apt-get update && apt-get install -y \
