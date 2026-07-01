@@ -1,0 +1,452 @@
+[
+  {
+    "name": "Fire Control",
+    "slug": "fire-control",
+    "year": -1000000,
+    "inventor": "Homo erectus",
+    "country_iso2": "KE",
+    "category": "energy",
+    "description": "The deliberate control and use of fire for warmth, cooking, light, and protection.",
+    "impact": "Transformed human diet, extended active hours into darkness, provided warmth enabling migration to colder climates, and became foundational to all subsequent technology."
+  },
+  {
+    "name": "Stone Tools",
+    "slug": "stone-tools",
+    "year": -3300000,
+    "inventor": "Homo habilis",
+    "country_iso2": "ET",
+    "category": "manufacturing",
+    "description": "Knapped flint and other stone implements used for cutting, scraping, and hunting.",
+    "impact": "Enabled processing of food and materials beyond what bare hands could achieve, fundamentally shaping human evolution and survival."
+  },
+  {
+    "name": "Wheel",
+    "slug": "wheel",
+    "year": -3500,
+    "inventor": "Unknown Mesopotamian",
+    "country_iso2": "IQ",
+    "category": "transport",
+    "description": "A circular disc rotating on an axle, first used for pottery and later for wheeled vehicles.",
+    "impact": "Revolutionized transport, agriculture, and manufacturing; enabled carts, chariots, waterwheels, gears, and millstones."
+  },
+  {
+    "name": "Writing (Cuneiform)",
+    "slug": "writing-cuneiform",
+    "year": -3200,
+    "inventor": "Sumerians",
+    "country_iso2": "IQ",
+    "category": "communication",
+    "description": "A system of wedge-shaped marks on clay tablets used to record language, one of the earliest writing systems.",
+    "impact": "Enabled record-keeping, administration, literature, and the transmission of knowledge across time and space."
+  },
+  {
+    "name": "Sailing Boat",
+    "slug": "sailing-boat",
+    "year": -3000,
+    "inventor": "Ancient Egyptians",
+    "country_iso2": "EG",
+    "category": "transport",
+    "description": "A vessel propelled by sails harnessing wind power, enabling long-distance maritime travel.",
+    "impact": "Enabled trade, exploration, and cultural exchange across the Mediterranean and beyond, laying groundwork for global commerce."
+  },
+  {
+    "name": "Aqueduct",
+    "slug": "aqueduct",
+    "year": -700,
+    "inventor": "Assyrians and Romans",
+    "country_iso2": "IQ",
+    "category": "construction",
+    "description": "Engineered channels and bridges for conveying water from sources to cities and agricultural land.",
+    "impact": "Enabled urban growth by providing reliable water supplies, improved sanitation, and supported large-scale agriculture."
+  },
+  {
+    "name": "Stirrup",
+    "slug": "stirrup",
+    "year": -200,
+    "inventor": "Central Asian nomads",
+    "country_iso2": "CN",
+    "category": "military",
+    "description": "A foot support suspended from a saddle that allows a rider to sit securely and wield weapons effectively on horseback.",
+    "impact": "Transformed cavalry warfare, enabling mounted soldiers to fight effectively and influencing the rise of medieval feudalism."
+  },
+  {
+    "name": "Paper",
+    "slug": "paper",
+    "year": 105,
+    "inventor": "Cai Lun",
+    "country_iso2": "CN",
+    "category": "communication",
+    "description": "A thin flat material produced from plant fibers used for writing and printing.",
+    "impact": "Replaced expensive papyrus and parchment, democratizing record-keeping and enabling the spread of literacy and information."
+  },
+  {
+    "name": "Compass",
+    "slug": "compass",
+    "year": 206,
+    "inventor": "Han Dynasty Chinese",
+    "country_iso2": "CN",
+    "category": "measurement",
+    "description": "A device using a magnetized needle to indicate magnetic north, enabling reliable directional navigation.",
+    "impact": "Transformed maritime navigation, enabling the Age of Exploration and global trade routes."
+  },
+  {
+    "name": "Gunpowder",
+    "slug": "gunpowder",
+    "year": 850,
+    "inventor": "Tang Dynasty Chinese alchemists",
+    "country_iso2": "CN",
+    "category": "military",
+    "description": "An explosive mixture of sulfur, charcoal, and potassium nitrate (saltpeter), initially discovered during alchemical experiments.",
+    "impact": "Revolutionized warfare with cannons and firearms, ended the dominance of castle fortifications, and later enabled mining and civil engineering."
+  },
+  {
+    "name": "Windmill",
+    "slug": "windmill",
+    "year": 900,
+    "inventor": "Persian engineers",
+    "country_iso2": "IR",
+    "category": "energy",
+    "description": "A structure with rotating blades driven by wind used to grind grain or pump water.",
+    "impact": "Provided a reliable non-animal power source for agriculture, enabling grain processing and water management at scale."
+  },
+  {
+    "name": "Printing Press",
+    "slug": "printing-press",
+    "year": 1440,
+    "inventor": "Johannes Gutenberg",
+    "country_iso2": "DE",
+    "category": "communication",
+    "description": "A mechanical device using movable metal type to print text on paper at high speed and volume.",
+    "impact": "Democratized information, enabled mass literacy, accelerated the Protestant Reformation, and was essential to the Scientific Revolution."
+  },
+  {
+    "name": "Telescope",
+    "slug": "telescope",
+    "year": 1608,
+    "inventor": "Hans Lippershey",
+    "country_iso2": "NL",
+    "category": "measurement",
+    "description": "An optical instrument that magnifies distant objects using lenses or mirrors.",
+    "impact": "Enabled astronomical observations that confirmed the heliocentric model and revealed the moons of Jupiter, craters on the Moon, and distant galaxies."
+  },
+  {
+    "name": "Microscope",
+    "slug": "microscope",
+    "year": 1590,
+    "inventor": "Zacharias Janssen",
+    "country_iso2": "NL",
+    "category": "medicine",
+    "description": "An optical instrument using lenses to magnify objects too small to be seen by the naked eye.",
+    "impact": "Revealed the microbial world, enabling germ theory, cell biology, and modern medicine."
+  },
+  {
+    "name": "Steam Engine",
+    "slug": "steam-engine",
+    "year": 1698,
+    "inventor": "Thomas Savery",
+    "country_iso2": "GB",
+    "category": "energy",
+    "description": "An engine that converts steam pressure into mechanical work, later refined by James Watt into a highly efficient and versatile power source.",
+    "impact": "Powered the Industrial Revolution, driving factories, railways, and ships; transformed global economies and urbanization."
+  },
+  {
+    "name": "Smallpox Vaccine",
+    "slug": "smallpox-vaccine",
+    "year": 1796,
+    "inventor": "Edward Jenner",
+    "country_iso2": "GB",
+    "category": "medicine",
+    "description": "The first vaccine, using cowpox material to induce immunity against smallpox.",
+    "impact": "Introduced the principle of vaccination, leading to the eradication of smallpox and the development of vaccines for dozens of other diseases."
+  },
+  {
+    "name": "Spinning Jenny",
+    "slug": "spinning-jenny",
+    "year": 1764,
+    "inventor": "James Hargreaves",
+    "country_iso2": "GB",
+    "category": "manufacturing",
+    "description": "A multi-spool spinning machine that allowed one worker to spin multiple threads simultaneously.",
+    "impact": "Dramatically increased textile production efficiency, catalyzing the industrial transformation of the cotton and wool industries."
+  },
+  {
+    "name": "Battery (Voltaic Pile)",
+    "slug": "battery",
+    "year": 1800,
+    "inventor": "Alessandro Volta",
+    "country_iso2": "IT",
+    "category": "energy",
+    "description": "The first device to produce a steady electric current through chemical reactions, consisting of alternating zinc and copper discs separated by brine-soaked cloth.",
+    "impact": "Enabled the study and application of electricity, leading to electrochemistry, electrolysis, and eventually all modern electrical devices."
+  },
+  {
+    "name": "Locomotive",
+    "slug": "locomotive",
+    "year": 1804,
+    "inventor": "Richard Trevithick",
+    "country_iso2": "GB",
+    "category": "transport",
+    "description": "A self-propelled steam-powered vehicle designed to run on rails and pull freight or passenger carriages.",
+    "impact": "Revolutionized land transport, enabling rapid movement of goods and people, accelerating industrialization and national economic integration."
+  },
+  {
+    "name": "Photography",
+    "slug": "photography",
+    "year": 1826,
+    "inventor": "Joseph Nicéphore Niépce",
+    "country_iso2": "FR",
+    "category": "communication",
+    "description": "The process of recording images by the chemical reaction of light-sensitive materials, later refined into practical silver-based processes.",
+    "impact": "Transformed documentation, art, journalism, science, and identity; enabled the visual recording of history."
+  },
+  {
+    "name": "Telegraph",
+    "slug": "telegraph",
+    "year": 1837,
+    "inventor": "Samuel Morse",
+    "country_iso2": "US",
+    "category": "communication",
+    "description": "An electrical signaling system capable of transmitting coded messages over wires across long distances.",
+    "impact": "Enabled near-instantaneous long-distance communication for the first time, transforming finance, journalism, military coordination, and diplomacy."
+  },
+  {
+    "name": "Anesthesia",
+    "slug": "anesthesia",
+    "year": 1846,
+    "inventor": "William Morton",
+    "country_iso2": "US",
+    "category": "medicine",
+    "description": "The use of ether as an inhaled anesthetic to render patients unconscious during surgical procedures.",
+    "impact": "Made complex and prolonged surgery possible, reducing suffering and mortality and enabling modern surgical medicine."
+  },
+  {
+    "name": "Dynamite",
+    "slug": "dynamite",
+    "year": 1867,
+    "inventor": "Alfred Nobel",
+    "country_iso2": "SE",
+    "category": "manufacturing",
+    "description": "An explosive made from nitroglycerin stabilized in diatomite, far safer to handle and transport than pure nitroglycerin.",
+    "impact": "Transformed mining, tunneling, and construction, enabling railway networks, canals, and large-scale civil engineering projects."
+  },
+  {
+    "name": "Telephone",
+    "slug": "telephone",
+    "year": 1876,
+    "inventor": "Alexander Graham Bell",
+    "country_iso2": "US",
+    "category": "communication",
+    "description": "A device for transmitting and receiving human voice as electrical signals over wires.",
+    "impact": "Enabled real-time voice communication over distances, transforming business, social interaction, and emergency response."
+  },
+  {
+    "name": "Light Bulb",
+    "slug": "light-bulb",
+    "year": 1879,
+    "inventor": "Thomas Edison",
+    "country_iso2": "US",
+    "category": "energy",
+    "description": "An incandescent electric lamp producing light by heating a filament until it glows, made practical with a long-lasting carbon filament.",
+    "impact": "Extended productive hours beyond daylight, enabled the electrification of homes and cities, and transformed industry, culture, and public safety."
+  },
+  {
+    "name": "Automobile",
+    "slug": "automobile",
+    "year": 1885,
+    "inventor": "Karl Benz",
+    "country_iso2": "DE",
+    "category": "transport",
+    "description": "A self-propelled road vehicle powered by an internal combustion engine.",
+    "impact": "Reshaped cities, economies, and daily life; enabled personal mobility, created the oil industry, and transformed global supply chains."
+  },
+  {
+    "name": "Radio",
+    "slug": "radio",
+    "year": 1895,
+    "inventor": "Guglielmo Marconi",
+    "country_iso2": "IT",
+    "category": "communication",
+    "description": "A system for wireless transmission of information via electromagnetic waves.",
+    "impact": "Enabled mass broadcast media, transformed military communications, and laid the foundation for wireless technology including television and mobile phones."
+  },
+  {
+    "name": "Airplane",
+    "slug": "airplane",
+    "year": 1903,
+    "inventor": "Orville and Wilbur Wright",
+    "country_iso2": "US",
+    "category": "transport",
+    "description": "A powered, heavier-than-air aircraft achieving controlled sustained flight.",
+    "impact": "Transformed global travel and commerce, enabled rapid troop deployment, gave rise to the airline industry, and shaped geopolitics."
+  },
+  {
+    "name": "Penicillin",
+    "slug": "penicillin",
+    "year": 1928,
+    "inventor": "Alexander Fleming",
+    "country_iso2": "GB",
+    "category": "medicine",
+    "description": "The first antibiotic, a natural substance produced by Penicillium mold that kills many disease-causing bacteria.",
+    "impact": "Saved hundreds of millions of lives by treating previously fatal bacterial infections; launched the antibiotic era of medicine."
+  },
+  {
+    "name": "Nuclear Reactor",
+    "slug": "nuclear-reactor",
+    "year": 1942,
+    "inventor": "Enrico Fermi",
+    "country_iso2": "US",
+    "category": "energy",
+    "description": "A device that initiates and controls a sustained nuclear fission chain reaction to produce energy.",
+    "impact": "Enabled nuclear power generation and the development of nuclear weapons, shaping the Cold War and providing low-carbon electricity."
+  },
+  {
+    "name": "Electronic Computer",
+    "slug": "electronic-computer",
+    "year": 1945,
+    "inventor": "John Presper Eckert and John Mauchly",
+    "country_iso2": "US",
+    "category": "computing",
+    "description": "A general-purpose electronic digital computer (ENIAC) capable of performing complex calculations at high speed using vacuum tubes.",
+    "impact": "Launched the digital computing era, enabling scientific simulation, data processing, and ultimately the internet and modern digital life."
+  },
+  {
+    "name": "Transistor",
+    "slug": "transistor",
+    "year": 1947,
+    "inventor": "John Bardeen, Walter Brattain, and William Shockley",
+    "country_iso2": "US",
+    "category": "computing",
+    "description": "A semiconductor device that amplifies or switches electronic signals, replacing bulky and unreliable vacuum tubes.",
+    "impact": "Enabled miniaturization of electronics, making possible integrated circuits, microprocessors, computers, smartphones, and virtually all modern electronics."
+  },
+  {
+    "name": "DNA Double Helix Discovery",
+    "slug": "dna-double-helix",
+    "year": 1953,
+    "inventor": "James Watson and Francis Crick (with Rosalind Franklin)",
+    "country_iso2": "GB",
+    "category": "medicine",
+    "description": "The determination of the double-helical structure of deoxyribonucleic acid (DNA), the molecule carrying genetic information.",
+    "impact": "Founded molecular biology and genetics; led to genetic engineering, PCR, genome sequencing, and modern biotechnology."
+  },
+  {
+    "name": "Integrated Circuit",
+    "slug": "integrated-circuit",
+    "year": 1958,
+    "inventor": "Jack Kilby",
+    "country_iso2": "US",
+    "category": "computing",
+    "description": "A miniaturized electronic circuit with multiple components (transistors, resistors, capacitors) fabricated on a single semiconductor chip.",
+    "impact": "Enabled the exponential miniaturization and cost reduction described by Moore's Law, powering all modern computing devices."
+  },
+  {
+    "name": "Laser",
+    "slug": "laser",
+    "year": 1960,
+    "inventor": "Theodore Maiman",
+    "country_iso2": "US",
+    "category": "energy",
+    "description": "A device that emits coherent, monochromatic, and highly directional light through stimulated emission of radiation.",
+    "impact": "Enabled barcode scanners, optical fiber communications, CDs and DVDs, laser surgery, precision manufacturing, and scientific instruments."
+  },
+  {
+    "name": "Internet (ARPANET)",
+    "slug": "internet",
+    "year": 1969,
+    "inventor": "DARPA researchers (Vint Cerf, Bob Kahn et al.)",
+    "country_iso2": "US",
+    "category": "communication",
+    "description": "A global network of computers communicating via standardized protocols (TCP/IP), enabling the exchange of data worldwide.",
+    "impact": "Fundamentally transformed commerce, communication, media, science, and society; enabled e-commerce, social media, and the information economy."
+  },
+  {
+    "name": "Personal Computer",
+    "slug": "personal-computer",
+    "year": 1975,
+    "inventor": "Ed Roberts (MITS Altair 8800)",
+    "country_iso2": "US",
+    "category": "computing",
+    "description": "A microprocessor-based computer designed for individual use, making computing accessible outside institutions.",
+    "impact": "Democratized computing, enabling word processing, spreadsheets, and software development for individuals and small businesses."
+  },
+  {
+    "name": "Mobile Phone",
+    "slug": "mobile-phone",
+    "year": 1983,
+    "inventor": "Martin Cooper and Motorola",
+    "country_iso2": "US",
+    "category": "communication",
+    "description": "A portable telephone using cellular radio technology to communicate without physical wire connections.",
+    "impact": "Enabled ubiquitous personal communication, and with smartphones, became the primary computing device for billions globally."
+  },
+  {
+    "name": "World Wide Web",
+    "slug": "world-wide-web",
+    "year": 1989,
+    "inventor": "Tim Berners-Lee",
+    "country_iso2": "GB",
+    "category": "communication",
+    "description": "A hypertext-based information system using HTTP and HTML to link and access documents over the internet via a browser.",
+    "impact": "Made the internet accessible to non-technical users, enabling the modern web economy, online publishing, and global knowledge sharing."
+  },
+  {
+    "name": "GPS (Global Positioning System)",
+    "slug": "gps",
+    "year": 1993,
+    "inventor": "U.S. Department of Defense",
+    "country_iso2": "US",
+    "category": "measurement",
+    "description": "A satellite-based navigation system providing precise location and time information anywhere on Earth.",
+    "impact": "Transformed navigation, logistics, precision agriculture, mapping, and enabled location-aware mobile applications."
+  },
+  {
+    "name": "DNA Sequencing (Next-Generation)",
+    "slug": "dna-sequencing",
+    "year": 1996,
+    "inventor": "Shankar Balasubramanian and David Klenerman",
+    "country_iso2": "GB",
+    "category": "medicine",
+    "description": "High-throughput methods for determining the precise sequence of nucleotides in DNA molecules rapidly and at low cost.",
+    "impact": "Enabled the Human Genome Project, personalized medicine, cancer genomics, CRISPR gene editing, and epidemiological pathogen tracking."
+  },
+  {
+    "name": "Smartphone",
+    "slug": "smartphone",
+    "year": 2007,
+    "inventor": "Apple (Steve Jobs)",
+    "country_iso2": "US",
+    "category": "computing",
+    "description": "A handheld device combining a mobile phone with a touchscreen computer, internet browser, and app ecosystem.",
+    "impact": "Put powerful computing and global connectivity in billions of pockets, transforming social media, commerce, navigation, photography, and daily communication."
+  },
+  {
+    "name": "CRISPR-Cas9 Gene Editing",
+    "slug": "crispr-cas9",
+    "year": 2012,
+    "inventor": "Jennifer Doudna and Emmanuelle Charpentier",
+    "country_iso2": "US",
+    "category": "medicine",
+    "description": "A precise and affordable genome editing tool derived from a bacterial immune system, enabling targeted modification of DNA sequences.",
+    "impact": "Revolutionized biological research and medicine, enabling potential cures for genetic diseases and accelerating drug development."
+  },
+  {
+    "name": "mRNA Vaccines",
+    "slug": "mrna-vaccines",
+    "year": 2020,
+    "inventor": "Katalin Karikó, Drew Weissman, and BioNTech/Moderna teams",
+    "country_iso2": "US",
+    "category": "medicine",
+    "description": "Vaccines that use messenger RNA to instruct cells to produce a target antigen, triggering an immune response without using live pathogens.",
+    "impact": "Enabled rapid development of COVID-19 vaccines, saving millions of lives; opened a new platform for vaccines and therapeutics for cancer, flu, and other diseases."
+  },
+  {
+    "name": "Large Language Models",
+    "slug": "large-language-models",
+    "year": 2017,
+    "inventor": "Google Brain (Vaswani et al. — Transformer architecture)",
+    "country_iso2": "US",
+    "category": "computing",
+    "description": "Massive neural networks trained on vast text corpora using the Transformer architecture, capable of generating, translating, summarizing, and reasoning about human language.",
+    "impact": "Transformed natural language processing, enabling AI assistants, automated coding, scientific discovery, and broad automation of knowledge work."
+  }
+]

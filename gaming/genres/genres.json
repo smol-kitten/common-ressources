@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Action",
+    "slug": "action",
+    "abbreviation": null,
+    "subgenres": ["Hack and Slash", "Beat 'em Up", "Action-Adventure", "Shoot 'em Up"],
+    "description": "Fast-paced games centered on physical challenges, combat, and reflexes.",
+    "notable_examples": ["Devil May Cry", "God of War", "Bayonetta", "Streets of Rage"]
+  },
+  {
+    "name": "Adventure",
+    "slug": "adventure",
+    "abbreviation": null,
+    "subgenres": ["Point-and-Click", "Text Adventure", "Graphic Adventure", "Interactive Fiction"],
+    "description": "Story-driven games focused on exploration, puzzle-solving, and narrative progression.",
+    "notable_examples": ["The Secret of Monkey Island", "Zork", "Grim Fandango", "Disco Elysium"]
+  },
+  {
+    "name": "Battle Royale",
+    "slug": "battle-royale",
+    "abbreviation": "BR",
+    "subgenres": ["Solo BR", "Squad BR", "Building BR"],
+    "description": "Large-scale last-player-standing games where players fight in a shrinking arena.",
+    "notable_examples": ["PUBG", "Fortnite", "Apex Legends", "Warzone"]
+  },
+  {
+    "name": "Card and Deck-Building",
+    "slug": "card-deck",
+    "abbreviation": "CCG",
+    "subgenres": ["Collectible Card Game", "Deck-Builder", "Roguelike Card Game"],
+    "description": "Games where players build and manage a hand or deck of cards to defeat opponents or overcome challenges.",
+    "notable_examples": ["Hearthstone", "Slay the Spire", "Gwent", "Magic: The Gathering Arena"]
+  },
+  {
+    "name": "Educational",
+    "slug": "educational",
+    "abbreviation": null,
+    "subgenres": ["Edutainment", "Serious Game", "Language Learning", "Math/Science Game"],
+    "description": "Games designed to teach real-world knowledge or skills while entertaining the player.",
+    "notable_examples": ["Oregon Trail", "Math Blaster", "Duolingo", "Kerbal Space Program"]
+  },
+  {
+    "name": "Fighting",
+    "slug": "fighting",
+    "abbreviation": null,
+    "subgenres": ["2D Fighter", "3D Fighter", "Arena Fighter", "Platform Fighter"],
+    "description": "Competitive games where players control characters in one-on-one or small-group combat.",
+    "notable_examples": ["Street Fighter", "Mortal Kombat", "Tekken", "Super Smash Bros."]
+  },
+  {
+    "name": "First-Person Shooter",
+    "slug": "fps",
+    "abbreviation": "FPS",
+    "subgenres": ["Arena Shooter", "Tactical FPS", "Battle Royale FPS", "Hero Shooter"],
+    "description": "Shooter games played from the first-person perspective, emphasizing gunplay and spatial awareness.",
+    "notable_examples": ["Doom", "Counter-Strike", "Halo", "Call of Duty"]
+  },
+  {
+    "name": "Horror",
+    "slug": "horror",
+    "abbreviation": null,
+    "subgenres": ["Survival Horror", "Psychological Horror", "Action Horror", "Walking Simulator Horror"],
+    "description": "Games designed to frighten the player through atmosphere, tension, and frightening encounters.",
+    "notable_examples": ["Resident Evil", "Silent Hill", "Amnesia", "Outlast"]
+  },
+  {
+    "name": "Idle and Clicker",
+    "slug": "idle-clicker",
+    "abbreviation": null,
+    "subgenres": ["Idle Game", "Incremental Game", "Clicker Game"],
+    "description": "Minimally interactive games where progression is automated and numbers scale exponentially over time.",
+    "notable_examples": ["Cookie Clicker", "Adventure Capitalist", "Clicker Heroes", "Melvor Idle"]
+  },
+  {
+    "name": "Metroidvania",
+    "slug": "metroidvania",
+    "abbreviation": null,
+    "subgenres": ["2D Metroidvania", "3D Metroidvania"],
+    "description": "Side-scrolling exploration platformers with interconnected maps and abilities unlocked progressively to access new areas.",
+    "notable_examples": ["Metroid", "Castlevania: Symphony of the Night", "Hollow Knight", "Ori and the Blind Forest"]
+  },
+  {
+    "name": "Multiplayer Online Battle Arena",
+    "slug": "moba",
+    "abbreviation": "MOBA",
+    "subgenres": ["Traditional MOBA", "Hero Brawler", "Battle Arena"],
+    "description": "Team-based strategy games where players control individual characters to destroy the opposing team's base.",
+    "notable_examples": ["Dota 2", "League of Legends", "Smite", "Heroes of the Storm"]
+  },
+  {
+    "name": "Music and Rhythm",
+    "slug": "music-rhythm",
+    "abbreviation": null,
+    "subgenres": ["Dance Game", "Instrument Game", "Beat Game", "Karaoke"],
+    "description": "Games where the core mechanic involves matching on-screen prompts to the beat of music.",
+    "notable_examples": ["Guitar Hero", "Dance Dance Revolution", "Beat Saber", "Rhythm Heaven"]
+  },
+  {
+    "name": "Open World / Sandbox",
+    "slug": "open-world",
+    "abbreviation": null,
+    "subgenres": ["Sandbox", "Open-World RPG", "Survival Sandbox", "Crafting Game"],
+    "description": "Games featuring large, freely explorable worlds with minimal linear restrictions on player progression.",
+    "notable_examples": ["Minecraft", "Grand Theft Auto V", "The Legend of Zelda: Breath of the Wild", "No Man's Sky"]
+  },
+  {
+    "name": "Platformer",
+    "slug": "platformer",
+    "abbreviation": null,
+    "subgenres": ["2D Platformer", "3D Platformer", "Run-and-Gun", "Precision Platformer"],
+    "description": "Games focused on navigating environments by jumping between platforms and avoiding obstacles.",
+    "notable_examples": ["Super Mario Bros.", "Sonic the Hedgehog", "Celeste", "Donkey Kong Country"]
+  },
+  {
+    "name": "Puzzle",
+    "slug": "puzzle",
+    "abbreviation": null,
+    "subgenres": ["Match-3", "Logic Puzzle", "Physics Puzzle", "Escape Room"],
+    "description": "Games centered on solving problems using logic, pattern recognition, or spatial reasoning.",
+    "notable_examples": ["Tetris", "Portal", "The Witness", "Candy Crush Saga"]
+  },
+  {
+    "name": "Racing",
+    "slug": "racing",
+    "abbreviation": null,
+    "subgenres": ["Arcade Racing", "Simulation Racing", "Kart Racing", "Combat Racing"],
+    "description": "Competitive games where players race vehicles against opponents or the clock.",
+    "notable_examples": ["Mario Kart", "Gran Turismo", "Forza Horizon", "F-Zero"]
+  },
+  {
+    "name": "Real-Time Strategy",
+    "slug": "rts",
+    "abbreviation": "RTS",
+    "subgenres": ["Base Builder", "Tower Defense RTS", "MOBA-RTS Hybrid"],
+    "description": "Strategy games where players simultaneously manage resources, build bases, and command units against opponents in real time.",
+    "notable_examples": ["StarCraft", "Age of Empires", "Warcraft III", "Command & Conquer"]
+  },
+  {
+    "name": "Roguelite",
+    "slug": "roguelite",
+    "abbreviation": null,
+    "subgenres": ["Roguelike", "Roguelite", "Roguelike Deckbuilder"],
+    "description": "Games featuring procedurally generated levels, permadeath or run-based progression, and randomized content.",
+    "notable_examples": ["Hades", "Dead Cells", "Rogue Legacy", "Enter the Gungeon"]
+  },
+  {
+    "name": "Role-Playing Game",
+    "slug": "rpg",
+    "abbreviation": "RPG",
+    "subgenres": ["JRPG", "Action RPG", "CRPG", "MMORPG", "Tactical RPG"],
+    "description": "Games where players control a character that gains experience and abilities through a narrative-driven adventure.",
+    "notable_examples": ["Final Fantasy", "The Elder Scrolls", "Dark Souls", "Baldur's Gate"]
+  },
+  {
+    "name": "Simulation",
+    "slug": "simulation",
+    "abbreviation": "Sim",
+    "subgenres": ["Life Simulation", "City Builder", "Flight Sim", "Farming Sim", "Management Sim"],
+    "description": "Games that model real-world or fictional systems for players to manage and control.",
+    "notable_examples": ["The Sims", "Cities: Skylines", "Microsoft Flight Simulator", "Stardew Valley"]
+  },
+  {
+    "name": "Sports",
+    "slug": "sports",
+    "abbreviation": null,
+    "subgenres": ["Team Sports", "Individual Sports", "Extreme Sports", "Sports Management"],
+    "description": "Games that simulate athletic competitions and sports events.",
+    "notable_examples": ["FIFA", "NBA 2K", "Madden NFL", "Wii Sports"]
+  },
+  {
+    "name": "Stealth",
+    "slug": "stealth",
+    "abbreviation": null,
+    "subgenres": ["Tactical Stealth", "Action Stealth", "Stealth Shooter"],
+    "description": "Games that reward avoiding detection and completing objectives without direct confrontation.",
+    "notable_examples": ["Splinter Cell", "Metal Gear Solid", "Hitman", "Thief"]
+  },
+  {
+    "name": "Third-Person Shooter",
+    "slug": "tps",
+    "abbreviation": "TPS",
+    "subgenres": ["Cover Shooter", "Action TPS", "Looter Shooter"],
+    "description": "Shooter games played from a camera positioned behind and above the player character.",
+    "notable_examples": ["Gears of War", "Uncharted", "Destiny 2", "The Division"]
+  },
+  {
+    "name": "Tower Defense",
+    "slug": "tower-defense",
+    "abbreviation": "TD",
+    "subgenres": ["Classic TD", "Hybrid TD", "MOBA-TD"],
+    "description": "Strategy games where players place defensive structures to prevent waves of enemies from reaching a goal.",
+    "notable_examples": ["Plants vs. Zombies", "Bloons TD", "Kingdom Rush", "Defense Grid"]
+  },
+  {
+    "name": "Turn-Based Strategy",
+    "slug": "tbs",
+    "abbreviation": "TBS",
+    "subgenres": ["4X", "Wargame", "Turn-Based Tactics", "Grand Strategy"],
+    "description": "Strategy games where players take alternating turns to plan and execute moves without time pressure.",
+    "notable_examples": ["Civilization VI", "XCOM 2", "Fire Emblem", "Total War"]
+  },
+  {
+    "name": "Visual Novel",
+    "slug": "visual-novel",
+    "abbreviation": "VN",
+    "subgenres": ["Kinetic Novel", "Dating Sim", "Otome Game", "Mystery VN"],
+    "description": "Narrative-driven games presented through illustrated text-based storytelling, often with branching dialogue and multiple endings.",
+    "notable_examples": ["Doki Doki Literature Club", "Phoenix Wright: Ace Attorney", "Clannad", "Danganronpa"]
+  },
+  {
+    "name": "Massively Multiplayer Online",
+    "slug": "mmo",
+    "abbreviation": "MMO",
+    "subgenres": ["MMORPG", "MMOFPS", "MMORTS", "Sandbox MMO"],
+    "description": "Online games supporting thousands of simultaneous players in a shared persistent world.",
+    "notable_examples": ["World of Warcraft", "Final Fantasy XIV", "RuneScape", "EVE Online"]
+  },
+  {
+    "name": "Survival",
+    "slug": "survival",
+    "abbreviation": null,
+    "subgenres": ["Survival Horror", "Survival Crafting", "Battle Royale Survival"],
+    "description": "Games where players must gather resources and manage health, hunger, or other meters to survive in a hostile environment.",
+    "notable_examples": ["Rust", "The Forest", "Subnautica", "Don't Starve"]
+  },
+  {
+    "name": "Sports Management",
+    "slug": "sports-management",
+    "abbreviation": null,
+    "subgenres": ["Football Manager", "GM Simulation", "E-Sports Manager"],
+    "description": "Games where the player acts as a coach, manager, or owner of a sports team rather than playing directly.",
+    "notable_examples": ["Football Manager", "Out of the Park Baseball", "Basketball GM", "Motorsport Manager"]
+  },
+  {
+    "name": "Narrative / Walking Simulator",
+    "slug": "narrative",
+    "abbreviation": null,
+    "subgenres": ["Walking Simulator", "Environmental Storytelling", "Interactive Drama"],
+    "description": "Experience-focused games with minimal mechanical challenge that prioritize story, atmosphere, and player exploration.",
+    "notable_examples": ["Gone Home", "What Remains of Edith Finch", "Firewatch", "Dear Esther"]
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Acyl Halide",
+    "slug": "acyl-halide",
+    "formula": "-C(=O)X (X = F, Cl, Br, I)",
+    "class": "acyl halide",
+    "description": "A carbonyl group bonded to a halogen atom, making it a highly reactive electrophile used in acylation reactions.",
+    "example_compound": "Acetyl chloride (CH₃COCl)",
+    "example_compound_slug": "acetyl-chloride",
+    "properties": ["highly reactive", "electrophilic", "reacts vigorously with water", "acylating agent"]
+  },
+  {
+    "name": "Aldehyde",
+    "slug": "aldehyde",
+    "formula": "-CHO",
+    "class": "carbonyl",
+    "description": "A carbonyl group (C=O) located at the terminal carbon of a chain, making it more reactive toward nucleophiles than ketones.",
+    "example_compound": "Formaldehyde (HCHO)",
+    "example_compound_slug": "formaldehyde",
+    "properties": ["polar", "electrophilic carbonyl", "oxidizable to carboxylic acid", "forms hemiacetals"]
+  },
+  {
+    "name": "Allyl",
+    "slug": "allyl",
+    "formula": "CH₂=CH-CH₂-",
+    "class": "allyl",
+    "description": "A substituent or functional group consisting of a methylene group adjacent to a vinyl group (CH₂=CH-CH₂-), conferring allylic reactivity.",
+    "example_compound": "Allyl alcohol (CH₂=CHCH₂OH)",
+    "example_compound_slug": "allyl-alcohol",
+    "properties": ["allylic stabilization", "reactive toward radicals", "undergoes allylic rearrangement", "reactive in cross-coupling"]
+  },
+  {
+    "name": "Amide",
+    "slug": "amide",
+    "formula": "-C(=O)NH₂ / -C(=O)NHR / -C(=O)NR₂",
+    "class": "amide",
+    "description": "A carbonyl group bonded to a nitrogen atom; the most stable of the acyl derivatives due to resonance delocalization of the nitrogen lone pair into the carbonyl.",
+    "example_compound": "Acetamide (CH₃CONH₂)",
+    "example_compound_slug": "acetamide",
+    "properties": ["planar geometry due to resonance", "hydrogen bonding", "hydrolysis-resistant", "found in peptide bonds"]
+  },
+  {
+    "name": "Amino",
+    "slug": "amino",
+    "formula": "-NH₂",
+    "class": "amine",
+    "description": "A nitrogen atom bonded to one or more hydrogen atoms (primary amine), making the molecule basic and capable of acting as a nucleophile.",
+    "example_compound": "Methylamine (CH₃NH₂)",
+    "example_compound_slug": "methylamine",
+    "properties": ["basic", "nucleophilic", "hydrogen bonding", "water-soluble (small amines)"]
+  },
+  {
+    "name": "Anhydride",
+    "slug": "anhydride",
+    "formula": "RC(=O)-O-C(=O)R'",
+    "class": "anhydride",
+    "description": "Two acyl groups connected by an oxygen atom, formed by the condensation of two carboxylic acids with loss of water; a reactive acylating agent.",
+    "example_compound": "Acetic anhydride ((CH₃CO)₂O)",
+    "example_compound_slug": "acetic-anhydride",
+    "properties": ["reactive electrophile", "acylating agent", "reacts with water, alcohols, amines", "more reactive than esters"]
+  },
+  {
+    "name": "Aromatic Ring (Benzene Ring)",
+    "slug": "aromatic",
+    "formula": "-C₆H₅ / C₆H₄-",
+    "class": "aromatic",
+    "description": "A planar cyclic ring of six sp2-hybridized carbons with delocalized pi electrons, conferring exceptional stability and characteristic electrophilic aromatic substitution reactivity.",
+    "example_compound": "Benzene (C₆H₆)",
+    "example_compound_slug": "benzene",
+    "properties": ["aromatic stability (Hückel's rule)", "planar", "delocalized pi electrons", "electrophilic aromatic substitution", "hydrophobic"]
+  },
+  {
+    "name": "Carboxyl",
+    "slug": "carboxyl",
+    "formula": "-COOH",
+    "class": "carboxylic acid",
+    "description": "A carbonyl group bonded to a hydroxyl group at the same carbon, forming a carboxylic acid that readily donates its proton.",
+    "example_compound": "Acetic acid (CH₃COOH)",
+    "example_compound_slug": "acetic-acid",
+    "properties": ["acidic (pKa ~4-5)", "hydrogen bonding", "polar", "dimerizes in non-polar solvents", "water-soluble"]
+  },
+  {
+    "name": "Disulfide",
+    "slug": "disulfide",
+    "formula": "-S-S-",
+    "class": "disulfide",
+    "description": "A linkage between two sulfur atoms, formed by the oxidation of two thiol groups; critically important in stabilizing the tertiary structure of proteins.",
+    "example_compound": "Cystine (disulfide-linked cysteine dimer)",
+    "example_compound_slug": "cystine",
+    "properties": ["redox-active", "stabilizes protein structure", "cleavable by reducing agents", "formed from thiols by oxidation"]
+  },
+  {
+    "name": "Enol",
+    "slug": "enol",
+    "formula": "-C(OH)=C-",
+    "class": "enol",
+    "description": "A tautomeric form of carbonyl compounds in which the alpha hydrogen migrates to the oxygen, producing a hydroxyl-substituted alkene; typically in equilibrium with the keto form.",
+    "example_compound": "Vinyl alcohol (CH₂=CHOH, tautomer of acetaldehyde)",
+    "example_compound_slug": "vinyl-alcohol",
+    "properties": ["tautomeric with carbonyl", "nucleophilic at alpha carbon", "involved in aldol reactions", "stabilized by conjugation or chelation"]
+  },
+  {
+    "name": "Epoxide",
+    "slug": "epoxide",
+    "formula": "C-O-C (three-membered ring)",
+    "class": "epoxide",
+    "description": "A cyclic ether containing a three-membered ring with one oxygen atom; ring strain makes it highly reactive toward nucleophilic ring-opening.",
+    "example_compound": "Ethylene oxide (C₂H₄O)",
+    "example_compound_slug": "ethylene-oxide",
+    "properties": ["highly reactive", "ring-strained", "electrophilic", "opens with nucleophiles under acid or base conditions"]
+  },
+  {
+    "name": "Ester",
+    "slug": "ester",
+    "formula": "-COO- (R-C(=O)-O-R')",
+    "class": "ester",
+    "description": "A carbonyl group bonded to an alkoxy group (-OR'), formed by condensation of a carboxylic acid and an alcohol; characteristic of fats, oils, and many fragrances.",
+    "example_compound": "Ethyl acetate (CH₃COOC₂H₅)",
+    "example_compound_slug": "ethyl-acetate",
+    "properties": ["polar", "moderately reactive toward hydrolysis", "pleasant odor (many)", "less reactive than acyl halides or anhydrides", "good solvent"]
+  },
+  {
+    "name": "Ether",
+    "slug": "ether",
+    "formula": "R-O-R'",
+    "class": "ether",
+    "description": "An oxygen atom bonded to two carbon groups; relatively unreactive under normal conditions due to the absence of a labile hydrogen, making ethers useful as solvents.",
+    "example_compound": "Diethyl ether (C₂H₅OC₂H₅)",
+    "example_compound_slug": "diethyl-ether",
+    "properties": ["polar (lone pairs on O)", "low reactivity", "good solvent", "forms explosive peroxides on prolonged air exposure", "not hydrogen-bond donor"]
+  },
+  {
+    "name": "Halide (Alkyl Halide)",
+    "slug": "halide",
+    "formula": "-X (X = F, Cl, Br, I)",
+    "class": "halide",
+    "description": "A carbon atom bonded to a halogen atom (fluorine, chlorine, bromine, or iodine), making the carbon electrophilic and susceptible to nucleophilic substitution or elimination.",
+    "example_compound": "Chloromethane (CH₃Cl)",
+    "example_compound_slug": "chloromethane",
+    "properties": ["electrophilic carbon", "undergoes SN1/SN2 substitution", "undergoes E1/E2 elimination", "reactivity order: I > Br > Cl > F"]
+  },
+  {
+    "name": "Hydroxyl",
+    "slug": "hydroxyl",
+    "formula": "-OH",
+    "class": "alcohol",
+    "description": "A polar group consisting of an oxygen-hydrogen bond attached to carbon, making molecules water-soluble and capable of forming hydrogen bonds.",
+    "example_compound": "Ethanol (C₂H₅OH)",
+    "example_compound_slug": "ethanol",
+    "properties": ["polar", "hydrogen-bonding", "water-soluble", "amphoteric (weak acid and base)", "oxidizable"]
+  },
+  {
+    "name": "Imine",
+    "slug": "imine",
+    "formula": "R₂C=NR' (or R₂C=NH)",
+    "class": "imine",
+    "description": "A nitrogen-carbon double bond (C=N), analogous to a carbonyl but with nitrogen; formed by condensation of a carbonyl compound with a primary amine, also called a Schiff base.",
+    "example_compound": "Methyleneimine (CH₂=NH)",
+    "example_compound_slug": "methyleneimine",
+    "properties": ["electrophilic at carbon", "hydrolyzable back to carbonyl and amine", "forms in biological transamination reactions", "found in retinal-opsin linkage in vision"]
+  },
+  {
+    "name": "Ketone",
+    "slug": "ketone",
+    "formula": "R-C(=O)-R'",
+    "class": "carbonyl",
+    "description": "A carbonyl group (C=O) flanked by two carbon substituents, less reactive than aldehydes but important in metabolism and synthesis.",
+    "example_compound": "Acetone (CH₃COCH₃)",
+    "example_compound_slug": "acetone",
+    "properties": ["polar", "electrophilic carbonyl", "good solvent", "cannot be oxidized further without C-C cleavage", "undergoes nucleophilic addition"]
+  },
+  {
+    "name": "Lactam",
+    "slug": "lactam",
+    "formula": "Cyclic amide (-NH-C(=O)- in ring)",
+    "class": "lactam",
+    "description": "A cyclic amide in which the amide nitrogen and carbonyl are part of a ring; beta-lactams form the core of penicillin and cephalosporin antibiotics.",
+    "example_compound": "Beta-lactam (azetidin-2-one)",
+    "example_compound_slug": "beta-lactam",
+    "properties": ["cyclic amide stability", "ring strain (especially beta-lactams)", "antibiotic activity (beta-lactams)", "hydrolyzable by beta-lactamases"]
+  },
+  {
+    "name": "Lactone",
+    "slug": "lactone",
+    "formula": "Cyclic ester (-O-C(=O)- in ring)",
+    "class": "lactone",
+    "description": "A cyclic ester formed by intramolecular condensation of a hydroxy acid; found widely in natural products including macrolide antibiotics and flavor compounds.",
+    "example_compound": "Gamma-butyrolactone (C₄H₆O₂)",
+    "example_compound_slug": "gamma-butyrolactone",
+    "properties": ["cyclic ester", "hydrolyzable to hydroxy acid", "found in macrolide antibiotics", "used as flavoring agents"]
+  },
+  {
+    "name": "Nitro",
+    "slug": "nitro",
+    "formula": "-NO₂",
+    "class": "nitro",
+    "description": "A nitrogen atom bonded to two oxygens (one via double bond, one via single bond with negative formal charge), strongly electron-withdrawing and reducible to an amino group.",
+    "example_compound": "Nitrobenzene (C₆H₅NO₂)",
+    "example_compound_slug": "nitrobenzene",
+    "properties": ["strongly electron-withdrawing", "reducible to amine", "explosive in polynitro compounds", "deactivates aromatic ring toward electrophilic substitution"]
+  },
+  {
+    "name": "Nitrile",
+    "slug": "nitrile",
+    "formula": "-C≡N",
+    "class": "nitrile",
+    "description": "A carbon atom triple-bonded to nitrogen, making the carbon electrophilic and the group hydrolyzable to a carboxylic acid or reducible to an amine.",
+    "example_compound": "Acetonitrile (CH₃CN)",
+    "example_compound_slug": "acetonitrile",
+    "properties": ["polar", "linear C≡N bond", "hydrolyzable to amide then carboxylic acid", "reducible to amine", "good polar aprotic solvent"]
+  },
+  {
+    "name": "Phenol",
+    "slug": "phenol",
+    "formula": "-C₆H₄-OH (or ArOH)",
+    "class": "phenol",
+    "description": "A hydroxyl group attached directly to an aromatic ring, which stabilizes the negative charge of the conjugate base through resonance, making phenols much more acidic than alcohols.",
+    "example_compound": "Phenol (C₆H₅OH)",
+    "example_compound_slug": "phenol",
+    "properties": ["more acidic than aliphatic alcohols (pKa ~10)", "hydrogen bonding", "electrophilic aromatic substitution activated", "antiseptic properties"]
+  },
+  {
+    "name": "Phosphate",
+    "slug": "phosphate",
+    "formula": "-OPO₃²⁻ / -OPO(OH)₂",
+    "class": "phosphate",
+    "description": "A phosphorus atom bonded to four oxygens (one or more as ester linkages); the backbone of DNA and RNA and a key energy carrier in ATP.",
+    "example_compound": "Adenosine triphosphate (ATP)",
+    "example_compound_slug": "atp",
+    "properties": ["negatively charged at physiological pH", "energy currency (ATP)", "forms DNA/RNA backbone", "hydrolysis releases significant energy"]
+  },
+  {
+    "name": "Sulfonate",
+    "slug": "sulfonate",
+    "formula": "-SO₃⁻ / -SO₃H",
+    "class": "sulfonate",
+    "description": "A sulfur atom bonded to three oxygens and one carbon; sulfonic acids are much stronger acids than carboxylic acids and sulfonates are excellent leaving groups.",
+    "example_compound": "Methanesulfonic acid (CH₃SO₃H)",
+    "example_compound_slug": "methanesulfonic-acid",
+    "properties": ["strongly acidic", "excellent leaving group (tosylate, mesylate)", "water-soluble", "used in detergents and pharmaceuticals"]
+  },
+  {
+    "name": "Thioether (Sulfide)",
+    "slug": "thioether",
+    "formula": "R-S-R'",
+    "class": "thioether",
+    "description": "A sulfur atom bonded to two carbon groups, the sulfur analog of an ether; less polar than ethers and more nucleophilic due to sulfur's large polarizable electron cloud.",
+    "example_compound": "Dimethyl sulfide ((CH₃)₂S)",
+    "example_compound_slug": "dimethyl-sulfide",
+    "properties": ["nucleophilic sulfur", "oxidizable to sulfoxide or sulfone", "less polar than ethers", "found in methionine amino acid"]
+  },
+  {
+    "name": "Thiol",
+    "slug": "thiol",
+    "formula": "-SH",
+    "class": "thiol",
+    "description": "A sulfur atom bonded to hydrogen, the sulfur analog of a hydroxyl group; more acidic and nucleophilic than alcohols due to sulfur's larger atomic radius.",
+    "example_compound": "Ethanethiol (C₂H₅SH)",
+    "example_compound_slug": "ethanethiol",
+    "properties": ["weakly acidic (pKa ~10-11)", "strongly nucleophilic", "characteristic strong odor", "oxidizes to disulfide", "found in cysteine amino acid"]
+  },
+  {
+    "name": "Alkene (Vinyl group in isolation)",
+    "slug": "alkene",
+    "formula": "C=C",
+    "class": "alkene",
+    "description": "A carbon-carbon double bond consisting of a sigma bond and a pi bond; the pi electrons are nucleophilic and reactive toward electrophilic addition reactions.",
+    "example_compound": "Ethylene (CH₂=CH₂)",
+    "example_compound_slug": "ethylene",
+    "properties": ["planar geometry", "nucleophilic pi bond", "undergoes electrophilic addition", "cis/trans isomerism possible", "polymerizable"]
+  },
+  {
+    "name": "Alkyne",
+    "slug": "alkyne",
+    "formula": "C≡C",
+    "class": "alkyne",
+    "description": "A carbon-carbon triple bond consisting of one sigma and two pi bonds; terminal alkynes are weakly acidic and the triple bond is reactive toward electrophilic and nucleophilic addition.",
+    "example_compound": "Acetylene (HC≡CH)",
+    "example_compound_slug": "acetylene",
+    "properties": ["linear geometry", "weakly acidic (terminal alkyne, pKa ~25)", "nucleophilic", "undergoes addition reactions", "used in Sonogashira coupling"]
+  },
+  {
+    "name": "Vinyl",
+    "slug": "vinyl",
+    "formula": "CH₂=CH-",
+    "class": "vinyl",
+    "description": "An ethenyl substituent group (CH₂=CH-) attached to a molecule; vinyl groups are reactive in polymerization and cross-coupling reactions.",
+    "example_compound": "Vinyl chloride (CH₂=CHCl)",
+    "example_compound_slug": "vinyl-chloride",
+    "properties": ["reactive toward radical and ionic polymerization", "undergoes cross-coupling reactions", "electrophilic when attached to electron-withdrawing groups", "forms PVC polymer"]
+  },
+  {
+    "name": "Carbonate Ester",
+    "slug": "carbonate-ester",
+    "formula": "R-O-C(=O)-O-R'",
+    "class": "carbonate",
+    "description": "An ester of carbonic acid featuring two alkoxy groups flanking a carbonyl; used as solvents, in polycarbonate plastics, and as reagents for introducing carbonyl groups.",
+    "example_compound": "Dimethyl carbonate ((CH₃O)₂CO)",
+    "example_compound_slug": "dimethyl-carbonate",
+    "properties": ["polar solvent", "low toxicity (cyclic carbonates)", "hydrolyzable to alcohols and CO₂", "used in polycarbonate synthesis"]
+  }
+]

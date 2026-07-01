@@ -542,6 +542,259 @@ if [ -f "ai/models.json" ]; then
     require_fields "ai/models.json" slug name provider
 fi
 
+# Programming
+if [ -f "programming/languages/languages.json" ]; then
+    echo "  Checking programming/languages/languages.json..."
+    COUNT=$(jq 'length' programming/languages/languages.json)
+    echo "    $COUNT programming languages"
+    require_fields "programming/languages/languages.json" slug name year
+fi
+
+if [ -f "programming/frameworks/frameworks.json" ]; then
+    echo "  Checking programming/frameworks/frameworks.json..."
+    COUNT=$(jq 'length' programming/frameworks/frameworks.json)
+    echo "    $COUNT frameworks"
+    require_fields "programming/frameworks/frameworks.json" slug name language type
+fi
+
+# Web browsers
+if [ -f "web/browsers/browsers.json" ]; then
+    echo "  Checking web/browsers/browsers.json..."
+    COUNT=$(jq 'length' web/browsers/browsers.json)
+    echo "    $COUNT browsers"
+    require_fields "web/browsers/browsers.json" slug name engine vendor
+fi
+
+# History
+if [ -f "history/eras/eras.json" ]; then
+    echo "  Checking history/eras/eras.json..."
+    COUNT=$(jq 'length' history/eras/eras.json)
+    echo "    $COUNT historical eras"
+    require_fields "history/eras/eras.json" slug name start_year
+fi
+
+if [ -f "history/inventions/inventions.json" ]; then
+    echo "  Checking history/inventions/inventions.json..."
+    COUNT=$(jq 'length' history/inventions/inventions.json)
+    echo "    $COUNT inventions"
+    require_fields "history/inventions/inventions.json" slug name year category
+fi
+
+# Space
+if [ -f "space/missions/missions.json" ]; then
+    echo "  Checking space/missions/missions.json..."
+    COUNT=$(jq 'length' space/missions/missions.json)
+    echo "    $COUNT space missions"
+    require_fields "space/missions/missions.json" slug name agency year
+    VALID_STATUS='["completed","active","failed","planned"]'
+    BAD_STATUS=$(jq --argjson v "$VALID_STATUS" '[.[] | select(.status as $s | ($v | index($s)) == null)] | length' space/missions/missions.json 2>/dev/null || echo "0")
+    [ "$BAD_STATUS" != "0" ] && echo " WARN space/missions/missions.json — $BAD_STATUS entries with unexpected status"
+fi
+
+if [ -f "space/dwarf-planets/dwarf-planets.json" ]; then
+    echo "  Checking space/dwarf-planets/dwarf-planets.json..."
+    COUNT=$(jq 'length' space/dwarf-planets/dwarf-planets.json)
+    echo "    $COUNT dwarf planets"
+    require_fields "space/dwarf-planets/dwarf-planets.json" slug name iau_status
+fi
+
+# Chemistry / Physics
+if [ -f "chemistry/functional-groups/groups.json" ]; then
+    echo "  Checking chemistry/functional-groups/groups.json..."
+    COUNT=$(jq 'length' chemistry/functional-groups/groups.json)
+    echo "    $COUNT functional groups"
+    require_fields "chemistry/functional-groups/groups.json" slug name formula
+fi
+
+if [ -f "physics/laws/laws.json" ]; then
+    echo "  Checking physics/laws/laws.json..."
+    COUNT=$(jq 'length' physics/laws/laws.json)
+    echo "    $COUNT physics laws/principles"
+    require_fields "physics/laws/laws.json" slug name field
+fi
+
+# Medicine / Sports / Biology
+if [ -f "medicine/specialties/specialties.json" ]; then
+    echo "  Checking medicine/specialties/specialties.json..."
+    COUNT=$(jq 'length' medicine/specialties/specialties.json)
+    echo "    $COUNT medical specialties"
+    require_fields "medicine/specialties/specialties.json" slug name type focus
+fi
+
+if [ -f "sports/sports.json" ]; then
+    echo "  Checking sports/sports.json..."
+    COUNT=$(jq 'length' sports/sports.json)
+    echo "    $COUNT sports"
+    require_fields "sports/sports.json" slug name category
+fi
+
+if [ -f "biology/taxonomy/taxonomy.json" ]; then
+    echo "  Checking biology/taxonomy/taxonomy.json..."
+    COUNT=$(jq 'length' biology/taxonomy/taxonomy.json)
+    echo "    $COUNT taxonomic entries"
+    require_fields "biology/taxonomy/taxonomy.json" slug name rank
+    MISSING_DOMAIN=$(jq '[.[] | select(.rank != "domain" and (.domain == null or .domain == ""))] | length' biology/taxonomy/taxonomy.json 2>/dev/null || echo "0")
+    [ "$MISSING_DOMAIN" != "0" ] && echo " WARN biology/taxonomy/taxonomy.json — $MISSING_DOMAIN non-domain entries missing 'domain' field"
+fi
+
+# Food / Music / Gaming expansions
+if [ -f "food/cuisines/cuisines.json" ]; then
+    echo "  Checking food/cuisines/cuisines.json..."
+    COUNT=$(jq 'length' food/cuisines/cuisines.json)
+    echo "    $COUNT cuisines"
+    [ "$COUNT" -lt 30 ] && echo " WARN food/cuisines/cuisines.json — expected 50+ cuisines, got $COUNT"
+    require_fields "food/cuisines/cuisines.json" slug name country continent
+fi
+
+if [ -f "food/nutrition/nutrients.json" ]; then
+    echo "  Checking food/nutrition/nutrients.json..."
+    COUNT=$(jq 'length' food/nutrition/nutrients.json)
+    echo "    $COUNT nutrients"
+    require_fields "food/nutrition/nutrients.json" slug name category
+fi
+
+if [ -f "music/genres/genres.json" ]; then
+    echo "  Checking music/genres/genres.json..."
+    COUNT=$(jq 'length' music/genres/genres.json)
+    echo "    $COUNT music genres"
+    require_fields "music/genres/genres.json" slug name origin_decade
+fi
+
+if [ -f "gaming/genres/genres.json" ]; then
+    echo "  Checking gaming/genres/genres.json..."
+    COUNT=$(jq 'length' gaming/genres/genres.json)
+    echo "    $COUNT gaming genres"
+    require_fields "gaming/genres/genres.json" slug name
+fi
+
+if [ -f "gaming/platforms/platforms.json" ]; then
+    echo "  Checking gaming/platforms/platforms.json..."
+    COUNT=$(jq 'length' gaming/platforms/platforms.json)
+    echo "    $COUNT gaming platforms"
+    require_fields "gaming/platforms/platforms.json" slug name manufacturer
+fi
+
+# Geo expansions
+if [ -f "geo/mountains/peaks.json" ]; then
+    echo "  Checking geo/mountains/peaks.json..."
+    COUNT=$(jq 'length' geo/mountains/peaks.json)
+    echo "    $COUNT peaks"
+    require_fields "geo/mountains/peaks.json" slug name elevation_m country_iso2
+    NEG_ELEV=$(jq '[.[] | select(.elevation_m <= 0)] | length' geo/mountains/peaks.json 2>/dev/null || echo "0")
+    [ "$NEG_ELEV" != "0" ] && echo " WARN geo/mountains/peaks.json — $NEG_ELEV entries with non-positive elevation"
+fi
+
+if [ -f "geo/rivers/rivers.json" ]; then
+    echo "  Checking geo/rivers/rivers.json..."
+    COUNT=$(jq 'length' geo/rivers/rivers.json)
+    echo "    $COUNT rivers"
+    require_fields "geo/rivers/rivers.json" slug name length_km continent
+fi
+
+if [ -f "geo/oceans/oceans.json" ]; then
+    echo "  Checking geo/oceans/oceans.json..."
+    COUNT=$(jq 'length' geo/oceans/oceans.json)
+    echo "    $COUNT oceans/seas"
+    require_fields "geo/oceans/oceans.json" slug name type area_km2
+fi
+
+if [ -f "geo/currencies/currencies.json" ]; then
+    echo "  Checking geo/currencies/currencies.json..."
+    COUNT=$(jq 'length' geo/currencies/currencies.json)
+    echo "    $COUNT currencies"
+    [ "$COUNT" -lt 50 ] && echo " WARN geo/currencies/currencies.json — expected 80+ currencies, got $COUNT"
+    require_fields "geo/currencies/currencies.json" code name symbol decimals
+    DUPE_CODES=$(jq '[.[].code] | group_by(.) | map(select(length > 1)) | length' geo/currencies/currencies.json 2>/dev/null || echo "0")
+    [ "$DUPE_CODES" != "0" ] && echo " WARN geo/currencies/currencies.json — $DUPE_CODES duplicate currency codes"
+fi
+
+echo ""
+echo "=== Cross-reference checks ==="
+
+# Check: ISO codes in flags/countries/flags.json exist in geo/countries/countries.json
+if [ -f "flags/countries/flags.json" ] && [ -f "geo/countries/countries.json" ]; then
+    echo "  Cross-checking flag ISO codes against countries..."
+    ORPHAN_FLAGS=$(python3 - <<'PYEOF'
+import json
+flags = json.load(open('flags/countries/flags.json'))
+countries = json.load(open('geo/countries/countries.json'))
+country_iso2s = {c['iso2'] for c in countries}
+missing = [f.get('iso', f.get('name', '?')) for f in flags if f.get('iso') and f['iso'] not in country_iso2s]
+print(len(missing))
+if missing: print('  Missing in countries.json:', ', '.join(missing[:10]))
+PYEOF
+)
+    COUNT=$(echo "$ORPHAN_FLAGS" | head -1)
+    [ "$COUNT" != "0" ] && echo " WARN $COUNT flag ISO code(s) not found in geo/countries/countries.json" && echo "$ORPHAN_FLAGS" | tail -1
+    [ "$COUNT" = "0" ] && echo "  OK  All flag ISO codes found in countries.json"
+fi
+
+# Check: country_iso2 in geo/airports/airports.json exist in geo/countries/countries.json
+if [ -f "geo/airports/airports.json" ] && [ -f "geo/countries/countries.json" ]; then
+    echo "  Cross-checking airport country codes against countries..."
+    ORPHAN_AIRPORTS=$(python3 - <<'PYEOF'
+import json
+airports = json.load(open('geo/airports/airports.json'))
+countries = json.load(open('geo/countries/countries.json'))
+country_iso2s = {c['iso2'] for c in countries}
+missing = [a.get('iata','?') for a in airports if a.get('country_iso2') and a['country_iso2'] not in country_iso2s]
+print(len(missing))
+if missing: print('  Missing airports:', ', '.join(missing[:10]))
+PYEOF
+)
+    COUNT=$(echo "$ORPHAN_AIRPORTS" | head -1)
+    [ "$COUNT" != "0" ] && echo " WARN $COUNT airport(s) reference unknown country_iso2" && echo "$ORPHAN_AIRPORTS" | tail -1
+    [ "$COUNT" = "0" ] && echo "  OK  All airport country_iso2 codes found in countries.json"
+fi
+
+# Check: currency_code in geo/countries/countries.json exist in geo/currencies/currencies.json
+if [ -f "geo/countries/countries.json" ] && [ -f "geo/currencies/currencies.json" ]; then
+    echo "  Cross-checking country currency codes against currencies..."
+    ORPHAN_CURRENCIES=$(python3 - <<'PYEOF'
+import json
+countries = json.load(open('geo/countries/countries.json'))
+currencies = json.load(open('geo/currencies/currencies.json'))
+currency_codes = {c['code'] for c in currencies}
+missing = [c['iso2'] + '/' + c.get('currency_code','?') for c in countries if c.get('currency_code') and c['currency_code'] not in currency_codes]
+print(len(missing))
+if missing: print('  Unknown currency codes:', ', '.join(missing[:10]))
+PYEOF
+)
+    COUNT=$(echo "$ORPHAN_CURRENCIES" | head -1)
+    [ "$COUNT" != "0" ] && echo " WARN $COUNT country/ies reference currency code not in geo/currencies/currencies.json" && echo "$ORPHAN_CURRENCIES" | tail -1
+    [ "$COUNT" = "0" ] && echo "  OK  All country currency codes found in currencies.json"
+fi
+
+# Check: Windows Terminal export count matches themes count
+if [ -f "colors/terminal/themes.json" ] && [ -f "colors/terminal/export/windows-terminal.json" ]; then
+    echo "  Cross-checking Windows Terminal export count..."
+    THEME_COUNT=$(jq 'length' colors/terminal/themes.json)
+    WT_COUNT=$(jq 'length' colors/terminal/export/windows-terminal.json)
+    if [ "$THEME_COUNT" != "$WT_COUNT" ]; then
+        echo " WARN colors/terminal/export/windows-terminal.json has $WT_COUNT entries but themes.json has $THEME_COUNT — run: python3 scripts/build-manifest.js"
+    else
+        echo "  OK  Windows Terminal export count matches themes ($WT_COUNT)"
+    fi
+fi
+
+# Check: country_iso2 in geo/mountains/peaks.json exist in geo/countries/countries.json
+if [ -f "geo/mountains/peaks.json" ] && [ -f "geo/countries/countries.json" ]; then
+    echo "  Cross-checking mountain country codes against countries..."
+    ORPHAN_PEAKS=$(python3 - <<'PYEOF'
+import json
+peaks = json.load(open('geo/mountains/peaks.json'))
+countries = json.load(open('geo/countries/countries.json'))
+iso2s = {c['iso2'] for c in countries}
+missing = [p.get('name','?') for p in peaks if p.get('country_iso2') and p['country_iso2'] not in iso2s]
+print(len(missing))
+if missing: print('  Unknown country_iso2:', ', '.join(missing[:10]))
+PYEOF
+)
+    COUNT=$(echo "$ORPHAN_PEAKS" | head -1)
+    [ "$COUNT" != "0" ] && echo " WARN $COUNT peak(s) reference unknown country_iso2" && echo "$ORPHAN_PEAKS" | tail -1
+    [ "$COUNT" = "0" ] && echo "  OK  All peak country_iso2 codes found in countries.json"
+fi
+
 echo ""
 echo "=== Summary ==="
 echo "  JSON files checked: $JSON_COUNT"

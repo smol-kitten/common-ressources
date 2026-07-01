@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Anesthesiology",
+    "slug": "anesthesiology",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Administration of anesthesia and perioperative care for surgical and procedural patients.",
+    "common_conditions": ["acute pain", "chronic pain", "surgical anesthesia needs", "critical illness"],
+    "procedures": ["general anesthesia", "regional nerve block", "spinal/epidural anesthesia", "airway management", "sedation"],
+    "description": "Anesthesiologists manage anesthesia, pain control, and life-support functions before, during, and after surgery."
+  },
+  {
+    "name": "Cardiology",
+    "slug": "cardiology",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Diagnosis and treatment of heart and cardiovascular system diseases.",
+    "common_conditions": ["coronary artery disease", "heart failure", "arrhythmia", "hypertension", "valvular heart disease"],
+    "procedures": ["ECG", "echocardiogram", "cardiac catheterization", "stent placement", "cardioversion"],
+    "description": "Cardiologists manage conditions affecting the heart and blood vessels, from prevention to intervention."
+  },
+  {
+    "name": "Colorectal Surgery",
+    "slug": "colorectal-surgery",
+    "type": "surgical",
+    "parent_specialty": "General Surgery",
+    "focus": "Surgical treatment of diseases of the colon, rectum, and anus.",
+    "common_conditions": ["colorectal cancer", "diverticulitis", "inflammatory bowel disease", "hemorrhoids", "anal fistula"],
+    "procedures": ["colectomy", "rectal resection", "colostomy", "hemorrhoidectomy", "colonoscopy with intervention"],
+    "description": "Colorectal surgeons specialize in the surgical management of disorders of the large intestine, rectum, and anus."
+  },
+  {
+    "name": "Dermatology",
+    "slug": "dermatology",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Diagnosis and treatment of diseases affecting the skin, hair, and nails.",
+    "common_conditions": ["acne", "eczema", "psoriasis", "skin cancer", "melanoma", "rosacea"],
+    "procedures": ["skin biopsy", "cryotherapy", "Mohs surgery", "laser therapy", "phototherapy"],
+    "description": "Dermatologists diagnose and treat over 3,000 conditions affecting the skin, hair, and nails, including skin cancers."
+  },
+  {
+    "name": "Emergency Medicine",
+    "slug": "emergency-medicine",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Immediate evaluation and treatment of acute and life-threatening conditions.",
+    "common_conditions": ["trauma", "chest pain", "stroke", "sepsis", "acute abdomen", "respiratory failure"],
+    "procedures": ["resuscitation", "intubation", "wound repair", "chest tube insertion", "fracture reduction"],
+    "description": "Emergency physicians provide rapid assessment and stabilization of patients with acute, urgent, or life-threatening conditions."
+  },
+  {
+    "name": "Endocrinology",
+    "slug": "endocrinology",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Diagnosis and management of hormonal and metabolic disorders.",
+    "common_conditions": ["diabetes mellitus", "thyroid disorders", "adrenal disorders", "osteoporosis", "pituitary disease"],
+    "procedures": ["thyroid ultrasound", "fine needle aspiration", "glucose tolerance test", "hormone stimulation tests"],
+    "description": "Endocrinologists manage disorders of the endocrine glands, including the thyroid, adrenal glands, pancreas, and pituitary gland."
+  },
+  {
+    "name": "Family Medicine",
+    "slug": "family-medicine",
+    "type": "primary-care",
+    "parent_specialty": null,
+    "focus": "Comprehensive primary care for patients of all ages across all organ systems.",
+    "common_conditions": ["hypertension", "diabetes", "upper respiratory infections", "mental health disorders", "preventive care"],
+    "procedures": ["physical examinations", "vaccinations", "minor wound care", "Pap smear", "ECG"],
+    "description": "Family physicians provide continuing and comprehensive health care for individuals and families across all ages, genders, and diseases."
+  },
+  {
+    "name": "Gastroenterology",
+    "slug": "gastroenterology",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Diagnosis and treatment of disorders of the gastrointestinal tract and liver.",
+    "common_conditions": ["GERD", "irritable bowel syndrome", "Crohn's disease", "ulcerative colitis", "liver cirrhosis", "peptic ulcer"],
+    "procedures": ["endoscopy", "colonoscopy", "ERCP", "liver biopsy", "capsule endoscopy"],
+    "description": "Gastroenterologists specialize in the digestive system, including the esophagus, stomach, intestines, pancreas, liver, and gallbladder."
+  },
+  {
+    "name": "General Practice",
+    "slug": "general-practice",
+    "type": "primary-care",
+    "parent_specialty": null,
+    "focus": "First-contact and continuing care for undifferentiated health problems across all ages.",
+    "common_conditions": ["infections", "chronic disease management", "mental health", "musculoskeletal complaints", "preventive care"],
+    "procedures": ["physical examination", "vaccinations", "minor procedures", "health screening", "referrals"],
+    "description": "General practitioners serve as the first point of contact in the healthcare system, managing a broad range of acute and chronic conditions."
+  },
+  {
+    "name": "General Surgery",
+    "slug": "general-surgery",
+    "type": "surgical",
+    "parent_specialty": null,
+    "focus": "Surgical management of abdominal organs, skin, breast, and soft tissue conditions.",
+    "common_conditions": ["appendicitis", "gallbladder disease", "hernia", "breast cancer", "bowel obstruction"],
+    "procedures": ["appendectomy", "cholecystectomy", "herniorrhaphy", "mastectomy", "laparotomy"],
+    "description": "General surgeons perform a wide range of operations involving the abdomen, digestive tract, breast, skin, and soft tissues."
+  },
+  {
+    "name": "Genetics",
+    "slug": "genetics",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Diagnosis and management of inherited genetic conditions and chromosomal disorders.",
+    "common_conditions": ["Down syndrome", "cystic fibrosis", "hereditary cancer syndromes", "chromosomal abnormalities", "metabolic disorders"],
+    "procedures": ["genetic counseling", "karyotyping", "DNA sequencing", "prenatal genetic testing", "carrier testing"],
+    "description": "Clinical geneticists diagnose and manage inherited disorders, and provide genetic counseling to patients and families at risk."
+  },
+  {
+    "name": "Geriatrics",
+    "slug": "geriatrics",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Comprehensive care for elderly patients, addressing multiple chronic conditions and functional decline.",
+    "common_conditions": ["dementia", "falls", "frailty", "polypharmacy", "delirium", "osteoporosis"],
+    "procedures": ["comprehensive geriatric assessment", "medication review", "cognitive testing", "functional assessment"],
+    "description": "Geriatricians specialize in the health care of older adults, focusing on the prevention and treatment of diseases common in old age."
+  },
+  {
+    "name": "Hematology",
+    "slug": "hematology",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Diagnosis and treatment of blood disorders and diseases of the bone marrow.",
+    "common_conditions": ["anemia", "leukemia", "lymphoma", "clotting disorders", "sickle cell disease", "myeloma"],
+    "procedures": ["bone marrow biopsy", "blood transfusion", "stem cell transplant", "flow cytometry", "coagulation studies"],
+    "description": "Hematologists manage disorders of the blood, including cancers such as leukemia and lymphoma, anemia, and clotting disorders."
+  },
+  {
+    "name": "Infectious Disease",
+    "slug": "infectious-disease",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Diagnosis and management of complex infections caused by bacteria, viruses, fungi, and parasites.",
+    "common_conditions": ["HIV/AIDS", "tuberculosis", "sepsis", "endocarditis", "meningitis", "tropical infections"],
+    "procedures": ["lumbar puncture", "culture and sensitivity testing", "infectious serology", "antimicrobial stewardship"],
+    "description": "Infectious disease specialists diagnose and treat complex or unusual infections and advise on antimicrobial therapy and infection control."
+  },
+  {
+    "name": "Internal Medicine",
+    "slug": "internal-medicine",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Diagnosis and non-surgical management of complex diseases in adults.",
+    "common_conditions": ["hypertension", "diabetes", "heart failure", "COPD", "chronic kidney disease"],
+    "procedures": ["diagnostic workup", "medical management", "procedures such as thoracentesis and paracentesis"],
+    "description": "Internists (hospitalists and general internists) manage complex multi-system diseases in adults, often serving as diagnosticians and care coordinators."
+  },
+  {
+    "name": "Nephrology",
+    "slug": "nephrology",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Diagnosis and treatment of kidney diseases and management of kidney replacement therapy.",
+    "common_conditions": ["chronic kidney disease", "acute kidney injury", "nephrotic syndrome", "hypertension", "glomerulonephritis"],
+    "procedures": ["kidney biopsy", "hemodialysis", "peritoneal dialysis", "renal ultrasound"],
+    "description": "Nephrologists manage kidney disease, hypertension related to kidney function, and renal replacement therapy including dialysis and transplantation."
+  },
+  {
+    "name": "Neurology",
+    "slug": "neurology",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Diagnosis and treatment of disorders of the brain, spinal cord, and peripheral nervous system.",
+    "common_conditions": ["stroke", "epilepsy", "Parkinson's disease", "multiple sclerosis", "migraine", "dementia"],
+    "procedures": ["EEG", "EMG", "nerve conduction studies", "lumbar puncture", "MRI interpretation"],
+    "description": "Neurologists diagnose and treat a wide spectrum of nervous system disorders, from stroke and epilepsy to neurodegenerative diseases."
+  },
+  {
+    "name": "Neurosurgery",
+    "slug": "neurosurgery",
+    "type": "surgical",
+    "parent_specialty": null,
+    "focus": "Surgical treatment of disorders of the brain, spine, and peripheral nerves.",
+    "common_conditions": ["brain tumors", "spinal disc herniation", "intracranial hemorrhage", "hydrocephalus", "spinal cord injury"],
+    "procedures": ["craniotomy", "spinal fusion", "deep brain stimulation", "ventriculoperitoneal shunt", "laminectomy"],
+    "description": "Neurosurgeons perform operations on the brain, spine, and peripheral nervous system to treat tumors, trauma, vascular malformations, and degenerative conditions."
+  },
+  {
+    "name": "Obstetrics and Gynecology",
+    "slug": "obstetrics-gynecology",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Women's reproductive health, pregnancy, childbirth, and gynecological conditions.",
+    "common_conditions": ["pregnancy complications", "endometriosis", "uterine fibroids", "ovarian cysts", "cervical cancer", "polycystic ovary syndrome"],
+    "procedures": ["cesarean section", "hysterectomy", "laparoscopy", "Pap smear", "colposcopy", "amniocentesis"],
+    "description": "OB/GYN physicians manage all aspects of women's reproductive health, from routine gynecological care to high-risk obstetrics and gynecologic surgery."
+  },
+  {
+    "name": "Oncology",
+    "slug": "oncology",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Diagnosis and treatment of cancer using systemic therapies.",
+    "common_conditions": ["lung cancer", "breast cancer", "colorectal cancer", "leukemia", "lymphoma", "prostate cancer"],
+    "procedures": ["chemotherapy administration", "immunotherapy", "targeted therapy", "bone marrow biopsy", "tumor biopsy"],
+    "description": "Medical oncologists diagnose and treat cancer with chemotherapy, immunotherapy, targeted therapy, and coordinate multidisciplinary cancer care."
+  },
+  {
+    "name": "Ophthalmology",
+    "slug": "ophthalmology",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Diagnosis and treatment of diseases and disorders of the eye and vision.",
+    "common_conditions": ["glaucoma", "cataracts", "macular degeneration", "diabetic retinopathy", "strabismus", "dry eye disease"],
+    "procedures": ["cataract surgery", "LASIK", "retinal laser photocoagulation", "intravitreal injections", "tonometry"],
+    "description": "Ophthalmologists provide medical and surgical care for the eye, managing conditions ranging from refractive errors to complex retinal diseases."
+  },
+  {
+    "name": "Orthopedics",
+    "slug": "orthopedics",
+    "type": "surgical",
+    "parent_specialty": null,
+    "focus": "Diagnosis and surgical or non-surgical treatment of musculoskeletal system disorders.",
+    "common_conditions": ["fractures", "osteoarthritis", "ACL tears", "rotator cuff injuries", "spinal stenosis", "scoliosis"],
+    "procedures": ["joint replacement", "fracture fixation", "arthroscopy", "spinal fusion", "tendon repair"],
+    "description": "Orthopedic surgeons treat injuries and diseases of the bones, joints, ligaments, tendons, muscles, and spine."
+  },
+  {
+    "name": "Otolaryngology",
+    "slug": "otolaryngology",
+    "type": "surgical",
+    "parent_specialty": null,
+    "focus": "Diagnosis and treatment of diseases of the ear, nose, throat, head, and neck.",
+    "common_conditions": ["otitis media", "sinusitis", "hearing loss", "sleep apnea", "tonsillitis", "head and neck cancer"],
+    "procedures": ["tonsillectomy", "tympanostomy tube insertion", "functional endoscopic sinus surgery", "laryngoscopy", "cochlear implant"],
+    "description": "ENT specialists manage disorders of the ear, nose, throat, and related structures of the head and neck, including both medical and surgical treatments."
+  },
+  {
+    "name": "Palliative Care",
+    "slug": "palliative-care",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Relief of symptoms, pain, and stress from serious illness to improve quality of life.",
+    "common_conditions": ["cancer pain", "dyspnea", "terminal illness", "chronic pain", "end-of-life care needs"],
+    "procedures": ["pain management", "symptom assessment", "goals-of-care discussions", "advance care planning"],
+    "description": "Palliative care specialists focus on relieving suffering and improving quality of life for patients with serious illnesses and their families."
+  },
+  {
+    "name": "Pathology",
+    "slug": "pathology",
+    "type": "diagnostic",
+    "parent_specialty": null,
+    "focus": "Laboratory analysis of tissues, cells, and body fluids to diagnose disease.",
+    "common_conditions": ["cancer diagnosis", "infectious disease identification", "autoimmune disease", "metabolic disorders"],
+    "procedures": ["histopathology", "cytology", "immunohistochemistry", "autopsy", "molecular pathology"],
+    "description": "Pathologists examine specimens from biopsies, surgeries, and autopsies to diagnose diseases, guide treatment, and advance medical knowledge."
+  },
+  {
+    "name": "Pediatrics",
+    "slug": "pediatrics",
+    "type": "primary-care",
+    "parent_specialty": null,
+    "focus": "Medical care for infants, children, and adolescents from birth through young adulthood.",
+    "common_conditions": ["otitis media", "asthma", "childhood infections", "developmental disorders", "congenital abnormalities"],
+    "procedures": ["well-child visits", "vaccinations", "developmental screening", "neonatal assessment"],
+    "description": "Pediatricians manage the physical, mental, and social health of children from birth to young adulthood, with emphasis on growth, development, and prevention."
+  },
+  {
+    "name": "Plastic Surgery",
+    "slug": "plastic-surgery",
+    "type": "surgical",
+    "parent_specialty": null,
+    "focus": "Reconstruction of facial and body defects and aesthetic enhancement procedures.",
+    "common_conditions": ["burn injuries", "cleft lip/palate", "breast reconstruction", "skin cancer defects", "hand injuries"],
+    "procedures": ["skin grafting", "flap reconstruction", "rhinoplasty", "breast augmentation", "hand surgery"],
+    "description": "Plastic surgeons restore form and function through reconstructive procedures after trauma or cancer, and perform aesthetic surgery to alter appearance."
+  },
+  {
+    "name": "Psychiatry",
+    "slug": "psychiatry",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Diagnosis, treatment, and prevention of mental, emotional, and behavioral disorders.",
+    "common_conditions": ["depression", "schizophrenia", "bipolar disorder", "anxiety disorders", "PTSD", "substance use disorders"],
+    "procedures": ["psychotherapy", "psychopharmacology", "electroconvulsive therapy", "psychiatric assessment"],
+    "description": "Psychiatrists diagnose and treat mental health disorders using a combination of medication, psychotherapy, and other therapeutic approaches."
+  },
+  {
+    "name": "Pulmonology",
+    "slug": "pulmonology",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Diagnosis and treatment of diseases of the respiratory tract and lungs.",
+    "common_conditions": ["COPD", "asthma", "pneumonia", "pulmonary fibrosis", "lung cancer", "sleep apnea"],
+    "procedures": ["spirometry", "bronchoscopy", "thoracentesis", "polysomnography", "pulmonary function tests"],
+    "description": "Pulmonologists manage diseases of the lungs and respiratory system, including obstructive, restrictive, infectious, and malignant conditions."
+  },
+  {
+    "name": "Radiology",
+    "slug": "radiology",
+    "type": "diagnostic",
+    "parent_specialty": null,
+    "focus": "Medical imaging for the diagnosis and guided treatment of disease.",
+    "common_conditions": ["cancer detection", "fractures", "vascular disease", "organ pathology", "neurological disorders"],
+    "procedures": ["X-ray", "CT scan", "MRI", "ultrasound", "PET scan", "interventional radiology"],
+    "description": "Radiologists interpret medical images to diagnose disease and perform image-guided interventional procedures for diagnosis and treatment."
+  },
+  {
+    "name": "Rehabilitation Medicine",
+    "slug": "rehabilitation-medicine",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Restoration of function and quality of life in patients with physical impairments or disabilities.",
+    "common_conditions": ["stroke", "spinal cord injury", "traumatic brain injury", "amputations", "musculoskeletal injuries"],
+    "procedures": ["functional assessment", "physical therapy direction", "prosthetics management", "electrodiagnosis", "spasticity management"],
+    "description": "Physiatrists (rehabilitation medicine specialists) diagnose and treat disabilities resulting from injury or disease to restore maximum function."
+  },
+  {
+    "name": "Rheumatology",
+    "slug": "rheumatology",
+    "type": "clinical",
+    "parent_specialty": "Internal Medicine",
+    "focus": "Diagnosis and treatment of autoimmune and musculoskeletal diseases.",
+    "common_conditions": ["rheumatoid arthritis", "systemic lupus erythematosus", "gout", "ankylosing spondylitis", "vasculitis"],
+    "procedures": ["joint aspiration", "synovial fluid analysis", "ANA/RF testing", "musculoskeletal ultrasound", "joint injection"],
+    "description": "Rheumatologists manage inflammatory arthritis and autoimmune diseases affecting joints, muscles, bones, and internal organs."
+  },
+  {
+    "name": "Sports Medicine",
+    "slug": "sports-medicine",
+    "type": "clinical",
+    "parent_specialty": null,
+    "focus": "Prevention, diagnosis, and treatment of injuries related to sports and physical activity.",
+    "common_conditions": ["ligament sprains", "tendinopathy", "stress fractures", "concussion", "overuse injuries"],
+    "procedures": ["musculoskeletal ultrasound", "joint injection", "platelet-rich plasma therapy", "exercise prescription", "concussion assessment"],
+    "description": "Sports medicine physicians treat athletic injuries and musculoskeletal conditions, and promote physical activity for health across all age groups."
+  },
+  {
+    "name": "Trauma Surgery",
+    "slug": "trauma-surgery",
+    "type": "surgical",
+    "parent_specialty": "General Surgery",
+    "focus": "Emergency surgical management of life-threatening injuries from trauma.",
+    "common_conditions": ["penetrating trauma", "blunt abdominal trauma", "traumatic hemorrhage", "chest injuries", "crush injuries"],
+    "procedures": ["damage control surgery", "exploratory laparotomy", "thoracotomy", "hemorrhage control", "wound debridement"],
+    "description": "Trauma surgeons provide immediate surgical intervention to patients with severe, life-threatening injuries from accidents, violence, or disasters."
+  },
+  {
+    "name": "Urology",
+    "slug": "urology",
+    "type": "surgical",
+    "parent_specialty": null,
+    "focus": "Surgical and medical management of the urinary tract and male reproductive system.",
+    "common_conditions": ["kidney stones", "prostate cancer", "bladder cancer", "urinary incontinence", "benign prostatic hyperplasia"],
+    "procedures": ["cystoscopy", "transurethral resection of prostate", "nephrectomy", "lithotripsy", "robotic prostatectomy"],
+    "description": "Urologists diagnose and treat conditions of the kidney, ureter, bladder, and urethra, as well as male reproductive disorders."
+  },
+  {
+    "name": "Vascular Surgery",
+    "slug": "vascular-surgery",
+    "type": "surgical",
+    "parent_specialty": "General Surgery",
+    "focus": "Surgical and endovascular treatment of diseases of arteries, veins, and lymphatics.",
+    "common_conditions": ["aortic aneurysm", "peripheral artery disease", "carotid artery stenosis", "deep vein thrombosis", "varicose veins"],
+    "procedures": ["aortic aneurysm repair", "carotid endarterectomy", "bypass grafting", "endovascular stenting", "varicose vein ablation"],
+    "description": "Vascular surgeons treat diseases of the blood vessels outside the heart and brain, using open surgical and minimally invasive endovascular techniques."
+  }
+]

@@ -1,0 +1,252 @@
+[
+  {
+    "name": "Prehistoric Era",
+    "slug": "prehistoric-era",
+    "start_year": -3000000,
+    "end_year": -3200,
+    "region": "global",
+    "description": "The period of human history before the invention of writing systems, encompassing the development of stone tools, fire, language, and early social structures.",
+    "key_developments": ["stone tools", "fire control", "cave art", "agriculture", "animal domestication", "pottery"],
+    "key_figures": ["Homo habilis", "Homo erectus", "Homo sapiens"]
+  },
+  {
+    "name": "Ancient Egypt",
+    "slug": "ancient-egypt",
+    "start_year": -3100,
+    "end_year": -30,
+    "region": "africa",
+    "description": "One of the world's earliest and longest-lasting civilizations, centered on the Nile River, characterized by pharaonic rule, monumental architecture, and hieroglyphic writing.",
+    "key_developments": ["hieroglyphic writing", "pyramids", "mummification", "papyrus", "irrigation", "centralized state"],
+    "key_figures": ["Narmer", "Khufu", "Hatshepsut", "Ramesses II", "Cleopatra VII"]
+  },
+  {
+    "name": "Bronze Age",
+    "slug": "bronze-age",
+    "start_year": -3000,
+    "end_year": -1200,
+    "region": "global",
+    "description": "Period characterized by the widespread use of bronze for tools and weapons, the rise of early states and cities, and the development of writing systems across multiple regions.",
+    "key_developments": ["bronze metallurgy", "cuneiform writing", "city-states", "wheeled vehicles", "long-distance trade"],
+    "key_figures": ["Sargon of Akkad", "Hammurabi", "Tutankhamun"]
+  },
+  {
+    "name": "Classical Greece",
+    "slug": "classical-greece",
+    "start_year": -510,
+    "end_year": -323,
+    "region": "mediterranean",
+    "description": "The golden age of ancient Greek culture, marked by the emergence of democracy, philosophy, drama, and advances in mathematics and science centered in Athens and other city-states.",
+    "key_developments": ["democracy", "philosophy", "theater", "Olympic games", "coinage", "naval warfare"],
+    "key_figures": ["Socrates", "Plato", "Aristotle", "Pericles", "Herodotus", "Pythagoras", "Euclid"]
+  },
+  {
+    "name": "Roman Republic",
+    "slug": "roman-republic",
+    "start_year": -509,
+    "end_year": -27,
+    "region": "mediterranean",
+    "description": "The republican phase of ancient Rome, governed by a senate and elected consuls, during which Rome expanded to dominate the Mediterranean world through military conquest and political organization.",
+    "key_developments": ["republican government", "Roman law", "Latin alphabet", "road networks", "legionary warfare", "census"],
+    "key_figures": ["Cincinnatus", "Scipio Africanus", "Julius Caesar", "Cicero", "Cato the Elder"]
+  },
+  {
+    "name": "Roman Empire",
+    "slug": "roman-empire",
+    "start_year": -27,
+    "end_year": 476,
+    "region": "mediterranean",
+    "description": "The imperial phase of Rome under emperors, encompassing the height of Roman power, the Pax Romana, the spread of Christianity, and eventual decline and fall in the West.",
+    "key_developments": ["imperial administration", "aqueducts", "concrete construction", "spread of Christianity", "codification of law", "Colosseum"],
+    "key_figures": ["Augustus", "Marcus Aurelius", "Constantine I", "Diocletian", "Trajan", "Hadrian"]
+  },
+  {
+    "name": "Gupta Empire",
+    "slug": "gupta-empire",
+    "start_year": 320,
+    "end_year": 550,
+    "region": "south-asia",
+    "description": "Often called the Golden Age of India, the Gupta period saw remarkable achievements in science, mathematics, astronomy, literature, and philosophy under a centralized Hindu empire.",
+    "key_developments": ["decimal numeral system", "concept of zero", "Ayurvedic medicine", "Sanskrit literature", "astronomy", "iron working"],
+    "key_figures": ["Chandragupta I", "Samudragupta", "Chandragupta II", "Aryabhata", "Kalidasa", "Varahamihira"]
+  },
+  {
+    "name": "Medieval Europe",
+    "slug": "medieval-europe",
+    "start_year": 500,
+    "end_year": 1500,
+    "region": "europe",
+    "description": "The period between the fall of the Western Roman Empire and the Renaissance, characterized by feudalism, the dominance of the Catholic Church, the Crusades, Gothic architecture, and the Black Death.",
+    "key_developments": ["feudalism", "Gothic cathedrals", "universities", "Common law", "Magna Carta", "Black Death", "Crusades"],
+    "key_figures": ["Charlemagne", "Thomas Aquinas", "Joan of Arc", "William the Conqueror", "Pope Urban II"]
+  },
+  {
+    "name": "Islamic Golden Age",
+    "slug": "islamic-golden-age",
+    "start_year": 750,
+    "end_year": 1258,
+    "region": "middle-east",
+    "description": "A period of cultural, economic, and scientific flourishing in the Islamic world under the Abbasid Caliphate, during which scholars made major contributions to mathematics, astronomy, medicine, and philosophy.",
+    "key_developments": ["algebra", "algorithms", "optics", "hospitals", "astronomical observatories", "translation of Greek texts"],
+    "key_figures": ["Al-Khwarizmi", "Ibn Sina (Avicenna)", "Ibn al-Haytham", "Al-Biruni", "Ibn Rushd (Averroes)", "Al-Razi"]
+  },
+  {
+    "name": "Tang and Song Dynasties",
+    "slug": "tang-song-dynasties",
+    "start_year": 618,
+    "end_year": 1279,
+    "region": "east-asia",
+    "description": "Two successive Chinese dynasties representing a high point of Chinese civilization, notable for printing, gunpowder, the compass, porcelain, poetry, and a flourishing silk road trade.",
+    "key_developments": ["woodblock printing", "gunpowder", "compass", "paper money", "porcelain", "civil service examinations"],
+    "key_figures": ["Emperor Taizong", "Wu Zetian", "Li Bai", "Du Fu", "Su Shi", "Shen Kuo"]
+  },
+  {
+    "name": "Mongol Empire",
+    "slug": "mongol-empire",
+    "start_year": 1206,
+    "end_year": 1368,
+    "region": "global",
+    "description": "The largest contiguous land empire in history, founded by Genghis Khan, which connected East and West through the Pax Mongolica, enabling unprecedented trade and cultural exchange along the Silk Road.",
+    "key_developments": ["Pax Mongolica", "Silk Road revival", "yam relay postal system", "religious tolerance", "census and taxation systems"],
+    "key_figures": ["Genghis Khan", "Kublai Khan", "Ögedei Khan", "Marco Polo"]
+  },
+  {
+    "name": "Renaissance",
+    "slug": "renaissance",
+    "start_year": 1350,
+    "end_year": 1600,
+    "region": "europe",
+    "description": "A cultural and intellectual movement originating in Italy that revived classical Greek and Roman learning, produced extraordinary art and literature, and laid the groundwork for modern science and humanism.",
+    "key_developments": ["perspective in painting", "humanist philosophy", "vernacular literature", "movable type printing", "anatomical study", "patronage of arts"],
+    "key_figures": ["Leonardo da Vinci", "Michelangelo", "Dante Alighieri", "Niccolò Machiavelli", "Erasmus", "Raphael"]
+  },
+  {
+    "name": "Age of Exploration",
+    "slug": "age-of-exploration",
+    "start_year": 1400,
+    "end_year": 1600,
+    "region": "global",
+    "description": "A period of extensive overseas exploration by European powers, connecting the Americas, Africa, Asia, and Europe and initiating a global exchange of goods, peoples, diseases, and ideas known as the Columbian Exchange.",
+    "key_developments": ["circumnavigation of globe", "Columbian Exchange", "caravel ship design", "cartography", "colonial empires", "transatlantic slave trade"],
+    "key_figures": ["Christopher Columbus", "Vasco da Gama", "Ferdinand Magellan", "Bartolomeu Dias", "John Cabot", "Amerigo Vespucci"]
+  },
+  {
+    "name": "Scientific Revolution",
+    "slug": "scientific-revolution",
+    "start_year": 1543,
+    "end_year": 1687,
+    "region": "europe",
+    "description": "A fundamental transformation in scientific thought that established the heliocentric model of the solar system, the laws of motion and gravitation, and the experimental method as the foundation of modern science.",
+    "key_developments": ["heliocentric model", "telescope", "laws of motion", "experimental method", "calculus", "anatomical study"],
+    "key_figures": ["Nicolaus Copernicus", "Galileo Galilei", "Johannes Kepler", "Isaac Newton", "Francis Bacon", "René Descartes"]
+  },
+  {
+    "name": "Enlightenment",
+    "slug": "enlightenment",
+    "start_year": 1685,
+    "end_year": 1800,
+    "region": "europe",
+    "description": "An intellectual and philosophical movement emphasizing reason, individualism, liberty, and skepticism of traditional authority, laying the ideological groundwork for modern democracy, human rights, and secular governance.",
+    "key_developments": ["social contract theory", "separation of powers", "freedom of speech", "religious tolerance", "encyclopédie", "scientific societies"],
+    "key_figures": ["John Locke", "Voltaire", "Jean-Jacques Rousseau", "Immanuel Kant", "Denis Diderot", "David Hume", "Montesquieu"]
+  },
+  {
+    "name": "Industrial Revolution",
+    "slug": "industrial-revolution",
+    "start_year": 1760,
+    "end_year": 1840,
+    "region": "global",
+    "description": "Period of transition from agrarian to manufacturing economies, beginning in Britain, characterized by the rise of factories, steam power, railways, and mass urbanization.",
+    "key_developments": ["steam engine", "mechanized textile production", "railways", "urbanization", "coal mining", "iron production"],
+    "key_figures": ["James Watt", "George Stephenson", "Richard Arkwright", "Adam Smith", "Josiah Wedgwood"]
+  },
+  {
+    "name": "Age of Revolutions",
+    "slug": "age-of-revolutions",
+    "start_year": 1775,
+    "end_year": 1848,
+    "region": "global",
+    "description": "A period of interconnected political upheavals across the Atlantic world and beyond, including the American and French Revolutions, Haitian independence, and the spread of liberal nationalism across Europe and Latin America.",
+    "key_developments": ["constitutional democracy", "declaration of rights", "abolition movements", "nationalism", "republican government", "Latin American independence"],
+    "key_figures": ["George Washington", "Robespierre", "Napoleon Bonaparte", "Simón Bolívar", "Toussaint Louverture", "Thomas Jefferson"]
+  },
+  {
+    "name": "Victorian Era",
+    "slug": "victorian-era",
+    "start_year": 1837,
+    "end_year": 1901,
+    "region": "europe",
+    "description": "The reign of Queen Victoria marked by British imperial expansion, rapid technological innovation, social reform movements, and profound cultural change including the rise of the novel and Darwin's theory of evolution.",
+    "key_developments": ["theory of evolution", "germ theory of disease", "telegraph", "photography", "public education", "imperialism", "trade unions"],
+    "key_figures": ["Queen Victoria", "Charles Darwin", "Florence Nightingale", "Karl Marx", "Charles Dickens", "Louis Pasteur"]
+  },
+  {
+    "name": "Meiji Restoration",
+    "slug": "meiji-restoration",
+    "start_year": 1868,
+    "end_year": 1912,
+    "region": "east-asia",
+    "description": "Japan's rapid transformation from a feudal society to a modern industrialized nation under Emperor Meiji, through selective adoption of Western technology, institutions, and military organization.",
+    "key_developments": ["industrialization", "constitutional government", "compulsory education", "modern military", "railway network", "abolition of feudalism"],
+    "key_figures": ["Emperor Meiji", "Itō Hirobumi", "Saigō Takamori", "Fukuzawa Yukichi"]
+  },
+  {
+    "name": "World War Era",
+    "slug": "world-war-era",
+    "start_year": 1914,
+    "end_year": 1945,
+    "region": "global",
+    "description": "Three decades of global conflict including the First and Second World Wars, the Great Depression, the rise of totalitarianism, the Holocaust, and the use of nuclear weapons, reshaping the world political order.",
+    "key_developments": ["trench warfare", "aerial bombing", "nuclear weapons", "Holocaust", "decolonization pressures", "United Nations founding"],
+    "key_figures": ["Woodrow Wilson", "Adolf Hitler", "Franklin D. Roosevelt", "Winston Churchill", "Joseph Stalin", "Hirohito", "Mahatma Gandhi"]
+  },
+  {
+    "name": "Cold War",
+    "slug": "cold-war",
+    "start_year": 1947,
+    "end_year": 1991,
+    "region": "global",
+    "description": "A geopolitical and ideological struggle between the United States and the Soviet Union and their respective allies, characterized by nuclear deterrence, proxy wars, the space race, and decolonization.",
+    "key_developments": ["nuclear deterrence", "space race", "proxy wars", "decolonization", "NATO and Warsaw Pact", "Iron Curtain"],
+    "key_figures": ["Harry Truman", "Joseph Stalin", "John F. Kennedy", "Nikita Khrushchev", "Mao Zedong", "Mikhail Gorbachev", "Ronald Reagan"]
+  },
+  {
+    "name": "Postcolonial Era",
+    "slug": "postcolonial-era",
+    "start_year": 1945,
+    "end_year": 1975,
+    "region": "global",
+    "description": "The period of rapid decolonization in Africa and Asia following World War II, as dozens of new nations gained independence from European empires, forming the foundation of the modern developing world.",
+    "key_developments": ["African independence movements", "Asian independence movements", "Non-Aligned Movement", "pan-Africanism", "United Nations membership expansion"],
+    "key_figures": ["Kwame Nkrumah", "Jawaharlal Nehru", "Ho Chi Minh", "Nelson Mandela", "Patrice Lumumba", "Gamal Abdel Nasser"]
+  },
+  {
+    "name": "Information Age",
+    "slug": "information-age",
+    "start_year": 1970,
+    "end_year": 2010,
+    "region": "global",
+    "description": "A period of rapid technological advancement driven by the development of personal computers, the internet, and digital communications, fundamentally transforming economies, culture, and daily life worldwide.",
+    "key_developments": ["personal computers", "internet", "World Wide Web", "mobile phones", "social media", "e-commerce", "digital media"],
+    "key_figures": ["Tim Berners-Lee", "Steve Jobs", "Bill Gates", "Linus Torvalds", "Jeff Bezos", "Larry Page", "Sergey Brin"]
+  },
+  {
+    "name": "Anthropocene",
+    "slug": "anthropocene",
+    "start_year": 1950,
+    "end_year": null,
+    "region": "global",
+    "description": "The proposed geological epoch beginning around the mid-20th century, defined by dominant human impact on Earth's geology, climate, and ecosystems, including climate change, mass extinction, and global-scale pollution.",
+    "key_developments": ["climate change", "mass extinction", "ozone depletion", "plastic pollution", "nuclear fallout", "renewable energy", "CRISPR gene editing"],
+    "key_figures": ["Rachel Carson", "James Lovelock", "Paul Crutzen", "Wangari Maathai", "Elon Musk", "Greta Thunberg"]
+  },
+  {
+    "name": "AI Era",
+    "slug": "ai-era",
+    "start_year": 2010,
+    "end_year": null,
+    "region": "global",
+    "description": "A transformative period defined by the rapid development of artificial intelligence, machine learning, and large language models, reshaping industries, scientific research, and society at an unprecedented pace.",
+    "key_developments": ["deep learning", "large language models", "generative AI", "autonomous vehicles", "AlphaFold protein folding", "ChatGPT"],
+    "key_figures": ["Geoffrey Hinton", "Yann LeCun", "Yoshua Bengio", "Demis Hassabis", "Sam Altman", "Ilya Sutskever"]
+  }
+]

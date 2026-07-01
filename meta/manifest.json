@@ -1,0 +1,2196 @@
+{
+  "generated": "2026-07-01",
+  "total_files": 129,
+  "total_entries": 4214,
+  "domains": [
+    {
+      "domain": "accessibility",
+      "file_count": 2,
+      "entry_count": 93,
+      "files": [
+        {
+          "path": "accessibility/aria-roles/aria-roles.json",
+          "description": "WAI-ARIA roles with required properties and allowed children",
+          "count": 68,
+          "fields": [
+            "role",
+            "category",
+            "description",
+            "implicit_elements",
+            "required_attrs",
+            "optional_attrs",
+            "focusable"
+          ]
+        },
+        {
+          "path": "accessibility/wcag/criteria.json",
+          "description": null,
+          "count": 25,
+          "fields": [
+            "id",
+            "level",
+            "principle",
+            "guideline",
+            "title",
+            "description"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "ai",
+      "file_count": 1,
+      "entry_count": 31,
+      "files": [
+        {
+          "path": "ai/models.json",
+          "description": "AI language models with provider, context window, and capabilities",
+          "count": 31,
+          "fields": [
+            "name",
+            "slug",
+            "provider",
+            "family",
+            "api_id",
+            "context_window",
+            "max_output_tokens",
+            "knowledge_cutoff",
+            "modalities",
+            "capabilities",
+            "pricing",
+            "description",
+            "website"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "astronomy",
+      "file_count": 3,
+      "entry_count": 173,
+      "files": [
+        {
+          "path": "astronomy/constellations/constellations.json",
+          "description": "All 88 IAU constellations with abbreviation, area, and hemisphere",
+          "count": 88,
+          "fields": [
+            "name",
+            "slug",
+            "iau_abbreviation",
+            "hemisphere",
+            "area_sq_deg",
+            "brightest_star",
+            "mythology",
+            "best_visible"
+          ]
+        },
+        {
+          "path": "astronomy/moons/moons.json",
+          "description": "Named moons with orbital data and planet association",
+          "count": 55,
+          "fields": [
+            "name",
+            "slug",
+            "planet",
+            "discovery_year",
+            "discoverer",
+            "radius_km",
+            "orbital_period_days",
+            "distance_from_planet_km",
+            "notable_for"
+          ]
+        },
+        {
+          "path": "astronomy/stars/notable-stars.json",
+          "description": "Prominent named stars with distance, magnitude, and spectral class",
+          "count": 30,
+          "fields": [
+            "name",
+            "slug",
+            "bayer",
+            "constellation",
+            "distance_ly",
+            "spectral_class",
+            "apparent_magnitude",
+            "luminosity_solar",
+            "notable_for"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "bio",
+      "file_count": 1,
+      "entry_count": 20,
+      "files": [
+        {
+          "path": "bio/amino-acids/amino-acids.json",
+          "description": null,
+          "count": 20,
+          "fields": [
+            "name",
+            "symbol_1",
+            "symbol_3",
+            "mw",
+            "charge",
+            "polarity",
+            "essential",
+            "side_chain",
+            "category"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "biology",
+      "file_count": 1,
+      "entry_count": 30,
+      "files": [
+        {
+          "path": "biology/taxonomy/taxonomy.json",
+          "description": "Biological taxonomy domains, kingdoms, and major phyla",
+          "count": 30,
+          "fields": [
+            "name",
+            "slug",
+            "rank",
+            "domain",
+            "parent",
+            "approximate_species",
+            "characteristics",
+            "examples",
+            "description"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "chemistry",
+      "file_count": 1,
+      "entry_count": 30,
+      "files": [
+        {
+          "path": "chemistry/functional-groups/groups.json",
+          "description": "Organic chemistry functional groups with formula and examples",
+          "count": 30,
+          "fields": [
+            "name",
+            "slug",
+            "formula",
+            "class",
+            "description",
+            "example_compound",
+            "example_compound_slug",
+            "properties"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "colors",
+      "file_count": 5,
+      "entry_count": 233,
+      "files": [
+        {
+          "path": "colors/gradients/gradients.json",
+          "description": null,
+          "count": 25,
+          "fields": [
+            "name",
+            "slug",
+            "type",
+            "angle",
+            "stops",
+            "css",
+            "tags"
+          ]
+        },
+        {
+          "path": "colors/named.json",
+          "description": "CSS named colors with hex values",
+          "count": 148,
+          "fields": [
+            "name",
+            "hex",
+            "rgb"
+          ]
+        },
+        {
+          "path": "colors/palettes.json",
+          "description": "Curated color palettes with names and hex arrays",
+          "count": 16,
+          "fields": [
+            "name",
+            "slug",
+            "description",
+            "colors",
+            "tags"
+          ]
+        },
+        {
+          "path": "colors/terminal/export/windows-terminal.json",
+          "description": "Terminal themes in Windows Terminal JSON format",
+          "count": 22,
+          "fields": [
+            "name",
+            "background",
+            "foreground",
+            "cursorColor",
+            "selectionBackground",
+            "black",
+            "red",
+            "green",
+            "yellow",
+            "blue",
+            "purple",
+            "cyan",
+            "white",
+            "brightBlack",
+            "brightRed",
+            "brightGreen",
+            "brightYellow",
+            "brightBlue",
+            "brightPurple",
+            "brightCyan",
+            "brightWhite"
+          ]
+        },
+        {
+          "path": "colors/terminal/themes.json",
+          "description": "Terminal color schemes (16-color ANSI + metadata)",
+          "count": 22,
+          "fields": [
+            "name",
+            "slug",
+            "background",
+            "foreground",
+            "cursor",
+            "selection-background",
+            "description",
+            "source",
+            "colors"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "database",
+      "file_count": 2,
+      "entry_count": 83,
+      "files": [
+        {
+          "path": "database/engines/engines.json",
+          "description": "Database engines with type, license, ACID compliance, default port",
+          "count": 20,
+          "fields": [
+            "name",
+            "slug",
+            "type",
+            "license",
+            "acid_compliant",
+            "default_port",
+            "description",
+            "notable_features",
+            "use_cases"
+          ]
+        },
+        {
+          "path": "database/sql-keywords/keywords.json",
+          "description": "ANSI SQL keywords grouped by category (DQL/DML/DDL/DCL/TCL)",
+          "count": 63,
+          "fields": [
+            "keyword",
+            "slug",
+            "category",
+            "description",
+            "syntax",
+            "example",
+            "ansi_sql"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "dates",
+      "file_count": 1,
+      "entry_count": 17,
+      "files": [
+        {
+          "path": "dates/formats/formats.json",
+          "description": "Date format conventions by locale and standard",
+          "count": 17,
+          "fields": [
+            "slug",
+            "name",
+            "format",
+            "example",
+            "category",
+            "used_in",
+            "notes"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "design",
+      "file_count": 3,
+      "entry_count": 30,
+      "files": [
+        {
+          "path": "design/breakpoints/breakpoints.json",
+          "description": "CSS breakpoint systems (Tailwind, Bootstrap, MUI, Bulma, Foundation)",
+          "count": 5,
+          "fields": [
+            "system",
+            "slug",
+            "approach",
+            "media_query_type",
+            "breakpoints",
+            "description",
+            "source"
+          ]
+        },
+        {
+          "path": "design/spacing/scales.json",
+          "description": "CSS spacing/sizing scales by design system",
+          "count": 3,
+          "fields": [
+            "system",
+            "slug",
+            "base_unit_px",
+            "unit",
+            "description",
+            "scale"
+          ]
+        },
+        {
+          "path": "design/z-index/conventions.json",
+          "description": "CSS z-index conventions and named layers",
+          "count": 22,
+          "fields": [
+            "name",
+            "slug",
+            "value",
+            "description",
+            "system",
+            "above",
+            "below"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "devops",
+      "file_count": 2,
+      "entry_count": 48,
+      "files": [
+        {
+          "path": "devops/ci-platforms/platforms.json",
+          "description": "CI/CD platforms with config file format and trigger types",
+          "count": 13,
+          "fields": [
+            "name",
+            "slug",
+            "config_file",
+            "config_language",
+            "pricing_model",
+            "cloud_hosted",
+            "self_hosted",
+            "trigger_types",
+            "website",
+            "description",
+            "notable_features"
+          ]
+        },
+        {
+          "path": "devops/kubernetes/objects.json",
+          "description": "Kubernetes resource kinds with API group and category",
+          "count": 35,
+          "fields": [
+            "kind",
+            "slug",
+            "api_group",
+            "api_version",
+            "namespaced",
+            "category",
+            "description",
+            "key_fields",
+            "example_use"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "finance",
+      "file_count": 4,
+      "entry_count": 90,
+      "files": [
+        {
+          "path": "finance/crypto/crypto.json",
+          "description": null,
+          "count": 20,
+          "fields": [
+            "rank",
+            "ticker",
+            "name",
+            "decimals",
+            "consensus",
+            "layer",
+            "founded_year",
+            "notes"
+          ]
+        },
+        {
+          "path": "finance/forex/pairs.json",
+          "description": "Forex currency pairs (major, minor, exotic) with typical spread",
+          "count": 28,
+          "fields": [
+            "pair",
+            "slug",
+            "base",
+            "quote",
+            "category",
+            "description",
+            "typical_spread_pips"
+          ]
+        },
+        {
+          "path": "finance/indices/indices.json",
+          "description": "Stock market indices with ticker, exchange, and weighting method",
+          "count": 20,
+          "fields": [
+            "name",
+            "slug",
+            "ticker",
+            "exchange",
+            "country_iso2",
+            "components",
+            "weighting",
+            "currency",
+            "description",
+            "founded_year"
+          ]
+        },
+        {
+          "path": "finance/stock-exchanges/stock-exchanges.json",
+          "description": null,
+          "count": 22,
+          "fields": [
+            "name",
+            "slug",
+            "mic",
+            "acronym",
+            "country",
+            "city",
+            "currency",
+            "timezone",
+            "open",
+            "close",
+            "website",
+            "description"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "flags",
+      "file_count": 2,
+      "entry_count": 53,
+      "files": [
+        {
+          "path": "flags/countries/flags.json",
+          "description": "Country flags with SVG geometry type, colors, and shape metadata",
+          "count": 50,
+          "fields": [
+            "name",
+            "iso",
+            "colors",
+            "flag-version",
+            "type",
+            "description",
+            "source",
+            "continent"
+          ]
+        },
+        {
+          "path": "flags/fetish/flags.json",
+          "description": null,
+          "count": 3,
+          "fields": [
+            "name",
+            "colors",
+            "elements",
+            "type",
+            "description",
+            "source",
+            "pridetype",
+            "subtype"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "fonts",
+      "file_count": 1,
+      "entry_count": 15,
+      "files": [
+        {
+          "path": "fonts/stacks.json",
+          "description": "System and web font stacks with CSS values",
+          "count": 15,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "system",
+            "fonts",
+            "css",
+            "description",
+            "usage",
+            "tags"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "food",
+      "file_count": 2,
+      "entry_count": 79,
+      "files": [
+        {
+          "path": "food/cuisines/cuisines.json",
+          "description": "World cuisines with key ingredients, dishes, and spice level",
+          "count": 50,
+          "fields": [
+            "slug",
+            "name",
+            "country",
+            "continent",
+            "key_ingredients",
+            "staple_dishes",
+            "cooking_methods",
+            "spice_level"
+          ]
+        },
+        {
+          "path": "food/nutrition/nutrients.json",
+          "description": "Essential nutrients with RDA, function, and food sources",
+          "count": 29,
+          "fields": [
+            "name",
+            "slug",
+            "also_known_as",
+            "category",
+            "subcategory",
+            "rda_adult_mg",
+            "upper_limit_mg",
+            "function",
+            "deficiency_disease",
+            "food_sources"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "gaming",
+      "file_count": 2,
+      "entry_count": 62,
+      "files": [
+        {
+          "path": "gaming/genres/genres.json",
+          "description": "Video game genres with subgenres and notable examples",
+          "count": 30,
+          "fields": [
+            "name",
+            "slug",
+            "abbreviation",
+            "subgenres",
+            "description",
+            "notable_examples"
+          ]
+        },
+        {
+          "path": "gaming/platforms/platforms.json",
+          "description": "Gaming consoles and platforms with generation and release year",
+          "count": 32,
+          "fields": [
+            "slug",
+            "name",
+            "manufacturer",
+            "release_year",
+            "type",
+            "generation",
+            "discontinued",
+            "notes"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "geo",
+      "file_count": 8,
+      "entry_count": 748,
+      "files": [
+        {
+          "path": "geo/airports/airports.json",
+          "description": "Major world airports with IATA/ICAO codes, coordinates, timezone",
+          "count": 96,
+          "fields": [
+            "iata",
+            "icao",
+            "name",
+            "city",
+            "country_iso2",
+            "continent",
+            "lat",
+            "lon",
+            "timezone",
+            "type"
+          ]
+        },
+        {
+          "path": "geo/cities/cities.json",
+          "description": "Major world cities with population and coordinates",
+          "count": 58,
+          "fields": [
+            "name",
+            "country",
+            "country_name",
+            "lat",
+            "lng",
+            "population",
+            "timezone",
+            "is_capital"
+          ]
+        },
+        {
+          "path": "geo/countries/countries.json",
+          "description": "All 195 countries with ISO codes, capital, currency, dial code",
+          "count": 197,
+          "fields": [
+            "iso2",
+            "iso3",
+            "name",
+            "capital",
+            "continent",
+            "dial_code",
+            "currency_code",
+            "population_approx"
+          ]
+        },
+        {
+          "path": "geo/currencies/currencies.json",
+          "description": "World currencies with ISO 4217 code, symbol, and decimal places",
+          "count": 145,
+          "fields": [
+            "code",
+            "slug",
+            "name",
+            "symbol",
+            "decimals",
+            "country",
+            "country_code"
+          ]
+        },
+        {
+          "path": "geo/mountains/peaks.json",
+          "description": "Highest mountain peaks with elevation and first-ascent data",
+          "count": 52,
+          "fields": [
+            "name",
+            "slug",
+            "range",
+            "country_iso2",
+            "elevation_m",
+            "first_ascent_year",
+            "first_ascent_by",
+            "lat",
+            "lon",
+            "description"
+          ]
+        },
+        {
+          "path": "geo/oceans/oceans.json",
+          "description": "Oceans and major seas with area and depth data",
+          "count": 20,
+          "fields": [
+            "name",
+            "slug",
+            "type",
+            "area_km2",
+            "avg_depth_m",
+            "max_depth_m",
+            "max_depth_location",
+            "bordering_continents",
+            "description"
+          ]
+        },
+        {
+          "path": "geo/rivers/rivers.json",
+          "description": "Longest rivers with length, source, mouth, and drainage area",
+          "count": 30,
+          "fields": [
+            "name",
+            "slug",
+            "continent",
+            "countries",
+            "length_km",
+            "source",
+            "mouth",
+            "drainage_area_km2",
+            "description"
+          ]
+        },
+        {
+          "path": "geo/timezones/timezones.json",
+          "description": "IANA timezone identifiers with UTC offsets and major cities",
+          "count": 150,
+          "fields": [
+            "iana",
+            "utc_offset",
+            "dst_offset",
+            "dst",
+            "region",
+            "abbreviation",
+            "example_cities"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "hardware",
+      "file_count": 1,
+      "entry_count": 0,
+      "files": [
+        {
+          "path": "hardware/pc/form-factors.json",
+          "description": "PC form factors and standards",
+          "count": null,
+          "fields": null
+        }
+      ]
+    },
+    {
+      "domain": "history",
+      "file_count": 2,
+      "entry_count": 70,
+      "files": [
+        {
+          "path": "history/eras/eras.json",
+          "description": "Major historical eras with date range, region, and key developments",
+          "count": 25,
+          "fields": [
+            "name",
+            "slug",
+            "start_year",
+            "end_year",
+            "region",
+            "description",
+            "key_developments",
+            "key_figures"
+          ]
+        },
+        {
+          "path": "history/inventions/inventions.json",
+          "description": "Major inventions with inventor, year, and historical impact",
+          "count": 45,
+          "fields": [
+            "name",
+            "slug",
+            "year",
+            "inventor",
+            "country_iso2",
+            "category",
+            "description",
+            "impact"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "i18n",
+      "file_count": 2,
+      "entry_count": 177,
+      "files": [
+        {
+          "path": "i18n/languages/languages.json",
+          "description": "World languages with ISO 639 codes, native name, script, speakers",
+          "count": 152,
+          "fields": [
+            "iso639_1",
+            "iso639_2",
+            "name",
+            "native",
+            "direction",
+            "script"
+          ]
+        },
+        {
+          "path": "i18n/locales/locales.json",
+          "description": null,
+          "count": 25,
+          "fields": [
+            "code",
+            "language",
+            "language_code",
+            "region",
+            "region_code",
+            "script",
+            "direction",
+            "native_name"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "iso",
+      "file_count": 7,
+      "entry_count": 58,
+      "files": [
+        {
+          "path": "iso/15924/scripts.json",
+          "description": "ISO 15924 writing system script codes",
+          "count": 54,
+          "fields": [
+            "code",
+            "name",
+            "numeric",
+            "direction",
+            "unicode_range",
+            "languages",
+            "status"
+          ]
+        },
+        {
+          "path": "iso/216/paper-sizes.json",
+          "description": null,
+          "count": 4,
+          "fields": [
+            "series",
+            "iso",
+            "description",
+            "sizes"
+          ]
+        },
+        {
+          "path": "iso/27001/controls.json",
+          "description": null,
+          "count": null,
+          "fields": null
+        },
+        {
+          "path": "iso/724/metric-threads.json",
+          "description": null,
+          "count": null,
+          "fields": null
+        },
+        {
+          "path": "iso/8601/formats.json",
+          "description": "ISO 8601 date and time format patterns",
+          "count": null,
+          "fields": null
+        },
+        {
+          "path": "iso/9001/clauses.json",
+          "description": null,
+          "count": null,
+          "fields": null
+        },
+        {
+          "path": "iso/index.json",
+          "description": null,
+          "count": null,
+          "fields": null
+        }
+      ]
+    },
+    {
+      "domain": "keyboard",
+      "file_count": 3,
+      "entry_count": 119,
+      "files": [
+        {
+          "path": "keyboard/browser/shortcuts.json",
+          "description": "Browser keyboard shortcuts",
+          "count": 39,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "windows",
+            "mac",
+            "linux",
+            "description",
+            "context"
+          ]
+        },
+        {
+          "path": "keyboard/terminal-multiplexers/shortcuts.json",
+          "description": "tmux, zellij, and screen keyboard shortcuts",
+          "count": 30,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "tmux",
+            "zellij",
+            "screen",
+            "description"
+          ]
+        },
+        {
+          "path": "keyboard/vscode/shortcuts.json",
+          "description": "VS Code keyboard shortcuts by category",
+          "count": 50,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "windows",
+            "mac",
+            "linux",
+            "description",
+            "context"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "lgbtq",
+      "file_count": 9,
+      "entry_count": 238,
+      "files": [
+        {
+          "path": "lgbtq/flags/flags.json",
+          "description": "LGBTQ+ pride flag color palettes",
+          "count": 21,
+          "fields": [
+            "name",
+            "colors",
+            "flag-version",
+            "type",
+            "description",
+            "source",
+            "pridetype",
+            "subtype"
+          ]
+        },
+        {
+          "path": "lgbtq/health/resources.json",
+          "description": null,
+          "count": 25,
+          "fields": [
+            "name",
+            "slug",
+            "country",
+            "type",
+            "focus",
+            "contact",
+            "website",
+            "description",
+            "founded"
+          ]
+        },
+        {
+          "path": "lgbtq/history/milestones.json",
+          "description": "Key milestones in LGBTQ+ rights history",
+          "count": 42,
+          "fields": [
+            "year",
+            "date",
+            "name",
+            "slug",
+            "location",
+            "country",
+            "type",
+            "description",
+            "significance"
+          ]
+        },
+        {
+          "path": "lgbtq/identities/identities.json",
+          "description": "Gender and sexual identity definitions",
+          "count": 31,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "umbrella",
+            "abbreviation",
+            "flag_slug",
+            "description",
+            "related",
+            "neologism"
+          ]
+        },
+        {
+          "path": "lgbtq/motd/motds.json",
+          "description": null,
+          "count": 22,
+          "fields": [
+            "theme",
+            "messages"
+          ]
+        },
+        {
+          "path": "lgbtq/organisations/organisations.json",
+          "description": "Notable LGBTQ+ organizations worldwide",
+          "count": 27,
+          "fields": [
+            "name",
+            "slug",
+            "country",
+            "founded",
+            "dissolved",
+            "type",
+            "scope",
+            "website",
+            "description",
+            "focus"
+          ]
+        },
+        {
+          "path": "lgbtq/pronouns/pronouns.json",
+          "description": "Pronoun sets with subject/object/reflexive forms",
+          "count": 12,
+          "fields": [
+            "subject",
+            "object",
+            "possessive-adjective",
+            "possessive-pronoun",
+            "reflexive",
+            "neopronouns",
+            "description",
+            "example",
+            "related"
+          ]
+        },
+        {
+          "path": "lgbtq/symbols/symbols.json",
+          "description": "LGBTQ+ symbols with meaning and history",
+          "count": 22,
+          "fields": [
+            "name",
+            "slug",
+            "unicode",
+            "colors",
+            "origin_year",
+            "origin_context",
+            "description",
+            "current_use",
+            "community",
+            "type"
+          ]
+        },
+        {
+          "path": "lgbtq/terms/terms.json",
+          "description": "LGBTQ+ terminology with definitions and context",
+          "count": 36,
+          "fields": [
+            "term",
+            "abbreviation",
+            "definition",
+            "category",
+            "neologism",
+            "related"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "linux",
+      "file_count": 8,
+      "entry_count": 169,
+      "files": [
+        {
+          "path": "linux/desktop/wm-configs.json",
+          "description": "Window manager configuration references",
+          "count": 10,
+          "fields": [
+            "name",
+            "slug",
+            "type",
+            "protocol",
+            "config-format",
+            "config-path",
+            "reload-cmd",
+            "description",
+            "features",
+            "tags"
+          ]
+        },
+        {
+          "path": "linux/dotfiles/common-paths.json",
+          "description": null,
+          "count": 20,
+          "fields": [
+            "app",
+            "slug",
+            "config-path",
+            "data-path",
+            "cache-path",
+            "env-var",
+            "notes"
+          ]
+        },
+        {
+          "path": "linux/exit-codes/exit-codes.json",
+          "description": null,
+          "count": 33,
+          "fields": [
+            "code",
+            "name",
+            "meaning",
+            "source"
+          ]
+        },
+        {
+          "path": "linux/filesystem/filesystem.json",
+          "description": null,
+          "count": 31,
+          "fields": [
+            "path",
+            "name",
+            "description",
+            "writable_by_users"
+          ]
+        },
+        {
+          "path": "linux/packages/aur-tools.json",
+          "description": "Popular AUR packages for Arch Linux",
+          "count": 10,
+          "fields": [
+            "name",
+            "slug",
+            "description",
+            "language",
+            "install-cmd",
+            "homepage",
+            "stars-approx",
+            "category",
+            "tags"
+          ]
+        },
+        {
+          "path": "linux/shell/prompt-themes.json",
+          "description": null,
+          "count": 12,
+          "fields": [
+            "name",
+            "slug",
+            "shell",
+            "framework",
+            "install-cmd",
+            "preview-colors",
+            "description",
+            "features",
+            "tags"
+          ]
+        },
+        {
+          "path": "linux/signals/signals.json",
+          "description": null,
+          "count": 31,
+          "fields": [
+            "number",
+            "name",
+            "abbr",
+            "default_action",
+            "description"
+          ]
+        },
+        {
+          "path": "linux/system/pacman-mirrors.json",
+          "description": "Pacman mirror locations",
+          "count": 22,
+          "fields": [
+            "url",
+            "country",
+            "code",
+            "continent",
+            "protocol",
+            "active",
+            "speed-tier",
+            "notes"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "macos",
+      "file_count": 3,
+      "entry_count": 158,
+      "files": [
+        {
+          "path": "macos/defaults/commands.json",
+          "description": "macOS defaults write commands with revert commands",
+          "count": 40,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "command",
+            "revert_command",
+            "requires_restart",
+            "description",
+            "macos_versions"
+          ]
+        },
+        {
+          "path": "macos/homebrew/packages.json",
+          "description": "Essential Homebrew formulae and casks with categories",
+          "count": 67,
+          "fields": [
+            "name",
+            "slug",
+            "brew_id",
+            "cask",
+            "category",
+            "description",
+            "homepage",
+            "tags"
+          ]
+        },
+        {
+          "path": "macos/keyboard/shortcuts.json",
+          "description": "macOS system keyboard shortcuts",
+          "count": 51,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "mac",
+            "description",
+            "context"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "math",
+      "file_count": 3,
+      "entry_count": 125,
+      "files": [
+        {
+          "path": "math/formulas/formulas.json",
+          "description": "Mathematical formulas with LaTeX notation by category",
+          "count": 50,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "formula",
+            "latex",
+            "variables",
+            "description",
+            "example"
+          ]
+        },
+        {
+          "path": "math/number-systems/bases.json",
+          "description": "Positional number systems (binary, octal, decimal, hex, etc.)",
+          "count": 6,
+          "fields": [
+            "name",
+            "slug",
+            "base",
+            "digits",
+            "prefix",
+            "example_value",
+            "example_repr",
+            "description",
+            "use_cases"
+          ]
+        },
+        {
+          "path": "math/symbols/symbols.json",
+          "description": "Mathematical symbols with Unicode codepoint and LaTeX",
+          "count": 69,
+          "fields": [
+            "name",
+            "slug",
+            "symbol",
+            "codepoint",
+            "latex",
+            "category",
+            "description",
+            "read_as"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "medicine",
+      "file_count": 1,
+      "entry_count": 36,
+      "files": [
+        {
+          "path": "medicine/specialties/specialties.json",
+          "description": "Medical specialties with focus area and common conditions",
+          "count": 36,
+          "fields": [
+            "name",
+            "slug",
+            "type",
+            "parent_specialty",
+            "focus",
+            "common_conditions",
+            "procedures",
+            "description"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "meta",
+      "file_count": 2,
+      "entry_count": 0,
+      "files": [
+        {
+          "path": "meta/corrections.json",
+          "description": null,
+          "count": null,
+          "fields": null
+        },
+        {
+          "path": "meta/sources.json",
+          "description": null,
+          "count": null,
+          "fields": null
+        }
+      ]
+    },
+    {
+      "domain": "music",
+      "file_count": 1,
+      "entry_count": 55,
+      "files": [
+        {
+          "path": "music/genres/genres.json",
+          "description": "Music genres with BPM range, mood, origin, and example artists",
+          "count": 55,
+          "fields": [
+            "slug",
+            "name",
+            "bpm_range",
+            "mood",
+            "origin_decade",
+            "origin_region",
+            "example_artists"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "net",
+      "file_count": 3,
+      "entry_count": 124,
+      "files": [
+        {
+          "path": "net/dns-record-types/dns-record-types.json",
+          "description": null,
+          "count": 20,
+          "fields": [
+            "type",
+            "name",
+            "class",
+            "description",
+            "example_value",
+            "numeric_id",
+            "rfc"
+          ]
+        },
+        {
+          "path": "net/http-status-codes/http-status-codes.json",
+          "description": "HTTP status codes (extended reference)",
+          "count": 62,
+          "fields": [
+            "code",
+            "name",
+            "category",
+            "description"
+          ]
+        },
+        {
+          "path": "net/ports/ports.json",
+          "description": "Well-known TCP/UDP port numbers with service names",
+          "count": 42,
+          "fields": [
+            "port",
+            "protocol",
+            "service",
+            "description"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "networking",
+      "file_count": 3,
+      "entry_count": 79,
+      "files": [
+        {
+          "path": "networking/devices/device-types.json",
+          "description": "Network device types with OSI layer and function",
+          "count": 15,
+          "fields": [
+            "name",
+            "slug",
+            "osi_layer",
+            "function",
+            "description",
+            "protocols",
+            "common_brands"
+          ]
+        },
+        {
+          "path": "networking/protocols/ip-protocols.json",
+          "description": "IP protocol numbers with RFC and connection type",
+          "count": 31,
+          "fields": [
+            "number",
+            "name",
+            "full_name",
+            "slug",
+            "rfc",
+            "description",
+            "connection_oriented"
+          ]
+        },
+        {
+          "path": "networking/subnets/cidr.json",
+          "description": "CIDR subnet reference with host counts and subnet masks",
+          "count": 33,
+          "fields": [
+            "cidr",
+            "slug",
+            "subnet_mask",
+            "wildcard_mask",
+            "total_hosts",
+            "usable_hosts",
+            "network_bits",
+            "host_bits",
+            "example",
+            "typical_use"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "physics",
+      "file_count": 1,
+      "entry_count": 25,
+      "files": [
+        {
+          "path": "physics/laws/laws.json",
+          "description": "Fundamental physics laws, principles, and theories",
+          "count": 25,
+          "fields": [
+            "name",
+            "slug",
+            "also_known_as",
+            "discoverer",
+            "year",
+            "field",
+            "statement",
+            "formula",
+            "description"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "programming",
+      "file_count": 6,
+      "entry_count": 196,
+      "files": [
+        {
+          "path": "programming/design-patterns/design-patterns.json",
+          "description": "GoF and other software design patterns",
+          "count": 26,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "intent",
+            "also_known_as",
+            "use_when",
+            "participants",
+            "consequences",
+            "source"
+          ]
+        },
+        {
+          "path": "programming/frameworks/frameworks.json",
+          "description": "Frameworks and libraries across languages and domains",
+          "count": 49,
+          "fields": [
+            "name",
+            "slug",
+            "language",
+            "type",
+            "license",
+            "year",
+            "creator",
+            "description",
+            "use_cases"
+          ]
+        },
+        {
+          "path": "programming/frameworks.json",
+          "description": null,
+          "count": 26,
+          "fields": [
+            "name",
+            "slug",
+            "language",
+            "type",
+            "category",
+            "year",
+            "creator",
+            "website",
+            "package",
+            "stars_approx",
+            "description"
+          ]
+        },
+        {
+          "path": "programming/languages/languages.json",
+          "description": "Programming languages with paradigm, typing, and use cases",
+          "count": 46,
+          "fields": [
+            "name",
+            "slug",
+            "paradigm",
+            "typing",
+            "type_system",
+            "year",
+            "creator",
+            "file_extension",
+            "description",
+            "use_cases"
+          ]
+        },
+        {
+          "path": "programming/languages.json",
+          "description": null,
+          "count": 30,
+          "fields": [
+            "name",
+            "slug",
+            "color",
+            "type",
+            "paradigms",
+            "extensions",
+            "year",
+            "creator",
+            "website",
+            "description"
+          ]
+        },
+        {
+          "path": "programming/licenses/licenses.json",
+          "description": "Open-source software licenses with permissions summary",
+          "count": 19,
+          "fields": [
+            "id",
+            "name",
+            "slug",
+            "family",
+            "spdx",
+            "osi_approved",
+            "fsf_free",
+            "patent_grant",
+            "copyleft",
+            "permissions",
+            "conditions",
+            "limitations",
+            "description",
+            "url"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "science",
+      "file_count": 4,
+      "entry_count": 166,
+      "files": [
+        {
+          "path": "science/constants/constants.json",
+          "description": "Fundamental physical constants (SI units)",
+          "count": 23,
+          "fields": [
+            "name",
+            "symbol",
+            "value",
+            "unit",
+            "category",
+            "exact",
+            "description"
+          ]
+        },
+        {
+          "path": "science/elements/elements.json",
+          "description": "All 118 chemical elements with IUPAC 2021 atomic masses",
+          "count": 118,
+          "fields": [
+            "number",
+            "symbol",
+            "name",
+            "mass",
+            "group",
+            "period",
+            "category",
+            "phase"
+          ]
+        },
+        {
+          "path": "science/propagation/signal-speeds.json",
+          "description": null,
+          "count": null,
+          "fields": null
+        },
+        {
+          "path": "science/units/units.json",
+          "description": "SI and common measurement units",
+          "count": 25,
+          "fields": [
+            "slug",
+            "name",
+            "symbol",
+            "quantity",
+            "system",
+            "to_si_factor",
+            "notes"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "security",
+      "file_count": 3,
+      "entry_count": 36,
+      "files": [
+        {
+          "path": "security/headers/security-headers.json",
+          "description": "HTTP security headers with recommended values and risk if missing",
+          "count": 20,
+          "fields": [
+            "name",
+            "slug",
+            "header",
+            "category",
+            "recommended_value",
+            "description",
+            "risk_if_missing",
+            "source",
+            "example"
+          ]
+        },
+        {
+          "path": "security/owasp-top10/owasp-top10.json",
+          "description": null,
+          "count": 10,
+          "fields": [
+            "id",
+            "rank",
+            "name",
+            "slug",
+            "description",
+            "examples",
+            "mitigations",
+            "cwe"
+          ]
+        },
+        {
+          "path": "security/tls/versions.json",
+          "description": "TLS/SSL protocol versions with status (current/deprecated/broken)",
+          "count": 6,
+          "fields": [
+            "version",
+            "slug",
+            "released_year",
+            "status",
+            "rfc",
+            "forward_secrecy",
+            "handshake_rtt",
+            "description",
+            "notes"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "social",
+      "file_count": 1,
+      "entry_count": 15,
+      "files": [
+        {
+          "path": "social/platforms.json",
+          "description": "Social media platforms with brand colors and metadata",
+          "count": 15,
+          "fields": [
+            "name",
+            "slug",
+            "url",
+            "brand-color",
+            "open-source",
+            "federated",
+            "protocol",
+            "handle-prefix",
+            "handle-format",
+            "description",
+            "content-types",
+            "character-limit",
+            "founded",
+            "category"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "space",
+      "file_count": 3,
+      "entry_count": 52,
+      "files": [
+        {
+          "path": "space/dwarf-planets/dwarf-planets.json",
+          "description": "IAU dwarf planets and likely candidates",
+          "count": 10,
+          "fields": [
+            "name",
+            "slug",
+            "iau_status",
+            "discovered_year",
+            "discoverer",
+            "region",
+            "diameter_km",
+            "mass_kg",
+            "orbital_period_years",
+            "distance_from_sun_au",
+            "known_moons",
+            "largest_moon",
+            "description"
+          ]
+        },
+        {
+          "path": "space/missions/missions.json",
+          "description": "Major space missions with agency, destination, and achievements",
+          "count": 34,
+          "fields": [
+            "name",
+            "slug",
+            "agency",
+            "year",
+            "type",
+            "destination",
+            "status",
+            "description",
+            "achievements"
+          ]
+        },
+        {
+          "path": "space/planets/planets.json",
+          "description": "Solar system planets with physical and orbital data",
+          "count": 8,
+          "fields": [
+            "name",
+            "order",
+            "type",
+            "mass_kg",
+            "radius_km",
+            "distance_from_sun_km",
+            "orbital_period_days",
+            "rotation_period_days",
+            "moons",
+            "has_rings",
+            "avg_temperature_c"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "sports",
+      "file_count": 1,
+      "entry_count": 41,
+      "files": [
+        {
+          "path": "sports/sports.json",
+          "description": "Major sports with category, players per side, and governing body",
+          "count": 41,
+          "fields": [
+            "name",
+            "slug",
+            "also_known_as",
+            "category",
+            "players_per_side",
+            "governing_body",
+            "olympic",
+            "origin_country_iso2",
+            "origin_decade",
+            "description"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "typography",
+      "file_count": 3,
+      "entry_count": 25,
+      "files": [
+        {
+          "path": "typography/font-weights/weights.json",
+          "description": "CSS font-weight values with keywords and typical uses",
+          "count": 9,
+          "fields": [
+            "name",
+            "slug",
+            "numeric",
+            "css_keyword",
+            "description",
+            "typical_uses"
+          ]
+        },
+        {
+          "path": "typography/line-height/guidelines.json",
+          "description": "Line-height guidelines by content type",
+          "count": 6,
+          "fields": [
+            "name",
+            "slug",
+            "value",
+            "css_value",
+            "suitable_for",
+            "avoid_for",
+            "description"
+          ]
+        },
+        {
+          "path": "typography/type-scale/scales.json",
+          "description": "Typographic scale ratios with step sizes",
+          "count": 10,
+          "fields": [
+            "name",
+            "slug",
+            "ratio",
+            "base_px",
+            "steps",
+            "description",
+            "use_case"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "unicode",
+      "file_count": 2,
+      "entry_count": 153,
+      "files": [
+        {
+          "path": "unicode/blocks/blocks.json",
+          "description": "Unicode character blocks with code point ranges",
+          "count": 64,
+          "fields": [
+            "name",
+            "slug",
+            "start",
+            "end",
+            "count",
+            "category",
+            "description"
+          ]
+        },
+        {
+          "path": "unicode/symbols/special-chars.json",
+          "description": "Common special characters with codepoint, HTML entity, and usage",
+          "count": 89,
+          "fields": [
+            "name",
+            "slug",
+            "char",
+            "codepoint",
+            "html_entity",
+            "html_decimal",
+            "category",
+            "description",
+            "usage"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "web",
+      "file_count": 9,
+      "entry_count": 148,
+      "files": [
+        {
+          "path": "web/browsers/browsers.json",
+          "description": "Major web browsers with engine, vendor, and platform support",
+          "count": 15,
+          "fields": [
+            "name",
+            "slug",
+            "engine",
+            "js_engine",
+            "vendor",
+            "year",
+            "open_source",
+            "platforms",
+            "description",
+            "notable_features"
+          ]
+        },
+        {
+          "path": "web/browsers.json",
+          "description": null,
+          "count": 12,
+          "fields": [
+            "name",
+            "slug",
+            "vendor",
+            "engine",
+            "js_engine",
+            "year",
+            "open_source",
+            "platforms",
+            "market_share_pct",
+            "latest_stable",
+            "install",
+            "website",
+            "description"
+          ]
+        },
+        {
+          "path": "web/csp/directives.json",
+          "description": "Content Security Policy directive reference",
+          "count": 22,
+          "fields": [
+            "directive",
+            "slug",
+            "category",
+            "description",
+            "example",
+            "notes"
+          ]
+        },
+        {
+          "path": "web/http/auth-schemes.json",
+          "description": null,
+          "count": 10,
+          "fields": [
+            "scheme",
+            "slug",
+            "rfc",
+            "security",
+            "description",
+            "header_format",
+            "example"
+          ]
+        },
+        {
+          "path": "web/http/headers.json",
+          "description": "HTTP request/response headers with direction and description",
+          "count": 25,
+          "fields": [
+            "name",
+            "direction",
+            "category",
+            "description",
+            "example",
+            "source"
+          ]
+        },
+        {
+          "path": "web/http/methods.json",
+          "description": "HTTP methods with safe/idempotent flags and RFC references",
+          "count": 9,
+          "fields": [
+            "method",
+            "safe",
+            "idempotent",
+            "cacheable",
+            "request-body",
+            "response-body",
+            "description",
+            "source"
+          ]
+        },
+        {
+          "path": "web/http/status-codes.json",
+          "description": "HTTP status codes with category and description",
+          "count": 35,
+          "fields": [
+            "code",
+            "name",
+            "description",
+            "category",
+            "cacheable",
+            "source"
+          ]
+        },
+        {
+          "path": "web/mime/mappings.json",
+          "description": "File extension to MIME type mappings",
+          "count": null,
+          "fields": null
+        },
+        {
+          "path": "web/regex/patterns.json",
+          "description": "Common regex patterns for validation (email, URL, UUID, etc.)",
+          "count": 20,
+          "fields": [
+            "name",
+            "slug",
+            "pattern",
+            "flags",
+            "description",
+            "example-valid",
+            "example-invalid",
+            "category",
+            "notes",
+            "source"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "windows",
+      "file_count": 7,
+      "entry_count": 114,
+      "files": [
+        {
+          "path": "windows/powershell/profile-snippets.json",
+          "description": null,
+          "count": 12,
+          "fields": [
+            "name",
+            "slug",
+            "category",
+            "description",
+            "snippet",
+            "requires",
+            "profile-path"
+          ]
+        },
+        {
+          "path": "windows/powershell/snippets.json",
+          "description": null,
+          "count": 20,
+          "fields": [
+            "name",
+            "slug",
+            "description",
+            "code",
+            "category",
+            "min-version",
+            "tags",
+            "example-output"
+          ]
+        },
+        {
+          "path": "windows/registry/common-tweaks.json",
+          "description": "Common Windows Registry tweaks",
+          "count": 20,
+          "fields": [
+            "name",
+            "slug",
+            "key",
+            "value-name",
+            "value-type",
+            "value-data",
+            "default-value",
+            "description",
+            "category",
+            "reversible",
+            "requires-restart",
+            "tags"
+          ]
+        },
+        {
+          "path": "windows/terminal/color-schemes.json",
+          "description": null,
+          "count": 10,
+          "fields": [
+            "name",
+            "slug",
+            "background",
+            "foreground",
+            "cursorColor",
+            "selectionBackground",
+            "black",
+            "red",
+            "green",
+            "yellow",
+            "blue",
+            "purple",
+            "cyan",
+            "white",
+            "brightBlack",
+            "brightRed",
+            "brightGreen",
+            "brightYellow",
+            "brightBlue",
+            "brightPurple",
+            "brightCyan",
+            "brightWhite"
+          ]
+        },
+        {
+          "path": "windows/terminal/profiles.json",
+          "description": null,
+          "count": 11,
+          "fields": [
+            "name",
+            "slug",
+            "guid",
+            "commandline",
+            "icon",
+            "colorScheme",
+            "fontFace",
+            "fontSize",
+            "cursorShape",
+            "backgroundImage",
+            "backgroundImageOpacity",
+            "description",
+            "tags"
+          ]
+        },
+        {
+          "path": "windows/winget/packages.json",
+          "description": "Essential winget packages for Windows setup",
+          "count": 31,
+          "fields": [
+            "name",
+            "slug",
+            "id",
+            "version-latest",
+            "category",
+            "description",
+            "homepage",
+            "free",
+            "open-source",
+            "tags"
+          ]
+        },
+        {
+          "path": "windows/wsl/distros.json",
+          "description": null,
+          "count": 10,
+          "fields": [
+            "name",
+            "slug",
+            "wsl-version",
+            "install-cmd",
+            "default-user",
+            "init-system",
+            "package-manager",
+            "notes",
+            "good-for",
+            "tags"
+          ]
+        }
+      ]
+    }
+  ]
+}

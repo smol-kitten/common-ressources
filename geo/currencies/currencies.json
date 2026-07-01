@@ -1,182 +1,7 @@
 [
   {
-    "code": "USD",
-    "name": "United States Dollar",
-    "symbol": "$",
-    "decimals": 2,
-    "country": "United States",
-    "country_code": "US"
-  },
-  {
-    "code": "EUR",
-    "name": "Euro",
-    "symbol": "€",
-    "decimals": 2,
-    "country": "European Union",
-    "country_code": "EU"
-  },
-  {
-    "code": "GBP",
-    "name": "British Pound Sterling",
-    "symbol": "£",
-    "decimals": 2,
-    "country": "United Kingdom",
-    "country_code": "GB"
-  },
-  {
-    "code": "JPY",
-    "name": "Japanese Yen",
-    "symbol": "¥",
-    "decimals": 0,
-    "country": "Japan",
-    "country_code": "JP"
-  },
-  {
-    "code": "CNY",
-    "name": "Chinese Yuan Renminbi",
-    "symbol": "¥",
-    "decimals": 2,
-    "country": "China",
-    "country_code": "CN"
-  },
-  {
-    "code": "INR",
-    "name": "Indian Rupee",
-    "symbol": "₹",
-    "decimals": 2,
-    "country": "India",
-    "country_code": "IN"
-  },
-  {
-    "code": "CAD",
-    "name": "Canadian Dollar",
-    "symbol": "C$",
-    "decimals": 2,
-    "country": "Canada",
-    "country_code": "CA"
-  },
-  {
-    "code": "AUD",
-    "name": "Australian Dollar",
-    "symbol": "A$",
-    "decimals": 2,
-    "country": "Australia",
-    "country_code": "AU"
-  },
-  {
-    "code": "CHF",
-    "name": "Swiss Franc",
-    "symbol": "Fr",
-    "decimals": 2,
-    "country": "Switzerland",
-    "country_code": "CH"
-  },
-  {
-    "code": "SEK",
-    "name": "Swedish Krona",
-    "symbol": "kr",
-    "decimals": 2,
-    "country": "Sweden",
-    "country_code": "SE"
-  },
-  {
-    "code": "NOK",
-    "name": "Norwegian Krone",
-    "symbol": "kr",
-    "decimals": 2,
-    "country": "Norway",
-    "country_code": "NO"
-  },
-  {
-    "code": "DKK",
-    "name": "Danish Krone",
-    "symbol": "kr",
-    "decimals": 2,
-    "country": "Denmark",
-    "country_code": "DK"
-  },
-  {
-    "code": "NZD",
-    "name": "New Zealand Dollar",
-    "symbol": "NZ$",
-    "decimals": 2,
-    "country": "New Zealand",
-    "country_code": "NZ"
-  },
-  {
-    "code": "BRL",
-    "name": "Brazilian Real",
-    "symbol": "R$",
-    "decimals": 2,
-    "country": "Brazil",
-    "country_code": "BR"
-  },
-  {
-    "code": "MXN",
-    "name": "Mexican Peso",
-    "symbol": "$",
-    "decimals": 2,
-    "country": "Mexico",
-    "country_code": "MX"
-  },
-  {
-    "code": "ZAR",
-    "name": "South African Rand",
-    "symbol": "R",
-    "decimals": 2,
-    "country": "South Africa",
-    "country_code": "ZA"
-  },
-  {
-    "code": "KRW",
-    "name": "South Korean Won",
-    "symbol": "₩",
-    "decimals": 0,
-    "country": "South Korea",
-    "country_code": "KR"
-  },
-  {
-    "code": "SGD",
-    "name": "Singapore Dollar",
-    "symbol": "S$",
-    "decimals": 2,
-    "country": "Singapore",
-    "country_code": "SG"
-  },
-  {
-    "code": "HKD",
-    "name": "Hong Kong Dollar",
-    "symbol": "HK$",
-    "decimals": 2,
-    "country": "Hong Kong",
-    "country_code": "HK"
-  },
-  {
-    "code": "TRY",
-    "name": "Turkish Lira",
-    "symbol": "₺",
-    "decimals": 2,
-    "country": "Turkey",
-    "country_code": "TR"
-  },
-  {
-    "code": "RUB",
-    "name": "Russian Ruble",
-    "symbol": "₽",
-    "decimals": 2,
-    "country": "Russia",
-    "country_code": "RU"
-  },
-  {
-    "code": "PLN",
-    "name": "Polish Zloty",
-    "symbol": "zł",
-    "decimals": 2,
-    "country": "Poland",
-    "country_code": "PL"
-  },
-  {
     "code": "AED",
+    "slug": "aed",
     "name": "UAE Dirham",
     "symbol": "د.إ",
     "decimals": 2,
@@ -184,7 +9,966 @@
     "country_code": "AE"
   },
   {
+    "code": "AFN",
+    "slug": "afn",
+    "name": "Afghan Afghani",
+    "symbol": "؋",
+    "decimals": 2,
+    "country": "Afghanistan",
+    "country_code": "AF"
+  },
+  {
+    "code": "ALL",
+    "slug": "all",
+    "name": "Albanian Lek",
+    "symbol": "L",
+    "decimals": 2,
+    "country": "Albania",
+    "country_code": "AL"
+  },
+  {
+    "code": "AMD",
+    "slug": "amd",
+    "name": "Armenian Dram",
+    "symbol": "֏",
+    "decimals": 2,
+    "country": "Armenia",
+    "country_code": "AM"
+  },
+  {
+    "code": "AOA",
+    "slug": "aoa",
+    "name": "Angolan Kwanza",
+    "symbol": "Kz",
+    "decimals": 2,
+    "country": "Angola",
+    "country_code": "AO"
+  },
+  {
+    "code": "ARS",
+    "slug": "ars",
+    "name": "Argentine Peso",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "Argentina",
+    "country_code": "AR"
+  },
+  {
+    "code": "AUD",
+    "slug": "aud",
+    "name": "Australian Dollar",
+    "symbol": "A$",
+    "decimals": 2,
+    "country": "Australia",
+    "country_code": "AU",
+    "description": "Also used in Kiribati, Nauru, and Tuvalu."
+  },
+  {
+    "code": "AZN",
+    "slug": "azn",
+    "name": "Azerbaijani Manat",
+    "symbol": "₼",
+    "decimals": 2,
+    "country": "Azerbaijan",
+    "country_code": "AZ"
+  },
+  {
+    "code": "BAM",
+    "slug": "bam",
+    "name": "Bosnia and Herzegovina Convertible Mark",
+    "symbol": "KM",
+    "decimals": 2,
+    "country": "Bosnia and Herzegovina",
+    "country_code": "BA"
+  },
+  {
+    "code": "BBD",
+    "slug": "bbd",
+    "name": "Barbadian Dollar",
+    "symbol": "Bds$",
+    "decimals": 2,
+    "country": "Barbados",
+    "country_code": "BB"
+  },
+  {
+    "code": "BDT",
+    "slug": "bdt",
+    "name": "Bangladeshi Taka",
+    "symbol": "৳",
+    "decimals": 2,
+    "country": "Bangladesh",
+    "country_code": "BD"
+  },
+  {
+    "code": "BGN",
+    "slug": "bgn",
+    "name": "Bulgarian Lev",
+    "symbol": "лв",
+    "decimals": 2,
+    "country": "Bulgaria",
+    "country_code": "BG"
+  },
+  {
+    "code": "BHD",
+    "slug": "bhd",
+    "name": "Bahraini Dinar",
+    "symbol": "BD",
+    "decimals": 3,
+    "country": "Bahrain",
+    "country_code": "BH"
+  },
+  {
+    "code": "BIF",
+    "slug": "bif",
+    "name": "Burundian Franc",
+    "symbol": "Fr",
+    "decimals": 0,
+    "country": "Burundi",
+    "country_code": "BI"
+  },
+  {
+    "code": "BND",
+    "slug": "bnd",
+    "name": "Brunei Dollar",
+    "symbol": "B$",
+    "decimals": 2,
+    "country": "Brunei",
+    "country_code": "BN"
+  },
+  {
+    "code": "BOB",
+    "slug": "bob",
+    "name": "Bolivian Boliviano",
+    "symbol": "Bs.",
+    "decimals": 2,
+    "country": "Bolivia",
+    "country_code": "BO"
+  },
+  {
+    "code": "BRL",
+    "slug": "brl",
+    "name": "Brazilian Real",
+    "symbol": "R$",
+    "decimals": 2,
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  {
+    "code": "BSD",
+    "slug": "bsd",
+    "name": "Bahamian Dollar",
+    "symbol": "B$",
+    "decimals": 2,
+    "country": "Bahamas",
+    "country_code": "BS"
+  },
+  {
+    "code": "BTN",
+    "slug": "btn",
+    "name": "Bhutanese Ngultrum",
+    "symbol": "Nu",
+    "decimals": 2,
+    "country": "Bhutan",
+    "country_code": "BT"
+  },
+  {
+    "code": "BWP",
+    "slug": "bwp",
+    "name": "Botswana Pula",
+    "symbol": "P",
+    "decimals": 2,
+    "country": "Botswana",
+    "country_code": "BW"
+  },
+  {
+    "code": "BYR",
+    "slug": "byr",
+    "name": "Belarusian Ruble",
+    "symbol": "Br",
+    "decimals": 2,
+    "country": "Belarus",
+    "country_code": "BY"
+  },
+  {
+    "code": "BZD",
+    "slug": "bzd",
+    "name": "Belize Dollar",
+    "symbol": "BZ$",
+    "decimals": 2,
+    "country": "Belize",
+    "country_code": "BZ"
+  },
+  {
+    "code": "CAD",
+    "slug": "cad",
+    "name": "Canadian Dollar",
+    "symbol": "C$",
+    "decimals": 2,
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  {
+    "code": "CDF",
+    "slug": "cdf",
+    "name": "Congolese Franc",
+    "symbol": "FC",
+    "decimals": 2,
+    "country": "Congo (Democratic Republic)",
+    "country_code": "CD"
+  },
+  {
+    "code": "CHF",
+    "slug": "chf",
+    "name": "Swiss Franc",
+    "symbol": "Fr",
+    "decimals": 2,
+    "country": "Switzerland",
+    "country_code": "CH",
+    "description": "Also used in Liechtenstein."
+  },
+  {
+    "code": "CLP",
+    "slug": "clp",
+    "name": "Chilean Peso",
+    "symbol": "$",
+    "decimals": 0,
+    "country": "Chile",
+    "country_code": "CL"
+  },
+  {
+    "code": "CNY",
+    "slug": "cny",
+    "name": "Chinese Yuan Renminbi",
+    "symbol": "¥",
+    "decimals": 2,
+    "country": "China",
+    "country_code": "CN"
+  },
+  {
+    "code": "COP",
+    "slug": "cop",
+    "name": "Colombian Peso",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "Colombia",
+    "country_code": "CO"
+  },
+  {
+    "code": "CRC",
+    "slug": "crc",
+    "name": "Costa Rican Colón",
+    "symbol": "₡",
+    "decimals": 2,
+    "country": "Costa Rica",
+    "country_code": "CR"
+  },
+  {
+    "code": "CUP",
+    "slug": "cup",
+    "name": "Cuban Peso",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "Cuba",
+    "country_code": "CU"
+  },
+  {
+    "code": "CVE",
+    "slug": "cve",
+    "name": "Cape Verdean Escudo",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "Cape Verde",
+    "country_code": "CV"
+  },
+  {
+    "code": "CZK",
+    "slug": "czk",
+    "name": "Czech Koruna",
+    "symbol": "Kč",
+    "decimals": 2,
+    "country": "Czech Republic",
+    "country_code": "CZ"
+  },
+  {
+    "code": "DJF",
+    "slug": "djf",
+    "name": "Djiboutian Franc",
+    "symbol": "Fr",
+    "decimals": 0,
+    "country": "Djibouti",
+    "country_code": "DJ"
+  },
+  {
+    "code": "DKK",
+    "slug": "dkk",
+    "name": "Danish Krone",
+    "symbol": "kr",
+    "decimals": 2,
+    "country": "Denmark",
+    "country_code": "DK"
+  },
+  {
+    "code": "DOP",
+    "slug": "dop",
+    "name": "Dominican Peso",
+    "symbol": "RD$",
+    "decimals": 2,
+    "country": "Dominican Republic",
+    "country_code": "DO"
+  },
+  {
+    "code": "DZD",
+    "slug": "dzd",
+    "name": "Algerian Dinar",
+    "symbol": "دج",
+    "decimals": 2,
+    "country": "Algeria",
+    "country_code": "DZ"
+  },
+  {
+    "code": "EGP",
+    "slug": "egp",
+    "name": "Egyptian Pound",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "Egypt",
+    "country_code": "EG"
+  },
+  {
+    "code": "ERN",
+    "slug": "ern",
+    "name": "Eritrean Nakfa",
+    "symbol": "Nfk",
+    "decimals": 2,
+    "country": "Eritrea",
+    "country_code": "ER"
+  },
+  {
+    "code": "ETB",
+    "slug": "etb",
+    "name": "Ethiopian Birr",
+    "symbol": "Br",
+    "decimals": 2,
+    "country": "Ethiopia",
+    "country_code": "ET"
+  },
+  {
+    "code": "EUR",
+    "slug": "eur",
+    "name": "Euro",
+    "symbol": "€",
+    "decimals": 2,
+    "country": "European Union",
+    "country_code": "EU",
+    "description": "Used by 20 EU member states plus Andorra, Kosovo, Monaco, Montenegro, San Marino, and Vatican City."
+  },
+  {
+    "code": "FJD",
+    "slug": "fjd",
+    "name": "Fijian Dollar",
+    "symbol": "FJ$",
+    "decimals": 2,
+    "country": "Fiji",
+    "country_code": "FJ"
+  },
+  {
+    "code": "GBP",
+    "slug": "gbp",
+    "name": "British Pound Sterling",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  {
+    "code": "GEL",
+    "slug": "gel",
+    "name": "Georgian Lari",
+    "symbol": "₾",
+    "decimals": 2,
+    "country": "Georgia",
+    "country_code": "GE"
+  },
+  {
+    "code": "GHS",
+    "slug": "ghs",
+    "name": "Ghanaian Cedi",
+    "symbol": "₵",
+    "decimals": 2,
+    "country": "Ghana",
+    "country_code": "GH"
+  },
+  {
+    "code": "GMD",
+    "slug": "gmd",
+    "name": "Gambian Dalasi",
+    "symbol": "D",
+    "decimals": 2,
+    "country": "Gambia",
+    "country_code": "GM"
+  },
+  {
+    "code": "GNF",
+    "slug": "gnf",
+    "name": "Guinean Franc",
+    "symbol": "Fr",
+    "decimals": 0,
+    "country": "Guinea",
+    "country_code": "GN"
+  },
+  {
+    "code": "GTQ",
+    "slug": "gtq",
+    "name": "Guatemalan Quetzal",
+    "symbol": "Q",
+    "decimals": 2,
+    "country": "Guatemala",
+    "country_code": "GT"
+  },
+  {
+    "code": "GYD",
+    "slug": "gyd",
+    "name": "Guyanese Dollar",
+    "symbol": "G$",
+    "decimals": 2,
+    "country": "Guyana",
+    "country_code": "GY"
+  },
+  {
+    "code": "HKD",
+    "slug": "hkd",
+    "name": "Hong Kong Dollar",
+    "symbol": "HK$",
+    "decimals": 2,
+    "country": "Hong Kong",
+    "country_code": "HK"
+  },
+  {
+    "code": "HNL",
+    "slug": "hnl",
+    "name": "Honduran Lempira",
+    "symbol": "L",
+    "decimals": 2,
+    "country": "Honduras",
+    "country_code": "HN"
+  },
+  {
+    "code": "HTG",
+    "slug": "htg",
+    "name": "Haitian Gourde",
+    "symbol": "G",
+    "decimals": 2,
+    "country": "Haiti",
+    "country_code": "HT"
+  },
+  {
+    "code": "HUF",
+    "slug": "huf",
+    "name": "Hungarian Forint",
+    "symbol": "Ft",
+    "decimals": 2,
+    "country": "Hungary",
+    "country_code": "HU"
+  },
+  {
+    "code": "IDR",
+    "slug": "idr",
+    "name": "Indonesian Rupiah",
+    "symbol": "Rp",
+    "decimals": 0,
+    "country": "Indonesia",
+    "country_code": "ID"
+  },
+  {
+    "code": "ILS",
+    "slug": "ils",
+    "name": "Israeli New Shekel",
+    "symbol": "₪",
+    "decimals": 2,
+    "country": "Israel",
+    "country_code": "IL",
+    "description": "Also used in the Palestinian territories."
+  },
+  {
+    "code": "INR",
+    "slug": "inr",
+    "name": "Indian Rupee",
+    "symbol": "₹",
+    "decimals": 2,
+    "country": "India",
+    "country_code": "IN"
+  },
+  {
+    "code": "IQD",
+    "slug": "iqd",
+    "name": "Iraqi Dinar",
+    "symbol": "ع.د",
+    "decimals": 3,
+    "country": "Iraq",
+    "country_code": "IQ"
+  },
+  {
+    "code": "IRR",
+    "slug": "irr",
+    "name": "Iranian Rial",
+    "symbol": "﷼",
+    "decimals": 2,
+    "country": "Iran",
+    "country_code": "IR"
+  },
+  {
+    "code": "ISK",
+    "slug": "isk",
+    "name": "Icelandic Króna",
+    "symbol": "kr",
+    "decimals": 0,
+    "country": "Iceland",
+    "country_code": "IS"
+  },
+  {
+    "code": "JMD",
+    "slug": "jmd",
+    "name": "Jamaican Dollar",
+    "symbol": "J$",
+    "decimals": 2,
+    "country": "Jamaica",
+    "country_code": "JM"
+  },
+  {
+    "code": "JOD",
+    "slug": "jod",
+    "name": "Jordanian Dinar",
+    "symbol": "JD",
+    "decimals": 3,
+    "country": "Jordan",
+    "country_code": "JO"
+  },
+  {
+    "code": "JPY",
+    "slug": "jpy",
+    "name": "Japanese Yen",
+    "symbol": "¥",
+    "decimals": 0,
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  {
+    "code": "KES",
+    "slug": "kes",
+    "name": "Kenyan Shilling",
+    "symbol": "KSh",
+    "decimals": 2,
+    "country": "Kenya",
+    "country_code": "KE"
+  },
+  {
+    "code": "KGS",
+    "slug": "kgs",
+    "name": "Kyrgyzstani Som",
+    "symbol": "с",
+    "decimals": 2,
+    "country": "Kyrgyzstan",
+    "country_code": "KG"
+  },
+  {
+    "code": "KHR",
+    "slug": "khr",
+    "name": "Cambodian Riel",
+    "symbol": "៛",
+    "decimals": 2,
+    "country": "Cambodia",
+    "country_code": "KH"
+  },
+  {
+    "code": "KMF",
+    "slug": "kmf",
+    "name": "Comorian Franc",
+    "symbol": "Fr",
+    "decimals": 0,
+    "country": "Comoros",
+    "country_code": "KM"
+  },
+  {
+    "code": "KPW",
+    "slug": "kpw",
+    "name": "North Korean Won",
+    "symbol": "₩",
+    "decimals": 2,
+    "country": "North Korea",
+    "country_code": "KP"
+  },
+  {
+    "code": "KRW",
+    "slug": "krw",
+    "name": "South Korean Won",
+    "symbol": "₩",
+    "decimals": 0,
+    "country": "South Korea",
+    "country_code": "KR"
+  },
+  {
+    "code": "KWD",
+    "slug": "kwd",
+    "name": "Kuwaiti Dinar",
+    "symbol": "KD",
+    "decimals": 3,
+    "country": "Kuwait",
+    "country_code": "KW"
+  },
+  {
+    "code": "KZT",
+    "slug": "kzt",
+    "name": "Kazakhstani Tenge",
+    "symbol": "₸",
+    "decimals": 2,
+    "country": "Kazakhstan",
+    "country_code": "KZ"
+  },
+  {
+    "code": "LAK",
+    "slug": "lak",
+    "name": "Lao Kip",
+    "symbol": "₭",
+    "decimals": 2,
+    "country": "Laos",
+    "country_code": "LA"
+  },
+  {
+    "code": "LBP",
+    "slug": "lbp",
+    "name": "Lebanese Pound",
+    "symbol": "LL",
+    "decimals": 2,
+    "country": "Lebanon",
+    "country_code": "LB"
+  },
+  {
+    "code": "LKR",
+    "slug": "lkr",
+    "name": "Sri Lankan Rupee",
+    "symbol": "Rs",
+    "decimals": 2,
+    "country": "Sri Lanka",
+    "country_code": "LK"
+  },
+  {
+    "code": "LRD",
+    "slug": "lrd",
+    "name": "Liberian Dollar",
+    "symbol": "L$",
+    "decimals": 2,
+    "country": "Liberia",
+    "country_code": "LR"
+  },
+  {
+    "code": "LSL",
+    "slug": "lsl",
+    "name": "Lesotho Loti",
+    "symbol": "L",
+    "decimals": 2,
+    "country": "Lesotho",
+    "country_code": "LS"
+  },
+  {
+    "code": "LYD",
+    "slug": "lyd",
+    "name": "Libyan Dinar",
+    "symbol": "LD",
+    "decimals": 3,
+    "country": "Libya",
+    "country_code": "LY"
+  },
+  {
+    "code": "MAD",
+    "slug": "mad",
+    "name": "Moroccan Dirham",
+    "symbol": "MAD",
+    "decimals": 2,
+    "country": "Morocco",
+    "country_code": "MA"
+  },
+  {
+    "code": "MDL",
+    "slug": "mdl",
+    "name": "Moldovan Leu",
+    "symbol": "L",
+    "decimals": 2,
+    "country": "Moldova",
+    "country_code": "MD"
+  },
+  {
+    "code": "MGA",
+    "slug": "mga",
+    "name": "Malagasy Ariary",
+    "symbol": "Ar",
+    "decimals": 2,
+    "country": "Madagascar",
+    "country_code": "MG"
+  },
+  {
+    "code": "MKD",
+    "slug": "mkd",
+    "name": "Macedonian Denar",
+    "symbol": "den",
+    "decimals": 2,
+    "country": "North Macedonia",
+    "country_code": "MK"
+  },
+  {
+    "code": "MMK",
+    "slug": "mmk",
+    "name": "Myanmar Kyat",
+    "symbol": "K",
+    "decimals": 2,
+    "country": "Myanmar",
+    "country_code": "MM"
+  },
+  {
+    "code": "MNT",
+    "slug": "mnt",
+    "name": "Mongolian Tögrög",
+    "symbol": "₮",
+    "decimals": 2,
+    "country": "Mongolia",
+    "country_code": "MN"
+  },
+  {
+    "code": "MRU",
+    "slug": "mru",
+    "name": "Mauritanian Ouguiya",
+    "symbol": "UM",
+    "decimals": 2,
+    "country": "Mauritania",
+    "country_code": "MR"
+  },
+  {
+    "code": "MUR",
+    "slug": "mur",
+    "name": "Mauritian Rupee",
+    "symbol": "Rs",
+    "decimals": 2,
+    "country": "Mauritius",
+    "country_code": "MU"
+  },
+  {
+    "code": "MVR",
+    "slug": "mvr",
+    "name": "Maldivian Rufiyaa",
+    "symbol": "Rf",
+    "decimals": 2,
+    "country": "Maldives",
+    "country_code": "MV"
+  },
+  {
+    "code": "MWK",
+    "slug": "mwk",
+    "name": "Malawian Kwacha",
+    "symbol": "MK",
+    "decimals": 2,
+    "country": "Malawi",
+    "country_code": "MW"
+  },
+  {
+    "code": "MXN",
+    "slug": "mxn",
+    "name": "Mexican Peso",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "Mexico",
+    "country_code": "MX"
+  },
+  {
+    "code": "MYR",
+    "slug": "myr",
+    "name": "Malaysian Ringgit",
+    "symbol": "RM",
+    "decimals": 2,
+    "country": "Malaysia",
+    "country_code": "MY"
+  },
+  {
+    "code": "MZN",
+    "slug": "mzn",
+    "name": "Mozambican Metical",
+    "symbol": "MT",
+    "decimals": 2,
+    "country": "Mozambique",
+    "country_code": "MZ"
+  },
+  {
+    "code": "NAD",
+    "slug": "nad",
+    "name": "Namibian Dollar",
+    "symbol": "N$",
+    "decimals": 2,
+    "country": "Namibia",
+    "country_code": "NA"
+  },
+  {
+    "code": "NGN",
+    "slug": "ngn",
+    "name": "Nigerian Naira",
+    "symbol": "₦",
+    "decimals": 2,
+    "country": "Nigeria",
+    "country_code": "NG"
+  },
+  {
+    "code": "NIO",
+    "slug": "nio",
+    "name": "Nicaraguan Córdoba",
+    "symbol": "C$",
+    "decimals": 2,
+    "country": "Nicaragua",
+    "country_code": "NI"
+  },
+  {
+    "code": "NOK",
+    "slug": "nok",
+    "name": "Norwegian Krone",
+    "symbol": "kr",
+    "decimals": 2,
+    "country": "Norway",
+    "country_code": "NO"
+  },
+  {
+    "code": "NPR",
+    "slug": "npr",
+    "name": "Nepalese Rupee",
+    "symbol": "Rs",
+    "decimals": 2,
+    "country": "Nepal",
+    "country_code": "NP"
+  },
+  {
+    "code": "NZD",
+    "slug": "nzd",
+    "name": "New Zealand Dollar",
+    "symbol": "NZ$",
+    "decimals": 2,
+    "country": "New Zealand",
+    "country_code": "NZ"
+  },
+  {
+    "code": "OMR",
+    "slug": "omr",
+    "name": "Omani Rial",
+    "symbol": "ر.ع.",
+    "decimals": 3,
+    "country": "Oman",
+    "country_code": "OM"
+  },
+  {
+    "code": "PAB",
+    "slug": "pab",
+    "name": "Panamanian Balboa",
+    "symbol": "B/.",
+    "decimals": 2,
+    "country": "Panama",
+    "country_code": "PA"
+  },
+  {
+    "code": "PEN",
+    "slug": "pen",
+    "name": "Peruvian Sol",
+    "symbol": "S/.",
+    "decimals": 2,
+    "country": "Peru",
+    "country_code": "PE"
+  },
+  {
+    "code": "PGK",
+    "slug": "pgk",
+    "name": "Papua New Guinean Kina",
+    "symbol": "K",
+    "decimals": 2,
+    "country": "Papua New Guinea",
+    "country_code": "PG"
+  },
+  {
+    "code": "PHP",
+    "slug": "php",
+    "name": "Philippine Peso",
+    "symbol": "₱",
+    "decimals": 2,
+    "country": "Philippines",
+    "country_code": "PH"
+  },
+  {
+    "code": "PKR",
+    "slug": "pkr",
+    "name": "Pakistani Rupee",
+    "symbol": "Rs",
+    "decimals": 2,
+    "country": "Pakistan",
+    "country_code": "PK"
+  },
+  {
+    "code": "PLN",
+    "slug": "pln",
+    "name": "Polish Zloty",
+    "symbol": "zł",
+    "decimals": 2,
+    "country": "Poland",
+    "country_code": "PL"
+  },
+  {
+    "code": "PYG",
+    "slug": "pyg",
+    "name": "Paraguayan Guaraní",
+    "symbol": "₲",
+    "decimals": 0,
+    "country": "Paraguay",
+    "country_code": "PY"
+  },
+  {
+    "code": "QAR",
+    "slug": "qar",
+    "name": "Qatari Riyal",
+    "symbol": "﷼",
+    "decimals": 2,
+    "country": "Qatar",
+    "country_code": "QA"
+  },
+  {
+    "code": "RON",
+    "slug": "ron",
+    "name": "Romanian Leu",
+    "symbol": "lei",
+    "decimals": 2,
+    "country": "Romania",
+    "country_code": "RO"
+  },
+  {
+    "code": "RSD",
+    "slug": "rsd",
+    "name": "Serbian Dinar",
+    "symbol": "din",
+    "decimals": 2,
+    "country": "Serbia",
+    "country_code": "RS"
+  },
+  {
+    "code": "RUB",
+    "slug": "rub",
+    "name": "Russian Ruble",
+    "symbol": "₽",
+    "decimals": 2,
+    "country": "Russia",
+    "country_code": "RU"
+  },
+  {
+    "code": "RWF",
+    "slug": "rwf",
+    "name": "Rwandan Franc",
+    "symbol": "Fr",
+    "decimals": 0,
+    "country": "Rwanda",
+    "country_code": "RW"
+  },
+  {
     "code": "SAR",
+    "slug": "sar",
     "name": "Saudi Riyal",
     "symbol": "﷼",
     "decimals": 2,
@@ -192,11 +976,340 @@
     "country_code": "SA"
   },
   {
-    "code": "IDR",
-    "name": "Indonesian Rupiah",
-    "symbol": "Rp",
+    "code": "SBD",
+    "slug": "sbd",
+    "name": "Solomon Islands Dollar",
+    "symbol": "SI$",
+    "decimals": 2,
+    "country": "Solomon Islands",
+    "country_code": "SB"
+  },
+  {
+    "code": "SCR",
+    "slug": "scr",
+    "name": "Seychellois Rupee",
+    "symbol": "Rs",
+    "decimals": 2,
+    "country": "Seychelles",
+    "country_code": "SC"
+  },
+  {
+    "code": "SDG",
+    "slug": "sdg",
+    "name": "Sudanese Pound",
+    "symbol": "ج.س.",
+    "decimals": 2,
+    "country": "Sudan",
+    "country_code": "SD"
+  },
+  {
+    "code": "SEK",
+    "slug": "sek",
+    "name": "Swedish Krona",
+    "symbol": "kr",
+    "decimals": 2,
+    "country": "Sweden",
+    "country_code": "SE"
+  },
+  {
+    "code": "SGD",
+    "slug": "sgd",
+    "name": "Singapore Dollar",
+    "symbol": "S$",
+    "decimals": 2,
+    "country": "Singapore",
+    "country_code": "SG"
+  },
+  {
+    "code": "SLL",
+    "slug": "sll",
+    "name": "Sierra Leonean Leone",
+    "symbol": "Le",
+    "decimals": 2,
+    "country": "Sierra Leone",
+    "country_code": "SL"
+  },
+  {
+    "code": "SOS",
+    "slug": "sos",
+    "name": "Somali Shilling",
+    "symbol": "Sh",
+    "decimals": 2,
+    "country": "Somalia",
+    "country_code": "SO"
+  },
+  {
+    "code": "SRD",
+    "slug": "srd",
+    "name": "Surinamese Dollar",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "Suriname",
+    "country_code": "SR"
+  },
+  {
+    "code": "SSP",
+    "slug": "ssp",
+    "name": "South Sudanese Pound",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "South Sudan",
+    "country_code": "SS"
+  },
+  {
+    "code": "STN",
+    "slug": "stn",
+    "name": "São Tomé and Príncipe Dobra",
+    "symbol": "Db",
+    "decimals": 2,
+    "country": "São Tomé and Príncipe",
+    "country_code": "ST"
+  },
+  {
+    "code": "SYP",
+    "slug": "syp",
+    "name": "Syrian Pound",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "Syria",
+    "country_code": "SY"
+  },
+  {
+    "code": "SZL",
+    "slug": "szl",
+    "name": "Swazi Lilangeni",
+    "symbol": "L",
+    "decimals": 2,
+    "country": "Eswatini",
+    "country_code": "SZ"
+  },
+  {
+    "code": "THB",
+    "slug": "thb",
+    "name": "Thai Baht",
+    "symbol": "฿",
+    "decimals": 2,
+    "country": "Thailand",
+    "country_code": "TH"
+  },
+  {
+    "code": "TJS",
+    "slug": "tjs",
+    "name": "Tajikistani Somoni",
+    "symbol": "SM",
+    "decimals": 2,
+    "country": "Tajikistan",
+    "country_code": "TJ"
+  },
+  {
+    "code": "TMT",
+    "slug": "tmt",
+    "name": "Turkmenistani Manat",
+    "symbol": "T",
+    "decimals": 2,
+    "country": "Turkmenistan",
+    "country_code": "TM"
+  },
+  {
+    "code": "TND",
+    "slug": "tnd",
+    "name": "Tunisian Dinar",
+    "symbol": "DT",
+    "decimals": 3,
+    "country": "Tunisia",
+    "country_code": "TN"
+  },
+  {
+    "code": "TOP",
+    "slug": "top",
+    "name": "Tongan Paʻanga",
+    "symbol": "T$",
+    "decimals": 2,
+    "country": "Tonga",
+    "country_code": "TO"
+  },
+  {
+    "code": "TRY",
+    "slug": "try",
+    "name": "Turkish Lira",
+    "symbol": "₺",
+    "decimals": 2,
+    "country": "Turkey",
+    "country_code": "TR"
+  },
+  {
+    "code": "TTD",
+    "slug": "ttd",
+    "name": "Trinidad and Tobago Dollar",
+    "symbol": "TT$",
+    "decimals": 2,
+    "country": "Trinidad and Tobago",
+    "country_code": "TT"
+  },
+  {
+    "code": "TWD",
+    "slug": "twd",
+    "name": "New Taiwan Dollar",
+    "symbol": "NT$",
+    "decimals": 2,
+    "country": "Taiwan",
+    "country_code": "TW"
+  },
+  {
+    "code": "TZS",
+    "slug": "tzs",
+    "name": "Tanzanian Shilling",
+    "symbol": "Sh",
+    "decimals": 2,
+    "country": "Tanzania",
+    "country_code": "TZ"
+  },
+  {
+    "code": "UAH",
+    "slug": "uah",
+    "name": "Ukrainian Hryvnia",
+    "symbol": "₴",
+    "decimals": 2,
+    "country": "Ukraine",
+    "country_code": "UA"
+  },
+  {
+    "code": "UGX",
+    "slug": "ugx",
+    "name": "Ugandan Shilling",
+    "symbol": "Sh",
     "decimals": 0,
-    "country": "Indonesia",
-    "country_code": "ID"
+    "country": "Uganda",
+    "country_code": "UG"
+  },
+  {
+    "code": "USD",
+    "slug": "usd",
+    "name": "United States Dollar",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "United States",
+    "country_code": "US",
+    "description": "Also used in Ecuador, El Salvador, East Timor, Marshall Islands, Micronesia, Palau, and Panama alongside local currency."
+  },
+  {
+    "code": "UYU",
+    "slug": "uyu",
+    "name": "Uruguayan Peso",
+    "symbol": "$U",
+    "decimals": 2,
+    "country": "Uruguay",
+    "country_code": "UY"
+  },
+  {
+    "code": "UZS",
+    "slug": "uzs",
+    "name": "Uzbekistani Som",
+    "symbol": "so'm",
+    "decimals": 2,
+    "country": "Uzbekistan",
+    "country_code": "UZ"
+  },
+  {
+    "code": "VEF",
+    "slug": "vef",
+    "name": "Venezuelan Bolívar",
+    "symbol": "Bs.F",
+    "decimals": 2,
+    "country": "Venezuela",
+    "country_code": "VE"
+  },
+  {
+    "code": "VND",
+    "slug": "vnd",
+    "name": "Vietnamese Dong",
+    "symbol": "₫",
+    "decimals": 0,
+    "country": "Vietnam",
+    "country_code": "VN"
+  },
+  {
+    "code": "VUV",
+    "slug": "vuv",
+    "name": "Vanuatu Vatu",
+    "symbol": "VT",
+    "decimals": 0,
+    "country": "Vanuatu",
+    "country_code": "VU"
+  },
+  {
+    "code": "WST",
+    "slug": "wst",
+    "name": "Samoan Tālā",
+    "symbol": "T",
+    "decimals": 2,
+    "country": "Samoa",
+    "country_code": "WS"
+  },
+  {
+    "code": "XAF",
+    "slug": "xaf",
+    "name": "Central African CFA Franc",
+    "symbol": "Fr",
+    "decimals": 0,
+    "country": "Cameroon",
+    "country_code": "CM",
+    "description": "Used by six Central African nations: Cameroon, Central African Republic, Chad, Republic of Congo, Equatorial Guinea, and Gabon."
+  },
+  {
+    "code": "XCD",
+    "slug": "xcd",
+    "name": "East Caribbean Dollar",
+    "symbol": "EC$",
+    "decimals": 2,
+    "country": "Antigua and Barbuda",
+    "country_code": "AG",
+    "description": "Used by eight Eastern Caribbean nations: Antigua and Barbuda, Dominica, Grenada, Montserrat, Saint Kitts and Nevis, Saint Lucia, and Saint Vincent and the Grenadines."
+  },
+  {
+    "code": "XOF",
+    "slug": "xof",
+    "name": "West African CFA Franc",
+    "symbol": "Fr",
+    "decimals": 0,
+    "country": "Senegal",
+    "country_code": "SN",
+    "description": "Used by eight West African nations: Benin, Burkina Faso, Guinea-Bissau, Ivory Coast, Mali, Niger, Senegal, and Togo."
+  },
+  {
+    "code": "YER",
+    "slug": "yer",
+    "name": "Yemeni Rial",
+    "symbol": "﷼",
+    "decimals": 2,
+    "country": "Yemen",
+    "country_code": "YE"
+  },
+  {
+    "code": "ZAR",
+    "slug": "zar",
+    "name": "South African Rand",
+    "symbol": "R",
+    "decimals": 2,
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  {
+    "code": "ZMW",
+    "slug": "zmw",
+    "name": "Zambian Kwacha",
+    "symbol": "ZK",
+    "decimals": 2,
+    "country": "Zambia",
+    "country_code": "ZM"
+  },
+  {
+    "code": "ZWL",
+    "slug": "zwl",
+    "name": "Zimbabwean Dollar",
+    "symbol": "Z$",
+    "decimals": 2,
+    "country": "Zimbabwe",
+    "country_code": "ZW"
   }
 ]

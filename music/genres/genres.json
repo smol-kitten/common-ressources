@@ -1,147 +1,12 @@
 [
   {
-    "slug": "rock",
-    "name": "Rock",
-    "bpm_range": [100, 140],
-    "mood": ["energetic", "powerful", "raw"],
-    "origin_decade": "1950s",
-    "origin_region": "United States",
-    "example_artists": ["The Beatles", "Led Zeppelin", "AC/DC"]
-  },
-  {
-    "slug": "pop",
-    "name": "Pop",
-    "bpm_range": [100, 130],
-    "mood": ["upbeat", "catchy", "accessible"],
+    "slug": "afrobeat",
+    "name": "Afrobeat",
+    "bpm_range": [90, 120],
+    "mood": ["energetic", "political", "groovy"],
     "origin_decade": "1960s",
-    "origin_region": "United States / United Kingdom",
-    "example_artists": ["Michael Jackson", "Madonna", "Taylor Swift"]
-  },
-  {
-    "slug": "hip-hop",
-    "name": "Hip-Hop",
-    "bpm_range": [75, 115],
-    "mood": ["confident", "rhythmic", "expressive"],
-    "origin_decade": "1970s",
-    "origin_region": "New York, USA",
-    "example_artists": ["Nas", "Jay-Z", "Kendrick Lamar"]
-  },
-  {
-    "slug": "electronic",
-    "name": "Electronic",
-    "bpm_range": [110, 180],
-    "mood": ["synthetic", "danceable", "hypnotic"],
-    "origin_decade": "1970s",
-    "origin_region": "Europe",
-    "example_artists": ["Kraftwerk", "Daft Punk", "Aphex Twin"]
-  },
-  {
-    "slug": "jazz",
-    "name": "Jazz",
-    "bpm_range": [60, 200],
-    "mood": ["improvisational", "sophisticated", "cool"],
-    "origin_decade": "1910s",
-    "origin_region": "New Orleans, USA",
-    "example_artists": ["Miles Davis", "John Coltrane", "Thelonious Monk"]
-  },
-  {
-    "slug": "classical",
-    "name": "Classical",
-    "bpm_range": [40, 200],
-    "mood": ["formal", "expressive", "complex"],
-    "origin_decade": "1600s",
-    "origin_region": "Europe",
-    "example_artists": ["Bach", "Beethoven", "Mozart"]
-  },
-  {
-    "slug": "country",
-    "name": "Country",
-    "bpm_range": [80, 130],
-    "mood": ["sentimental", "rustic", "storytelling"],
-    "origin_decade": "1920s",
-    "origin_region": "Southern United States",
-    "example_artists": ["Johnny Cash", "Dolly Parton", "Hank Williams"]
-  },
-  {
-    "slug": "reggae",
-    "name": "Reggae",
-    "bpm_range": [60, 90],
-    "mood": ["relaxed", "spiritual", "rhythmic"],
-    "origin_decade": "1960s",
-    "origin_region": "Jamaica",
-    "example_artists": ["Bob Marley", "Peter Tosh", "Burning Spear"]
-  },
-  {
-    "slug": "blues",
-    "name": "Blues",
-    "bpm_range": [60, 120],
-    "mood": ["melancholic", "soulful", "expressive"],
-    "origin_decade": "1900s",
-    "origin_region": "Deep South, USA",
-    "example_artists": ["B.B. King", "Muddy Waters", "Robert Johnson"]
-  },
-  {
-    "slug": "metal",
-    "name": "Metal",
-    "bpm_range": [100, 250],
-    "mood": ["aggressive", "intense", "heavy"],
-    "origin_decade": "1970s",
-    "origin_region": "United Kingdom",
-    "example_artists": ["Black Sabbath", "Metallica", "Iron Maiden"]
-  },
-  {
-    "slug": "punk",
-    "name": "Punk",
-    "bpm_range": [150, 220],
-    "mood": ["rebellious", "raw", "fast"],
-    "origin_decade": "1970s",
-    "origin_region": "United States / United Kingdom",
-    "example_artists": ["The Ramones", "Sex Pistols", "The Clash"]
-  },
-  {
-    "slug": "rnb",
-    "name": "R&B",
-    "bpm_range": [70, 110],
-    "mood": ["sensual", "soulful", "smooth"],
-    "origin_decade": "1940s",
-    "origin_region": "United States",
-    "example_artists": ["Marvin Gaye", "Beyoncé", "D'Angelo"]
-  },
-  {
-    "slug": "soul",
-    "name": "Soul",
-    "bpm_range": [60, 110],
-    "mood": ["passionate", "emotive", "groovy"],
-    "origin_decade": "1950s",
-    "origin_region": "United States",
-    "example_artists": ["Aretha Franklin", "Otis Redding", "James Brown"]
-  },
-  {
-    "slug": "funk",
-    "name": "Funk",
-    "bpm_range": [85, 115],
-    "mood": ["groovy", "danceable", "rhythmic"],
-    "origin_decade": "1960s",
-    "origin_region": "United States",
-    "example_artists": ["James Brown", "Parliament", "Sly & the Family Stone"]
-  },
-  {
-    "slug": "techno",
-    "name": "Techno",
-    "bpm_range": [130, 160],
-    "mood": ["mechanical", "hypnotic", "underground"],
-    "origin_decade": "1980s",
-    "origin_region": "Detroit, USA",
-    "example_artists": ["Juan Atkins", "Derrick May", "Jeff Mills"]
-  },
-  {
-    "slug": "house",
-    "name": "House",
-    "bpm_range": [120, 130],
-    "mood": ["euphoric", "danceable", "warm"],
-    "origin_decade": "1980s",
-    "origin_region": "Chicago, USA",
-    "example_artists": ["Frankie Knuckles", "Larry Heard", "Marshall Jefferson"]
+    "origin_region": "Nigeria",
+    "example_artists": ["Fela Kuti", "Tony Allen", "Burna Boy"]
   },
   {
     "slug": "ambient",
@@ -153,13 +18,148 @@
     "example_artists": ["Brian Eno", "Harold Budd", "Boards of Canada"]
   },
   {
-    "slug": "latin",
-    "name": "Latin",
-    "bpm_range": [90, 180],
-    "mood": ["passionate", "rhythmic", "festive"],
-    "origin_decade": "1930s",
-    "origin_region": "Latin America",
-    "example_artists": ["Celia Cruz", "Carlos Santana", "Bad Bunny"]
+    "slug": "baroque",
+    "name": "Baroque",
+    "bpm_range": [55, 165],
+    "mood": ["ornate", "structured", "expressive"],
+    "origin_decade": "1600s",
+    "origin_region": "Europe",
+    "example_artists": ["Johann Sebastian Bach", "George Frideric Handel", "Antonio Vivaldi"]
+  },
+  {
+    "slug": "bebop",
+    "name": "Bebop",
+    "bpm_range": [180, 300],
+    "mood": ["virtuosic", "complex", "improvisational"],
+    "origin_decade": "1940s",
+    "origin_region": "New York, USA",
+    "example_artists": ["Charlie Parker", "Dizzy Gillespie", "Thelonious Monk"]
+  },
+  {
+    "slug": "black-metal",
+    "name": "Black Metal",
+    "bpm_range": [100, 200],
+    "mood": ["dark", "atmospheric", "raw"],
+    "origin_decade": "1980s",
+    "origin_region": "United Kingdom / Norway",
+    "example_artists": ["Mayhem", "Burzum", "Darkthrone"]
+  },
+  {
+    "slug": "blues",
+    "name": "Blues",
+    "bpm_range": [60, 120],
+    "mood": ["melancholic", "soulful", "expressive"],
+    "origin_decade": "1900s",
+    "origin_region": "Deep South, USA",
+    "example_artists": ["B.B. King", "Muddy Waters", "Robert Johnson"]
+  },
+  {
+    "slug": "boom-bap",
+    "name": "Boom Bap",
+    "bpm_range": [85, 100],
+    "mood": ["gritty", "nostalgic", "lyrical"],
+    "origin_decade": "1980s",
+    "origin_region": "New York, USA",
+    "example_artists": ["Nas", "Wu-Tang Clan", "Notorious B.I.G."]
+  },
+  {
+    "slug": "bossa-nova",
+    "name": "Bossa Nova",
+    "bpm_range": [60, 100],
+    "mood": ["relaxed", "romantic", "sophisticated"],
+    "origin_decade": "1950s",
+    "origin_region": "Brazil",
+    "example_artists": ["João Gilberto", "Antônio Carlos Jobim", "Astrud Gilberto"]
+  },
+  {
+    "slug": "classical",
+    "name": "Classical",
+    "bpm_range": [40, 200],
+    "mood": ["formal", "expressive", "complex"],
+    "origin_decade": "1600s",
+    "origin_region": "Europe",
+    "example_artists": ["Bach", "Beethoven", "Mozart"]
+  },
+  {
+    "slug": "contemporary-classical",
+    "name": "Contemporary Classical",
+    "bpm_range": [20, 200],
+    "mood": ["experimental", "avant-garde", "cerebral"],
+    "origin_decade": "1950s",
+    "origin_region": "Europe / United States",
+    "example_artists": ["Philip Glass", "Steve Reich", "Arvo Pärt"]
+  },
+  {
+    "slug": "country",
+    "name": "Country",
+    "bpm_range": [80, 130],
+    "mood": ["sentimental", "rustic", "storytelling"],
+    "origin_decade": "1920s",
+    "origin_region": "Southern United States",
+    "example_artists": ["Johnny Cash", "Dolly Parton", "Hank Williams"]
+  },
+  {
+    "slug": "cumbia",
+    "name": "Cumbia",
+    "bpm_range": [90, 130],
+    "mood": ["festive", "danceable", "joyful"],
+    "origin_decade": "1940s",
+    "origin_region": "Colombia",
+    "example_artists": ["Carlos Vives", "Totó la Momposina", "Los Corraleros de Majagual"]
+  },
+  {
+    "slug": "death-metal",
+    "name": "Death Metal",
+    "bpm_range": [120, 260],
+    "mood": ["brutal", "technical", "extreme"],
+    "origin_decade": "1980s",
+    "origin_region": "United States / Sweden",
+    "example_artists": ["Death", "Morbid Angel", "Cannibal Corpse"]
+  },
+  {
+    "slug": "doom-metal",
+    "name": "Doom Metal",
+    "bpm_range": [40, 80],
+    "mood": ["slow", "heavy", "melancholic"],
+    "origin_decade": "1980s",
+    "origin_region": "United Kingdom",
+    "example_artists": ["Black Sabbath", "Candlemass", "My Dying Bride"]
+  },
+  {
+    "slug": "drum-and-bass",
+    "name": "Drum and Bass",
+    "bpm_range": [160, 180],
+    "mood": ["intense", "energetic", "futuristic"],
+    "origin_decade": "1990s",
+    "origin_region": "United Kingdom",
+    "example_artists": ["Goldie", "LTJ Bukem", "Pendulum"]
+  },
+  {
+    "slug": "dubstep",
+    "name": "Dubstep",
+    "bpm_range": [138, 142],
+    "mood": ["heavy", "dark", "bass-driven"],
+    "origin_decade": "2000s",
+    "origin_region": "London, United Kingdom",
+    "example_artists": ["Skream", "Digital Mystikz", "Skrillex"]
+  },
+  {
+    "slug": "electronic",
+    "name": "Electronic",
+    "bpm_range": [110, 180],
+    "mood": ["synthetic", "danceable", "hypnotic"],
+    "origin_decade": "1970s",
+    "origin_region": "Europe",
+    "example_artists": ["Kraftwerk", "Daft Punk", "Aphex Twin"]
+  },
+  {
+    "slug": "flamenco",
+    "name": "Flamenco",
+    "bpm_range": [60, 180],
+    "mood": ["passionate", "dramatic", "expressive"],
+    "origin_decade": "1700s",
+    "origin_region": "Andalusia, Spain",
+    "example_artists": ["Paco de Lucía", "Camarón de la Isla", "Sara Baras"]
   },
   {
     "slug": "folk",
@@ -171,6 +171,51 @@
     "example_artists": ["Bob Dylan", "Woody Guthrie", "Joni Mitchell"]
   },
   {
+    "slug": "funk",
+    "name": "Funk",
+    "bpm_range": [85, 115],
+    "mood": ["groovy", "danceable", "rhythmic"],
+    "origin_decade": "1960s",
+    "origin_region": "United States",
+    "example_artists": ["James Brown", "Parliament", "Sly & the Family Stone"]
+  },
+  {
+    "slug": "heavy-metal",
+    "name": "Heavy Metal",
+    "bpm_range": [100, 180],
+    "mood": ["powerful", "dark", "intense"],
+    "origin_decade": "1970s",
+    "origin_region": "United Kingdom / United States",
+    "example_artists": ["Black Sabbath", "Judas Priest", "Iron Maiden"]
+  },
+  {
+    "slug": "hip-hop",
+    "name": "Hip-Hop",
+    "bpm_range": [75, 115],
+    "mood": ["confident", "rhythmic", "expressive"],
+    "origin_decade": "1970s",
+    "origin_region": "New York, USA",
+    "example_artists": ["Nas", "Jay-Z", "Kendrick Lamar"]
+  },
+  {
+    "slug": "house",
+    "name": "House",
+    "bpm_range": [120, 130],
+    "mood": ["euphoric", "danceable", "warm"],
+    "origin_decade": "1980s",
+    "origin_region": "Chicago, USA",
+    "example_artists": ["Frankie Knuckles", "Larry Heard", "Marshall Jefferson"]
+  },
+  {
+    "slug": "idm",
+    "name": "IDM",
+    "bpm_range": [70, 180],
+    "mood": ["cerebral", "abstract", "experimental"],
+    "origin_decade": "1990s",
+    "origin_region": "United Kingdom",
+    "example_artists": ["Aphex Twin", "Autechre", "Squarepusher"]
+  },
+  {
     "slug": "indie",
     "name": "Indie",
     "bpm_range": [90, 140],
@@ -178,5 +223,275 @@
     "origin_decade": "1980s",
     "origin_region": "United Kingdom / United States",
     "example_artists": ["The Smiths", "Pixies", "Arcade Fire"]
+  },
+  {
+    "slug": "jazz",
+    "name": "Jazz",
+    "bpm_range": [60, 200],
+    "mood": ["improvisational", "sophisticated", "cool"],
+    "origin_decade": "1910s",
+    "origin_region": "New Orleans, USA",
+    "example_artists": ["Miles Davis", "John Coltrane", "Thelonious Monk"]
+  },
+  {
+    "slug": "jazz-fusion",
+    "name": "Jazz Fusion",
+    "bpm_range": [90, 200],
+    "mood": ["complex", "energetic", "experimental"],
+    "origin_decade": "1960s",
+    "origin_region": "United States",
+    "example_artists": ["Miles Davis", "Weather Report", "Mahavishnu Orchestra"]
+  },
+  {
+    "slug": "k-pop",
+    "name": "K-Pop",
+    "bpm_range": [100, 140],
+    "mood": ["upbeat", "polished", "catchy"],
+    "origin_decade": "1990s",
+    "origin_region": "South Korea",
+    "example_artists": ["BTS", "BLACKPINK", "EXO"]
+  },
+  {
+    "slug": "latin",
+    "name": "Latin",
+    "bpm_range": [90, 180],
+    "mood": ["passionate", "rhythmic", "festive"],
+    "origin_decade": "1930s",
+    "origin_region": "Latin America",
+    "example_artists": ["Celia Cruz", "Carlos Santana", "Bad Bunny"]
+  },
+  {
+    "slug": "lo-fi",
+    "name": "Lo-Fi Hip-Hop",
+    "bpm_range": [60, 90],
+    "mood": ["relaxed", "nostalgic", "chill"],
+    "origin_decade": "2010s",
+    "origin_region": "United States / Internet",
+    "example_artists": ["Nujabes", "J Dilla", "Lofi Girl"]
+  },
+  {
+    "slug": "metal",
+    "name": "Metal",
+    "bpm_range": [100, 250],
+    "mood": ["aggressive", "intense", "heavy"],
+    "origin_decade": "1970s",
+    "origin_region": "United Kingdom",
+    "example_artists": ["Black Sabbath", "Metallica", "Iron Maiden"]
+  },
+  {
+    "slug": "pop",
+    "name": "Pop",
+    "bpm_range": [100, 130],
+    "mood": ["upbeat", "catchy", "accessible"],
+    "origin_decade": "1960s",
+    "origin_region": "United States / United Kingdom",
+    "example_artists": ["Michael Jackson", "Madonna", "Taylor Swift"]
+  },
+  {
+    "slug": "punk",
+    "name": "Punk",
+    "bpm_range": [150, 220],
+    "mood": ["rebellious", "raw", "fast"],
+    "origin_decade": "1970s",
+    "origin_region": "United States / United Kingdom",
+    "example_artists": ["The Ramones", "Sex Pistols", "The Clash"]
+  },
+  {
+    "slug": "reggae",
+    "name": "Reggae",
+    "bpm_range": [60, 90],
+    "mood": ["relaxed", "spiritual", "rhythmic"],
+    "origin_decade": "1960s",
+    "origin_region": "Jamaica",
+    "example_artists": ["Bob Marley", "Peter Tosh", "Burning Spear"]
+  },
+  {
+    "slug": "reggaeton",
+    "name": "Reggaeton",
+    "bpm_range": [88, 100],
+    "mood": ["danceable", "energetic", "urban"],
+    "origin_decade": "1990s",
+    "origin_region": "Puerto Rico / Panama",
+    "example_artists": ["Daddy Yankee", "Bad Bunny", "J Balvin"]
+  },
+  {
+    "slug": "rnb",
+    "name": "R&B",
+    "bpm_range": [70, 110],
+    "mood": ["sensual", "soulful", "smooth"],
+    "origin_decade": "1940s",
+    "origin_region": "United States",
+    "example_artists": ["Marvin Gaye", "Beyoncé", "D'Angelo"]
+  },
+  {
+    "slug": "rock",
+    "name": "Rock",
+    "bpm_range": [100, 140],
+    "mood": ["energetic", "powerful", "raw"],
+    "origin_decade": "1950s",
+    "origin_region": "United States",
+    "example_artists": ["The Beatles", "Led Zeppelin", "AC/DC"]
+  },
+  {
+    "slug": "romantic",
+    "name": "Romantic Classical",
+    "bpm_range": [40, 180],
+    "mood": ["emotional", "sweeping", "expressive"],
+    "origin_decade": "1800s",
+    "origin_region": "Europe",
+    "example_artists": ["Frédéric Chopin", "Franz Schubert", "Pyotr Tchaikovsky"]
+  },
+  {
+    "slug": "smooth-jazz",
+    "name": "Smooth Jazz",
+    "bpm_range": [70, 110],
+    "mood": ["mellow", "relaxed", "sophisticated"],
+    "origin_decade": "1970s",
+    "origin_region": "United States",
+    "example_artists": ["Kenny G", "Dave Koz", "Spyro Gyra"]
+  },
+  {
+    "slug": "soul",
+    "name": "Soul",
+    "bpm_range": [60, 110],
+    "mood": ["passionate", "emotive", "groovy"],
+    "origin_decade": "1950s",
+    "origin_region": "United States",
+    "example_artists": ["Aretha Franklin", "Otis Redding", "James Brown"]
+  },
+  {
+    "slug": "synthwave",
+    "name": "Synthwave",
+    "bpm_range": [95, 120],
+    "mood": ["nostalgic", "retro-futuristic", "cinematic"],
+    "origin_decade": "2000s",
+    "origin_region": "France / United States",
+    "example_artists": ["Kavinsky", "Perturbator", "Gunship"]
+  },
+  {
+    "slug": "techno",
+    "name": "Techno",
+    "bpm_range": [130, 160],
+    "mood": ["mechanical", "hypnotic", "underground"],
+    "origin_decade": "1980s",
+    "origin_region": "Detroit, USA",
+    "example_artists": ["Juan Atkins", "Derrick May", "Jeff Mills"]
+  },
+  {
+    "slug": "thrash-metal",
+    "name": "Thrash Metal",
+    "bpm_range": [160, 220],
+    "mood": ["aggressive", "fast", "technical"],
+    "origin_decade": "1980s",
+    "origin_region": "United States",
+    "example_artists": ["Metallica", "Slayer", "Megadeth"]
+  },
+  {
+    "slug": "trap",
+    "name": "Trap",
+    "bpm_range": [130, 170],
+    "mood": ["dark", "atmospheric", "hard-hitting"],
+    "origin_decade": "2000s",
+    "origin_region": "Atlanta, USA",
+    "example_artists": ["T.I.", "Gucci Mane", "Travis Scott"]
+  },
+  {
+    "slug": "alternative",
+    "name": "Alternative Rock",
+    "bpm_range": [90, 150],
+    "mood": ["angsty", "introspective", "raw"],
+    "origin_decade": "1980s",
+    "origin_region": "United States / United Kingdom",
+    "example_artists": ["Nirvana", "Radiohead", "R.E.M."]
+  },
+  {
+    "slug": "dancehall",
+    "name": "Dancehall",
+    "bpm_range": [80, 110],
+    "mood": ["energetic", "playful", "urban"],
+    "origin_decade": "1970s",
+    "origin_region": "Jamaica",
+    "example_artists": ["Beenie Man", "Shabba Ranks", "Sean Paul"]
+  },
+  {
+    "slug": "disco",
+    "name": "Disco",
+    "bpm_range": [110, 130],
+    "mood": ["euphoric", "danceable", "glamorous"],
+    "origin_decade": "1970s",
+    "origin_region": "United States",
+    "example_artists": ["Donna Summer", "Bee Gees", "Chic"]
+  },
+  {
+    "slug": "grunge",
+    "name": "Grunge",
+    "bpm_range": [80, 140],
+    "mood": ["angsty", "distorted", "raw"],
+    "origin_decade": "1980s",
+    "origin_region": "Seattle, USA",
+    "example_artists": ["Nirvana", "Pearl Jam", "Soundgarden"]
+  },
+  {
+    "slug": "new-wave",
+    "name": "New Wave",
+    "bpm_range": [100, 150],
+    "mood": ["quirky", "danceable", "synth-driven"],
+    "origin_decade": "1970s",
+    "origin_region": "United Kingdom / United States",
+    "example_artists": ["Talking Heads", "Devo", "The Cars"]
+  },
+  {
+    "slug": "opera",
+    "name": "Opera",
+    "bpm_range": [40, 180],
+    "mood": ["dramatic", "powerful", "emotional"],
+    "origin_decade": "1600s",
+    "origin_region": "Italy",
+    "example_artists": ["Maria Callas", "Luciano Pavarotti", "Plácido Domingo"]
+  },
+  {
+    "slug": "salsa",
+    "name": "Salsa",
+    "bpm_range": [160, 220],
+    "mood": ["energetic", "passionate", "danceable"],
+    "origin_decade": "1960s",
+    "origin_region": "New York, USA / Caribbean",
+    "example_artists": ["Celia Cruz", "Marc Anthony", "Willie Colón"]
+  },
+  {
+    "slug": "ska",
+    "name": "Ska",
+    "bpm_range": [120, 160],
+    "mood": ["upbeat", "energetic", "joyful"],
+    "origin_decade": "1960s",
+    "origin_region": "Jamaica",
+    "example_artists": ["Toots and the Maytals", "Desmond Dekker", "The Specials"]
+  },
+  {
+    "slug": "trance",
+    "name": "Trance",
+    "bpm_range": [128, 145],
+    "mood": ["euphoric", "uplifting", "hypnotic"],
+    "origin_decade": "1990s",
+    "origin_region": "Germany",
+    "example_artists": ["Armin van Buuren", "Paul van Dyk", "Tiësto"]
+  },
+  {
+    "slug": "world",
+    "name": "World Music",
+    "bpm_range": [60, 180],
+    "mood": ["diverse", "cultural", "rhythmic"],
+    "origin_decade": "1980s",
+    "origin_region": "Global",
+    "example_artists": ["Youssou N'Dour", "Miriam Makeba", "Ravi Shankar"]
+  },
+  {
+    "slug": "gospel",
+    "name": "Gospel",
+    "bpm_range": [60, 130],
+    "mood": ["uplifting", "spiritual", "joyful"],
+    "origin_decade": "1920s",
+    "origin_region": "United States",
+    "example_artists": ["Mahalia Jackson", "Kirk Franklin", "Andraé Crouch"]
   }
 ]

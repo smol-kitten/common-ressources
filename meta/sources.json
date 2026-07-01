@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "description": "Authoritative sources for each data domain. Useful for re-verification and update scheduling.",
+  "last_updated": "2026-07-01",
+  "domains": [
+    {
+      "domain": "science/elements",
+      "files": ["science/elements/elements.json"],
+      "source": "IUPAC Commission on Isotopic Abundances and Atomic Weights (CIAAW)",
+      "source_url": "https://iupac.qmul.ac.uk/AtWt/",
+      "license": "public domain",
+      "update_frequency": "on IUPAC publication (every few years)",
+      "last_verified": "2026-06-17",
+      "notes": "Use IUPAC 2021 standard atomic weights. Abridged to 5 significant figures."
+    },
+    {
+      "domain": "geo/countries",
+      "files": ["geo/countries/countries.json"],
+      "source": "ISO 3166 Maintenance Agency / UN Statistics Division",
+      "source_url": "https://www.iso.org/iso-3166-country-codes.html",
+      "license": "public domain",
+      "update_frequency": "on ISO 3166 changes (rare)",
+      "last_verified": "2026-06-17",
+      "notes": "Currency codes should be checked against current adoption. Bulgaria adopted EUR 2026-01-01."
+    },
+    {
+      "domain": "geo/currencies",
+      "files": ["geo/currencies/currencies.json"],
+      "source": "ISO 4217 / Wikipedia",
+      "source_url": "https://www.iso.org/iso-4217-currency-codes.html",
+      "license": "public domain",
+      "update_frequency": "on currency adoption/withdrawal events",
+      "last_verified": "2026-07-01",
+      "notes": "Decimal places per ISO 4217. Multi-country currencies list primary country only."
+    },
+    {
+      "domain": "geo/airports",
+      "files": ["geo/airports/airports.json"],
+      "source": "IATA / OurAirports",
+      "source_url": "https://ourairports.com/data/",
+      "license": "public domain (OurAirports CC0)",
+      "update_frequency": "annually",
+      "last_verified": "2026-06-17",
+      "notes": "Major airports (scheduled commercial service) only. Coordinates ±0.01°."
+    },
+    {
+      "domain": "geo/timezones",
+      "files": ["geo/timezones/timezones.json"],
+      "source": "IANA Time Zone Database (tzdata)",
+      "source_url": "https://www.iana.org/time-zones",
+      "license": "public domain",
+      "update_frequency": "on tzdata releases (several per year for DST changes)",
+      "last_verified": "2026-06-17",
+      "notes": "UTC offsets are standard time offsets; some zones observe DST."
+    },
+    {
+      "domain": "geo/mountains",
+      "files": ["geo/mountains/peaks.json"],
+      "source": "Wikipedia / National Geographic / SRTM",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth",
+      "license": "public domain",
+      "update_frequency": "rarely (survey updates)",
+      "last_verified": "2026-07-01",
+      "notes": "Elevations per latest geodetic surveys. Everest updated to 8849m in 2020."
+    },
+    {
+      "domain": "geo/rivers",
+      "files": ["geo/rivers/rivers.json"],
+      "source": "Wikipedia / USGS",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_rivers_by_length",
+      "license": "public domain",
+      "update_frequency": "rarely",
+      "last_verified": "2026-07-01",
+      "notes": "River lengths are contested and may vary by measurement methodology."
+    },
+    {
+      "domain": "i18n/languages",
+      "files": ["i18n/languages/languages.json"],
+      "source": "Ethnologue / ISO 639 / SIL International",
+      "source_url": "https://www.ethnologue.com/",
+      "license": "ISO 639 codes are public domain",
+      "update_frequency": "on ISO 639 changes",
+      "last_verified": "2026-06-17",
+      "notes": "Speaker counts are approximate and change with demographic data."
+    },
+    {
+      "domain": "science/constants",
+      "files": ["science/constants/constants.json"],
+      "source": "NIST CODATA 2018 Recommended Values",
+      "source_url": "https://physics.nist.gov/cuu/Constants/",
+      "license": "public domain",
+      "update_frequency": "on CODATA revision (every 4 years)",
+      "last_verified": "2026-07-01",
+      "notes": "c, h, e, k, NA are exact by SI 2019 redefinition."
+    },
+    {
+      "domain": "ai/models",
+      "files": ["ai/models.json"],
+      "source": "Anthropic / OpenAI / Google / Meta official documentation",
+      "source_url": "https://docs.anthropic.com/",
+      "license": "proprietary (data compiled from public docs)",
+      "update_frequency": "on model releases/updates (frequent)",
+      "last_verified": "2026-06-17",
+      "notes": "Context windows and capabilities change rapidly. Verify against official docs."
+    },
+    {
+      "domain": "security",
+      "files": ["security/headers/security-headers.json", "security/tls/versions.json", "security/owasp-top10/vulnerabilities.json"],
+      "source": "OWASP / MDN Web Docs / RFC standards",
+      "source_url": "https://owasp.org/",
+      "license": "public domain / CC BY-SA",
+      "update_frequency": "on OWASP releases (Top 10 every ~4 years)",
+      "last_verified": "2026-07-01",
+      "notes": "TLS 1.0 and 1.1 are deprecated per RFC 8996 (2021)."
+    },
+    {
+      "domain": "web/http",
+      "files": ["web/http/status-codes.json", "web/http/methods.json", "web/http/headers.json"],
+      "source": "IANA HTTP registries / RFC 9110",
+      "source_url": "https://www.iana.org/assignments/http-status-codes/",
+      "license": "public domain",
+      "update_frequency": "on RFC publications",
+      "last_verified": "2026-07-01",
+      "notes": "RFC 9110-9114 (2022) supersede RFC 7230-7235."
+    },
+    {
+      "domain": "astronomy",
+      "files": [
+        "astronomy/constellations/constellations.json",
+        "astronomy/moons/moons.json",
+        "astronomy/stars/notable-stars.json"
+      ],
+      "source": "IAU / JPL Horizons / SIMBAD",
+      "source_url": "https://www.iau.org/",
+      "license": "public domain",
+      "update_frequency": "on IAU decisions (moon discovery/naming)",
+      "last_verified": "2026-07-01",
+      "notes": "Moon count for planets changes as new moons are discovered and confirmed."
+    },
+    {
+      "domain": "programming",
+      "files": [
+        "programming/languages/languages.json",
+        "programming/frameworks/frameworks.json",
+        "programming/design-patterns/design-patterns.json",
+        "programming/licenses/licenses.json"
+      ],
+      "source": "Wikipedia / official language/framework documentation",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_programming_languages",
+      "license": "data compiled from public sources",
+      "update_frequency": "on major releases",
+      "last_verified": "2026-07-01",
+      "notes": "Year refers to first stable/public release. Creator field credits primary authors."
+    },
+    {
+      "domain": "flags/countries",
+      "files": ["flags/countries/flags.json"],
+      "source": "Wikipedia / official government sources",
+      "source_url": "https://en.wikipedia.org/wiki/Gallery_of_sovereign_state_flags",
+      "license": "flag designs are in public domain; color codes compiled",
+      "update_frequency": "on flag changes (rare)",
+      "last_verified": "2026-06-17",
+      "notes": "Hex colors represent widely-cited Pantone/NCS equivalents; may differ from official specifications."
+    },
+    {
+      "domain": "history",
+      "files": ["history/eras/eras.json", "history/inventions/inventions.json"],
+      "source": "Encyclopaedia Britannica / Wikipedia",
+      "source_url": "https://www.britannica.com/",
+      "license": "data compiled from public domain historical records",
+      "update_frequency": "stable (historical facts)",
+      "last_verified": "2026-07-01",
+      "notes": "Dates for ancient history are approximate. BCE years stored as negative integers."
+    },
+    {
+      "domain": "chemistry",
+      "files": ["chemistry/functional-groups/groups.json"],
+      "source": "IUPAC / Royal Society of Chemistry",
+      "source_url": "https://goldbook.iupac.org/",
+      "license": "public domain",
+      "update_frequency": "on IUPAC nomenclature changes",
+      "last_verified": "2026-07-01",
+      "notes": "Functional group formulas use conventional organic chemistry notation."
+    },
+    {
+      "domain": "physics",
+      "files": ["physics/laws/laws.json"],
+      "source": "NIST / encyclopaedic sources",
+      "source_url": "https://physics.nist.gov/",
+      "license": "public domain",
+      "update_frequency": "stable",
+      "last_verified": "2026-07-01",
+      "notes": "Year refers to original publication/formulation."
+    },
+    {
+      "domain": "medicine",
+      "files": ["medicine/specialties/specialties.json"],
+      "source": "American Board of Medical Specialties (ABMS) / WHO",
+      "source_url": "https://www.abms.org/",
+      "license": "data compiled from public professional standards",
+      "update_frequency": "on ABMS board changes",
+      "last_verified": "2026-07-01",
+      "notes": "Specialty classifications vary by country; US-centric with international notation."
+    },
+    {
+      "domain": "space",
+      "files": ["space/planets/planets.json", "space/dwarf-planets/dwarf-planets.json", "space/missions/missions.json"],
+      "source": "NASA / ESA / JPL / IAU",
+      "source_url": "https://solarsystem.nasa.gov/",
+      "license": "public domain (NASA data)",
+      "update_frequency": "on mission updates and IAU classification changes",
+      "last_verified": "2026-07-01",
+      "notes": "Dwarf planet list reflects IAU 2006 definition and subsequent resolutions."
+    },
+    {
+      "domain": "sports",
+      "files": ["sports/sports.json"],
+      "source": "Wikipedia / IOC / governing bodies",
+      "source_url": "https://www.olympic.org/sports",
+      "license": "data compiled from public sources",
+      "update_frequency": "on Olympic programme changes",
+      "last_verified": "2026-07-01",
+      "notes": "olympic field reflects Paris 2024 programme."
+    },
+    {
+      "domain": "biology",
+      "files": ["biology/amino-acids/amino-acids.json", "biology/taxonomy/taxonomy.json"],
+      "source": "NCBI / UniProt / Encyclopaedia of Life",
+      "source_url": "https://www.ncbi.nlm.nih.gov/",
+      "license": "public domain",
+      "update_frequency": "on taxonomic revisions",
+      "last_verified": "2026-07-01",
+      "notes": "6-kingdom system used (Whittaker/Woese). 3-domain system (Woese) also represented."
+    }
+  ]
+}

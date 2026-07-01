@@ -1,0 +1,207 @@
+[
+  {
+    "name": "Pacific Ocean",
+    "slug": "pacific-ocean",
+    "type": "ocean",
+    "area_km2": 165250000,
+    "avg_depth_m": 4000,
+    "max_depth_m": 11034,
+    "max_depth_location": "Challenger Deep, Mariana Trench",
+    "bordering_continents": ["Asia", "Oceania", "North America", "South America", "Antarctica"],
+    "description": "Largest and deepest ocean on Earth, covering more than 30% of the planet's surface."
+  },
+  {
+    "name": "Atlantic Ocean",
+    "slug": "atlantic-ocean",
+    "type": "ocean",
+    "area_km2": 106460000,
+    "avg_depth_m": 3332,
+    "max_depth_m": 8376,
+    "max_depth_location": "Puerto Rico Trench",
+    "bordering_continents": ["North America", "South America", "Europe", "Africa", "Antarctica"],
+    "description": "Second largest ocean, separating the Americas from Europe and Africa."
+  },
+  {
+    "name": "Indian Ocean",
+    "slug": "indian-ocean",
+    "type": "ocean",
+    "area_km2": 70560000,
+    "avg_depth_m": 3741,
+    "max_depth_m": 8047,
+    "max_depth_location": "Java Trench",
+    "bordering_continents": ["Africa", "Asia", "Oceania", "Antarctica"],
+    "description": "Third largest ocean, bounded by Africa, Asia, and Australia, with important monsoon patterns."
+  },
+  {
+    "name": "Southern Ocean",
+    "slug": "southern-ocean",
+    "type": "ocean",
+    "area_km2": 21960000,
+    "avg_depth_m": 3270,
+    "max_depth_m": 7235,
+    "max_depth_location": "South Sandwich Trench",
+    "bordering_continents": ["Antarctica"],
+    "description": "Southernmost ocean surrounding Antarctica, recognized as the fifth ocean by the IHO in 2000."
+  },
+  {
+    "name": "Arctic Ocean",
+    "slug": "arctic-ocean",
+    "type": "ocean",
+    "area_km2": 14060000,
+    "avg_depth_m": 1205,
+    "max_depth_m": 5550,
+    "max_depth_location": "Molloy Hole",
+    "bordering_continents": ["North America", "Europe", "Asia"],
+    "description": "Smallest and shallowest of the world's five oceans, largely covered by sea ice."
+  },
+  {
+    "name": "Mediterranean Sea",
+    "slug": "mediterranean-sea",
+    "type": "sea",
+    "area_km2": 2500000,
+    "avg_depth_m": 1500,
+    "max_depth_m": 5267,
+    "adjacent_ocean": "Atlantic Ocean",
+    "description": "Inland sea bordered by Europe, Africa, and Asia, connected to the Atlantic via the Strait of Gibraltar."
+  },
+  {
+    "name": "Caribbean Sea",
+    "slug": "caribbean-sea",
+    "type": "sea",
+    "area_km2": 2754000,
+    "avg_depth_m": 2200,
+    "max_depth_m": 7686,
+    "adjacent_ocean": "Atlantic Ocean",
+    "description": "Part of the Atlantic Ocean southeast of the Gulf of Mexico, bordered by the Caribbean islands."
+  },
+  {
+    "name": "South China Sea",
+    "slug": "south-china-sea",
+    "type": "sea",
+    "area_km2": 3500000,
+    "avg_depth_m": 1212,
+    "max_depth_m": 5559,
+    "adjacent_ocean": "Pacific Ocean",
+    "description": "Marginal sea of the Pacific Ocean, one of the world's most strategically important waterways."
+  },
+  {
+    "name": "Bering Sea",
+    "slug": "bering-sea",
+    "type": "sea",
+    "area_km2": 2292000,
+    "avg_depth_m": 1640,
+    "max_depth_m": 4151,
+    "adjacent_ocean": "Pacific Ocean",
+    "description": "Sea between Russia and Alaska, separating Asia from North America."
+  },
+  {
+    "name": "Gulf of Mexico",
+    "slug": "gulf-of-mexico",
+    "type": "sea",
+    "area_km2": 1550000,
+    "avg_depth_m": 1615,
+    "max_depth_m": 4384,
+    "adjacent_ocean": "Atlantic Ocean",
+    "description": "Ocean basin largely enclosed by Mexico, the United States, and Cuba."
+  },
+  {
+    "name": "Sea of Okhotsk",
+    "slug": "sea-of-okhotsk",
+    "type": "sea",
+    "area_km2": 1583000,
+    "avg_depth_m": 859,
+    "max_depth_m": 3372,
+    "adjacent_ocean": "Pacific Ocean",
+    "description": "Marginal sea of the Pacific Ocean between the Kamchatka Peninsula and the Japanese island of Hokkaido."
+  },
+  {
+    "name": "East China Sea",
+    "slug": "east-china-sea",
+    "type": "sea",
+    "area_km2": 1249000,
+    "avg_depth_m": 349,
+    "max_depth_m": 2717,
+    "adjacent_ocean": "Pacific Ocean",
+    "description": "Marginal sea of the Pacific Ocean, bounded by China, Japan, and the Korean Peninsula."
+  },
+  {
+    "name": "Hudson Bay",
+    "slug": "hudson-bay",
+    "type": "sea",
+    "area_km2": 1230000,
+    "avg_depth_m": 119,
+    "max_depth_m": 270,
+    "adjacent_ocean": "Atlantic Ocean",
+    "description": "Large body of saltwater in northeastern Canada, nearly landlocked, freezes in winter."
+  },
+  {
+    "name": "Sea of Japan",
+    "slug": "sea-of-japan",
+    "type": "sea",
+    "area_km2": 978000,
+    "avg_depth_m": 1752,
+    "max_depth_m": 3742,
+    "adjacent_ocean": "Pacific Ocean",
+    "description": "Marginal sea between Japan, Korea, and Russia, also called the East Sea."
+  },
+  {
+    "name": "Andaman Sea",
+    "slug": "andaman-sea",
+    "type": "sea",
+    "area_km2": 797700,
+    "avg_depth_m": 1096,
+    "max_depth_m": 4198,
+    "adjacent_ocean": "Indian Ocean",
+    "description": "Marginal sea of the Indian Ocean to the southeast of the Bay of Bengal."
+  },
+  {
+    "name": "Red Sea",
+    "slug": "red-sea",
+    "type": "sea",
+    "area_km2": 438000,
+    "avg_depth_m": 491,
+    "max_depth_m": 2211,
+    "adjacent_ocean": "Indian Ocean",
+    "description": "Seawater inlet between Africa and the Arabian Peninsula, connected to the Indian Ocean via the Gulf of Aden."
+  },
+  {
+    "name": "Arabian Sea",
+    "slug": "arabian-sea",
+    "type": "sea",
+    "area_km2": 3862000,
+    "avg_depth_m": 2734,
+    "max_depth_m": 5803,
+    "adjacent_ocean": "Indian Ocean",
+    "description": "Northwestern part of the Indian Ocean bounded by the Arabian Peninsula, Pakistan, and India."
+  },
+  {
+    "name": "Bay of Bengal",
+    "slug": "bay-of-bengal",
+    "type": "sea",
+    "area_km2": 2172000,
+    "avg_depth_m": 2600,
+    "max_depth_m": 4694,
+    "adjacent_ocean": "Indian Ocean",
+    "description": "Northeastern part of the Indian Ocean, bounded by India, Bangladesh, Myanmar, and the Andaman Islands."
+  },
+  {
+    "name": "Black Sea",
+    "slug": "black-sea",
+    "type": "sea",
+    "area_km2": 436400,
+    "avg_depth_m": 1240,
+    "max_depth_m": 2212,
+    "adjacent_ocean": "Atlantic Ocean",
+    "description": "Inland sea between southeastern Europe and Asia Minor, connected to the Mediterranean via the Bosphorus."
+  },
+  {
+    "name": "Caspian Sea",
+    "slug": "caspian-sea",
+    "type": "sea",
+    "area_km2": 371000,
+    "avg_depth_m": 211,
+    "max_depth_m": 1025,
+    "adjacent_ocean": "None (landlocked)",
+    "description": "World's largest enclosed inland body of water, bordered by Russia, Kazakhstan, Turkmenistan, Iran, and Azerbaijan."
+  }
+]
