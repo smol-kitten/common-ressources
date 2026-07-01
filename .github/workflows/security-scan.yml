@@ -1,0 +1,59 @@
+name: Security Scan
+
+# Universal, quota-less security scanning on the self-hosted ARC runner (no external
+# SaaS quota to exhaust). Advisory by design — every scanner is non-gating so it
+# surfaces findings without blocking PRs. Rolled out fleet-wide via safe-rollout.
+
+on:
+  push:
+    branches: [main, master, develop]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+  pull_request:
+  schedule:
+    - cron: '0 6 * * 1'        # weekly, Monday 06:00 UTC — catches newly-disclosed patterns
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  secrets:
+    name: Secret scan (gitleaks)
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # full history so gitleaks can scan past commits
+      - name: gitleaks
+        continue-on-error: true
+        run: |
+          set -e
+          curl -sSL https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz \
+            | tar xz -C "$RUNNER_TEMP" gitleaks
+          echo '## gitleaks' >> "$GITHUB_STEP_SUMMARY"
+          if "$RUNNER_TEMP/gitleaks" detect --source "$GITHUB_WORKSPACE" --redact --no-banner --exit-code 1; then
+            echo '✅ no committed secrets found' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo '⚠️ potential secrets — see the step log (redacted)' >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+  sast:
+    name: SAST (semgrep)
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: semgrep
+        continue-on-error: true
+        run: |
+          pip install --quiet semgrep
+          echo '## semgrep' >> "$GITHUB_STEP_SUMMARY"
+          # p/security-audit + p/secrets are token-free registry packs covering
+          # Go/PHP/C#/JS/TS/Python. semgrep no-ops on unsupported languages.
+          semgrep scan --metrics off --config p/security-audit --config p/secrets --error . \
+            && echo '✅ no findings' >> "$GITHUB_STEP_SUMMARY" \
+            || echo '⚠️ findings — see the step log' >> "$GITHUB_STEP_SUMMARY"
