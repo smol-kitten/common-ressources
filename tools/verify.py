@@ -288,6 +288,53 @@ def check_geo_crossref():
     STATS["cross_checks"] += 1
 
 
+def check_finance():
+    """Currency/country references across finance datasets must resolve."""
+    try:
+        currencies = {c["code"] for c in load("geo/currencies/currencies.json")}
+    except FileNotFoundError:
+        return
+    iso2 = {c["iso2"] for c in load("geo/countries/countries.json") if c.get("iso2")}
+    iso2 |= {"EU"}  # supranational marker used by pan-European exchanges/indices
+    # forex pairs: base/quote are currency codes; pair == base/quote
+    try:
+        for p in load("finance/forex/pairs.json"):
+            for side in ("base", "quote"):
+                v = p.get(side)
+                if v and v not in currencies:
+                    warn("finance/forex/pairs.json", f"{p.get('pair')}: {side} {v} not a known currency")
+            if p.get("base") and p.get("quote") and p.get("pair") \
+                    and p["pair"] != f"{p['base']}/{p['quote']}":
+                err("finance/forex/pairs.json", f"pair {p['pair']} != {p['base']}/{p['quote']}")
+    except FileNotFoundError:
+        pass
+    # stock exchanges: MIC shape, country iso2, currency
+    try:
+        for e in load("finance/stock-exchanges/stock-exchanges.json"):
+            if e.get("mic") and not re.match(r"^[A-Z0-9]{4}$", e["mic"]):
+                err("finance/stock-exchanges/stock-exchanges.json", f"bad MIC {e['mic']!r}")
+            if e.get("country") and e["country"] not in iso2:
+                warn("finance/stock-exchanges/stock-exchanges.json",
+                     f"{e.get('acronym')}: country {e['country']} not in countries.json")
+            if e.get("currency") and e["currency"] not in currencies:
+                warn("finance/stock-exchanges/stock-exchanges.json",
+                     f"{e.get('acronym')}: currency {e['currency']} not a known currency")
+    except FileNotFoundError:
+        pass
+    # indices: country_iso2, currency
+    try:
+        for ix in load("finance/indices/indices.json"):
+            if ix.get("country_iso2") and ix["country_iso2"] not in iso2:
+                warn("finance/indices/indices.json",
+                     f"{ix.get('slug')}: country_iso2 {ix['country_iso2']} not in countries.json")
+            if ix.get("currency") and ix["currency"] not in currencies:
+                warn("finance/indices/indices.json",
+                     f"{ix.get('slug')}: currency {ix['currency']} not a known currency")
+    except FileNotFoundError:
+        pass
+    STATS["cross_checks"] += 1
+
+
 def check_locales():
     """BCP 47-style locale codes must decompose into a known language + region."""
     try:
@@ -365,7 +412,7 @@ def main():
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
                check_timezones, check_elements, check_planets, check_http_status,
-               check_geo_crossref, check_locales, check_formats):
+               check_geo_crossref, check_locales, check_finance, check_formats):
         try:
             fn()
         except FileNotFoundError:
