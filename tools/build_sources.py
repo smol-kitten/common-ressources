@@ -47,6 +47,12 @@ SOURCES = {
     "bio/amino-acids/amino-acids.json": {"kind": "standard", "sources": [
         S("https://www.uniprot.org/help/amino_acids", "UniProt amino-acid reference"),
         S("https://iupac.org/", "IUPAC-IUBMB nomenclature")]},
+    "bio/codon-table/codon-table.json": {"kind": "standard", "sources": [
+        S("https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi", "NCBI — The Genetic Codes (translation table 1)"),
+        S("https://iupac.org/", "IUPAC-IUBMB amino-acid nomenclature")]},
+    "science/si-prefixes/si-prefixes.json": {"kind": "standard", "sources": [
+        S("https://www.bipm.org/en/measurement-units/si-prefixes", "BIPM — SI prefixes"),
+        S("https://www.bipm.org/en/committees/cg/cgpm/27-2022/resolution-3", "27th CGPM (2022) Resolution 3")]},
     "astronomy/constellations/constellations.json": {"kind": "standard", "sources": [
         S("https://www.iau.org/public/themes/constellations/", "IAU — The Constellations")]},
     "astronomy/stars/notable-stars.json": {"kind": "official", "sources": [

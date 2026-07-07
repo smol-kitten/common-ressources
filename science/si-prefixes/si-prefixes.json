@@ -1,0 +1,170 @@
+[
+  {
+    "name": "quetta",
+    "symbol": "Q",
+    "base10": 30,
+    "value": "1000000000000000000000000000000",
+    "adopted": 2022
+  },
+  {
+    "name": "ronna",
+    "symbol": "R",
+    "base10": 27,
+    "value": "1000000000000000000000000000",
+    "adopted": 2022
+  },
+  {
+    "name": "yotta",
+    "symbol": "Y",
+    "base10": 24,
+    "value": "1000000000000000000000000",
+    "adopted": 1991
+  },
+  {
+    "name": "zetta",
+    "symbol": "Z",
+    "base10": 21,
+    "value": "1000000000000000000000",
+    "adopted": 1991
+  },
+  {
+    "name": "exa",
+    "symbol": "E",
+    "base10": 18,
+    "value": "1000000000000000000",
+    "adopted": 1975
+  },
+  {
+    "name": "peta",
+    "symbol": "P",
+    "base10": 15,
+    "value": "1000000000000000",
+    "adopted": 1975
+  },
+  {
+    "name": "tera",
+    "symbol": "T",
+    "base10": 12,
+    "value": "1000000000000",
+    "adopted": 1960
+  },
+  {
+    "name": "giga",
+    "symbol": "G",
+    "base10": 9,
+    "value": "1000000000",
+    "adopted": 1960
+  },
+  {
+    "name": "mega",
+    "symbol": "M",
+    "base10": 6,
+    "value": "1000000",
+    "adopted": 1873
+  },
+  {
+    "name": "kilo",
+    "symbol": "k",
+    "base10": 3,
+    "value": "1000",
+    "adopted": 1795
+  },
+  {
+    "name": "hecto",
+    "symbol": "h",
+    "base10": 2,
+    "value": "100",
+    "adopted": 1795
+  },
+  {
+    "name": "deca",
+    "symbol": "da",
+    "base10": 1,
+    "value": "10",
+    "adopted": 1795
+  },
+  {
+    "name": "deci",
+    "symbol": "d",
+    "base10": -1,
+    "value": "0.1",
+    "adopted": 1795
+  },
+  {
+    "name": "centi",
+    "symbol": "c",
+    "base10": -2,
+    "value": "0.01",
+    "adopted": 1795
+  },
+  {
+    "name": "milli",
+    "symbol": "m",
+    "base10": -3,
+    "value": "0.001",
+    "adopted": 1795
+  },
+  {
+    "name": "micro",
+    "symbol": "µ",
+    "base10": -6,
+    "value": "0.000001",
+    "adopted": 1873
+  },
+  {
+    "name": "nano",
+    "symbol": "n",
+    "base10": -9,
+    "value": "0.000000001",
+    "adopted": 1960
+  },
+  {
+    "name": "pico",
+    "symbol": "p",
+    "base10": -12,
+    "value": "0.000000000001",
+    "adopted": 1960
+  },
+  {
+    "name": "femto",
+    "symbol": "f",
+    "base10": -15,
+    "value": "0.000000000000001",
+    "adopted": 1964
+  },
+  {
+    "name": "atto",
+    "symbol": "a",
+    "base10": -18,
+    "value": "0.000000000000000001",
+    "adopted": 1964
+  },
+  {
+    "name": "zepto",
+    "symbol": "z",
+    "base10": -21,
+    "value": "0.000000000000000000001",
+    "adopted": 1991
+  },
+  {
+    "name": "yocto",
+    "symbol": "y",
+    "base10": -24,
+    "value": "0.000000000000000000000001",
+    "adopted": 1991
+  },
+  {
+    "name": "ronto",
+    "symbol": "r",
+    "base10": -27,
+    "value": "0.000000000000000000000000001",
+    "adopted": 2022
+  },
+  {
+    "name": "quecto",
+    "symbol": "q",
+    "base10": -30,
+    "value": "0.000000000000000000000000000001",
+    "adopted": 2022
+  }
+]

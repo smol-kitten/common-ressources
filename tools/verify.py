@@ -228,6 +228,56 @@ def check_elements():
     STATS["cross_checks"] += 1
 
 
+def check_codon_table():
+    """The genetic code: 64 codons, 3 stops, AUG start; every encoded amino acid
+    must resolve to a symbol_1 in the amino-acids dataset."""
+    rel = "bio/codon-table/codon-table.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    codons = load(rel)
+    if len(codons) != 64:
+        err(rel, f"expected 64 codons, found {len(codons)}")
+    seen = {c["codon"] for c in codons}
+    bases = "ACGU"
+    expected = {a + b + c for a in bases for b in bases for c in bases}
+    if seen != expected:
+        err(rel, "codons are not exactly the 64 A/C/G/U triplets")
+    stops = [c["codon"] for c in codons if c.get("stop")]
+    if sorted(stops) != ["UAA", "UAG", "UGA"]:
+        err(rel, f"stop codons must be UAA/UAG/UGA, found {stops}")
+    starts = [c["codon"] for c in codons if c.get("start")]
+    if starts != ["AUG"]:
+        err(rel, f"start codon must be AUG, found {starts}")
+    aa = load("bio/amino-acids/amino-acids.json")
+    syms = {a["symbol_1"] for a in aa}
+    for c in codons:
+        s = c.get("amino_acid_1")
+        if s is not None and s not in syms:
+            err(rel, f"{c['codon']}: amino_acid_1 {s!r} not in amino-acids.json")
+        if s is None and not c.get("stop"):
+            err(rel, f"{c['codon']}: null amino acid but not marked stop")
+    STATS["cross_checks"] += 1
+
+
+def check_si_prefixes():
+    """24 SI prefixes with unique symbols and the canonical exponent set."""
+    rel = "science/si-prefixes/si-prefixes.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    pre = load(rel)
+    if len(pre) != 24:
+        err(rel, f"expected 24 SI prefixes, found {len(pre)}")
+    syms = [p["symbol"] for p in pre]
+    if len(syms) != len(set(syms)):
+        err(rel, "duplicate prefix symbols")
+    exps = sorted(p["base10"] for p in pre)
+    want = sorted([30, 27, 24, 21, 18, 15, 12, 9, 6, 3, 2, 1,
+                   -1, -2, -3, -6, -9, -12, -15, -18, -21, -24, -27, -30])
+    if exps != want:
+        err(rel, "base10 exponents do not match the canonical SI set")
+    STATS["cross_checks"] += 1
+
+
 def check_planets():
     p = load("space/planets/planets.json")
     orders = [x["order"] for x in p if "order" in x]
@@ -422,7 +472,8 @@ def main():
 
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
-               check_timezones, check_elements, check_planets, check_http_status,
+               check_timezones, check_elements, check_codon_table, check_si_prefixes,
+               check_planets, check_http_status,
                check_geo_crossref, check_locales, check_finance, check_formats):
         try:
             fn()

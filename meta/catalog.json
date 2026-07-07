@@ -1,15 +1,15 @@
 {
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
-  "dataset_count": 172,
-  "entry_total": 5327,
+  "dataset_count": 174,
+  "entry_total": 5415,
   "category_count": 38,
   "with_source": 17,
   "categories": {
     "accessibility": 2,
     "ai": 1,
     "astronomy": 3,
-    "bio": 1,
+    "bio": 2,
     "colors": 5,
     "database": 2,
     "dates": 1,
@@ -35,7 +35,7 @@
     "networking": 3,
     "programming": 4,
     "rice": 44,
-    "science": 4,
+    "science": 5,
     "security": 3,
     "setups": 15,
     "social": 1,
@@ -185,6 +185,23 @@
       "has_source": false,
       "readme": "bio/amino-acids/Readme.MD",
       "description": "All 20 standard proteinogenic amino acids with one-letter code, three-letter code, molecular weight, electrical charge, polarity, essentiality, side chain type, and structural category. An essential reference for bioinformatics tools, sequence analysis, educational content, and p"
+    },
+    {
+      "path": "bio/codon-table/codon-table.json",
+      "category": "bio",
+      "kind": "list",
+      "count": 64,
+      "fields": [
+        "amino_acid",
+        "amino_acid_1",
+        "amino_acid_3",
+        "codon",
+        "start",
+        "stop"
+      ],
+      "has_source": false,
+      "readme": "bio/codon-table/Readme.MD",
+      "description": "All 64 mRNA codons of the standard genetic code (NCBI translation table 1), each mapped to the amino acid it encodes or to a stop signal. Includes the canonical AUG start codon and the three stop codons (UAA, UAG, UGA). Amino-acid names and three-letter codes cross-reference the "
     },
     {
       "path": "colors/gradients/gradients.json",
@@ -2743,6 +2760,22 @@
       "has_source": false,
       "readme": "README.md",
       "description": "A growing collection of structured JSON resources for recurring use in projects."
+    },
+    {
+      "path": "science/si-prefixes/si-prefixes.json",
+      "category": "science",
+      "kind": "list",
+      "count": 24,
+      "fields": [
+        "adopted",
+        "base10",
+        "name",
+        "symbol",
+        "value"
+      ],
+      "has_source": false,
+      "readme": "science/si-prefixes/Readme.MD",
+      "description": "All 24 SI (metric) prefixes defined by the BIPM, from quetta (10³⁰) down to quecto (10⁻³⁰), including the four prefixes added by the 27th CGPM in 2022 (ronna, quetta, ronto, quecto). Each entry gives the prefix name, symbol, power-of-ten exponent, exact decimal multiplier, and th"
     },
     {
       "path": "science/units/units.json",

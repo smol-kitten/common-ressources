@@ -1,0 +1,514 @@
+[
+  {
+    "codon": "AAA",
+    "amino_acid_1": "K",
+    "amino_acid_3": "Lys",
+    "amino_acid": "Lysine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AAC",
+    "amino_acid_1": "N",
+    "amino_acid_3": "Asn",
+    "amino_acid": "Asparagine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AAG",
+    "amino_acid_1": "K",
+    "amino_acid_3": "Lys",
+    "amino_acid": "Lysine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AAU",
+    "amino_acid_1": "N",
+    "amino_acid_3": "Asn",
+    "amino_acid": "Asparagine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "ACA",
+    "amino_acid_1": "T",
+    "amino_acid_3": "Thr",
+    "amino_acid": "Threonine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "ACC",
+    "amino_acid_1": "T",
+    "amino_acid_3": "Thr",
+    "amino_acid": "Threonine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "ACG",
+    "amino_acid_1": "T",
+    "amino_acid_3": "Thr",
+    "amino_acid": "Threonine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "ACU",
+    "amino_acid_1": "T",
+    "amino_acid_3": "Thr",
+    "amino_acid": "Threonine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AGA",
+    "amino_acid_1": "R",
+    "amino_acid_3": "Arg",
+    "amino_acid": "Arginine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AGC",
+    "amino_acid_1": "S",
+    "amino_acid_3": "Ser",
+    "amino_acid": "Serine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AGG",
+    "amino_acid_1": "R",
+    "amino_acid_3": "Arg",
+    "amino_acid": "Arginine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AGU",
+    "amino_acid_1": "S",
+    "amino_acid_3": "Ser",
+    "amino_acid": "Serine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AUA",
+    "amino_acid_1": "I",
+    "amino_acid_3": "Ile",
+    "amino_acid": "Isoleucine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AUC",
+    "amino_acid_1": "I",
+    "amino_acid_3": "Ile",
+    "amino_acid": "Isoleucine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "AUG",
+    "amino_acid_1": "M",
+    "amino_acid_3": "Met",
+    "amino_acid": "Methionine",
+    "start": true,
+    "stop": false
+  },
+  {
+    "codon": "AUU",
+    "amino_acid_1": "I",
+    "amino_acid_3": "Ile",
+    "amino_acid": "Isoleucine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CAA",
+    "amino_acid_1": "Q",
+    "amino_acid_3": "Gln",
+    "amino_acid": "Glutamine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CAC",
+    "amino_acid_1": "H",
+    "amino_acid_3": "His",
+    "amino_acid": "Histidine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CAG",
+    "amino_acid_1": "Q",
+    "amino_acid_3": "Gln",
+    "amino_acid": "Glutamine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CAU",
+    "amino_acid_1": "H",
+    "amino_acid_3": "His",
+    "amino_acid": "Histidine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CCA",
+    "amino_acid_1": "P",
+    "amino_acid_3": "Pro",
+    "amino_acid": "Proline",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CCC",
+    "amino_acid_1": "P",
+    "amino_acid_3": "Pro",
+    "amino_acid": "Proline",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CCG",
+    "amino_acid_1": "P",
+    "amino_acid_3": "Pro",
+    "amino_acid": "Proline",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CCU",
+    "amino_acid_1": "P",
+    "amino_acid_3": "Pro",
+    "amino_acid": "Proline",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CGA",
+    "amino_acid_1": "R",
+    "amino_acid_3": "Arg",
+    "amino_acid": "Arginine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CGC",
+    "amino_acid_1": "R",
+    "amino_acid_3": "Arg",
+    "amino_acid": "Arginine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CGG",
+    "amino_acid_1": "R",
+    "amino_acid_3": "Arg",
+    "amino_acid": "Arginine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CGU",
+    "amino_acid_1": "R",
+    "amino_acid_3": "Arg",
+    "amino_acid": "Arginine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CUA",
+    "amino_acid_1": "L",
+    "amino_acid_3": "Leu",
+    "amino_acid": "Leucine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CUC",
+    "amino_acid_1": "L",
+    "amino_acid_3": "Leu",
+    "amino_acid": "Leucine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CUG",
+    "amino_acid_1": "L",
+    "amino_acid_3": "Leu",
+    "amino_acid": "Leucine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "CUU",
+    "amino_acid_1": "L",
+    "amino_acid_3": "Leu",
+    "amino_acid": "Leucine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GAA",
+    "amino_acid_1": "E",
+    "amino_acid_3": "Glu",
+    "amino_acid": "Glutamic acid",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GAC",
+    "amino_acid_1": "D",
+    "amino_acid_3": "Asp",
+    "amino_acid": "Aspartic acid",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GAG",
+    "amino_acid_1": "E",
+    "amino_acid_3": "Glu",
+    "amino_acid": "Glutamic acid",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GAU",
+    "amino_acid_1": "D",
+    "amino_acid_3": "Asp",
+    "amino_acid": "Aspartic acid",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GCA",
+    "amino_acid_1": "A",
+    "amino_acid_3": "Ala",
+    "amino_acid": "Alanine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GCC",
+    "amino_acid_1": "A",
+    "amino_acid_3": "Ala",
+    "amino_acid": "Alanine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GCG",
+    "amino_acid_1": "A",
+    "amino_acid_3": "Ala",
+    "amino_acid": "Alanine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GCU",
+    "amino_acid_1": "A",
+    "amino_acid_3": "Ala",
+    "amino_acid": "Alanine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GGA",
+    "amino_acid_1": "G",
+    "amino_acid_3": "Gly",
+    "amino_acid": "Glycine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GGC",
+    "amino_acid_1": "G",
+    "amino_acid_3": "Gly",
+    "amino_acid": "Glycine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GGG",
+    "amino_acid_1": "G",
+    "amino_acid_3": "Gly",
+    "amino_acid": "Glycine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GGU",
+    "amino_acid_1": "G",
+    "amino_acid_3": "Gly",
+    "amino_acid": "Glycine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GUA",
+    "amino_acid_1": "V",
+    "amino_acid_3": "Val",
+    "amino_acid": "Valine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GUC",
+    "amino_acid_1": "V",
+    "amino_acid_3": "Val",
+    "amino_acid": "Valine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GUG",
+    "amino_acid_1": "V",
+    "amino_acid_3": "Val",
+    "amino_acid": "Valine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "GUU",
+    "amino_acid_1": "V",
+    "amino_acid_3": "Val",
+    "amino_acid": "Valine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UAA",
+    "amino_acid_1": null,
+    "amino_acid_3": "Stop",
+    "amino_acid": "Stop",
+    "start": false,
+    "stop": true
+  },
+  {
+    "codon": "UAC",
+    "amino_acid_1": "Y",
+    "amino_acid_3": "Tyr",
+    "amino_acid": "Tyrosine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UAG",
+    "amino_acid_1": null,
+    "amino_acid_3": "Stop",
+    "amino_acid": "Stop",
+    "start": false,
+    "stop": true
+  },
+  {
+    "codon": "UAU",
+    "amino_acid_1": "Y",
+    "amino_acid_3": "Tyr",
+    "amino_acid": "Tyrosine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UCA",
+    "amino_acid_1": "S",
+    "amino_acid_3": "Ser",
+    "amino_acid": "Serine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UCC",
+    "amino_acid_1": "S",
+    "amino_acid_3": "Ser",
+    "amino_acid": "Serine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UCG",
+    "amino_acid_1": "S",
+    "amino_acid_3": "Ser",
+    "amino_acid": "Serine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UCU",
+    "amino_acid_1": "S",
+    "amino_acid_3": "Ser",
+    "amino_acid": "Serine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UGA",
+    "amino_acid_1": null,
+    "amino_acid_3": "Stop",
+    "amino_acid": "Stop",
+    "start": false,
+    "stop": true
+  },
+  {
+    "codon": "UGC",
+    "amino_acid_1": "C",
+    "amino_acid_3": "Cys",
+    "amino_acid": "Cysteine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UGG",
+    "amino_acid_1": "W",
+    "amino_acid_3": "Trp",
+    "amino_acid": "Tryptophan",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UGU",
+    "amino_acid_1": "C",
+    "amino_acid_3": "Cys",
+    "amino_acid": "Cysteine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UUA",
+    "amino_acid_1": "L",
+    "amino_acid_3": "Leu",
+    "amino_acid": "Leucine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UUC",
+    "amino_acid_1": "F",
+    "amino_acid_3": "Phe",
+    "amino_acid": "Phenylalanine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UUG",
+    "amino_acid_1": "L",
+    "amino_acid_3": "Leu",
+    "amino_acid": "Leucine",
+    "start": false,
+    "stop": false
+  },
+  {
+    "codon": "UUU",
+    "amino_acid_1": "F",
+    "amino_acid_3": "Phe",
+    "amino_acid": "Phenylalanine",
+    "start": false,
+    "stop": false
+  }
+]

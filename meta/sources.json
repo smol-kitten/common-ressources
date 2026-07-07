@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_sources.py",
   "_about": "Authoritative source map. 'kind' = standard | official | curated. Consumers should verify safety/compliance-critical values against the cited primary source.",
-  "documented": 56,
-  "total_datasets": 172,
+  "documented": 58,
+  "total_datasets": 174,
   "sources": {
     "accessibility/aria-roles/aria-roles.json": {
       "kind": "standard",
@@ -58,6 +58,19 @@
         },
         {
           "title": "IUPAC-IUBMB nomenclature",
+          "url": "https://iupac.org/"
+        }
+      ]
+    },
+    "bio/codon-table/codon-table.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "NCBI — The Genetic Codes (translation table 1)",
+          "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi"
+        },
+        {
+          "title": "IUPAC-IUBMB amino-acid nomenclature",
           "url": "https://iupac.org/"
         }
       ]
@@ -384,6 +397,19 @@
         {
           "title": "NIST — speed of light & material velocity factors",
           "url": "https://physics.nist.gov/cuu/Constants/"
+        }
+      ]
+    },
+    "science/si-prefixes/si-prefixes.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "BIPM — SI prefixes",
+          "url": "https://www.bipm.org/en/measurement-units/si-prefixes"
+        },
+        {
+          "title": "27th CGPM (2022) Resolution 3",
+          "url": "https://www.bipm.org/en/committees/cg/cgpm/27-2022/resolution-3"
         }
       ]
     },
