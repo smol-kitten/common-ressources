@@ -61,6 +61,7 @@ jobs:
           python3 tools/build_currencies.py --check
           python3 tools/build_catalog.py --check
           python3 tools/build_sources.py --check
+          python3 tools/build_readme_stats.py --check
         shell: bash
 
       - name: List all resource files

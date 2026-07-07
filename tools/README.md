@@ -24,6 +24,7 @@ is stale) so CI can assert the tree is current.
 | `python3 tools/build_currencies.py` | `geo/currencies/currencies.json` | canonical ISO 4217 table in the script; issuing country derived from `geo/countries/countries.json` |
 | `python3 tools/build_catalog.py` | `meta/catalog.json` | walks every dataset — path, category, entry count, fields, description, provenance flag |
 | `python3 tools/build_sources.py` | `meta/sources.json` | curated authoritative-source map (`--coverage` reports undocumented datasets) |
+| `python3 tools/build_readme_stats.py` | `README.md` stats block | dataset/entry/category counts + per-category table, between the `STATS` markers |
 
 ## Conventions
 

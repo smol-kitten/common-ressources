@@ -19,6 +19,7 @@ build:
 	$(PY) tools/build_currencies.py
 	$(PY) tools/build_catalog.py
 	$(PY) tools/build_sources.py
+	$(PY) tools/build_readme_stats.py
 
 # Non-mutating checks suitable for CI. Fails if any generated file is stale.
 check: validate verify
@@ -26,6 +27,7 @@ check: validate verify
 	$(PY) tools/build_currencies.py --check
 	$(PY) tools/build_catalog.py --check
 	$(PY) tools/build_sources.py --check
+	$(PY) tools/build_readme_stats.py --check
 	@echo "== all checks passed =="
 
 verify:
