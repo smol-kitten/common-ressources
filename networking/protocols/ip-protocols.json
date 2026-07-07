@@ -56,7 +56,7 @@
   {
     "number": 9,
     "name": "IGP",
-    "full_name": "Interior Gateway Protocol",
+    "full_name": "Any private interior gateway",
     "slug": "igp",
     "rfc": "N/A",
     "description": "A reserved protocol number for any interior gateway routing protocol used within an autonomous system.",
@@ -74,7 +74,7 @@
   {
     "number": 27,
     "name": "RDP",
-    "full_name": "Reliable Datagram Protocol",
+    "full_name": "Reliable Data Protocol",
     "slug": "rdp-reliable",
     "rfc": "RFC 908",
     "description": "Provides reliable delivery of datagrams with sequencing and acknowledgement. Not to be confused with Microsoft Remote Desktop Protocol (which uses TCP/UDP port 3389).",

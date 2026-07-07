@@ -53,6 +53,14 @@
         "ai/models.json"
       ],
       "corrections_count": 6
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (IANA Protocol Numbers registry CSV)",
+      "files_checked": [
+        "networking/protocols/ip-protocols.json"
+      ],
+      "corrections_count": 2
     }
   ],
   "corrections": [
@@ -375,6 +383,26 @@
       "new_value": "2025-08",
       "reason": "Anthropic docs list reliable knowledge cutoff Aug 2025 (revised)",
       "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "networking/protocols/ip-protocols.json",
+      "entry": "RDP",
+      "field": "full_name",
+      "old_value": "Reliable Datagram Protocol",
+      "new_value": "Reliable Data Protocol",
+      "reason": "IP protocol 27 (RDP) is the Reliable Data Protocol (RFC 908), not \"Datagram\"",
+      "source": "https://www.iana.org/assignments/protocol-numbers/"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "networking/protocols/ip-protocols.json",
+      "entry": "IGP",
+      "field": "full_name",
+      "old_value": "Interior Gateway Protocol",
+      "new_value": "Any private interior gateway",
+      "reason": "IP protocol 9 is IANA \"any private interior gateway (e.g. Cisco IGRP)\", not the generic Interior Gateway Protocol",
+      "source": "https://www.iana.org/assignments/protocol-numbers/"
     }
   ],
   "no_action_items": [
