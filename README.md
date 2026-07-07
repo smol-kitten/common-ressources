@@ -343,7 +343,7 @@ The 5 IAU-recognised dwarf planets (Ceres, Pluto, Haumea, Makemake, Eris) with m
 
 ### Well-Known Ports
 
-42 well-known TCP/UDP port assignments covering system ports and popular databases/services.  
+90 well-known/registered TCP/UDP port assignments covering system ports, routing/VPN protocols, and popular databases, message brokers, and services.  
 Includes SSH (22), HTTP (80), HTTPS (443), databases (MySQL 3306, PostgreSQL 5432, Redis 6379, MongoDB 27017), VPNs (OpenVPN 1194, WireGuard 51820), and more.
 
 [Info & Schema](/net/ports/Readme.MD) · [ports.json](/net/ports/ports.json)
