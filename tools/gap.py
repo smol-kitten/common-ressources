@@ -120,12 +120,18 @@ def view_crossref():
                              miss))
     except FileNotFoundError:
         pass
-    # language → script
+    # language → script (tokenised: ISO 15924 names carry parenthetical aliases)
     try:
+        import re as _re
         langs = load("i18n/languages/languages.json")
-        names = {s["name"].lower() for s in load("iso/15924/scripts.json")}
+        tokens = set()
+        for s in load("iso/15924/scripts.json"):
+            nm = s["name"].lower()
+            tokens.add(nm)
+            tokens.add(nm.split(" (")[0].strip())
+            tokens.update(_re.findall(r"[a-z']{3,}", nm))
         miss = sorted({l["script"] for l in langs
-                       if l.get("script") and l["script"].lower() not in names})
+                       if l.get("script") and l["script"].lower() not in tokens})
         if miss:
             findings.append(("iso/15924/scripts.json",
                              f"{len(miss)} script names used by languages but absent",

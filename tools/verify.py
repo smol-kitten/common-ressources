@@ -184,15 +184,21 @@ def check_countries_currencies():
 def check_languages_scripts():
     langs = load("i18n/languages/languages.json")
     scripts = load("iso/15924/scripts.json")
-    script_names = {s["name"].lower() for s in scripts}
-    # common aliases used in languages.json vs ISO 15924 canonical names
-    alias = {"han": "han (hanzi, kanji, hanja)", "cjk": "han (hanzi, kanji, hanja)"}
+    # ISO 15924 names carry parentheticals/aliases, e.g. "Bengali (Bangla)",
+    # "Oriya (Odia)". Accept a language's script if it matches the leading name
+    # OR appears as a whole alpha token anywhere in the canonical name.
+    tokens = set()
+    for s in scripts:
+        name = s["name"].lower()
+        tokens.add(name)
+        tokens.add(name.split(" (")[0].strip())
+        for tok in re.findall(r"[a-z']{3,}", name):
+            tokens.add(tok)
     for l in langs:
         sc = l.get("script")
         if not sc:
             continue
-        key = alias.get(sc.lower(), sc.lower())
-        if key not in script_names and sc.lower() not in script_names:
+        if sc.lower() not in tokens:
             warn("i18n/languages/languages.json",
                  f"{l['name']}: script {sc!r} not a known ISO 15924 name")
     STATS["cross_checks"] += 1
