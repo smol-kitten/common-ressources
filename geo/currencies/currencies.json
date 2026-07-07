@@ -32,6 +32,14 @@
     "country_code": "AM"
   },
   {
+    "code": "ANG",
+    "name": "Netherlands Antillean Guilder",
+    "symbol": "ƒ",
+    "decimals": 2,
+    "country": "Curaçao and Sint Maarten",
+    "country_code": null
+  },
+  {
     "code": "AOA",
     "name": "Angolan Kwanza",
     "symbol": "Kz",
@@ -54,6 +62,14 @@
     "decimals": 2,
     "country": "Australia",
     "country_code": "AU"
+  },
+  {
+    "code": "AWG",
+    "name": "Aruban Florin",
+    "symbol": "ƒ",
+    "decimals": 2,
+    "country": "Aruba",
+    "country_code": null
   },
   {
     "code": "AZN",
@@ -110,6 +126,14 @@
     "decimals": 0,
     "country": "Burundi",
     "country_code": "BI"
+  },
+  {
+    "code": "BMD",
+    "name": "Bermudian Dollar",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "Bermuda",
+    "country_code": null
   },
   {
     "code": "BND",
@@ -328,6 +352,14 @@
     "country_code": "FJ"
   },
   {
+    "code": "FKP",
+    "name": "Falkland Islands Pound",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "Falkland Islands",
+    "country_code": null
+  },
+  {
     "code": "GBP",
     "name": "British Pound Sterling",
     "symbol": "£",
@@ -344,12 +376,28 @@
     "country_code": "GE"
   },
   {
+    "code": "GGP",
+    "name": "Guernsey Pound",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "Guernsey",
+    "country_code": null
+  },
+  {
     "code": "GHS",
     "name": "Ghanaian Cedi",
     "symbol": "₵",
     "decimals": 2,
     "country": "Ghana",
     "country_code": "GH"
+  },
+  {
+    "code": "GIP",
+    "name": "Gibraltar Pound",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "Gibraltar",
+    "country_code": null
   },
   {
     "code": "GMD",
@@ -440,6 +488,14 @@
     "country_code": "IL"
   },
   {
+    "code": "IMP",
+    "name": "Isle of Man Pound",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "Isle of Man",
+    "country_code": null
+  },
+  {
     "code": "INR",
     "name": "Indian Rupee",
     "symbol": "₹",
@@ -470,6 +526,14 @@
     "decimals": 0,
     "country": "Iceland",
     "country_code": "IS"
+  },
+  {
+    "code": "JEP",
+    "name": "Jersey Pound",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "Jersey",
+    "country_code": null
   },
   {
     "code": "JMD",
@@ -550,6 +614,14 @@
     "decimals": 3,
     "country": "Kuwait",
     "country_code": "KW"
+  },
+  {
+    "code": "KYD",
+    "name": "Cayman Islands Dollar",
+    "symbol": "$",
+    "decimals": 2,
+    "country": "Cayman Islands",
+    "country_code": null
   },
   {
     "code": "KZT",
@@ -912,6 +984,14 @@
     "country_code": "SG"
   },
   {
+    "code": "SHP",
+    "name": "Saint Helena Pound",
+    "symbol": "£",
+    "decimals": 2,
+    "country": "Saint Helena, Ascension and Tristan da Cunha",
+    "country_code": null
+  },
+  {
     "code": "SLE",
     "name": "Sierra Leonean Leone",
     "symbol": "Le",
@@ -1125,6 +1205,22 @@
     "symbol": "EC$",
     "decimals": 2,
     "country": "OECS (East Caribbean)",
+    "country_code": null
+  },
+  {
+    "code": "XCG",
+    "name": "Caribbean Guilder",
+    "symbol": "ƒ",
+    "decimals": 2,
+    "country": "Curaçao and Sint Maarten (Caribbean guilder)",
+    "country_code": null
+  },
+  {
+    "code": "XDR",
+    "name": "IMF Special Drawing Rights",
+    "symbol": "SDR",
+    "decimals": 0,
+    "country": "International Monetary Fund",
     "country_code": null
   },
   {

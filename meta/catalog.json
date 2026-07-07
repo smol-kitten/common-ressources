@@ -2,7 +2,7 @@
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
   "dataset_count": 171,
-  "entry_total": 5041,
+  "entry_total": 5053,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -711,7 +711,7 @@
       "path": "geo/currencies/currencies.json",
       "category": "geo",
       "kind": "list",
-      "count": 147,
+      "count": 159,
       "fields": [
         "code",
         "country",
@@ -722,7 +722,7 @@
       ],
       "has_source": false,
       "readme": "geo/currencies/Readme.MD",
-      "description": "ISO 4217 currency reference covering 147 active world currencies. Each entry includes the currency code, symbol, decimal precision, and issuing country — everything needed to format monetary values correctly in a multi-currency application."
+      "description": "ISO 4217 currency reference covering 159 active world currencies. Each entry includes the currency code, symbol, decimal precision, and issuing country — everything needed to format monetary values correctly in a multi-currency application."
     },
     {
       "path": "geo/timezones/timezones.json",
