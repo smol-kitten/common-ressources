@@ -2,7 +2,7 @@
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
   "dataset_count": 172,
-  "entry_total": 5225,
+  "entry_total": 5252,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -3458,7 +3458,7 @@
       "path": "web/http/status-codes.json",
       "category": "web",
       "kind": "list",
-      "count": 35,
+      "count": 62,
       "fields": [
         "cacheable",
         "category",
