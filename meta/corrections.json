@@ -69,6 +69,14 @@
         "science/constants/constants.json"
       ],
       "corrections_count": 0
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (CIAAW standard atomic weights)",
+      "files_checked": [
+        "science/elements/elements.json"
+      ],
+      "corrections_count": 6
     }
   ],
   "corrections": [
@@ -170,16 +178,6 @@
       "old_value": 4.003,
       "new_value": 4.0026,
       "reason": "IUPAC 2021 standard atomic weight is 4.002602; 4.0026 is the correct 5-significant-figure abridged value",
-      "source": "https://iupac.qmul.ac.uk/AtWt/AtWt21.html"
-    },
-    {
-      "date": "2026-06-17",
-      "file": "science/elements/elements.json",
-      "entry": "Gold (Au)",
-      "field": "mass",
-      "old_value": 196.967,
-      "new_value": 196.966,
-      "reason": "IUPAC 2021 value is 196.966570; rounded to 6 sig figs is 196.966, not 196.967",
       "source": "https://iupac.qmul.ac.uk/AtWt/AtWt21.html"
     },
     {
@@ -411,6 +409,66 @@
       "new_value": "Any private interior gateway",
       "reason": "IP protocol 9 is IANA \"any private interior gateway (e.g. Cisco IGRP)\", not the generic Interior Gateway Protocol",
       "source": "https://www.iana.org/assignments/protocol-numbers/"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Lithium",
+      "field": "mass",
+      "old_value": 6.941,
+      "new_value": 6.94,
+      "reason": "IUPAC conventional atomic weight for Li is 6.94 (interval [6.938, 6.997])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Boron",
+      "field": "mass",
+      "old_value": 10.811,
+      "new_value": 10.81,
+      "reason": "IUPAC conventional atomic weight for B is 10.81 (interval [10.806, 10.821])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Silicon",
+      "field": "mass",
+      "old_value": 28.086,
+      "new_value": 28.085,
+      "reason": "IUPAC conventional atomic weight for Si is 28.085 (interval [28.084, 28.086])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Sulfur",
+      "field": "mass",
+      "old_value": 32.065,
+      "new_value": 32.06,
+      "reason": "IUPAC conventional atomic weight for S is 32.06 (interval [32.059, 32.076])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Chlorine",
+      "field": "mass",
+      "old_value": 35.453,
+      "new_value": 35.45,
+      "reason": "IUPAC conventional atomic weight for Cl is 35.45 (interval [35.446, 35.457])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Gold",
+      "field": "mass",
+      "old_value": 196.966,
+      "new_value": 196.967,
+      "reason": "CIAAW standard atomic weight of Au is 196.966570(4); abridged 196.967",
+      "source": "https://ciaaw.org/atomic-weights.htm"
     }
   ],
   "no_action_items": [
