@@ -482,7 +482,7 @@
   {
     "code": 510,
     "name": "Not Extended",
-    "description": "Further extensions to the request are required for the server to fulfil it.",
+    "description": "Further extensions to the request are required for the server to fulfil it. Defined by the experimental RFC 2774; now marked OBSOLETED in the IANA HTTP Status Code registry and effectively unused.",
     "category": "server-error",
     "cacheable": false,
     "source": "RFC 2774"
