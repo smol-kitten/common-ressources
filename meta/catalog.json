@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
-  "dataset_count": 171,
-  "entry_total": 5054,
+  "dataset_count": 172,
+  "entry_total": 5059,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -39,7 +39,7 @@
     "security": 3,
     "setups": 15,
     "social": 1,
-    "space": 1,
+    "space": 2,
     "typography": 3,
     "unicode": 2,
     "web": 8,
@@ -3222,6 +3222,28 @@
       "has_source": false,
       "readme": "social/Readme.MD",
       "description": "Structured metadata for major social media and community platforms — brand colors, federation status, handle formats, character limits, and more."
+    },
+    {
+      "path": "space/dwarf-planets/dwarf-planets.json",
+      "category": "space",
+      "kind": "list",
+      "count": 5,
+      "fields": [
+        "avg_temperature_c",
+        "designation",
+        "discovered",
+        "distance_from_sun_km",
+        "mass_kg",
+        "moons",
+        "name",
+        "orbital_period_days",
+        "radius_km",
+        "region",
+        "type"
+      ],
+      "has_source": false,
+      "readme": "space/dwarf-planets/Readme.MD",
+      "description": "The five bodies officially recognised as dwarf planets by the International Astronomical Union (IAU): **Ceres** (asteroid belt), **Pluto**, **Haumea**, **Makemake** (Kuiper belt), and **Eris** (scattered disc)."
     },
     {
       "path": "space/planets/planets.json",

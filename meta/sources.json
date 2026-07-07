@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_sources.py",
   "_about": "Authoritative source map. 'kind' = standard | official | curated. Consumers should verify safety/compliance-critical values against the cited primary source.",
-  "documented": 55,
-  "total_datasets": 171,
+  "documented": 56,
+  "total_datasets": 172,
   "sources": {
     "accessibility/aria-roles/aria-roles.json": {
       "kind": "standard",
@@ -424,6 +424,19 @@
         {
           "title": "RFC 5246 — TLS 1.2",
           "url": "https://datatracker.ietf.org/doc/html/rfc5246"
+        }
+      ]
+    },
+    "space/dwarf-planets/dwarf-planets.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "IAU — Pluto & dwarf planets",
+          "url": "https://www.iau.org/public/themes/pluto/"
+        },
+        {
+          "title": "NASA — Dwarf Planets",
+          "url": "https://science.nasa.gov/dwarf-planets/"
         }
       ]
     },

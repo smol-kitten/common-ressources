@@ -47,6 +47,7 @@ CARDINALITY = {
     "astronomy/constellations/constellations.json": (88, "88 IAU-recognised constellations"),
     "colors/named.json":                         (148, "CSS Color Module named colors"),
     "space/planets/planets.json":                (8,   "8 IAU planets (dwarf planets separate)"),
+    "space/dwarf-planets/dwarf-planets.json":    (5,   "5 IAU-recognised dwarf planets"),
     "bio/amino-acids/amino-acids.json":          (20,  "20 standard proteinogenic amino acids"),
     "geo/countries/countries.json":              (195, "193 UN members + 2 observers"),
     "geo/currencies/currencies.json":            (159, "circulating ISO 4217 currencies (excl. XAU/XAG precious-metal & fund codes)"),

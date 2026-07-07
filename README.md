@@ -331,6 +331,12 @@ All 8 planets of the Solar System with mass, radius, distance from the Sun, orbi
 
 [Info & Schema](/space/planets/Readme.MD) · [planets.json](/space/planets/planets.json)
 
+### Dwarf Planets
+
+The 5 IAU-recognised dwarf planets (Ceres, Pluto, Haumea, Makemake, Eris) with mass, radius, orbit, region, moon count, and discovery year.
+
+[Info & Schema](/space/dwarf-planets/Readme.MD) · [dwarf-planets.json](/space/dwarf-planets/dwarf-planets.json)
+
 ---
 
 ## Networking
