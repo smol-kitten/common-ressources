@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
-  "dataset_count": 176,
-  "entry_total": 5726,
+  "dataset_count": 177,
+  "entry_total": 5775,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -32,7 +32,7 @@
     "meta": 1,
     "music": 1,
     "net": 3,
-    "networking": 3,
+    "networking": 4,
     "programming": 4,
     "rice": 44,
     "science": 7,
@@ -1540,6 +1540,24 @@
       "has_source": true,
       "readme": "README.md",
       "description": "A growing collection of structured JSON resources for recurring use in projects."
+    },
+    {
+      "path": "networking/special-use-ips/special-use-ips.json",
+      "category": "networking",
+      "kind": "list",
+      "count": 49,
+      "fields": [
+        "block",
+        "family",
+        "forwardable",
+        "globally_reachable",
+        "name",
+        "reserved_by_protocol",
+        "rfcs"
+      ],
+      "has_source": false,
+      "readme": "networking/special-use-ips/Readme.MD",
+      "description": "The IANA-registered special-purpose IPv4 and IPv6 address blocks — private-use ranges (10/8, 172.16/12, 192.168/16), loopback (127/8, ::1), link-local (169.254/16, fe80::/10), shared CGN space (100.64/10), documentation/test ranges (TEST-NET-1/2/3, 2001:db8::/32), unique-local (f"
     },
     {
       "path": "networking/subnets/cidr.json",

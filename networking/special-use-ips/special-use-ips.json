@@ -1,0 +1,546 @@
+[
+  {
+    "block": "0.0.0.0/8",
+    "name": "This network",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 791"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "0.0.0.0/32",
+    "name": "This host on this network",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 1122"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "10.0.0.0/8",
+    "name": "Private-Use",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 1918"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "100.64.0.0/10",
+    "name": "Shared Address Space",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 6598"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "127.0.0.0/8",
+    "name": "Loopback",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 1122"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "169.254.0.0/16",
+    "name": "Link Local",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 3927"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "172.16.0.0/12",
+    "name": "Private-Use",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 1918"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.0.0.0/29",
+    "name": "IPv4 Service Continuity Prefix",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 7335"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.0.0.8/32",
+    "name": "IPv4 dummy address",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 7600"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.0.0.9/32",
+    "name": "Port Control Protocol Anycast",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 7723"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.0.0.10/32",
+    "name": "Traversal Using Relays around NAT Anycast",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 8155"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.0.0.170/32",
+    "name": "NAT64/DNS64 Discovery",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 8880",
+      "RFC 7050"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "192.0.0.171/32",
+    "name": "NAT64/DNS64 Discovery",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 8880",
+      "RFC 7050"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "192.0.2.0/24",
+    "name": "Documentation (TEST-NET-1)",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 5737"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.31.196.0/24",
+    "name": "AS112-v4",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 7535"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.52.193.0/24",
+    "name": "AMT",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 7450"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.88.99.0/24",
+    "name": "Deprecated (6to4 Relay Anycast)",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 7526"
+    ],
+    "forwardable": null,
+    "globally_reachable": null,
+    "reserved_by_protocol": null
+  },
+  {
+    "block": "192.88.99.2/32",
+    "name": "6a44-relay anycast address",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 6751"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.168.0.0/16",
+    "name": "Private-Use",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 1918"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "192.175.48.0/24",
+    "name": "Direct Delegation AS112 Service",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 7534"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "198.18.0.0/15",
+    "name": "Benchmarking",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 2544"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "198.51.100.0/24",
+    "name": "Documentation (TEST-NET-2)",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 5737"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "203.0.113.0/24",
+    "name": "Documentation (TEST-NET-3)",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 5737"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "240.0.0.0/4",
+    "name": "Reserved",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 1112"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "255.255.255.255/32",
+    "name": "Limited Broadcast",
+    "family": "IPv4",
+    "rfcs": [
+      "RFC 8190",
+      "RFC 919"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "::1/128",
+    "name": "Loopback Address",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 4291"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "::/128",
+    "name": "Unspecified Address",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 4291"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "::ffff:0.0.0.0/96",
+    "name": "IPv4-mapped Address",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 4291"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  },
+  {
+    "block": "64:ff9b::/96",
+    "name": "IPv4-IPv6 Translat.",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 6052"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "64:ff9b:1::/48",
+    "name": "IPv4-IPv6 Translat.",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 8215"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "100::/64",
+    "name": "Discard-Only Address Block",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 6666"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "100:0:0:1::/64",
+    "name": "Dummy IPv6 Prefix",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 9780"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001::/23",
+    "name": "IETF Protocol Assignments",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 2928"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001::/32",
+    "name": "TEREDO",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 4380",
+      "RFC 8190"
+    ],
+    "forwardable": true,
+    "globally_reachable": null,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001:1::1/128",
+    "name": "Port Control Protocol Anycast",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 7723"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001:1::2/128",
+    "name": "Traversal Using Relays around NAT Anycast",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 8155"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001:1::3/128",
+    "name": "DNS-SD Service Registration Protocol Anycast",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 9665"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001:2::/48",
+    "name": "Benchmarking",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 5180"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001:3::/32",
+    "name": "AMT",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 7450"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001:4:112::/48",
+    "name": "AS112-v6",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 7535"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001:10::/28",
+    "name": "Deprecated (previously ORCHID)",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 4843"
+    ],
+    "forwardable": null,
+    "globally_reachable": null,
+    "reserved_by_protocol": null
+  },
+  {
+    "block": "2001:20::/28",
+    "name": "ORCHIDv2",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 7343"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001:30::/28",
+    "name": "Drone Remote ID Protocol Entity Tags (DETs) Prefix",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 9374"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2001:db8::/32",
+    "name": "Documentation",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 3849"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "2620:4f:8000::/48",
+    "name": "Direct Delegation AS112 Service",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 7534"
+    ],
+    "forwardable": true,
+    "globally_reachable": true,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "3fff::/20",
+    "name": "Documentation",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 9637"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "5f00::/16",
+    "name": "Segment Routing (SRv6) SIDs",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 9602"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "fc00::/7",
+    "name": "Unique-Local",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 4193",
+      "RFC 8190"
+    ],
+    "forwardable": true,
+    "globally_reachable": false,
+    "reserved_by_protocol": false
+  },
+  {
+    "block": "fe80::/10",
+    "name": "Link-Local Unicast",
+    "family": "IPv6",
+    "rfcs": [
+      "RFC 4291"
+    ],
+    "forwardable": false,
+    "globally_reachable": false,
+    "reserved_by_protocol": true
+  }
+]

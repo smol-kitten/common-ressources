@@ -278,6 +278,30 @@ def check_si_prefixes():
     STATS["cross_checks"] += 1
 
 
+def check_special_use_ips():
+    """Special-use IP blocks: valid CIDR, family matches the block, RFCs present."""
+    rel = "networking/special-use-ips/special-use-ips.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    try:
+        import ipaddress
+    except ImportError:
+        return
+    for e in load(rel):
+        b = e.get("block", "")
+        try:
+            net = ipaddress.ip_network(b, strict=False)
+        except ValueError:
+            err(rel, f"invalid CIDR block: {b!r}")
+            continue
+        fam = "IPv4" if net.version == 4 else "IPv6"
+        if e.get("family") != fam:
+            err(rel, f"{b}: family {e.get('family')} != {fam}")
+        if not e.get("rfcs"):
+            err(rel, f"{b}: no RFC reference")
+    STATS["cross_checks"] += 1
+
+
 def check_unicode_blocks():
     """Unicode blocks: sorted, non-overlapping, count matches the U+start..U+end range."""
     rel = "unicode/blocks/blocks.json"
@@ -519,7 +543,8 @@ def main():
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
                check_timezones, check_elements, check_codon_table, check_si_prefixes,
-               check_si_units, check_unicode_blocks, check_planets, check_http_status,
+               check_si_units, check_unicode_blocks, check_special_use_ips,
+               check_planets, check_http_status,
                check_geo_crossref, check_locales, check_finance, check_formats):
         try:
             fn()

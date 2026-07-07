@@ -129,6 +129,9 @@ SOURCES = {
         S("https://www.iana.org/assignments/protocol-numbers/", "IANA Protocol Numbers")]},
     "networking/subnets/cidr.json": {"kind": "standard", "sources": [
         S("https://www.rfc-editor.org/rfc/rfc4632", "RFC 4632 — CIDR")]},
+    "networking/special-use-ips/special-use-ips.json": {"kind": "standard", "sources": [
+        S("https://www.iana.org/assignments/iana-ipv4-special-registry/", "IANA IPv4 Special-Purpose Address Registry"),
+        S("https://www.iana.org/assignments/iana-ipv6-special-registry/", "IANA IPv6 Special-Purpose Address Registry")]},
     "networking/devices/device-types.json": {"kind": "curated", "sources": [
         S("https://www.cisco.com/", "Cisco networking documentation")]},
     "security/owasp-top10/owasp-top10.json": {"kind": "standard", "sources": [
