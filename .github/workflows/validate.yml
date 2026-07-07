@@ -47,6 +47,23 @@ jobs:
           bash validate.sh
         shell: bash
 
+      - name: Semantic verification (duplicates, colors, cross-file refs)
+        run: |
+          python3 tools/verify.py
+        shell: bash
+
+      - name: Assert generated files are up to date
+        run: |
+          python3 tools/build_currencies.py --check
+          python3 tools/build_catalog.py --check
+          python3 tools/build_sources.py --check
+        shell: bash
+
+      - name: Coverage & gap analysis (informational)
+        run: |
+          python3 tools/gap.py || true
+        shell: bash
+
       - name: List all resource files
         run: |
           echo "=== Preview images ==="

@@ -409,7 +409,23 @@ Each entry includes a ready-to-paste `css` value, category, and usage guidance.
 
 ---
 
-## Validation
+## Validation & Tooling
+
+The [`tools/`](/tools) directory holds a dependency-free (stdlib Python 3 + `jq`) suite for
+keeping the datasets correct, complete, discoverable, and sourced. Run the full gate with
+`make check`. See [tools/README.md](/tools/README.md) for details.
+
+| Command | What it does |
+|---|---|
+| `bash validate.sh` | JSON syntax + per-resource schema checks (required fields, ranges, hex format). |
+| `python3 tools/verify.py` | **Semantic verification**: duplicate detection, hex↔rgb integrity, and cross-file referential checks (country→currency, language→script, airport/city→country, formats/ranges). |
+| `python3 tools/gap.py` | **Gap analysis**: entry count vs canonical universe sizes, sparse fields, cross-ref gaps. |
+| `python3 tools/build_catalog.py` | Regenerate [`meta/catalog.json`](/meta/catalog.json) — machine-readable index of every dataset. |
+| `python3 tools/build_currencies.py` | Regenerate currencies from the canonical ISO 4217 table. |
+| `python3 tools/build_sources.py` | Regenerate [`meta/sources.json`](/meta/sources.json) — authoritative source map. |
+
+Generators support `--check` (exit non-zero if the committed output is stale), which CI enforces.
+Factual corrections are logged in [`meta/corrections.json`](/meta/corrections.json).
 
 ### validate.sh
 
@@ -443,7 +459,7 @@ docker run --rm -v $PWD:/repo cr-preview node tests/generate-previews.js
 
 | Workflow | Trigger | Action |
 |---|---|---|
-| **Validate** | push + PR | JSON syntax + schema checks |
+| **Validate** | push + PR | JSON syntax + schema checks + semantic verification (`verify.py`) + generated-file freshness (`--check`) + gap analysis |
 | **Generate Previews** | push to main (JSON/HTML changed) | Playwright screenshots → commit PNGs |
 | **PR Previews** | pull request | Generate PNGs → commit to PR branch → post comment with image embeds |
 | **App Screenshots** | push to main (themes.json changed) or manual | Xvfb + xterm real terminal screenshots → commit PNGs |
