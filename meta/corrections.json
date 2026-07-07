@@ -61,6 +61,14 @@
         "networking/protocols/ip-protocols.json"
       ],
       "corrections_count": 2
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (NIST CODATA fundamental constants table, allascii.txt)",
+      "files_checked": [
+        "science/constants/constants.json"
+      ],
+      "corrections_count": 0
     }
   ],
   "corrections": [
