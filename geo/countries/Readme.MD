@@ -14,6 +14,7 @@ ISO 3166-1 country reference covering 25 major countries. Each entry includes IS
   "name": "Germany",
   "capital": "Berlin",
   "continent": "Europe",
+  "subregion": "Western Europe",
   "dial_code": "+49",
   "currency_code": "EUR",
   "population_approx": 83000000
@@ -29,7 +30,8 @@ ISO 3166-1 country reference covering 25 major countries. Each entry includes IS
 | `iso_numeric` | number | ISO 3166-1 numeric code (UN M49). Omitted for user-assigned codes with no official numeric (e.g. Kosovo, `XK`) |
 | `name` | string | Common English country name |
 | `capital` | string | Capital city |
-| `continent` | string | Geographic continent |
+| `continent` | string | Geographic continent (geopolitical convention: Armenia and Cyprus are grouped under Europe) |
+| `subregion` | string | UN M49 sub-region (e.g. `Western Europe`, `South-eastern Asia`). Strict UN M49, so transcontinental states may pair a European `continent` with a `Western Asia` subregion. Omitted for Kosovo (no UN M49 assignment) |
 | `dial_code` | string | International telephone dial code with `+` prefix |
 | `currency_code` | string | ISO 4217 currency code |
 | `population_approx` | number | Approximate population (rounded) |

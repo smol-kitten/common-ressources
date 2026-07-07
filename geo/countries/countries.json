@@ -6,6 +6,7 @@
     "name": "United States",
     "capital": "Washington D.C.",
     "continent": "Americas",
+    "subregion": "Northern America",
     "dial_code": "+1",
     "currency_code": "USD",
     "population_approx": 331000000
@@ -17,6 +18,7 @@
     "name": "United Kingdom",
     "capital": "London",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+44",
     "currency_code": "GBP",
     "population_approx": 67000000
@@ -28,6 +30,7 @@
     "name": "Germany",
     "capital": "Berlin",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+49",
     "currency_code": "EUR",
     "population_approx": 83000000
@@ -39,6 +42,7 @@
     "name": "France",
     "capital": "Paris",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+33",
     "currency_code": "EUR",
     "population_approx": 68000000
@@ -50,6 +54,7 @@
     "name": "Japan",
     "capital": "Tokyo",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+81",
     "currency_code": "JPY",
     "population_approx": 125000000
@@ -61,6 +66,7 @@
     "name": "China",
     "capital": "Beijing",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+86",
     "currency_code": "CNY",
     "population_approx": 1412000000
@@ -72,6 +78,7 @@
     "name": "India",
     "capital": "New Delhi",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+91",
     "currency_code": "INR",
     "population_approx": 1400000000
@@ -83,6 +90,7 @@
     "name": "Brazil",
     "capital": "Brasília",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+55",
     "currency_code": "BRL",
     "population_approx": 215000000
@@ -94,6 +102,7 @@
     "name": "Canada",
     "capital": "Ottawa",
     "continent": "Americas",
+    "subregion": "Northern America",
     "dial_code": "+1",
     "currency_code": "CAD",
     "population_approx": 38000000
@@ -105,6 +114,7 @@
     "name": "Australia",
     "capital": "Canberra",
     "continent": "Oceania",
+    "subregion": "Australia and New Zealand",
     "dial_code": "+61",
     "currency_code": "AUD",
     "population_approx": 26000000
@@ -116,6 +126,7 @@
     "name": "Mexico",
     "capital": "Mexico City",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+52",
     "currency_code": "MXN",
     "population_approx": 130000000
@@ -127,6 +138,7 @@
     "name": "South Africa",
     "capital": "Pretoria",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+27",
     "currency_code": "ZAR",
     "population_approx": 60000000
@@ -138,6 +150,7 @@
     "name": "Nigeria",
     "capital": "Abuja",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+234",
     "currency_code": "NGN",
     "population_approx": 218000000
@@ -149,6 +162,7 @@
     "name": "Egypt",
     "capital": "Cairo",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+20",
     "currency_code": "EGP",
     "population_approx": 104000000
@@ -160,6 +174,7 @@
     "name": "Argentina",
     "capital": "Buenos Aires",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+54",
     "currency_code": "ARS",
     "population_approx": 45000000
@@ -171,6 +186,7 @@
     "name": "Russia",
     "capital": "Moscow",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+7",
     "currency_code": "RUB",
     "population_approx": 144000000
@@ -182,6 +198,7 @@
     "name": "South Korea",
     "capital": "Seoul",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+82",
     "currency_code": "KRW",
     "population_approx": 52000000
@@ -193,6 +210,7 @@
     "name": "Sweden",
     "capital": "Stockholm",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+46",
     "currency_code": "SEK",
     "population_approx": 10000000
@@ -204,6 +222,7 @@
     "name": "Netherlands",
     "capital": "Amsterdam",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+31",
     "currency_code": "EUR",
     "population_approx": 17000000
@@ -215,6 +234,7 @@
     "name": "Switzerland",
     "capital": "Bern",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+41",
     "currency_code": "CHF",
     "population_approx": 8700000
@@ -226,6 +246,7 @@
     "name": "Singapore",
     "capital": "Singapore",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+65",
     "currency_code": "SGD",
     "population_approx": 5900000
@@ -237,6 +258,7 @@
     "name": "Poland",
     "capital": "Warsaw",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+48",
     "currency_code": "PLN",
     "population_approx": 38000000
@@ -248,6 +270,7 @@
     "name": "Indonesia",
     "capital": "Jakarta",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+62",
     "currency_code": "IDR",
     "population_approx": 277000000
@@ -259,6 +282,7 @@
     "name": "Pakistan",
     "capital": "Islamabad",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+92",
     "currency_code": "PKR",
     "population_approx": 231000000
@@ -270,6 +294,7 @@
     "name": "Ukraine",
     "capital": "Kyiv",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+380",
     "currency_code": "UAH",
     "population_approx": 44000000
@@ -281,6 +306,7 @@
     "name": "Albania",
     "capital": "Tirana",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+355",
     "currency_code": "ALL",
     "population_approx": 2800000
@@ -292,6 +318,7 @@
     "name": "Andorra",
     "capital": "Andorra la Vella",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+376",
     "currency_code": "EUR",
     "population_approx": 77000
@@ -303,6 +330,7 @@
     "name": "Armenia",
     "capital": "Yerevan",
     "continent": "Europe",
+    "subregion": "Western Asia",
     "dial_code": "+374",
     "currency_code": "AMD",
     "population_approx": 3000000
@@ -314,6 +342,7 @@
     "name": "Austria",
     "capital": "Vienna",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+43",
     "currency_code": "EUR",
     "population_approx": 9000000
@@ -325,6 +354,7 @@
     "name": "Azerbaijan",
     "capital": "Baku",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+994",
     "currency_code": "AZN",
     "population_approx": 10000000
@@ -336,6 +366,7 @@
     "name": "Belarus",
     "capital": "Minsk",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+375",
     "currency_code": "BYN",
     "population_approx": 9400000
@@ -347,6 +378,7 @@
     "name": "Belgium",
     "capital": "Brussels",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+32",
     "currency_code": "EUR",
     "population_approx": 11500000
@@ -358,6 +390,7 @@
     "name": "Bosnia and Herzegovina",
     "capital": "Sarajevo",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+387",
     "currency_code": "BAM",
     "population_approx": 3200000
@@ -369,6 +402,7 @@
     "name": "Bulgaria",
     "capital": "Sofia",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+359",
     "currency_code": "EUR",
     "population_approx": 6500000
@@ -380,6 +414,7 @@
     "name": "Croatia",
     "capital": "Zagreb",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+385",
     "currency_code": "EUR",
     "population_approx": 4000000
@@ -391,6 +426,7 @@
     "name": "Cyprus",
     "capital": "Nicosia",
     "continent": "Europe",
+    "subregion": "Western Asia",
     "dial_code": "+357",
     "currency_code": "EUR",
     "population_approx": 1200000
@@ -402,6 +438,7 @@
     "name": "Czech Republic",
     "capital": "Prague",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+420",
     "currency_code": "CZK",
     "population_approx": 10700000
@@ -413,6 +450,7 @@
     "name": "Denmark",
     "capital": "Copenhagen",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+45",
     "currency_code": "DKK",
     "population_approx": 5900000
@@ -424,6 +462,7 @@
     "name": "Estonia",
     "capital": "Tallinn",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+372",
     "currency_code": "EUR",
     "population_approx": 1300000
@@ -435,6 +474,7 @@
     "name": "Finland",
     "capital": "Helsinki",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+358",
     "currency_code": "EUR",
     "population_approx": 5500000
@@ -446,6 +486,7 @@
     "name": "Georgia",
     "capital": "Tbilisi",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+995",
     "currency_code": "GEL",
     "population_approx": 3700000
@@ -457,6 +498,7 @@
     "name": "Greece",
     "capital": "Athens",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+30",
     "currency_code": "EUR",
     "population_approx": 10700000
@@ -468,6 +510,7 @@
     "name": "Hungary",
     "capital": "Budapest",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+36",
     "currency_code": "HUF",
     "population_approx": 9700000
@@ -479,6 +522,7 @@
     "name": "Iceland",
     "capital": "Reykjavik",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+354",
     "currency_code": "ISK",
     "population_approx": 370000
@@ -490,6 +534,7 @@
     "name": "Ireland",
     "capital": "Dublin",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+353",
     "currency_code": "EUR",
     "population_approx": 5100000
@@ -501,6 +546,7 @@
     "name": "Italy",
     "capital": "Rome",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+39",
     "currency_code": "EUR",
     "population_approx": 60000000
@@ -512,6 +558,7 @@
     "name": "Kazakhstan",
     "capital": "Astana",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+7",
     "currency_code": "KZT",
     "population_approx": 19000000
@@ -533,6 +580,7 @@
     "name": "Latvia",
     "capital": "Riga",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+371",
     "currency_code": "EUR",
     "population_approx": 1800000
@@ -544,6 +592,7 @@
     "name": "Liechtenstein",
     "capital": "Vaduz",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+423",
     "currency_code": "CHF",
     "population_approx": 38000
@@ -555,6 +604,7 @@
     "name": "Lithuania",
     "capital": "Vilnius",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+370",
     "currency_code": "EUR",
     "population_approx": 2800000
@@ -566,6 +616,7 @@
     "name": "Luxembourg",
     "capital": "Luxembourg City",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+352",
     "currency_code": "EUR",
     "population_approx": 640000
@@ -577,6 +628,7 @@
     "name": "Malta",
     "capital": "Valletta",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+356",
     "currency_code": "EUR",
     "population_approx": 530000
@@ -588,6 +640,7 @@
     "name": "Moldova",
     "capital": "Chișinău",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+373",
     "currency_code": "MDL",
     "population_approx": 2600000
@@ -599,6 +652,7 @@
     "name": "Monaco",
     "capital": "Monaco",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+377",
     "currency_code": "EUR",
     "population_approx": 36000
@@ -610,6 +664,7 @@
     "name": "Montenegro",
     "capital": "Podgorica",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+382",
     "currency_code": "EUR",
     "population_approx": 620000
@@ -621,6 +676,7 @@
     "name": "North Macedonia",
     "capital": "Skopje",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+389",
     "currency_code": "MKD",
     "population_approx": 2100000
@@ -632,6 +688,7 @@
     "name": "Norway",
     "capital": "Oslo",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+47",
     "currency_code": "NOK",
     "population_approx": 5400000
@@ -643,6 +700,7 @@
     "name": "Portugal",
     "capital": "Lisbon",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+351",
     "currency_code": "EUR",
     "population_approx": 10300000
@@ -654,6 +712,7 @@
     "name": "Romania",
     "capital": "Bucharest",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+40",
     "currency_code": "RON",
     "population_approx": 19000000
@@ -665,6 +724,7 @@
     "name": "San Marino",
     "capital": "San Marino",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+378",
     "currency_code": "EUR",
     "population_approx": 34000
@@ -676,6 +736,7 @@
     "name": "Serbia",
     "capital": "Belgrade",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+381",
     "currency_code": "RSD",
     "population_approx": 7000000
@@ -687,6 +748,7 @@
     "name": "Slovakia",
     "capital": "Bratislava",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+421",
     "currency_code": "EUR",
     "population_approx": 5500000
@@ -698,6 +760,7 @@
     "name": "Slovenia",
     "capital": "Ljubljana",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+386",
     "currency_code": "EUR",
     "population_approx": 2100000
@@ -709,6 +772,7 @@
     "name": "Spain",
     "capital": "Madrid",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+34",
     "currency_code": "EUR",
     "population_approx": 47000000
@@ -720,6 +784,7 @@
     "name": "Turkey",
     "capital": "Ankara",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+90",
     "currency_code": "TRY",
     "population_approx": 85000000
@@ -731,6 +796,7 @@
     "name": "Vatican City",
     "capital": "Vatican City",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+39",
     "currency_code": "EUR",
     "population_approx": 800
@@ -742,6 +808,7 @@
     "name": "Afghanistan",
     "capital": "Kabul",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+93",
     "currency_code": "AFN",
     "population_approx": 40000000
@@ -753,6 +820,7 @@
     "name": "Bahrain",
     "capital": "Manama",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+973",
     "currency_code": "BHD",
     "population_approx": 1500000
@@ -764,6 +832,7 @@
     "name": "Bangladesh",
     "capital": "Dhaka",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+880",
     "currency_code": "BDT",
     "population_approx": 170000000
@@ -775,6 +844,7 @@
     "name": "Bhutan",
     "capital": "Thimphu",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+975",
     "currency_code": "BTN",
     "population_approx": 800000
@@ -786,6 +856,7 @@
     "name": "Brunei",
     "capital": "Bandar Seri Begawan",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+673",
     "currency_code": "BND",
     "population_approx": 440000
@@ -797,6 +868,7 @@
     "name": "Cambodia",
     "capital": "Phnom Penh",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+855",
     "currency_code": "KHR",
     "population_approx": 17000000
@@ -808,6 +880,7 @@
     "name": "East Timor",
     "capital": "Dili",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+670",
     "currency_code": "USD",
     "population_approx": 1300000
@@ -819,6 +892,7 @@
     "name": "Iran",
     "capital": "Tehran",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+98",
     "currency_code": "IRR",
     "population_approx": 87000000
@@ -830,6 +904,7 @@
     "name": "Iraq",
     "capital": "Baghdad",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+964",
     "currency_code": "IQD",
     "population_approx": 41000000
@@ -841,6 +916,7 @@
     "name": "Israel",
     "capital": "Jerusalem",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+972",
     "currency_code": "ILS",
     "population_approx": 9500000
@@ -852,6 +928,7 @@
     "name": "Jordan",
     "capital": "Amman",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+962",
     "currency_code": "JOD",
     "population_approx": 10000000
@@ -863,6 +940,7 @@
     "name": "Kuwait",
     "capital": "Kuwait City",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+965",
     "currency_code": "KWD",
     "population_approx": 4400000
@@ -874,6 +952,7 @@
     "name": "Kyrgyzstan",
     "capital": "Bishkek",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+996",
     "currency_code": "KGS",
     "population_approx": 6600000
@@ -885,6 +964,7 @@
     "name": "Laos",
     "capital": "Vientiane",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+856",
     "currency_code": "LAK",
     "population_approx": 7300000
@@ -896,6 +976,7 @@
     "name": "Lebanon",
     "capital": "Beirut",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+961",
     "currency_code": "LBP",
     "population_approx": 5500000
@@ -907,6 +988,7 @@
     "name": "Malaysia",
     "capital": "Kuala Lumpur",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+60",
     "currency_code": "MYR",
     "population_approx": 33000000
@@ -918,6 +1000,7 @@
     "name": "Maldives",
     "capital": "Malé",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+960",
     "currency_code": "MVR",
     "population_approx": 540000
@@ -929,6 +1012,7 @@
     "name": "Mongolia",
     "capital": "Ulaanbaatar",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+976",
     "currency_code": "MNT",
     "population_approx": 3300000
@@ -940,6 +1024,7 @@
     "name": "Myanmar",
     "capital": "Naypyidaw",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+95",
     "currency_code": "MMK",
     "population_approx": 55000000
@@ -951,6 +1036,7 @@
     "name": "Nepal",
     "capital": "Kathmandu",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+977",
     "currency_code": "NPR",
     "population_approx": 30000000
@@ -962,6 +1048,7 @@
     "name": "North Korea",
     "capital": "Pyongyang",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+850",
     "currency_code": "KPW",
     "population_approx": 25000000
@@ -973,6 +1060,7 @@
     "name": "Oman",
     "capital": "Muscat",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+968",
     "currency_code": "OMR",
     "population_approx": 4600000
@@ -984,6 +1072,7 @@
     "name": "Palestine",
     "capital": "Ramallah",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+970",
     "currency_code": "ILS",
     "population_approx": 5000000
@@ -995,6 +1084,7 @@
     "name": "Philippines",
     "capital": "Manila",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+63",
     "currency_code": "PHP",
     "population_approx": 115000000
@@ -1006,6 +1096,7 @@
     "name": "Qatar",
     "capital": "Doha",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+974",
     "currency_code": "QAR",
     "population_approx": 2900000
@@ -1017,6 +1108,7 @@
     "name": "Saudi Arabia",
     "capital": "Riyadh",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+966",
     "currency_code": "SAR",
     "population_approx": 35000000
@@ -1028,6 +1120,7 @@
     "name": "Sri Lanka",
     "capital": "Sri Jayawardenepura Kotte",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+94",
     "currency_code": "LKR",
     "population_approx": 22000000
@@ -1039,6 +1132,7 @@
     "name": "Syria",
     "capital": "Damascus",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+963",
     "currency_code": "SYP",
     "population_approx": 21000000
@@ -1050,6 +1144,7 @@
     "name": "Taiwan",
     "capital": "Taipei",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+886",
     "currency_code": "TWD",
     "population_approx": 23500000
@@ -1061,6 +1156,7 @@
     "name": "Tajikistan",
     "capital": "Dushanbe",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+992",
     "currency_code": "TJS",
     "population_approx": 9500000
@@ -1072,6 +1168,7 @@
     "name": "Thailand",
     "capital": "Bangkok",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+66",
     "currency_code": "THB",
     "population_approx": 70000000
@@ -1083,6 +1180,7 @@
     "name": "Turkmenistan",
     "capital": "Ashgabat",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+993",
     "currency_code": "TMT",
     "population_approx": 6000000
@@ -1094,6 +1192,7 @@
     "name": "United Arab Emirates",
     "capital": "Abu Dhabi",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+971",
     "currency_code": "AED",
     "population_approx": 9900000
@@ -1105,6 +1204,7 @@
     "name": "Uzbekistan",
     "capital": "Tashkent",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+998",
     "currency_code": "UZS",
     "population_approx": 35000000
@@ -1116,6 +1216,7 @@
     "name": "Vietnam",
     "capital": "Hanoi",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+84",
     "currency_code": "VND",
     "population_approx": 97000000
@@ -1127,6 +1228,7 @@
     "name": "Yemen",
     "capital": "Sanaa",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+967",
     "currency_code": "YER",
     "population_approx": 33000000
@@ -1138,6 +1240,7 @@
     "name": "Algeria",
     "capital": "Algiers",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+213",
     "currency_code": "DZD",
     "population_approx": 45000000
@@ -1149,6 +1252,7 @@
     "name": "Angola",
     "capital": "Luanda",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+244",
     "currency_code": "AOA",
     "population_approx": 34000000
@@ -1160,6 +1264,7 @@
     "name": "Benin",
     "capital": "Porto-Novo",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+229",
     "currency_code": "XOF",
     "population_approx": 13000000
@@ -1171,6 +1276,7 @@
     "name": "Botswana",
     "capital": "Gaborone",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+267",
     "currency_code": "BWP",
     "population_approx": 2600000
@@ -1182,6 +1288,7 @@
     "name": "Burkina Faso",
     "capital": "Ouagadougou",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+226",
     "currency_code": "XOF",
     "population_approx": 21000000
@@ -1193,6 +1300,7 @@
     "name": "Burundi",
     "capital": "Gitega",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+257",
     "currency_code": "BIF",
     "population_approx": 12000000
@@ -1204,6 +1312,7 @@
     "name": "Cameroon",
     "capital": "Yaoundé",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+237",
     "currency_code": "XAF",
     "population_approx": 27000000
@@ -1215,6 +1324,7 @@
     "name": "Cape Verde",
     "capital": "Praia",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+238",
     "currency_code": "CVE",
     "population_approx": 560000
@@ -1226,6 +1336,7 @@
     "name": "Central African Republic",
     "capital": "Bangui",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+236",
     "currency_code": "XAF",
     "population_approx": 5000000
@@ -1237,6 +1348,7 @@
     "name": "Chad",
     "capital": "N'Djamena",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+235",
     "currency_code": "XAF",
     "population_approx": 17000000
@@ -1248,6 +1360,7 @@
     "name": "Comoros",
     "capital": "Moroni",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+269",
     "currency_code": "KMF",
     "population_approx": 870000
@@ -1259,6 +1372,7 @@
     "name": "Congo (Democratic Republic)",
     "capital": "Kinshasa",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+243",
     "currency_code": "CDF",
     "population_approx": 100000000
@@ -1270,6 +1384,7 @@
     "name": "Congo (Republic)",
     "capital": "Brazzaville",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+242",
     "currency_code": "XAF",
     "population_approx": 5800000
@@ -1281,6 +1396,7 @@
     "name": "Djibouti",
     "capital": "Djibouti",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+253",
     "currency_code": "DJF",
     "population_approx": 1000000
@@ -1292,6 +1408,7 @@
     "name": "Equatorial Guinea",
     "capital": "Malabo",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+240",
     "currency_code": "XAF",
     "population_approx": 1500000
@@ -1303,6 +1420,7 @@
     "name": "Eritrea",
     "capital": "Asmara",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+291",
     "currency_code": "ERN",
     "population_approx": 3500000
@@ -1314,6 +1432,7 @@
     "name": "Eswatini",
     "capital": "Mbabane",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+268",
     "currency_code": "SZL",
     "population_approx": 1200000
@@ -1325,6 +1444,7 @@
     "name": "Ethiopia",
     "capital": "Addis Ababa",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+251",
     "currency_code": "ETB",
     "population_approx": 120000000
@@ -1336,6 +1456,7 @@
     "name": "Gabon",
     "capital": "Libreville",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+241",
     "currency_code": "XAF",
     "population_approx": 2300000
@@ -1347,6 +1468,7 @@
     "name": "Gambia",
     "capital": "Banjul",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+220",
     "currency_code": "GMD",
     "population_approx": 2600000
@@ -1358,6 +1480,7 @@
     "name": "Ghana",
     "capital": "Accra",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+233",
     "currency_code": "GHS",
     "population_approx": 32000000
@@ -1369,6 +1492,7 @@
     "name": "Guinea",
     "capital": "Conakry",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+224",
     "currency_code": "GNF",
     "population_approx": 13000000
@@ -1380,6 +1504,7 @@
     "name": "Guinea-Bissau",
     "capital": "Bissau",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+245",
     "currency_code": "XOF",
     "population_approx": 2000000
@@ -1391,6 +1516,7 @@
     "name": "Ivory Coast",
     "capital": "Yamoussoukro",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+225",
     "currency_code": "XOF",
     "population_approx": 27000000
@@ -1402,6 +1528,7 @@
     "name": "Kenya",
     "capital": "Nairobi",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+254",
     "currency_code": "KES",
     "population_approx": 54000000
@@ -1413,6 +1540,7 @@
     "name": "Lesotho",
     "capital": "Maseru",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+266",
     "currency_code": "LSL",
     "population_approx": 2100000
@@ -1424,6 +1552,7 @@
     "name": "Liberia",
     "capital": "Monrovia",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+231",
     "currency_code": "LRD",
     "population_approx": 5300000
@@ -1435,6 +1564,7 @@
     "name": "Libya",
     "capital": "Tripoli",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+218",
     "currency_code": "LYD",
     "population_approx": 7000000
@@ -1446,6 +1576,7 @@
     "name": "Madagascar",
     "capital": "Antananarivo",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+261",
     "currency_code": "MGA",
     "population_approx": 28000000
@@ -1457,6 +1588,7 @@
     "name": "Malawi",
     "capital": "Lilongwe",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+265",
     "currency_code": "MWK",
     "population_approx": 20000000
@@ -1468,6 +1600,7 @@
     "name": "Mali",
     "capital": "Bamako",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+223",
     "currency_code": "XOF",
     "population_approx": 22000000
@@ -1479,6 +1612,7 @@
     "name": "Mauritania",
     "capital": "Nouakchott",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+222",
     "currency_code": "MRU",
     "population_approx": 4600000
@@ -1490,6 +1624,7 @@
     "name": "Mauritius",
     "capital": "Port Louis",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+230",
     "currency_code": "MUR",
     "population_approx": 1300000
@@ -1501,6 +1636,7 @@
     "name": "Morocco",
     "capital": "Rabat",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+212",
     "currency_code": "MAD",
     "population_approx": 37000000
@@ -1512,6 +1648,7 @@
     "name": "Mozambique",
     "capital": "Maputo",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+258",
     "currency_code": "MZN",
     "population_approx": 32000000
@@ -1523,6 +1660,7 @@
     "name": "Namibia",
     "capital": "Windhoek",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+264",
     "currency_code": "NAD",
     "population_approx": 2600000
@@ -1534,6 +1672,7 @@
     "name": "Niger",
     "capital": "Niamey",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+227",
     "currency_code": "XOF",
     "population_approx": 25000000
@@ -1545,6 +1684,7 @@
     "name": "Rwanda",
     "capital": "Kigali",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+250",
     "currency_code": "RWF",
     "population_approx": 13000000
@@ -1556,6 +1696,7 @@
     "name": "São Tomé and Príncipe",
     "capital": "São Tomé",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+239",
     "currency_code": "STN",
     "population_approx": 220000
@@ -1567,6 +1708,7 @@
     "name": "Senegal",
     "capital": "Dakar",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+221",
     "currency_code": "XOF",
     "population_approx": 17000000
@@ -1578,6 +1720,7 @@
     "name": "Seychelles",
     "capital": "Victoria",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+248",
     "currency_code": "SCR",
     "population_approx": 100000
@@ -1589,6 +1732,7 @@
     "name": "Sierra Leone",
     "capital": "Freetown",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+232",
     "currency_code": "SLE",
     "population_approx": 8000000
@@ -1600,6 +1744,7 @@
     "name": "Somalia",
     "capital": "Mogadishu",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+252",
     "currency_code": "SOS",
     "population_approx": 16000000
@@ -1611,6 +1756,7 @@
     "name": "South Sudan",
     "capital": "Juba",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+211",
     "currency_code": "SSP",
     "population_approx": 11000000
@@ -1622,6 +1768,7 @@
     "name": "Sudan",
     "capital": "Khartoum",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+249",
     "currency_code": "SDG",
     "population_approx": 46000000
@@ -1633,6 +1780,7 @@
     "name": "Tanzania",
     "capital": "Dodoma",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+255",
     "currency_code": "TZS",
     "population_approx": 63000000
@@ -1644,6 +1792,7 @@
     "name": "Togo",
     "capital": "Lomé",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+228",
     "currency_code": "XOF",
     "population_approx": 8600000
@@ -1655,6 +1804,7 @@
     "name": "Tunisia",
     "capital": "Tunis",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+216",
     "currency_code": "TND",
     "population_approx": 12000000
@@ -1666,6 +1816,7 @@
     "name": "Uganda",
     "capital": "Kampala",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+256",
     "currency_code": "UGX",
     "population_approx": 47000000
@@ -1677,6 +1828,7 @@
     "name": "Zambia",
     "capital": "Lusaka",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+260",
     "currency_code": "ZMW",
     "population_approx": 19000000
@@ -1688,6 +1840,7 @@
     "name": "Zimbabwe",
     "capital": "Harare",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+263",
     "currency_code": "ZWG",
     "population_approx": 16000000
@@ -1699,6 +1852,7 @@
     "name": "Antigua and Barbuda",
     "capital": "Saint John's",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1268",
     "currency_code": "XCD",
     "population_approx": 100000
@@ -1710,6 +1864,7 @@
     "name": "Bahamas",
     "capital": "Nassau",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1242",
     "currency_code": "BSD",
     "population_approx": 400000
@@ -1721,6 +1876,7 @@
     "name": "Barbados",
     "capital": "Bridgetown",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1246",
     "currency_code": "BBD",
     "population_approx": 280000
@@ -1732,6 +1888,7 @@
     "name": "Belize",
     "capital": "Belmopan",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+501",
     "currency_code": "BZD",
     "population_approx": 400000
@@ -1743,6 +1900,7 @@
     "name": "Bolivia",
     "capital": "Sucre",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+591",
     "currency_code": "BOB",
     "population_approx": 12000000
@@ -1754,6 +1912,7 @@
     "name": "Chile",
     "capital": "Santiago",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+56",
     "currency_code": "CLP",
     "population_approx": 19000000
@@ -1765,6 +1924,7 @@
     "name": "Colombia",
     "capital": "Bogotá",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+57",
     "currency_code": "COP",
     "population_approx": 51000000
@@ -1776,6 +1936,7 @@
     "name": "Costa Rica",
     "capital": "San José",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+506",
     "currency_code": "CRC",
     "population_approx": 5200000
@@ -1787,6 +1948,7 @@
     "name": "Cuba",
     "capital": "Havana",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+53",
     "currency_code": "CUP",
     "population_approx": 11000000
@@ -1798,6 +1960,7 @@
     "name": "Dominica",
     "capital": "Roseau",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1767",
     "currency_code": "XCD",
     "population_approx": 72000
@@ -1809,6 +1972,7 @@
     "name": "Dominican Republic",
     "capital": "Santo Domingo",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1809",
     "currency_code": "DOP",
     "population_approx": 11000000
@@ -1820,6 +1984,7 @@
     "name": "Ecuador",
     "capital": "Quito",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+593",
     "currency_code": "USD",
     "population_approx": 18000000
@@ -1831,6 +1996,7 @@
     "name": "El Salvador",
     "capital": "San Salvador",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+503",
     "currency_code": "USD",
     "population_approx": 6500000
@@ -1842,6 +2008,7 @@
     "name": "Grenada",
     "capital": "Saint George's",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1473",
     "currency_code": "XCD",
     "population_approx": 113000
@@ -1853,6 +2020,7 @@
     "name": "Guatemala",
     "capital": "Guatemala City",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+502",
     "currency_code": "GTQ",
     "population_approx": 17000000
@@ -1864,6 +2032,7 @@
     "name": "Guyana",
     "capital": "Georgetown",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+592",
     "currency_code": "GYD",
     "population_approx": 800000
@@ -1875,6 +2044,7 @@
     "name": "Haiti",
     "capital": "Port-au-Prince",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+509",
     "currency_code": "HTG",
     "population_approx": 11000000
@@ -1886,6 +2056,7 @@
     "name": "Honduras",
     "capital": "Tegucigalpa",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+504",
     "currency_code": "HNL",
     "population_approx": 10000000
@@ -1897,6 +2068,7 @@
     "name": "Jamaica",
     "capital": "Kingston",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1876",
     "currency_code": "JMD",
     "population_approx": 3000000
@@ -1908,6 +2080,7 @@
     "name": "Nicaragua",
     "capital": "Managua",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+505",
     "currency_code": "NIO",
     "population_approx": 7000000
@@ -1919,6 +2092,7 @@
     "name": "Panama",
     "capital": "Panama City",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+507",
     "currency_code": "PAB",
     "population_approx": 4300000
@@ -1930,6 +2104,7 @@
     "name": "Paraguay",
     "capital": "Asunción",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+595",
     "currency_code": "PYG",
     "population_approx": 7400000
@@ -1941,6 +2116,7 @@
     "name": "Peru",
     "capital": "Lima",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+51",
     "currency_code": "PEN",
     "population_approx": 33000000
@@ -1952,6 +2128,7 @@
     "name": "Saint Kitts and Nevis",
     "capital": "Basseterre",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1869",
     "currency_code": "XCD",
     "population_approx": 53000
@@ -1963,6 +2140,7 @@
     "name": "Saint Lucia",
     "capital": "Castries",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1758",
     "currency_code": "XCD",
     "population_approx": 180000
@@ -1974,6 +2152,7 @@
     "name": "Saint Vincent and the Grenadines",
     "capital": "Kingstown",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1784",
     "currency_code": "XCD",
     "population_approx": 110000
@@ -1985,6 +2164,7 @@
     "name": "Suriname",
     "capital": "Paramaribo",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+597",
     "currency_code": "SRD",
     "population_approx": 600000
@@ -1996,6 +2176,7 @@
     "name": "Trinidad and Tobago",
     "capital": "Port of Spain",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1868",
     "currency_code": "TTD",
     "population_approx": 1400000
@@ -2007,6 +2188,7 @@
     "name": "Uruguay",
     "capital": "Montevideo",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+598",
     "currency_code": "UYU",
     "population_approx": 3500000
@@ -2018,6 +2200,7 @@
     "name": "Venezuela",
     "capital": "Caracas",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+58",
     "currency_code": "VES",
     "population_approx": 28000000
@@ -2029,6 +2212,7 @@
     "name": "Fiji",
     "capital": "Suva",
     "continent": "Oceania",
+    "subregion": "Melanesia",
     "dial_code": "+679",
     "currency_code": "FJD",
     "population_approx": 930000
@@ -2040,6 +2224,7 @@
     "name": "Kiribati",
     "capital": "South Tarawa",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+686",
     "currency_code": "AUD",
     "population_approx": 120000
@@ -2051,6 +2236,7 @@
     "name": "Marshall Islands",
     "capital": "Majuro",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+692",
     "currency_code": "USD",
     "population_approx": 42000
@@ -2062,6 +2248,7 @@
     "name": "Micronesia",
     "capital": "Palikir",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+691",
     "currency_code": "USD",
     "population_approx": 115000
@@ -2073,6 +2260,7 @@
     "name": "Nauru",
     "capital": "Yaren",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+674",
     "currency_code": "AUD",
     "population_approx": 10000
@@ -2084,6 +2272,7 @@
     "name": "New Zealand",
     "capital": "Wellington",
     "continent": "Oceania",
+    "subregion": "Australia and New Zealand",
     "dial_code": "+64",
     "currency_code": "NZD",
     "population_approx": 5000000
@@ -2095,6 +2284,7 @@
     "name": "Palau",
     "capital": "Ngerulmud",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+680",
     "currency_code": "USD",
     "population_approx": 18000
@@ -2106,6 +2296,7 @@
     "name": "Papua New Guinea",
     "capital": "Port Moresby",
     "continent": "Oceania",
+    "subregion": "Melanesia",
     "dial_code": "+675",
     "currency_code": "PGK",
     "population_approx": 10000000
@@ -2117,6 +2308,7 @@
     "name": "Samoa",
     "capital": "Apia",
     "continent": "Oceania",
+    "subregion": "Polynesia",
     "dial_code": "+685",
     "currency_code": "WST",
     "population_approx": 220000
@@ -2128,6 +2320,7 @@
     "name": "Solomon Islands",
     "capital": "Honiara",
     "continent": "Oceania",
+    "subregion": "Melanesia",
     "dial_code": "+677",
     "currency_code": "SBD",
     "population_approx": 720000
@@ -2139,6 +2332,7 @@
     "name": "Tonga",
     "capital": "Nukuʻalofa",
     "continent": "Oceania",
+    "subregion": "Polynesia",
     "dial_code": "+676",
     "currency_code": "TOP",
     "population_approx": 100000
@@ -2150,6 +2344,7 @@
     "name": "Tuvalu",
     "capital": "Funafuti",
     "continent": "Oceania",
+    "subregion": "Polynesia",
     "dial_code": "+688",
     "currency_code": "AUD",
     "population_approx": 11000
@@ -2161,6 +2356,7 @@
     "name": "Vanuatu",
     "capital": "Port Vila",
     "continent": "Oceania",
+    "subregion": "Melanesia",
     "dial_code": "+678",
     "currency_code": "VUV",
     "population_approx": 320000
@@ -2172,6 +2368,7 @@
     "name": "Hong Kong",
     "capital": "Hong Kong",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+852",
     "currency_code": "HKD",
     "population_approx": 7500000

@@ -719,7 +719,8 @@
         "iso3",
         "iso_numeric",
         "name",
-        "population_approx"
+        "population_approx",
+        "subregion"
       ],
       "has_source": false,
       "readme": "geo/countries/Readme.MD",
