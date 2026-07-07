@@ -2,6 +2,7 @@
   {
     "iso2": "US",
     "iso3": "USA",
+    "iso_numeric": 840,
     "name": "United States",
     "capital": "Washington D.C.",
     "continent": "Americas",
@@ -12,6 +13,7 @@
   {
     "iso2": "GB",
     "iso3": "GBR",
+    "iso_numeric": 826,
     "name": "United Kingdom",
     "capital": "London",
     "continent": "Europe",
@@ -22,6 +24,7 @@
   {
     "iso2": "DE",
     "iso3": "DEU",
+    "iso_numeric": 276,
     "name": "Germany",
     "capital": "Berlin",
     "continent": "Europe",
@@ -32,6 +35,7 @@
   {
     "iso2": "FR",
     "iso3": "FRA",
+    "iso_numeric": 250,
     "name": "France",
     "capital": "Paris",
     "continent": "Europe",
@@ -42,6 +46,7 @@
   {
     "iso2": "JP",
     "iso3": "JPN",
+    "iso_numeric": 392,
     "name": "Japan",
     "capital": "Tokyo",
     "continent": "Asia",
@@ -52,6 +57,7 @@
   {
     "iso2": "CN",
     "iso3": "CHN",
+    "iso_numeric": 156,
     "name": "China",
     "capital": "Beijing",
     "continent": "Asia",
@@ -62,6 +68,7 @@
   {
     "iso2": "IN",
     "iso3": "IND",
+    "iso_numeric": 356,
     "name": "India",
     "capital": "New Delhi",
     "continent": "Asia",
@@ -72,6 +79,7 @@
   {
     "iso2": "BR",
     "iso3": "BRA",
+    "iso_numeric": 76,
     "name": "Brazil",
     "capital": "Brasília",
     "continent": "Americas",
@@ -82,6 +90,7 @@
   {
     "iso2": "CA",
     "iso3": "CAN",
+    "iso_numeric": 124,
     "name": "Canada",
     "capital": "Ottawa",
     "continent": "Americas",
@@ -92,6 +101,7 @@
   {
     "iso2": "AU",
     "iso3": "AUS",
+    "iso_numeric": 36,
     "name": "Australia",
     "capital": "Canberra",
     "continent": "Oceania",
@@ -102,6 +112,7 @@
   {
     "iso2": "MX",
     "iso3": "MEX",
+    "iso_numeric": 484,
     "name": "Mexico",
     "capital": "Mexico City",
     "continent": "Americas",
@@ -112,6 +123,7 @@
   {
     "iso2": "ZA",
     "iso3": "ZAF",
+    "iso_numeric": 710,
     "name": "South Africa",
     "capital": "Pretoria",
     "continent": "Africa",
@@ -122,6 +134,7 @@
   {
     "iso2": "NG",
     "iso3": "NGA",
+    "iso_numeric": 566,
     "name": "Nigeria",
     "capital": "Abuja",
     "continent": "Africa",
@@ -132,6 +145,7 @@
   {
     "iso2": "EG",
     "iso3": "EGY",
+    "iso_numeric": 818,
     "name": "Egypt",
     "capital": "Cairo",
     "continent": "Africa",
@@ -142,6 +156,7 @@
   {
     "iso2": "AR",
     "iso3": "ARG",
+    "iso_numeric": 32,
     "name": "Argentina",
     "capital": "Buenos Aires",
     "continent": "Americas",
@@ -152,6 +167,7 @@
   {
     "iso2": "RU",
     "iso3": "RUS",
+    "iso_numeric": 643,
     "name": "Russia",
     "capital": "Moscow",
     "continent": "Europe",
@@ -162,6 +178,7 @@
   {
     "iso2": "KR",
     "iso3": "KOR",
+    "iso_numeric": 410,
     "name": "South Korea",
     "capital": "Seoul",
     "continent": "Asia",
@@ -172,6 +189,7 @@
   {
     "iso2": "SE",
     "iso3": "SWE",
+    "iso_numeric": 752,
     "name": "Sweden",
     "capital": "Stockholm",
     "continent": "Europe",
@@ -182,6 +200,7 @@
   {
     "iso2": "NL",
     "iso3": "NLD",
+    "iso_numeric": 528,
     "name": "Netherlands",
     "capital": "Amsterdam",
     "continent": "Europe",
@@ -192,6 +211,7 @@
   {
     "iso2": "CH",
     "iso3": "CHE",
+    "iso_numeric": 756,
     "name": "Switzerland",
     "capital": "Bern",
     "continent": "Europe",
@@ -202,6 +222,7 @@
   {
     "iso2": "SG",
     "iso3": "SGP",
+    "iso_numeric": 702,
     "name": "Singapore",
     "capital": "Singapore",
     "continent": "Asia",
@@ -212,6 +233,7 @@
   {
     "iso2": "PL",
     "iso3": "POL",
+    "iso_numeric": 616,
     "name": "Poland",
     "capital": "Warsaw",
     "continent": "Europe",
@@ -222,6 +244,7 @@
   {
     "iso2": "ID",
     "iso3": "IDN",
+    "iso_numeric": 360,
     "name": "Indonesia",
     "capital": "Jakarta",
     "continent": "Asia",
@@ -232,6 +255,7 @@
   {
     "iso2": "PK",
     "iso3": "PAK",
+    "iso_numeric": 586,
     "name": "Pakistan",
     "capital": "Islamabad",
     "continent": "Asia",
@@ -242,6 +266,7 @@
   {
     "iso2": "UA",
     "iso3": "UKR",
+    "iso_numeric": 804,
     "name": "Ukraine",
     "capital": "Kyiv",
     "continent": "Europe",
@@ -252,6 +277,7 @@
   {
     "iso2": "AL",
     "iso3": "ALB",
+    "iso_numeric": 8,
     "name": "Albania",
     "capital": "Tirana",
     "continent": "Europe",
@@ -262,6 +288,7 @@
   {
     "iso2": "AD",
     "iso3": "AND",
+    "iso_numeric": 20,
     "name": "Andorra",
     "capital": "Andorra la Vella",
     "continent": "Europe",
@@ -272,6 +299,7 @@
   {
     "iso2": "AM",
     "iso3": "ARM",
+    "iso_numeric": 51,
     "name": "Armenia",
     "capital": "Yerevan",
     "continent": "Europe",
@@ -282,6 +310,7 @@
   {
     "iso2": "AT",
     "iso3": "AUT",
+    "iso_numeric": 40,
     "name": "Austria",
     "capital": "Vienna",
     "continent": "Europe",
@@ -292,6 +321,7 @@
   {
     "iso2": "AZ",
     "iso3": "AZE",
+    "iso_numeric": 31,
     "name": "Azerbaijan",
     "capital": "Baku",
     "continent": "Asia",
@@ -302,6 +332,7 @@
   {
     "iso2": "BY",
     "iso3": "BLR",
+    "iso_numeric": 112,
     "name": "Belarus",
     "capital": "Minsk",
     "continent": "Europe",
@@ -312,6 +343,7 @@
   {
     "iso2": "BE",
     "iso3": "BEL",
+    "iso_numeric": 56,
     "name": "Belgium",
     "capital": "Brussels",
     "continent": "Europe",
@@ -322,6 +354,7 @@
   {
     "iso2": "BA",
     "iso3": "BIH",
+    "iso_numeric": 70,
     "name": "Bosnia and Herzegovina",
     "capital": "Sarajevo",
     "continent": "Europe",
@@ -332,6 +365,7 @@
   {
     "iso2": "BG",
     "iso3": "BGR",
+    "iso_numeric": 100,
     "name": "Bulgaria",
     "capital": "Sofia",
     "continent": "Europe",
@@ -342,6 +376,7 @@
   {
     "iso2": "HR",
     "iso3": "HRV",
+    "iso_numeric": 191,
     "name": "Croatia",
     "capital": "Zagreb",
     "continent": "Europe",
@@ -352,6 +387,7 @@
   {
     "iso2": "CY",
     "iso3": "CYP",
+    "iso_numeric": 196,
     "name": "Cyprus",
     "capital": "Nicosia",
     "continent": "Europe",
@@ -362,6 +398,7 @@
   {
     "iso2": "CZ",
     "iso3": "CZE",
+    "iso_numeric": 203,
     "name": "Czech Republic",
     "capital": "Prague",
     "continent": "Europe",
@@ -372,6 +409,7 @@
   {
     "iso2": "DK",
     "iso3": "DNK",
+    "iso_numeric": 208,
     "name": "Denmark",
     "capital": "Copenhagen",
     "continent": "Europe",
@@ -382,6 +420,7 @@
   {
     "iso2": "EE",
     "iso3": "EST",
+    "iso_numeric": 233,
     "name": "Estonia",
     "capital": "Tallinn",
     "continent": "Europe",
@@ -392,6 +431,7 @@
   {
     "iso2": "FI",
     "iso3": "FIN",
+    "iso_numeric": 246,
     "name": "Finland",
     "capital": "Helsinki",
     "continent": "Europe",
@@ -402,6 +442,7 @@
   {
     "iso2": "GE",
     "iso3": "GEO",
+    "iso_numeric": 268,
     "name": "Georgia",
     "capital": "Tbilisi",
     "continent": "Asia",
@@ -412,6 +453,7 @@
   {
     "iso2": "GR",
     "iso3": "GRC",
+    "iso_numeric": 300,
     "name": "Greece",
     "capital": "Athens",
     "continent": "Europe",
@@ -422,6 +464,7 @@
   {
     "iso2": "HU",
     "iso3": "HUN",
+    "iso_numeric": 348,
     "name": "Hungary",
     "capital": "Budapest",
     "continent": "Europe",
@@ -432,6 +475,7 @@
   {
     "iso2": "IS",
     "iso3": "ISL",
+    "iso_numeric": 352,
     "name": "Iceland",
     "capital": "Reykjavik",
     "continent": "Europe",
@@ -442,6 +486,7 @@
   {
     "iso2": "IE",
     "iso3": "IRL",
+    "iso_numeric": 372,
     "name": "Ireland",
     "capital": "Dublin",
     "continent": "Europe",
@@ -452,6 +497,7 @@
   {
     "iso2": "IT",
     "iso3": "ITA",
+    "iso_numeric": 380,
     "name": "Italy",
     "capital": "Rome",
     "continent": "Europe",
@@ -462,6 +508,7 @@
   {
     "iso2": "KZ",
     "iso3": "KAZ",
+    "iso_numeric": 398,
     "name": "Kazakhstan",
     "capital": "Astana",
     "continent": "Asia",
@@ -482,6 +529,7 @@
   {
     "iso2": "LV",
     "iso3": "LVA",
+    "iso_numeric": 428,
     "name": "Latvia",
     "capital": "Riga",
     "continent": "Europe",
@@ -492,6 +540,7 @@
   {
     "iso2": "LI",
     "iso3": "LIE",
+    "iso_numeric": 438,
     "name": "Liechtenstein",
     "capital": "Vaduz",
     "continent": "Europe",
@@ -502,6 +551,7 @@
   {
     "iso2": "LT",
     "iso3": "LTU",
+    "iso_numeric": 440,
     "name": "Lithuania",
     "capital": "Vilnius",
     "continent": "Europe",
@@ -512,6 +562,7 @@
   {
     "iso2": "LU",
     "iso3": "LUX",
+    "iso_numeric": 442,
     "name": "Luxembourg",
     "capital": "Luxembourg City",
     "continent": "Europe",
@@ -522,6 +573,7 @@
   {
     "iso2": "MT",
     "iso3": "MLT",
+    "iso_numeric": 470,
     "name": "Malta",
     "capital": "Valletta",
     "continent": "Europe",
@@ -532,6 +584,7 @@
   {
     "iso2": "MD",
     "iso3": "MDA",
+    "iso_numeric": 498,
     "name": "Moldova",
     "capital": "Chișinău",
     "continent": "Europe",
@@ -542,6 +595,7 @@
   {
     "iso2": "MC",
     "iso3": "MCO",
+    "iso_numeric": 492,
     "name": "Monaco",
     "capital": "Monaco",
     "continent": "Europe",
@@ -552,6 +606,7 @@
   {
     "iso2": "ME",
     "iso3": "MNE",
+    "iso_numeric": 499,
     "name": "Montenegro",
     "capital": "Podgorica",
     "continent": "Europe",
@@ -562,6 +617,7 @@
   {
     "iso2": "MK",
     "iso3": "MKD",
+    "iso_numeric": 807,
     "name": "North Macedonia",
     "capital": "Skopje",
     "continent": "Europe",
@@ -572,6 +628,7 @@
   {
     "iso2": "NO",
     "iso3": "NOR",
+    "iso_numeric": 578,
     "name": "Norway",
     "capital": "Oslo",
     "continent": "Europe",
@@ -582,6 +639,7 @@
   {
     "iso2": "PT",
     "iso3": "PRT",
+    "iso_numeric": 620,
     "name": "Portugal",
     "capital": "Lisbon",
     "continent": "Europe",
@@ -592,6 +650,7 @@
   {
     "iso2": "RO",
     "iso3": "ROU",
+    "iso_numeric": 642,
     "name": "Romania",
     "capital": "Bucharest",
     "continent": "Europe",
@@ -602,6 +661,7 @@
   {
     "iso2": "SM",
     "iso3": "SMR",
+    "iso_numeric": 674,
     "name": "San Marino",
     "capital": "San Marino",
     "continent": "Europe",
@@ -612,6 +672,7 @@
   {
     "iso2": "RS",
     "iso3": "SRB",
+    "iso_numeric": 688,
     "name": "Serbia",
     "capital": "Belgrade",
     "continent": "Europe",
@@ -622,6 +683,7 @@
   {
     "iso2": "SK",
     "iso3": "SVK",
+    "iso_numeric": 703,
     "name": "Slovakia",
     "capital": "Bratislava",
     "continent": "Europe",
@@ -632,6 +694,7 @@
   {
     "iso2": "SI",
     "iso3": "SVN",
+    "iso_numeric": 705,
     "name": "Slovenia",
     "capital": "Ljubljana",
     "continent": "Europe",
@@ -642,6 +705,7 @@
   {
     "iso2": "ES",
     "iso3": "ESP",
+    "iso_numeric": 724,
     "name": "Spain",
     "capital": "Madrid",
     "continent": "Europe",
@@ -652,6 +716,7 @@
   {
     "iso2": "TR",
     "iso3": "TUR",
+    "iso_numeric": 792,
     "name": "Turkey",
     "capital": "Ankara",
     "continent": "Asia",
@@ -662,6 +727,7 @@
   {
     "iso2": "VA",
     "iso3": "VAT",
+    "iso_numeric": 336,
     "name": "Vatican City",
     "capital": "Vatican City",
     "continent": "Europe",
@@ -672,6 +738,7 @@
   {
     "iso2": "AF",
     "iso3": "AFG",
+    "iso_numeric": 4,
     "name": "Afghanistan",
     "capital": "Kabul",
     "continent": "Asia",
@@ -682,6 +749,7 @@
   {
     "iso2": "BH",
     "iso3": "BHR",
+    "iso_numeric": 48,
     "name": "Bahrain",
     "capital": "Manama",
     "continent": "Asia",
@@ -692,6 +760,7 @@
   {
     "iso2": "BD",
     "iso3": "BGD",
+    "iso_numeric": 50,
     "name": "Bangladesh",
     "capital": "Dhaka",
     "continent": "Asia",
@@ -702,6 +771,7 @@
   {
     "iso2": "BT",
     "iso3": "BTN",
+    "iso_numeric": 64,
     "name": "Bhutan",
     "capital": "Thimphu",
     "continent": "Asia",
@@ -712,6 +782,7 @@
   {
     "iso2": "BN",
     "iso3": "BRN",
+    "iso_numeric": 96,
     "name": "Brunei",
     "capital": "Bandar Seri Begawan",
     "continent": "Asia",
@@ -722,6 +793,7 @@
   {
     "iso2": "KH",
     "iso3": "KHM",
+    "iso_numeric": 116,
     "name": "Cambodia",
     "capital": "Phnom Penh",
     "continent": "Asia",
@@ -732,6 +804,7 @@
   {
     "iso2": "TL",
     "iso3": "TLS",
+    "iso_numeric": 626,
     "name": "East Timor",
     "capital": "Dili",
     "continent": "Asia",
@@ -742,6 +815,7 @@
   {
     "iso2": "IR",
     "iso3": "IRN",
+    "iso_numeric": 364,
     "name": "Iran",
     "capital": "Tehran",
     "continent": "Asia",
@@ -752,6 +826,7 @@
   {
     "iso2": "IQ",
     "iso3": "IRQ",
+    "iso_numeric": 368,
     "name": "Iraq",
     "capital": "Baghdad",
     "continent": "Asia",
@@ -762,6 +837,7 @@
   {
     "iso2": "IL",
     "iso3": "ISR",
+    "iso_numeric": 376,
     "name": "Israel",
     "capital": "Jerusalem",
     "continent": "Asia",
@@ -772,6 +848,7 @@
   {
     "iso2": "JO",
     "iso3": "JOR",
+    "iso_numeric": 400,
     "name": "Jordan",
     "capital": "Amman",
     "continent": "Asia",
@@ -782,6 +859,7 @@
   {
     "iso2": "KW",
     "iso3": "KWT",
+    "iso_numeric": 414,
     "name": "Kuwait",
     "capital": "Kuwait City",
     "continent": "Asia",
@@ -792,6 +870,7 @@
   {
     "iso2": "KG",
     "iso3": "KGZ",
+    "iso_numeric": 417,
     "name": "Kyrgyzstan",
     "capital": "Bishkek",
     "continent": "Asia",
@@ -802,6 +881,7 @@
   {
     "iso2": "LA",
     "iso3": "LAO",
+    "iso_numeric": 418,
     "name": "Laos",
     "capital": "Vientiane",
     "continent": "Asia",
@@ -812,6 +892,7 @@
   {
     "iso2": "LB",
     "iso3": "LBN",
+    "iso_numeric": 422,
     "name": "Lebanon",
     "capital": "Beirut",
     "continent": "Asia",
@@ -822,6 +903,7 @@
   {
     "iso2": "MY",
     "iso3": "MYS",
+    "iso_numeric": 458,
     "name": "Malaysia",
     "capital": "Kuala Lumpur",
     "continent": "Asia",
@@ -832,6 +914,7 @@
   {
     "iso2": "MV",
     "iso3": "MDV",
+    "iso_numeric": 462,
     "name": "Maldives",
     "capital": "Malé",
     "continent": "Asia",
@@ -842,6 +925,7 @@
   {
     "iso2": "MN",
     "iso3": "MNG",
+    "iso_numeric": 496,
     "name": "Mongolia",
     "capital": "Ulaanbaatar",
     "continent": "Asia",
@@ -852,6 +936,7 @@
   {
     "iso2": "MM",
     "iso3": "MMR",
+    "iso_numeric": 104,
     "name": "Myanmar",
     "capital": "Naypyidaw",
     "continent": "Asia",
@@ -862,6 +947,7 @@
   {
     "iso2": "NP",
     "iso3": "NPL",
+    "iso_numeric": 524,
     "name": "Nepal",
     "capital": "Kathmandu",
     "continent": "Asia",
@@ -872,6 +958,7 @@
   {
     "iso2": "KP",
     "iso3": "PRK",
+    "iso_numeric": 408,
     "name": "North Korea",
     "capital": "Pyongyang",
     "continent": "Asia",
@@ -882,6 +969,7 @@
   {
     "iso2": "OM",
     "iso3": "OMN",
+    "iso_numeric": 512,
     "name": "Oman",
     "capital": "Muscat",
     "continent": "Asia",
@@ -892,6 +980,7 @@
   {
     "iso2": "PS",
     "iso3": "PSE",
+    "iso_numeric": 275,
     "name": "Palestine",
     "capital": "Ramallah",
     "continent": "Asia",
@@ -902,6 +991,7 @@
   {
     "iso2": "PH",
     "iso3": "PHL",
+    "iso_numeric": 608,
     "name": "Philippines",
     "capital": "Manila",
     "continent": "Asia",
@@ -912,6 +1002,7 @@
   {
     "iso2": "QA",
     "iso3": "QAT",
+    "iso_numeric": 634,
     "name": "Qatar",
     "capital": "Doha",
     "continent": "Asia",
@@ -922,6 +1013,7 @@
   {
     "iso2": "SA",
     "iso3": "SAU",
+    "iso_numeric": 682,
     "name": "Saudi Arabia",
     "capital": "Riyadh",
     "continent": "Asia",
@@ -932,6 +1024,7 @@
   {
     "iso2": "LK",
     "iso3": "LKA",
+    "iso_numeric": 144,
     "name": "Sri Lanka",
     "capital": "Sri Jayawardenepura Kotte",
     "continent": "Asia",
@@ -942,6 +1035,7 @@
   {
     "iso2": "SY",
     "iso3": "SYR",
+    "iso_numeric": 760,
     "name": "Syria",
     "capital": "Damascus",
     "continent": "Asia",
@@ -952,6 +1046,7 @@
   {
     "iso2": "TW",
     "iso3": "TWN",
+    "iso_numeric": 158,
     "name": "Taiwan",
     "capital": "Taipei",
     "continent": "Asia",
@@ -962,6 +1057,7 @@
   {
     "iso2": "TJ",
     "iso3": "TJK",
+    "iso_numeric": 762,
     "name": "Tajikistan",
     "capital": "Dushanbe",
     "continent": "Asia",
@@ -972,6 +1068,7 @@
   {
     "iso2": "TH",
     "iso3": "THA",
+    "iso_numeric": 764,
     "name": "Thailand",
     "capital": "Bangkok",
     "continent": "Asia",
@@ -982,6 +1079,7 @@
   {
     "iso2": "TM",
     "iso3": "TKM",
+    "iso_numeric": 795,
     "name": "Turkmenistan",
     "capital": "Ashgabat",
     "continent": "Asia",
@@ -992,6 +1090,7 @@
   {
     "iso2": "AE",
     "iso3": "ARE",
+    "iso_numeric": 784,
     "name": "United Arab Emirates",
     "capital": "Abu Dhabi",
     "continent": "Asia",
@@ -1002,6 +1101,7 @@
   {
     "iso2": "UZ",
     "iso3": "UZB",
+    "iso_numeric": 860,
     "name": "Uzbekistan",
     "capital": "Tashkent",
     "continent": "Asia",
@@ -1012,6 +1112,7 @@
   {
     "iso2": "VN",
     "iso3": "VNM",
+    "iso_numeric": 704,
     "name": "Vietnam",
     "capital": "Hanoi",
     "continent": "Asia",
@@ -1022,6 +1123,7 @@
   {
     "iso2": "YE",
     "iso3": "YEM",
+    "iso_numeric": 887,
     "name": "Yemen",
     "capital": "Sanaa",
     "continent": "Asia",
@@ -1032,6 +1134,7 @@
   {
     "iso2": "DZ",
     "iso3": "DZA",
+    "iso_numeric": 12,
     "name": "Algeria",
     "capital": "Algiers",
     "continent": "Africa",
@@ -1042,6 +1145,7 @@
   {
     "iso2": "AO",
     "iso3": "AGO",
+    "iso_numeric": 24,
     "name": "Angola",
     "capital": "Luanda",
     "continent": "Africa",
@@ -1052,6 +1156,7 @@
   {
     "iso2": "BJ",
     "iso3": "BEN",
+    "iso_numeric": 204,
     "name": "Benin",
     "capital": "Porto-Novo",
     "continent": "Africa",
@@ -1062,6 +1167,7 @@
   {
     "iso2": "BW",
     "iso3": "BWA",
+    "iso_numeric": 72,
     "name": "Botswana",
     "capital": "Gaborone",
     "continent": "Africa",
@@ -1072,6 +1178,7 @@
   {
     "iso2": "BF",
     "iso3": "BFA",
+    "iso_numeric": 854,
     "name": "Burkina Faso",
     "capital": "Ouagadougou",
     "continent": "Africa",
@@ -1082,6 +1189,7 @@
   {
     "iso2": "BI",
     "iso3": "BDI",
+    "iso_numeric": 108,
     "name": "Burundi",
     "capital": "Gitega",
     "continent": "Africa",
@@ -1092,6 +1200,7 @@
   {
     "iso2": "CM",
     "iso3": "CMR",
+    "iso_numeric": 120,
     "name": "Cameroon",
     "capital": "Yaoundé",
     "continent": "Africa",
@@ -1102,6 +1211,7 @@
   {
     "iso2": "CV",
     "iso3": "CPV",
+    "iso_numeric": 132,
     "name": "Cape Verde",
     "capital": "Praia",
     "continent": "Africa",
@@ -1112,6 +1222,7 @@
   {
     "iso2": "CF",
     "iso3": "CAF",
+    "iso_numeric": 140,
     "name": "Central African Republic",
     "capital": "Bangui",
     "continent": "Africa",
@@ -1122,6 +1233,7 @@
   {
     "iso2": "TD",
     "iso3": "TCD",
+    "iso_numeric": 148,
     "name": "Chad",
     "capital": "N'Djamena",
     "continent": "Africa",
@@ -1132,6 +1244,7 @@
   {
     "iso2": "KM",
     "iso3": "COM",
+    "iso_numeric": 174,
     "name": "Comoros",
     "capital": "Moroni",
     "continent": "Africa",
@@ -1142,6 +1255,7 @@
   {
     "iso2": "CD",
     "iso3": "COD",
+    "iso_numeric": 180,
     "name": "Congo (Democratic Republic)",
     "capital": "Kinshasa",
     "continent": "Africa",
@@ -1152,6 +1266,7 @@
   {
     "iso2": "CG",
     "iso3": "COG",
+    "iso_numeric": 178,
     "name": "Congo (Republic)",
     "capital": "Brazzaville",
     "continent": "Africa",
@@ -1162,6 +1277,7 @@
   {
     "iso2": "DJ",
     "iso3": "DJI",
+    "iso_numeric": 262,
     "name": "Djibouti",
     "capital": "Djibouti",
     "continent": "Africa",
@@ -1172,6 +1288,7 @@
   {
     "iso2": "GQ",
     "iso3": "GNQ",
+    "iso_numeric": 226,
     "name": "Equatorial Guinea",
     "capital": "Malabo",
     "continent": "Africa",
@@ -1182,6 +1299,7 @@
   {
     "iso2": "ER",
     "iso3": "ERI",
+    "iso_numeric": 232,
     "name": "Eritrea",
     "capital": "Asmara",
     "continent": "Africa",
@@ -1192,6 +1310,7 @@
   {
     "iso2": "SZ",
     "iso3": "SWZ",
+    "iso_numeric": 748,
     "name": "Eswatini",
     "capital": "Mbabane",
     "continent": "Africa",
@@ -1202,6 +1321,7 @@
   {
     "iso2": "ET",
     "iso3": "ETH",
+    "iso_numeric": 231,
     "name": "Ethiopia",
     "capital": "Addis Ababa",
     "continent": "Africa",
@@ -1212,6 +1332,7 @@
   {
     "iso2": "GA",
     "iso3": "GAB",
+    "iso_numeric": 266,
     "name": "Gabon",
     "capital": "Libreville",
     "continent": "Africa",
@@ -1222,6 +1343,7 @@
   {
     "iso2": "GM",
     "iso3": "GMB",
+    "iso_numeric": 270,
     "name": "Gambia",
     "capital": "Banjul",
     "continent": "Africa",
@@ -1232,6 +1354,7 @@
   {
     "iso2": "GH",
     "iso3": "GHA",
+    "iso_numeric": 288,
     "name": "Ghana",
     "capital": "Accra",
     "continent": "Africa",
@@ -1242,6 +1365,7 @@
   {
     "iso2": "GN",
     "iso3": "GIN",
+    "iso_numeric": 324,
     "name": "Guinea",
     "capital": "Conakry",
     "continent": "Africa",
@@ -1252,6 +1376,7 @@
   {
     "iso2": "GW",
     "iso3": "GNB",
+    "iso_numeric": 624,
     "name": "Guinea-Bissau",
     "capital": "Bissau",
     "continent": "Africa",
@@ -1262,6 +1387,7 @@
   {
     "iso2": "CI",
     "iso3": "CIV",
+    "iso_numeric": 384,
     "name": "Ivory Coast",
     "capital": "Yamoussoukro",
     "continent": "Africa",
@@ -1272,6 +1398,7 @@
   {
     "iso2": "KE",
     "iso3": "KEN",
+    "iso_numeric": 404,
     "name": "Kenya",
     "capital": "Nairobi",
     "continent": "Africa",
@@ -1282,6 +1409,7 @@
   {
     "iso2": "LS",
     "iso3": "LSO",
+    "iso_numeric": 426,
     "name": "Lesotho",
     "capital": "Maseru",
     "continent": "Africa",
@@ -1292,6 +1420,7 @@
   {
     "iso2": "LR",
     "iso3": "LBR",
+    "iso_numeric": 430,
     "name": "Liberia",
     "capital": "Monrovia",
     "continent": "Africa",
@@ -1302,6 +1431,7 @@
   {
     "iso2": "LY",
     "iso3": "LBY",
+    "iso_numeric": 434,
     "name": "Libya",
     "capital": "Tripoli",
     "continent": "Africa",
@@ -1312,6 +1442,7 @@
   {
     "iso2": "MG",
     "iso3": "MDG",
+    "iso_numeric": 450,
     "name": "Madagascar",
     "capital": "Antananarivo",
     "continent": "Africa",
@@ -1322,6 +1453,7 @@
   {
     "iso2": "MW",
     "iso3": "MWI",
+    "iso_numeric": 454,
     "name": "Malawi",
     "capital": "Lilongwe",
     "continent": "Africa",
@@ -1332,6 +1464,7 @@
   {
     "iso2": "ML",
     "iso3": "MLI",
+    "iso_numeric": 466,
     "name": "Mali",
     "capital": "Bamako",
     "continent": "Africa",
@@ -1342,6 +1475,7 @@
   {
     "iso2": "MR",
     "iso3": "MRT",
+    "iso_numeric": 478,
     "name": "Mauritania",
     "capital": "Nouakchott",
     "continent": "Africa",
@@ -1352,6 +1486,7 @@
   {
     "iso2": "MU",
     "iso3": "MUS",
+    "iso_numeric": 480,
     "name": "Mauritius",
     "capital": "Port Louis",
     "continent": "Africa",
@@ -1362,6 +1497,7 @@
   {
     "iso2": "MA",
     "iso3": "MAR",
+    "iso_numeric": 504,
     "name": "Morocco",
     "capital": "Rabat",
     "continent": "Africa",
@@ -1372,6 +1508,7 @@
   {
     "iso2": "MZ",
     "iso3": "MOZ",
+    "iso_numeric": 508,
     "name": "Mozambique",
     "capital": "Maputo",
     "continent": "Africa",
@@ -1382,6 +1519,7 @@
   {
     "iso2": "NA",
     "iso3": "NAM",
+    "iso_numeric": 516,
     "name": "Namibia",
     "capital": "Windhoek",
     "continent": "Africa",
@@ -1392,6 +1530,7 @@
   {
     "iso2": "NE",
     "iso3": "NER",
+    "iso_numeric": 562,
     "name": "Niger",
     "capital": "Niamey",
     "continent": "Africa",
@@ -1402,6 +1541,7 @@
   {
     "iso2": "RW",
     "iso3": "RWA",
+    "iso_numeric": 646,
     "name": "Rwanda",
     "capital": "Kigali",
     "continent": "Africa",
@@ -1412,6 +1552,7 @@
   {
     "iso2": "ST",
     "iso3": "STP",
+    "iso_numeric": 678,
     "name": "São Tomé and Príncipe",
     "capital": "São Tomé",
     "continent": "Africa",
@@ -1422,6 +1563,7 @@
   {
     "iso2": "SN",
     "iso3": "SEN",
+    "iso_numeric": 686,
     "name": "Senegal",
     "capital": "Dakar",
     "continent": "Africa",
@@ -1432,6 +1574,7 @@
   {
     "iso2": "SC",
     "iso3": "SYC",
+    "iso_numeric": 690,
     "name": "Seychelles",
     "capital": "Victoria",
     "continent": "Africa",
@@ -1442,6 +1585,7 @@
   {
     "iso2": "SL",
     "iso3": "SLE",
+    "iso_numeric": 694,
     "name": "Sierra Leone",
     "capital": "Freetown",
     "continent": "Africa",
@@ -1452,6 +1596,7 @@
   {
     "iso2": "SO",
     "iso3": "SOM",
+    "iso_numeric": 706,
     "name": "Somalia",
     "capital": "Mogadishu",
     "continent": "Africa",
@@ -1462,6 +1607,7 @@
   {
     "iso2": "SS",
     "iso3": "SSD",
+    "iso_numeric": 728,
     "name": "South Sudan",
     "capital": "Juba",
     "continent": "Africa",
@@ -1472,6 +1618,7 @@
   {
     "iso2": "SD",
     "iso3": "SDN",
+    "iso_numeric": 729,
     "name": "Sudan",
     "capital": "Khartoum",
     "continent": "Africa",
@@ -1482,6 +1629,7 @@
   {
     "iso2": "TZ",
     "iso3": "TZA",
+    "iso_numeric": 834,
     "name": "Tanzania",
     "capital": "Dodoma",
     "continent": "Africa",
@@ -1492,6 +1640,7 @@
   {
     "iso2": "TG",
     "iso3": "TGO",
+    "iso_numeric": 768,
     "name": "Togo",
     "capital": "Lomé",
     "continent": "Africa",
@@ -1502,6 +1651,7 @@
   {
     "iso2": "TN",
     "iso3": "TUN",
+    "iso_numeric": 788,
     "name": "Tunisia",
     "capital": "Tunis",
     "continent": "Africa",
@@ -1512,6 +1662,7 @@
   {
     "iso2": "UG",
     "iso3": "UGA",
+    "iso_numeric": 800,
     "name": "Uganda",
     "capital": "Kampala",
     "continent": "Africa",
@@ -1522,6 +1673,7 @@
   {
     "iso2": "ZM",
     "iso3": "ZMB",
+    "iso_numeric": 894,
     "name": "Zambia",
     "capital": "Lusaka",
     "continent": "Africa",
@@ -1532,6 +1684,7 @@
   {
     "iso2": "ZW",
     "iso3": "ZWE",
+    "iso_numeric": 716,
     "name": "Zimbabwe",
     "capital": "Harare",
     "continent": "Africa",
@@ -1542,6 +1695,7 @@
   {
     "iso2": "AG",
     "iso3": "ATG",
+    "iso_numeric": 28,
     "name": "Antigua and Barbuda",
     "capital": "Saint John's",
     "continent": "Americas",
@@ -1552,6 +1706,7 @@
   {
     "iso2": "BS",
     "iso3": "BHS",
+    "iso_numeric": 44,
     "name": "Bahamas",
     "capital": "Nassau",
     "continent": "Americas",
@@ -1562,6 +1717,7 @@
   {
     "iso2": "BB",
     "iso3": "BRB",
+    "iso_numeric": 52,
     "name": "Barbados",
     "capital": "Bridgetown",
     "continent": "Americas",
@@ -1572,6 +1728,7 @@
   {
     "iso2": "BZ",
     "iso3": "BLZ",
+    "iso_numeric": 84,
     "name": "Belize",
     "capital": "Belmopan",
     "continent": "Americas",
@@ -1582,6 +1739,7 @@
   {
     "iso2": "BO",
     "iso3": "BOL",
+    "iso_numeric": 68,
     "name": "Bolivia",
     "capital": "Sucre",
     "continent": "Americas",
@@ -1592,6 +1750,7 @@
   {
     "iso2": "CL",
     "iso3": "CHL",
+    "iso_numeric": 152,
     "name": "Chile",
     "capital": "Santiago",
     "continent": "Americas",
@@ -1602,6 +1761,7 @@
   {
     "iso2": "CO",
     "iso3": "COL",
+    "iso_numeric": 170,
     "name": "Colombia",
     "capital": "Bogotá",
     "continent": "Americas",
@@ -1612,6 +1772,7 @@
   {
     "iso2": "CR",
     "iso3": "CRI",
+    "iso_numeric": 188,
     "name": "Costa Rica",
     "capital": "San José",
     "continent": "Americas",
@@ -1622,6 +1783,7 @@
   {
     "iso2": "CU",
     "iso3": "CUB",
+    "iso_numeric": 192,
     "name": "Cuba",
     "capital": "Havana",
     "continent": "Americas",
@@ -1632,6 +1794,7 @@
   {
     "iso2": "DM",
     "iso3": "DMA",
+    "iso_numeric": 212,
     "name": "Dominica",
     "capital": "Roseau",
     "continent": "Americas",
@@ -1642,6 +1805,7 @@
   {
     "iso2": "DO",
     "iso3": "DOM",
+    "iso_numeric": 214,
     "name": "Dominican Republic",
     "capital": "Santo Domingo",
     "continent": "Americas",
@@ -1652,6 +1816,7 @@
   {
     "iso2": "EC",
     "iso3": "ECU",
+    "iso_numeric": 218,
     "name": "Ecuador",
     "capital": "Quito",
     "continent": "Americas",
@@ -1662,6 +1827,7 @@
   {
     "iso2": "SV",
     "iso3": "SLV",
+    "iso_numeric": 222,
     "name": "El Salvador",
     "capital": "San Salvador",
     "continent": "Americas",
@@ -1672,6 +1838,7 @@
   {
     "iso2": "GD",
     "iso3": "GRD",
+    "iso_numeric": 308,
     "name": "Grenada",
     "capital": "Saint George's",
     "continent": "Americas",
@@ -1682,6 +1849,7 @@
   {
     "iso2": "GT",
     "iso3": "GTM",
+    "iso_numeric": 320,
     "name": "Guatemala",
     "capital": "Guatemala City",
     "continent": "Americas",
@@ -1692,6 +1860,7 @@
   {
     "iso2": "GY",
     "iso3": "GUY",
+    "iso_numeric": 328,
     "name": "Guyana",
     "capital": "Georgetown",
     "continent": "Americas",
@@ -1702,6 +1871,7 @@
   {
     "iso2": "HT",
     "iso3": "HTI",
+    "iso_numeric": 332,
     "name": "Haiti",
     "capital": "Port-au-Prince",
     "continent": "Americas",
@@ -1712,6 +1882,7 @@
   {
     "iso2": "HN",
     "iso3": "HND",
+    "iso_numeric": 340,
     "name": "Honduras",
     "capital": "Tegucigalpa",
     "continent": "Americas",
@@ -1722,6 +1893,7 @@
   {
     "iso2": "JM",
     "iso3": "JAM",
+    "iso_numeric": 388,
     "name": "Jamaica",
     "capital": "Kingston",
     "continent": "Americas",
@@ -1732,6 +1904,7 @@
   {
     "iso2": "NI",
     "iso3": "NIC",
+    "iso_numeric": 558,
     "name": "Nicaragua",
     "capital": "Managua",
     "continent": "Americas",
@@ -1742,6 +1915,7 @@
   {
     "iso2": "PA",
     "iso3": "PAN",
+    "iso_numeric": 591,
     "name": "Panama",
     "capital": "Panama City",
     "continent": "Americas",
@@ -1752,6 +1926,7 @@
   {
     "iso2": "PY",
     "iso3": "PRY",
+    "iso_numeric": 600,
     "name": "Paraguay",
     "capital": "Asunción",
     "continent": "Americas",
@@ -1762,6 +1937,7 @@
   {
     "iso2": "PE",
     "iso3": "PER",
+    "iso_numeric": 604,
     "name": "Peru",
     "capital": "Lima",
     "continent": "Americas",
@@ -1772,6 +1948,7 @@
   {
     "iso2": "KN",
     "iso3": "KNA",
+    "iso_numeric": 659,
     "name": "Saint Kitts and Nevis",
     "capital": "Basseterre",
     "continent": "Americas",
@@ -1782,6 +1959,7 @@
   {
     "iso2": "LC",
     "iso3": "LCA",
+    "iso_numeric": 662,
     "name": "Saint Lucia",
     "capital": "Castries",
     "continent": "Americas",
@@ -1792,6 +1970,7 @@
   {
     "iso2": "VC",
     "iso3": "VCT",
+    "iso_numeric": 670,
     "name": "Saint Vincent and the Grenadines",
     "capital": "Kingstown",
     "continent": "Americas",
@@ -1802,6 +1981,7 @@
   {
     "iso2": "SR",
     "iso3": "SUR",
+    "iso_numeric": 740,
     "name": "Suriname",
     "capital": "Paramaribo",
     "continent": "Americas",
@@ -1812,6 +1992,7 @@
   {
     "iso2": "TT",
     "iso3": "TTO",
+    "iso_numeric": 780,
     "name": "Trinidad and Tobago",
     "capital": "Port of Spain",
     "continent": "Americas",
@@ -1822,6 +2003,7 @@
   {
     "iso2": "UY",
     "iso3": "URY",
+    "iso_numeric": 858,
     "name": "Uruguay",
     "capital": "Montevideo",
     "continent": "Americas",
@@ -1832,6 +2014,7 @@
   {
     "iso2": "VE",
     "iso3": "VEN",
+    "iso_numeric": 862,
     "name": "Venezuela",
     "capital": "Caracas",
     "continent": "Americas",
@@ -1842,6 +2025,7 @@
   {
     "iso2": "FJ",
     "iso3": "FJI",
+    "iso_numeric": 242,
     "name": "Fiji",
     "capital": "Suva",
     "continent": "Oceania",
@@ -1852,6 +2036,7 @@
   {
     "iso2": "KI",
     "iso3": "KIR",
+    "iso_numeric": 296,
     "name": "Kiribati",
     "capital": "South Tarawa",
     "continent": "Oceania",
@@ -1862,6 +2047,7 @@
   {
     "iso2": "MH",
     "iso3": "MHL",
+    "iso_numeric": 584,
     "name": "Marshall Islands",
     "capital": "Majuro",
     "continent": "Oceania",
@@ -1872,6 +2058,7 @@
   {
     "iso2": "FM",
     "iso3": "FSM",
+    "iso_numeric": 583,
     "name": "Micronesia",
     "capital": "Palikir",
     "continent": "Oceania",
@@ -1882,6 +2069,7 @@
   {
     "iso2": "NR",
     "iso3": "NRU",
+    "iso_numeric": 520,
     "name": "Nauru",
     "capital": "Yaren",
     "continent": "Oceania",
@@ -1892,6 +2080,7 @@
   {
     "iso2": "NZ",
     "iso3": "NZL",
+    "iso_numeric": 554,
     "name": "New Zealand",
     "capital": "Wellington",
     "continent": "Oceania",
@@ -1902,6 +2091,7 @@
   {
     "iso2": "PW",
     "iso3": "PLW",
+    "iso_numeric": 585,
     "name": "Palau",
     "capital": "Ngerulmud",
     "continent": "Oceania",
@@ -1912,6 +2102,7 @@
   {
     "iso2": "PG",
     "iso3": "PNG",
+    "iso_numeric": 598,
     "name": "Papua New Guinea",
     "capital": "Port Moresby",
     "continent": "Oceania",
@@ -1922,6 +2113,7 @@
   {
     "iso2": "WS",
     "iso3": "WSM",
+    "iso_numeric": 882,
     "name": "Samoa",
     "capital": "Apia",
     "continent": "Oceania",
@@ -1932,6 +2124,7 @@
   {
     "iso2": "SB",
     "iso3": "SLB",
+    "iso_numeric": 90,
     "name": "Solomon Islands",
     "capital": "Honiara",
     "continent": "Oceania",
@@ -1942,6 +2135,7 @@
   {
     "iso2": "TO",
     "iso3": "TON",
+    "iso_numeric": 776,
     "name": "Tonga",
     "capital": "Nukuʻalofa",
     "continent": "Oceania",
@@ -1952,6 +2146,7 @@
   {
     "iso2": "TV",
     "iso3": "TUV",
+    "iso_numeric": 798,
     "name": "Tuvalu",
     "capital": "Funafuti",
     "continent": "Oceania",
@@ -1962,6 +2157,7 @@
   {
     "iso2": "VU",
     "iso3": "VUT",
+    "iso_numeric": 548,
     "name": "Vanuatu",
     "capital": "Port Vila",
     "continent": "Oceania",
@@ -1972,6 +2168,7 @@
   {
     "iso2": "HK",
     "iso3": "HKG",
+    "iso_numeric": 344,
     "name": "Hong Kong",
     "capital": "Hong Kong",
     "continent": "Asia",

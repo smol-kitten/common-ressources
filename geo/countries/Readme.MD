@@ -10,6 +10,7 @@ ISO 3166-1 country reference covering 25 major countries. Each entry includes IS
 {
   "iso2": "DE",
   "iso3": "DEU",
+  "iso_numeric": 276,
   "name": "Germany",
   "capital": "Berlin",
   "continent": "Europe",
@@ -25,6 +26,7 @@ ISO 3166-1 country reference covering 25 major countries. Each entry includes IS
 |---|---|---|
 | `iso2` | string | ISO 3166-1 alpha-2 two-letter country code |
 | `iso3` | string | ISO 3166-1 alpha-3 three-letter country code |
+| `iso_numeric` | number | ISO 3166-1 numeric code (UN M49). Omitted for user-assigned codes with no official numeric (e.g. Kosovo, `XK`) |
 | `name` | string | Common English country name |
 | `capital` | string | Capital city |
 | `continent` | string | Geographic continent |

@@ -178,6 +178,13 @@ def check_countries_currencies():
                 err("geo/countries/countries.json", f"bad {field} {v!r}")
             if n > 1:
                 err("geo/countries/countries.json", f"duplicate {field} {v!r}")
+    # iso_numeric (ISO 3166-1 numeric): 1..999, unique where present
+    num_seen = Counter(c["iso_numeric"] for c in countries if "iso_numeric" in c)
+    for v, n in num_seen.items():
+        if not isinstance(v, int) or not (1 <= v <= 999):
+            err("geo/countries/countries.json", f"bad iso_numeric {v!r}")
+        if n > 1:
+            err("geo/countries/countries.json", f"duplicate iso_numeric {v!r}")
     STATS["cross_checks"] += 1
 
 

@@ -2,7 +2,7 @@
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
   "dataset_count": 178,
-  "entry_total": 5796,
+  "entry_total": 5797,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -717,6 +717,7 @@
         "dial_code",
         "iso2",
         "iso3",
+        "iso_numeric",
         "name",
         "population_approx"
       ],
@@ -1427,7 +1428,7 @@
       "path": "meta/corrections.json",
       "category": "meta",
       "kind": "wrapped-list",
-      "count": 6,
+      "count": 7,
       "fields": [
         "corrections",
         "description",
