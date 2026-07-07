@@ -12,6 +12,15 @@
         "ai/models.json"
       ],
       "corrections_count": 12
+    },
+    {
+      "date": "2026-07-07",
+      "method": "ISO 4217 canonicalisation (SIX Financial maintenance agency) + redenomination records",
+      "files_checked": [
+        "geo/countries/countries.json",
+        "geo/currencies/currencies.json"
+      ],
+      "corrections_count": 5
     }
   ],
   "corrections": [
@@ -144,6 +153,56 @@
       "new_value": "EUR",
       "reason": "Bulgaria adopted the Euro on January 1, 2026, becoming the 21st Eurozone member",
       "source": "https://en.wikipedia.org/wiki/Adoption_of_the_euro_in_Bulgaria"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Belarus",
+      "field": "currency_code",
+      "old_value": "BYR",
+      "new_value": "BYN",
+      "reason": "Belarus redenominated the ruble 10000:1 on 2016-07-01; ISO 4217 code is now BYN, old BYR withdrawn",
+      "source": "https://en.wikipedia.org/wiki/Belarusian_ruble"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Venezuela",
+      "field": "currency_code",
+      "old_value": "VEF",
+      "new_value": "VES",
+      "reason": "Venezuela introduced the bolívar soberano (100000:1) on 2018-08-20; ISO 4217 code VES supersedes VEF",
+      "source": "https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Sierra Leone",
+      "field": "currency_code",
+      "old_value": "SLL",
+      "new_value": "SLE",
+      "reason": "Sierra Leone redenominated the leone 1000:1 in 2022; current ISO 4217 code is SLE",
+      "source": "https://en.wikipedia.org/wiki/Sierra_Leonean_leone"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Zimbabwe",
+      "field": "currency_code",
+      "old_value": "ZWL",
+      "new_value": "ZWG",
+      "reason": "Zimbabwe replaced ZWL with Zimbabwe Gold (ZiG) in April 2024; ISO 4217 assigned code ZWG",
+      "source": "https://en.wikipedia.org/wiki/Zimbabwe_Gold"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/currencies/currencies.json",
+      "entry": "Indonesian Rupiah (IDR)",
+      "field": "decimals",
+      "old_value": 0,
+      "new_value": 2,
+      "reason": "ISO 4217 assigns IDR two minor units (exponent 2); previous value 0 did not match the standard the dataset follows",
+      "source": "https://www.six-group.com/en/products-services/financial-information/data-standards.html"
     }
   ],
   "no_action_items": [

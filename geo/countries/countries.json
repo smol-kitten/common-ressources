@@ -306,7 +306,7 @@
     "capital": "Minsk",
     "continent": "Europe",
     "dial_code": "+375",
-    "currency_code": "BYR",
+    "currency_code": "BYN",
     "population_approx": 9400000
   },
   {
@@ -1446,7 +1446,7 @@
     "capital": "Freetown",
     "continent": "Africa",
     "dial_code": "+232",
-    "currency_code": "SLL",
+    "currency_code": "SLE",
     "population_approx": 8000000
   },
   {
@@ -1536,7 +1536,7 @@
     "capital": "Harare",
     "continent": "Africa",
     "dial_code": "+263",
-    "currency_code": "ZWL",
+    "currency_code": "ZWG",
     "population_approx": 16000000
   },
   {
@@ -1836,7 +1836,7 @@
     "capital": "Caracas",
     "continent": "Americas",
     "dial_code": "+58",
-    "currency_code": "VEF",
+    "currency_code": "VES",
     "population_approx": 28000000
   },
   {
