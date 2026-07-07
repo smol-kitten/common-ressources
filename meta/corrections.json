@@ -37,6 +37,14 @@
         "geo/currencies/currencies.json"
       ],
       "corrections_count": 0
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (ISO 15924 official code list + Unicode Blocks 17.0 + CLDR Script_Metadata)",
+      "files_checked": [
+        "iso/15924/scripts.json"
+      ],
+      "corrections_count": 2
     }
   ],
   "corrections": [
@@ -299,6 +307,26 @@
       "new_value": 64000,
       "reason": "Claude Haiku 4.5 supports up to 64K output tokens",
       "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "iso/15924/scripts.json",
+      "entry": "Hani",
+      "field": "code",
+      "old_value": "Han",
+      "new_value": "Hani",
+      "reason": "ISO 15924 code for Han is \"Hani\" (No. 500); \"Han\" is not an assigned code",
+      "source": "ISO 15924 (unicode.org/iso15924/iso15924.txt)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "iso/15924/scripts.json",
+      "entry": "Mroo",
+      "field": "numeric",
+      "old_value": 199,
+      "new_value": 264,
+      "reason": "ISO 15924 numeric code for Mroo (Mro) is 264, not 199",
+      "source": "ISO 15924 (unicode.org/iso15924/iso15924.txt)"
     }
   ],
   "no_action_items": [

@@ -51,7 +51,7 @@ CARDINALITY = {
     "bio/amino-acids/amino-acids.json":          (20,  "20 standard proteinogenic amino acids"),
     "geo/countries/countries.json":              (195, "193 UN members + 2 observers"),
     "geo/currencies/currencies.json":            (159, "circulating ISO 4217 currencies (excl. XAU/XAG precious-metal & fund codes)"),
-    "iso/15924/scripts.json":                    (161, "~161 ISO 15924 script codes"),
+    "iso/15924/scripts.json":                    (226, "all ISO 15924 codes incl. aliases, special & reserved"),
     "i18n/languages/languages.json":             (184, "184 ISO 639-1 assigned codes"),
     "security/owasp-top10/owasp-top10.json":     (10,  "OWASP Top 10 categories"),
     "iso/216/paper-sizes.json":                  (3,   "A/B/C series"),
