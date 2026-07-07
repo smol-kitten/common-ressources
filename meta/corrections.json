@@ -77,6 +77,14 @@
         "science/elements/elements.json"
       ],
       "corrections_count": 6
+    },
+    {
+      "date": "2026-07-07",
+      "method": "verification (IAU 88 canonical abbreviations + area-sum invariant)",
+      "files_checked": [
+        "astronomy/constellations/constellations.json"
+      ],
+      "corrections_count": 0
     }
   ],
   "corrections": [

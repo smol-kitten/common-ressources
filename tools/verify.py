@@ -413,6 +413,25 @@ def check_si_units():
         STATS["cross_checks"] += 1
 
 
+def check_constellations():
+    """The 88 IAU constellations: unique abbreviations, areas summing to the full
+    celestial sphere (41,253 sq deg) within rounding tolerance."""
+    rel = "astronomy/constellations/constellations.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    if len(d) != 88:
+        err(rel, f"expected 88 IAU constellations, found {len(d)}")
+    abbrs = [e.get("iau_abbreviation") for e in d]
+    if len(abbrs) != len(set(abbrs)):
+        err(rel, "duplicate IAU abbreviations")
+    areas = [e["area_sq_deg"] for e in d if isinstance(e.get("area_sq_deg"), (int, float))]
+    total = sum(areas)
+    if len(areas) == 88 and abs(total - 41253) > 20:
+        err(rel, f"constellation areas sum to {total}, expected ~41253 (full sphere)")
+    STATS["cross_checks"] += 1
+
+
 def check_math_constants():
     """Math constants: unique slugs; high-precision value string agrees with approx."""
     rel = "math/constants/constants.json"
@@ -646,7 +665,8 @@ def main():
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
                check_timezones, check_iso639_2, check_elements, check_codon_table, check_si_prefixes,
-               check_si_units, check_binary_prefixes, check_math_constants, check_unicode_blocks,
+               check_si_units, check_binary_prefixes, check_math_constants,
+               check_constellations, check_unicode_blocks,
                check_special_use_ips, check_hash_algorithms, check_planets, check_http_status,
                check_geo_crossref, check_locales, check_finance, check_formats):
         try:
