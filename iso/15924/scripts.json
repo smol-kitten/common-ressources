@@ -11,6 +11,15 @@
     "status": "living"
   },
   {
+    "code": "Ahom",
+    "name": "Ahom",
+    "numeric": 338,
+    "direction": "ltr",
+    "unicode_range": "U+11700–U+1174F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Arab",
     "name": "Arabic",
     "numeric": 160,
@@ -247,6 +256,15 @@
     "status": "living"
   },
   {
+    "code": "Dogr",
+    "name": "Dogra",
+    "numeric": 328,
+    "direction": "ltr",
+    "unicode_range": "U+11800–U+1184F",
+    "languages": [],
+    "status": "living"
+  },
+  {
     "code": "Dsrt",
     "name": "Deseret (Mormon)",
     "numeric": 250,
@@ -299,11 +317,38 @@
     "status": "historic"
   },
   {
+    "code": "Gong",
+    "name": "Gunjala Gondi",
+    "numeric": 312,
+    "direction": "ltr",
+    "unicode_range": "U+11D60–U+11DAF",
+    "languages": [],
+    "status": "living"
+  },
+  {
+    "code": "Gonm",
+    "name": "Masaram Gondi",
+    "numeric": 313,
+    "direction": "ltr",
+    "unicode_range": "U+11D00–U+11D5F",
+    "languages": [],
+    "status": "living"
+  },
+  {
     "code": "Goth",
     "name": "Gothic",
     "numeric": 206,
     "direction": "ltr",
     "unicode_range": "U+10330–U+1034F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Gran",
+    "name": "Grantha",
+    "numeric": 343,
+    "direction": "ltr",
+    "unicode_range": "U+11300–U+1137F",
     "languages": [],
     "status": "historic"
   },
@@ -428,6 +473,15 @@
     "unicode_range": "U+14400–U+1467F",
     "languages": [],
     "status": "historic"
+  },
+  {
+    "code": "Hmnp",
+    "name": "Nyiakeng Puachue Hmong",
+    "numeric": 451,
+    "direction": "ltr",
+    "unicode_range": "U+1E100–U+1E14F",
+    "languages": [],
+    "status": "living"
   },
   {
     "code": "Hung",
@@ -684,6 +738,15 @@
     "status": "living"
   },
   {
+    "code": "Modi",
+    "name": "Modi",
+    "numeric": 324,
+    "direction": "ltr",
+    "unicode_range": "U+11600–U+1165F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Mong",
     "name": "Mongolian",
     "numeric": 145,
@@ -692,6 +755,15 @@
     "languages": [
       "mn"
     ],
+    "status": "living"
+  },
+  {
+    "code": "Mroo",
+    "name": "Mro",
+    "numeric": 199,
+    "direction": "ltr",
+    "unicode_range": "U+16A40–U+16A6F",
+    "languages": [],
     "status": "living"
   },
   {
@@ -714,6 +786,15 @@
     "languages": [
       "my"
     ],
+    "status": "living"
+  },
+  {
+    "code": "Nand",
+    "name": "Nandinagari",
+    "numeric": 311,
+    "direction": "ltr",
+    "unicode_range": "U+119A0–U+119FF",
+    "languages": [],
     "status": "living"
   },
   {
@@ -946,6 +1027,15 @@
     "status": "living"
   },
   {
+    "code": "Sind",
+    "name": "Khudawadi",
+    "numeric": 318,
+    "direction": "ltr",
+    "unicode_range": "U+112B0–U+112FF",
+    "languages": [],
+    "status": "living"
+  },
+  {
     "code": "Sinh",
     "name": "Sinhala",
     "numeric": 348,
@@ -996,6 +1086,15 @@
     "languages": [
       "tbw"
     ],
+    "status": "living"
+  },
+  {
+    "code": "Takr",
+    "name": "Takri",
+    "numeric": 321,
+    "direction": "ltr",
+    "unicode_range": "U+11680–U+116CF",
+    "languages": [],
     "status": "living"
   },
   {
@@ -1109,6 +1208,15 @@
     "status": "living"
   },
   {
+    "code": "Tirh",
+    "name": "Tirhuta",
+    "numeric": 326,
+    "direction": "ltr",
+    "unicode_range": "U+11480–U+114DF",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Ugar",
     "name": "Ugaritic",
     "numeric": 40,
@@ -1126,6 +1234,24 @@
     "languages": [
       "vai"
     ],
+    "status": "living"
+  },
+  {
+    "code": "Wara",
+    "name": "Warang Citi",
+    "numeric": 262,
+    "direction": "ltr",
+    "unicode_range": "U+118A0–U+118FF",
+    "languages": [],
+    "status": "living"
+  },
+  {
+    "code": "Wcho",
+    "name": "Wancho",
+    "numeric": 283,
+    "direction": "ltr",
+    "unicode_range": "U+1E2C0–U+1E2FF",
+    "languages": [],
     "status": "living"
   },
   {
@@ -1147,6 +1273,15 @@
     "status": "historic"
   },
   {
+    "code": "Yezi",
+    "name": "Yezidi",
+    "numeric": 192,
+    "direction": "rtl",
+    "unicode_range": "U+10E80–U+10EBF",
+    "languages": [],
+    "status": "living"
+  },
+  {
     "code": "Yiii",
     "name": "Yi",
     "numeric": 460,
@@ -1158,6 +1293,15 @@
     "status": "living"
   },
   {
+    "code": "Zinh",
+    "name": "Inherited (code for inherited script)",
+    "numeric": 994,
+    "direction": null,
+    "unicode_range": null,
+    "languages": [],
+    "status": "special"
+  },
+  {
     "code": "Zmth",
     "name": "Mathematical notation",
     "numeric": 995,
@@ -1167,11 +1311,29 @@
     "status": "special"
   },
   {
+    "code": "Zsye",
+    "name": "Symbols (Emoji variant)",
+    "numeric": 993,
+    "direction": null,
+    "unicode_range": null,
+    "languages": [],
+    "status": "special"
+  },
+  {
     "code": "Zsym",
     "name": "Symbols",
     "numeric": 996,
     "direction": "ltr",
     "unicode_range": "mixed",
+    "languages": [],
+    "status": "special"
+  },
+  {
+    "code": "Zxxx",
+    "name": "Unwritten documents",
+    "numeric": 997,
+    "direction": null,
+    "unicode_range": null,
     "languages": [],
     "status": "special"
   },
