@@ -22,6 +22,7 @@ build:
 
 # Non-mutating checks suitable for CI. Fails if any generated file is stale.
 check: validate verify
+	$(PY) tools/check_corrections.py
 	$(PY) tools/build_currencies.py --check
 	$(PY) tools/build_catalog.py --check
 	$(PY) tools/build_sources.py --check

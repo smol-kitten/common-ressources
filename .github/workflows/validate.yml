@@ -52,6 +52,11 @@ jobs:
           python3 tools/verify.py
         shell: bash
 
+      - name: Fact-check log integrity (corrections applied)
+        run: |
+          python3 tools/check_corrections.py
+        shell: bash
+
       - name: Assert generated files are up to date
         run: |
           python3 tools/build_currencies.py --check
