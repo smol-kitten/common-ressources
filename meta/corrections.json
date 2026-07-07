@@ -85,6 +85,14 @@
         "astronomy/constellations/constellations.json"
       ],
       "corrections_count": 0
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web/tzdb verification (IANA tz database 2025b via zoneinfo)",
+      "files_checked": [
+        "geo/timezones/timezones.json"
+      ],
+      "corrections_count": 25
     }
   ],
   "corrections": [
@@ -477,6 +485,256 @@
       "new_value": 196.967,
       "reason": "CIAAW standard atomic weight of Au is 196.966570(4); abridged 196.967",
       "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Africa/Cairo",
+      "field": "dst_offset",
+      "old_value": "+02:00",
+      "new_value": "+03:00",
+      "reason": "Egypt reinstated DST in 2023",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Africa/Cairo",
+      "field": "dst",
+      "old_value": false,
+      "new_value": true,
+      "reason": "Egypt reinstated DST in 2023",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "America/Mexico_City",
+      "field": "dst_offset",
+      "old_value": "-05:00",
+      "new_value": "-06:00",
+      "reason": "Mexico abolished DST in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "America/Mexico_City",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Mexico abolished DST in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "America/Asuncion",
+      "field": "utc_offset",
+      "old_value": "-04:00",
+      "new_value": "-03:00",
+      "reason": "Paraguay adopted permanent UTC-03:00 (2024)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "America/Asuncion",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Paraguay adopted permanent UTC-03:00 (2024)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Ulaanbaatar",
+      "field": "dst_offset",
+      "old_value": "+09:00",
+      "new_value": "+08:00",
+      "reason": "Mongolia abolished DST in 2017",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Ulaanbaatar",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Mongolia abolished DST in 2017",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Almaty",
+      "field": "utc_offset",
+      "old_value": "+06:00",
+      "new_value": "+05:00",
+      "reason": "Kazakhstan unified to UTC+05:00 in 2024",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Almaty",
+      "field": "dst_offset",
+      "old_value": "+06:00",
+      "new_value": "+05:00",
+      "reason": "Kazakhstan unified to UTC+05:00 in 2024",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Tehran",
+      "field": "dst_offset",
+      "old_value": "+04:30",
+      "new_value": "+03:30",
+      "reason": "Iran abolished DST in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Tehran",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Iran abolished DST in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Damascus",
+      "field": "utc_offset",
+      "old_value": "+02:00",
+      "new_value": "+03:00",
+      "reason": "Syria adopted permanent UTC+03:00 in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Damascus",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Syria adopted permanent UTC+03:00 in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Amman",
+      "field": "utc_offset",
+      "old_value": "+02:00",
+      "new_value": "+03:00",
+      "reason": "Jordan adopted permanent UTC+03:00 in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Amman",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Jordan adopted permanent UTC+03:00 in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Baku",
+      "field": "dst_offset",
+      "old_value": "+05:00",
+      "new_value": "+04:00",
+      "reason": "Azerbaijan abolished DST in 2016",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Baku",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Azerbaijan abolished DST in 2016",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Africa/Khartoum",
+      "field": "utc_offset",
+      "old_value": "+03:00",
+      "new_value": "+02:00",
+      "reason": "Sudan changed to UTC+02:00 (currently, no DST)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Africa/Khartoum",
+      "field": "dst_offset",
+      "old_value": "+03:00",
+      "new_value": "+02:00",
+      "reason": "Sudan changed to UTC+02:00 (currently, no DST)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Pacific/Fiji",
+      "field": "dst_offset",
+      "old_value": "+13:00",
+      "new_value": "+12:00",
+      "reason": "Fiji no longer observes DST (since 2021)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Pacific/Fiji",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Fiji no longer observes DST (since 2021)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Pacific/Apia",
+      "field": "dst_offset",
+      "old_value": "+14:00",
+      "new_value": "+13:00",
+      "reason": "Samoa no longer observes DST (since 2021)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Pacific/Apia",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Samoa no longer observes DST (since 2021)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Yangon",
+      "field": "iana",
+      "old_value": "Asia/Rangoon",
+      "new_value": "Asia/Yangon",
+      "reason": "IANA renamed Asia/Rangoon to Asia/Yangon",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
     }
   ],
   "no_action_items": [
