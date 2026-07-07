@@ -278,6 +278,28 @@ def check_si_prefixes():
     STATS["cross_checks"] += 1
 
 
+def check_si_units():
+    """SI base units (7) and named derived units (22): fixed universes, unique symbols."""
+    base_rel = "science/si-base-units/si-base-units.json"
+    if os.path.exists(os.path.join(ROOT, base_rel)):
+        base = load(base_rel)
+        if len(base) != 7:
+            err(base_rel, f"expected 7 SI base units, found {len(base)}")
+        want = {"second", "metre", "kilogram", "ampere", "kelvin", "mole", "candela"}
+        if {b["name"] for b in base} != want:
+            err(base_rel, "SI base unit names do not match the canonical seven")
+        STATS["cross_checks"] += 1
+    der_rel = "science/si-derived-units/si-derived-units.json"
+    if os.path.exists(os.path.join(ROOT, der_rel)):
+        der = load(der_rel)
+        if len(der) != 22:
+            err(der_rel, f"expected 22 named derived units, found {len(der)}")
+        syms = [d["symbol"] for d in der]
+        if len(syms) != len(set(syms)):
+            err(der_rel, "duplicate derived-unit symbols")
+        STATS["cross_checks"] += 1
+
+
 def check_planets():
     p = load("space/planets/planets.json")
     orders = [x["order"] for x in p if "order" in x]
@@ -473,7 +495,7 @@ def main():
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
                check_timezones, check_elements, check_codon_table, check_si_prefixes,
-               check_planets, check_http_status,
+               check_si_units, check_planets, check_http_status,
                check_geo_crossref, check_locales, check_finance, check_formats):
         try:
             fn()

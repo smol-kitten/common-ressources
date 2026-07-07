@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_sources.py",
   "_about": "Authoritative source map. 'kind' = standard | official | curated. Consumers should verify safety/compliance-critical values against the cited primary source.",
-  "documented": 58,
-  "total_datasets": 174,
+  "documented": 60,
+  "total_datasets": 176,
   "sources": {
     "accessibility/aria-roles/aria-roles.json": {
       "kind": "standard",
@@ -397,6 +397,24 @@
         {
           "title": "NIST — speed of light & material velocity factors",
           "url": "https://physics.nist.gov/cuu/Constants/"
+        }
+      ]
+    },
+    "science/si-base-units/si-base-units.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "BIPM — SI base units",
+          "url": "https://www.bipm.org/en/measurement-units/si-base-units"
+        }
+      ]
+    },
+    "science/si-derived-units/si-derived-units.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "BIPM — SI Brochure, Table 4 (derived units with special names)",
+          "url": "https://www.bipm.org/en/measurement-units"
         }
       ]
     },

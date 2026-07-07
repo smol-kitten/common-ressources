@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
-  "dataset_count": 174,
-  "entry_total": 5415,
+  "dataset_count": 176,
+  "entry_total": 5444,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -35,7 +35,7 @@
     "networking": 3,
     "programming": 4,
     "rice": 44,
-    "science": 5,
+    "science": 7,
     "security": 3,
     "setups": 15,
     "social": 1,
@@ -2760,6 +2760,39 @@
       "has_source": false,
       "readme": "README.md",
       "description": "A growing collection of structured JSON resources for recurring use in projects."
+    },
+    {
+      "path": "science/si-base-units/si-base-units.json",
+      "category": "science",
+      "kind": "list",
+      "count": 7,
+      "fields": [
+        "adopted",
+        "constant_value",
+        "defining_constant",
+        "name",
+        "quantity",
+        "symbol"
+      ],
+      "has_source": false,
+      "readme": "science/si-base-units/Readme.MD",
+      "description": "The seven SI base units — second, metre, kilogram, ampere, kelvin, mole, and candela — from which all other SI units are derived. Since the 2019 SI redefinition each base unit is defined by fixing the exact numerical value of a fundamental physical constant. Each entry gives the "
+    },
+    {
+      "path": "science/si-derived-units/si-derived-units.json",
+      "category": "science",
+      "kind": "list",
+      "count": 22,
+      "fields": [
+        "expression_base",
+        "expression_si",
+        "name",
+        "quantity",
+        "symbol"
+      ],
+      "has_source": false,
+      "readme": "science/si-derived-units/Readme.MD",
+      "description": "The 22 SI derived units that have special names and symbols — from hertz and newton to katal — each expressed both in terms of other SI units and in SI base units. These cover frequency, force, energy, power, electricity, magnetism, light, radioactivity, and catalytic activity. U"
     },
     {
       "path": "science/si-prefixes/si-prefixes.json",
