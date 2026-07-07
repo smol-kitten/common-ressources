@@ -21,8 +21,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = (".git", "node_modules", "tests", ".github", ".gitea", ".claude", "tools/reports")
 # files that are config/export rather than reference datasets
 SKIP_FILES = {"package.json", "package-lock.json", "playwright.config.js"}
-# generated artefacts that must not index themselves
-SKIP_RELS = {"meta/catalog.json"}
+# generated artefacts (not hand-authored reference datasets)
+SKIP_RELS = {"meta/catalog.json", "meta/sources.json"}
 
 
 def is_data(rel):
