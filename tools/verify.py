@@ -221,6 +221,37 @@ def check_languages_scripts():
     STATS["cross_checks"] += 1
 
 
+def check_iso639_2():
+    """ISO 639-2: unique bibliographic codes; mutual consistency with ISO 639-1.
+    Every 639-2 alpha2 resolves to a 639-1 language, and every 639-1 language's
+    iso639_2 resolves to a code (bibliographic or terminologic) here."""
+    rel = "iso/639-2/languages.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    iso = load(rel)
+    bib = [e["alpha3_b"] for e in iso]
+    if len(bib) != len(set(bib)):
+        err(rel, "duplicate alpha3_b codes")
+    codes = set()
+    for e in iso:
+        if len(e["alpha3_b"]) == 3:
+            codes.add(e["alpha3_b"])
+        if "alpha3_t" in e:
+            codes.add(e["alpha3_t"])
+    langs = load("i18n/languages/languages.json")
+    lang_alpha2 = {l.get("iso639_1") for l in langs}
+    for e in iso:
+        a2 = e.get("alpha2")
+        if a2 and a2 not in lang_alpha2:
+            warn(rel, f"{e['alpha3_b']}: alpha2 {a2!r} not in i18n/languages")
+    for l in langs:
+        c = l.get("iso639_2")
+        if c and c not in codes:
+            err("i18n/languages/languages.json",
+                f"{l.get('name')}: iso639_2 {c!r} not in iso/639-2")
+    STATS["cross_checks"] += 1
+
+
 def check_timezones():
     tz = load("geo/timezones/timezones.json")
     off = re.compile(r"^[+-]\d{2}:\d{2}$")
@@ -614,7 +645,7 @@ def main():
 
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
-               check_timezones, check_elements, check_codon_table, check_si_prefixes,
+               check_timezones, check_iso639_2, check_elements, check_codon_table, check_si_prefixes,
                check_si_units, check_binary_prefixes, check_math_constants, check_unicode_blocks,
                check_special_use_ips, check_hash_algorithms, check_planets, check_http_status,
                check_geo_crossref, check_locales, check_finance, check_formats):

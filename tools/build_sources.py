@@ -92,6 +92,8 @@ SOURCES = {
         S("https://www.rfc-editor.org/rfc/rfc5646", "BCP 47 / RFC 5646 language tags")]},
     "iso/15924/scripts.json": {"kind": "standard", "sources": [
         S("https://www.unicode.org/iso15924/codelists.html", "ISO 15924 code list (Unicode RA)")]},
+    "iso/639-2/languages.json": {"kind": "standard", "sources": [
+        S("https://www.loc.gov/standards/iso639-2/php/code_list.php", "Library of Congress — ISO 639-2 registration authority")]},
     "iso/216/paper-sizes.json": {"kind": "standard", "sources": [
         S("https://www.iso.org/standard/36631.html", "ISO 216 — trimmed paper sizes")]},
     "iso/724/metric-threads.json": {"kind": "standard", "sources": [

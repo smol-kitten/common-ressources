@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_sources.py",
   "_about": "Authoritative source map. 'kind' = standard | official | curated. Consumers should verify safety/compliance-critical values against the cited primary source.",
-  "documented": 64,
-  "total_datasets": 180,
+  "documented": 65,
+  "total_datasets": 181,
   "sources": {
     "accessibility/aria-roles/aria-roles.json": {
       "kind": "standard",
@@ -210,6 +210,15 @@
         {
           "title": "ISO/IEC 27001:2022 Annex A",
           "url": "https://www.iso.org/standard/27001"
+        }
+      ]
+    },
+    "iso/639-2/languages.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "Library of Congress — ISO 639-2 registration authority",
+          "url": "https://www.loc.gov/standards/iso639-2/php/code_list.php"
         }
       ]
     },

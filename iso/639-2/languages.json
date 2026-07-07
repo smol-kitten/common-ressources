@@ -1,0 +1,2640 @@
+[
+  {
+    "alpha3_b": "aar",
+    "alpha2": "aa",
+    "name": "Afar",
+    "name_french": "afar"
+  },
+  {
+    "alpha3_b": "abk",
+    "alpha2": "ab",
+    "name": "Abkhazian",
+    "name_french": "abkhaze"
+  },
+  {
+    "alpha3_b": "ace",
+    "name": "Achinese",
+    "name_french": "aceh"
+  },
+  {
+    "alpha3_b": "ach",
+    "name": "Acoli",
+    "name_french": "acoli"
+  },
+  {
+    "alpha3_b": "ada",
+    "name": "Adangme",
+    "name_french": "adangme"
+  },
+  {
+    "alpha3_b": "ady",
+    "name": "Adyghe; Adygei",
+    "name_french": "adyghé"
+  },
+  {
+    "alpha3_b": "afa",
+    "name": "Afro-Asiatic languages",
+    "name_french": "afro-asiatiques, langues"
+  },
+  {
+    "alpha3_b": "afh",
+    "name": "Afrihili",
+    "name_french": "afrihili"
+  },
+  {
+    "alpha3_b": "afr",
+    "alpha2": "af",
+    "name": "Afrikaans",
+    "name_french": "afrikaans"
+  },
+  {
+    "alpha3_b": "ain",
+    "name": "Ainu",
+    "name_french": "aïnou"
+  },
+  {
+    "alpha3_b": "aka",
+    "alpha2": "ak",
+    "name": "Akan",
+    "name_french": "akan"
+  },
+  {
+    "alpha3_b": "akk",
+    "name": "Akkadian",
+    "name_french": "akkadien"
+  },
+  {
+    "alpha3_b": "alb",
+    "alpha3_t": "sqi",
+    "alpha2": "sq",
+    "name": "Albanian",
+    "name_french": "albanais"
+  },
+  {
+    "alpha3_b": "ale",
+    "name": "Aleut",
+    "name_french": "aléoute"
+  },
+  {
+    "alpha3_b": "alg",
+    "name": "Algonquian languages",
+    "name_french": "algonquines, langues"
+  },
+  {
+    "alpha3_b": "alt",
+    "name": "Southern Altai",
+    "name_french": "altai du Sud"
+  },
+  {
+    "alpha3_b": "amh",
+    "alpha2": "am",
+    "name": "Amharic",
+    "name_french": "amharique"
+  },
+  {
+    "alpha3_b": "ang",
+    "name": "English, Old (ca.450-1100)",
+    "name_french": "anglo-saxon (ca.450-1100)"
+  },
+  {
+    "alpha3_b": "anp",
+    "name": "Angika",
+    "name_french": "angika"
+  },
+  {
+    "alpha3_b": "apa",
+    "name": "Apache languages",
+    "name_french": "apaches, langues"
+  },
+  {
+    "alpha3_b": "ara",
+    "alpha2": "ar",
+    "name": "Arabic",
+    "name_french": "arabe"
+  },
+  {
+    "alpha3_b": "arc",
+    "name": "Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)",
+    "name_french": "araméen d'empire (700-300 BCE)"
+  },
+  {
+    "alpha3_b": "arg",
+    "alpha2": "an",
+    "name": "Aragonese",
+    "name_french": "aragonais"
+  },
+  {
+    "alpha3_b": "arm",
+    "alpha3_t": "hye",
+    "alpha2": "hy",
+    "name": "Armenian",
+    "name_french": "arménien"
+  },
+  {
+    "alpha3_b": "arn",
+    "name": "Mapudungun; Mapuche",
+    "name_french": "mapudungun; mapuche; mapuce"
+  },
+  {
+    "alpha3_b": "arp",
+    "name": "Arapaho",
+    "name_french": "arapaho"
+  },
+  {
+    "alpha3_b": "art",
+    "name": "Artificial languages",
+    "name_french": "artificielles, langues"
+  },
+  {
+    "alpha3_b": "arw",
+    "name": "Arawak",
+    "name_french": "arawak"
+  },
+  {
+    "alpha3_b": "asm",
+    "alpha2": "as",
+    "name": "Assamese",
+    "name_french": "assamais"
+  },
+  {
+    "alpha3_b": "ast",
+    "name": "Asturian; Bable; Leonese; Asturleonese",
+    "name_french": "asturien; bable; léonais; asturoléonais"
+  },
+  {
+    "alpha3_b": "ath",
+    "name": "Athapascan languages",
+    "name_french": "athapascanes, langues"
+  },
+  {
+    "alpha3_b": "aus",
+    "name": "Australian languages",
+    "name_french": "australiennes, langues"
+  },
+  {
+    "alpha3_b": "ava",
+    "alpha2": "av",
+    "name": "Avaric",
+    "name_french": "avar"
+  },
+  {
+    "alpha3_b": "ave",
+    "alpha2": "ae",
+    "name": "Avestan",
+    "name_french": "avestique"
+  },
+  {
+    "alpha3_b": "awa",
+    "name": "Awadhi",
+    "name_french": "awadhi"
+  },
+  {
+    "alpha3_b": "aym",
+    "alpha2": "ay",
+    "name": "Aymara",
+    "name_french": "aymara"
+  },
+  {
+    "alpha3_b": "aze",
+    "alpha2": "az",
+    "name": "Azerbaijani",
+    "name_french": "azéri"
+  },
+  {
+    "alpha3_b": "bad",
+    "name": "Banda languages",
+    "name_french": "banda, langues"
+  },
+  {
+    "alpha3_b": "bai",
+    "name": "Bamileke languages",
+    "name_french": "bamiléké, langues"
+  },
+  {
+    "alpha3_b": "bak",
+    "alpha2": "ba",
+    "name": "Bashkir",
+    "name_french": "bachkir"
+  },
+  {
+    "alpha3_b": "bal",
+    "name": "Baluchi",
+    "name_french": "baloutchi"
+  },
+  {
+    "alpha3_b": "bam",
+    "alpha2": "bm",
+    "name": "Bambara",
+    "name_french": "bambara"
+  },
+  {
+    "alpha3_b": "ban",
+    "name": "Balinese",
+    "name_french": "balinais"
+  },
+  {
+    "alpha3_b": "baq",
+    "alpha3_t": "eus",
+    "alpha2": "eu",
+    "name": "Basque",
+    "name_french": "basque"
+  },
+  {
+    "alpha3_b": "bas",
+    "name": "Basa",
+    "name_french": "basa"
+  },
+  {
+    "alpha3_b": "bat",
+    "name": "Baltic languages",
+    "name_french": "baltes, langues"
+  },
+  {
+    "alpha3_b": "bej",
+    "name": "Beja; Bedawiyet",
+    "name_french": "bedja"
+  },
+  {
+    "alpha3_b": "bel",
+    "alpha2": "be",
+    "name": "Belarusian",
+    "name_french": "biélorusse"
+  },
+  {
+    "alpha3_b": "bem",
+    "name": "Bemba",
+    "name_french": "bemba"
+  },
+  {
+    "alpha3_b": "ben",
+    "alpha2": "bn",
+    "name": "Bengali",
+    "name_french": "bengali"
+  },
+  {
+    "alpha3_b": "ber",
+    "name": "Berber languages",
+    "name_french": "berbères, langues"
+  },
+  {
+    "alpha3_b": "bho",
+    "name": "Bhojpuri",
+    "name_french": "bhojpuri"
+  },
+  {
+    "alpha3_b": "bih",
+    "name": "Bihari languages",
+    "name_french": "langues biharis"
+  },
+  {
+    "alpha3_b": "bik",
+    "name": "Bikol",
+    "name_french": "bikol"
+  },
+  {
+    "alpha3_b": "bin",
+    "name": "Bini; Edo",
+    "name_french": "bini; edo"
+  },
+  {
+    "alpha3_b": "bis",
+    "alpha2": "bi",
+    "name": "Bislama",
+    "name_french": "bichlamar"
+  },
+  {
+    "alpha3_b": "bla",
+    "name": "Siksika",
+    "name_french": "blackfoot"
+  },
+  {
+    "alpha3_b": "bnt",
+    "name": "Bantu languages",
+    "name_french": "bantou, langues"
+  },
+  {
+    "alpha3_b": "bos",
+    "alpha2": "bs",
+    "name": "Bosnian",
+    "name_french": "bosniaque"
+  },
+  {
+    "alpha3_b": "bra",
+    "name": "Braj",
+    "name_french": "braj"
+  },
+  {
+    "alpha3_b": "bre",
+    "alpha2": "br",
+    "name": "Breton",
+    "name_french": "breton"
+  },
+  {
+    "alpha3_b": "btk",
+    "name": "Batak languages",
+    "name_french": "batak, langues"
+  },
+  {
+    "alpha3_b": "bua",
+    "name": "Buriat",
+    "name_french": "bouriate"
+  },
+  {
+    "alpha3_b": "bug",
+    "name": "Buginese",
+    "name_french": "bugi"
+  },
+  {
+    "alpha3_b": "bul",
+    "alpha2": "bg",
+    "name": "Bulgarian",
+    "name_french": "bulgare"
+  },
+  {
+    "alpha3_b": "bur",
+    "alpha3_t": "mya",
+    "alpha2": "my",
+    "name": "Burmese",
+    "name_french": "birman"
+  },
+  {
+    "alpha3_b": "byn",
+    "name": "Blin; Bilin",
+    "name_french": "blin; bilen"
+  },
+  {
+    "alpha3_b": "cad",
+    "name": "Caddo",
+    "name_french": "caddo"
+  },
+  {
+    "alpha3_b": "cai",
+    "name": "Central American Indian languages",
+    "name_french": "amérindiennes de L'Amérique centrale, langues"
+  },
+  {
+    "alpha3_b": "car",
+    "name": "Galibi Carib",
+    "name_french": "karib; galibi; carib"
+  },
+  {
+    "alpha3_b": "cat",
+    "alpha2": "ca",
+    "name": "Catalan; Valencian",
+    "name_french": "catalan; valencien"
+  },
+  {
+    "alpha3_b": "cau",
+    "name": "Caucasian languages",
+    "name_french": "caucasiennes, langues"
+  },
+  {
+    "alpha3_b": "ceb",
+    "name": "Cebuano",
+    "name_french": "cebuano"
+  },
+  {
+    "alpha3_b": "cel",
+    "name": "Celtic languages",
+    "name_french": "celtiques, langues; celtes, langues"
+  },
+  {
+    "alpha3_b": "cha",
+    "alpha2": "ch",
+    "name": "Chamorro",
+    "name_french": "chamorro"
+  },
+  {
+    "alpha3_b": "chb",
+    "name": "Chibcha",
+    "name_french": "chibcha"
+  },
+  {
+    "alpha3_b": "che",
+    "alpha2": "ce",
+    "name": "Chechen",
+    "name_french": "tchétchène"
+  },
+  {
+    "alpha3_b": "chg",
+    "name": "Chagatai",
+    "name_french": "djaghataï"
+  },
+  {
+    "alpha3_b": "chi",
+    "alpha3_t": "zho",
+    "alpha2": "zh",
+    "name": "Chinese",
+    "name_french": "chinois"
+  },
+  {
+    "alpha3_b": "chk",
+    "name": "Chuukese",
+    "name_french": "chuuk"
+  },
+  {
+    "alpha3_b": "chm",
+    "name": "Mari",
+    "name_french": "mari"
+  },
+  {
+    "alpha3_b": "chn",
+    "name": "Chinook jargon",
+    "name_french": "chinook, jargon"
+  },
+  {
+    "alpha3_b": "cho",
+    "name": "Choctaw",
+    "name_french": "choctaw"
+  },
+  {
+    "alpha3_b": "chp",
+    "name": "Chipewyan; Dene Suline",
+    "name_french": "chipewyan"
+  },
+  {
+    "alpha3_b": "chr",
+    "name": "Cherokee",
+    "name_french": "cherokee"
+  },
+  {
+    "alpha3_b": "chu",
+    "alpha2": "cu",
+    "name": "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic",
+    "name_french": "slavon d'église; vieux slave; slavon liturgique; vieux bulgare"
+  },
+  {
+    "alpha3_b": "chv",
+    "alpha2": "cv",
+    "name": "Chuvash",
+    "name_french": "tchouvache"
+  },
+  {
+    "alpha3_b": "chy",
+    "name": "Cheyenne",
+    "name_french": "cheyenne"
+  },
+  {
+    "alpha3_b": "cmc",
+    "name": "Chamic languages",
+    "name_french": "chames, langues"
+  },
+  {
+    "alpha3_b": "cnr",
+    "name": "Montenegrin",
+    "name_french": "monténégrin"
+  },
+  {
+    "alpha3_b": "cop",
+    "name": "Coptic",
+    "name_french": "copte"
+  },
+  {
+    "alpha3_b": "cor",
+    "alpha2": "kw",
+    "name": "Cornish",
+    "name_french": "cornique"
+  },
+  {
+    "alpha3_b": "cos",
+    "alpha2": "co",
+    "name": "Corsican",
+    "name_french": "corse"
+  },
+  {
+    "alpha3_b": "cpe",
+    "name": "Creoles and pidgins, English based",
+    "name_french": "créoles et pidgins basés sur l'anglais"
+  },
+  {
+    "alpha3_b": "cpf",
+    "name": "Creoles and pidgins, French-based",
+    "name_french": "créoles et pidgins basés sur le français"
+  },
+  {
+    "alpha3_b": "cpp",
+    "name": "Creoles and pidgins, Portuguese-based",
+    "name_french": "créoles et pidgins basés sur le portugais"
+  },
+  {
+    "alpha3_b": "cre",
+    "alpha2": "cr",
+    "name": "Cree",
+    "name_french": "cree"
+  },
+  {
+    "alpha3_b": "crh",
+    "name": "Crimean Tatar; Crimean Turkish",
+    "name_french": "tatar de Crimé"
+  },
+  {
+    "alpha3_b": "crp",
+    "name": "Creoles and pidgins",
+    "name_french": "créoles et pidgins"
+  },
+  {
+    "alpha3_b": "csb",
+    "name": "Kashubian",
+    "name_french": "kachoube"
+  },
+  {
+    "alpha3_b": "cus",
+    "name": "Cushitic languages",
+    "name_french": "couchitiques, langues"
+  },
+  {
+    "alpha3_b": "cze",
+    "alpha3_t": "ces",
+    "alpha2": "cs",
+    "name": "Czech",
+    "name_french": "tchèque"
+  },
+  {
+    "alpha3_b": "dak",
+    "name": "Dakota",
+    "name_french": "dakota"
+  },
+  {
+    "alpha3_b": "dan",
+    "alpha2": "da",
+    "name": "Danish",
+    "name_french": "danois"
+  },
+  {
+    "alpha3_b": "dar",
+    "name": "Dargwa",
+    "name_french": "dargwa"
+  },
+  {
+    "alpha3_b": "day",
+    "name": "Land Dayak languages",
+    "name_french": "dayak, langues"
+  },
+  {
+    "alpha3_b": "del",
+    "name": "Delaware",
+    "name_french": "delaware"
+  },
+  {
+    "alpha3_b": "den",
+    "name": "Slave (Athapascan)",
+    "name_french": "esclave (athapascan)"
+  },
+  {
+    "alpha3_b": "dgr",
+    "name": "Tlicho; Dogrib",
+    "name_french": "tlicho; dogrib"
+  },
+  {
+    "alpha3_b": "din",
+    "name": "Dinka",
+    "name_french": "dinka"
+  },
+  {
+    "alpha3_b": "div",
+    "alpha2": "dv",
+    "name": "Divehi; Dhivehi; Maldivian",
+    "name_french": "maldivien"
+  },
+  {
+    "alpha3_b": "doi",
+    "name": "Dogri",
+    "name_french": "dogri"
+  },
+  {
+    "alpha3_b": "dra",
+    "name": "Dravidian languages",
+    "name_french": "dravidiennes, langues"
+  },
+  {
+    "alpha3_b": "dsb",
+    "name": "Lower Sorbian",
+    "name_french": "bas-sorabe"
+  },
+  {
+    "alpha3_b": "dua",
+    "name": "Duala",
+    "name_french": "douala"
+  },
+  {
+    "alpha3_b": "dum",
+    "name": "Dutch, Middle (ca.1050-1350)",
+    "name_french": "néerlandais moyen (ca. 1050-1350)"
+  },
+  {
+    "alpha3_b": "dut",
+    "alpha3_t": "nld",
+    "alpha2": "nl",
+    "name": "Dutch; Flemish",
+    "name_french": "néerlandais; flamand"
+  },
+  {
+    "alpha3_b": "dyu",
+    "name": "Dyula",
+    "name_french": "dioula"
+  },
+  {
+    "alpha3_b": "dzo",
+    "alpha2": "dz",
+    "name": "Dzongkha",
+    "name_french": "dzongkha"
+  },
+  {
+    "alpha3_b": "efi",
+    "name": "Efik",
+    "name_french": "efik"
+  },
+  {
+    "alpha3_b": "egy",
+    "name": "Egyptian (Ancient)",
+    "name_french": "égyptien"
+  },
+  {
+    "alpha3_b": "eka",
+    "name": "Ekajuk",
+    "name_french": "ekajuk"
+  },
+  {
+    "alpha3_b": "elx",
+    "name": "Elamite",
+    "name_french": "élamite"
+  },
+  {
+    "alpha3_b": "eng",
+    "alpha2": "en",
+    "name": "English",
+    "name_french": "anglais"
+  },
+  {
+    "alpha3_b": "enm",
+    "name": "English, Middle (1100-1500)",
+    "name_french": "anglais moyen (1100-1500)"
+  },
+  {
+    "alpha3_b": "epo",
+    "alpha2": "eo",
+    "name": "Esperanto",
+    "name_french": "espéranto"
+  },
+  {
+    "alpha3_b": "est",
+    "alpha2": "et",
+    "name": "Estonian",
+    "name_french": "estonien"
+  },
+  {
+    "alpha3_b": "ewe",
+    "alpha2": "ee",
+    "name": "Ewe",
+    "name_french": "éwé"
+  },
+  {
+    "alpha3_b": "ewo",
+    "name": "Ewondo",
+    "name_french": "éwondo"
+  },
+  {
+    "alpha3_b": "fan",
+    "name": "Fang",
+    "name_french": "fang"
+  },
+  {
+    "alpha3_b": "fao",
+    "alpha2": "fo",
+    "name": "Faroese",
+    "name_french": "féroïen"
+  },
+  {
+    "alpha3_b": "fat",
+    "name": "Fanti",
+    "name_french": "fanti"
+  },
+  {
+    "alpha3_b": "fij",
+    "alpha2": "fj",
+    "name": "Fijian",
+    "name_french": "fidjien"
+  },
+  {
+    "alpha3_b": "fil",
+    "name": "Filipino; Pilipino",
+    "name_french": "filipino; pilipino"
+  },
+  {
+    "alpha3_b": "fin",
+    "alpha2": "fi",
+    "name": "Finnish",
+    "name_french": "finnois"
+  },
+  {
+    "alpha3_b": "fiu",
+    "name": "Finno-Ugrian languages",
+    "name_french": "finno-ougriennes, langues"
+  },
+  {
+    "alpha3_b": "fon",
+    "name": "Fon",
+    "name_french": "fon"
+  },
+  {
+    "alpha3_b": "fre",
+    "alpha3_t": "fra",
+    "alpha2": "fr",
+    "name": "French",
+    "name_french": "français"
+  },
+  {
+    "alpha3_b": "frm",
+    "name": "French, Middle (ca.1400-1600)",
+    "name_french": "français moyen (1400-1600)"
+  },
+  {
+    "alpha3_b": "fro",
+    "name": "French, Old (842-ca.1400)",
+    "name_french": "français ancien (842-ca.1400)"
+  },
+  {
+    "alpha3_b": "frr",
+    "name": "Northern Frisian",
+    "name_french": "frison septentrional"
+  },
+  {
+    "alpha3_b": "frs",
+    "name": "Eastern Frisian",
+    "name_french": "frison oriental"
+  },
+  {
+    "alpha3_b": "fry",
+    "alpha2": "fy",
+    "name": "Western Frisian",
+    "name_french": "frison occidental"
+  },
+  {
+    "alpha3_b": "ful",
+    "alpha2": "ff",
+    "name": "Fulah",
+    "name_french": "peul"
+  },
+  {
+    "alpha3_b": "fur",
+    "name": "Friulian",
+    "name_french": "frioulan"
+  },
+  {
+    "alpha3_b": "gaa",
+    "name": "Ga",
+    "name_french": "ga"
+  },
+  {
+    "alpha3_b": "gay",
+    "name": "Gayo",
+    "name_french": "gayo"
+  },
+  {
+    "alpha3_b": "gba",
+    "name": "Gbaya",
+    "name_french": "gbaya"
+  },
+  {
+    "alpha3_b": "gem",
+    "name": "Germanic languages",
+    "name_french": "germaniques, langues"
+  },
+  {
+    "alpha3_b": "geo",
+    "alpha3_t": "kat",
+    "alpha2": "ka",
+    "name": "Georgian",
+    "name_french": "géorgien"
+  },
+  {
+    "alpha3_b": "ger",
+    "alpha3_t": "deu",
+    "alpha2": "de",
+    "name": "German",
+    "name_french": "allemand"
+  },
+  {
+    "alpha3_b": "gez",
+    "name": "Geez",
+    "name_french": "guèze"
+  },
+  {
+    "alpha3_b": "gil",
+    "name": "Gilbertese",
+    "name_french": "kiribati"
+  },
+  {
+    "alpha3_b": "gla",
+    "alpha2": "gd",
+    "name": "Gaelic; Scottish Gaelic",
+    "name_french": "gaélique; gaélique écossais"
+  },
+  {
+    "alpha3_b": "gle",
+    "alpha2": "ga",
+    "name": "Irish",
+    "name_french": "irlandais"
+  },
+  {
+    "alpha3_b": "glg",
+    "alpha2": "gl",
+    "name": "Galician",
+    "name_french": "galicien"
+  },
+  {
+    "alpha3_b": "glv",
+    "alpha2": "gv",
+    "name": "Manx",
+    "name_french": "manx; mannois"
+  },
+  {
+    "alpha3_b": "gmh",
+    "name": "German, Middle High (ca.1050-1500)",
+    "name_french": "allemand, moyen haut (ca. 1050-1500)"
+  },
+  {
+    "alpha3_b": "goh",
+    "name": "German, Old High (ca.750-1050)",
+    "name_french": "allemand, vieux haut (ca. 750-1050)"
+  },
+  {
+    "alpha3_b": "gon",
+    "name": "Gondi",
+    "name_french": "gond"
+  },
+  {
+    "alpha3_b": "gor",
+    "name": "Gorontalo",
+    "name_french": "gorontalo"
+  },
+  {
+    "alpha3_b": "got",
+    "name": "Gothic",
+    "name_french": "gothique"
+  },
+  {
+    "alpha3_b": "grb",
+    "name": "Grebo",
+    "name_french": "grebo"
+  },
+  {
+    "alpha3_b": "grc",
+    "name": "Greek, Ancient (to 1453)",
+    "name_french": "grec ancien (jusqu'à 1453)"
+  },
+  {
+    "alpha3_b": "gre",
+    "alpha3_t": "ell",
+    "alpha2": "el",
+    "name": "Modern Greek (1453-)",
+    "name_french": "grec moderne (1453-)"
+  },
+  {
+    "alpha3_b": "grn",
+    "alpha2": "gn",
+    "name": "Guarani",
+    "name_french": "guarani"
+  },
+  {
+    "alpha3_b": "gsw",
+    "name": "Swiss German; Alemannic; Alsatian",
+    "name_french": "suisse alémanique; alémanique; alsacien"
+  },
+  {
+    "alpha3_b": "guj",
+    "alpha2": "gu",
+    "name": "Gujarati",
+    "name_french": "goudjrati"
+  },
+  {
+    "alpha3_b": "gwi",
+    "name": "Gwich'in",
+    "name_french": "gwich'in"
+  },
+  {
+    "alpha3_b": "hai",
+    "name": "Haida",
+    "name_french": "haida"
+  },
+  {
+    "alpha3_b": "hat",
+    "alpha2": "ht",
+    "name": "Haitian; Haitian Creole",
+    "name_french": "haïtien; créole haïtien"
+  },
+  {
+    "alpha3_b": "hau",
+    "alpha2": "ha",
+    "name": "Hausa",
+    "name_french": "haoussa"
+  },
+  {
+    "alpha3_b": "haw",
+    "name": "Hawaiian",
+    "name_french": "hawaïen"
+  },
+  {
+    "alpha3_b": "heb",
+    "alpha2": "he",
+    "name": "Hebrew",
+    "name_french": "hébreu"
+  },
+  {
+    "alpha3_b": "her",
+    "alpha2": "hz",
+    "name": "Herero",
+    "name_french": "herero"
+  },
+  {
+    "alpha3_b": "hil",
+    "name": "Hiligaynon",
+    "name_french": "hiligaynon"
+  },
+  {
+    "alpha3_b": "him",
+    "name": "Himachali languages; Western Pahari languages",
+    "name_french": "langues himachalis; langues paharis occidentales"
+  },
+  {
+    "alpha3_b": "hin",
+    "alpha2": "hi",
+    "name": "Hindi",
+    "name_french": "hindi"
+  },
+  {
+    "alpha3_b": "hit",
+    "name": "Hittite",
+    "name_french": "hittite"
+  },
+  {
+    "alpha3_b": "hmn",
+    "name": "Hmong; Mong",
+    "name_french": "hmong"
+  },
+  {
+    "alpha3_b": "hmo",
+    "alpha2": "ho",
+    "name": "Hiri Motu",
+    "name_french": "hiri motu"
+  },
+  {
+    "alpha3_b": "hrv",
+    "alpha2": "hr",
+    "name": "Croatian",
+    "name_french": "croate"
+  },
+  {
+    "alpha3_b": "hsb",
+    "name": "Upper Sorbian",
+    "name_french": "haut-sorabe"
+  },
+  {
+    "alpha3_b": "hun",
+    "alpha2": "hu",
+    "name": "Hungarian",
+    "name_french": "hongrois"
+  },
+  {
+    "alpha3_b": "hup",
+    "name": "Hupa",
+    "name_french": "hupa"
+  },
+  {
+    "alpha3_b": "iba",
+    "name": "Iban",
+    "name_french": "iban"
+  },
+  {
+    "alpha3_b": "ibo",
+    "alpha2": "ig",
+    "name": "Igbo",
+    "name_french": "igbo"
+  },
+  {
+    "alpha3_b": "ice",
+    "alpha3_t": "isl",
+    "alpha2": "is",
+    "name": "Icelandic",
+    "name_french": "islandais"
+  },
+  {
+    "alpha3_b": "ido",
+    "alpha2": "io",
+    "name": "Ido",
+    "name_french": "ido"
+  },
+  {
+    "alpha3_b": "iii",
+    "alpha2": "ii",
+    "name": "Sichuan Yi; Nuosu",
+    "name_french": "yi de Sichuan"
+  },
+  {
+    "alpha3_b": "ijo",
+    "name": "Ijo languages",
+    "name_french": "ijo, langues"
+  },
+  {
+    "alpha3_b": "iku",
+    "alpha2": "iu",
+    "name": "Inuktitut",
+    "name_french": "inuktitut"
+  },
+  {
+    "alpha3_b": "ile",
+    "alpha2": "ie",
+    "name": "Interlingue; Occidental",
+    "name_french": "interlingue"
+  },
+  {
+    "alpha3_b": "ilo",
+    "name": "Iloko",
+    "name_french": "ilocano"
+  },
+  {
+    "alpha3_b": "ina",
+    "alpha2": "ia",
+    "name": "Interlingua (International Auxiliary Language Association)",
+    "name_french": "interlingua (langue auxiliaire internationale)"
+  },
+  {
+    "alpha3_b": "inc",
+    "name": "Indic languages",
+    "name_french": "indo-aryennes, langues"
+  },
+  {
+    "alpha3_b": "ind",
+    "alpha2": "id",
+    "name": "Indonesian",
+    "name_french": "indonésien"
+  },
+  {
+    "alpha3_b": "ine",
+    "name": "Indo-European languages",
+    "name_french": "indo-européennes, langues"
+  },
+  {
+    "alpha3_b": "inh",
+    "name": "Ingush",
+    "name_french": "ingouche"
+  },
+  {
+    "alpha3_b": "ipk",
+    "alpha2": "ik",
+    "name": "Inupiaq",
+    "name_french": "inupiaq"
+  },
+  {
+    "alpha3_b": "ira",
+    "name": "Iranian languages",
+    "name_french": "iraniennes, langues"
+  },
+  {
+    "alpha3_b": "iro",
+    "name": "Iroquoian languages",
+    "name_french": "iroquoises, langues"
+  },
+  {
+    "alpha3_b": "ita",
+    "alpha2": "it",
+    "name": "Italian",
+    "name_french": "italien"
+  },
+  {
+    "alpha3_b": "jav",
+    "alpha2": "jv",
+    "name": "Javanese",
+    "name_french": "javanais"
+  },
+  {
+    "alpha3_b": "jbo",
+    "name": "Lojban",
+    "name_french": "lojban"
+  },
+  {
+    "alpha3_b": "jpn",
+    "alpha2": "ja",
+    "name": "Japanese",
+    "name_french": "japonais"
+  },
+  {
+    "alpha3_b": "jpr",
+    "name": "Judeo-Persian",
+    "name_french": "judéo-persan"
+  },
+  {
+    "alpha3_b": "jrb",
+    "name": "Judeo-Arabic",
+    "name_french": "judéo-arabe"
+  },
+  {
+    "alpha3_b": "kaa",
+    "name": "Kara-Kalpak",
+    "name_french": "karakalpak"
+  },
+  {
+    "alpha3_b": "kab",
+    "name": "Kabyle",
+    "name_french": "kabyle"
+  },
+  {
+    "alpha3_b": "kac",
+    "name": "Kachin; Jingpho",
+    "name_french": "kachin; jingpho"
+  },
+  {
+    "alpha3_b": "kal",
+    "alpha2": "kl",
+    "name": "Kalaallisut; Greenlandic",
+    "name_french": "groenlandais"
+  },
+  {
+    "alpha3_b": "kam",
+    "name": "Kamba",
+    "name_french": "kamba"
+  },
+  {
+    "alpha3_b": "kan",
+    "alpha2": "kn",
+    "name": "Kannada",
+    "name_french": "kannada"
+  },
+  {
+    "alpha3_b": "kar",
+    "name": "Karen languages",
+    "name_french": "karen, langues"
+  },
+  {
+    "alpha3_b": "kas",
+    "alpha2": "ks",
+    "name": "Kashmiri",
+    "name_french": "kashmiri"
+  },
+  {
+    "alpha3_b": "kau",
+    "alpha2": "kr",
+    "name": "Kanuri",
+    "name_french": "kanouri"
+  },
+  {
+    "alpha3_b": "kaw",
+    "name": "Kawi",
+    "name_french": "kawi"
+  },
+  {
+    "alpha3_b": "kaz",
+    "alpha2": "kk",
+    "name": "Kazakh",
+    "name_french": "kazakh"
+  },
+  {
+    "alpha3_b": "kbd",
+    "name": "Kabardian",
+    "name_french": "kabardien"
+  },
+  {
+    "alpha3_b": "kha",
+    "name": "Khasi",
+    "name_french": "khasi"
+  },
+  {
+    "alpha3_b": "khi",
+    "name": "Khoisan languages",
+    "name_french": "khoïsan, langues"
+  },
+  {
+    "alpha3_b": "khm",
+    "alpha2": "km",
+    "name": "Central Khmer",
+    "name_french": "khmer central"
+  },
+  {
+    "alpha3_b": "kho",
+    "name": "Khotanese; Sakan",
+    "name_french": "khotanais; sakan"
+  },
+  {
+    "alpha3_b": "kik",
+    "alpha2": "ki",
+    "name": "Kikuyu; Gikuyu",
+    "name_french": "kikuyu"
+  },
+  {
+    "alpha3_b": "kin",
+    "alpha2": "rw",
+    "name": "Kinyarwanda",
+    "name_french": "rwanda"
+  },
+  {
+    "alpha3_b": "kir",
+    "alpha2": "ky",
+    "name": "Kirghiz; Kyrgyz",
+    "name_french": "kirghiz"
+  },
+  {
+    "alpha3_b": "kmb",
+    "name": "Kimbundu",
+    "name_french": "kimbundu"
+  },
+  {
+    "alpha3_b": "kok",
+    "name": "Konkani",
+    "name_french": "konkani"
+  },
+  {
+    "alpha3_b": "kom",
+    "alpha2": "kv",
+    "name": "Komi",
+    "name_french": "kom"
+  },
+  {
+    "alpha3_b": "kon",
+    "alpha2": "kg",
+    "name": "Kongo",
+    "name_french": "kongo"
+  },
+  {
+    "alpha3_b": "kor",
+    "alpha2": "ko",
+    "name": "Korean",
+    "name_french": "coréen"
+  },
+  {
+    "alpha3_b": "kos",
+    "name": "Kosraean",
+    "name_french": "kosrae"
+  },
+  {
+    "alpha3_b": "kpe",
+    "name": "Kpelle",
+    "name_french": "kpellé"
+  },
+  {
+    "alpha3_b": "krc",
+    "name": "Karachay-Balkar",
+    "name_french": "karatchai balkar"
+  },
+  {
+    "alpha3_b": "krl",
+    "name": "Karelian",
+    "name_french": "carélien"
+  },
+  {
+    "alpha3_b": "kro",
+    "name": "Kru languages",
+    "name_french": "krou, langues"
+  },
+  {
+    "alpha3_b": "kru",
+    "name": "Kurukh",
+    "name_french": "kurukh"
+  },
+  {
+    "alpha3_b": "kua",
+    "alpha2": "kj",
+    "name": "Kuanyama; Kwanyama",
+    "name_french": "kuanyama; kwanyama"
+  },
+  {
+    "alpha3_b": "kum",
+    "name": "Kumyk",
+    "name_french": "koumyk"
+  },
+  {
+    "alpha3_b": "kur",
+    "alpha2": "ku",
+    "name": "Kurdish",
+    "name_french": "kurde"
+  },
+  {
+    "alpha3_b": "kut",
+    "name": "Kutenai",
+    "name_french": "kutenai"
+  },
+  {
+    "alpha3_b": "lad",
+    "name": "Ladino",
+    "name_french": "judéo-espagnol"
+  },
+  {
+    "alpha3_b": "lah",
+    "name": "Lahnda",
+    "name_french": "lahnda"
+  },
+  {
+    "alpha3_b": "lam",
+    "name": "Lamba",
+    "name_french": "lamba"
+  },
+  {
+    "alpha3_b": "lao",
+    "alpha2": "lo",
+    "name": "Lao",
+    "name_french": "lao"
+  },
+  {
+    "alpha3_b": "lat",
+    "alpha2": "la",
+    "name": "Latin",
+    "name_french": "latin"
+  },
+  {
+    "alpha3_b": "lav",
+    "alpha2": "lv",
+    "name": "Latvian",
+    "name_french": "letton"
+  },
+  {
+    "alpha3_b": "lez",
+    "name": "Lezghian",
+    "name_french": "lezghien"
+  },
+  {
+    "alpha3_b": "lim",
+    "alpha2": "li",
+    "name": "Limburgan; Limburger; Limburgish",
+    "name_french": "limbourgeois"
+  },
+  {
+    "alpha3_b": "lin",
+    "alpha2": "ln",
+    "name": "Lingala",
+    "name_french": "lingala"
+  },
+  {
+    "alpha3_b": "lit",
+    "alpha2": "lt",
+    "name": "Lithuanian",
+    "name_french": "lituanien"
+  },
+  {
+    "alpha3_b": "lol",
+    "name": "Mongo",
+    "name_french": "mongo"
+  },
+  {
+    "alpha3_b": "loz",
+    "name": "Lozi",
+    "name_french": "lozi"
+  },
+  {
+    "alpha3_b": "ltz",
+    "alpha2": "lb",
+    "name": "Luxembourgish; Letzeburgesch",
+    "name_french": "luxembourgeois"
+  },
+  {
+    "alpha3_b": "lua",
+    "name": "Luba-Lulua",
+    "name_french": "luba-lulua"
+  },
+  {
+    "alpha3_b": "lub",
+    "alpha2": "lu",
+    "name": "Luba-Katanga",
+    "name_french": "luba-katanga"
+  },
+  {
+    "alpha3_b": "lug",
+    "alpha2": "lg",
+    "name": "Ganda",
+    "name_french": "ganda"
+  },
+  {
+    "alpha3_b": "lui",
+    "name": "Luiseno",
+    "name_french": "luiseno"
+  },
+  {
+    "alpha3_b": "lun",
+    "name": "Lunda",
+    "name_french": "lunda"
+  },
+  {
+    "alpha3_b": "luo",
+    "name": "Luo (Kenya and Tanzania)",
+    "name_french": "luo (Kenya et Tanzanie)"
+  },
+  {
+    "alpha3_b": "lus",
+    "name": "Lushai",
+    "name_french": "lushai"
+  },
+  {
+    "alpha3_b": "mac",
+    "alpha3_t": "mkd",
+    "alpha2": "mk",
+    "name": "Macedonian",
+    "name_french": "macédonien"
+  },
+  {
+    "alpha3_b": "mad",
+    "name": "Madurese",
+    "name_french": "madourais"
+  },
+  {
+    "alpha3_b": "mag",
+    "name": "Magahi",
+    "name_french": "magahi"
+  },
+  {
+    "alpha3_b": "mah",
+    "alpha2": "mh",
+    "name": "Marshallese",
+    "name_french": "marshall"
+  },
+  {
+    "alpha3_b": "mai",
+    "name": "Maithili",
+    "name_french": "maithili"
+  },
+  {
+    "alpha3_b": "mak",
+    "name": "Makasar",
+    "name_french": "makassar"
+  },
+  {
+    "alpha3_b": "mal",
+    "alpha2": "ml",
+    "name": "Malayalam",
+    "name_french": "malayalam"
+  },
+  {
+    "alpha3_b": "man",
+    "name": "Mandingo",
+    "name_french": "mandingue"
+  },
+  {
+    "alpha3_b": "mao",
+    "alpha3_t": "mri",
+    "alpha2": "mi",
+    "name": "Maori",
+    "name_french": "maori"
+  },
+  {
+    "alpha3_b": "map",
+    "name": "Austronesian languages",
+    "name_french": "austronésiennes, langues"
+  },
+  {
+    "alpha3_b": "mar",
+    "alpha2": "mr",
+    "name": "Marathi",
+    "name_french": "marathe"
+  },
+  {
+    "alpha3_b": "mas",
+    "name": "Masai",
+    "name_french": "massaï"
+  },
+  {
+    "alpha3_b": "may",
+    "alpha3_t": "msa",
+    "alpha2": "ms",
+    "name": "Malay",
+    "name_french": "malais"
+  },
+  {
+    "alpha3_b": "mdf",
+    "name": "Moksha",
+    "name_french": "moksa"
+  },
+  {
+    "alpha3_b": "mdr",
+    "name": "Mandar",
+    "name_french": "mandar"
+  },
+  {
+    "alpha3_b": "men",
+    "name": "Mende",
+    "name_french": "mendé"
+  },
+  {
+    "alpha3_b": "mga",
+    "name": "Irish, Middle (900-1200)",
+    "name_french": "irlandais moyen (900-1200)"
+  },
+  {
+    "alpha3_b": "mic",
+    "name": "Mi'kmaq; Micmac",
+    "name_french": "mi'kmaq; micmac"
+  },
+  {
+    "alpha3_b": "min",
+    "name": "Minangkabau",
+    "name_french": "minangkabau"
+  },
+  {
+    "alpha3_b": "mis",
+    "name": "Uncoded languages",
+    "name_french": "langues non codées"
+  },
+  {
+    "alpha3_b": "mkh",
+    "name": "Mon-Khmer languages",
+    "name_french": "môn-khmer, langues"
+  },
+  {
+    "alpha3_b": "mlg",
+    "alpha2": "mg",
+    "name": "Malagasy",
+    "name_french": "malgache"
+  },
+  {
+    "alpha3_b": "mlt",
+    "alpha2": "mt",
+    "name": "Maltese",
+    "name_french": "maltais"
+  },
+  {
+    "alpha3_b": "mnc",
+    "name": "Manchu",
+    "name_french": "mandchou"
+  },
+  {
+    "alpha3_b": "mni",
+    "name": "Manipuri",
+    "name_french": "manipuri"
+  },
+  {
+    "alpha3_b": "mno",
+    "name": "Manobo languages",
+    "name_french": "manobo, langues"
+  },
+  {
+    "alpha3_b": "moh",
+    "name": "Mohawk",
+    "name_french": "mohawk"
+  },
+  {
+    "alpha3_b": "mon",
+    "alpha2": "mn",
+    "name": "Mongolian",
+    "name_french": "mongol"
+  },
+  {
+    "alpha3_b": "mos",
+    "name": "Mossi",
+    "name_french": "moré"
+  },
+  {
+    "alpha3_b": "mul",
+    "name": "Multiple languages",
+    "name_french": "multilingue"
+  },
+  {
+    "alpha3_b": "mun",
+    "name": "Munda languages",
+    "name_french": "mounda, langues"
+  },
+  {
+    "alpha3_b": "mus",
+    "name": "Creek",
+    "name_french": "muskogee"
+  },
+  {
+    "alpha3_b": "mwl",
+    "name": "Mirandese",
+    "name_french": "mirandais"
+  },
+  {
+    "alpha3_b": "mwr",
+    "name": "Marwari",
+    "name_french": "marvari"
+  },
+  {
+    "alpha3_b": "myn",
+    "name": "Mayan languages",
+    "name_french": "maya, langues"
+  },
+  {
+    "alpha3_b": "myv",
+    "name": "Erzya",
+    "name_french": "erza"
+  },
+  {
+    "alpha3_b": "nah",
+    "name": "Nahuatl languages",
+    "name_french": "nahuatl, langues"
+  },
+  {
+    "alpha3_b": "nai",
+    "name": "North American Indian languages",
+    "name_french": "nord-amérindiennes, langues"
+  },
+  {
+    "alpha3_b": "nap",
+    "name": "Neapolitan",
+    "name_french": "napolitain"
+  },
+  {
+    "alpha3_b": "nau",
+    "alpha2": "na",
+    "name": "Nauru",
+    "name_french": "nauruan"
+  },
+  {
+    "alpha3_b": "nav",
+    "alpha2": "nv",
+    "name": "Navajo; Navaho",
+    "name_french": "navaho"
+  },
+  {
+    "alpha3_b": "nbl",
+    "alpha2": "nr",
+    "name": "South Ndebele",
+    "name_french": "ndébélé du Sud"
+  },
+  {
+    "alpha3_b": "nde",
+    "alpha2": "nd",
+    "name": "North Ndebele",
+    "name_french": "ndébélé du Nord"
+  },
+  {
+    "alpha3_b": "ndo",
+    "alpha2": "ng",
+    "name": "Ndonga",
+    "name_french": "ndonga"
+  },
+  {
+    "alpha3_b": "nds",
+    "name": "Low German; Low Saxon; German, Low; Saxon, Low",
+    "name_french": "bas allemand; bas saxon; allemand, bas; saxon, bas"
+  },
+  {
+    "alpha3_b": "nep",
+    "alpha2": "ne",
+    "name": "Nepali",
+    "name_french": "népalais"
+  },
+  {
+    "alpha3_b": "new",
+    "name": "Nepal Bhasa; Newar; Newari",
+    "name_french": "nepal bhasa; néwar; newari"
+  },
+  {
+    "alpha3_b": "nia",
+    "name": "Nias",
+    "name_french": "nias"
+  },
+  {
+    "alpha3_b": "nic",
+    "name": "Niger-Kordofanian languages",
+    "name_french": "nigéro-kordofaniennes, langues"
+  },
+  {
+    "alpha3_b": "niu",
+    "name": "Niuean",
+    "name_french": "niué"
+  },
+  {
+    "alpha3_b": "nno",
+    "alpha2": "nn",
+    "name": "Norwegian Nynorsk",
+    "name_french": "norvégien nynorsk"
+  },
+  {
+    "alpha3_b": "nob",
+    "alpha2": "nb",
+    "name": "Norwegian Bokmål",
+    "name_french": "norvégien bokmål"
+  },
+  {
+    "alpha3_b": "nog",
+    "name": "Nogai",
+    "name_french": "nogaï; nogay"
+  },
+  {
+    "alpha3_b": "non",
+    "name": "Norse, Old",
+    "name_french": "norrois, vieux"
+  },
+  {
+    "alpha3_b": "nor",
+    "alpha2": "no",
+    "name": "Norwegian",
+    "name_french": "norvégien"
+  },
+  {
+    "alpha3_b": "nqo",
+    "name": "N'Ko",
+    "name_french": "n'ko"
+  },
+  {
+    "alpha3_b": "nso",
+    "name": "Pedi; Sepedi; Northern Sotho",
+    "name_french": "pedi; sepedi; sotho du Nord"
+  },
+  {
+    "alpha3_b": "nub",
+    "name": "Nubian languages",
+    "name_french": "nubiennes, langues"
+  },
+  {
+    "alpha3_b": "nwc",
+    "name": "Classical Newari; Old Newari; Classical Nepal Bhasa",
+    "name_french": "newari classique"
+  },
+  {
+    "alpha3_b": "nya",
+    "alpha2": "ny",
+    "name": "Chichewa; Chewa; Nyanja",
+    "name_french": "chichewa; chewa; nyanja"
+  },
+  {
+    "alpha3_b": "nym",
+    "name": "Nyamwezi",
+    "name_french": "nyamwezi"
+  },
+  {
+    "alpha3_b": "nyn",
+    "name": "Nyankole",
+    "name_french": "nyankolé"
+  },
+  {
+    "alpha3_b": "nyo",
+    "name": "Nyoro",
+    "name_french": "nyoro"
+  },
+  {
+    "alpha3_b": "nzi",
+    "name": "Nzima",
+    "name_french": "nzema"
+  },
+  {
+    "alpha3_b": "oci",
+    "alpha2": "oc",
+    "name": "Occitan (post 1500)",
+    "name_french": "occitan (après 1500)"
+  },
+  {
+    "alpha3_b": "oji",
+    "alpha2": "oj",
+    "name": "Ojibwa",
+    "name_french": "ojibwa"
+  },
+  {
+    "alpha3_b": "ori",
+    "alpha2": "or",
+    "name": "Oriya",
+    "name_french": "oriya"
+  },
+  {
+    "alpha3_b": "orm",
+    "alpha2": "om",
+    "name": "Oromo",
+    "name_french": "galla"
+  },
+  {
+    "alpha3_b": "osa",
+    "name": "Osage",
+    "name_french": "osage"
+  },
+  {
+    "alpha3_b": "oss",
+    "alpha2": "os",
+    "name": "Ossetian; Ossetic",
+    "name_french": "ossète"
+  },
+  {
+    "alpha3_b": "ota",
+    "name": "Turkish, Ottoman (1500-1928)",
+    "name_french": "turc ottoman (1500-1928)"
+  },
+  {
+    "alpha3_b": "oto",
+    "name": "Otomian languages",
+    "name_french": "otomi, langues"
+  },
+  {
+    "alpha3_b": "paa",
+    "name": "Papuan languages",
+    "name_french": "papoues, langues"
+  },
+  {
+    "alpha3_b": "pag",
+    "name": "Pangasinan",
+    "name_french": "pangasinan"
+  },
+  {
+    "alpha3_b": "pal",
+    "name": "Pahlavi",
+    "name_french": "pahlavi"
+  },
+  {
+    "alpha3_b": "pam",
+    "name": "Pampanga; Kapampangan",
+    "name_french": "pampangan"
+  },
+  {
+    "alpha3_b": "pan",
+    "alpha2": "pa",
+    "name": "Panjabi; Punjabi",
+    "name_french": "pendjabi"
+  },
+  {
+    "alpha3_b": "pap",
+    "name": "Papiamento",
+    "name_french": "papiamento"
+  },
+  {
+    "alpha3_b": "pau",
+    "name": "Palauan",
+    "name_french": "palau"
+  },
+  {
+    "alpha3_b": "peo",
+    "name": "Persian, Old (ca.600-400 B.C.)",
+    "name_french": "perse, vieux (ca. 600-400 av. J.-C.)"
+  },
+  {
+    "alpha3_b": "per",
+    "alpha3_t": "fas",
+    "alpha2": "fa",
+    "name": "Persian",
+    "name_french": "persan"
+  },
+  {
+    "alpha3_b": "phi",
+    "name": "Philippine languages",
+    "name_french": "philippines, langues"
+  },
+  {
+    "alpha3_b": "phn",
+    "name": "Phoenician",
+    "name_french": "phénicien"
+  },
+  {
+    "alpha3_b": "pli",
+    "alpha2": "pi",
+    "name": "Pali",
+    "name_french": "pali"
+  },
+  {
+    "alpha3_b": "pol",
+    "alpha2": "pl",
+    "name": "Polish",
+    "name_french": "polonais"
+  },
+  {
+    "alpha3_b": "pon",
+    "name": "Pohnpeian",
+    "name_french": "pohnpei"
+  },
+  {
+    "alpha3_b": "por",
+    "alpha2": "pt",
+    "name": "Portuguese",
+    "name_french": "portugais"
+  },
+  {
+    "alpha3_b": "pra",
+    "name": "Prakrit languages",
+    "name_french": "prâkrit, langues"
+  },
+  {
+    "alpha3_b": "pro",
+    "name": "Provençal, Old (to 1500); Occitan, Old (to 1500)",
+    "name_french": "provençal ancien (jusqu'à 1500); occitan ancien (jusqu'à 1500)"
+  },
+  {
+    "alpha3_b": "pus",
+    "alpha2": "ps",
+    "name": "Pushto; Pashto",
+    "name_french": "pachto"
+  },
+  {
+    "alpha3_b": "qaa-qtz",
+    "name": "Reserved for local use",
+    "name_french": "réservée à l'usage local"
+  },
+  {
+    "alpha3_b": "que",
+    "alpha2": "qu",
+    "name": "Quechua",
+    "name_french": "quechua"
+  },
+  {
+    "alpha3_b": "raj",
+    "name": "Rajasthani",
+    "name_french": "rajasthani"
+  },
+  {
+    "alpha3_b": "rap",
+    "name": "Rapanui",
+    "name_french": "rapanui"
+  },
+  {
+    "alpha3_b": "rar",
+    "name": "Rarotongan; Cook Islands Maori",
+    "name_french": "rarotonga; maori des îles Cook"
+  },
+  {
+    "alpha3_b": "roa",
+    "name": "Romance languages",
+    "name_french": "romanes, langues"
+  },
+  {
+    "alpha3_b": "roh",
+    "alpha2": "rm",
+    "name": "Romansh",
+    "name_french": "romanche"
+  },
+  {
+    "alpha3_b": "rom",
+    "name": "Romany",
+    "name_french": "tsigane"
+  },
+  {
+    "alpha3_b": "rum",
+    "alpha3_t": "ron",
+    "alpha2": "ro",
+    "name": "Romanian; Moldavian; Moldovan",
+    "name_french": "roumain; moldave"
+  },
+  {
+    "alpha3_b": "run",
+    "alpha2": "rn",
+    "name": "Rundi",
+    "name_french": "rundi"
+  },
+  {
+    "alpha3_b": "rup",
+    "name": "Aromanian; Arumanian; Macedo-Romanian",
+    "name_french": "aroumain; macédo-roumain"
+  },
+  {
+    "alpha3_b": "rus",
+    "alpha2": "ru",
+    "name": "Russian",
+    "name_french": "russe"
+  },
+  {
+    "alpha3_b": "sad",
+    "name": "Sandawe",
+    "name_french": "sandawe"
+  },
+  {
+    "alpha3_b": "sag",
+    "alpha2": "sg",
+    "name": "Sango",
+    "name_french": "sango"
+  },
+  {
+    "alpha3_b": "sah",
+    "name": "Yakut",
+    "name_french": "iakoute"
+  },
+  {
+    "alpha3_b": "sai",
+    "name": "South American Indian languages",
+    "name_french": "sud-amérindiennes, langues"
+  },
+  {
+    "alpha3_b": "sal",
+    "name": "Salishan languages",
+    "name_french": "salishennes, langues"
+  },
+  {
+    "alpha3_b": "sam",
+    "name": "Samaritan Aramaic",
+    "name_french": "samaritain"
+  },
+  {
+    "alpha3_b": "san",
+    "alpha2": "sa",
+    "name": "Sanskrit",
+    "name_french": "sanskrit"
+  },
+  {
+    "alpha3_b": "sas",
+    "name": "Sasak",
+    "name_french": "sasak"
+  },
+  {
+    "alpha3_b": "sat",
+    "name": "Santali",
+    "name_french": "santal"
+  },
+  {
+    "alpha3_b": "scn",
+    "name": "Sicilian",
+    "name_french": "sicilien"
+  },
+  {
+    "alpha3_b": "sco",
+    "name": "Scots",
+    "name_french": "écossais"
+  },
+  {
+    "alpha3_b": "sel",
+    "name": "Selkup",
+    "name_french": "selkoupe"
+  },
+  {
+    "alpha3_b": "sem",
+    "name": "Semitic languages",
+    "name_french": "sémitiques, langues"
+  },
+  {
+    "alpha3_b": "sga",
+    "name": "Irish, Old (to 900)",
+    "name_french": "irlandais ancien (jusqu'à 900)"
+  },
+  {
+    "alpha3_b": "sgn",
+    "name": "Sign Languages",
+    "name_french": "langues des signes"
+  },
+  {
+    "alpha3_b": "shn",
+    "name": "Shan",
+    "name_french": "chan"
+  },
+  {
+    "alpha3_b": "sid",
+    "name": "Sidamo",
+    "name_french": "sidamo"
+  },
+  {
+    "alpha3_b": "sin",
+    "alpha2": "si",
+    "name": "Sinhala; Sinhalese",
+    "name_french": "singhalais"
+  },
+  {
+    "alpha3_b": "sio",
+    "name": "Siouan languages",
+    "name_french": "sioux, langues"
+  },
+  {
+    "alpha3_b": "sit",
+    "name": "Sino-Tibetan languages",
+    "name_french": "sino-tibétaines, langues"
+  },
+  {
+    "alpha3_b": "sla",
+    "name": "Slavic languages",
+    "name_french": "slaves, langues"
+  },
+  {
+    "alpha3_b": "slo",
+    "alpha3_t": "slk",
+    "alpha2": "sk",
+    "name": "Slovak",
+    "name_french": "slovaque"
+  },
+  {
+    "alpha3_b": "slv",
+    "alpha2": "sl",
+    "name": "Slovenian",
+    "name_french": "slovène"
+  },
+  {
+    "alpha3_b": "sma",
+    "name": "Southern Sami",
+    "name_french": "sami du Sud"
+  },
+  {
+    "alpha3_b": "sme",
+    "alpha2": "se",
+    "name": "Northern Sami",
+    "name_french": "sami du Nord"
+  },
+  {
+    "alpha3_b": "smi",
+    "name": "Sami languages",
+    "name_french": "sames, langues"
+  },
+  {
+    "alpha3_b": "smj",
+    "name": "Lule Sami",
+    "name_french": "sami de Lule"
+  },
+  {
+    "alpha3_b": "smn",
+    "name": "Inari Sami",
+    "name_french": "sami d'Inari"
+  },
+  {
+    "alpha3_b": "smo",
+    "alpha2": "sm",
+    "name": "Samoan",
+    "name_french": "samoan"
+  },
+  {
+    "alpha3_b": "sms",
+    "name": "Skolt Sami",
+    "name_french": "sami skolt"
+  },
+  {
+    "alpha3_b": "sna",
+    "alpha2": "sn",
+    "name": "Shona",
+    "name_french": "shona"
+  },
+  {
+    "alpha3_b": "snd",
+    "alpha2": "sd",
+    "name": "Sindhi",
+    "name_french": "sindhi"
+  },
+  {
+    "alpha3_b": "snk",
+    "name": "Soninke",
+    "name_french": "soninké"
+  },
+  {
+    "alpha3_b": "sog",
+    "name": "Sogdian",
+    "name_french": "sogdien"
+  },
+  {
+    "alpha3_b": "som",
+    "alpha2": "so",
+    "name": "Somali",
+    "name_french": "somali"
+  },
+  {
+    "alpha3_b": "son",
+    "name": "Songhai languages",
+    "name_french": "songhai, langues"
+  },
+  {
+    "alpha3_b": "sot",
+    "alpha2": "st",
+    "name": "Sotho, Southern",
+    "name_french": "sotho du Sud"
+  },
+  {
+    "alpha3_b": "spa",
+    "alpha2": "es",
+    "name": "Spanish; Castilian",
+    "name_french": "espagnol; castillan"
+  },
+  {
+    "alpha3_b": "srd",
+    "alpha2": "sc",
+    "name": "Sardinian",
+    "name_french": "sarde"
+  },
+  {
+    "alpha3_b": "srn",
+    "name": "Sranan Tongo",
+    "name_french": "sranan tongo"
+  },
+  {
+    "alpha3_b": "srp",
+    "alpha2": "sr",
+    "name": "Serbian",
+    "name_french": "serbe"
+  },
+  {
+    "alpha3_b": "srr",
+    "name": "Serer",
+    "name_french": "sérère"
+  },
+  {
+    "alpha3_b": "ssa",
+    "name": "Nilo-Saharan languages",
+    "name_french": "nilo-sahariennes, langues"
+  },
+  {
+    "alpha3_b": "ssw",
+    "alpha2": "ss",
+    "name": "Swati",
+    "name_french": "swati"
+  },
+  {
+    "alpha3_b": "suk",
+    "name": "Sukuma",
+    "name_french": "sukuma"
+  },
+  {
+    "alpha3_b": "sun",
+    "alpha2": "su",
+    "name": "Sundanese",
+    "name_french": "soundanais"
+  },
+  {
+    "alpha3_b": "sus",
+    "name": "Susu",
+    "name_french": "soussou"
+  },
+  {
+    "alpha3_b": "sux",
+    "name": "Sumerian",
+    "name_french": "sumérien"
+  },
+  {
+    "alpha3_b": "swa",
+    "alpha2": "sw",
+    "name": "Swahili",
+    "name_french": "swahili"
+  },
+  {
+    "alpha3_b": "swe",
+    "alpha2": "sv",
+    "name": "Swedish",
+    "name_french": "suédois"
+  },
+  {
+    "alpha3_b": "syc",
+    "name": "Classical Syriac",
+    "name_french": "syriaque classique"
+  },
+  {
+    "alpha3_b": "syr",
+    "name": "Syriac",
+    "name_french": "syriaque"
+  },
+  {
+    "alpha3_b": "tah",
+    "alpha2": "ty",
+    "name": "Tahitian",
+    "name_french": "tahitien"
+  },
+  {
+    "alpha3_b": "tai",
+    "name": "Tai languages",
+    "name_french": "tai, langues"
+  },
+  {
+    "alpha3_b": "tam",
+    "alpha2": "ta",
+    "name": "Tamil",
+    "name_french": "tamoul"
+  },
+  {
+    "alpha3_b": "tat",
+    "alpha2": "tt",
+    "name": "Tatar",
+    "name_french": "tatar"
+  },
+  {
+    "alpha3_b": "tel",
+    "alpha2": "te",
+    "name": "Telugu",
+    "name_french": "télougou"
+  },
+  {
+    "alpha3_b": "tem",
+    "name": "Timne",
+    "name_french": "temne"
+  },
+  {
+    "alpha3_b": "ter",
+    "name": "Tereno",
+    "name_french": "tereno"
+  },
+  {
+    "alpha3_b": "tet",
+    "name": "Tetum",
+    "name_french": "tetum"
+  },
+  {
+    "alpha3_b": "tgk",
+    "alpha2": "tg",
+    "name": "Tajik",
+    "name_french": "tadjik"
+  },
+  {
+    "alpha3_b": "tgl",
+    "alpha2": "tl",
+    "name": "Tagalog",
+    "name_french": "tagalog"
+  },
+  {
+    "alpha3_b": "tha",
+    "alpha2": "th",
+    "name": "Thai",
+    "name_french": "thaï"
+  },
+  {
+    "alpha3_b": "tib",
+    "alpha3_t": "bod",
+    "alpha2": "bo",
+    "name": "Tibetan",
+    "name_french": "tibétain"
+  },
+  {
+    "alpha3_b": "tig",
+    "name": "Tigre",
+    "name_french": "tigré"
+  },
+  {
+    "alpha3_b": "tir",
+    "alpha2": "ti",
+    "name": "Tigrinya",
+    "name_french": "tigrigna"
+  },
+  {
+    "alpha3_b": "tiv",
+    "name": "Tiv",
+    "name_french": "tiv"
+  },
+  {
+    "alpha3_b": "tkl",
+    "name": "Tokelau",
+    "name_french": "tokelau"
+  },
+  {
+    "alpha3_b": "tlh",
+    "name": "Klingon; tlhIngan-Hol",
+    "name_french": "klingon"
+  },
+  {
+    "alpha3_b": "tli",
+    "name": "Tlingit",
+    "name_french": "tlingit"
+  },
+  {
+    "alpha3_b": "tmh",
+    "name": "Tamashek",
+    "name_french": "tamacheq"
+  },
+  {
+    "alpha3_b": "tog",
+    "name": "Tonga (Nyasa)",
+    "name_french": "tonga (Nyasa)"
+  },
+  {
+    "alpha3_b": "ton",
+    "alpha2": "to",
+    "name": "Tonga (Tonga Islands)",
+    "name_french": "tongan (Îles Tonga)"
+  },
+  {
+    "alpha3_b": "tpi",
+    "name": "Tok Pisin",
+    "name_french": "tok pisin"
+  },
+  {
+    "alpha3_b": "tsi",
+    "name": "Tsimshian",
+    "name_french": "tsimshian"
+  },
+  {
+    "alpha3_b": "tsn",
+    "alpha2": "tn",
+    "name": "Tswana",
+    "name_french": "tswana"
+  },
+  {
+    "alpha3_b": "tso",
+    "alpha2": "ts",
+    "name": "Tsonga",
+    "name_french": "tsonga"
+  },
+  {
+    "alpha3_b": "tuk",
+    "alpha2": "tk",
+    "name": "Turkmen",
+    "name_french": "turkmène"
+  },
+  {
+    "alpha3_b": "tum",
+    "name": "Tumbuka",
+    "name_french": "tumbuka"
+  },
+  {
+    "alpha3_b": "tup",
+    "name": "Tupi languages",
+    "name_french": "tupi, langues"
+  },
+  {
+    "alpha3_b": "tur",
+    "alpha2": "tr",
+    "name": "Turkish",
+    "name_french": "turc"
+  },
+  {
+    "alpha3_b": "tut",
+    "name": "Altaic languages",
+    "name_french": "altaïques, langues"
+  },
+  {
+    "alpha3_b": "tvl",
+    "name": "Tuvalu",
+    "name_french": "tuvalu"
+  },
+  {
+    "alpha3_b": "twi",
+    "alpha2": "tw",
+    "name": "Twi",
+    "name_french": "twi"
+  },
+  {
+    "alpha3_b": "tyv",
+    "name": "Tuvinian",
+    "name_french": "touva"
+  },
+  {
+    "alpha3_b": "udm",
+    "name": "Udmurt",
+    "name_french": "oudmourte"
+  },
+  {
+    "alpha3_b": "uga",
+    "name": "Ugaritic",
+    "name_french": "ougaritique"
+  },
+  {
+    "alpha3_b": "uig",
+    "alpha2": "ug",
+    "name": "Uighur; Uyghur",
+    "name_french": "ouïgour"
+  },
+  {
+    "alpha3_b": "ukr",
+    "alpha2": "uk",
+    "name": "Ukrainian",
+    "name_french": "ukrainien"
+  },
+  {
+    "alpha3_b": "umb",
+    "name": "Umbundu",
+    "name_french": "umbundu"
+  },
+  {
+    "alpha3_b": "und",
+    "name": "Undetermined",
+    "name_french": "indéterminée"
+  },
+  {
+    "alpha3_b": "urd",
+    "alpha2": "ur",
+    "name": "Urdu",
+    "name_french": "ourdou"
+  },
+  {
+    "alpha3_b": "uzb",
+    "alpha2": "uz",
+    "name": "Uzbek",
+    "name_french": "ouszbek"
+  },
+  {
+    "alpha3_b": "vai",
+    "name": "Vai",
+    "name_french": "vaï"
+  },
+  {
+    "alpha3_b": "ven",
+    "alpha2": "ve",
+    "name": "Venda",
+    "name_french": "venda"
+  },
+  {
+    "alpha3_b": "vie",
+    "alpha2": "vi",
+    "name": "Vietnamese",
+    "name_french": "vietnamien"
+  },
+  {
+    "alpha3_b": "vol",
+    "alpha2": "vo",
+    "name": "Volapük",
+    "name_french": "volapük"
+  },
+  {
+    "alpha3_b": "vot",
+    "name": "Votic",
+    "name_french": "vote"
+  },
+  {
+    "alpha3_b": "wak",
+    "name": "Wakashan languages",
+    "name_french": "wakashanes, langues"
+  },
+  {
+    "alpha3_b": "wal",
+    "name": "Wolaitta; Wolaytta",
+    "name_french": "wolaitta; wolaytta"
+  },
+  {
+    "alpha3_b": "war",
+    "name": "Waray",
+    "name_french": "waray"
+  },
+  {
+    "alpha3_b": "was",
+    "name": "Washo",
+    "name_french": "washo"
+  },
+  {
+    "alpha3_b": "wel",
+    "alpha3_t": "cym",
+    "alpha2": "cy",
+    "name": "Welsh",
+    "name_french": "gallois"
+  },
+  {
+    "alpha3_b": "wen",
+    "name": "Sorbian languages",
+    "name_french": "sorabes, langues"
+  },
+  {
+    "alpha3_b": "wln",
+    "alpha2": "wa",
+    "name": "Walloon",
+    "name_french": "wallon"
+  },
+  {
+    "alpha3_b": "wol",
+    "alpha2": "wo",
+    "name": "Wolof",
+    "name_french": "wolof"
+  },
+  {
+    "alpha3_b": "xal",
+    "name": "Kalmyk; Oirat",
+    "name_french": "kalmouk; oïrat"
+  },
+  {
+    "alpha3_b": "xho",
+    "alpha2": "xh",
+    "name": "Xhosa",
+    "name_french": "xhosa"
+  },
+  {
+    "alpha3_b": "yao",
+    "name": "Yao",
+    "name_french": "yao"
+  },
+  {
+    "alpha3_b": "yap",
+    "name": "Yapese",
+    "name_french": "yapois"
+  },
+  {
+    "alpha3_b": "yid",
+    "alpha2": "yi",
+    "name": "Yiddish",
+    "name_french": "yiddish"
+  },
+  {
+    "alpha3_b": "yor",
+    "alpha2": "yo",
+    "name": "Yoruba",
+    "name_french": "yoruba"
+  },
+  {
+    "alpha3_b": "ypk",
+    "name": "Yupik languages",
+    "name_french": "yupik, langues"
+  },
+  {
+    "alpha3_b": "zap",
+    "name": "Zapotec",
+    "name_french": "zapotèque"
+  },
+  {
+    "alpha3_b": "zbl",
+    "name": "Blissymbols; Blissymbolics; Bliss",
+    "name_french": "symboles Bliss; Bliss"
+  },
+  {
+    "alpha3_b": "zen",
+    "name": "Zenaga",
+    "name_french": "zenaga"
+  },
+  {
+    "alpha3_b": "zgh",
+    "name": "Standard Moroccan Tamazight",
+    "name_french": "amazighe standard marocain"
+  },
+  {
+    "alpha3_b": "zha",
+    "alpha2": "za",
+    "name": "Zhuang; Chuang",
+    "name_french": "zhuang; chuang"
+  },
+  {
+    "alpha3_b": "znd",
+    "name": "Zande languages",
+    "name_french": "zandé, langues"
+  },
+  {
+    "alpha3_b": "zul",
+    "alpha2": "zu",
+    "name": "Zulu",
+    "name_french": "zoulou"
+  },
+  {
+    "alpha3_b": "zun",
+    "name": "Zuni",
+    "name_french": "zuni"
+  },
+  {
+    "alpha3_b": "zxx",
+    "name": "No linguistic content; Not applicable",
+    "name_french": "pas de contenu linguistique; non applicable"
+  },
+  {
+    "alpha3_b": "zza",
+    "name": "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki",
+    "name_french": "zaza; dimili; dimli; kirdki; kirmanjki; zazaki"
+  }
+]

@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
-  "dataset_count": 180,
-  "entry_total": 5819,
+  "dataset_count": 181,
+  "entry_total": 6307,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -23,7 +23,7 @@
     "geo": 5,
     "hardware": 1,
     "i18n": 2,
-    "iso": 7,
+    "iso": 8,
     "keyboard": 3,
     "lgbtq": 9,
     "linux": 8,
@@ -866,6 +866,22 @@
       "description": "A growing collection of structured JSON resources for recurring use in projects."
     },
     {
+      "path": "iso/639-2/languages.json",
+      "category": "iso",
+      "kind": "list",
+      "count": 487,
+      "fields": [
+        "alpha2",
+        "alpha3_b",
+        "alpha3_t",
+        "name",
+        "name_french"
+      ],
+      "has_source": false,
+      "readme": "iso/639-2/Readme.MD",
+      "description": "The complete ISO 639-2 set of three-letter language codes (Library of Congress registration authority) — 487 entries covering individual languages, collective codes (e.g. `bat` Baltic languages), and special codes (`und` Undetermined, `mul` Multiple, `zxx` No linguistic content)."
+    },
+    {
       "path": "iso/724/metric-threads.json",
       "category": "iso",
       "kind": "wrapped-list",
@@ -1448,7 +1464,7 @@
       "path": "meta/corrections.json",
       "category": "meta",
       "kind": "wrapped-list",
-      "count": 7,
+      "count": 8,
       "fields": [
         "corrections",
         "description",

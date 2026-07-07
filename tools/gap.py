@@ -62,6 +62,7 @@ CARDINALITY = {
     "geo/currencies/currencies.json":            (159, "circulating ISO 4217 currencies (excl. XAU/XAG precious-metal & fund codes)"),
     "iso/15924/scripts.json":                    (226, "all ISO 15924 codes incl. aliases, special & reserved"),
     "i18n/languages/languages.json":             (184, "184 ISO 639-1 assigned codes"),
+    "iso/639-2/languages.json":                  (487, "all ISO 639-2 codes (LoC), incl. B/T, collective & special"),
     "security/owasp-top10/owasp-top10.json":     (10,  "OWASP Top 10 categories"),
     "iso/216/paper-sizes.json":                  (3,   "A/B/C series"),
     "web/http/methods.json":                     (9,   "9 standard HTTP methods (RFC 9110/5789)"),
