@@ -2,7 +2,7 @@
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
   "dataset_count": 171,
-  "entry_total": 5009,
+  "entry_total": 5041,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -765,7 +765,7 @@
       "path": "i18n/languages/languages.json",
       "category": "i18n",
       "kind": "list",
-      "count": 152,
+      "count": 183,
       "fields": [
         "direction",
         "iso639_1",
@@ -801,7 +801,7 @@
       "path": "iso/15924/scripts.json",
       "category": "iso",
       "kind": "list",
-      "count": 54,
+      "count": 55,
       "fields": [
         "code",
         "direction",

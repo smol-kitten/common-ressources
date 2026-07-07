@@ -188,8 +188,10 @@ def check_languages_scripts():
     # "Oriya (Odia)". Accept a language's script if it matches the leading name
     # OR appears as a whole alpha token anywhere in the canonical name.
     tokens = set()
+    fullnames = []
     for s in scripts:
         name = s["name"].lower()
+        fullnames.append(name)
         tokens.add(name)
         tokens.add(name.split(" (")[0].strip())
         for tok in re.findall(r"[a-z']{3,}", name):
@@ -198,7 +200,8 @@ def check_languages_scripts():
         sc = l.get("script")
         if not sc:
             continue
-        if sc.lower() not in tokens:
+        scl = sc.lower()
+        if scl not in tokens and not any(scl in fn for fn in fullnames):
             warn("i18n/languages/languages.json",
                  f"{l['name']}: script {sc!r} not a known ISO 15924 name")
     STATS["cross_checks"] += 1

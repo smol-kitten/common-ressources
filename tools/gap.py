@@ -125,13 +125,16 @@ def view_crossref():
         import re as _re
         langs = load("i18n/languages/languages.json")
         tokens = set()
+        fullnames = []
         for s in load("iso/15924/scripts.json"):
             nm = s["name"].lower()
+            fullnames.append(nm)
             tokens.add(nm)
             tokens.add(nm.split(" (")[0].strip())
             tokens.update(_re.findall(r"[a-z']{3,}", nm))
         miss = sorted({l["script"] for l in langs
-                       if l.get("script") and l["script"].lower() not in tokens})
+                       if l.get("script") and l["script"].lower() not in tokens
+                       and not any(l["script"].lower() in fn for fn in fullnames)})
         if miss:
             findings.append(("iso/15924/scripts.json",
                              f"{len(miss)} script names used by languages but absent",

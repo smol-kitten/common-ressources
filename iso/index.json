@@ -8,7 +8,12 @@
       "canonical": true,
       "file": "iso/216/paper-sizes.json",
       "cross_reference": null,
-      "series": ["A (office/print)", "B (posters/books)", "C (envelopes)", "US/ANSI (non-ISO)"]
+      "series": [
+        "A (office/print)",
+        "B (posters/books)",
+        "C (envelopes)",
+        "US/ANSI (non-ISO)"
+      ]
     },
     {
       "iso": "ISO 724 / ISO 261",
@@ -17,7 +22,12 @@
       "canonical": true,
       "file": "iso/724/metric-threads.json",
       "cross_reference": null,
-      "related": ["ISO 898 (mechanical properties)", "ISO 965 (tolerances)", "ISO 4762 (hex socket cap screws)", "ISO 4032 (hex nuts)"],
+      "related": [
+        "ISO 898 (mechanical properties)",
+        "ISO 965 (tolerances)",
+        "ISO 4762 (hex socket cap screws)",
+        "ISO 4032 (hex nuts)"
+      ],
       "entry_count_approx": 33
     },
     {
@@ -26,8 +36,15 @@
       "description": "Two-letter (639-1) and three-letter (639-2) language codes covering ~140 languages with script, direction, and native-name metadata.",
       "canonical": false,
       "cross_reference": "i18n/languages/languages.json",
-      "fields": ["iso639_1", "iso639_2", "name", "native", "direction", "script"],
-      "entry_count_approx": 140
+      "fields": [
+        "iso639_1",
+        "iso639_2",
+        "name",
+        "native",
+        "direction",
+        "script"
+      ],
+      "entry_count_approx": 152
     },
     {
       "iso": "ISO 3166-1",
@@ -35,17 +52,33 @@
       "description": "Alpha-2, alpha-3, and numeric codes for countries with capital city, continent, dial code, and currency.",
       "canonical": false,
       "cross_reference": "geo/countries/countries.json",
-      "fields": ["iso2", "iso3", "name", "capital", "continent", "dial_code", "currency_code"],
-      "entry_count_approx": 25
+      "fields": [
+        "iso2",
+        "iso3",
+        "name",
+        "capital",
+        "continent",
+        "dial_code",
+        "currency_code",
+        "population_approx"
+      ],
+      "entry_count_approx": 197
     },
     {
       "iso": "ISO 4217",
       "title": "Codes for the representation of currencies",
-      "description": "Three-letter currency codes and numeric codes with symbol and decimal places.",
+      "description": "Three-letter currency codes with common symbol, decimal (minor-unit) precision, and primary issuing country.",
       "canonical": false,
       "cross_reference": "geo/currencies/currencies.json",
-      "fields": ["code", "numeric", "name", "symbol", "decimals"],
-      "entry_count_approx": 40
+      "fields": [
+        "code",
+        "name",
+        "symbol",
+        "decimals",
+        "country",
+        "country_code"
+      ],
+      "entry_count_approx": 147
     },
     {
       "iso": "ISO 8601-1:2019 / ISO 8601-2:2019",
@@ -54,7 +87,15 @@
       "canonical": true,
       "file": "iso/8601/formats.json",
       "cross_reference": null,
-      "topics": ["calendar date", "time of day", "timezone offsets", "combined datetime", "duration (PnYnMnD)", "time intervals", "recurring intervals"]
+      "topics": [
+        "calendar date",
+        "time of day",
+        "timezone offsets",
+        "combined datetime",
+        "duration (PnYnMnD)",
+        "time intervals",
+        "recurring intervals"
+      ]
     },
     {
       "iso": "ISO 10383",
@@ -62,7 +103,17 @@
       "description": "Market Identification Codes for 22 major stock exchanges with trading hours, currency, and timezone.",
       "canonical": false,
       "cross_reference": "finance/stock-exchanges/stock-exchanges.json",
-      "fields": ["mic", "name", "acronym", "country", "city", "currency", "timezone", "open", "close"],
+      "fields": [
+        "mic",
+        "name",
+        "acronym",
+        "country",
+        "city",
+        "currency",
+        "timezone",
+        "open",
+        "close"
+      ],
       "entry_count_approx": 22
     },
     {
@@ -72,7 +123,15 @@
       "canonical": true,
       "file": "iso/15924/scripts.json",
       "cross_reference": null,
-      "fields": ["code", "name", "numeric", "direction", "unicode_range", "languages", "status"],
+      "fields": [
+        "code",
+        "name",
+        "numeric",
+        "direction",
+        "unicode_range",
+        "languages",
+        "status"
+      ],
       "entry_count_approx": 54
     },
     {
@@ -82,7 +141,10 @@
       "canonical": true,
       "file": "iso/27001/controls.json",
       "cross_reference": null,
-      "related": ["ISO/IEC 27002:2022 (implementation guidance)", "ISO/IEC 27005 (risk management)"],
+      "related": [
+        "ISO/IEC 27002:2022 (implementation guidance)",
+        "ISO/IEC 27005 (risk management)"
+      ],
       "entry_count_approx": 93
     },
     {
@@ -92,17 +154,44 @@
       "canonical": true,
       "file": "iso/9001/clauses.json",
       "cross_reference": null,
-      "related": ["ISO 9000:2015 (vocabulary)", "ISO 9004:2018 (guidance for sustained success)"],
+      "related": [
+        "ISO 9000:2015 (vocabulary)",
+        "ISO 9004:2018 (guidance for sustained success)"
+      ],
       "clause_count": 7,
       "subclause_count_approx": 25
     }
   ],
   "planned": [
-    { "iso": "ISO 3166-2", "title": "Country subdivision codes (states/provinces/regions)", "status": "not yet added" },
-    { "iso": "ISO 3166-3", "title": "Codes for formerly used country names",                "status": "not yet added" },
-    { "iso": "ISO 639-3",  "title": "Individual language codes (7000+ languages)",           "status": "not yet added" },
-    { "iso": "ISO 14001:2015", "title": "Environmental management systems requirements",     "status": "not yet added" },
-    { "iso": "ISO 45001:2018", "title": "OH&S management systems requirements",              "status": "not yet added" },
-    { "iso": "ISO 25010",  "title": "Software product quality model",                        "status": "not yet added" }
+    {
+      "iso": "ISO 3166-2",
+      "title": "Country subdivision codes (states/provinces/regions)",
+      "status": "not yet added"
+    },
+    {
+      "iso": "ISO 3166-3",
+      "title": "Codes for formerly used country names",
+      "status": "not yet added"
+    },
+    {
+      "iso": "ISO 639-3",
+      "title": "Individual language codes (7000+ languages)",
+      "status": "not yet added"
+    },
+    {
+      "iso": "ISO 14001:2015",
+      "title": "Environmental management systems requirements",
+      "status": "not yet added"
+    },
+    {
+      "iso": "ISO 45001:2018",
+      "title": "OH&S management systems requirements",
+      "status": "not yet added"
+    },
+    {
+      "iso": "ISO 25010",
+      "title": "Software product quality model",
+      "status": "not yet added"
+    }
   ]
 }
