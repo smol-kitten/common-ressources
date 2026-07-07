@@ -45,6 +45,14 @@
         "iso/15924/scripts.json"
       ],
       "corrections_count": 2
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (Anthropic model docs — models overview table)",
+      "files_checked": [
+        "ai/models.json"
+      ],
+      "corrections_count": 6
     }
   ],
   "corrections": [
@@ -327,6 +335,46 @@
       "new_value": 264,
       "reason": "ISO 15924 numeric code for Mroo (Mro) is 264, not 199",
       "source": "ISO 15924 (unicode.org/iso15924/iso15924.txt)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.5",
+      "field": "knowledge_cutoff",
+      "old_value": "2025-03",
+      "new_value": "2025-05",
+      "reason": "Anthropic docs list reliable knowledge cutoff May 2025 (revised)",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.5",
+      "field": "knowledge_cutoff",
+      "old_value": "2025-03",
+      "new_value": "2025-01",
+      "reason": "Anthropic docs list reliable knowledge cutoff Jan 2025",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Haiku 4.5",
+      "field": "knowledge_cutoff",
+      "old_value": "2025-03",
+      "new_value": "2025-02",
+      "reason": "Anthropic docs list reliable knowledge cutoff Feb 2025",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.6",
+      "field": "knowledge_cutoff",
+      "old_value": "2025-03",
+      "new_value": "2025-08",
+      "reason": "Anthropic docs list reliable knowledge cutoff Aug 2025 (revised)",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
     }
   ],
   "no_action_items": [

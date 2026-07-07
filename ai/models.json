@@ -7,7 +7,7 @@
     "api_id": "claude-opus-4-8",
     "context_window": 1000000,
     "max_output_tokens": 128000,
-    "knowledge_cutoff": null,
+    "knowledge_cutoff": "2026-01",
     "modalities": [
       "text",
       "vision"
@@ -35,7 +35,7 @@
     "api_id": "claude-opus-4-5",
     "context_window": 200000,
     "max_output_tokens": 64000,
-    "knowledge_cutoff": "2025-03",
+    "knowledge_cutoff": "2025-05",
     "modalities": [
       "text",
       "vision"
@@ -63,7 +63,7 @@
     "api_id": "claude-sonnet-4-5",
     "context_window": 200000,
     "max_output_tokens": 64000,
-    "knowledge_cutoff": "2025-03",
+    "knowledge_cutoff": "2025-01",
     "modalities": [
       "text",
       "vision"
@@ -91,7 +91,7 @@
     "api_id": "claude-haiku-4-5-20251001",
     "context_window": 200000,
     "max_output_tokens": 64000,
-    "knowledge_cutoff": "2025-03",
+    "knowledge_cutoff": "2025-02",
     "modalities": [
       "text",
       "vision"
@@ -601,7 +601,7 @@
     "api_id": "claude-sonnet-4-6",
     "context_window": 1000000,
     "max_output_tokens": 64000,
-    "knowledge_cutoff": "2025-03",
+    "knowledge_cutoff": "2025-08",
     "modalities": [
       "text",
       "vision"
