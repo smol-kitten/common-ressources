@@ -288,6 +288,28 @@ def check_geo_crossref():
     STATS["cross_checks"] += 1
 
 
+def check_locales():
+    """BCP 47-style locale codes must decompose into a known language + region."""
+    try:
+        locales = load("i18n/locales/locales.json")
+    except FileNotFoundError:
+        return
+    langs = {l["iso639_1"] for l in load("i18n/languages/languages.json") if l.get("iso639_1")}
+    iso2 = {c["iso2"] for c in load("geo/countries/countries.json") if c.get("iso2")}
+    for loc in locales:
+        code = loc.get("code", "")
+        if not re.match(r"^[a-z]{2}-[A-Z]{2}$", code):
+            warn("i18n/locales/locales.json", f"unusual locale code {code!r}")
+        lc, rc = loc.get("language_code"), loc.get("region_code")
+        if lc and lc not in langs:
+            warn("i18n/locales/locales.json", f"{code}: language_code {lc} not in languages.json")
+        if rc and rc not in iso2:
+            warn("i18n/locales/locales.json", f"{code}: region_code {rc} not in countries.json")
+        if lc and rc and code and code != f"{lc}-{rc}":
+            err("i18n/locales/locales.json", f"code {code} != {lc}-{rc}")
+    STATS["cross_checks"] += 1
+
+
 def check_formats():
     """Regex / range sanity on well-specified code fields."""
     try:
@@ -343,7 +365,7 @@ def main():
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
                check_timezones, check_elements, check_planets, check_http_status,
-               check_geo_crossref, check_formats):
+               check_geo_crossref, check_locales, check_formats):
         try:
             fn()
         except FileNotFoundError:
