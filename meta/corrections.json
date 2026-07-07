@@ -21,6 +21,14 @@
         "geo/currencies/currencies.json"
       ],
       "corrections_count": 5
+    },
+    {
+      "date": "2026-07-07",
+      "method": "Anthropic model documentation (platform.claude.com models overview)",
+      "files_checked": [
+        "ai/models.json"
+      ],
+      "corrections_count": 8
     }
   ],
   "corrections": [
@@ -203,6 +211,86 @@
       "new_value": 2,
       "reason": "ISO 4217 assigns IDR two minor units (exponent 2); previous value 0 did not match the standard the dataset follows",
       "source": "https://www.six-group.com/en/products-services/financial-information/data-standards.html"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.5",
+      "field": "name",
+      "old_value": "Claude Opus 4",
+      "new_value": "Claude Opus 4.5",
+      "reason": "Entry name did not match its api_id claude-opus-4-5, which is Claude Opus 4.5",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.5",
+      "field": "pricing.input_mtok",
+      "old_value": 15.0,
+      "new_value": 5.0,
+      "reason": "Opus 4.5-tier input price is $5/MTok; $15 was the older Opus 4/4.1 price",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.5",
+      "field": "pricing.output_mtok",
+      "old_value": 75.0,
+      "new_value": 25.0,
+      "reason": "Opus 4.5-tier output price is $25/MTok; $75 was the older Opus 4/4.1 price",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.5",
+      "field": "name",
+      "old_value": "Claude Sonnet 4",
+      "new_value": "Claude Sonnet 4.5",
+      "reason": "Entry name did not match its api_id claude-sonnet-4-5",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Haiku 4.5",
+      "field": "name",
+      "old_value": "Claude Haiku 4",
+      "new_value": "Claude Haiku 4.5",
+      "reason": "Entry name did not match its api_id claude-haiku-4-5",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.6",
+      "field": "context_window",
+      "old_value": 200000,
+      "new_value": 1000000,
+      "reason": "Claude Sonnet 4.6 has a 1M-token context window, not 200K",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.6",
+      "field": "max_output_tokens",
+      "old_value": 16000,
+      "new_value": 64000,
+      "reason": "Claude Sonnet 4.6 supports up to 64K output tokens",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Haiku 4.5",
+      "field": "max_output_tokens",
+      "old_value": 8192,
+      "new_value": 64000,
+      "reason": "Claude Haiku 4.5 supports up to 64K output tokens",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
     }
   ],
   "no_action_items": [
@@ -218,6 +306,13 @@
       "entry": "Indonesia (ID)",
       "note": "Capital Jakarta confirmed correct as of June 2026. Transfer to Nusantara has not yet been formally completed; targeted for 2028.",
       "source": "https://jakartaglobe.id/news/constitutional-court-confirms-jakarta-still-indonesias-capital-not-nusantara"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.8",
+      "note": "Added current flagship Claude Opus 4.8 (1M context, 128K output, $5/$25) — was missing from the dataset.",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
     }
   ]
 }

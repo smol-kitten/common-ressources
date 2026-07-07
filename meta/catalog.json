@@ -2,7 +2,7 @@
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
   "dataset_count": 172,
-  "entry_total": 5123,
+  "entry_total": 5125,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -85,7 +85,7 @@
       "path": "ai/models.json",
       "category": "ai",
       "kind": "list",
-      "count": 31,
+      "count": 32,
       "fields": [
         "api_id",
         "capabilities",
@@ -1410,7 +1410,7 @@
       "path": "meta/corrections.json",
       "category": "meta",
       "kind": "wrapped-list",
-      "count": 2,
+      "count": 3,
       "fields": [
         "corrections",
         "description",

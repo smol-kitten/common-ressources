@@ -59,17 +59,26 @@ def find_record(data, entry):
 
 
 def get_field(rec, field):
-    """Resolve 'colors[1]' / 'mass' against a record. Returns (found, value)."""
-    m = re.match(r"^([\w-]+)\[(\d+)\]$", field)
-    if m:
-        base, idx = m.group(1), int(m.group(2))
-        if isinstance(rec, dict) and base in rec and isinstance(rec[base], list) \
-                and idx < len(rec[base]):
-            return True, rec[base][idx]
-        return False, None
-    if isinstance(rec, dict) and field in rec:
-        return True, rec[field]
-    return False, None
+    """Resolve a field path against a record. Returns (found, value).
+
+    Supports dotted nesting and array indices: 'mass', 'colors[1]',
+    'pricing.input_mtok', 'a.b[2].c'.
+    """
+    cur = rec
+    for seg in field.split("."):
+        m = re.match(r"^([\w-]+)(\[(\d+)\])?$", seg)
+        if not m:
+            return False, None
+        key = m.group(1)
+        if not isinstance(cur, dict) or key not in cur:
+            return False, None
+        cur = cur[key]
+        if m.group(3) is not None:
+            idx = int(m.group(3))
+            if not isinstance(cur, list) or idx >= len(cur):
+                return False, None
+            cur = cur[idx]
+    return True, cur
 
 
 def norm(v):
