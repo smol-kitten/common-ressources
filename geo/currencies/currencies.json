@@ -32,14 +32,6 @@
     "country_code": "AM"
   },
   {
-    "code": "ANG",
-    "name": "Netherlands Antillean Guilder",
-    "symbol": "ƒ",
-    "decimals": 2,
-    "country": "Curaçao and Sint Maarten",
-    "country_code": null
-  },
-  {
     "code": "AOA",
     "name": "Angolan Kwanza",
     "symbol": "Kz",
@@ -1190,6 +1182,14 @@
     "decimals": 2,
     "country": "Samoa",
     "country_code": "WS"
+  },
+  {
+    "code": "XAD",
+    "name": "Arab Accounting Dinar",
+    "symbol": "XAD",
+    "decimals": 2,
+    "country": "Arab Monetary Fund",
+    "country_code": null
   },
   {
     "code": "XAF",

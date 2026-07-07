@@ -100,23 +100,25 @@ CANON = {
     "ZAR": ("South African Rand", "R", 2), "ZMW": ("Zambian Kwacha", "ZK", 2),
     "ZWG": ("Zimbabwe Gold (ZiG)", "ZiG", 2),
     # ── territorial / dependency / special codes (not tied to a UN state) ──
-    "ANG": ("Netherlands Antillean Guilder", "ƒ", 2), "AWG": ("Aruban Florin", "ƒ", 2),
+    "AWG": ("Aruban Florin", "ƒ", 2),
     "BMD": ("Bermudian Dollar", "$", 2), "KYD": ("Cayman Islands Dollar", "$", 2),
     "FKP": ("Falkland Islands Pound", "£", 2), "GIP": ("Gibraltar Pound", "£", 2),
     "SHP": ("Saint Helena Pound", "£", 2), "GGP": ("Guernsey Pound", "£", 2),
     "JEP": ("Jersey Pound", "£", 2), "IMP": ("Isle of Man Pound", "£", 2),
     "XCG": ("Caribbean Guilder", "ƒ", 2), "XDR": ("IMF Special Drawing Rights", "SDR", 0),
+    "XAD": ("Arab Accounting Dinar", "XAD", 2),
 }
 
 # regional/territory issuers keyed for the REGION map
 REGION_EXTRA = {
-    "ANG": ("Curaçao and Sint Maarten", None), "AWG": ("Aruba", None),
+    "AWG": ("Aruba", None),
     "BMD": ("Bermuda", None), "KYD": ("Cayman Islands", None),
     "FKP": ("Falkland Islands", None), "GIP": ("Gibraltar", None),
     "SHP": ("Saint Helena, Ascension and Tristan da Cunha", None),
     "GGP": ("Guernsey", None), "JEP": ("Jersey", None), "IMP": ("Isle of Man", None),
     "XCG": ("Curaçao and Sint Maarten (Caribbean guilder)", None),
     "XDR": ("International Monetary Fund", None),
+    "XAD": ("Arab Monetary Fund", None),
 }
 
 # Currencies not tied to a single country in countries.json (supranational/regional).

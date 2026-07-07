@@ -29,6 +29,14 @@
         "ai/models.json"
       ],
       "corrections_count": 8
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (ISO 4217 amendments 176/179 via Wikipedia + SIX)",
+      "files_checked": [
+        "geo/currencies/currencies.json"
+      ],
+      "corrections_count": 0
     }
   ],
   "corrections": [
@@ -313,6 +321,27 @@
       "entry": "Claude Opus 4.8",
       "note": "Added current flagship Claude Opus 4.8 (1M context, 128K output, $5/$25) — was missing from the dataset.",
       "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/currencies/currencies.json",
+      "entry": "ANG",
+      "note": "Removed Netherlands Antillean Guilder (ANG) — withdrawn 2025-03-31 (ISO 4217 Amendment 176) and replaced by the Caribbean Guilder (XCG), which is present.",
+      "source": "https://en.wikipedia.org/wiki/ISO_4217"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/currencies/currencies.json",
+      "entry": "XAD",
+      "note": "Added Arab Accounting Dinar (XAD, numeric 396, minor unit 2) for the Arab Monetary Fund — effective 2025-05-12 (ISO 4217 Amendment 179).",
+      "source": "https://en.wikipedia.org/wiki/ISO_4217"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Bulgaria",
+      "note": "Bulgaria currency_code EUR confirmed current — acceded to the euro area 2026-01-01 (ISO 4217 Amendment 180); BGN moved to historical status.",
+      "source": "https://en.wikipedia.org/wiki/ISO_4217"
     }
   ]
 }
