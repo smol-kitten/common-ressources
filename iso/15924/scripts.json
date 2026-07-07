@@ -25,6 +25,15 @@
     "status": "living"
   },
   {
+    "code": "Armi",
+    "name": "Imperial Aramaic",
+    "numeric": 124,
+    "direction": "rtl",
+    "unicode_range": "U+10840–U+1085F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Armn",
     "name": "Armenian",
     "numeric": 230,
@@ -103,6 +112,15 @@
     "status": "living"
   },
   {
+    "code": "Brah",
+    "name": "Brahmi",
+    "numeric": 300,
+    "direction": "ltr",
+    "unicode_range": "U+11000–U+1107F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Bugi",
     "name": "Buginese",
     "numeric": 367,
@@ -147,6 +165,15 @@
       "oj"
     ],
     "status": "living"
+  },
+  {
+    "code": "Cari",
+    "name": "Carian",
+    "numeric": 201,
+    "direction": "ltr",
+    "unicode_range": "U+102A0–U+102DF",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Cham",
@@ -228,6 +255,15 @@
     "languages": [
       "en"
     ],
+    "status": "historic"
+  },
+  {
+    "code": "Egyp",
+    "name": "Egyptian Hieroglyphs",
+    "numeric": 50,
+    "direction": "ltr",
+    "unicode_range": "U+13000–U+1342F",
+    "languages": [],
     "status": "historic"
   },
   {
@@ -385,6 +421,33 @@
     "status": "living"
   },
   {
+    "code": "Hluw",
+    "name": "Anatolian Hieroglyphs",
+    "numeric": 80,
+    "direction": "ltr",
+    "unicode_range": "U+14400–U+1467F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Hung",
+    "name": "Old Hungarian",
+    "numeric": 176,
+    "direction": "rtl",
+    "unicode_range": "U+10C80–U+10CFF",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Ital",
+    "name": "Old Italic",
+    "numeric": 210,
+    "direction": "ltr",
+    "unicode_range": "U+10300–U+1032F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Java",
     "name": "Javanese",
     "numeric": 361,
@@ -427,6 +490,15 @@
       "ja"
     ],
     "status": "living"
+  },
+  {
+    "code": "Khar",
+    "name": "Kharoshthi",
+    "numeric": 305,
+    "direction": "rtl",
+    "unicode_range": "U+10A00–U+10A5F",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Khmr",
@@ -525,6 +597,15 @@
     "status": "living"
   },
   {
+    "code": "Lina",
+    "name": "Linear A",
+    "numeric": 400,
+    "direction": "ltr",
+    "unicode_range": "U+10600–U+1077F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Linb",
     "name": "Linear B",
     "numeric": 401,
@@ -545,6 +626,24 @@
     "status": "living"
   },
   {
+    "code": "Lyci",
+    "name": "Lycian",
+    "numeric": 202,
+    "direction": "ltr",
+    "unicode_range": "U+10280–U+1029F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Lydi",
+    "name": "Lydian",
+    "numeric": 116,
+    "direction": "rtl",
+    "unicode_range": "U+10920–U+1093F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Mand",
     "name": "Mandaic",
     "numeric": 140,
@@ -554,6 +653,24 @@
       "mid"
     ],
     "status": "living"
+  },
+  {
+    "code": "Mani",
+    "name": "Manichaean",
+    "numeric": 139,
+    "direction": "rtl",
+    "unicode_range": "U+10AC0–U+10AFF",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Mero",
+    "name": "Meroitic Hieroglyphs",
+    "numeric": 100,
+    "direction": "rtl",
+    "unicode_range": "U+10980–U+1099F",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Mlym",
@@ -600,6 +717,15 @@
     "status": "living"
   },
   {
+    "code": "Nbat",
+    "name": "Nabataean",
+    "numeric": 159,
+    "direction": "rtl",
+    "unicode_range": "U+10880–U+108AF",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Newa",
     "name": "Newa",
     "numeric": 333,
@@ -640,6 +766,15 @@
     "status": "living"
   },
   {
+    "code": "Orkh",
+    "name": "Old Turkic",
+    "numeric": 175,
+    "direction": "rtl",
+    "unicode_range": "U+10C00–U+10C4F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Orya",
     "name": "Oriya (Odia)",
     "numeric": 327,
@@ -673,6 +808,51 @@
     "status": "living"
   },
   {
+    "code": "Palm",
+    "name": "Palmyrene",
+    "numeric": 126,
+    "direction": "rtl",
+    "unicode_range": "U+10860–U+1087F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Perm",
+    "name": "Old Permic",
+    "numeric": 227,
+    "direction": "ltr",
+    "unicode_range": "U+10350–U+1037F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Phag",
+    "name": "Phags-pa",
+    "numeric": 331,
+    "direction": "ttb",
+    "unicode_range": "U+A840–U+A87F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Phli",
+    "name": "Inscriptional Pahlavi",
+    "numeric": 131,
+    "direction": "rtl",
+    "unicode_range": "U+10B60–U+10B7F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Phnx",
+    "name": "Phoenician",
+    "numeric": 115,
+    "direction": "rtl",
+    "unicode_range": "U+10900–U+1091F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Plrd",
     "name": "Miao (Pollard)",
     "numeric": 282,
@@ -682,6 +862,15 @@
       "hmd"
     ],
     "status": "living"
+  },
+  {
+    "code": "Prti",
+    "name": "Inscriptional Parthian",
+    "numeric": 130,
+    "direction": "rtl",
+    "unicode_range": "U+10B40–U+10B5F",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Rjng",
@@ -724,6 +913,15 @@
       "smp"
     ],
     "status": "living"
+  },
+  {
+    "code": "Sarb",
+    "name": "Old South Arabian",
+    "numeric": 105,
+    "direction": "rtl",
+    "unicode_range": "U+10A60–U+10A7F",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Saur",
@@ -911,6 +1109,15 @@
     "status": "living"
   },
   {
+    "code": "Ugar",
+    "name": "Ugaritic",
+    "numeric": 40,
+    "direction": "ltr",
+    "unicode_range": "U+10380–U+1039F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Vaii",
     "name": "Vai",
     "numeric": 470,
@@ -920,6 +1127,24 @@
       "vai"
     ],
     "status": "living"
+  },
+  {
+    "code": "Xpeo",
+    "name": "Old Persian",
+    "numeric": 30,
+    "direction": "ltr",
+    "unicode_range": "U+103A0–U+103DF",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Xsux",
+    "name": "Cuneiform (Sumero-Akkadian)",
+    "numeric": 20,
+    "direction": "ltr",
+    "unicode_range": "U+12000–U+123FF",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Yiii",
