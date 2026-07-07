@@ -58,6 +58,28 @@
     "status": "living"
   },
   {
+    "code": "Bamu",
+    "name": "Bamum",
+    "numeric": 435,
+    "direction": "ltr",
+    "unicode_range": "U+A6A0–U+A6FF",
+    "languages": [
+      "bax"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Batk",
+    "name": "Batak",
+    "numeric": 365,
+    "direction": "ltr",
+    "unicode_range": "U+1BC0–U+1BFF",
+    "languages": [
+      "bbc"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Beng",
     "name": "Bengali (Bangla)",
     "numeric": 325,
@@ -81,6 +103,39 @@
     "status": "living"
   },
   {
+    "code": "Bugi",
+    "name": "Buginese",
+    "numeric": 367,
+    "direction": "ltr",
+    "unicode_range": "U+1A00–U+1A1F",
+    "languages": [
+      "bug"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Buhd",
+    "name": "Buhid",
+    "numeric": 372,
+    "direction": "ltr",
+    "unicode_range": "U+1740–U+175F",
+    "languages": [
+      "bku"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Cakm",
+    "name": "Chakma",
+    "numeric": 349,
+    "direction": "ltr",
+    "unicode_range": "U+11100–U+1114F",
+    "languages": [
+      "ccp"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Cans",
     "name": "Unified Canadian Aboriginal Syllabics",
     "numeric": 440,
@@ -94,6 +149,17 @@
     "status": "living"
   },
   {
+    "code": "Cham",
+    "name": "Cham",
+    "numeric": 358,
+    "direction": "ltr",
+    "unicode_range": "U+AA00–U+AA5F",
+    "languages": [
+      "cja"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Cher",
     "name": "Cherokee",
     "numeric": 445,
@@ -103,6 +169,17 @@
       "chr"
     ],
     "status": "living"
+  },
+  {
+    "code": "Copt",
+    "name": "Coptic",
+    "numeric": 204,
+    "direction": "ltr",
+    "unicode_range": "U+2C80–U+2CFF",
+    "languages": [
+      "cop"
+    ],
+    "status": "historic"
   },
   {
     "code": "Cprt",
@@ -252,6 +329,17 @@
     "status": "living"
   },
   {
+    "code": "Hano",
+    "name": "Hanunoo",
+    "numeric": 371,
+    "direction": "ltr",
+    "unicode_range": "U+1720–U+173F",
+    "languages": [
+      "hnn"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Hans",
     "name": "Han (Simplified)",
     "numeric": 501,
@@ -297,6 +385,17 @@
     "status": "living"
   },
   {
+    "code": "Java",
+    "name": "Javanese",
+    "numeric": 361,
+    "direction": "ltr",
+    "unicode_range": "U+A980–U+A9DF",
+    "languages": [
+      "jav"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Jpan",
     "name": "Japanese (alias for Han+Hiragana+Katakana)",
     "numeric": 413,
@@ -304,6 +403,17 @@
     "unicode_range": "mixed",
     "languages": [
       "ja"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Kali",
+    "name": "Kayah Li",
+    "numeric": 357,
+    "direction": "ltr",
+    "unicode_range": "U+A900–U+A92F",
+    "languages": [
+      "eky"
     ],
     "status": "living"
   },
@@ -352,6 +462,17 @@
     "status": "living"
   },
   {
+    "code": "Lana",
+    "name": "Tai Tham",
+    "numeric": 351,
+    "direction": "ltr",
+    "unicode_range": "U+1A20–U+1AAF",
+    "languages": [
+      "nod"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Laoo",
     "name": "Lao",
     "numeric": 356,
@@ -382,6 +503,28 @@
     "status": "living"
   },
   {
+    "code": "Lepc",
+    "name": "Lepcha",
+    "numeric": 335,
+    "direction": "ltr",
+    "unicode_range": "U+1C00–U+1C4F",
+    "languages": [
+      "lep"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Limb",
+    "name": "Limbu",
+    "numeric": 336,
+    "direction": "ltr",
+    "unicode_range": "U+1900–U+194F",
+    "languages": [
+      "lif"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Linb",
     "name": "Linear B",
     "numeric": 401,
@@ -389,6 +532,28 @@
     "unicode_range": "U+10000–U+1007F",
     "languages": [],
     "status": "historic"
+  },
+  {
+    "code": "Lisu",
+    "name": "Lisu (Fraser)",
+    "numeric": 399,
+    "direction": "ltr",
+    "unicode_range": "U+A4D0–U+A4FF",
+    "languages": [
+      "lis"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Mand",
+    "name": "Mandaic",
+    "numeric": 140,
+    "direction": "rtl",
+    "unicode_range": "U+0840–U+085F",
+    "languages": [
+      "mid"
+    ],
+    "status": "living"
   },
   {
     "code": "Mlym",
@@ -413,6 +578,17 @@
     "status": "living"
   },
   {
+    "code": "Mtei",
+    "name": "Meitei Mayek",
+    "numeric": 337,
+    "direction": "ltr",
+    "unicode_range": "U+ABC0–U+ABFF",
+    "languages": [
+      "mni"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Mymr",
     "name": "Myanmar (Burmese)",
     "numeric": 350,
@@ -420,6 +596,17 @@
     "unicode_range": "U+1000–U+109F",
     "languages": [
       "my"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Newa",
+    "name": "Newa",
+    "numeric": 333,
+    "direction": "ltr",
+    "unicode_range": "U+11400–U+1147F",
+    "languages": [
+      "new"
     ],
     "status": "living"
   },
@@ -442,6 +629,17 @@
     "status": "historic"
   },
   {
+    "code": "Olck",
+    "name": "Ol Chiki",
+    "numeric": 261,
+    "direction": "ltr",
+    "unicode_range": "U+1C50–U+1C7F",
+    "languages": [
+      "sat"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Orya",
     "name": "Oriya (Odia)",
     "numeric": 327,
@@ -453,6 +651,61 @@
     "status": "living"
   },
   {
+    "code": "Osge",
+    "name": "Osage",
+    "numeric": 219,
+    "direction": "ltr",
+    "unicode_range": "U+104B0–U+104FF",
+    "languages": [
+      "osa"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Osma",
+    "name": "Osmanya",
+    "numeric": 260,
+    "direction": "ltr",
+    "unicode_range": "U+10480–U+104AF",
+    "languages": [
+      "som"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Plrd",
+    "name": "Miao (Pollard)",
+    "numeric": 282,
+    "direction": "ltr",
+    "unicode_range": "U+16F00–U+16F9F",
+    "languages": [
+      "hmd"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Rjng",
+    "name": "Rejang",
+    "numeric": 363,
+    "direction": "ltr",
+    "unicode_range": "U+A930–U+A95F",
+    "languages": [
+      "rej"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Rohg",
+    "name": "Hanifi Rohingya",
+    "numeric": 167,
+    "direction": "rtl",
+    "unicode_range": "U+10D00–U+10D3F",
+    "languages": [
+      "rhg"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Runr",
     "name": "Runic",
     "numeric": 211,
@@ -460,6 +713,28 @@
     "unicode_range": "U+16A0–U+16FF",
     "languages": [],
     "status": "historic"
+  },
+  {
+    "code": "Samr",
+    "name": "Samaritan",
+    "numeric": 123,
+    "direction": "rtl",
+    "unicode_range": "U+0800–U+083F",
+    "languages": [
+      "smp"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Saur",
+    "name": "Saurashtra",
+    "numeric": 344,
+    "direction": "ltr",
+    "unicode_range": "U+A880–U+A8DF",
+    "languages": [
+      "saz"
+    ],
+    "status": "living"
   },
   {
     "code": "Shaw",
@@ -484,12 +759,67 @@
     "status": "living"
   },
   {
+    "code": "Sund",
+    "name": "Sundanese",
+    "numeric": 362,
+    "direction": "ltr",
+    "unicode_range": "U+1B80–U+1BBF",
+    "languages": [
+      "sun"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Sylo",
+    "name": "Syloti Nagri",
+    "numeric": 316,
+    "direction": "ltr",
+    "unicode_range": "U+A800–U+A82F",
+    "languages": [
+      "syl"
+    ],
+    "status": "living"
+  },
+  {
     "code": "Syrc",
     "name": "Syriac",
     "numeric": 135,
     "direction": "rtl",
     "unicode_range": "U+0700–U+074F",
     "languages": [],
+    "status": "living"
+  },
+  {
+    "code": "Tagb",
+    "name": "Tagbanwa",
+    "numeric": 373,
+    "direction": "ltr",
+    "unicode_range": "U+1760–U+177F",
+    "languages": [
+      "tbw"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Tale",
+    "name": "Tai Le",
+    "numeric": 353,
+    "direction": "ltr",
+    "unicode_range": "U+1950–U+197F",
+    "languages": [
+      "tdd"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Talu",
+    "name": "New Tai Lue",
+    "numeric": 354,
+    "direction": "ltr",
+    "unicode_range": "U+1980–U+19DF",
+    "languages": [
+      "khb"
+    ],
     "status": "living"
   },
   {
@@ -500,6 +830,17 @@
     "unicode_range": "U+0B80–U+0BFF",
     "languages": [
       "ta"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Tavt",
+    "name": "Tai Viet",
+    "numeric": 359,
+    "direction": "ltr",
+    "unicode_range": "U+AA80–U+AADF",
+    "languages": [
+      "tyz"
     ],
     "status": "living"
   },
@@ -524,6 +865,17 @@
       "ber"
     ],
     "status": "living"
+  },
+  {
+    "code": "Tglg",
+    "name": "Tagalog (Baybayin)",
+    "numeric": 370,
+    "direction": "ltr",
+    "unicode_range": "U+1700–U+171F",
+    "languages": [
+      "tgl"
+    ],
+    "status": "historic"
   },
   {
     "code": "Thaa",
@@ -555,6 +907,17 @@
     "unicode_range": "U+0F00–U+0FFF",
     "languages": [
       "bo"
+    ],
+    "status": "living"
+  },
+  {
+    "code": "Vaii",
+    "name": "Vai",
+    "numeric": 470,
+    "direction": "ltr",
+    "unicode_range": "U+A500–U+A63F",
+    "languages": [
+      "vai"
     ],
     "status": "living"
   },
