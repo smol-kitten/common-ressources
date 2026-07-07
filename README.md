@@ -105,7 +105,7 @@ Each entry includes definition, category, neopronoun flag, and related terms.
 ### Country Flags
 
 Simple stripe-based national flags using the same rendering schema as pride flags.  
-Covers horizontal and vertical stripe designs for ~23 countries across Europe, Africa, and the Americas.  
+Covers horizontal and vertical stripe designs for ~50 countries across Europe, Africa, the Americas, and beyond.  
 Flags with complex heraldic emblems or crosses are not included.
 
 [Info & Schema](/flags/countries/Readme.MD) · [flags.json](/flags/countries/flags.json)
