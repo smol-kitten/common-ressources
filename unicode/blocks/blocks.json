@@ -90,6 +90,15 @@
     "description": "Additional Cyrillic characters for minority languages of the former Soviet Union not covered by the main Cyrillic block."
   },
   {
+    "name": "Armenian",
+    "slug": "armenian",
+    "start": "U+0530",
+    "end": "U+058F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Armenian script/writing system."
+  },
+  {
     "name": "Hebrew",
     "slug": "hebrew",
     "start": "U+0590",
@@ -117,6 +126,15 @@
     "description": "The Syriac abjad script used for Classical Syriac and modern Neo-Aramaic dialects, written right-to-left."
   },
   {
+    "name": "Arabic Supplement",
+    "slug": "arabic-supplement",
+    "start": "U+0750",
+    "end": "U+077F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Arabic Supplement script/writing system."
+  },
+  {
     "name": "Thaana",
     "slug": "thaana",
     "start": "U+0780",
@@ -124,6 +142,60 @@
     "count": 64,
     "category": "scripts",
     "description": "The Thaana script used for writing the Dhivehi (Maldivian) language, written right-to-left."
+  },
+  {
+    "name": "NKo",
+    "slug": "nko",
+    "start": "U+07C0",
+    "end": "U+07FF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the NKo script/writing system."
+  },
+  {
+    "name": "Samaritan",
+    "slug": "samaritan",
+    "start": "U+0800",
+    "end": "U+083F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Samaritan script/writing system."
+  },
+  {
+    "name": "Mandaic",
+    "slug": "mandaic",
+    "start": "U+0840",
+    "end": "U+085F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Mandaic script/writing system."
+  },
+  {
+    "name": "Syriac Supplement",
+    "slug": "syriac-supplement",
+    "start": "U+0860",
+    "end": "U+086F",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Syriac Supplement script/writing system."
+  },
+  {
+    "name": "Arabic Extended-B",
+    "slug": "arabic-extended-b",
+    "start": "U+0870",
+    "end": "U+089F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Arabic Extended-B script/writing system."
+  },
+  {
+    "name": "Arabic Extended-A",
+    "slug": "arabic-extended-a",
+    "start": "U+08A0",
+    "end": "U+08FF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Arabic Extended-A script/writing system."
   },
   {
     "name": "Devanagari",
@@ -162,6 +234,15 @@
     "description": "The Gujarati script used for writing the Gujarati language spoken primarily in Gujarat state, India."
   },
   {
+    "name": "Oriya",
+    "slug": "oriya",
+    "start": "U+0B00",
+    "end": "U+0B7F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Oriya script/writing system."
+  },
+  {
     "name": "Tamil",
     "slug": "tamil",
     "start": "U+0B80",
@@ -198,6 +279,15 @@
     "description": "The Malayalam script for writing the Malayalam language spoken in Kerala state, India."
   },
   {
+    "name": "Sinhala",
+    "slug": "sinhala",
+    "start": "U+0D80",
+    "end": "U+0DFF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Sinhala script/writing system."
+  },
+  {
     "name": "Thai",
     "slug": "thai",
     "start": "U+0E00",
@@ -205,6 +295,42 @@
     "count": 128,
     "category": "scripts",
     "description": "The Thai script (Abugida) for writing the Thai language, including letters, vowel signs, tone marks, and digits."
+  },
+  {
+    "name": "Lao",
+    "slug": "lao",
+    "start": "U+0E80",
+    "end": "U+0EFF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Lao script/writing system."
+  },
+  {
+    "name": "Tibetan",
+    "slug": "tibetan",
+    "start": "U+0F00",
+    "end": "U+0FFF",
+    "count": 256,
+    "category": "scripts",
+    "description": "Unicode block for the Tibetan script/writing system."
+  },
+  {
+    "name": "Myanmar",
+    "slug": "myanmar",
+    "start": "U+1000",
+    "end": "U+109F",
+    "count": 160,
+    "category": "scripts",
+    "description": "Unicode block for the Myanmar script/writing system."
+  },
+  {
+    "name": "Georgian",
+    "slug": "georgian",
+    "start": "U+10A0",
+    "end": "U+10FF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Georgian script/writing system."
   },
   {
     "name": "Hangul Jamo",
@@ -225,6 +351,15 @@
     "description": "The Ethiopic (Ge'ez) script used for Amharic, Tigrinya, Oromo, and other languages of Ethiopia and Eritrea."
   },
   {
+    "name": "Ethiopic Supplement",
+    "slug": "ethiopic-supplement",
+    "start": "U+1380",
+    "end": "U+139F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Ethiopic Supplement script/writing system."
+  },
+  {
     "name": "Cherokee",
     "slug": "cherokee",
     "start": "U+13A0",
@@ -232,6 +367,69 @@
     "count": 96,
     "category": "scripts",
     "description": "The syllabary invented by Sequoyah for writing the Cherokee language, one of few indigenous North American scripts."
+  },
+  {
+    "name": "Unified Canadian Aboriginal Syllabics",
+    "slug": "unified-canadian-aboriginal-syllabics",
+    "start": "U+1400",
+    "end": "U+167F",
+    "count": 640,
+    "category": "scripts",
+    "description": "Unicode block for the Unified Canadian Aboriginal Syllabics script/writing system."
+  },
+  {
+    "name": "Ogham",
+    "slug": "ogham",
+    "start": "U+1680",
+    "end": "U+169F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Ogham script/writing system."
+  },
+  {
+    "name": "Runic",
+    "slug": "runic",
+    "start": "U+16A0",
+    "end": "U+16FF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Runic script/writing system."
+  },
+  {
+    "name": "Tagalog",
+    "slug": "tagalog",
+    "start": "U+1700",
+    "end": "U+171F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Tagalog script/writing system."
+  },
+  {
+    "name": "Hanunoo",
+    "slug": "hanunoo",
+    "start": "U+1720",
+    "end": "U+173F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Hanunoo script/writing system."
+  },
+  {
+    "name": "Buhid",
+    "slug": "buhid",
+    "start": "U+1740",
+    "end": "U+175F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Buhid script/writing system."
+  },
+  {
+    "name": "Tagbanwa",
+    "slug": "tagbanwa",
+    "start": "U+1760",
+    "end": "U+177F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Tagbanwa script/writing system."
   },
   {
     "name": "Khmer",
@@ -252,94 +450,238 @@
     "description": "The traditional Mongolian script written top-to-bottom, left-to-right, used in Inner Mongolia and historical texts."
   },
   {
-    "name": "Hiragana",
-    "slug": "hiragana",
-    "start": "U+3040",
-    "end": "U+309F",
-    "count": 96,
-    "category": "cjk",
-    "description": "The Japanese syllabary Hiragana, used for native Japanese words, grammatical elements, and as furigana readings."
+    "name": "Unified Canadian Aboriginal Syllabics Extended",
+    "slug": "unified-canadian-aboriginal-syllabics-extended",
+    "start": "U+18B0",
+    "end": "U+18FF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Unified Canadian Aboriginal Syllabics Extended script/writing system."
   },
   {
-    "name": "Katakana",
-    "slug": "katakana",
-    "start": "U+30A0",
-    "end": "U+30FF",
-    "count": 96,
-    "category": "cjk",
-    "description": "The Japanese syllabary Katakana, used primarily for foreign loanwords, technical terms, and onomatopoeia."
+    "name": "Limbu",
+    "slug": "limbu",
+    "start": "U+1900",
+    "end": "U+194F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Limbu script/writing system."
   },
   {
-    "name": "Bopomofo",
-    "slug": "bopomofo",
-    "start": "U+3100",
-    "end": "U+312F",
+    "name": "Tai Le",
+    "slug": "tai-le",
+    "start": "U+1950",
+    "end": "U+197F",
     "count": 48,
-    "category": "cjk",
-    "description": "The Zhuyin fuhao (Bopomofo) phonetic script used in Taiwan for annotating Mandarin Chinese pronunciation."
+    "category": "scripts",
+    "description": "Unicode block for the Tai Le script/writing system."
   },
   {
-    "name": "Hangul Compatibility Jamo",
-    "slug": "hangul-compatibility-jamo",
-    "start": "U+3130",
-    "end": "U+318F",
+    "name": "New Tai Lue",
+    "slug": "new-tai-lue",
+    "start": "U+1980",
+    "end": "U+19DF",
     "count": 96,
-    "category": "cjk",
-    "description": "Hangul jamo characters in their standalone compatibility form, maintained for backward compatibility with older encodings."
+    "category": "scripts",
+    "description": "Unicode block for the New Tai Lue script/writing system."
   },
   {
-    "name": "CJK Unified Ideographs",
-    "slug": "cjk-unified-ideographs",
-    "start": "U+4E00",
-    "end": "U+9FFF",
-    "count": 20992,
-    "category": "cjk",
-    "description": "The core block of unified Chinese, Japanese, and Korean (CJK) ideographic characters for modern use."
+    "name": "Khmer Symbols",
+    "slug": "khmer-symbols",
+    "start": "U+19E0",
+    "end": "U+19FF",
+    "count": 32,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Khmer Symbols."
   },
   {
-    "name": "CJK Compatibility",
-    "slug": "cjk-compatibility",
-    "start": "U+F900",
-    "end": "U+FAFF",
-    "count": 512,
-    "category": "cjk",
-    "description": "CJK characters maintained for compatibility with legacy character sets; most are canonical equivalents of unified ideographs."
+    "name": "Buginese",
+    "slug": "buginese",
+    "start": "U+1A00",
+    "end": "U+1A1F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Buginese script/writing system."
   },
   {
-    "name": "Hangul Syllables",
-    "slug": "hangul-syllables",
-    "start": "U+AC00",
-    "end": "U+D7AF",
-    "count": 11184,
-    "category": "cjk",
-    "description": "All precomposed Hangul syllable blocks for the Korean writing system, algorithmically composable from Jamo."
+    "name": "Tai Tham",
+    "slug": "tai-tham",
+    "start": "U+1A20",
+    "end": "U+1AAF",
+    "count": 144,
+    "category": "scripts",
+    "description": "Unicode block for the Tai Tham script/writing system."
   },
   {
-    "name": "High Surrogates",
-    "slug": "high-surrogates",
-    "start": "U+D800",
-    "end": "U+DB7F",
-    "count": 896,
+    "name": "Combining Diacritical Marks Extended",
+    "slug": "combining-diacritical-marks-extended",
+    "start": "U+1AB0",
+    "end": "U+1AFF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Combining Diacritical Marks Extended script/writing system."
+  },
+  {
+    "name": "Balinese",
+    "slug": "balinese",
+    "start": "U+1B00",
+    "end": "U+1B7F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Balinese script/writing system."
+  },
+  {
+    "name": "Sundanese",
+    "slug": "sundanese",
+    "start": "U+1B80",
+    "end": "U+1BBF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Sundanese script/writing system."
+  },
+  {
+    "name": "Batak",
+    "slug": "batak",
+    "start": "U+1BC0",
+    "end": "U+1BFF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Batak script/writing system."
+  },
+  {
+    "name": "Lepcha",
+    "slug": "lepcha",
+    "start": "U+1C00",
+    "end": "U+1C4F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Lepcha script/writing system."
+  },
+  {
+    "name": "Ol Chiki",
+    "slug": "ol-chiki",
+    "start": "U+1C50",
+    "end": "U+1C7F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Ol Chiki script/writing system."
+  },
+  {
+    "name": "Cyrillic Extended-C",
+    "slug": "cyrillic-extended-c",
+    "start": "U+1C80",
+    "end": "U+1C8F",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Cyrillic Extended-C script/writing system."
+  },
+  {
+    "name": "Georgian Extended",
+    "slug": "georgian-extended",
+    "start": "U+1C90",
+    "end": "U+1CBF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Georgian Extended script/writing system."
+  },
+  {
+    "name": "Sundanese Supplement",
+    "slug": "sundanese-supplement",
+    "start": "U+1CC0",
+    "end": "U+1CCF",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Sundanese Supplement script/writing system."
+  },
+  {
+    "name": "Vedic Extensions",
+    "slug": "vedic-extensions",
+    "start": "U+1CD0",
+    "end": "U+1CFF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Vedic Extensions script/writing system."
+  },
+  {
+    "name": "Phonetic Extensions",
+    "slug": "phonetic-extensions",
+    "start": "U+1D00",
+    "end": "U+1D7F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Phonetic Extensions script/writing system."
+  },
+  {
+    "name": "Phonetic Extensions Supplement",
+    "slug": "phonetic-extensions-supplement",
+    "start": "U+1D80",
+    "end": "U+1DBF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Phonetic Extensions Supplement script/writing system."
+  },
+  {
+    "name": "Combining Diacritical Marks Supplement",
+    "slug": "combining-diacritical-marks-supplement",
+    "start": "U+1DC0",
+    "end": "U+1DFF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Combining Diacritical Marks Supplement script/writing system."
+  },
+  {
+    "name": "Latin Extended Additional",
+    "slug": "latin-extended-additional",
+    "start": "U+1E00",
+    "end": "U+1EFF",
+    "count": 256,
+    "category": "scripts",
+    "description": "Additional Latin characters mainly for Vietnamese, Welsh, and other languages needing multiple diacritics on letters."
+  },
+  {
+    "name": "Greek Extended",
+    "slug": "greek-extended",
+    "start": "U+1F00",
+    "end": "U+1FFF",
+    "count": 256,
+    "category": "scripts",
+    "description": "Unicode block for the Greek Extended script/writing system."
+  },
+  {
+    "name": "General Punctuation",
+    "slug": "general-punctuation",
+    "start": "U+2000",
+    "end": "U+206F",
+    "count": 112,
+    "category": "punctuation",
+    "description": "General punctuation marks including various dashes, quotation marks, spaces of different widths, and typographic symbols."
+  },
+  {
+    "name": "Superscripts and Subscripts",
+    "slug": "superscripts-and-subscripts",
+    "start": "U+2070",
+    "end": "U+209F",
+    "count": 48,
     "category": "technical",
-    "description": "High surrogate code units used in UTF-16 encoding to represent supplementary characters above U+FFFF."
+    "description": "Unicode block of technical/notational characters: Superscripts and Subscripts."
   },
   {
-    "name": "Low Surrogates",
-    "slug": "low-surrogates",
-    "start": "U+DC00",
-    "end": "U+DFFF",
-    "count": 1024,
-    "category": "technical",
-    "description": "Low surrogate code units used in UTF-16 encoding as the second half of a surrogate pair for supplementary characters."
+    "name": "Currency Symbols",
+    "slug": "currency-symbols",
+    "start": "U+20A0",
+    "end": "U+20CF",
+    "count": 48,
+    "category": "symbols",
+    "description": "Currency symbols for monetary systems worldwide, including Euro, Pound, Yen, Rupee, Ruble, Bitcoin, and others."
   },
   {
-    "name": "Private Use Area",
-    "slug": "private-use-area",
-    "start": "U+E000",
-    "end": "U+F8FF",
-    "count": 6400,
-    "category": "technical",
-    "description": "Code points reserved for private agreements; commonly used for custom icons, emoji variants, and corporate symbols."
+    "name": "Combining Diacritical Marks for Symbols",
+    "slug": "combining-diacritical-marks-for-symbols",
+    "start": "U+20D0",
+    "end": "U+20FF",
+    "count": 48,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Combining Diacritical Marks for Symbols."
   },
   {
     "name": "Letterlike Symbols",
@@ -396,6 +738,24 @@
     "description": "Visible representations of ASCII control characters (NUL, SOH, STX, etc.) for documentation and reference purposes."
   },
   {
+    "name": "Optical Character Recognition",
+    "slug": "optical-character-recognition",
+    "start": "U+2440",
+    "end": "U+245F",
+    "count": 32,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Optical Character Recognition."
+  },
+  {
+    "name": "Enclosed Alphanumerics",
+    "slug": "enclosed-alphanumerics",
+    "start": "U+2460",
+    "end": "U+24FF",
+    "count": 160,
+    "category": "symbols",
+    "description": "Circled and enclosed numbers and letters, used in lists, annotations, and as decorative or functional markers."
+  },
+  {
     "name": "Box Drawing",
     "slug": "box-drawing",
     "start": "U+2500",
@@ -441,6 +801,15 @@
     "description": "Ornamental characters and typographic dingbats including checkmarks, crosses, stars, arrows, and decorative marks."
   },
   {
+    "name": "Miscellaneous Mathematical Symbols-A",
+    "slug": "miscellaneous-mathematical-symbols-a",
+    "start": "U+27C0",
+    "end": "U+27EF",
+    "count": 48,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Miscellaneous Mathematical Symbols-A."
+  },
+  {
     "name": "Supplemental Arrows-A",
     "slug": "supplemental-arrows-a",
     "start": "U+27F0",
@@ -448,6 +817,33 @@
     "count": 16,
     "category": "symbols",
     "description": "Additional arrow symbols supplementing the main Arrows block, including long arrows and arrow combining marks."
+  },
+  {
+    "name": "Braille Patterns",
+    "slug": "braille-patterns",
+    "start": "U+2800",
+    "end": "U+28FF",
+    "count": 256,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Braille Patterns."
+  },
+  {
+    "name": "Supplemental Arrows-B",
+    "slug": "supplemental-arrows-b",
+    "start": "U+2900",
+    "end": "U+297F",
+    "count": 128,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Supplemental Arrows-B."
+  },
+  {
+    "name": "Miscellaneous Mathematical Symbols-B",
+    "slug": "miscellaneous-mathematical-symbols-b",
+    "start": "U+2980",
+    "end": "U+29FF",
+    "count": 128,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Miscellaneous Mathematical Symbols-B."
   },
   {
     "name": "Supplemental Mathematical Operators",
@@ -468,6 +864,78 @@
     "description": "Additional symbols and arrows for use in various technical, mathematical, and general-purpose contexts."
   },
   {
+    "name": "Glagolitic",
+    "slug": "glagolitic",
+    "start": "U+2C00",
+    "end": "U+2C5F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Glagolitic script/writing system."
+  },
+  {
+    "name": "Latin Extended-C",
+    "slug": "latin-extended-c",
+    "start": "U+2C60",
+    "end": "U+2C7F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Latin Extended-C script/writing system."
+  },
+  {
+    "name": "Coptic",
+    "slug": "coptic",
+    "start": "U+2C80",
+    "end": "U+2CFF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Coptic script/writing system."
+  },
+  {
+    "name": "Georgian Supplement",
+    "slug": "georgian-supplement",
+    "start": "U+2D00",
+    "end": "U+2D2F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Georgian Supplement script/writing system."
+  },
+  {
+    "name": "Tifinagh",
+    "slug": "tifinagh",
+    "start": "U+2D30",
+    "end": "U+2D7F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Tifinagh script/writing system."
+  },
+  {
+    "name": "Ethiopic Extended",
+    "slug": "ethiopic-extended",
+    "start": "U+2D80",
+    "end": "U+2DDF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Ethiopic Extended script/writing system."
+  },
+  {
+    "name": "Cyrillic Extended-A",
+    "slug": "cyrillic-extended-a",
+    "start": "U+2DE0",
+    "end": "U+2DFF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Cyrillic Extended-A script/writing system."
+  },
+  {
+    "name": "Supplemental Punctuation",
+    "slug": "supplemental-punctuation",
+    "start": "U+2E00",
+    "end": "U+2E7F",
+    "count": 128,
+    "category": "punctuation",
+    "description": "Unicode block of punctuation marks: Supplemental Punctuation."
+  },
+  {
     "name": "CJK Radicals Supplement",
     "slug": "cjk-radicals-supplement",
     "start": "U+2E80",
@@ -486,40 +954,1741 @@
     "description": "The 214 traditional Kangxi radicals used for indexing Chinese characters in dictionaries."
   },
   {
-    "name": "Latin Extended Additional",
-    "slug": "latin-extended-additional",
-    "start": "U+1E00",
-    "end": "U+1EFF",
+    "name": "Ideographic Description Characters",
+    "slug": "ideographic-description-characters",
+    "start": "U+2FF0",
+    "end": "U+2FFF",
+    "count": 16,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Ideographic Description Characters."
+  },
+  {
+    "name": "CJK Symbols and Punctuation",
+    "slug": "cjk-symbols-and-punctuation",
+    "start": "U+3000",
+    "end": "U+303F",
+    "count": 64,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Symbols and Punctuation."
+  },
+  {
+    "name": "Hiragana",
+    "slug": "hiragana",
+    "start": "U+3040",
+    "end": "U+309F",
+    "count": 96,
+    "category": "cjk",
+    "description": "The Japanese syllabary Hiragana, used for native Japanese words, grammatical elements, and as furigana readings."
+  },
+  {
+    "name": "Katakana",
+    "slug": "katakana",
+    "start": "U+30A0",
+    "end": "U+30FF",
+    "count": 96,
+    "category": "cjk",
+    "description": "The Japanese syllabary Katakana, used primarily for foreign loanwords, technical terms, and onomatopoeia."
+  },
+  {
+    "name": "Bopomofo",
+    "slug": "bopomofo",
+    "start": "U+3100",
+    "end": "U+312F",
+    "count": 48,
+    "category": "cjk",
+    "description": "The Zhuyin fuhao (Bopomofo) phonetic script used in Taiwan for annotating Mandarin Chinese pronunciation."
+  },
+  {
+    "name": "Hangul Compatibility Jamo",
+    "slug": "hangul-compatibility-jamo",
+    "start": "U+3130",
+    "end": "U+318F",
+    "count": 96,
+    "category": "cjk",
+    "description": "Hangul jamo characters in their standalone compatibility form, maintained for backward compatibility with older encodings."
+  },
+  {
+    "name": "Kanbun",
+    "slug": "kanbun",
+    "start": "U+3190",
+    "end": "U+319F",
+    "count": 16,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Kanbun."
+  },
+  {
+    "name": "Bopomofo Extended",
+    "slug": "bopomofo-extended",
+    "start": "U+31A0",
+    "end": "U+31BF",
+    "count": 32,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Bopomofo Extended."
+  },
+  {
+    "name": "CJK Strokes",
+    "slug": "cjk-strokes",
+    "start": "U+31C0",
+    "end": "U+31EF",
+    "count": 48,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Strokes."
+  },
+  {
+    "name": "Katakana Phonetic Extensions",
+    "slug": "katakana-phonetic-extensions",
+    "start": "U+31F0",
+    "end": "U+31FF",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Katakana Phonetic Extensions script/writing system."
+  },
+  {
+    "name": "Enclosed CJK Letters and Months",
+    "slug": "enclosed-cjk-letters-and-months",
+    "start": "U+3200",
+    "end": "U+32FF",
+    "count": 256,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Enclosed CJK Letters and Months."
+  },
+  {
+    "name": "CJK Compatibility",
+    "slug": "cjk-compatibility",
+    "start": "U+3300",
+    "end": "U+33FF",
+    "count": 256,
+    "category": "cjk",
+    "description": "CJK characters maintained for compatibility with legacy character sets; most are canonical equivalents of unified ideographs."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension A",
+    "slug": "cjk-unified-ideographs-extension-a",
+    "start": "U+3400",
+    "end": "U+4DBF",
+    "count": 6592,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension A."
+  },
+  {
+    "name": "Yijing Hexagram Symbols",
+    "slug": "yijing-hexagram-symbols",
+    "start": "U+4DC0",
+    "end": "U+4DFF",
+    "count": 64,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Yijing Hexagram Symbols."
+  },
+  {
+    "name": "CJK Unified Ideographs",
+    "slug": "cjk-unified-ideographs",
+    "start": "U+4E00",
+    "end": "U+9FFF",
+    "count": 20992,
+    "category": "cjk",
+    "description": "The core block of unified Chinese, Japanese, and Korean (CJK) ideographic characters for modern use."
+  },
+  {
+    "name": "Yi Syllables",
+    "slug": "yi-syllables",
+    "start": "U+A000",
+    "end": "U+A48F",
+    "count": 1168,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Yi Syllables."
+  },
+  {
+    "name": "Yi Radicals",
+    "slug": "yi-radicals",
+    "start": "U+A490",
+    "end": "U+A4CF",
+    "count": 64,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Yi Radicals."
+  },
+  {
+    "name": "Lisu",
+    "slug": "lisu",
+    "start": "U+A4D0",
+    "end": "U+A4FF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Lisu script/writing system."
+  },
+  {
+    "name": "Vai",
+    "slug": "vai",
+    "start": "U+A500",
+    "end": "U+A63F",
+    "count": 320,
+    "category": "scripts",
+    "description": "Unicode block for the Vai script/writing system."
+  },
+  {
+    "name": "Cyrillic Extended-B",
+    "slug": "cyrillic-extended-b",
+    "start": "U+A640",
+    "end": "U+A69F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Cyrillic Extended-B script/writing system."
+  },
+  {
+    "name": "Bamum",
+    "slug": "bamum",
+    "start": "U+A6A0",
+    "end": "U+A6FF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Bamum script/writing system."
+  },
+  {
+    "name": "Modifier Tone Letters",
+    "slug": "modifier-tone-letters",
+    "start": "U+A700",
+    "end": "U+A71F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Modifier Tone Letters script/writing system."
+  },
+  {
+    "name": "Latin Extended-D",
+    "slug": "latin-extended-d",
+    "start": "U+A720",
+    "end": "U+A7FF",
+    "count": 224,
+    "category": "scripts",
+    "description": "Unicode block for the Latin Extended-D script/writing system."
+  },
+  {
+    "name": "Syloti Nagri",
+    "slug": "syloti-nagri",
+    "start": "U+A800",
+    "end": "U+A82F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Syloti Nagri script/writing system."
+  },
+  {
+    "name": "Common Indic Number Forms",
+    "slug": "common-indic-number-forms",
+    "start": "U+A830",
+    "end": "U+A83F",
+    "count": 16,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Common Indic Number Forms."
+  },
+  {
+    "name": "Phags-pa",
+    "slug": "phags-pa",
+    "start": "U+A840",
+    "end": "U+A87F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Phags-pa script/writing system."
+  },
+  {
+    "name": "Saurashtra",
+    "slug": "saurashtra",
+    "start": "U+A880",
+    "end": "U+A8DF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Saurashtra script/writing system."
+  },
+  {
+    "name": "Devanagari Extended",
+    "slug": "devanagari-extended",
+    "start": "U+A8E0",
+    "end": "U+A8FF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Devanagari Extended script/writing system."
+  },
+  {
+    "name": "Kayah Li",
+    "slug": "kayah-li",
+    "start": "U+A900",
+    "end": "U+A92F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Kayah Li script/writing system."
+  },
+  {
+    "name": "Rejang",
+    "slug": "rejang",
+    "start": "U+A930",
+    "end": "U+A95F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Rejang script/writing system."
+  },
+  {
+    "name": "Hangul Jamo Extended-A",
+    "slug": "hangul-jamo-extended-a",
+    "start": "U+A960",
+    "end": "U+A97F",
+    "count": 32,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Hangul Jamo Extended-A."
+  },
+  {
+    "name": "Javanese",
+    "slug": "javanese",
+    "start": "U+A980",
+    "end": "U+A9DF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Javanese script/writing system."
+  },
+  {
+    "name": "Myanmar Extended-B",
+    "slug": "myanmar-extended-b",
+    "start": "U+A9E0",
+    "end": "U+A9FF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Myanmar Extended-B script/writing system."
+  },
+  {
+    "name": "Cham",
+    "slug": "cham",
+    "start": "U+AA00",
+    "end": "U+AA5F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Cham script/writing system."
+  },
+  {
+    "name": "Myanmar Extended-A",
+    "slug": "myanmar-extended-a",
+    "start": "U+AA60",
+    "end": "U+AA7F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Myanmar Extended-A script/writing system."
+  },
+  {
+    "name": "Tai Viet",
+    "slug": "tai-viet",
+    "start": "U+AA80",
+    "end": "U+AADF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Tai Viet script/writing system."
+  },
+  {
+    "name": "Meetei Mayek Extensions",
+    "slug": "meetei-mayek-extensions",
+    "start": "U+AAE0",
+    "end": "U+AAFF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Meetei Mayek Extensions script/writing system."
+  },
+  {
+    "name": "Ethiopic Extended-A",
+    "slug": "ethiopic-extended-a",
+    "start": "U+AB00",
+    "end": "U+AB2F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Ethiopic Extended-A script/writing system."
+  },
+  {
+    "name": "Latin Extended-E",
+    "slug": "latin-extended-e",
+    "start": "U+AB30",
+    "end": "U+AB6F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Latin Extended-E script/writing system."
+  },
+  {
+    "name": "Cherokee Supplement",
+    "slug": "cherokee-supplement",
+    "start": "U+AB70",
+    "end": "U+ABBF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Cherokee Supplement script/writing system."
+  },
+  {
+    "name": "Meetei Mayek",
+    "slug": "meetei-mayek",
+    "start": "U+ABC0",
+    "end": "U+ABFF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Meetei Mayek script/writing system."
+  },
+  {
+    "name": "Hangul Syllables",
+    "slug": "hangul-syllables",
+    "start": "U+AC00",
+    "end": "U+D7AF",
+    "count": 11184,
+    "category": "cjk",
+    "description": "All precomposed Hangul syllable blocks for the Korean writing system, algorithmically composable from Jamo."
+  },
+  {
+    "name": "Hangul Jamo Extended-B",
+    "slug": "hangul-jamo-extended-b",
+    "start": "U+D7B0",
+    "end": "U+D7FF",
+    "count": 80,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Hangul Jamo Extended-B."
+  },
+  {
+    "name": "High Surrogates",
+    "slug": "high-surrogates",
+    "start": "U+D800",
+    "end": "U+DB7F",
+    "count": 896,
+    "category": "technical",
+    "description": "High surrogate code units used in UTF-16 encoding to represent supplementary characters above U+FFFF."
+  },
+  {
+    "name": "High Private Use Surrogates",
+    "slug": "high-private-use-surrogates",
+    "start": "U+DB80",
+    "end": "U+DBFF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the High Private Use Surrogates script/writing system."
+  },
+  {
+    "name": "Low Surrogates",
+    "slug": "low-surrogates",
+    "start": "U+DC00",
+    "end": "U+DFFF",
+    "count": 1024,
+    "category": "technical",
+    "description": "Low surrogate code units used in UTF-16 encoding as the second half of a surrogate pair for supplementary characters."
+  },
+  {
+    "name": "Private Use Area",
+    "slug": "private-use-area",
+    "start": "U+E000",
+    "end": "U+F8FF",
+    "count": 6400,
+    "category": "technical",
+    "description": "Code points reserved for private agreements; commonly used for custom icons, emoji variants, and corporate symbols."
+  },
+  {
+    "name": "CJK Compatibility Ideographs",
+    "slug": "cjk-compatibility-ideographs",
+    "start": "U+F900",
+    "end": "U+FAFF",
+    "count": 512,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Compatibility Ideographs."
+  },
+  {
+    "name": "Alphabetic Presentation Forms",
+    "slug": "alphabetic-presentation-forms",
+    "start": "U+FB00",
+    "end": "U+FB4F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Alphabetic Presentation Forms script/writing system."
+  },
+  {
+    "name": "Arabic Presentation Forms-A",
+    "slug": "arabic-presentation-forms-a",
+    "start": "U+FB50",
+    "end": "U+FDFF",
+    "count": 688,
+    "category": "scripts",
+    "description": "Unicode block for the Arabic Presentation Forms-A script/writing system."
+  },
+  {
+    "name": "Variation Selectors",
+    "slug": "variation-selectors",
+    "start": "U+FE00",
+    "end": "U+FE0F",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Variation Selectors script/writing system."
+  },
+  {
+    "name": "Vertical Forms",
+    "slug": "vertical-forms",
+    "start": "U+FE10",
+    "end": "U+FE1F",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Vertical Forms script/writing system."
+  },
+  {
+    "name": "Combining Half Marks",
+    "slug": "combining-half-marks",
+    "start": "U+FE20",
+    "end": "U+FE2F",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Combining Half Marks script/writing system."
+  },
+  {
+    "name": "CJK Compatibility Forms",
+    "slug": "cjk-compatibility-forms",
+    "start": "U+FE30",
+    "end": "U+FE4F",
+    "count": 32,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Compatibility Forms."
+  },
+  {
+    "name": "Small Form Variants",
+    "slug": "small-form-variants",
+    "start": "U+FE50",
+    "end": "U+FE6F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Small Form Variants script/writing system."
+  },
+  {
+    "name": "Arabic Presentation Forms-B",
+    "slug": "arabic-presentation-forms-b",
+    "start": "U+FE70",
+    "end": "U+FEFF",
+    "count": 144,
+    "category": "scripts",
+    "description": "Unicode block for the Arabic Presentation Forms-B script/writing system."
+  },
+  {
+    "name": "Halfwidth and Fullwidth Forms",
+    "slug": "halfwidth-and-fullwidth-forms",
+    "start": "U+FF00",
+    "end": "U+FFEF",
+    "count": 240,
+    "category": "scripts",
+    "description": "Unicode block for the Halfwidth and Fullwidth Forms script/writing system."
+  },
+  {
+    "name": "Specials",
+    "slug": "specials",
+    "start": "U+FFF0",
+    "end": "U+FFFF",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Specials script/writing system."
+  },
+  {
+    "name": "Linear B Syllabary",
+    "slug": "linear-b-syllabary",
+    "start": "U+10000",
+    "end": "U+1007F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Linear B Syllabary script/writing system."
+  },
+  {
+    "name": "Linear B Ideograms",
+    "slug": "linear-b-ideograms",
+    "start": "U+10080",
+    "end": "U+100FF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Linear B Ideograms script/writing system."
+  },
+  {
+    "name": "Aegean Numbers",
+    "slug": "aegean-numbers",
+    "start": "U+10100",
+    "end": "U+1013F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Aegean Numbers script/writing system."
+  },
+  {
+    "name": "Ancient Greek Numbers",
+    "slug": "ancient-greek-numbers",
+    "start": "U+10140",
+    "end": "U+1018F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Ancient Greek Numbers script/writing system."
+  },
+  {
+    "name": "Ancient Symbols",
+    "slug": "ancient-symbols",
+    "start": "U+10190",
+    "end": "U+101CF",
+    "count": 64,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Ancient Symbols."
+  },
+  {
+    "name": "Phaistos Disc",
+    "slug": "phaistos-disc",
+    "start": "U+101D0",
+    "end": "U+101FF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Phaistos Disc script/writing system."
+  },
+  {
+    "name": "Lycian",
+    "slug": "lycian",
+    "start": "U+10280",
+    "end": "U+1029F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Lycian script/writing system."
+  },
+  {
+    "name": "Carian",
+    "slug": "carian",
+    "start": "U+102A0",
+    "end": "U+102DF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Carian script/writing system."
+  },
+  {
+    "name": "Coptic Epact Numbers",
+    "slug": "coptic-epact-numbers",
+    "start": "U+102E0",
+    "end": "U+102FF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Coptic Epact Numbers script/writing system."
+  },
+  {
+    "name": "Old Italic",
+    "slug": "old-italic",
+    "start": "U+10300",
+    "end": "U+1032F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Old Italic script/writing system."
+  },
+  {
+    "name": "Gothic",
+    "slug": "gothic",
+    "start": "U+10330",
+    "end": "U+1034F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Gothic script/writing system."
+  },
+  {
+    "name": "Old Permic",
+    "slug": "old-permic",
+    "start": "U+10350",
+    "end": "U+1037F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Old Permic script/writing system."
+  },
+  {
+    "name": "Ugaritic",
+    "slug": "ugaritic",
+    "start": "U+10380",
+    "end": "U+1039F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Ugaritic script/writing system."
+  },
+  {
+    "name": "Old Persian",
+    "slug": "old-persian",
+    "start": "U+103A0",
+    "end": "U+103DF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Old Persian script/writing system."
+  },
+  {
+    "name": "Deseret",
+    "slug": "deseret",
+    "start": "U+10400",
+    "end": "U+1044F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Deseret script/writing system."
+  },
+  {
+    "name": "Shavian",
+    "slug": "shavian",
+    "start": "U+10450",
+    "end": "U+1047F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Shavian script/writing system."
+  },
+  {
+    "name": "Osmanya",
+    "slug": "osmanya",
+    "start": "U+10480",
+    "end": "U+104AF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Osmanya script/writing system."
+  },
+  {
+    "name": "Osage",
+    "slug": "osage",
+    "start": "U+104B0",
+    "end": "U+104FF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Osage script/writing system."
+  },
+  {
+    "name": "Elbasan",
+    "slug": "elbasan",
+    "start": "U+10500",
+    "end": "U+1052F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Elbasan script/writing system."
+  },
+  {
+    "name": "Caucasian Albanian",
+    "slug": "caucasian-albanian",
+    "start": "U+10530",
+    "end": "U+1056F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Caucasian Albanian script/writing system."
+  },
+  {
+    "name": "Vithkuqi",
+    "slug": "vithkuqi",
+    "start": "U+10570",
+    "end": "U+105BF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Vithkuqi script/writing system."
+  },
+  {
+    "name": "Todhri",
+    "slug": "todhri",
+    "start": "U+105C0",
+    "end": "U+105FF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Todhri script/writing system."
+  },
+  {
+    "name": "Linear A",
+    "slug": "linear-a",
+    "start": "U+10600",
+    "end": "U+1077F",
+    "count": 384,
+    "category": "scripts",
+    "description": "Unicode block for the Linear A script/writing system."
+  },
+  {
+    "name": "Latin Extended-F",
+    "slug": "latin-extended-f",
+    "start": "U+10780",
+    "end": "U+107BF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Latin Extended-F script/writing system."
+  },
+  {
+    "name": "Cypriot Syllabary",
+    "slug": "cypriot-syllabary",
+    "start": "U+10800",
+    "end": "U+1083F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Cypriot Syllabary script/writing system."
+  },
+  {
+    "name": "Imperial Aramaic",
+    "slug": "imperial-aramaic",
+    "start": "U+10840",
+    "end": "U+1085F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Imperial Aramaic script/writing system."
+  },
+  {
+    "name": "Palmyrene",
+    "slug": "palmyrene",
+    "start": "U+10860",
+    "end": "U+1087F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Palmyrene script/writing system."
+  },
+  {
+    "name": "Nabataean",
+    "slug": "nabataean",
+    "start": "U+10880",
+    "end": "U+108AF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Nabataean script/writing system."
+  },
+  {
+    "name": "Hatran",
+    "slug": "hatran",
+    "start": "U+108E0",
+    "end": "U+108FF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Hatran script/writing system."
+  },
+  {
+    "name": "Phoenician",
+    "slug": "phoenician",
+    "start": "U+10900",
+    "end": "U+1091F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Phoenician script/writing system."
+  },
+  {
+    "name": "Lydian",
+    "slug": "lydian",
+    "start": "U+10920",
+    "end": "U+1093F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Lydian script/writing system."
+  },
+  {
+    "name": "Sidetic",
+    "slug": "sidetic",
+    "start": "U+10940",
+    "end": "U+1095F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Sidetic script/writing system."
+  },
+  {
+    "name": "Meroitic Hieroglyphs",
+    "slug": "meroitic-hieroglyphs",
+    "start": "U+10980",
+    "end": "U+1099F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Meroitic Hieroglyphs script/writing system."
+  },
+  {
+    "name": "Meroitic Cursive",
+    "slug": "meroitic-cursive",
+    "start": "U+109A0",
+    "end": "U+109FF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Meroitic Cursive script/writing system."
+  },
+  {
+    "name": "Kharoshthi",
+    "slug": "kharoshthi",
+    "start": "U+10A00",
+    "end": "U+10A5F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Kharoshthi script/writing system."
+  },
+  {
+    "name": "Old South Arabian",
+    "slug": "old-south-arabian",
+    "start": "U+10A60",
+    "end": "U+10A7F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Old South Arabian script/writing system."
+  },
+  {
+    "name": "Old North Arabian",
+    "slug": "old-north-arabian",
+    "start": "U+10A80",
+    "end": "U+10A9F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Old North Arabian script/writing system."
+  },
+  {
+    "name": "Manichaean",
+    "slug": "manichaean",
+    "start": "U+10AC0",
+    "end": "U+10AFF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Manichaean script/writing system."
+  },
+  {
+    "name": "Avestan",
+    "slug": "avestan",
+    "start": "U+10B00",
+    "end": "U+10B3F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Avestan script/writing system."
+  },
+  {
+    "name": "Inscriptional Parthian",
+    "slug": "inscriptional-parthian",
+    "start": "U+10B40",
+    "end": "U+10B5F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Inscriptional Parthian script/writing system."
+  },
+  {
+    "name": "Inscriptional Pahlavi",
+    "slug": "inscriptional-pahlavi",
+    "start": "U+10B60",
+    "end": "U+10B7F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Inscriptional Pahlavi script/writing system."
+  },
+  {
+    "name": "Psalter Pahlavi",
+    "slug": "psalter-pahlavi",
+    "start": "U+10B80",
+    "end": "U+10BAF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Psalter Pahlavi script/writing system."
+  },
+  {
+    "name": "Old Turkic",
+    "slug": "old-turkic",
+    "start": "U+10C00",
+    "end": "U+10C4F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Old Turkic script/writing system."
+  },
+  {
+    "name": "Old Hungarian",
+    "slug": "old-hungarian",
+    "start": "U+10C80",
+    "end": "U+10CFF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Old Hungarian script/writing system."
+  },
+  {
+    "name": "Hanifi Rohingya",
+    "slug": "hanifi-rohingya",
+    "start": "U+10D00",
+    "end": "U+10D3F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Hanifi Rohingya script/writing system."
+  },
+  {
+    "name": "Garay",
+    "slug": "garay",
+    "start": "U+10D40",
+    "end": "U+10D8F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Garay script/writing system."
+  },
+  {
+    "name": "Rumi Numeral Symbols",
+    "slug": "rumi-numeral-symbols",
+    "start": "U+10E60",
+    "end": "U+10E7F",
+    "count": 32,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Rumi Numeral Symbols."
+  },
+  {
+    "name": "Yezidi",
+    "slug": "yezidi",
+    "start": "U+10E80",
+    "end": "U+10EBF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Yezidi script/writing system."
+  },
+  {
+    "name": "Arabic Extended-C",
+    "slug": "arabic-extended-c",
+    "start": "U+10EC0",
+    "end": "U+10EFF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Arabic Extended-C script/writing system."
+  },
+  {
+    "name": "Old Sogdian",
+    "slug": "old-sogdian",
+    "start": "U+10F00",
+    "end": "U+10F2F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Old Sogdian script/writing system."
+  },
+  {
+    "name": "Sogdian",
+    "slug": "sogdian",
+    "start": "U+10F30",
+    "end": "U+10F6F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Sogdian script/writing system."
+  },
+  {
+    "name": "Old Uyghur",
+    "slug": "old-uyghur",
+    "start": "U+10F70",
+    "end": "U+10FAF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Old Uyghur script/writing system."
+  },
+  {
+    "name": "Chorasmian",
+    "slug": "chorasmian",
+    "start": "U+10FB0",
+    "end": "U+10FDF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Chorasmian script/writing system."
+  },
+  {
+    "name": "Elymaic",
+    "slug": "elymaic",
+    "start": "U+10FE0",
+    "end": "U+10FFF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Elymaic script/writing system."
+  },
+  {
+    "name": "Brahmi",
+    "slug": "brahmi",
+    "start": "U+11000",
+    "end": "U+1107F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Brahmi script/writing system."
+  },
+  {
+    "name": "Kaithi",
+    "slug": "kaithi",
+    "start": "U+11080",
+    "end": "U+110CF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Kaithi script/writing system."
+  },
+  {
+    "name": "Sora Sompeng",
+    "slug": "sora-sompeng",
+    "start": "U+110D0",
+    "end": "U+110FF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Sora Sompeng script/writing system."
+  },
+  {
+    "name": "Chakma",
+    "slug": "chakma",
+    "start": "U+11100",
+    "end": "U+1114F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Chakma script/writing system."
+  },
+  {
+    "name": "Mahajani",
+    "slug": "mahajani",
+    "start": "U+11150",
+    "end": "U+1117F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Mahajani script/writing system."
+  },
+  {
+    "name": "Sharada",
+    "slug": "sharada",
+    "start": "U+11180",
+    "end": "U+111DF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Sharada script/writing system."
+  },
+  {
+    "name": "Sinhala Archaic Numbers",
+    "slug": "sinhala-archaic-numbers",
+    "start": "U+111E0",
+    "end": "U+111FF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Sinhala Archaic Numbers script/writing system."
+  },
+  {
+    "name": "Khojki",
+    "slug": "khojki",
+    "start": "U+11200",
+    "end": "U+1124F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Khojki script/writing system."
+  },
+  {
+    "name": "Multani",
+    "slug": "multani",
+    "start": "U+11280",
+    "end": "U+112AF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Multani script/writing system."
+  },
+  {
+    "name": "Khudawadi",
+    "slug": "khudawadi",
+    "start": "U+112B0",
+    "end": "U+112FF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Khudawadi script/writing system."
+  },
+  {
+    "name": "Grantha",
+    "slug": "grantha",
+    "start": "U+11300",
+    "end": "U+1137F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Grantha script/writing system."
+  },
+  {
+    "name": "Tulu-Tigalari",
+    "slug": "tulu-tigalari",
+    "start": "U+11380",
+    "end": "U+113FF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Tulu-Tigalari script/writing system."
+  },
+  {
+    "name": "Newa",
+    "slug": "newa",
+    "start": "U+11400",
+    "end": "U+1147F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Newa script/writing system."
+  },
+  {
+    "name": "Tirhuta",
+    "slug": "tirhuta",
+    "start": "U+11480",
+    "end": "U+114DF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Tirhuta script/writing system."
+  },
+  {
+    "name": "Siddham",
+    "slug": "siddham",
+    "start": "U+11580",
+    "end": "U+115FF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Siddham script/writing system."
+  },
+  {
+    "name": "Modi",
+    "slug": "modi",
+    "start": "U+11600",
+    "end": "U+1165F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Modi script/writing system."
+  },
+  {
+    "name": "Mongolian Supplement",
+    "slug": "mongolian-supplement",
+    "start": "U+11660",
+    "end": "U+1167F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Mongolian Supplement script/writing system."
+  },
+  {
+    "name": "Takri",
+    "slug": "takri",
+    "start": "U+11680",
+    "end": "U+116CF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Takri script/writing system."
+  },
+  {
+    "name": "Myanmar Extended-C",
+    "slug": "myanmar-extended-c",
+    "start": "U+116D0",
+    "end": "U+116FF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Myanmar Extended-C script/writing system."
+  },
+  {
+    "name": "Ahom",
+    "slug": "ahom",
+    "start": "U+11700",
+    "end": "U+1174F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Ahom script/writing system."
+  },
+  {
+    "name": "Dogra",
+    "slug": "dogra",
+    "start": "U+11800",
+    "end": "U+1184F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Dogra script/writing system."
+  },
+  {
+    "name": "Warang Citi",
+    "slug": "warang-citi",
+    "start": "U+118A0",
+    "end": "U+118FF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Warang Citi script/writing system."
+  },
+  {
+    "name": "Dives Akuru",
+    "slug": "dives-akuru",
+    "start": "U+11900",
+    "end": "U+1195F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Dives Akuru script/writing system."
+  },
+  {
+    "name": "Nandinagari",
+    "slug": "nandinagari",
+    "start": "U+119A0",
+    "end": "U+119FF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Nandinagari script/writing system."
+  },
+  {
+    "name": "Zanabazar Square",
+    "slug": "zanabazar-square",
+    "start": "U+11A00",
+    "end": "U+11A4F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Zanabazar Square script/writing system."
+  },
+  {
+    "name": "Soyombo",
+    "slug": "soyombo",
+    "start": "U+11A50",
+    "end": "U+11AAF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Soyombo script/writing system."
+  },
+  {
+    "name": "Unified Canadian Aboriginal Syllabics Extended-A",
+    "slug": "unified-canadian-aboriginal-syllabics-extended-a",
+    "start": "U+11AB0",
+    "end": "U+11ABF",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Unified Canadian Aboriginal Syllabics Extended-A script/writing system."
+  },
+  {
+    "name": "Pau Cin Hau",
+    "slug": "pau-cin-hau",
+    "start": "U+11AC0",
+    "end": "U+11AFF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Pau Cin Hau script/writing system."
+  },
+  {
+    "name": "Devanagari Extended-A",
+    "slug": "devanagari-extended-a",
+    "start": "U+11B00",
+    "end": "U+11B5F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Devanagari Extended-A script/writing system."
+  },
+  {
+    "name": "Sharada Supplement",
+    "slug": "sharada-supplement",
+    "start": "U+11B60",
+    "end": "U+11B7F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Sharada Supplement script/writing system."
+  },
+  {
+    "name": "Sunuwar",
+    "slug": "sunuwar",
+    "start": "U+11BC0",
+    "end": "U+11BFF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Sunuwar script/writing system."
+  },
+  {
+    "name": "Bhaiksuki",
+    "slug": "bhaiksuki",
+    "start": "U+11C00",
+    "end": "U+11C6F",
+    "count": 112,
+    "category": "scripts",
+    "description": "Unicode block for the Bhaiksuki script/writing system."
+  },
+  {
+    "name": "Marchen",
+    "slug": "marchen",
+    "start": "U+11C70",
+    "end": "U+11CBF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Marchen script/writing system."
+  },
+  {
+    "name": "Masaram Gondi",
+    "slug": "masaram-gondi",
+    "start": "U+11D00",
+    "end": "U+11D5F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Masaram Gondi script/writing system."
+  },
+  {
+    "name": "Gunjala Gondi",
+    "slug": "gunjala-gondi",
+    "start": "U+11D60",
+    "end": "U+11DAF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Gunjala Gondi script/writing system."
+  },
+  {
+    "name": "Tolong Siki",
+    "slug": "tolong-siki",
+    "start": "U+11DB0",
+    "end": "U+11DEF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Tolong Siki script/writing system."
+  },
+  {
+    "name": "Makasar",
+    "slug": "makasar",
+    "start": "U+11EE0",
+    "end": "U+11EFF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Makasar script/writing system."
+  },
+  {
+    "name": "Kawi",
+    "slug": "kawi",
+    "start": "U+11F00",
+    "end": "U+11F5F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Kawi script/writing system."
+  },
+  {
+    "name": "Lisu Supplement",
+    "slug": "lisu-supplement",
+    "start": "U+11FB0",
+    "end": "U+11FBF",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Lisu Supplement script/writing system."
+  },
+  {
+    "name": "Tamil Supplement",
+    "slug": "tamil-supplement",
+    "start": "U+11FC0",
+    "end": "U+11FFF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Tamil Supplement script/writing system."
+  },
+  {
+    "name": "Cuneiform",
+    "slug": "cuneiform",
+    "start": "U+12000",
+    "end": "U+123FF",
+    "count": 1024,
+    "category": "scripts",
+    "description": "Unicode block for the Cuneiform script/writing system."
+  },
+  {
+    "name": "Cuneiform Numbers and Punctuation",
+    "slug": "cuneiform-numbers-and-punctuation",
+    "start": "U+12400",
+    "end": "U+1247F",
+    "count": 128,
+    "category": "punctuation",
+    "description": "Unicode block of punctuation marks: Cuneiform Numbers and Punctuation."
+  },
+  {
+    "name": "Early Dynastic Cuneiform",
+    "slug": "early-dynastic-cuneiform",
+    "start": "U+12480",
+    "end": "U+1254F",
+    "count": 208,
+    "category": "scripts",
+    "description": "Unicode block for the Early Dynastic Cuneiform script/writing system."
+  },
+  {
+    "name": "Cypro-Minoan",
+    "slug": "cypro-minoan",
+    "start": "U+12F90",
+    "end": "U+12FFF",
+    "count": 112,
+    "category": "scripts",
+    "description": "Unicode block for the Cypro-Minoan script/writing system."
+  },
+  {
+    "name": "Egyptian Hieroglyphs",
+    "slug": "egyptian-hieroglyphs",
+    "start": "U+13000",
+    "end": "U+1342F",
+    "count": 1072,
+    "category": "scripts",
+    "description": "Unicode block for the Egyptian Hieroglyphs script/writing system."
+  },
+  {
+    "name": "Egyptian Hieroglyph Format Controls",
+    "slug": "egyptian-hieroglyph-format-controls",
+    "start": "U+13430",
+    "end": "U+1345F",
+    "count": 48,
+    "category": "control",
+    "description": "Unicode block of control characters: Egyptian Hieroglyph Format Controls."
+  },
+  {
+    "name": "Egyptian Hieroglyphs Extended-A",
+    "slug": "egyptian-hieroglyphs-extended-a",
+    "start": "U+13460",
+    "end": "U+143FF",
+    "count": 4000,
+    "category": "scripts",
+    "description": "Unicode block for the Egyptian Hieroglyphs Extended-A script/writing system."
+  },
+  {
+    "name": "Anatolian Hieroglyphs",
+    "slug": "anatolian-hieroglyphs",
+    "start": "U+14400",
+    "end": "U+1467F",
+    "count": 640,
+    "category": "scripts",
+    "description": "Unicode block for the Anatolian Hieroglyphs script/writing system."
+  },
+  {
+    "name": "Gurung Khema",
+    "slug": "gurung-khema",
+    "start": "U+16100",
+    "end": "U+1613F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Gurung Khema script/writing system."
+  },
+  {
+    "name": "Bamum Supplement",
+    "slug": "bamum-supplement",
+    "start": "U+16800",
+    "end": "U+16A3F",
+    "count": 576,
+    "category": "scripts",
+    "description": "Unicode block for the Bamum Supplement script/writing system."
+  },
+  {
+    "name": "Mro",
+    "slug": "mro",
+    "start": "U+16A40",
+    "end": "U+16A6F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Mro script/writing system."
+  },
+  {
+    "name": "Tangsa",
+    "slug": "tangsa",
+    "start": "U+16A70",
+    "end": "U+16ACF",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Tangsa script/writing system."
+  },
+  {
+    "name": "Bassa Vah",
+    "slug": "bassa-vah",
+    "start": "U+16AD0",
+    "end": "U+16AFF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Bassa Vah script/writing system."
+  },
+  {
+    "name": "Pahawh Hmong",
+    "slug": "pahawh-hmong",
+    "start": "U+16B00",
+    "end": "U+16B8F",
+    "count": 144,
+    "category": "scripts",
+    "description": "Unicode block for the Pahawh Hmong script/writing system."
+  },
+  {
+    "name": "Kirat Rai",
+    "slug": "kirat-rai",
+    "start": "U+16D40",
+    "end": "U+16D7F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Kirat Rai script/writing system."
+  },
+  {
+    "name": "Medefaidrin",
+    "slug": "medefaidrin",
+    "start": "U+16E40",
+    "end": "U+16E9F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Medefaidrin script/writing system."
+  },
+  {
+    "name": "Beria Erfe",
+    "slug": "beria-erfe",
+    "start": "U+16EA0",
+    "end": "U+16EDF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Beria Erfe script/writing system."
+  },
+  {
+    "name": "Miao",
+    "slug": "miao",
+    "start": "U+16F00",
+    "end": "U+16F9F",
+    "count": 160,
+    "category": "scripts",
+    "description": "Unicode block for the Miao script/writing system."
+  },
+  {
+    "name": "Ideographic Symbols and Punctuation",
+    "slug": "ideographic-symbols-and-punctuation",
+    "start": "U+16FE0",
+    "end": "U+16FFF",
+    "count": 32,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Ideographic Symbols and Punctuation."
+  },
+  {
+    "name": "Tangut",
+    "slug": "tangut",
+    "start": "U+17000",
+    "end": "U+187FF",
+    "count": 6144,
+    "category": "scripts",
+    "description": "Unicode block for the Tangut script/writing system."
+  },
+  {
+    "name": "Tangut Components",
+    "slug": "tangut-components",
+    "start": "U+18800",
+    "end": "U+18AFF",
+    "count": 768,
+    "category": "scripts",
+    "description": "Unicode block for the Tangut Components script/writing system."
+  },
+  {
+    "name": "Khitan Small Script",
+    "slug": "khitan-small-script",
+    "start": "U+18B00",
+    "end": "U+18CFF",
+    "count": 512,
+    "category": "scripts",
+    "description": "Unicode block for the Khitan Small Script script/writing system."
+  },
+  {
+    "name": "Tangut Supplement",
+    "slug": "tangut-supplement",
+    "start": "U+18D00",
+    "end": "U+18D7F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Tangut Supplement script/writing system."
+  },
+  {
+    "name": "Tangut Components Supplement",
+    "slug": "tangut-components-supplement",
+    "start": "U+18D80",
+    "end": "U+18DFF",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Tangut Components Supplement script/writing system."
+  },
+  {
+    "name": "Kana Extended-B",
+    "slug": "kana-extended-b",
+    "start": "U+1AFF0",
+    "end": "U+1AFFF",
+    "count": 16,
+    "category": "scripts",
+    "description": "Unicode block for the Kana Extended-B script/writing system."
+  },
+  {
+    "name": "Kana Supplement",
+    "slug": "kana-supplement",
+    "start": "U+1B000",
+    "end": "U+1B0FF",
     "count": 256,
     "category": "scripts",
-    "description": "Additional Latin characters mainly for Vietnamese, Welsh, and other languages needing multiple diacritics on letters."
+    "description": "Unicode block for the Kana Supplement script/writing system."
   },
   {
-    "name": "General Punctuation",
-    "slug": "general-punctuation",
-    "start": "U+2000",
-    "end": "U+206F",
-    "count": 112,
-    "category": "punctuation",
-    "description": "General punctuation marks including various dashes, quotation marks, spaces of different widths, and typographic symbols."
-  },
-  {
-    "name": "Currency Symbols",
-    "slug": "currency-symbols",
-    "start": "U+20A0",
-    "end": "U+20CF",
+    "name": "Kana Extended-A",
+    "slug": "kana-extended-a",
+    "start": "U+1B100",
+    "end": "U+1B12F",
     "count": 48,
-    "category": "symbols",
-    "description": "Currency symbols for monetary systems worldwide, including Euro, Pound, Yen, Rupee, Ruble, Bitcoin, and others."
+    "category": "scripts",
+    "description": "Unicode block for the Kana Extended-A script/writing system."
   },
   {
-    "name": "Enclosed Alphanumerics",
-    "slug": "enclosed-alphanumerics",
-    "start": "U+2460",
-    "end": "U+24FF",
+    "name": "Small Kana Extension",
+    "slug": "small-kana-extension",
+    "start": "U+1B130",
+    "end": "U+1B16F",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Small Kana Extension script/writing system."
+  },
+  {
+    "name": "Nushu",
+    "slug": "nushu",
+    "start": "U+1B170",
+    "end": "U+1B2FF",
+    "count": 400,
+    "category": "scripts",
+    "description": "Unicode block for the Nushu script/writing system."
+  },
+  {
+    "name": "Duployan",
+    "slug": "duployan",
+    "start": "U+1BC00",
+    "end": "U+1BC9F",
     "count": 160,
+    "category": "scripts",
+    "description": "Unicode block for the Duployan script/writing system."
+  },
+  {
+    "name": "Shorthand Format Controls",
+    "slug": "shorthand-format-controls",
+    "start": "U+1BCA0",
+    "end": "U+1BCAF",
+    "count": 16,
+    "category": "control",
+    "description": "Unicode block of control characters: Shorthand Format Controls."
+  },
+  {
+    "name": "Symbols for Legacy Computing Supplement",
+    "slug": "symbols-for-legacy-computing-supplement",
+    "start": "U+1CC00",
+    "end": "U+1CEBF",
+    "count": 704,
     "category": "symbols",
-    "description": "Circled and enclosed numbers and letters, used in lists, annotations, and as decorative or functional markers."
+    "description": "Unicode block of symbols: Symbols for Legacy Computing Supplement."
+  },
+  {
+    "name": "Miscellaneous Symbols Supplement",
+    "slug": "miscellaneous-symbols-supplement",
+    "start": "U+1CEC0",
+    "end": "U+1CEFF",
+    "count": 64,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Miscellaneous Symbols Supplement."
+  },
+  {
+    "name": "Znamenny Musical Notation",
+    "slug": "znamenny-musical-notation",
+    "start": "U+1CF00",
+    "end": "U+1CFCF",
+    "count": 208,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Znamenny Musical Notation."
+  },
+  {
+    "name": "Byzantine Musical Symbols",
+    "slug": "byzantine-musical-symbols",
+    "start": "U+1D000",
+    "end": "U+1D0FF",
+    "count": 256,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Byzantine Musical Symbols."
+  },
+  {
+    "name": "Musical Symbols",
+    "slug": "musical-symbols",
+    "start": "U+1D100",
+    "end": "U+1D1FF",
+    "count": 256,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Musical Symbols."
+  },
+  {
+    "name": "Ancient Greek Musical Notation",
+    "slug": "ancient-greek-musical-notation",
+    "start": "U+1D200",
+    "end": "U+1D24F",
+    "count": 80,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Ancient Greek Musical Notation."
+  },
+  {
+    "name": "Kaktovik Numerals",
+    "slug": "kaktovik-numerals",
+    "start": "U+1D2C0",
+    "end": "U+1D2DF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Kaktovik Numerals script/writing system."
+  },
+  {
+    "name": "Mayan Numerals",
+    "slug": "mayan-numerals",
+    "start": "U+1D2E0",
+    "end": "U+1D2FF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Mayan Numerals script/writing system."
+  },
+  {
+    "name": "Tai Xuan Jing Symbols",
+    "slug": "tai-xuan-jing-symbols",
+    "start": "U+1D300",
+    "end": "U+1D35F",
+    "count": 96,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Tai Xuan Jing Symbols."
+  },
+  {
+    "name": "Counting Rod Numerals",
+    "slug": "counting-rod-numerals",
+    "start": "U+1D360",
+    "end": "U+1D37F",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Counting Rod Numerals script/writing system."
   },
   {
     "name": "Mathematical Alphanumeric Symbols",
@@ -532,13 +2701,193 @@
     "_note": "Supplementary Multilingual Plane block"
   },
   {
-    "name": "Emoticons",
-    "slug": "emoticons",
-    "start": "U+1F600",
-    "end": "U+1F64F",
+    "name": "Sutton SignWriting",
+    "slug": "sutton-signwriting",
+    "start": "U+1D800",
+    "end": "U+1DAAF",
+    "count": 688,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Sutton SignWriting."
+  },
+  {
+    "name": "Latin Extended-G",
+    "slug": "latin-extended-g",
+    "start": "U+1DF00",
+    "end": "U+1DFFF",
+    "count": 256,
+    "category": "scripts",
+    "description": "Unicode block for the Latin Extended-G script/writing system."
+  },
+  {
+    "name": "Glagolitic Supplement",
+    "slug": "glagolitic-supplement",
+    "start": "U+1E000",
+    "end": "U+1E02F",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Glagolitic Supplement script/writing system."
+  },
+  {
+    "name": "Cyrillic Extended-D",
+    "slug": "cyrillic-extended-d",
+    "start": "U+1E030",
+    "end": "U+1E08F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Cyrillic Extended-D script/writing system."
+  },
+  {
+    "name": "Nyiakeng Puachue Hmong",
+    "slug": "nyiakeng-puachue-hmong",
+    "start": "U+1E100",
+    "end": "U+1E14F",
     "count": 80,
-    "category": "emoji",
-    "description": "Emoji faces and people symbols including smileys, emotions, gestures, and simple human figure expressions."
+    "category": "scripts",
+    "description": "Unicode block for the Nyiakeng Puachue Hmong script/writing system."
+  },
+  {
+    "name": "Toto",
+    "slug": "toto",
+    "start": "U+1E290",
+    "end": "U+1E2BF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Toto script/writing system."
+  },
+  {
+    "name": "Wancho",
+    "slug": "wancho",
+    "start": "U+1E2C0",
+    "end": "U+1E2FF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Wancho script/writing system."
+  },
+  {
+    "name": "Nag Mundari",
+    "slug": "nag-mundari",
+    "start": "U+1E4D0",
+    "end": "U+1E4FF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Nag Mundari script/writing system."
+  },
+  {
+    "name": "Ol Onal",
+    "slug": "ol-onal",
+    "start": "U+1E5D0",
+    "end": "U+1E5FF",
+    "count": 48,
+    "category": "scripts",
+    "description": "Unicode block for the Ol Onal script/writing system."
+  },
+  {
+    "name": "Tai Yo",
+    "slug": "tai-yo",
+    "start": "U+1E6C0",
+    "end": "U+1E6FF",
+    "count": 64,
+    "category": "scripts",
+    "description": "Unicode block for the Tai Yo script/writing system."
+  },
+  {
+    "name": "Ethiopic Extended-B",
+    "slug": "ethiopic-extended-b",
+    "start": "U+1E7E0",
+    "end": "U+1E7FF",
+    "count": 32,
+    "category": "scripts",
+    "description": "Unicode block for the Ethiopic Extended-B script/writing system."
+  },
+  {
+    "name": "Mende Kikakui",
+    "slug": "mende-kikakui",
+    "start": "U+1E800",
+    "end": "U+1E8DF",
+    "count": 224,
+    "category": "scripts",
+    "description": "Unicode block for the Mende Kikakui script/writing system."
+  },
+  {
+    "name": "Adlam",
+    "slug": "adlam",
+    "start": "U+1E900",
+    "end": "U+1E95F",
+    "count": 96,
+    "category": "scripts",
+    "description": "Unicode block for the Adlam script/writing system."
+  },
+  {
+    "name": "Indic Siyaq Numbers",
+    "slug": "indic-siyaq-numbers",
+    "start": "U+1EC70",
+    "end": "U+1ECBF",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Indic Siyaq Numbers script/writing system."
+  },
+  {
+    "name": "Ottoman Siyaq Numbers",
+    "slug": "ottoman-siyaq-numbers",
+    "start": "U+1ED00",
+    "end": "U+1ED4F",
+    "count": 80,
+    "category": "scripts",
+    "description": "Unicode block for the Ottoman Siyaq Numbers script/writing system."
+  },
+  {
+    "name": "Arabic Mathematical Alphabetic Symbols",
+    "slug": "arabic-mathematical-alphabetic-symbols",
+    "start": "U+1EE00",
+    "end": "U+1EEFF",
+    "count": 256,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Arabic Mathematical Alphabetic Symbols."
+  },
+  {
+    "name": "Mahjong Tiles",
+    "slug": "mahjong-tiles",
+    "start": "U+1F000",
+    "end": "U+1F02F",
+    "count": 48,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Mahjong Tiles."
+  },
+  {
+    "name": "Domino Tiles",
+    "slug": "domino-tiles",
+    "start": "U+1F030",
+    "end": "U+1F09F",
+    "count": 112,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Domino Tiles."
+  },
+  {
+    "name": "Playing Cards",
+    "slug": "playing-cards",
+    "start": "U+1F0A0",
+    "end": "U+1F0FF",
+    "count": 96,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Playing Cards."
+  },
+  {
+    "name": "Enclosed Alphanumeric Supplement",
+    "slug": "enclosed-alphanumeric-supplement",
+    "start": "U+1F100",
+    "end": "U+1F1FF",
+    "count": 256,
+    "category": "scripts",
+    "description": "Unicode block for the Enclosed Alphanumeric Supplement script/writing system."
+  },
+  {
+    "name": "Enclosed Ideographic Supplement",
+    "slug": "enclosed-ideographic-supplement",
+    "start": "U+1F200",
+    "end": "U+1F2FF",
+    "count": 256,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: Enclosed Ideographic Supplement."
   },
   {
     "name": "Miscellaneous Symbols and Pictographs",
@@ -550,6 +2899,24 @@
     "description": "A wide range of emoji including nature, food, travel, activities, objects, and other pictographic symbols."
   },
   {
+    "name": "Emoticons",
+    "slug": "emoticons",
+    "start": "U+1F600",
+    "end": "U+1F64F",
+    "count": 80,
+    "category": "emoji",
+    "description": "Emoji faces and people symbols including smileys, emotions, gestures, and simple human figure expressions."
+  },
+  {
+    "name": "Ornamental Dingbats",
+    "slug": "ornamental-dingbats",
+    "start": "U+1F650",
+    "end": "U+1F67F",
+    "count": 48,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Ornamental Dingbats."
+  },
+  {
     "name": "Transport and Map Symbols",
     "slug": "transport-map-symbols",
     "start": "U+1F680",
@@ -557,6 +2924,33 @@
     "count": 128,
     "category": "emoji",
     "description": "Emoji symbols for vehicles, transportation modes, traffic signs, and map-related icons."
+  },
+  {
+    "name": "Alchemical Symbols",
+    "slug": "alchemical-symbols",
+    "start": "U+1F700",
+    "end": "U+1F77F",
+    "count": 128,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Alchemical Symbols."
+  },
+  {
+    "name": "Geometric Shapes Extended",
+    "slug": "geometric-shapes-extended",
+    "start": "U+1F780",
+    "end": "U+1F7FF",
+    "count": 128,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Geometric Shapes Extended."
+  },
+  {
+    "name": "Supplemental Arrows-C",
+    "slug": "supplemental-arrows-c",
+    "start": "U+1F800",
+    "end": "U+1F8FF",
+    "count": 256,
+    "category": "technical",
+    "description": "Unicode block of technical/notational characters: Supplemental Arrows-C."
   },
   {
     "name": "Supplemental Symbols and Pictographs",
@@ -568,12 +2962,156 @@
     "description": "Additional emoji including supplemental faces, hand gestures, clothing, animals, and food introduced in newer Unicode versions."
   },
   {
-    "name": "Symbols and Pictographs Extended-A",
-    "slug": "symbols-pictographs-extended-a",
+    "name": "Chess Symbols",
+    "slug": "chess-symbols",
     "start": "U+1FA00",
     "end": "U+1FA6F",
     "count": 112,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Chess Symbols."
+  },
+  {
+    "name": "Symbols and Pictographs Extended-A",
+    "slug": "symbols-pictographs-extended-a",
+    "start": "U+1FA70",
+    "end": "U+1FAFF",
+    "count": 144,
     "category": "emoji",
     "description": "Extended emoji pictographs for chess pieces, board game symbols, and additional miscellaneous symbols."
+  },
+  {
+    "name": "Symbols for Legacy Computing",
+    "slug": "symbols-for-legacy-computing",
+    "start": "U+1FB00",
+    "end": "U+1FBFF",
+    "count": 256,
+    "category": "symbols",
+    "description": "Unicode block of symbols: Symbols for Legacy Computing."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension B",
+    "slug": "cjk-unified-ideographs-extension-b",
+    "start": "U+20000",
+    "end": "U+2A6DF",
+    "count": 42720,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension B."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension C",
+    "slug": "cjk-unified-ideographs-extension-c",
+    "start": "U+2A700",
+    "end": "U+2B73F",
+    "count": 4160,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension C."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension D",
+    "slug": "cjk-unified-ideographs-extension-d",
+    "start": "U+2B740",
+    "end": "U+2B81F",
+    "count": 224,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension D."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension E",
+    "slug": "cjk-unified-ideographs-extension-e",
+    "start": "U+2B820",
+    "end": "U+2CEAF",
+    "count": 5776,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension E."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension F",
+    "slug": "cjk-unified-ideographs-extension-f",
+    "start": "U+2CEB0",
+    "end": "U+2EBEF",
+    "count": 7488,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension F."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension I",
+    "slug": "cjk-unified-ideographs-extension-i",
+    "start": "U+2EBF0",
+    "end": "U+2EE5F",
+    "count": 624,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension I."
+  },
+  {
+    "name": "CJK Compatibility Ideographs Supplement",
+    "slug": "cjk-compatibility-ideographs-supplement",
+    "start": "U+2F800",
+    "end": "U+2FA1F",
+    "count": 544,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Compatibility Ideographs Supplement."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension G",
+    "slug": "cjk-unified-ideographs-extension-g",
+    "start": "U+30000",
+    "end": "U+3134F",
+    "count": 4944,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension G."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension H",
+    "slug": "cjk-unified-ideographs-extension-h",
+    "start": "U+31350",
+    "end": "U+323AF",
+    "count": 4192,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension H."
+  },
+  {
+    "name": "CJK Unified Ideographs Extension J",
+    "slug": "cjk-unified-ideographs-extension-j",
+    "start": "U+323B0",
+    "end": "U+3347F",
+    "count": 4304,
+    "category": "cjk",
+    "description": "Unicode block of CJK (Chinese/Japanese/Korean) characters: CJK Unified Ideographs Extension J."
+  },
+  {
+    "name": "Tags",
+    "slug": "tags",
+    "start": "U+E0000",
+    "end": "U+E007F",
+    "count": 128,
+    "category": "scripts",
+    "description": "Unicode block for the Tags script/writing system."
+  },
+  {
+    "name": "Variation Selectors Supplement",
+    "slug": "variation-selectors-supplement",
+    "start": "U+E0100",
+    "end": "U+E01EF",
+    "count": 240,
+    "category": "scripts",
+    "description": "Unicode block for the Variation Selectors Supplement script/writing system."
+  },
+  {
+    "name": "Supplementary Private Use Area-A",
+    "slug": "supplementary-private-use-area-a",
+    "start": "U+F0000",
+    "end": "U+FFFFF",
+    "count": 65536,
+    "category": "scripts",
+    "description": "Unicode block for the Supplementary Private Use Area-A script/writing system."
+  },
+  {
+    "name": "Supplementary Private Use Area-B",
+    "slug": "supplementary-private-use-area-b",
+    "start": "U+100000",
+    "end": "U+10FFFF",
+    "count": 65536,
+    "category": "scripts",
+    "description": "Unicode block for the Supplementary Private Use Area-B script/writing system."
   }
 ]

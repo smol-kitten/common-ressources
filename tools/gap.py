@@ -51,6 +51,7 @@ CARDINALITY = {
     "bio/amino-acids/amino-acids.json":          (20,  "20 standard proteinogenic amino acids"),
     "bio/codon-table/codon-table.json":          (64,  "64 codons of the standard genetic code"),
     "science/si-prefixes/si-prefixes.json":      (24,  "24 BIPM SI prefixes (quetta..quecto)"),
+    "unicode/blocks/blocks.json":                (346, "all Unicode 17.0 blocks"),
     "science/si-base-units/si-base-units.json":  (7,   "7 SI base units"),
     "science/si-derived-units/si-derived-units.json": (22, "22 SI derived units with special names"),
     "geo/countries/countries.json":              (195, "193 UN members + 2 observers"),

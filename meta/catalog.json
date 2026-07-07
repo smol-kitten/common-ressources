@@ -2,7 +2,7 @@
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
   "dataset_count": 176,
-  "entry_total": 5444,
+  "entry_total": 5726,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -3390,7 +3390,7 @@
       "path": "unicode/blocks/blocks.json",
       "category": "unicode",
       "kind": "list",
-      "count": 64,
+      "count": 346,
       "fields": [
         "_note",
         "category",
@@ -3402,8 +3402,8 @@
         "start"
       ],
       "has_source": false,
-      "readme": "README.md",
-      "description": "A growing collection of structured JSON resources for recurring use in projects."
+      "readme": "unicode/blocks/Readme.MD",
+      "description": "Every named block in the Unicode Character Database (Unicode 17.0) — all 346 contiguous code-point ranges, from Basic Latin to the Supplementary Private Use Area. Each entry gives the block name, slug, start and end code points, the number of code points the range spans, a broad "
     },
     {
       "path": "unicode/symbols/special-chars.json",

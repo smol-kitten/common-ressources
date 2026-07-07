@@ -278,6 +278,30 @@ def check_si_prefixes():
     STATS["cross_checks"] += 1
 
 
+def check_unicode_blocks():
+    """Unicode blocks: sorted, non-overlapping, count matches the U+start..U+end range."""
+    rel = "unicode/blocks/blocks.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    prev_end = -1
+    for e in d:
+        try:
+            st = int(e["start"][2:], 16)
+            en = int(e["end"][2:], 16)
+        except (KeyError, ValueError):
+            err(rel, f"{e.get('name')}: bad start/end")
+            continue
+        if en < st:
+            err(rel, f"{e['name']}: end before start")
+        if "count" in e and e["count"] != en - st + 1:
+            err(rel, f"{e['name']}: count {e['count']} != range size {en - st + 1}")
+        if st <= prev_end:
+            err(rel, f"{e['name']}: overlaps previous block (not sorted/disjoint)")
+        prev_end = en
+    STATS["cross_checks"] += 1
+
+
 def check_si_units():
     """SI base units (7) and named derived units (22): fixed universes, unique symbols."""
     base_rel = "science/si-base-units/si-base-units.json"
@@ -495,7 +519,7 @@ def main():
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
                check_timezones, check_elements, check_codon_table, check_si_prefixes,
-               check_si_units, check_planets, check_http_status,
+               check_si_units, check_unicode_blocks, check_planets, check_http_status,
                check_geo_crossref, check_locales, check_finance, check_formats):
         try:
             fn()
