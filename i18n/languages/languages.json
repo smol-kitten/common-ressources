@@ -120,6 +120,14 @@
     "script": "Cyrillic"
   },
   {
+    "iso639_1": "bh",
+    "iso639_2": "bih",
+    "name": "Bihari languages",
+    "native": "बिहारी",
+    "direction": "ltr",
+    "script": "Devanagari"
+  },
+  {
     "iso639_1": "bi",
     "iso639_2": "bis",
     "name": "Bislama",
