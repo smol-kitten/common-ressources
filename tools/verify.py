@@ -157,6 +157,13 @@ def check_countries_currencies():
     countries = load("geo/countries/countries.json")
     currencies = load("geo/currencies/currencies.json")
     known = {c["code"] for c in currencies}
+    # ISO 4217 numeric codes: unique 1..999 integers where present
+    cur_nums = Counter(c["numeric"] for c in currencies if "numeric" in c)
+    for v, n in cur_nums.items():
+        if not isinstance(v, int) or not (1 <= v <= 999):
+            err("geo/currencies/currencies.json", f"bad numeric {v!r}")
+        if n > 1:
+            err("geo/currencies/currencies.json", f"duplicate numeric {v!r}")
     missing = set()
     for c in countries:
         code = c.get("currency_code")

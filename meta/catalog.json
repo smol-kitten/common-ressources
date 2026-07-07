@@ -736,6 +736,7 @@
         "country_code",
         "decimals",
         "name",
+        "numeric",
         "symbol"
       ],
       "has_source": false,
