@@ -2,7 +2,7 @@
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
   "dataset_count": 172,
-  "entry_total": 5203,
+  "entry_total": 5225,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -801,7 +801,7 @@
       "path": "iso/15924/scripts.json",
       "category": "iso",
       "kind": "list",
-      "count": 131,
+      "count": 153,
       "fields": [
         "code",
         "direction",

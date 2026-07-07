@@ -11,6 +11,15 @@
     "status": "living"
   },
   {
+    "code": "Aghb",
+    "name": "Caucasian Albanian",
+    "numeric": 239,
+    "direction": "ltr",
+    "unicode_range": "U+10530–U+1056F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Ahom",
     "name": "Ahom",
     "numeric": 338,
@@ -87,6 +96,15 @@
     "status": "living"
   },
   {
+    "code": "Bass",
+    "name": "Bassa Vah",
+    "numeric": 259,
+    "direction": "ltr",
+    "unicode_range": "U+16AD0–U+16AFF",
+    "languages": [],
+    "status": "living"
+  },
+  {
     "code": "Batk",
     "name": "Batak",
     "numeric": 365,
@@ -108,6 +126,15 @@
       "as"
     ],
     "status": "living"
+  },
+  {
+    "code": "Bhks",
+    "name": "Bhaiksuki",
+    "numeric": 334,
+    "direction": "ltr",
+    "unicode_range": "U+11C00–U+11C6F",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Bopo",
@@ -256,6 +283,15 @@
     "status": "living"
   },
   {
+    "code": "Diak",
+    "name": "Dives Akuru",
+    "numeric": 342,
+    "direction": "ltr",
+    "unicode_range": "U+11900–U+1195F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Dogr",
     "name": "Dogra",
     "numeric": 328,
@@ -281,6 +317,15 @@
     "numeric": 50,
     "direction": "ltr",
     "unicode_range": "U+13000–U+1342F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Elba",
+    "name": "Elbasan",
+    "numeric": 226,
+    "direction": "ltr",
+    "unicode_range": "U+10500–U+1052F",
     "languages": [],
     "status": "historic"
   },
@@ -475,6 +520,15 @@
     "status": "historic"
   },
   {
+    "code": "Hmng",
+    "name": "Pahawh Hmong",
+    "numeric": 450,
+    "direction": "ltr",
+    "unicode_range": "U+16B00–U+16B8F",
+    "languages": [],
+    "status": "living"
+  },
+  {
     "code": "Hmnp",
     "name": "Nyiakeng Puachue Hmong",
     "numeric": 451,
@@ -564,6 +618,24 @@
       "km"
     ],
     "status": "living"
+  },
+  {
+    "code": "Khoj",
+    "name": "Khojki",
+    "numeric": 322,
+    "direction": "ltr",
+    "unicode_range": "U+11200–U+1124F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Kits",
+    "name": "Khitan Small Script",
+    "numeric": 288,
+    "direction": "ttb",
+    "unicode_range": "U+18B00–U+18CFF",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Knda",
@@ -698,6 +770,15 @@
     "status": "historic"
   },
   {
+    "code": "Maka",
+    "name": "Makasar",
+    "numeric": 366,
+    "direction": "ltr",
+    "unicode_range": "U+11EE0–U+11EFF",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Mand",
     "name": "Mandaic",
     "numeric": 140,
@@ -716,6 +797,24 @@
     "unicode_range": "U+10AC0–U+10AFF",
     "languages": [],
     "status": "historic"
+  },
+  {
+    "code": "Marc",
+    "name": "Marchen",
+    "numeric": 332,
+    "direction": "ltr",
+    "unicode_range": "U+11C70–U+11CBF",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Medf",
+    "name": "Medefaidrin",
+    "numeric": 265,
+    "direction": "ltr",
+    "unicode_range": "U+16E40–U+16E9F",
+    "languages": [],
+    "status": "living"
   },
   {
     "code": "Mero",
@@ -778,6 +877,15 @@
     "status": "living"
   },
   {
+    "code": "Mult",
+    "name": "Multani",
+    "numeric": 323,
+    "direction": "ltr",
+    "unicode_range": "U+11280–U+112AF",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Mymr",
     "name": "Myanmar (Burmese)",
     "numeric": 350,
@@ -796,6 +904,15 @@
     "unicode_range": "U+119A0–U+119FF",
     "languages": [],
     "status": "living"
+  },
+  {
+    "code": "Narb",
+    "name": "Old North Arabian",
+    "numeric": 106,
+    "direction": "rtl",
+    "unicode_range": "U+10A80–U+10A9F",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Nbat",
@@ -825,6 +942,15 @@
     "unicode_range": "U+07C0–U+07FF",
     "languages": [],
     "status": "living"
+  },
+  {
+    "code": "Nshu",
+    "name": "Nüshu",
+    "numeric": 499,
+    "direction": "ltr",
+    "unicode_range": "U+1B170–U+1B2FF",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Ogam",
@@ -925,6 +1051,15 @@
     "status": "historic"
   },
   {
+    "code": "Phlp",
+    "name": "Psalter Pahlavi",
+    "numeric": 132,
+    "direction": "rtl",
+    "unicode_range": "U+10B80–U+10BAF",
+    "languages": [],
+    "status": "historic"
+  },
+  {
     "code": "Phnx",
     "name": "Phoenician",
     "numeric": 115,
@@ -1016,6 +1151,15 @@
     "status": "living"
   },
   {
+    "code": "Sgnw",
+    "name": "SignWriting",
+    "numeric": 95,
+    "direction": "ttb",
+    "unicode_range": "U+1D800–U+1DAAF",
+    "languages": [],
+    "status": "living"
+  },
+  {
     "code": "Shaw",
     "name": "Shavian (Shaw)",
     "numeric": 281,
@@ -1025,6 +1169,24 @@
       "en"
     ],
     "status": "living"
+  },
+  {
+    "code": "Shrd",
+    "name": "Sharada",
+    "numeric": 319,
+    "direction": "ltr",
+    "unicode_range": "U+11180–U+111DF",
+    "languages": [],
+    "status": "living"
+  },
+  {
+    "code": "Sidd",
+    "name": "Siddham",
+    "numeric": 302,
+    "direction": "ltr",
+    "unicode_range": "U+11580–U+115FF",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Sind",
@@ -1045,6 +1207,33 @@
       "si"
     ],
     "status": "living"
+  },
+  {
+    "code": "Sogd",
+    "name": "Sogdian",
+    "numeric": 141,
+    "direction": "rtl",
+    "unicode_range": "U+10F30–U+10F6F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Sogo",
+    "name": "Old Sogdian",
+    "numeric": 142,
+    "direction": "rtl",
+    "unicode_range": "U+10F00–U+10F2F",
+    "languages": [],
+    "status": "historic"
+  },
+  {
+    "code": "Soyo",
+    "name": "Soyombo",
+    "numeric": 329,
+    "direction": "ltr",
+    "unicode_range": "U+11A50–U+11AAF",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Sund",
@@ -1291,6 +1480,15 @@
       "ii"
     ],
     "status": "living"
+  },
+  {
+    "code": "Zanb",
+    "name": "Zanabazar Square",
+    "numeric": 339,
+    "direction": "ltr",
+    "unicode_range": "U+11A00–U+11A4F",
+    "languages": [],
+    "status": "historic"
   },
   {
     "code": "Zinh",
