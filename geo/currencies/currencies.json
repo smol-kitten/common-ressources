@@ -436,8 +436,8 @@
     "name": "Hong Kong Dollar",
     "symbol": "HK$",
     "decimals": 2,
-    "country": null,
-    "country_code": null
+    "country": "Hong Kong",
+    "country_code": "HK"
   },
   {
     "code": "HNL",

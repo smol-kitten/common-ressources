@@ -1968,5 +1968,15 @@
     "dial_code": "+678",
     "currency_code": "VUV",
     "population_approx": 320000
+  },
+  {
+    "iso2": "HK",
+    "iso3": "HKG",
+    "name": "Hong Kong",
+    "capital": "Hong Kong",
+    "continent": "Asia",
+    "dial_code": "+852",
+    "currency_code": "HKD",
+    "population_approx": 7500000
   }
 ]

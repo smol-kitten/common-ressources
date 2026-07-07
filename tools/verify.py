@@ -249,6 +249,80 @@ def check_http_status():
     STATS["cross_checks"] += 1
 
 
+def check_geo_crossref():
+    """iso2 references in airports/cities/currencies must exist in countries.json."""
+    countries = load("geo/countries/countries.json")
+    iso2 = {c["iso2"] for c in countries if c.get("iso2")}
+    # currencies.country_code → countries.iso2 (skip regional None / EU / IMF)
+    for c in load("geo/currencies/currencies.json"):
+        cc = c.get("country_code")
+        if cc and cc not in iso2 and cc not in ("EU",):
+            warn("geo/currencies/currencies.json",
+                 f"{c['code']}: country_code {cc} not in countries.json")
+    # airports.country_iso2
+    try:
+        for a in load("geo/airports/airports.json"):
+            cc = a.get("country_iso2")
+            if cc and cc not in iso2:
+                warn("geo/airports/airports.json", f"{a.get('iata')}: country_iso2 {cc} unknown")
+            for f, lo, hi in (("lat", -90, 90), ("lon", -180, 180)):
+                if f in a and not (lo <= a[f] <= hi):
+                    err("geo/airports/airports.json", f"{a.get('iata')}: {f} out of range: {a[f]}")
+            if a.get("iata") and not re.match(r"^[A-Z]{3}$", a["iata"]):
+                err("geo/airports/airports.json", f"bad IATA code {a['iata']!r}")
+            if a.get("icao") and not re.match(r"^[A-Z]{4}$", a["icao"]):
+                err("geo/airports/airports.json", f"bad ICAO code {a['icao']!r}")
+    except FileNotFoundError:
+        pass
+    # cities.country (iso2)
+    try:
+        for c in load("geo/cities/cities.json"):
+            cc = c.get("country")
+            if cc and cc not in iso2:
+                warn("geo/cities/cities.json", f"{c.get('name')}: country {cc} not in countries.json")
+            for f, lo, hi in (("lat", -90, 90), ("lng", -180, 180)):
+                if f in c and not (lo <= c[f] <= hi):
+                    err("geo/cities/cities.json", f"{c.get('name')}: {f} out of range: {c[f]}")
+    except FileNotFoundError:
+        pass
+    STATS["cross_checks"] += 1
+
+
+def check_formats():
+    """Regex / range sanity on well-specified code fields."""
+    try:
+        for c in load("geo/countries/countries.json"):
+            dc = c.get("dial_code")
+            if dc and not re.match(r"^\+\d{1,4}(-\d+)?$", str(dc)):
+                warn("geo/countries/countries.json", f"{c['name']}: unusual dial_code {dc!r}")
+    except FileNotFoundError:
+        pass
+    try:
+        for l in load("i18n/languages/languages.json"):
+            if l.get("iso639_1") and not re.match(r"^[a-z]{2}$", l["iso639_1"]):
+                err("i18n/languages/languages.json", f"bad iso639_1 {l['iso639_1']!r}")
+            if l.get("iso639_2") and not re.match(r"^[a-z]{3}$", l["iso639_2"]):
+                err("i18n/languages/languages.json", f"bad iso639_2 {l['iso639_2']!r}")
+            if l.get("direction") not in (None, "ltr", "rtl"):
+                err("i18n/languages/languages.json", f"bad direction {l['direction']!r}")
+    except FileNotFoundError:
+        pass
+    try:
+        for c in load("geo/currencies/currencies.json"):
+            if not (0 <= c.get("decimals", 0) <= 4):
+                err("geo/currencies/currencies.json", f"{c['code']}: decimals out of range")
+    except FileNotFoundError:
+        pass
+    try:
+        for p in load("net/ports/ports.json"):
+            port = p.get("port")
+            if port is not None and not (0 <= int(port) <= 65535):
+                err("net/ports/ports.json", f"port out of range: {port}")
+    except FileNotFoundError:
+        pass
+    STATS["cross_checks"] += 1
+
+
 def main():
     argv = sys.argv[1:]
     want_json = "--json" in argv
@@ -268,7 +342,8 @@ def main():
 
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
-               check_timezones, check_elements, check_planets, check_http_status):
+               check_timezones, check_elements, check_planets, check_http_status,
+               check_geo_crossref, check_formats):
         try:
             fn()
         except FileNotFoundError:
