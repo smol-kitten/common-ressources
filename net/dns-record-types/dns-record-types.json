@@ -102,7 +102,7 @@
     "type": "SPF",
     "name": "Sender Policy Framework",
     "class": "IN",
-    "description": "Published as a TXT record specifying which mail servers are permitted to send email on behalf of a domain.",
+    "description": "Published as a TXT record specifying which mail servers are permitted to send email on behalf of a domain. A dedicated SPF RR type (99, RFC 4408) once existed but was deprecated by RFC 7208 in favour of TXT.",
     "example_value": "\"v=spf1 ip4:192.0.2.0/24 include:_spf.google.com -all\"",
     "numeric_id": null,
     "rfc": "RFC 7208"
