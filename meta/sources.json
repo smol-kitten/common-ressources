@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_sources.py",
   "_about": "Authoritative source map. 'kind' = standard | official | curated. Consumers should verify safety/compliance-critical values against the cited primary source.",
-  "documented": 61,
-  "total_datasets": 177,
+  "documented": 62,
+  "total_datasets": 178,
   "sources": {
     "accessibility/aria-roles/aria-roles.json": {
       "kind": "standard",
@@ -450,6 +450,19 @@
         {
           "title": "BIPM SI Brochure (9th ed.)",
           "url": "https://www.bipm.org/en/publications/si-brochure"
+        }
+      ]
+    },
+    "security/hash-algorithms/hash-algorithms.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "NIST FIPS 180-4 (SHA-1/SHA-2)",
+          "url": "https://csrc.nist.gov/publications/detail/fips/180/4/final"
+        },
+        {
+          "title": "NIST FIPS 202 (SHA-3/SHAKE)",
+          "url": "https://csrc.nist.gov/publications/detail/fips/202/final"
         }
       ]
     },

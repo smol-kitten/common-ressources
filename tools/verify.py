@@ -278,6 +278,26 @@ def check_si_prefixes():
     STATS["cross_checks"] += 1
 
 
+def check_hash_algorithms():
+    """Hash algorithms: unique slugs, valid status, positive digest sizes."""
+    rel = "security/hash-algorithms/hash-algorithms.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    slugs = [e.get("slug") for e in d]
+    if len(slugs) != len(set(slugs)):
+        err(rel, "duplicate slugs")
+    for e in d:
+        if e.get("status") not in ("secure", "broken", "deprecated", "not-applicable"):
+            err(rel, f"{e.get('name')}: invalid status {e.get('status')!r}")
+        if "digest_bits" in e and e["digest_bits"] <= 0:
+            err(rel, f"{e.get('name')}: non-positive digest_bits")
+        # non-cryptographic entries must not be marked secure/broken as if crypto
+        if e.get("cryptographic") is False and e.get("status") != "not-applicable":
+            err(rel, f"{e.get('name')}: non-cryptographic but status {e.get('status')!r}")
+    STATS["cross_checks"] += 1
+
+
 def check_special_use_ips():
     """Special-use IP blocks: valid CIDR, family matches the block, RFCs present."""
     rel = "networking/special-use-ips/special-use-ips.json"
@@ -544,7 +564,7 @@ def main():
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
                check_timezones, check_elements, check_codon_table, check_si_prefixes,
                check_si_units, check_unicode_blocks, check_special_use_ips,
-               check_planets, check_http_status,
+               check_hash_algorithms, check_planets, check_http_status,
                check_geo_crossref, check_locales, check_finance, check_formats):
         try:
             fn()

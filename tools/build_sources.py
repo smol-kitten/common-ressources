@@ -141,6 +141,9 @@ SOURCES = {
     "security/tls/versions.json": {"kind": "standard", "sources": [
         S("https://www.rfc-editor.org/rfc/rfc8446", "RFC 8446 — TLS 1.3"),
         S("https://datatracker.ietf.org/doc/html/rfc5246", "RFC 5246 — TLS 1.2")]},
+    "security/hash-algorithms/hash-algorithms.json": {"kind": "standard", "sources": [
+        S("https://csrc.nist.gov/publications/detail/fips/180/4/final", "NIST FIPS 180-4 (SHA-1/SHA-2)"),
+        S("https://csrc.nist.gov/publications/detail/fips/202/final", "NIST FIPS 202 (SHA-3/SHAKE)")]},
 
     # ── programming / accessibility / unicode ──────────────────────────────────
     "programming/licenses/licenses.json": {"kind": "standard", "sources": [

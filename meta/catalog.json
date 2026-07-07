@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
-  "dataset_count": 177,
-  "entry_total": 5775,
+  "dataset_count": 178,
+  "entry_total": 5796,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -36,7 +36,7 @@
     "programming": 4,
     "rice": 44,
     "science": 7,
-    "security": 3,
+    "security": 4,
     "setups": 15,
     "social": 1,
     "space": 2,
@@ -2845,6 +2845,26 @@
       "has_source": false,
       "readme": "science/units/Readme.MD",
       "description": "A structured reference for common SI and imperial units covering length, mass, time, temperature, energy, power, pressure, and volume. Each entry includes a conversion factor to the SI base unit, making programmatic unit conversion straightforward."
+    },
+    {
+      "path": "security/hash-algorithms/hash-algorithms.json",
+      "category": "security",
+      "kind": "list",
+      "count": 21,
+      "fields": [
+        "block_bits",
+        "construction",
+        "cryptographic",
+        "digest_bits",
+        "name",
+        "notes",
+        "released_year",
+        "slug",
+        "status"
+      ],
+      "has_source": false,
+      "readme": "security/hash-algorithms/Readme.MD",
+      "description": "Common cryptographic hash functions (and a couple of important non-cryptographic references) with their digest size, internal block size, construction, year, and current security status. Covers the MD family, SHA-0/1, the SHA-2 and SHA-3 (Keccak) families, SHAKE XOFs, BLAKE2/BLAK"
     },
     {
       "path": "security/headers/security-headers.json",
