@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_sources.py",
   "_about": "Authoritative source map. 'kind' = standard | official | curated. Consumers should verify safety/compliance-critical values against the cited primary source.",
-  "documented": 63,
-  "total_datasets": 179,
+  "documented": 64,
+  "total_datasets": 180,
   "sources": {
     "accessibility/aria-roles/aria-roles.json": {
       "kind": "standard",
@@ -268,6 +268,19 @@
         {
           "title": "POSIX.1-2017",
           "url": "https://pubs.opengroup.org/onlinepubs/9699919799/"
+        }
+      ]
+    },
+    "math/constants/constants.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "OEIS — decimal expansions",
+          "url": "https://oeis.org/"
+        },
+        {
+          "title": "mpmath — arbitrary-precision computation",
+          "url": "https://mpmath.org/"
         }
       ]
     },

@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
-  "dataset_count": 179,
-  "entry_total": 5805,
+  "dataset_count": 180,
+  "entry_total": 5819,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -28,7 +28,7 @@
     "lgbtq": 9,
     "linux": 8,
     "macos": 3,
-    "math": 3,
+    "math": 4,
     "meta": 1,
     "music": 1,
     "net": 3,
@@ -1367,6 +1367,24 @@
       "has_source": false,
       "readme": "README.md",
       "description": "A growing collection of structured JSON resources for recurring use in projects."
+    },
+    {
+      "path": "math/constants/constants.json",
+      "category": "math",
+      "kind": "list",
+      "count": 14,
+      "fields": [
+        "approx",
+        "description",
+        "name",
+        "oeis",
+        "slug",
+        "symbol",
+        "value"
+      ],
+      "has_source": false,
+      "readme": "math/constants/Readme.MD",
+      "description": "Famous mathematical constants — π, e, the golden ratio, √2, Euler–Mascheroni, Apéry's and Catalan's constants, and more — each to 30 significant figures. Values were computed with arbitrary-precision arithmetic (mpmath), not transcribed, so every digit is correct. Each entry incl"
     },
     {
       "path": "math/formulas/formulas.json",

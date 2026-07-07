@@ -166,6 +166,9 @@ SOURCES = {
         S("https://www.unicode.org/charts/", "Unicode Code Charts")]},
     "math/symbols/symbols.json": {"kind": "standard", "sources": [
         S("https://www.unicode.org/charts/PDF/U2200.pdf", "Unicode Mathematical Operators")]},
+    "math/constants/constants.json": {"kind": "standard", "sources": [
+        S("https://oeis.org/", "OEIS — decimal expansions"),
+        S("https://mpmath.org/", "mpmath — arbitrary-precision computation")]},
 
     # ── devops / linux / hardware ──────────────────────────────────────────────
     "devops/kubernetes/objects.json": {"kind": "official", "sources": [

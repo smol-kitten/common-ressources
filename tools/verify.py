@@ -382,6 +382,27 @@ def check_si_units():
         STATS["cross_checks"] += 1
 
 
+def check_math_constants():
+    """Math constants: unique slugs; high-precision value string agrees with approx."""
+    rel = "math/constants/constants.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    slugs = [e.get("slug") for e in d]
+    if len(slugs) != len(set(slugs)):
+        err(rel, "duplicate slugs")
+    for e in d:
+        try:
+            v = float(e["value"])
+        except (KeyError, ValueError):
+            err(rel, f"{e.get('name')}: value not parseable")
+            continue
+        a = e.get("approx")
+        if a is None or abs(v - a) > 1e-9 * max(1.0, abs(a)):
+            err(rel, f"{e.get('name')}: value {e.get('value')} disagrees with approx {a}")
+    STATS["cross_checks"] += 1
+
+
 def check_binary_prefixes():
     """8 IEC binary prefixes with value == 2**base2 and unique symbols."""
     rel = "science/binary-prefixes/binary-prefixes.json"
@@ -594,7 +615,7 @@ def main():
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
                check_timezones, check_elements, check_codon_table, check_si_prefixes,
-               check_si_units, check_binary_prefixes, check_unicode_blocks,
+               check_si_units, check_binary_prefixes, check_math_constants, check_unicode_blocks,
                check_special_use_ips, check_hash_algorithms, check_planets, check_http_status,
                check_geo_crossref, check_locales, check_finance, check_formats):
         try:

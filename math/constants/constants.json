@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Pi",
+    "symbol": "π",
+    "slug": "pi",
+    "value": "3.14159265358979323846264338328",
+    "approx": 3.141592653589793,
+    "description": "Ratio of a circle's circumference to its diameter.",
+    "oeis": "A000796"
+  },
+  {
+    "name": "Euler's number",
+    "symbol": "e",
+    "slug": "e",
+    "value": "2.71828182845904523536028747135",
+    "approx": 2.718281828459045,
+    "description": "Base of the natural logarithm; limit of (1+1/n)^n.",
+    "oeis": "A001113"
+  },
+  {
+    "name": "Golden ratio",
+    "symbol": "φ",
+    "slug": "golden-ratio",
+    "value": "1.61803398874989484820458683437",
+    "approx": 1.618033988749895,
+    "description": "(1+√5)/2; ratio where a+b is to a as a is to b.",
+    "oeis": "A001622"
+  },
+  {
+    "name": "Tau",
+    "symbol": "τ",
+    "slug": "tau",
+    "value": "6.28318530717958647692528676656",
+    "approx": 6.283185307179586,
+    "description": "Ratio of a circle's circumference to its radius (2π).",
+    "oeis": "A019692"
+  },
+  {
+    "name": "Square root of 2",
+    "symbol": "√2",
+    "slug": "sqrt-2",
+    "value": "1.41421356237309504880168872421",
+    "approx": 1.414213562373095,
+    "description": "Pythagoras' constant; diagonal of a unit square.",
+    "oeis": "A002193"
+  },
+  {
+    "name": "Square root of 3",
+    "symbol": "√3",
+    "slug": "sqrt-3",
+    "value": "1.73205080756887729352744634151",
+    "approx": 1.732050807568877,
+    "description": "Theodorus' constant; height of an equilateral triangle of side 2.",
+    "oeis": "A002194"
+  },
+  {
+    "name": "Square root of 5",
+    "symbol": "√5",
+    "slug": "sqrt-5",
+    "value": "2.23606797749978969640917366873",
+    "approx": 2.23606797749979,
+    "description": "Diagonal ratio appearing in the golden ratio.",
+    "oeis": "A002163"
+  },
+  {
+    "name": "Natural log of 2",
+    "symbol": "ln 2",
+    "slug": "ln-2",
+    "value": "0.693147180559945309417232121458",
+    "approx": 0.6931471805599453,
+    "description": "Natural logarithm of 2.",
+    "oeis": "A002162"
+  },
+  {
+    "name": "Natural log of 10",
+    "symbol": "ln 10",
+    "slug": "ln-10",
+    "value": "2.30258509299404568401799145468",
+    "approx": 2.302585092994046,
+    "description": "Natural logarithm of 10.",
+    "oeis": "A002392"
+  },
+  {
+    "name": "Euler–Mascheroni constant",
+    "symbol": "γ",
+    "slug": "euler-mascheroni",
+    "value": "0.577215664901532860606512090082",
+    "approx": 0.5772156649015329,
+    "description": "Limiting difference between the harmonic series and the natural logarithm.",
+    "oeis": "A001620"
+  },
+  {
+    "name": "Apéry's constant",
+    "symbol": "ζ(3)",
+    "slug": "apery",
+    "value": "1.20205690315959428539973816151",
+    "approx": 1.202056903159594,
+    "description": "Value of the Riemann zeta function at 3; proven irrational.",
+    "oeis": "A002117"
+  },
+  {
+    "name": "Catalan's constant",
+    "symbol": "G",
+    "slug": "catalan",
+    "value": "0.915965594177219015054603514932",
+    "approx": 0.915965594177219,
+    "description": "Sum of (-1)^n/(2n+1)^2; appears in combinatorics and integrals.",
+    "oeis": "A006752"
+  },
+  {
+    "name": "Gelfond's constant",
+    "symbol": "e^π",
+    "slug": "gelfond",
+    "value": "23.1406926327792690057290863679",
+    "approx": 23.14069263277927,
+    "description": "e raised to π; proven transcendental.",
+    "oeis": "A039661"
+  },
+  {
+    "name": "Gelfond–Schneider constant",
+    "symbol": "2^√2",
+    "slug": "gelfond-schneider",
+    "value": "2.66514414269022518865029724987",
+    "approx": 2.665144142690225,
+    "description": "2 raised to √2; proven transcendental (Hilbert's 7th problem).",
+    "oeis": "A007507"
+  }
+]
