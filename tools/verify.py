@@ -237,8 +237,10 @@ def check_planets():
 
 
 def check_http_status():
-    for rel in ("net/http-status-codes/http-status-codes.json",
-                "web/http/status-codes.json"):
+    rels = ("net/http-status-codes/http-status-codes.json",
+            "web/http/status-codes.json")
+    tables = {}
+    for rel in rels:
         if not os.path.exists(os.path.join(ROOT, rel)):
             continue
         d = load(rel)
@@ -246,6 +248,15 @@ def check_http_status():
             code = x.get("code")
             if code is not None and not (100 <= int(code) <= 599):
                 err(rel, f"status code out of range: {code}")
+        tables[rel] = {x["code"]: x for x in d if "code" in x}
+    # the two HTTP status datasets overlap — shared codes must agree on name/category
+    if len(tables) == 2:
+        (ra, ta), (rb, tb) = tables.items()
+        for code in sorted(set(ta) & set(tb)):
+            for f in ("name", "category"):
+                va, vb = ta[code].get(f), tb[code].get(f)
+                if va and vb and va.lower() != vb.lower():
+                    err(rb, f"status {code}: {f} {vb!r} disagrees with {ra} ({va!r})")
     STATS["cross_checks"] += 1
 
 
