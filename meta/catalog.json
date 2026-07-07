@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
-  "dataset_count": 171,
-  "entry_total": 5054,
+  "dataset_count": 172,
+  "entry_total": 5123,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -39,7 +39,7 @@
     "security": 3,
     "setups": 15,
     "social": 1,
-    "space": 1,
+    "space": 2,
     "typography": 3,
     "unicode": 2,
     "web": 8,
@@ -1477,7 +1477,7 @@
       "path": "net/ports/ports.json",
       "category": "net",
       "kind": "list",
-      "count": 42,
+      "count": 90,
       "fields": [
         "description",
         "port",
@@ -1486,7 +1486,7 @@
       ],
       "has_source": false,
       "readme": "net/ports/Readme.MD",
-      "description": "A structured reference for 42 well-known TCP/UDP port assignments. Covers system ports (0–1023) and a selection of registered/high ports for popular databases and services. Useful for firewall rule documentation, network tooling, educational references, and port-scanning result e"
+      "description": "A structured reference for 90 well-known/registered TCP/UDP port assignments. Covers system ports (0–1023), routing/VPN protocols (BGP, RIP, IKE, L2TP, PPTP), and registered/high ports for popular databases, message brokers, and services. Useful for firewall rule documentation, n"
     },
     {
       "path": "networking/devices/device-types.json",
@@ -2693,7 +2693,7 @@
       "path": "science/constants/constants.json",
       "category": "science",
       "kind": "list",
-      "count": 23,
+      "count": 39,
       "fields": [
         "category",
         "description",
@@ -3222,6 +3222,28 @@
       "has_source": false,
       "readme": "social/Readme.MD",
       "description": "Structured metadata for major social media and community platforms — brand colors, federation status, handle formats, character limits, and more."
+    },
+    {
+      "path": "space/dwarf-planets/dwarf-planets.json",
+      "category": "space",
+      "kind": "list",
+      "count": 5,
+      "fields": [
+        "avg_temperature_c",
+        "designation",
+        "discovered",
+        "distance_from_sun_km",
+        "mass_kg",
+        "moons",
+        "name",
+        "orbital_period_days",
+        "radius_km",
+        "region",
+        "type"
+      ],
+      "has_source": false,
+      "readme": "space/dwarf-planets/Readme.MD",
+      "description": "The five bodies officially recognised as dwarf planets by the International Astronomical Union (IAU): **Ceres** (asteroid belt), **Pluto**, **Haumea**, **Makemake** (Kuiper belt), and **Eris** (scattered disc)."
     },
     {
       "path": "space/planets/planets.json",

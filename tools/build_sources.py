@@ -55,6 +55,9 @@ SOURCES = {
         S("https://ssd.jpl.nasa.gov/sats/", "JPL Solar System Dynamics — Planetary Satellites")]},
     "space/planets/planets.json": {"kind": "official", "sources": [
         S("https://nssdc.gsfc.nasa.gov/planetary/factsheet/", "NASA NSSDCA Planetary Fact Sheet")]},
+    "space/dwarf-planets/dwarf-planets.json": {"kind": "official", "sources": [
+        S("https://www.iau.org/public/themes/pluto/", "IAU — Pluto & dwarf planets"),
+        S("https://science.nasa.gov/dwarf-planets/", "NASA — Dwarf Planets")]},
 
     # ── geo / i18n / iso ───────────────────────────────────────────────────────
     "geo/countries/countries.json": {"kind": "standard", "sources": [

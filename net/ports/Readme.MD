@@ -1,6 +1,6 @@
 # Well-Known Network Ports
 
-A structured reference for 42 well-known TCP/UDP port assignments. Covers system ports (0–1023) and a selection of registered/high ports for popular databases and services. Useful for firewall rule documentation, network tooling, educational references, and port-scanning result enrichment.
+A structured reference for 90 well-known/registered TCP/UDP port assignments. Covers system ports (0–1023), routing/VPN protocols (BGP, RIP, IKE, L2TP, PPTP), and registered/high ports for popular databases, message brokers, and services. Useful for firewall rule documentation, network tooling, educational references, and port-scanning result enrichment.
 
 ## JSON
 

@@ -11,6 +11,7 @@ Run the whole gate with `make check` (or the individual commands below).
 |---|---|
 | `python3 tools/verify.py` | **Semantic verification** beyond JSON syntax: strict-ID / full-row duplicate detection, hex↔rgb color integrity, and cross-file referential checks (country→currency, language→script, timezone/element/planet/HTTP sanity). Exit 1 on errors; `--warn-as-error` to also fail on warnings; `--json` writes `tools/reports/verify.json`. |
 | `python3 tools/gap.py` | **Coverage & completeness gap analysis**: entry count vs canonical universe sizes (118 elements, 88 constellations, ~180 ISO 4217 currencies…), sparsely-populated optional fields, and cross-reference gaps. `--json`, `--top N`. |
+| `python3 tools/check_corrections.py` | **Fact-check log integrity**: asserts every correction in `meta/corrections.json` is actually applied in the data (catches regressions / mis-logged fixes). |
 | `bash validate.sh` | Original JSON syntax + per-dataset schema checks (unchanged). |
 
 ## Generators (auto-builds)
