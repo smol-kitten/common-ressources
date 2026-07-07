@@ -53,6 +53,8 @@ SOURCES = {
     "science/si-prefixes/si-prefixes.json": {"kind": "standard", "sources": [
         S("https://www.bipm.org/en/measurement-units/si-prefixes", "BIPM — SI prefixes"),
         S("https://www.bipm.org/en/committees/cg/cgpm/27-2022/resolution-3", "27th CGPM (2022) Resolution 3")]},
+    "science/binary-prefixes/binary-prefixes.json": {"kind": "standard", "sources": [
+        S("https://www.iso.org/standard/31898.html", "IEC 80000-13:2008 — binary prefixes")]},
     "science/si-base-units/si-base-units.json": {"kind": "standard", "sources": [
         S("https://www.bipm.org/en/measurement-units/si-base-units", "BIPM — SI base units")]},
     "science/si-derived-units/si-derived-units.json": {"kind": "standard", "sources": [

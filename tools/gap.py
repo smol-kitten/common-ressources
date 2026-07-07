@@ -51,6 +51,7 @@ CARDINALITY = {
     "bio/amino-acids/amino-acids.json":          (20,  "20 standard proteinogenic amino acids"),
     "bio/codon-table/codon-table.json":          (64,  "64 codons of the standard genetic code"),
     "science/si-prefixes/si-prefixes.json":      (24,  "24 BIPM SI prefixes (quetta..quecto)"),
+    "science/binary-prefixes/binary-prefixes.json": (8, "8 IEC 80000-13 binary prefixes (kibi..yobi)"),
     "unicode/blocks/blocks.json":                (346, "all Unicode 17.0 blocks"),
     "networking/special-use-ips/special-use-ips.json": (49, "IANA IPv4+IPv6 special-purpose blocks"),
     "security/hash-algorithms/hash-algorithms.json": (21, "common cryptographic + reference hash functions"),

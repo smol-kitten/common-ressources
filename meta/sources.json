@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_sources.py",
   "_about": "Authoritative source map. 'kind' = standard | official | curated. Consumers should verify safety/compliance-critical values against the cited primary source.",
-  "documented": 62,
-  "total_datasets": 178,
+  "documented": 63,
+  "total_datasets": 179,
   "sources": {
     "accessibility/aria-roles/aria-roles.json": {
       "kind": "standard",
@@ -379,6 +379,15 @@
         {
           "title": "OSI Approved Licenses",
           "url": "https://opensource.org/licenses"
+        }
+      ]
+    },
+    "science/binary-prefixes/binary-prefixes.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IEC 80000-13:2008 — binary prefixes",
+          "url": "https://www.iso.org/standard/31898.html"
         }
       ]
     },

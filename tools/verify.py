@@ -382,6 +382,23 @@ def check_si_units():
         STATS["cross_checks"] += 1
 
 
+def check_binary_prefixes():
+    """8 IEC binary prefixes with value == 2**base2 and unique symbols."""
+    rel = "science/binary-prefixes/binary-prefixes.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    if len(d) != 8:
+        err(rel, f"expected 8 IEC binary prefixes, found {len(d)}")
+    syms = [e.get("symbol") for e in d]
+    if len(syms) != len(set(syms)):
+        err(rel, "duplicate symbols")
+    for e in d:
+        if str(2 ** e["base2"]) != e.get("value"):
+            err(rel, f"{e.get('name')}: value != 2**{e['base2']}")
+    STATS["cross_checks"] += 1
+
+
 def check_planets():
     p = load("space/planets/planets.json")
     orders = [x["order"] for x in p if "order" in x]
@@ -577,8 +594,8 @@ def main():
     # targeted cross-file checks (guarded so a missing file never crashes the run)
     for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
                check_timezones, check_elements, check_codon_table, check_si_prefixes,
-               check_si_units, check_unicode_blocks, check_special_use_ips,
-               check_hash_algorithms, check_planets, check_http_status,
+               check_si_units, check_binary_prefixes, check_unicode_blocks,
+               check_special_use_ips, check_hash_algorithms, check_planets, check_http_status,
                check_geo_crossref, check_locales, check_finance, check_formats):
         try:
             fn()

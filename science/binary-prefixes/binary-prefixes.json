@@ -1,0 +1,66 @@
+[
+  {
+    "name": "kibi",
+    "symbol": "Ki",
+    "base2": 10,
+    "value": "1024",
+    "si_approx_prefix": "kilo",
+    "si_approx_base10": 3
+  },
+  {
+    "name": "mebi",
+    "symbol": "Mi",
+    "base2": 20,
+    "value": "1048576",
+    "si_approx_prefix": "mega",
+    "si_approx_base10": 6
+  },
+  {
+    "name": "gibi",
+    "symbol": "Gi",
+    "base2": 30,
+    "value": "1073741824",
+    "si_approx_prefix": "giga",
+    "si_approx_base10": 9
+  },
+  {
+    "name": "tebi",
+    "symbol": "Ti",
+    "base2": 40,
+    "value": "1099511627776",
+    "si_approx_prefix": "tera",
+    "si_approx_base10": 12
+  },
+  {
+    "name": "pebi",
+    "symbol": "Pi",
+    "base2": 50,
+    "value": "1125899906842624",
+    "si_approx_prefix": "peta",
+    "si_approx_base10": 15
+  },
+  {
+    "name": "exbi",
+    "symbol": "Ei",
+    "base2": 60,
+    "value": "1152921504606846976",
+    "si_approx_prefix": "exa",
+    "si_approx_base10": 18
+  },
+  {
+    "name": "zebi",
+    "symbol": "Zi",
+    "base2": 70,
+    "value": "1180591620717411303424",
+    "si_approx_prefix": "zetta",
+    "si_approx_base10": 21
+  },
+  {
+    "name": "yobi",
+    "symbol": "Yi",
+    "base2": 80,
+    "value": "1208925819614629174706176",
+    "si_approx_prefix": "yotta",
+    "si_approx_base10": 24
+  }
+]

@@ -1,8 +1,8 @@
 {
   "_generated_by": "tools/build_catalog.py",
   "_regenerate": "python3 tools/build_catalog.py",
-  "dataset_count": 178,
-  "entry_total": 5797,
+  "dataset_count": 179,
+  "entry_total": 5805,
   "category_count": 38,
   "with_source": 17,
   "categories": {
@@ -35,7 +35,7 @@
     "networking": 4,
     "programming": 4,
     "rice": 44,
-    "science": 7,
+    "science": 8,
     "security": 4,
     "setups": 15,
     "social": 1,
@@ -2725,6 +2725,23 @@
       "has_source": false,
       "readme": "rice/Readme.MD",
       "description": "Per-theme configuration files for popular Arch Linux ricing tools, generated from the terminal color themes in [`colors/terminal/themes.json`](../colors/terminal/themes.json)."
+    },
+    {
+      "path": "science/binary-prefixes/binary-prefixes.json",
+      "category": "science",
+      "kind": "list",
+      "count": 8,
+      "fields": [
+        "base2",
+        "name",
+        "si_approx_base10",
+        "si_approx_prefix",
+        "symbol",
+        "value"
+      ],
+      "has_source": false,
+      "readme": "science/binary-prefixes/Readme.MD",
+      "description": "The 8 IEC 80000-13 binary prefixes — kibi (2¹⁰) through yobi (2⁸⁰) — used to express powers of two unambiguously (e.g. `KiB` = 1024 bytes, distinct from the SI `kB` = 1000 bytes). Each entry gives the prefix name, symbol, power-of-two exponent, exact value, and the SI decimal pre"
     },
     {
       "path": "science/constants/constants.json",
