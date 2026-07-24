@@ -1,0 +1,221 @@
+[
+  {
+    "name": "MD4",
+    "slug": "md4",
+    "digest_bits": 128,
+    "block_bits": 512,
+    "construction": "Merkle–Damgård",
+    "released_year": 1990,
+    "status": "broken",
+    "cryptographic": true,
+    "notes": "Collisions found; practically broken. Historical interest and legacy protocol (e.g. NTLM) only."
+  },
+  {
+    "name": "MD5",
+    "slug": "md5",
+    "digest_bits": 128,
+    "block_bits": 512,
+    "construction": "Merkle–Damgård",
+    "released_year": 1992,
+    "status": "broken",
+    "cryptographic": true,
+    "notes": "Practical collision attacks since 2004; chosen-prefix collisions demonstrated. Unsuitable for security; still seen as a non-security checksum."
+  },
+  {
+    "name": "SHA-0",
+    "slug": "sha-0",
+    "digest_bits": 160,
+    "block_bits": 512,
+    "construction": "Merkle–Damgård",
+    "released_year": 1993,
+    "status": "broken",
+    "cryptographic": true,
+    "notes": "Withdrawn shortly after publication due to an undisclosed flaw; superseded by SHA-1."
+  },
+  {
+    "name": "SHA-1",
+    "slug": "sha-1",
+    "digest_bits": 160,
+    "block_bits": 512,
+    "construction": "Merkle–Damgård",
+    "released_year": 1995,
+    "status": "broken",
+    "cryptographic": true,
+    "notes": "Collision demonstrated in 2017 (SHAttered); chosen-prefix collision in 2020. Deprecated by NIST (SP 800-131A) and browsers."
+  },
+  {
+    "name": "SHA-224",
+    "slug": "sha-224",
+    "digest_bits": 224,
+    "block_bits": 512,
+    "construction": "Merkle–Damgård",
+    "released_year": 2004,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "SHA-2 family; truncated SHA-256 with different initial values."
+  },
+  {
+    "name": "SHA-256",
+    "slug": "sha-256",
+    "digest_bits": 256,
+    "block_bits": 512,
+    "construction": "Merkle–Damgård",
+    "released_year": 2001,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "SHA-2 family; widely used (TLS, Bitcoin, package signing). No known practical weaknesses."
+  },
+  {
+    "name": "SHA-384",
+    "slug": "sha-384",
+    "digest_bits": 384,
+    "block_bits": 1024,
+    "construction": "Merkle–Damgård",
+    "released_year": 2001,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "SHA-2 family; truncated SHA-512. Resistant to length-extension attacks."
+  },
+  {
+    "name": "SHA-512",
+    "slug": "sha-512",
+    "digest_bits": 512,
+    "block_bits": 1024,
+    "construction": "Merkle–Damgård",
+    "released_year": 2001,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "SHA-2 family; 64-bit word operations, faster than SHA-256 on 64-bit CPUs."
+  },
+  {
+    "name": "SHA-512/256",
+    "slug": "sha-512-256",
+    "digest_bits": 256,
+    "block_bits": 1024,
+    "construction": "Merkle–Damgård",
+    "released_year": 2012,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "SHA-2 family; SHA-512 truncated to 256 bits with distinct IVs; immune to length extension."
+  },
+  {
+    "name": "SHA3-224",
+    "slug": "sha3-224",
+    "digest_bits": 224,
+    "construction": "sponge (Keccak)",
+    "released_year": 2015,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "FIPS 202; Keccak sponge, rate 1152 bits. Different construction from SHA-2, so a structural break in one does not affect the other."
+  },
+  {
+    "name": "SHA3-256",
+    "slug": "sha3-256",
+    "digest_bits": 256,
+    "construction": "sponge (Keccak)",
+    "released_year": 2015,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "FIPS 202; Keccak sponge, rate 1088 bits."
+  },
+  {
+    "name": "SHA3-384",
+    "slug": "sha3-384",
+    "digest_bits": 384,
+    "construction": "sponge (Keccak)",
+    "released_year": 2015,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "FIPS 202; Keccak sponge, rate 832 bits."
+  },
+  {
+    "name": "SHA3-512",
+    "slug": "sha3-512",
+    "digest_bits": 512,
+    "construction": "sponge (Keccak)",
+    "released_year": 2015,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "FIPS 202; Keccak sponge, rate 576 bits."
+  },
+  {
+    "name": "SHAKE128",
+    "slug": "shake128",
+    "construction": "sponge (XOF)",
+    "released_year": 2015,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "FIPS 202 extendable-output function (XOF); arbitrary-length output, 128-bit security strength."
+  },
+  {
+    "name": "SHAKE256",
+    "slug": "shake256",
+    "construction": "sponge (XOF)",
+    "released_year": 2015,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "FIPS 202 extendable-output function (XOF); arbitrary-length output, 256-bit security strength."
+  },
+  {
+    "name": "RIPEMD-160",
+    "slug": "ripemd-160",
+    "digest_bits": 160,
+    "block_bits": 512,
+    "construction": "Merkle–Damgård",
+    "released_year": 1996,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "No practical collisions known; used in Bitcoin/Ethereum address derivation. Less analysed than SHA-2."
+  },
+  {
+    "name": "BLAKE2b",
+    "slug": "blake2b",
+    "digest_bits": 512,
+    "construction": "HAIFA",
+    "released_year": 2012,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "Faster than MD5 while secure; digest configurable up to 512 bits, 1024-bit internal block. Optimised for 64-bit platforms."
+  },
+  {
+    "name": "BLAKE2s",
+    "slug": "blake2s",
+    "digest_bits": 256,
+    "construction": "HAIFA",
+    "released_year": 2012,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "BLAKE2 variant for 8–32-bit platforms; digest configurable up to 256 bits, 512-bit internal block."
+  },
+  {
+    "name": "BLAKE3",
+    "slug": "blake3",
+    "digest_bits": 256,
+    "construction": "Merkle tree",
+    "released_year": 2020,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "Highly parallel Merkle-tree hash; default 256-bit digest, extendable output. Much faster than BLAKE2/SHA-2."
+  },
+  {
+    "name": "Whirlpool",
+    "slug": "whirlpool",
+    "digest_bits": 512,
+    "block_bits": 512,
+    "construction": "Miyaguchi–Preneel",
+    "released_year": 2000,
+    "status": "secure",
+    "cryptographic": true,
+    "notes": "ISO/IEC 10118-3 standard; based on a modified AES block cipher. Not widely deployed."
+  },
+  {
+    "name": "CRC32",
+    "slug": "crc32",
+    "digest_bits": 32,
+    "construction": "cyclic redundancy check",
+    "released_year": 1975,
+    "status": "not-applicable",
+    "cryptographic": false,
+    "notes": "Error-detection checksum, NOT a cryptographic hash; trivially forgeable. Included for reference to avoid misuse."
+  }
+]

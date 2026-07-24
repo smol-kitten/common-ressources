@@ -1,46 +1,111 @@
 [
   {
-    "name": "Claude Opus 4",
-    "slug": "claude-opus-4",
+    "name": "Claude Opus 4.8",
+    "slug": "claude-opus-4-8",
     "provider": "Anthropic",
-    "family": "Claude 4",
-    "api_id": "claude-opus-4-5",
-    "context_window": 200000,
-    "max_output_tokens": 32000,
-    "knowledge_cutoff": "2025-03",
-    "modalities": ["text", "vision"],
-    "capabilities": ["reasoning", "coding", "analysis", "writing", "tool-use", "computer-use"],
-    "pricing": { "input_mtok": 15.00, "output_mtok": 75.00 },
-    "description": "Anthropic's most capable model, with extended thinking and deep reasoning.",
+    "family": "Claude 4.8",
+    "api_id": "claude-opus-4-8",
+    "context_window": 1000000,
+    "max_output_tokens": 128000,
+    "knowledge_cutoff": "2026-01",
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "computer-use"
+    ],
+    "pricing": {
+      "input_mtok": 5.0,
+      "output_mtok": 25.0
+    },
+    "description": "Anthropic's most capable Opus-tier model — highly autonomous, state-of-the-art on long-horizon agentic work, knowledge work, and memory.",
     "website": "https://anthropic.com/claude"
   },
   {
-    "name": "Claude Sonnet 4",
-    "slug": "claude-sonnet-4",
+    "name": "Claude Opus 4.5",
+    "slug": "claude-opus-4-5",
     "provider": "Anthropic",
-    "family": "Claude 4",
+    "family": "Claude 4.5",
+    "api_id": "claude-opus-4-5",
+    "context_window": 200000,
+    "max_output_tokens": 64000,
+    "knowledge_cutoff": "2025-05",
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "computer-use"
+    ],
+    "pricing": {
+      "input_mtok": 5.0,
+      "output_mtok": 25.0
+    },
+    "description": "High-capability Opus-tier model with extended thinking and deep reasoning.",
+    "website": "https://anthropic.com/claude"
+  },
+  {
+    "name": "Claude Sonnet 4.5",
+    "slug": "claude-sonnet-4-5",
+    "provider": "Anthropic",
+    "family": "Claude 4.5",
     "api_id": "claude-sonnet-4-5",
     "context_window": 200000,
-    "max_output_tokens": 16000,
-    "knowledge_cutoff": "2025-03",
-    "modalities": ["text", "vision"],
-    "capabilities": ["reasoning", "coding", "analysis", "writing", "tool-use", "computer-use"],
-    "pricing": { "input_mtok": 3.00, "output_mtok": 15.00 },
+    "max_output_tokens": 64000,
+    "knowledge_cutoff": "2025-01",
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "computer-use"
+    ],
+    "pricing": {
+      "input_mtok": 3.0,
+      "output_mtok": 15.0
+    },
     "description": "High-performance model balancing intelligence and speed.",
     "website": "https://anthropic.com/claude"
   },
   {
-    "name": "Claude Haiku 4",
-    "slug": "claude-haiku-4",
+    "name": "Claude Haiku 4.5",
+    "slug": "claude-haiku-4-5",
     "provider": "Anthropic",
-    "family": "Claude 4",
+    "family": "Claude 4.5",
     "api_id": "claude-haiku-4-5-20251001",
     "context_window": 200000,
-    "max_output_tokens": 8192,
-    "knowledge_cutoff": "2025-03",
-    "modalities": ["text", "vision"],
-    "capabilities": ["coding", "analysis", "writing", "tool-use"],
-    "pricing": { "input_mtok": 0.80, "output_mtok": 4.00 },
+    "max_output_tokens": 64000,
+    "knowledge_cutoff": "2025-02",
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use"
+    ],
+    "pricing": {
+      "input_mtok": 0.8,
+      "output_mtok": 4.0
+    },
     "description": "Fastest and most compact Claude model for near-instant responsiveness.",
     "website": "https://anthropic.com/claude"
   },
@@ -53,9 +118,23 @@
     "context_window": 128000,
     "max_output_tokens": 16384,
     "knowledge_cutoff": "2024-04",
-    "modalities": ["text", "vision", "audio"],
-    "capabilities": ["reasoning", "coding", "analysis", "writing", "tool-use", "function-calling"],
-    "pricing": { "input_mtok": 2.50, "output_mtok": 10.00 },
+    "modalities": [
+      "text",
+      "vision",
+      "audio"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "function-calling"
+    ],
+    "pricing": {
+      "input_mtok": 2.5,
+      "output_mtok": 10.0
+    },
     "description": "OpenAI's flagship multimodal model with text, vision, and audio capabilities.",
     "website": "https://openai.com/gpt-4o"
   },
@@ -68,9 +147,22 @@
     "context_window": 1047576,
     "max_output_tokens": 32768,
     "knowledge_cutoff": "2025-01",
-    "modalities": ["text", "vision"],
-    "capabilities": ["reasoning", "coding", "analysis", "writing", "tool-use", "function-calling"],
-    "pricing": { "input_mtok": 2.00, "output_mtok": 8.00 },
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "function-calling"
+    ],
+    "pricing": {
+      "input_mtok": 2.0,
+      "output_mtok": 8.0
+    },
     "description": "Improved GPT-4 class model with a 1M token context window.",
     "website": "https://platform.openai.com/docs/models"
   },
@@ -83,9 +175,21 @@
     "context_window": 200000,
     "max_output_tokens": 100000,
     "knowledge_cutoff": "2025-01",
-    "modalities": ["text", "vision"],
-    "capabilities": ["reasoning", "coding", "math", "science", "tool-use"],
-    "pricing": { "input_mtok": 10.00, "output_mtok": 40.00 },
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "math",
+      "science",
+      "tool-use"
+    ],
+    "pricing": {
+      "input_mtok": 10.0,
+      "output_mtok": 40.0
+    },
     "description": "OpenAI's most powerful reasoning model with extended chain-of-thought.",
     "website": "https://openai.com/o3"
   },
@@ -98,9 +202,20 @@
     "context_window": 200000,
     "max_output_tokens": 100000,
     "knowledge_cutoff": "2025-01",
-    "modalities": ["text", "vision"],
-    "capabilities": ["reasoning", "coding", "math", "tool-use"],
-    "pricing": { "input_mtok": 1.10, "output_mtok": 4.40 },
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "math",
+      "tool-use"
+    ],
+    "pricing": {
+      "input_mtok": 1.1,
+      "output_mtok": 4.4
+    },
     "description": "Fast, affordable reasoning model balancing cost and performance.",
     "website": "https://openai.com/o4-mini"
   },
@@ -113,9 +228,25 @@
     "context_window": 1048576,
     "max_output_tokens": 65536,
     "knowledge_cutoff": "2025-01",
-    "modalities": ["text", "vision", "audio", "video", "code"],
-    "capabilities": ["reasoning", "coding", "analysis", "writing", "tool-use", "grounding"],
-    "pricing": { "input_mtok": 1.25, "output_mtok": 10.00 },
+    "modalities": [
+      "text",
+      "vision",
+      "audio",
+      "video",
+      "code"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "grounding"
+    ],
+    "pricing": {
+      "input_mtok": 1.25,
+      "output_mtok": 10.0
+    },
     "description": "Google's most capable multimodal model with 1M context and deep reasoning.",
     "website": "https://deepmind.google/gemini"
   },
@@ -128,9 +259,24 @@
     "context_window": 1048576,
     "max_output_tokens": 65536,
     "knowledge_cutoff": "2025-01",
-    "modalities": ["text", "vision", "audio", "video", "code"],
-    "capabilities": ["reasoning", "coding", "analysis", "writing", "tool-use"],
-    "pricing": { "input_mtok": 0.15, "output_mtok": 3.50 },
+    "modalities": [
+      "text",
+      "vision",
+      "audio",
+      "video",
+      "code"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use"
+    ],
+    "pricing": {
+      "input_mtok": 0.15,
+      "output_mtok": 3.5
+    },
     "description": "Fast, efficient Gemini model with thinking mode support.",
     "website": "https://deepmind.google/gemini"
   },
@@ -143,8 +289,15 @@
     "context_window": 128000,
     "max_output_tokens": 8192,
     "knowledge_cutoff": "2023-12",
-    "modalities": ["text"],
-    "capabilities": ["coding", "analysis", "writing", "reasoning"],
+    "modalities": [
+      "text"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "reasoning"
+    ],
     "pricing": null,
     "open_weights": true,
     "license": "Llama 3.3 Community License",
@@ -160,8 +313,17 @@
     "context_window": 10000000,
     "max_output_tokens": 16384,
     "knowledge_cutoff": "2025-03",
-    "modalities": ["text", "vision"],
-    "capabilities": ["coding", "analysis", "writing", "reasoning", "multimodal"],
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "reasoning",
+      "multimodal"
+    ],
     "pricing": null,
     "open_weights": true,
     "license": "Llama 4 Community License",
@@ -177,9 +339,20 @@
     "context_window": 128000,
     "max_output_tokens": 4096,
     "knowledge_cutoff": "2024-07",
-    "modalities": ["text"],
-    "capabilities": ["coding", "analysis", "writing", "tool-use", "function-calling"],
-    "pricing": { "input_mtok": 3.00, "output_mtok": 9.00 },
+    "modalities": [
+      "text"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "function-calling"
+    ],
+    "pricing": {
+      "input_mtok": 3.0,
+      "output_mtok": 9.0
+    },
     "description": "Mistral's flagship model with strong multilingual and reasoning capabilities.",
     "website": "https://mistral.ai"
   },
@@ -192,9 +365,19 @@
     "context_window": 65536,
     "max_output_tokens": 4096,
     "knowledge_cutoff": "2024-03",
-    "modalities": ["text"],
-    "capabilities": ["coding", "analysis", "writing", "tool-use"],
-    "pricing": { "input_mtok": 2.00, "output_mtok": 6.00 },
+    "modalities": [
+      "text"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use"
+    ],
+    "pricing": {
+      "input_mtok": 2.0,
+      "output_mtok": 6.0
+    },
     "open_weights": true,
     "license": "Apache 2.0",
     "description": "Open-weights sparse mixture-of-experts model with 141B total parameters.",
@@ -209,9 +392,20 @@
     "context_window": 128000,
     "max_output_tokens": 4096,
     "knowledge_cutoff": "2024-03",
-    "modalities": ["text"],
-    "capabilities": ["RAG", "tool-use", "analysis", "writing", "multilingual"],
-    "pricing": { "input_mtok": 2.50, "output_mtok": 10.00 },
+    "modalities": [
+      "text"
+    ],
+    "capabilities": [
+      "RAG",
+      "tool-use",
+      "analysis",
+      "writing",
+      "multilingual"
+    ],
+    "pricing": {
+      "input_mtok": 2.5,
+      "output_mtok": 10.0
+    },
     "description": "Cohere's enterprise model optimised for RAG and tool-use at scale.",
     "website": "https://cohere.com/command"
   },
@@ -224,9 +418,21 @@
     "context_window": 131072,
     "max_output_tokens": 8192,
     "knowledge_cutoff": "2025-01",
-    "modalities": ["text", "vision"],
-    "capabilities": ["reasoning", "coding", "analysis", "writing", "tool-use"],
-    "pricing": { "input_mtok": 3.00, "output_mtok": 15.00 },
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use"
+    ],
+    "pricing": {
+      "input_mtok": 3.0,
+      "output_mtok": 15.0
+    },
     "description": "xAI's flagship model with strong coding and real-time X data access.",
     "website": "https://x.ai/grok"
   },
@@ -239,9 +445,19 @@
     "context_window": 128000,
     "max_output_tokens": 32768,
     "knowledge_cutoff": "2024-10",
-    "modalities": ["text"],
-    "capabilities": ["reasoning", "coding", "math", "analysis"],
-    "pricing": { "input_mtok": 0.55, "output_mtok": 2.19 },
+    "modalities": [
+      "text"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "math",
+      "analysis"
+    ],
+    "pricing": {
+      "input_mtok": 0.55,
+      "output_mtok": 2.19
+    },
     "open_weights": true,
     "license": "MIT",
     "description": "Open-weights chain-of-thought model matching o1 on math and coding benchmarks.",
@@ -256,9 +472,20 @@
     "context_window": 40000,
     "max_output_tokens": 8192,
     "knowledge_cutoff": "2025-01",
-    "modalities": ["text"],
-    "capabilities": ["reasoning", "coding", "math", "multilingual", "tool-use"],
-    "pricing": { "input_mtok": 0.23, "output_mtok": 0.90 },
+    "modalities": [
+      "text"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "math",
+      "multilingual",
+      "tool-use"
+    ],
+    "pricing": {
+      "input_mtok": 0.23,
+      "output_mtok": 0.9
+    },
     "open_weights": true,
     "license": "Qwen License",
     "description": "Alibaba's large MoE model supporting 100+ languages with hybrid thinking mode.",
@@ -273,8 +500,14 @@
     "context_window": 16384,
     "max_output_tokens": 4096,
     "knowledge_cutoff": "2024-06",
-    "modalities": ["text"],
-    "capabilities": ["coding", "reasoning", "math"],
+    "modalities": [
+      "text"
+    ],
+    "capabilities": [
+      "coding",
+      "reasoning",
+      "math"
+    ],
     "pricing": null,
     "open_weights": true,
     "license": "MIT",
@@ -290,8 +523,16 @@
     "context_window": 128000,
     "max_output_tokens": 8192,
     "knowledge_cutoff": "2024-09",
-    "modalities": ["text", "vision"],
-    "capabilities": ["coding", "analysis", "writing", "multilingual"],
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "multilingual"
+    ],
     "pricing": null,
     "open_weights": true,
     "license": "Gemma License",
@@ -307,9 +548,20 @@
     "context_window": 200000,
     "max_output_tokens": 8192,
     "knowledge_cutoff": "2024-07",
-    "modalities": ["text", "vision"],
-    "capabilities": ["coding", "analysis", "writing", "tool-use"],
-    "pricing": { "input_mtok": 0.80, "output_mtok": 4.00 },
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use"
+    ],
+    "pricing": {
+      "input_mtok": 0.8,
+      "output_mtok": 4.0
+    },
     "description": "Anthropic's fastest Claude 3.5 model for near-instant responsiveness.",
     "website": "https://anthropic.com/claude"
   },
@@ -322,9 +574,22 @@
     "context_window": 200000,
     "max_output_tokens": 16000,
     "knowledge_cutoff": "2024-11",
-    "modalities": ["text", "vision"],
-    "capabilities": ["reasoning", "coding", "analysis", "writing", "tool-use", "extended-thinking"],
-    "pricing": { "input_mtok": 3.00, "output_mtok": 15.00 },
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "extended-thinking"
+    ],
+    "pricing": {
+      "input_mtok": 3.0,
+      "output_mtok": 15.0
+    },
     "description": "Anthropic's hybrid reasoning model with extended thinking and near-instant response modes.",
     "website": "https://anthropic.com/claude"
   },
@@ -332,14 +597,27 @@
     "name": "Claude Sonnet 4.6",
     "slug": "claude-sonnet-4-6",
     "provider": "Anthropic",
-    "family": "Claude 4",
+    "family": "Claude 4.6",
     "api_id": "claude-sonnet-4-6",
-    "context_window": 200000,
-    "max_output_tokens": 16000,
-    "knowledge_cutoff": "2025-03",
-    "modalities": ["text", "vision"],
-    "capabilities": ["reasoning", "coding", "analysis", "writing", "tool-use", "computer-use"],
-    "pricing": { "input_mtok": 3.00, "output_mtok": 15.00 },
+    "context_window": 1000000,
+    "max_output_tokens": 64000,
+    "knowledge_cutoff": "2025-08",
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "computer-use"
+    ],
+    "pricing": {
+      "input_mtok": 3.0,
+      "output_mtok": 15.0
+    },
     "description": "High-performance Claude model balancing intelligence and speed for agentic tasks.",
     "website": "https://anthropic.com/claude"
   },
@@ -352,9 +630,21 @@
     "context_window": 128000,
     "max_output_tokens": 16384,
     "knowledge_cutoff": "2024-07",
-    "modalities": ["text", "vision"],
-    "capabilities": ["coding", "analysis", "writing", "tool-use", "function-calling"],
-    "pricing": { "input_mtok": 0.15, "output_mtok": 0.60 },
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "function-calling"
+    ],
+    "pricing": {
+      "input_mtok": 0.15,
+      "output_mtok": 0.6
+    },
     "description": "Affordable, fast OpenAI model for lightweight tasks with strong instruction following.",
     "website": "https://openai.com/gpt-4o-mini"
   },
@@ -367,9 +657,20 @@
     "context_window": 128000,
     "max_output_tokens": 32768,
     "knowledge_cutoff": "2024-04",
-    "modalities": ["text", "vision"],
-    "capabilities": ["reasoning", "coding", "math", "science"],
-    "pricing": { "input_mtok": 15.00, "output_mtok": 60.00 },
+    "modalities": [
+      "text",
+      "vision"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "math",
+      "science"
+    ],
+    "pricing": {
+      "input_mtok": 15.0,
+      "output_mtok": 60.0
+    },
     "description": "OpenAI's first reasoning model with extended chain-of-thought for complex problem solving.",
     "website": "https://openai.com/o1"
   },
@@ -382,9 +683,19 @@
     "context_window": 200000,
     "max_output_tokens": 100000,
     "knowledge_cutoff": "2025-01",
-    "modalities": ["text"],
-    "capabilities": ["reasoning", "coding", "math", "tool-use"],
-    "pricing": { "input_mtok": 1.10, "output_mtok": 4.40 },
+    "modalities": [
+      "text"
+    ],
+    "capabilities": [
+      "reasoning",
+      "coding",
+      "math",
+      "tool-use"
+    ],
+    "pricing": {
+      "input_mtok": 1.1,
+      "output_mtok": 4.4
+    },
     "description": "Compact, fast reasoning model ideal for STEM tasks at lower cost than o3.",
     "website": "https://openai.com/o3-mini"
   },
@@ -397,9 +708,23 @@
     "context_window": 1048576,
     "max_output_tokens": 8192,
     "knowledge_cutoff": "2024-08",
-    "modalities": ["text", "vision", "audio", "video"],
-    "capabilities": ["coding", "analysis", "writing", "tool-use", "grounding"],
-    "pricing": { "input_mtok": 0.10, "output_mtok": 0.40 },
+    "modalities": [
+      "text",
+      "vision",
+      "audio",
+      "video"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "tool-use",
+      "grounding"
+    ],
+    "pricing": {
+      "input_mtok": 0.1,
+      "output_mtok": 0.4
+    },
     "description": "Google's fast, efficient multimodal model with 1M context for high-throughput tasks.",
     "website": "https://deepmind.google/gemini"
   },
@@ -412,8 +737,16 @@
     "context_window": 128000,
     "max_output_tokens": 4096,
     "knowledge_cutoff": "2023-12",
-    "modalities": ["text"],
-    "capabilities": ["coding", "analysis", "writing", "reasoning", "multilingual"],
+    "modalities": [
+      "text"
+    ],
+    "capabilities": [
+      "coding",
+      "analysis",
+      "writing",
+      "reasoning",
+      "multilingual"
+    ],
     "pricing": null,
     "open_weights": true,
     "license": "Llama 3.1 Community License",
@@ -429,9 +762,16 @@
     "context_window": null,
     "max_output_tokens": null,
     "knowledge_cutoff": "2023-04",
-    "modalities": ["image-generation"],
-    "capabilities": ["text-to-image", "image-editing"],
-    "pricing": { "per_image_1024": 0.04 },
+    "modalities": [
+      "image-generation"
+    ],
+    "capabilities": [
+      "text-to-image",
+      "image-editing"
+    ],
+    "pricing": {
+      "per_image_1024": 0.04
+    },
     "description": "OpenAI's flagship image generation model, integrated into ChatGPT.",
     "website": "https://openai.com/dall-e-3"
   },
@@ -444,9 +784,17 @@
     "context_window": null,
     "max_output_tokens": null,
     "knowledge_cutoff": null,
-    "modalities": ["image-generation"],
-    "capabilities": ["text-to-image", "image-to-image", "inpainting"],
-    "pricing": { "per_image": 0.065 },
+    "modalities": [
+      "image-generation"
+    ],
+    "capabilities": [
+      "text-to-image",
+      "image-to-image",
+      "inpainting"
+    ],
+    "pricing": {
+      "per_image": 0.065
+    },
     "open_weights": true,
     "license": "Stability AI Community License",
     "description": "Open-weights diffusion model for high-quality text-to-image generation.",
@@ -461,9 +809,17 @@
     "context_window": null,
     "max_output_tokens": null,
     "knowledge_cutoff": null,
-    "modalities": ["image-generation"],
-    "capabilities": ["text-to-image", "prompt-adherence", "ultra-realism"],
-    "pricing": { "per_image_1mp": 0.04 },
+    "modalities": [
+      "image-generation"
+    ],
+    "capabilities": [
+      "text-to-image",
+      "prompt-adherence",
+      "ultra-realism"
+    ],
+    "pricing": {
+      "per_image_1mp": 0.04
+    },
     "description": "State-of-the-art image generation model with exceptional prompt adherence.",
     "website": "https://blackforestlabs.ai"
   },
@@ -476,9 +832,17 @@
     "context_window": null,
     "max_output_tokens": null,
     "knowledge_cutoff": null,
-    "modalities": ["audio-transcription"],
-    "capabilities": ["speech-to-text", "translation", "multilingual"],
-    "pricing": { "per_minute": 0.006 },
+    "modalities": [
+      "audio-transcription"
+    ],
+    "capabilities": [
+      "speech-to-text",
+      "translation",
+      "multilingual"
+    ],
+    "pricing": {
+      "per_minute": 0.006
+    },
     "open_weights": true,
     "license": "MIT",
     "description": "Robust open-weights automatic speech recognition model supporting 99 languages.",

@@ -6,7 +6,10 @@
     "dst": false,
     "region": "Universal",
     "abbreviation": "UTC",
-    "example_cities": ["Reykjavik", "Abidjan"]
+    "example_cities": [
+      "Reykjavik",
+      "Abidjan"
+    ]
   },
   {
     "iana": "America/New_York",
@@ -15,7 +18,11 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "EST/EDT",
-    "example_cities": ["New York", "Miami", "Toronto"]
+    "example_cities": [
+      "New York",
+      "Miami",
+      "Toronto"
+    ]
   },
   {
     "iana": "America/Chicago",
@@ -24,7 +31,11 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "CST/CDT",
-    "example_cities": ["Chicago", "Dallas", "Mexico City"]
+    "example_cities": [
+      "Chicago",
+      "Dallas",
+      "Mexico City"
+    ]
   },
   {
     "iana": "America/Denver",
@@ -33,7 +44,11 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "MST/MDT",
-    "example_cities": ["Denver", "Salt Lake City", "Phoenix"]
+    "example_cities": [
+      "Denver",
+      "Salt Lake City",
+      "Phoenix"
+    ]
   },
   {
     "iana": "America/Los_Angeles",
@@ -42,7 +57,11 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "PST/PDT",
-    "example_cities": ["Los Angeles", "San Francisco", "Seattle"]
+    "example_cities": [
+      "Los Angeles",
+      "San Francisco",
+      "Seattle"
+    ]
   },
   {
     "iana": "America/Anchorage",
@@ -51,7 +70,10 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "AKST/AKDT",
-    "example_cities": ["Anchorage", "Fairbanks"]
+    "example_cities": [
+      "Anchorage",
+      "Fairbanks"
+    ]
   },
   {
     "iana": "Pacific/Honolulu",
@@ -60,7 +82,10 @@
     "dst": false,
     "region": "Pacific",
     "abbreviation": "HST",
-    "example_cities": ["Honolulu", "Pearl City"]
+    "example_cities": [
+      "Honolulu",
+      "Pearl City"
+    ]
   },
   {
     "iana": "America/Sao_Paulo",
@@ -69,7 +94,11 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "BRT",
-    "example_cities": ["São Paulo", "Rio de Janeiro", "Brasília"]
+    "example_cities": [
+      "São Paulo",
+      "Rio de Janeiro",
+      "Brasília"
+    ]
   },
   {
     "iana": "America/Argentina/Buenos_Aires",
@@ -78,7 +107,10 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "ART",
-    "example_cities": ["Buenos Aires", "Córdoba"]
+    "example_cities": [
+      "Buenos Aires",
+      "Córdoba"
+    ]
   },
   {
     "iana": "Europe/London",
@@ -87,7 +119,11 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "GMT/BST",
-    "example_cities": ["London", "Dublin", "Lisbon"]
+    "example_cities": [
+      "London",
+      "Dublin",
+      "Lisbon"
+    ]
   },
   {
     "iana": "Europe/Paris",
@@ -96,7 +132,12 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Paris", "Berlin", "Rome", "Madrid"]
+    "example_cities": [
+      "Paris",
+      "Berlin",
+      "Rome",
+      "Madrid"
+    ]
   },
   {
     "iana": "Europe/Helsinki",
@@ -105,7 +146,12 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Helsinki", "Kyiv", "Tallinn", "Riga"]
+    "example_cities": [
+      "Helsinki",
+      "Kyiv",
+      "Tallinn",
+      "Riga"
+    ]
   },
   {
     "iana": "Europe/Moscow",
@@ -114,7 +160,10 @@
     "dst": false,
     "region": "Europe",
     "abbreviation": "MSK",
-    "example_cities": ["Moscow", "Saint Petersburg"]
+    "example_cities": [
+      "Moscow",
+      "Saint Petersburg"
+    ]
   },
   {
     "iana": "Asia/Dubai",
@@ -123,7 +172,11 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "GST",
-    "example_cities": ["Dubai", "Abu Dhabi", "Muscat"]
+    "example_cities": [
+      "Dubai",
+      "Abu Dhabi",
+      "Muscat"
+    ]
   },
   {
     "iana": "Asia/Karachi",
@@ -132,7 +185,11 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "PKT",
-    "example_cities": ["Karachi", "Islamabad", "Lahore"]
+    "example_cities": [
+      "Karachi",
+      "Islamabad",
+      "Lahore"
+    ]
   },
   {
     "iana": "Asia/Kolkata",
@@ -141,7 +198,11 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "IST",
-    "example_cities": ["Mumbai", "New Delhi", "Bengaluru"]
+    "example_cities": [
+      "Mumbai",
+      "New Delhi",
+      "Bengaluru"
+    ]
   },
   {
     "iana": "Asia/Dhaka",
@@ -150,7 +211,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "BST",
-    "example_cities": ["Dhaka", "Chittagong"]
+    "example_cities": [
+      "Dhaka",
+      "Chittagong"
+    ]
   },
   {
     "iana": "Asia/Bangkok",
@@ -159,7 +223,11 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "ICT",
-    "example_cities": ["Bangkok", "Jakarta", "Ho Chi Minh City"]
+    "example_cities": [
+      "Bangkok",
+      "Jakarta",
+      "Ho Chi Minh City"
+    ]
   },
   {
     "iana": "Asia/Shanghai",
@@ -168,7 +236,12 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "CST",
-    "example_cities": ["Shanghai", "Beijing", "Hong Kong", "Singapore"]
+    "example_cities": [
+      "Shanghai",
+      "Beijing",
+      "Hong Kong",
+      "Singapore"
+    ]
   },
   {
     "iana": "Asia/Tokyo",
@@ -177,7 +250,11 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "JST",
-    "example_cities": ["Tokyo", "Osaka", "Seoul"]
+    "example_cities": [
+      "Tokyo",
+      "Osaka",
+      "Seoul"
+    ]
   },
   {
     "iana": "Australia/Sydney",
@@ -186,7 +263,11 @@
     "dst": true,
     "region": "Pacific",
     "abbreviation": "AEST/AEDT",
-    "example_cities": ["Sydney", "Melbourne", "Brisbane"]
+    "example_cities": [
+      "Sydney",
+      "Melbourne",
+      "Brisbane"
+    ]
   },
   {
     "iana": "Pacific/Auckland",
@@ -195,16 +276,22 @@
     "dst": true,
     "region": "Pacific",
     "abbreviation": "NZST/NZDT",
-    "example_cities": ["Auckland", "Wellington"]
+    "example_cities": [
+      "Auckland",
+      "Wellington"
+    ]
   },
   {
     "iana": "Africa/Cairo",
     "utc_offset": "+02:00",
-    "dst_offset": "+02:00",
-    "dst": false,
+    "dst_offset": "+03:00",
+    "dst": true,
     "region": "Africa",
     "abbreviation": "EET",
-    "example_cities": ["Cairo", "Alexandria"]
+    "example_cities": [
+      "Cairo",
+      "Alexandria"
+    ]
   },
   {
     "iana": "Africa/Lagos",
@@ -213,7 +300,11 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "WAT",
-    "example_cities": ["Lagos", "Abuja", "Kinshasa"]
+    "example_cities": [
+      "Lagos",
+      "Abuja",
+      "Kinshasa"
+    ]
   },
   {
     "iana": "Africa/Nairobi",
@@ -222,7 +313,11 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "EAT",
-    "example_cities": ["Nairobi", "Addis Ababa", "Dar es Salaam"]
+    "example_cities": [
+      "Nairobi",
+      "Addis Ababa",
+      "Dar es Salaam"
+    ]
   },
   {
     "iana": "America/Phoenix",
@@ -231,7 +326,10 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "MST",
-    "example_cities": ["Phoenix", "Tucson"]
+    "example_cities": [
+      "Phoenix",
+      "Tucson"
+    ]
   },
   {
     "iana": "America/Toronto",
@@ -240,7 +338,11 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "EST/EDT",
-    "example_cities": ["Toronto", "Ottawa", "Montreal"]
+    "example_cities": [
+      "Toronto",
+      "Ottawa",
+      "Montreal"
+    ]
   },
   {
     "iana": "America/Vancouver",
@@ -249,16 +351,23 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "PST/PDT",
-    "example_cities": ["Vancouver", "Victoria"]
+    "example_cities": [
+      "Vancouver",
+      "Victoria"
+    ]
   },
   {
     "iana": "America/Mexico_City",
     "utc_offset": "-06:00",
-    "dst_offset": "-05:00",
-    "dst": true,
+    "dst_offset": "-06:00",
+    "dst": false,
     "region": "Americas",
     "abbreviation": "CST/CDT",
-    "example_cities": ["Mexico City", "Guadalajara", "Monterrey"]
+    "example_cities": [
+      "Mexico City",
+      "Guadalajara",
+      "Monterrey"
+    ]
   },
   {
     "iana": "America/Bogota",
@@ -267,7 +376,11 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "COT",
-    "example_cities": ["Bogotá", "Medellín", "Cali"]
+    "example_cities": [
+      "Bogotá",
+      "Medellín",
+      "Cali"
+    ]
   },
   {
     "iana": "America/Lima",
@@ -276,7 +389,10 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "PET",
-    "example_cities": ["Lima", "Arequipa"]
+    "example_cities": [
+      "Lima",
+      "Arequipa"
+    ]
   },
   {
     "iana": "America/Santiago",
@@ -285,7 +401,10 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "CLT/CLST",
-    "example_cities": ["Santiago", "Valparaíso"]
+    "example_cities": [
+      "Santiago",
+      "Valparaíso"
+    ]
   },
   {
     "iana": "America/Caracas",
@@ -294,7 +413,10 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "VET",
-    "example_cities": ["Caracas", "Maracaibo"]
+    "example_cities": [
+      "Caracas",
+      "Maracaibo"
+    ]
   },
   {
     "iana": "America/La_Paz",
@@ -303,7 +425,11 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "BOT",
-    "example_cities": ["La Paz", "Santa Cruz", "Sucre"]
+    "example_cities": [
+      "La Paz",
+      "Santa Cruz",
+      "Sucre"
+    ]
   },
   {
     "iana": "America/Montevideo",
@@ -312,7 +438,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "UYT",
-    "example_cities": ["Montevideo"]
+    "example_cities": [
+      "Montevideo"
+    ]
   },
   {
     "iana": "America/Havana",
@@ -321,7 +449,10 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "CST/CDT",
-    "example_cities": ["Havana", "Santiago de Cuba"]
+    "example_cities": [
+      "Havana",
+      "Santiago de Cuba"
+    ]
   },
   {
     "iana": "America/Nassau",
@@ -330,7 +461,9 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "EST/EDT",
-    "example_cities": ["Nassau"]
+    "example_cities": [
+      "Nassau"
+    ]
   },
   {
     "iana": "America/Panama",
@@ -339,7 +472,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "EST",
-    "example_cities": ["Panama City"]
+    "example_cities": [
+      "Panama City"
+    ]
   },
   {
     "iana": "America/Costa_Rica",
@@ -348,7 +483,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "CST",
-    "example_cities": ["San José"]
+    "example_cities": [
+      "San José"
+    ]
   },
   {
     "iana": "America/Guatemala",
@@ -357,7 +494,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "CST",
-    "example_cities": ["Guatemala City"]
+    "example_cities": [
+      "Guatemala City"
+    ]
   },
   {
     "iana": "America/Tegucigalpa",
@@ -366,7 +505,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "CST",
-    "example_cities": ["Tegucigalpa"]
+    "example_cities": [
+      "Tegucigalpa"
+    ]
   },
   {
     "iana": "America/Managua",
@@ -375,7 +516,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "CST",
-    "example_cities": ["Managua"]
+    "example_cities": [
+      "Managua"
+    ]
   },
   {
     "iana": "America/El_Salvador",
@@ -384,7 +527,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "CST",
-    "example_cities": ["San Salvador"]
+    "example_cities": [
+      "San Salvador"
+    ]
   },
   {
     "iana": "America/Belize",
@@ -393,7 +538,10 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "CST",
-    "example_cities": ["Belize City", "Belmopan"]
+    "example_cities": [
+      "Belize City",
+      "Belmopan"
+    ]
   },
   {
     "iana": "America/Jamaica",
@@ -402,7 +550,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "EST",
-    "example_cities": ["Kingston"]
+    "example_cities": [
+      "Kingston"
+    ]
   },
   {
     "iana": "America/Port-au-Prince",
@@ -411,7 +561,9 @@
     "dst": true,
     "region": "Americas",
     "abbreviation": "EST/EDT",
-    "example_cities": ["Port-au-Prince"]
+    "example_cities": [
+      "Port-au-Prince"
+    ]
   },
   {
     "iana": "America/Santo_Domingo",
@@ -420,7 +572,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "AST",
-    "example_cities": ["Santo Domingo"]
+    "example_cities": [
+      "Santo Domingo"
+    ]
   },
   {
     "iana": "America/Port_of_Spain",
@@ -429,7 +583,11 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "AST",
-    "example_cities": ["Port of Spain", "Bridgetown", "Georgetown"]
+    "example_cities": [
+      "Port of Spain",
+      "Bridgetown",
+      "Georgetown"
+    ]
   },
   {
     "iana": "America/Guyana",
@@ -438,7 +596,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "GYT",
-    "example_cities": ["Georgetown"]
+    "example_cities": [
+      "Georgetown"
+    ]
   },
   {
     "iana": "America/Paramaribo",
@@ -447,16 +607,20 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "SRT",
-    "example_cities": ["Paramaribo"]
+    "example_cities": [
+      "Paramaribo"
+    ]
   },
   {
     "iana": "America/Asuncion",
-    "utc_offset": "-04:00",
+    "utc_offset": "-03:00",
     "dst_offset": "-03:00",
-    "dst": true,
+    "dst": false,
     "region": "Americas",
     "abbreviation": "PYT/PYST",
-    "example_cities": ["Asunción"]
+    "example_cities": [
+      "Asunción"
+    ]
   },
   {
     "iana": "America/Cayenne",
@@ -465,7 +629,9 @@
     "dst": false,
     "region": "Americas",
     "abbreviation": "GFT",
-    "example_cities": ["Cayenne"]
+    "example_cities": [
+      "Cayenne"
+    ]
   },
   {
     "iana": "Europe/Berlin",
@@ -474,7 +640,11 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Berlin", "Hamburg", "Munich"]
+    "example_cities": [
+      "Berlin",
+      "Hamburg",
+      "Munich"
+    ]
   },
   {
     "iana": "Europe/Madrid",
@@ -483,7 +653,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Madrid", "Barcelona"]
+    "example_cities": [
+      "Madrid",
+      "Barcelona"
+    ]
   },
   {
     "iana": "Europe/Rome",
@@ -492,7 +665,11 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Rome", "Milan", "Naples"]
+    "example_cities": [
+      "Rome",
+      "Milan",
+      "Naples"
+    ]
   },
   {
     "iana": "Europe/Amsterdam",
@@ -501,7 +678,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Amsterdam", "Rotterdam"]
+    "example_cities": [
+      "Amsterdam",
+      "Rotterdam"
+    ]
   },
   {
     "iana": "Europe/Brussels",
@@ -510,7 +690,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Brussels", "Antwerp"]
+    "example_cities": [
+      "Brussels",
+      "Antwerp"
+    ]
   },
   {
     "iana": "Europe/Zurich",
@@ -519,7 +702,11 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Zurich", "Geneva", "Bern"]
+    "example_cities": [
+      "Zurich",
+      "Geneva",
+      "Bern"
+    ]
   },
   {
     "iana": "Europe/Vienna",
@@ -528,7 +715,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Vienna"]
+    "example_cities": [
+      "Vienna"
+    ]
   },
   {
     "iana": "Europe/Warsaw",
@@ -537,7 +726,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Warsaw", "Krakow"]
+    "example_cities": [
+      "Warsaw",
+      "Krakow"
+    ]
   },
   {
     "iana": "Europe/Prague",
@@ -546,7 +738,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Prague", "Brno"]
+    "example_cities": [
+      "Prague",
+      "Brno"
+    ]
   },
   {
     "iana": "Europe/Budapest",
@@ -555,7 +750,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Budapest"]
+    "example_cities": [
+      "Budapest"
+    ]
   },
   {
     "iana": "Europe/Bucharest",
@@ -564,7 +761,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Bucharest"]
+    "example_cities": [
+      "Bucharest"
+    ]
   },
   {
     "iana": "Europe/Sofia",
@@ -573,7 +772,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Sofia"]
+    "example_cities": [
+      "Sofia"
+    ]
   },
   {
     "iana": "Europe/Athens",
@@ -582,7 +783,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Athens", "Thessaloniki"]
+    "example_cities": [
+      "Athens",
+      "Thessaloniki"
+    ]
   },
   {
     "iana": "Europe/Stockholm",
@@ -591,7 +795,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Stockholm", "Gothenburg"]
+    "example_cities": [
+      "Stockholm",
+      "Gothenburg"
+    ]
   },
   {
     "iana": "Europe/Oslo",
@@ -600,7 +807,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Oslo", "Bergen"]
+    "example_cities": [
+      "Oslo",
+      "Bergen"
+    ]
   },
   {
     "iana": "Europe/Copenhagen",
@@ -609,7 +819,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Copenhagen"]
+    "example_cities": [
+      "Copenhagen"
+    ]
   },
   {
     "iana": "Europe/Dublin",
@@ -618,7 +830,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "GMT/IST",
-    "example_cities": ["Dublin", "Cork"]
+    "example_cities": [
+      "Dublin",
+      "Cork"
+    ]
   },
   {
     "iana": "Europe/Lisbon",
@@ -627,7 +842,10 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "WET/WEST",
-    "example_cities": ["Lisbon", "Porto"]
+    "example_cities": [
+      "Lisbon",
+      "Porto"
+    ]
   },
   {
     "iana": "Europe/Kyiv",
@@ -636,7 +854,11 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Kyiv", "Kharkiv", "Odessa"]
+    "example_cities": [
+      "Kyiv",
+      "Kharkiv",
+      "Odessa"
+    ]
   },
   {
     "iana": "Europe/Minsk",
@@ -645,7 +867,9 @@
     "dst": false,
     "region": "Europe",
     "abbreviation": "FET",
-    "example_cities": ["Minsk"]
+    "example_cities": [
+      "Minsk"
+    ]
   },
   {
     "iana": "Europe/Istanbul",
@@ -654,7 +878,11 @@
     "dst": false,
     "region": "Europe",
     "abbreviation": "TRT",
-    "example_cities": ["Istanbul", "Ankara", "Izmir"]
+    "example_cities": [
+      "Istanbul",
+      "Ankara",
+      "Izmir"
+    ]
   },
   {
     "iana": "Europe/Riga",
@@ -663,7 +891,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Riga"]
+    "example_cities": [
+      "Riga"
+    ]
   },
   {
     "iana": "Europe/Tallinn",
@@ -672,7 +902,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Tallinn"]
+    "example_cities": [
+      "Tallinn"
+    ]
   },
   {
     "iana": "Europe/Vilnius",
@@ -681,7 +913,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Vilnius"]
+    "example_cities": [
+      "Vilnius"
+    ]
   },
   {
     "iana": "Europe/Sarajevo",
@@ -690,7 +924,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Sarajevo"]
+    "example_cities": [
+      "Sarajevo"
+    ]
   },
   {
     "iana": "Europe/Belgrade",
@@ -699,7 +935,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Belgrade"]
+    "example_cities": [
+      "Belgrade"
+    ]
   },
   {
     "iana": "Europe/Zagreb",
@@ -708,7 +946,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Zagreb"]
+    "example_cities": [
+      "Zagreb"
+    ]
   },
   {
     "iana": "Europe/Ljubljana",
@@ -717,7 +957,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Ljubljana"]
+    "example_cities": [
+      "Ljubljana"
+    ]
   },
   {
     "iana": "Europe/Skopje",
@@ -726,7 +968,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Skopje"]
+    "example_cities": [
+      "Skopje"
+    ]
   },
   {
     "iana": "Europe/Chisinau",
@@ -735,7 +979,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Chișinău"]
+    "example_cities": [
+      "Chișinău"
+    ]
   },
   {
     "iana": "Europe/Tirane",
@@ -744,7 +990,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Tirana"]
+    "example_cities": [
+      "Tirana"
+    ]
   },
   {
     "iana": "Europe/Podgorica",
@@ -753,7 +1001,9 @@
     "dst": true,
     "region": "Europe",
     "abbreviation": "CET/CEST",
-    "example_cities": ["Podgorica"]
+    "example_cities": [
+      "Podgorica"
+    ]
   },
   {
     "iana": "Asia/Kathmandu",
@@ -762,7 +1012,9 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "NPT",
-    "example_cities": ["Kathmandu"]
+    "example_cities": [
+      "Kathmandu"
+    ]
   },
   {
     "iana": "Asia/Colombo",
@@ -771,16 +1023,22 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "SLST",
-    "example_cities": ["Colombo", "Sri Jayawardenepura Kotte"]
+    "example_cities": [
+      "Colombo",
+      "Sri Jayawardenepura Kotte"
+    ]
   },
   {
-    "iana": "Asia/Rangoon",
+    "iana": "Asia/Yangon",
     "utc_offset": "+06:30",
     "dst_offset": "+06:30",
     "dst": false,
     "region": "Asia",
     "abbreviation": "MMT",
-    "example_cities": ["Yangon", "Mandalay"]
+    "example_cities": [
+      "Yangon",
+      "Mandalay"
+    ]
   },
   {
     "iana": "Asia/Ho_Chi_Minh",
@@ -789,7 +1047,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "ICT",
-    "example_cities": ["Ho Chi Minh City", "Hanoi"]
+    "example_cities": [
+      "Ho Chi Minh City",
+      "Hanoi"
+    ]
   },
   {
     "iana": "Asia/Jakarta",
@@ -798,7 +1059,11 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "WIB",
-    "example_cities": ["Jakarta", "Surabaya", "Bandung"]
+    "example_cities": [
+      "Jakarta",
+      "Surabaya",
+      "Bandung"
+    ]
   },
   {
     "iana": "Asia/Singapore",
@@ -807,7 +1072,9 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "SGT",
-    "example_cities": ["Singapore"]
+    "example_cities": [
+      "Singapore"
+    ]
   },
   {
     "iana": "Asia/Kuala_Lumpur",
@@ -816,7 +1083,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "MYT",
-    "example_cities": ["Kuala Lumpur", "Penang"]
+    "example_cities": [
+      "Kuala Lumpur",
+      "Penang"
+    ]
   },
   {
     "iana": "Asia/Taipei",
@@ -825,7 +1095,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "CST",
-    "example_cities": ["Taipei", "Kaohsiung"]
+    "example_cities": [
+      "Taipei",
+      "Kaohsiung"
+    ]
   },
   {
     "iana": "Asia/Hong_Kong",
@@ -834,7 +1107,9 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "HKT",
-    "example_cities": ["Hong Kong"]
+    "example_cities": [
+      "Hong Kong"
+    ]
   },
   {
     "iana": "Asia/Seoul",
@@ -843,7 +1118,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "KST",
-    "example_cities": ["Seoul", "Busan"]
+    "example_cities": [
+      "Seoul",
+      "Busan"
+    ]
   },
   {
     "iana": "Asia/Manila",
@@ -852,25 +1130,33 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "PST",
-    "example_cities": ["Manila", "Cebu"]
+    "example_cities": [
+      "Manila",
+      "Cebu"
+    ]
   },
   {
     "iana": "Asia/Ulaanbaatar",
     "utc_offset": "+08:00",
-    "dst_offset": "+09:00",
-    "dst": true,
+    "dst_offset": "+08:00",
+    "dst": false,
     "region": "Asia",
     "abbreviation": "ULAT/ULAST",
-    "example_cities": ["Ulaanbaatar"]
+    "example_cities": [
+      "Ulaanbaatar"
+    ]
   },
   {
     "iana": "Asia/Almaty",
-    "utc_offset": "+06:00",
-    "dst_offset": "+06:00",
+    "utc_offset": "+05:00",
+    "dst_offset": "+05:00",
     "dst": false,
     "region": "Asia",
     "abbreviation": "ALMT",
-    "example_cities": ["Almaty", "Nur-Sultan"]
+    "example_cities": [
+      "Almaty",
+      "Nur-Sultan"
+    ]
   },
   {
     "iana": "Asia/Tashkent",
@@ -879,7 +1165,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "UZT",
-    "example_cities": ["Tashkent", "Samarkand"]
+    "example_cities": [
+      "Tashkent",
+      "Samarkand"
+    ]
   },
   {
     "iana": "Asia/Ashgabat",
@@ -888,7 +1177,9 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "TMT",
-    "example_cities": ["Ashgabat"]
+    "example_cities": [
+      "Ashgabat"
+    ]
   },
   {
     "iana": "Asia/Dushanbe",
@@ -897,7 +1188,9 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "TJT",
-    "example_cities": ["Dushanbe"]
+    "example_cities": [
+      "Dushanbe"
+    ]
   },
   {
     "iana": "Asia/Bishkek",
@@ -906,7 +1199,9 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "KGT",
-    "example_cities": ["Bishkek"]
+    "example_cities": [
+      "Bishkek"
+    ]
   },
   {
     "iana": "Asia/Kabul",
@@ -915,7 +1210,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "AFT",
-    "example_cities": ["Kabul", "Kandahar"]
+    "example_cities": [
+      "Kabul",
+      "Kandahar"
+    ]
   },
   {
     "iana": "Asia/Riyadh",
@@ -924,7 +1222,11 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "AST",
-    "example_cities": ["Riyadh", "Jeddah", "Mecca"]
+    "example_cities": [
+      "Riyadh",
+      "Jeddah",
+      "Mecca"
+    ]
   },
   {
     "iana": "Asia/Baghdad",
@@ -933,16 +1235,23 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "AST",
-    "example_cities": ["Baghdad", "Basra"]
+    "example_cities": [
+      "Baghdad",
+      "Basra"
+    ]
   },
   {
     "iana": "Asia/Tehran",
     "utc_offset": "+03:30",
-    "dst_offset": "+04:30",
-    "dst": true,
+    "dst_offset": "+03:30",
+    "dst": false,
     "region": "Asia",
     "abbreviation": "IRST/IRDT",
-    "example_cities": ["Tehran", "Isfahan", "Mashhad"]
+    "example_cities": [
+      "Tehran",
+      "Isfahan",
+      "Mashhad"
+    ]
   },
   {
     "iana": "Asia/Jerusalem",
@@ -951,7 +1260,10 @@
     "dst": true,
     "region": "Asia",
     "abbreviation": "IST/IDT",
-    "example_cities": ["Jerusalem", "Tel Aviv"]
+    "example_cities": [
+      "Jerusalem",
+      "Tel Aviv"
+    ]
   },
   {
     "iana": "Asia/Beirut",
@@ -960,25 +1272,32 @@
     "dst": true,
     "region": "Asia",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Beirut"]
+    "example_cities": [
+      "Beirut"
+    ]
   },
   {
     "iana": "Asia/Damascus",
-    "utc_offset": "+02:00",
+    "utc_offset": "+03:00",
     "dst_offset": "+03:00",
-    "dst": true,
+    "dst": false,
     "region": "Asia",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Damascus", "Aleppo"]
+    "example_cities": [
+      "Damascus",
+      "Aleppo"
+    ]
   },
   {
     "iana": "Asia/Amman",
-    "utc_offset": "+02:00",
+    "utc_offset": "+03:00",
     "dst_offset": "+03:00",
-    "dst": true,
+    "dst": false,
     "region": "Asia",
     "abbreviation": "EET/EEST",
-    "example_cities": ["Amman"]
+    "example_cities": [
+      "Amman"
+    ]
   },
   {
     "iana": "Asia/Kuwait",
@@ -987,7 +1306,9 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "AST",
-    "example_cities": ["Kuwait City"]
+    "example_cities": [
+      "Kuwait City"
+    ]
   },
   {
     "iana": "Asia/Qatar",
@@ -996,7 +1317,9 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "AST",
-    "example_cities": ["Doha"]
+    "example_cities": [
+      "Doha"
+    ]
   },
   {
     "iana": "Asia/Bahrain",
@@ -1005,7 +1328,9 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "AST",
-    "example_cities": ["Manama"]
+    "example_cities": [
+      "Manama"
+    ]
   },
   {
     "iana": "Asia/Muscat",
@@ -1014,7 +1339,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "GST",
-    "example_cities": ["Muscat", "Salalah"]
+    "example_cities": [
+      "Muscat",
+      "Salalah"
+    ]
   },
   {
     "iana": "Asia/Aden",
@@ -1023,7 +1351,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "AST",
-    "example_cities": ["Aden", "Sanaa"]
+    "example_cities": [
+      "Aden",
+      "Sanaa"
+    ]
   },
   {
     "iana": "Asia/Yerevan",
@@ -1032,16 +1363,20 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "AMT",
-    "example_cities": ["Yerevan"]
+    "example_cities": [
+      "Yerevan"
+    ]
   },
   {
     "iana": "Asia/Baku",
     "utc_offset": "+04:00",
-    "dst_offset": "+05:00",
-    "dst": true,
+    "dst_offset": "+04:00",
+    "dst": false,
     "region": "Asia",
     "abbreviation": "AZT/AZST",
-    "example_cities": ["Baku"]
+    "example_cities": [
+      "Baku"
+    ]
   },
   {
     "iana": "Asia/Tbilisi",
@@ -1050,7 +1385,10 @@
     "dst": false,
     "region": "Asia",
     "abbreviation": "GET",
-    "example_cities": ["Tbilisi", "Batumi"]
+    "example_cities": [
+      "Tbilisi",
+      "Batumi"
+    ]
   },
   {
     "iana": "Africa/Johannesburg",
@@ -1059,7 +1397,11 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "SAST",
-    "example_cities": ["Johannesburg", "Cape Town", "Durban"]
+    "example_cities": [
+      "Johannesburg",
+      "Cape Town",
+      "Durban"
+    ]
   },
   {
     "iana": "Africa/Casablanca",
@@ -1068,7 +1410,10 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "WET",
-    "example_cities": ["Casablanca", "Rabat"]
+    "example_cities": [
+      "Casablanca",
+      "Rabat"
+    ]
   },
   {
     "iana": "Africa/Tunis",
@@ -1077,7 +1422,9 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "CET",
-    "example_cities": ["Tunis"]
+    "example_cities": [
+      "Tunis"
+    ]
   },
   {
     "iana": "Africa/Algiers",
@@ -1086,7 +1433,10 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "CET",
-    "example_cities": ["Algiers", "Oran"]
+    "example_cities": [
+      "Algiers",
+      "Oran"
+    ]
   },
   {
     "iana": "Africa/Tripoli",
@@ -1095,16 +1445,21 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "EET",
-    "example_cities": ["Tripoli", "Benghazi"]
+    "example_cities": [
+      "Tripoli",
+      "Benghazi"
+    ]
   },
   {
     "iana": "Africa/Khartoum",
-    "utc_offset": "+03:00",
-    "dst_offset": "+03:00",
+    "utc_offset": "+02:00",
+    "dst_offset": "+02:00",
     "dst": false,
     "region": "Africa",
     "abbreviation": "EAT",
-    "example_cities": ["Khartoum"]
+    "example_cities": [
+      "Khartoum"
+    ]
   },
   {
     "iana": "Africa/Addis_Ababa",
@@ -1113,7 +1468,10 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "EAT",
-    "example_cities": ["Addis Ababa", "Djibouti"]
+    "example_cities": [
+      "Addis Ababa",
+      "Djibouti"
+    ]
   },
   {
     "iana": "Africa/Dar_es_Salaam",
@@ -1122,7 +1480,10 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "EAT",
-    "example_cities": ["Dar es Salaam", "Dodoma"]
+    "example_cities": [
+      "Dar es Salaam",
+      "Dodoma"
+    ]
   },
   {
     "iana": "Africa/Kampala",
@@ -1131,7 +1492,9 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "EAT",
-    "example_cities": ["Kampala"]
+    "example_cities": [
+      "Kampala"
+    ]
   },
   {
     "iana": "Africa/Accra",
@@ -1140,7 +1503,9 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "GMT",
-    "example_cities": ["Accra"]
+    "example_cities": [
+      "Accra"
+    ]
   },
   {
     "iana": "Africa/Abidjan",
@@ -1149,7 +1514,10 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "GMT",
-    "example_cities": ["Abidjan", "Yamoussoukro"]
+    "example_cities": [
+      "Abidjan",
+      "Yamoussoukro"
+    ]
   },
   {
     "iana": "Africa/Dakar",
@@ -1158,7 +1526,9 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "GMT",
-    "example_cities": ["Dakar"]
+    "example_cities": [
+      "Dakar"
+    ]
   },
   {
     "iana": "Africa/Douala",
@@ -1167,7 +1537,10 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "WAT",
-    "example_cities": ["Douala", "Yaoundé"]
+    "example_cities": [
+      "Douala",
+      "Yaoundé"
+    ]
   },
   {
     "iana": "Africa/Kinshasa",
@@ -1176,7 +1549,9 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "WAT",
-    "example_cities": ["Kinshasa"]
+    "example_cities": [
+      "Kinshasa"
+    ]
   },
   {
     "iana": "Africa/Maputo",
@@ -1185,7 +1560,9 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "CAT",
-    "example_cities": ["Maputo"]
+    "example_cities": [
+      "Maputo"
+    ]
   },
   {
     "iana": "Africa/Harare",
@@ -1194,7 +1571,10 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "CAT",
-    "example_cities": ["Harare", "Bulawayo"]
+    "example_cities": [
+      "Harare",
+      "Bulawayo"
+    ]
   },
   {
     "iana": "Africa/Lusaka",
@@ -1203,7 +1583,9 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "CAT",
-    "example_cities": ["Lusaka"]
+    "example_cities": [
+      "Lusaka"
+    ]
   },
   {
     "iana": "Africa/Windhoek",
@@ -1212,7 +1594,9 @@
     "dst": false,
     "region": "Africa",
     "abbreviation": "CAT",
-    "example_cities": ["Windhoek"]
+    "example_cities": [
+      "Windhoek"
+    ]
   },
   {
     "iana": "Australia/Melbourne",
@@ -1221,7 +1605,9 @@
     "dst": true,
     "region": "Pacific",
     "abbreviation": "AEST/AEDT",
-    "example_cities": ["Melbourne"]
+    "example_cities": [
+      "Melbourne"
+    ]
   },
   {
     "iana": "Australia/Brisbane",
@@ -1230,7 +1616,10 @@
     "dst": false,
     "region": "Pacific",
     "abbreviation": "AEST",
-    "example_cities": ["Brisbane", "Gold Coast"]
+    "example_cities": [
+      "Brisbane",
+      "Gold Coast"
+    ]
   },
   {
     "iana": "Australia/Perth",
@@ -1239,7 +1628,9 @@
     "dst": false,
     "region": "Pacific",
     "abbreviation": "AWST",
-    "example_cities": ["Perth"]
+    "example_cities": [
+      "Perth"
+    ]
   },
   {
     "iana": "Australia/Adelaide",
@@ -1248,16 +1639,21 @@
     "dst": true,
     "region": "Pacific",
     "abbreviation": "ACST/ACDT",
-    "example_cities": ["Adelaide"]
+    "example_cities": [
+      "Adelaide"
+    ]
   },
   {
     "iana": "Pacific/Fiji",
     "utc_offset": "+12:00",
-    "dst_offset": "+13:00",
-    "dst": true,
+    "dst_offset": "+12:00",
+    "dst": false,
     "region": "Pacific",
     "abbreviation": "FJT/FJST",
-    "example_cities": ["Suva", "Nadi"]
+    "example_cities": [
+      "Suva",
+      "Nadi"
+    ]
   },
   {
     "iana": "Pacific/Port_Moresby",
@@ -1266,7 +1662,9 @@
     "dst": false,
     "region": "Pacific",
     "abbreviation": "PGT",
-    "example_cities": ["Port Moresby"]
+    "example_cities": [
+      "Port Moresby"
+    ]
   },
   {
     "iana": "Pacific/Pago_Pago",
@@ -1275,16 +1673,20 @@
     "dst": false,
     "region": "Pacific",
     "abbreviation": "SST",
-    "example_cities": ["Pago Pago"]
+    "example_cities": [
+      "Pago Pago"
+    ]
   },
   {
     "iana": "Pacific/Apia",
     "utc_offset": "+13:00",
-    "dst_offset": "+14:00",
-    "dst": true,
+    "dst_offset": "+13:00",
+    "dst": false,
     "region": "Pacific",
     "abbreviation": "WST/WSDT",
-    "example_cities": ["Apia"]
+    "example_cities": [
+      "Apia"
+    ]
   },
   {
     "iana": "Pacific/Tongatapu",
@@ -1293,7 +1695,9 @@
     "dst": false,
     "region": "Pacific",
     "abbreviation": "TOT",
-    "example_cities": ["Nukualofa"]
+    "example_cities": [
+      "Nukualofa"
+    ]
   },
   {
     "iana": "Pacific/Chatham",
@@ -1302,7 +1706,9 @@
     "dst": true,
     "region": "Pacific",
     "abbreviation": "CHAST/CHADT",
-    "example_cities": ["Chatham Islands"]
+    "example_cities": [
+      "Chatham Islands"
+    ]
   },
   {
     "iana": "Etc/GMT+12",
@@ -1311,7 +1717,10 @@
     "dst": false,
     "region": "Universal",
     "abbreviation": "IDLW",
-    "example_cities": ["Baker Island", "Howland Island"]
+    "example_cities": [
+      "Baker Island",
+      "Howland Island"
+    ]
   },
   {
     "iana": "Etc/GMT+11",
@@ -1320,7 +1729,9 @@
     "dst": false,
     "region": "Universal",
     "abbreviation": "NUT",
-    "example_cities": ["Niue"]
+    "example_cities": [
+      "Niue"
+    ]
   },
   {
     "iana": "Etc/GMT-12",
@@ -1329,7 +1740,10 @@
     "dst": false,
     "region": "Universal",
     "abbreviation": "NZST",
-    "example_cities": ["Tarawa", "Majuro"]
+    "example_cities": [
+      "Tarawa",
+      "Majuro"
+    ]
   },
   {
     "iana": "Etc/GMT-13",
@@ -1338,7 +1752,9 @@
     "dst": false,
     "region": "Universal",
     "abbreviation": "TOT",
-    "example_cities": ["Fakaofo"]
+    "example_cities": [
+      "Fakaofo"
+    ]
   },
   {
     "iana": "Etc/GMT-14",
@@ -1347,6 +1763,8 @@
     "dst": false,
     "region": "Universal",
     "abbreviation": "LINT",
-    "example_cities": ["Kiritimati"]
+    "example_cities": [
+      "Kiritimati"
+    ]
   }
 ]

@@ -100,7 +100,7 @@
   },
   {
     "name": "VOLUME",
-    "slug": "volume",
+    "slug": "volume-instruction",
     "category": "instruction",
     "syntax": "VOLUME [\"/data\"] | VOLUME /data /logs",
     "description": "Creates a mount point with the specified name and marks it as holding externally mounted volumes from the native host or other containers.",

@@ -39,7 +39,7 @@ Simple stripe-based national flags for countries worldwide. Only flags that can 
 
 ### Coverage
 
-Currently includes ~23 countries across Europe, Africa, and the Americas. Only simple-stripe flags are included — countries with complex heraldic elements (e.g., Mexico, Brazil) are not present.
+Currently includes ~50 countries across Europe, Africa, the Americas, and beyond. Only simple-stripe flags are included — countries with complex heraldic elements (e.g., Mexico, Brazil) are not present.
 
 ## Example
 

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "second",
+    "symbol": "s",
+    "quantity": "time",
+    "defining_constant": "caesium hyperfine frequency ΔνCs",
+    "constant_value": "9192631770 Hz",
+    "adopted": 2019
+  },
+  {
+    "name": "metre",
+    "symbol": "m",
+    "quantity": "length",
+    "defining_constant": "speed of light in vacuum c",
+    "constant_value": "299792458 m/s",
+    "adopted": 2019
+  },
+  {
+    "name": "kilogram",
+    "symbol": "kg",
+    "quantity": "mass",
+    "defining_constant": "Planck constant h",
+    "constant_value": "6.62607015e-34 J·s",
+    "adopted": 2019
+  },
+  {
+    "name": "ampere",
+    "symbol": "A",
+    "quantity": "electric current",
+    "defining_constant": "elementary charge e",
+    "constant_value": "1.602176634e-19 C",
+    "adopted": 2019
+  },
+  {
+    "name": "kelvin",
+    "symbol": "K",
+    "quantity": "thermodynamic temperature",
+    "defining_constant": "Boltzmann constant k",
+    "constant_value": "1.380649e-23 J/K",
+    "adopted": 2019
+  },
+  {
+    "name": "mole",
+    "symbol": "mol",
+    "quantity": "amount of substance",
+    "defining_constant": "Avogadro constant NA",
+    "constant_value": "6.02214076e23 mol⁻¹",
+    "adopted": 2019
+  },
+  {
+    "name": "candela",
+    "symbol": "cd",
+    "quantity": "luminous intensity",
+    "defining_constant": "luminous efficacy Kcd",
+    "constant_value": "683 lm/W",
+    "adopted": 2019
+  }
+]

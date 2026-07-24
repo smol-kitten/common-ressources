@@ -1,0 +1,156 @@
+[
+  {
+    "name": "radian",
+    "symbol": "rad",
+    "quantity": "plane angle",
+    "expression_si": "m/m",
+    "expression_base": "1"
+  },
+  {
+    "name": "steradian",
+    "symbol": "sr",
+    "quantity": "solid angle",
+    "expression_si": "m²/m²",
+    "expression_base": "1"
+  },
+  {
+    "name": "hertz",
+    "symbol": "Hz",
+    "quantity": "frequency",
+    "expression_si": null,
+    "expression_base": "s⁻¹"
+  },
+  {
+    "name": "newton",
+    "symbol": "N",
+    "quantity": "force",
+    "expression_si": null,
+    "expression_base": "kg·m·s⁻²"
+  },
+  {
+    "name": "pascal",
+    "symbol": "Pa",
+    "quantity": "pressure, stress",
+    "expression_si": "N/m²",
+    "expression_base": "kg·m⁻¹·s⁻²"
+  },
+  {
+    "name": "joule",
+    "symbol": "J",
+    "quantity": "energy, work, heat",
+    "expression_si": "N·m",
+    "expression_base": "kg·m²·s⁻²"
+  },
+  {
+    "name": "watt",
+    "symbol": "W",
+    "quantity": "power, radiant flux",
+    "expression_si": "J/s",
+    "expression_base": "kg·m²·s⁻³"
+  },
+  {
+    "name": "coulomb",
+    "symbol": "C",
+    "quantity": "electric charge",
+    "expression_si": null,
+    "expression_base": "s·A"
+  },
+  {
+    "name": "volt",
+    "symbol": "V",
+    "quantity": "electric potential difference",
+    "expression_si": "W/A",
+    "expression_base": "kg·m²·s⁻³·A⁻¹"
+  },
+  {
+    "name": "farad",
+    "symbol": "F",
+    "quantity": "capacitance",
+    "expression_si": "C/V",
+    "expression_base": "kg⁻¹·m⁻²·s⁴·A²"
+  },
+  {
+    "name": "ohm",
+    "symbol": "Ω",
+    "quantity": "electric resistance",
+    "expression_si": "V/A",
+    "expression_base": "kg·m²·s⁻³·A⁻²"
+  },
+  {
+    "name": "siemens",
+    "symbol": "S",
+    "quantity": "electric conductance",
+    "expression_si": "A/V",
+    "expression_base": "kg⁻¹·m⁻²·s³·A²"
+  },
+  {
+    "name": "weber",
+    "symbol": "Wb",
+    "quantity": "magnetic flux",
+    "expression_si": "V·s",
+    "expression_base": "kg·m²·s⁻²·A⁻¹"
+  },
+  {
+    "name": "tesla",
+    "symbol": "T",
+    "quantity": "magnetic flux density",
+    "expression_si": "Wb/m²",
+    "expression_base": "kg·s⁻²·A⁻¹"
+  },
+  {
+    "name": "henry",
+    "symbol": "H",
+    "quantity": "inductance",
+    "expression_si": "Wb/A",
+    "expression_base": "kg·m²·s⁻²·A⁻²"
+  },
+  {
+    "name": "degree Celsius",
+    "symbol": "°C",
+    "quantity": "Celsius temperature",
+    "expression_si": null,
+    "expression_base": "K"
+  },
+  {
+    "name": "lumen",
+    "symbol": "lm",
+    "quantity": "luminous flux",
+    "expression_si": "cd·sr",
+    "expression_base": "cd"
+  },
+  {
+    "name": "lux",
+    "symbol": "lx",
+    "quantity": "illuminance",
+    "expression_si": "lm/m²",
+    "expression_base": "cd·m⁻²"
+  },
+  {
+    "name": "becquerel",
+    "symbol": "Bq",
+    "quantity": "activity referred to a radionuclide",
+    "expression_si": null,
+    "expression_base": "s⁻¹"
+  },
+  {
+    "name": "gray",
+    "symbol": "Gy",
+    "quantity": "absorbed dose",
+    "expression_si": "J/kg",
+    "expression_base": "m²·s⁻²"
+  },
+  {
+    "name": "sievert",
+    "symbol": "Sv",
+    "quantity": "dose equivalent",
+    "expression_si": "J/kg",
+    "expression_base": "m²·s⁻²"
+  },
+  {
+    "name": "katal",
+    "symbol": "kat",
+    "quantity": "catalytic activity",
+    "expression_si": null,
+    "expression_base": "mol·s⁻¹"
+  }
+]

@@ -2,9 +2,11 @@
   {
     "iso2": "US",
     "iso3": "USA",
+    "iso_numeric": 840,
     "name": "United States",
     "capital": "Washington D.C.",
     "continent": "Americas",
+    "subregion": "Northern America",
     "dial_code": "+1",
     "currency_code": "USD",
     "population_approx": 331000000
@@ -12,9 +14,11 @@
   {
     "iso2": "GB",
     "iso3": "GBR",
+    "iso_numeric": 826,
     "name": "United Kingdom",
     "capital": "London",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+44",
     "currency_code": "GBP",
     "population_approx": 67000000
@@ -22,9 +26,11 @@
   {
     "iso2": "DE",
     "iso3": "DEU",
+    "iso_numeric": 276,
     "name": "Germany",
     "capital": "Berlin",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+49",
     "currency_code": "EUR",
     "population_approx": 83000000
@@ -32,9 +38,11 @@
   {
     "iso2": "FR",
     "iso3": "FRA",
+    "iso_numeric": 250,
     "name": "France",
     "capital": "Paris",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+33",
     "currency_code": "EUR",
     "population_approx": 68000000
@@ -42,9 +50,11 @@
   {
     "iso2": "JP",
     "iso3": "JPN",
+    "iso_numeric": 392,
     "name": "Japan",
     "capital": "Tokyo",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+81",
     "currency_code": "JPY",
     "population_approx": 125000000
@@ -52,9 +62,11 @@
   {
     "iso2": "CN",
     "iso3": "CHN",
+    "iso_numeric": 156,
     "name": "China",
     "capital": "Beijing",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+86",
     "currency_code": "CNY",
     "population_approx": 1412000000
@@ -62,9 +74,11 @@
   {
     "iso2": "IN",
     "iso3": "IND",
+    "iso_numeric": 356,
     "name": "India",
     "capital": "New Delhi",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+91",
     "currency_code": "INR",
     "population_approx": 1400000000
@@ -72,9 +86,11 @@
   {
     "iso2": "BR",
     "iso3": "BRA",
+    "iso_numeric": 76,
     "name": "Brazil",
     "capital": "Brasília",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+55",
     "currency_code": "BRL",
     "population_approx": 215000000
@@ -82,9 +98,11 @@
   {
     "iso2": "CA",
     "iso3": "CAN",
+    "iso_numeric": 124,
     "name": "Canada",
     "capital": "Ottawa",
     "continent": "Americas",
+    "subregion": "Northern America",
     "dial_code": "+1",
     "currency_code": "CAD",
     "population_approx": 38000000
@@ -92,9 +110,11 @@
   {
     "iso2": "AU",
     "iso3": "AUS",
+    "iso_numeric": 36,
     "name": "Australia",
     "capital": "Canberra",
     "continent": "Oceania",
+    "subregion": "Australia and New Zealand",
     "dial_code": "+61",
     "currency_code": "AUD",
     "population_approx": 26000000
@@ -102,9 +122,11 @@
   {
     "iso2": "MX",
     "iso3": "MEX",
+    "iso_numeric": 484,
     "name": "Mexico",
     "capital": "Mexico City",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+52",
     "currency_code": "MXN",
     "population_approx": 130000000
@@ -112,9 +134,11 @@
   {
     "iso2": "ZA",
     "iso3": "ZAF",
+    "iso_numeric": 710,
     "name": "South Africa",
     "capital": "Pretoria",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+27",
     "currency_code": "ZAR",
     "population_approx": 60000000
@@ -122,9 +146,11 @@
   {
     "iso2": "NG",
     "iso3": "NGA",
+    "iso_numeric": 566,
     "name": "Nigeria",
     "capital": "Abuja",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+234",
     "currency_code": "NGN",
     "population_approx": 218000000
@@ -132,9 +158,11 @@
   {
     "iso2": "EG",
     "iso3": "EGY",
+    "iso_numeric": 818,
     "name": "Egypt",
     "capital": "Cairo",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+20",
     "currency_code": "EGP",
     "population_approx": 104000000
@@ -142,9 +170,11 @@
   {
     "iso2": "AR",
     "iso3": "ARG",
+    "iso_numeric": 32,
     "name": "Argentina",
     "capital": "Buenos Aires",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+54",
     "currency_code": "ARS",
     "population_approx": 45000000
@@ -152,9 +182,11 @@
   {
     "iso2": "RU",
     "iso3": "RUS",
+    "iso_numeric": 643,
     "name": "Russia",
     "capital": "Moscow",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+7",
     "currency_code": "RUB",
     "population_approx": 144000000
@@ -162,9 +194,11 @@
   {
     "iso2": "KR",
     "iso3": "KOR",
+    "iso_numeric": 410,
     "name": "South Korea",
     "capital": "Seoul",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+82",
     "currency_code": "KRW",
     "population_approx": 52000000
@@ -172,9 +206,11 @@
   {
     "iso2": "SE",
     "iso3": "SWE",
+    "iso_numeric": 752,
     "name": "Sweden",
     "capital": "Stockholm",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+46",
     "currency_code": "SEK",
     "population_approx": 10000000
@@ -182,9 +218,11 @@
   {
     "iso2": "NL",
     "iso3": "NLD",
+    "iso_numeric": 528,
     "name": "Netherlands",
     "capital": "Amsterdam",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+31",
     "currency_code": "EUR",
     "population_approx": 17000000
@@ -192,9 +230,11 @@
   {
     "iso2": "CH",
     "iso3": "CHE",
+    "iso_numeric": 756,
     "name": "Switzerland",
     "capital": "Bern",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+41",
     "currency_code": "CHF",
     "population_approx": 8700000
@@ -202,9 +242,11 @@
   {
     "iso2": "SG",
     "iso3": "SGP",
+    "iso_numeric": 702,
     "name": "Singapore",
     "capital": "Singapore",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+65",
     "currency_code": "SGD",
     "population_approx": 5900000
@@ -212,9 +254,11 @@
   {
     "iso2": "PL",
     "iso3": "POL",
+    "iso_numeric": 616,
     "name": "Poland",
     "capital": "Warsaw",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+48",
     "currency_code": "PLN",
     "population_approx": 38000000
@@ -222,9 +266,11 @@
   {
     "iso2": "ID",
     "iso3": "IDN",
+    "iso_numeric": 360,
     "name": "Indonesia",
     "capital": "Jakarta",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+62",
     "currency_code": "IDR",
     "population_approx": 277000000
@@ -232,9 +278,11 @@
   {
     "iso2": "PK",
     "iso3": "PAK",
+    "iso_numeric": 586,
     "name": "Pakistan",
     "capital": "Islamabad",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+92",
     "currency_code": "PKR",
     "population_approx": 231000000
@@ -242,9 +290,11 @@
   {
     "iso2": "UA",
     "iso3": "UKR",
+    "iso_numeric": 804,
     "name": "Ukraine",
     "capital": "Kyiv",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+380",
     "currency_code": "UAH",
     "population_approx": 44000000
@@ -252,9 +302,11 @@
   {
     "iso2": "AL",
     "iso3": "ALB",
+    "iso_numeric": 8,
     "name": "Albania",
     "capital": "Tirana",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+355",
     "currency_code": "ALL",
     "population_approx": 2800000
@@ -262,9 +314,11 @@
   {
     "iso2": "AD",
     "iso3": "AND",
+    "iso_numeric": 20,
     "name": "Andorra",
     "capital": "Andorra la Vella",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+376",
     "currency_code": "EUR",
     "population_approx": 77000
@@ -272,9 +326,11 @@
   {
     "iso2": "AM",
     "iso3": "ARM",
+    "iso_numeric": 51,
     "name": "Armenia",
     "capital": "Yerevan",
     "continent": "Europe",
+    "subregion": "Western Asia",
     "dial_code": "+374",
     "currency_code": "AMD",
     "population_approx": 3000000
@@ -282,9 +338,11 @@
   {
     "iso2": "AT",
     "iso3": "AUT",
+    "iso_numeric": 40,
     "name": "Austria",
     "capital": "Vienna",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+43",
     "currency_code": "EUR",
     "population_approx": 9000000
@@ -292,9 +350,11 @@
   {
     "iso2": "AZ",
     "iso3": "AZE",
+    "iso_numeric": 31,
     "name": "Azerbaijan",
     "capital": "Baku",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+994",
     "currency_code": "AZN",
     "population_approx": 10000000
@@ -302,19 +362,23 @@
   {
     "iso2": "BY",
     "iso3": "BLR",
+    "iso_numeric": 112,
     "name": "Belarus",
     "capital": "Minsk",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+375",
-    "currency_code": "BYR",
+    "currency_code": "BYN",
     "population_approx": 9400000
   },
   {
     "iso2": "BE",
     "iso3": "BEL",
+    "iso_numeric": 56,
     "name": "Belgium",
     "capital": "Brussels",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+32",
     "currency_code": "EUR",
     "population_approx": 11500000
@@ -322,9 +386,11 @@
   {
     "iso2": "BA",
     "iso3": "BIH",
+    "iso_numeric": 70,
     "name": "Bosnia and Herzegovina",
     "capital": "Sarajevo",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+387",
     "currency_code": "BAM",
     "population_approx": 3200000
@@ -332,9 +398,11 @@
   {
     "iso2": "BG",
     "iso3": "BGR",
+    "iso_numeric": 100,
     "name": "Bulgaria",
     "capital": "Sofia",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+359",
     "currency_code": "EUR",
     "population_approx": 6500000
@@ -342,9 +410,11 @@
   {
     "iso2": "HR",
     "iso3": "HRV",
+    "iso_numeric": 191,
     "name": "Croatia",
     "capital": "Zagreb",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+385",
     "currency_code": "EUR",
     "population_approx": 4000000
@@ -352,9 +422,11 @@
   {
     "iso2": "CY",
     "iso3": "CYP",
+    "iso_numeric": 196,
     "name": "Cyprus",
     "capital": "Nicosia",
     "continent": "Europe",
+    "subregion": "Western Asia",
     "dial_code": "+357",
     "currency_code": "EUR",
     "population_approx": 1200000
@@ -362,9 +434,11 @@
   {
     "iso2": "CZ",
     "iso3": "CZE",
+    "iso_numeric": 203,
     "name": "Czech Republic",
     "capital": "Prague",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+420",
     "currency_code": "CZK",
     "population_approx": 10700000
@@ -372,9 +446,11 @@
   {
     "iso2": "DK",
     "iso3": "DNK",
+    "iso_numeric": 208,
     "name": "Denmark",
     "capital": "Copenhagen",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+45",
     "currency_code": "DKK",
     "population_approx": 5900000
@@ -382,9 +458,11 @@
   {
     "iso2": "EE",
     "iso3": "EST",
+    "iso_numeric": 233,
     "name": "Estonia",
     "capital": "Tallinn",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+372",
     "currency_code": "EUR",
     "population_approx": 1300000
@@ -392,9 +470,11 @@
   {
     "iso2": "FI",
     "iso3": "FIN",
+    "iso_numeric": 246,
     "name": "Finland",
     "capital": "Helsinki",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+358",
     "currency_code": "EUR",
     "population_approx": 5500000
@@ -402,9 +482,11 @@
   {
     "iso2": "GE",
     "iso3": "GEO",
+    "iso_numeric": 268,
     "name": "Georgia",
     "capital": "Tbilisi",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+995",
     "currency_code": "GEL",
     "population_approx": 3700000
@@ -412,9 +494,11 @@
   {
     "iso2": "GR",
     "iso3": "GRC",
+    "iso_numeric": 300,
     "name": "Greece",
     "capital": "Athens",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+30",
     "currency_code": "EUR",
     "population_approx": 10700000
@@ -422,9 +506,11 @@
   {
     "iso2": "HU",
     "iso3": "HUN",
+    "iso_numeric": 348,
     "name": "Hungary",
     "capital": "Budapest",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+36",
     "currency_code": "HUF",
     "population_approx": 9700000
@@ -432,9 +518,11 @@
   {
     "iso2": "IS",
     "iso3": "ISL",
+    "iso_numeric": 352,
     "name": "Iceland",
     "capital": "Reykjavik",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+354",
     "currency_code": "ISK",
     "population_approx": 370000
@@ -442,9 +530,11 @@
   {
     "iso2": "IE",
     "iso3": "IRL",
+    "iso_numeric": 372,
     "name": "Ireland",
     "capital": "Dublin",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+353",
     "currency_code": "EUR",
     "population_approx": 5100000
@@ -452,9 +542,11 @@
   {
     "iso2": "IT",
     "iso3": "ITA",
+    "iso_numeric": 380,
     "name": "Italy",
     "capital": "Rome",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+39",
     "currency_code": "EUR",
     "population_approx": 60000000
@@ -462,9 +554,11 @@
   {
     "iso2": "KZ",
     "iso3": "KAZ",
+    "iso_numeric": 398,
     "name": "Kazakhstan",
     "capital": "Astana",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+7",
     "currency_code": "KZT",
     "population_approx": 19000000
@@ -482,9 +576,11 @@
   {
     "iso2": "LV",
     "iso3": "LVA",
+    "iso_numeric": 428,
     "name": "Latvia",
     "capital": "Riga",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+371",
     "currency_code": "EUR",
     "population_approx": 1800000
@@ -492,9 +588,11 @@
   {
     "iso2": "LI",
     "iso3": "LIE",
+    "iso_numeric": 438,
     "name": "Liechtenstein",
     "capital": "Vaduz",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+423",
     "currency_code": "CHF",
     "population_approx": 38000
@@ -502,9 +600,11 @@
   {
     "iso2": "LT",
     "iso3": "LTU",
+    "iso_numeric": 440,
     "name": "Lithuania",
     "capital": "Vilnius",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+370",
     "currency_code": "EUR",
     "population_approx": 2800000
@@ -512,9 +612,11 @@
   {
     "iso2": "LU",
     "iso3": "LUX",
+    "iso_numeric": 442,
     "name": "Luxembourg",
     "capital": "Luxembourg City",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+352",
     "currency_code": "EUR",
     "population_approx": 640000
@@ -522,9 +624,11 @@
   {
     "iso2": "MT",
     "iso3": "MLT",
+    "iso_numeric": 470,
     "name": "Malta",
     "capital": "Valletta",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+356",
     "currency_code": "EUR",
     "population_approx": 530000
@@ -532,9 +636,11 @@
   {
     "iso2": "MD",
     "iso3": "MDA",
+    "iso_numeric": 498,
     "name": "Moldova",
     "capital": "Chișinău",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+373",
     "currency_code": "MDL",
     "population_approx": 2600000
@@ -542,9 +648,11 @@
   {
     "iso2": "MC",
     "iso3": "MCO",
+    "iso_numeric": 492,
     "name": "Monaco",
     "capital": "Monaco",
     "continent": "Europe",
+    "subregion": "Western Europe",
     "dial_code": "+377",
     "currency_code": "EUR",
     "population_approx": 36000
@@ -552,9 +660,11 @@
   {
     "iso2": "ME",
     "iso3": "MNE",
+    "iso_numeric": 499,
     "name": "Montenegro",
     "capital": "Podgorica",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+382",
     "currency_code": "EUR",
     "population_approx": 620000
@@ -562,9 +672,11 @@
   {
     "iso2": "MK",
     "iso3": "MKD",
+    "iso_numeric": 807,
     "name": "North Macedonia",
     "capital": "Skopje",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+389",
     "currency_code": "MKD",
     "population_approx": 2100000
@@ -572,9 +684,11 @@
   {
     "iso2": "NO",
     "iso3": "NOR",
+    "iso_numeric": 578,
     "name": "Norway",
     "capital": "Oslo",
     "continent": "Europe",
+    "subregion": "Northern Europe",
     "dial_code": "+47",
     "currency_code": "NOK",
     "population_approx": 5400000
@@ -582,9 +696,11 @@
   {
     "iso2": "PT",
     "iso3": "PRT",
+    "iso_numeric": 620,
     "name": "Portugal",
     "capital": "Lisbon",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+351",
     "currency_code": "EUR",
     "population_approx": 10300000
@@ -592,9 +708,11 @@
   {
     "iso2": "RO",
     "iso3": "ROU",
+    "iso_numeric": 642,
     "name": "Romania",
     "capital": "Bucharest",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+40",
     "currency_code": "RON",
     "population_approx": 19000000
@@ -602,9 +720,11 @@
   {
     "iso2": "SM",
     "iso3": "SMR",
+    "iso_numeric": 674,
     "name": "San Marino",
     "capital": "San Marino",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+378",
     "currency_code": "EUR",
     "population_approx": 34000
@@ -612,9 +732,11 @@
   {
     "iso2": "RS",
     "iso3": "SRB",
+    "iso_numeric": 688,
     "name": "Serbia",
     "capital": "Belgrade",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+381",
     "currency_code": "RSD",
     "population_approx": 7000000
@@ -622,9 +744,11 @@
   {
     "iso2": "SK",
     "iso3": "SVK",
+    "iso_numeric": 703,
     "name": "Slovakia",
     "capital": "Bratislava",
     "continent": "Europe",
+    "subregion": "Eastern Europe",
     "dial_code": "+421",
     "currency_code": "EUR",
     "population_approx": 5500000
@@ -632,9 +756,11 @@
   {
     "iso2": "SI",
     "iso3": "SVN",
+    "iso_numeric": 705,
     "name": "Slovenia",
     "capital": "Ljubljana",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+386",
     "currency_code": "EUR",
     "population_approx": 2100000
@@ -642,9 +768,11 @@
   {
     "iso2": "ES",
     "iso3": "ESP",
+    "iso_numeric": 724,
     "name": "Spain",
     "capital": "Madrid",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+34",
     "currency_code": "EUR",
     "population_approx": 47000000
@@ -652,9 +780,11 @@
   {
     "iso2": "TR",
     "iso3": "TUR",
+    "iso_numeric": 792,
     "name": "Turkey",
     "capital": "Ankara",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+90",
     "currency_code": "TRY",
     "population_approx": 85000000
@@ -662,9 +792,11 @@
   {
     "iso2": "VA",
     "iso3": "VAT",
+    "iso_numeric": 336,
     "name": "Vatican City",
     "capital": "Vatican City",
     "continent": "Europe",
+    "subregion": "Southern Europe",
     "dial_code": "+39",
     "currency_code": "EUR",
     "population_approx": 800
@@ -672,9 +804,11 @@
   {
     "iso2": "AF",
     "iso3": "AFG",
+    "iso_numeric": 4,
     "name": "Afghanistan",
     "capital": "Kabul",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+93",
     "currency_code": "AFN",
     "population_approx": 40000000
@@ -682,9 +816,11 @@
   {
     "iso2": "BH",
     "iso3": "BHR",
+    "iso_numeric": 48,
     "name": "Bahrain",
     "capital": "Manama",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+973",
     "currency_code": "BHD",
     "population_approx": 1500000
@@ -692,9 +828,11 @@
   {
     "iso2": "BD",
     "iso3": "BGD",
+    "iso_numeric": 50,
     "name": "Bangladesh",
     "capital": "Dhaka",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+880",
     "currency_code": "BDT",
     "population_approx": 170000000
@@ -702,9 +840,11 @@
   {
     "iso2": "BT",
     "iso3": "BTN",
+    "iso_numeric": 64,
     "name": "Bhutan",
     "capital": "Thimphu",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+975",
     "currency_code": "BTN",
     "population_approx": 800000
@@ -712,9 +852,11 @@
   {
     "iso2": "BN",
     "iso3": "BRN",
+    "iso_numeric": 96,
     "name": "Brunei",
     "capital": "Bandar Seri Begawan",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+673",
     "currency_code": "BND",
     "population_approx": 440000
@@ -722,9 +864,11 @@
   {
     "iso2": "KH",
     "iso3": "KHM",
+    "iso_numeric": 116,
     "name": "Cambodia",
     "capital": "Phnom Penh",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+855",
     "currency_code": "KHR",
     "population_approx": 17000000
@@ -732,9 +876,11 @@
   {
     "iso2": "TL",
     "iso3": "TLS",
+    "iso_numeric": 626,
     "name": "East Timor",
     "capital": "Dili",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+670",
     "currency_code": "USD",
     "population_approx": 1300000
@@ -742,9 +888,11 @@
   {
     "iso2": "IR",
     "iso3": "IRN",
+    "iso_numeric": 364,
     "name": "Iran",
     "capital": "Tehran",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+98",
     "currency_code": "IRR",
     "population_approx": 87000000
@@ -752,9 +900,11 @@
   {
     "iso2": "IQ",
     "iso3": "IRQ",
+    "iso_numeric": 368,
     "name": "Iraq",
     "capital": "Baghdad",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+964",
     "currency_code": "IQD",
     "population_approx": 41000000
@@ -762,9 +912,11 @@
   {
     "iso2": "IL",
     "iso3": "ISR",
+    "iso_numeric": 376,
     "name": "Israel",
     "capital": "Jerusalem",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+972",
     "currency_code": "ILS",
     "population_approx": 9500000
@@ -772,9 +924,11 @@
   {
     "iso2": "JO",
     "iso3": "JOR",
+    "iso_numeric": 400,
     "name": "Jordan",
     "capital": "Amman",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+962",
     "currency_code": "JOD",
     "population_approx": 10000000
@@ -782,9 +936,11 @@
   {
     "iso2": "KW",
     "iso3": "KWT",
+    "iso_numeric": 414,
     "name": "Kuwait",
     "capital": "Kuwait City",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+965",
     "currency_code": "KWD",
     "population_approx": 4400000
@@ -792,9 +948,11 @@
   {
     "iso2": "KG",
     "iso3": "KGZ",
+    "iso_numeric": 417,
     "name": "Kyrgyzstan",
     "capital": "Bishkek",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+996",
     "currency_code": "KGS",
     "population_approx": 6600000
@@ -802,9 +960,11 @@
   {
     "iso2": "LA",
     "iso3": "LAO",
+    "iso_numeric": 418,
     "name": "Laos",
     "capital": "Vientiane",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+856",
     "currency_code": "LAK",
     "population_approx": 7300000
@@ -812,9 +972,11 @@
   {
     "iso2": "LB",
     "iso3": "LBN",
+    "iso_numeric": 422,
     "name": "Lebanon",
     "capital": "Beirut",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+961",
     "currency_code": "LBP",
     "population_approx": 5500000
@@ -822,9 +984,11 @@
   {
     "iso2": "MY",
     "iso3": "MYS",
+    "iso_numeric": 458,
     "name": "Malaysia",
     "capital": "Kuala Lumpur",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+60",
     "currency_code": "MYR",
     "population_approx": 33000000
@@ -832,9 +996,11 @@
   {
     "iso2": "MV",
     "iso3": "MDV",
+    "iso_numeric": 462,
     "name": "Maldives",
     "capital": "Malé",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+960",
     "currency_code": "MVR",
     "population_approx": 540000
@@ -842,9 +1008,11 @@
   {
     "iso2": "MN",
     "iso3": "MNG",
+    "iso_numeric": 496,
     "name": "Mongolia",
     "capital": "Ulaanbaatar",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+976",
     "currency_code": "MNT",
     "population_approx": 3300000
@@ -852,9 +1020,11 @@
   {
     "iso2": "MM",
     "iso3": "MMR",
+    "iso_numeric": 104,
     "name": "Myanmar",
     "capital": "Naypyidaw",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+95",
     "currency_code": "MMK",
     "population_approx": 55000000
@@ -862,9 +1032,11 @@
   {
     "iso2": "NP",
     "iso3": "NPL",
+    "iso_numeric": 524,
     "name": "Nepal",
     "capital": "Kathmandu",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+977",
     "currency_code": "NPR",
     "population_approx": 30000000
@@ -872,9 +1044,11 @@
   {
     "iso2": "KP",
     "iso3": "PRK",
+    "iso_numeric": 408,
     "name": "North Korea",
     "capital": "Pyongyang",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+850",
     "currency_code": "KPW",
     "population_approx": 25000000
@@ -882,9 +1056,11 @@
   {
     "iso2": "OM",
     "iso3": "OMN",
+    "iso_numeric": 512,
     "name": "Oman",
     "capital": "Muscat",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+968",
     "currency_code": "OMR",
     "population_approx": 4600000
@@ -892,9 +1068,11 @@
   {
     "iso2": "PS",
     "iso3": "PSE",
+    "iso_numeric": 275,
     "name": "Palestine",
     "capital": "Ramallah",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+970",
     "currency_code": "ILS",
     "population_approx": 5000000
@@ -902,9 +1080,11 @@
   {
     "iso2": "PH",
     "iso3": "PHL",
+    "iso_numeric": 608,
     "name": "Philippines",
     "capital": "Manila",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+63",
     "currency_code": "PHP",
     "population_approx": 115000000
@@ -912,9 +1092,11 @@
   {
     "iso2": "QA",
     "iso3": "QAT",
+    "iso_numeric": 634,
     "name": "Qatar",
     "capital": "Doha",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+974",
     "currency_code": "QAR",
     "population_approx": 2900000
@@ -922,9 +1104,11 @@
   {
     "iso2": "SA",
     "iso3": "SAU",
+    "iso_numeric": 682,
     "name": "Saudi Arabia",
     "capital": "Riyadh",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+966",
     "currency_code": "SAR",
     "population_approx": 35000000
@@ -932,9 +1116,11 @@
   {
     "iso2": "LK",
     "iso3": "LKA",
+    "iso_numeric": 144,
     "name": "Sri Lanka",
     "capital": "Sri Jayawardenepura Kotte",
     "continent": "Asia",
+    "subregion": "Southern Asia",
     "dial_code": "+94",
     "currency_code": "LKR",
     "population_approx": 22000000
@@ -942,9 +1128,11 @@
   {
     "iso2": "SY",
     "iso3": "SYR",
+    "iso_numeric": 760,
     "name": "Syria",
     "capital": "Damascus",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+963",
     "currency_code": "SYP",
     "population_approx": 21000000
@@ -952,9 +1140,11 @@
   {
     "iso2": "TW",
     "iso3": "TWN",
+    "iso_numeric": 158,
     "name": "Taiwan",
     "capital": "Taipei",
     "continent": "Asia",
+    "subregion": "Eastern Asia",
     "dial_code": "+886",
     "currency_code": "TWD",
     "population_approx": 23500000
@@ -962,9 +1152,11 @@
   {
     "iso2": "TJ",
     "iso3": "TJK",
+    "iso_numeric": 762,
     "name": "Tajikistan",
     "capital": "Dushanbe",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+992",
     "currency_code": "TJS",
     "population_approx": 9500000
@@ -972,9 +1164,11 @@
   {
     "iso2": "TH",
     "iso3": "THA",
+    "iso_numeric": 764,
     "name": "Thailand",
     "capital": "Bangkok",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+66",
     "currency_code": "THB",
     "population_approx": 70000000
@@ -982,9 +1176,11 @@
   {
     "iso2": "TM",
     "iso3": "TKM",
+    "iso_numeric": 795,
     "name": "Turkmenistan",
     "capital": "Ashgabat",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+993",
     "currency_code": "TMT",
     "population_approx": 6000000
@@ -992,9 +1188,11 @@
   {
     "iso2": "AE",
     "iso3": "ARE",
+    "iso_numeric": 784,
     "name": "United Arab Emirates",
     "capital": "Abu Dhabi",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+971",
     "currency_code": "AED",
     "population_approx": 9900000
@@ -1002,9 +1200,11 @@
   {
     "iso2": "UZ",
     "iso3": "UZB",
+    "iso_numeric": 860,
     "name": "Uzbekistan",
     "capital": "Tashkent",
     "continent": "Asia",
+    "subregion": "Central Asia",
     "dial_code": "+998",
     "currency_code": "UZS",
     "population_approx": 35000000
@@ -1012,9 +1212,11 @@
   {
     "iso2": "VN",
     "iso3": "VNM",
+    "iso_numeric": 704,
     "name": "Vietnam",
     "capital": "Hanoi",
     "continent": "Asia",
+    "subregion": "South-eastern Asia",
     "dial_code": "+84",
     "currency_code": "VND",
     "population_approx": 97000000
@@ -1022,9 +1224,11 @@
   {
     "iso2": "YE",
     "iso3": "YEM",
+    "iso_numeric": 887,
     "name": "Yemen",
     "capital": "Sanaa",
     "continent": "Asia",
+    "subregion": "Western Asia",
     "dial_code": "+967",
     "currency_code": "YER",
     "population_approx": 33000000
@@ -1032,9 +1236,11 @@
   {
     "iso2": "DZ",
     "iso3": "DZA",
+    "iso_numeric": 12,
     "name": "Algeria",
     "capital": "Algiers",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+213",
     "currency_code": "DZD",
     "population_approx": 45000000
@@ -1042,9 +1248,11 @@
   {
     "iso2": "AO",
     "iso3": "AGO",
+    "iso_numeric": 24,
     "name": "Angola",
     "capital": "Luanda",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+244",
     "currency_code": "AOA",
     "population_approx": 34000000
@@ -1052,9 +1260,11 @@
   {
     "iso2": "BJ",
     "iso3": "BEN",
+    "iso_numeric": 204,
     "name": "Benin",
     "capital": "Porto-Novo",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+229",
     "currency_code": "XOF",
     "population_approx": 13000000
@@ -1062,9 +1272,11 @@
   {
     "iso2": "BW",
     "iso3": "BWA",
+    "iso_numeric": 72,
     "name": "Botswana",
     "capital": "Gaborone",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+267",
     "currency_code": "BWP",
     "population_approx": 2600000
@@ -1072,9 +1284,11 @@
   {
     "iso2": "BF",
     "iso3": "BFA",
+    "iso_numeric": 854,
     "name": "Burkina Faso",
     "capital": "Ouagadougou",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+226",
     "currency_code": "XOF",
     "population_approx": 21000000
@@ -1082,9 +1296,11 @@
   {
     "iso2": "BI",
     "iso3": "BDI",
+    "iso_numeric": 108,
     "name": "Burundi",
     "capital": "Gitega",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+257",
     "currency_code": "BIF",
     "population_approx": 12000000
@@ -1092,9 +1308,11 @@
   {
     "iso2": "CM",
     "iso3": "CMR",
+    "iso_numeric": 120,
     "name": "Cameroon",
     "capital": "Yaoundé",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+237",
     "currency_code": "XAF",
     "population_approx": 27000000
@@ -1102,9 +1320,11 @@
   {
     "iso2": "CV",
     "iso3": "CPV",
+    "iso_numeric": 132,
     "name": "Cape Verde",
     "capital": "Praia",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+238",
     "currency_code": "CVE",
     "population_approx": 560000
@@ -1112,9 +1332,11 @@
   {
     "iso2": "CF",
     "iso3": "CAF",
+    "iso_numeric": 140,
     "name": "Central African Republic",
     "capital": "Bangui",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+236",
     "currency_code": "XAF",
     "population_approx": 5000000
@@ -1122,9 +1344,11 @@
   {
     "iso2": "TD",
     "iso3": "TCD",
+    "iso_numeric": 148,
     "name": "Chad",
     "capital": "N'Djamena",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+235",
     "currency_code": "XAF",
     "population_approx": 17000000
@@ -1132,9 +1356,11 @@
   {
     "iso2": "KM",
     "iso3": "COM",
+    "iso_numeric": 174,
     "name": "Comoros",
     "capital": "Moroni",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+269",
     "currency_code": "KMF",
     "population_approx": 870000
@@ -1142,9 +1368,11 @@
   {
     "iso2": "CD",
     "iso3": "COD",
+    "iso_numeric": 180,
     "name": "Congo (Democratic Republic)",
     "capital": "Kinshasa",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+243",
     "currency_code": "CDF",
     "population_approx": 100000000
@@ -1152,9 +1380,11 @@
   {
     "iso2": "CG",
     "iso3": "COG",
+    "iso_numeric": 178,
     "name": "Congo (Republic)",
     "capital": "Brazzaville",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+242",
     "currency_code": "XAF",
     "population_approx": 5800000
@@ -1162,9 +1392,11 @@
   {
     "iso2": "DJ",
     "iso3": "DJI",
+    "iso_numeric": 262,
     "name": "Djibouti",
     "capital": "Djibouti",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+253",
     "currency_code": "DJF",
     "population_approx": 1000000
@@ -1172,9 +1404,11 @@
   {
     "iso2": "GQ",
     "iso3": "GNQ",
+    "iso_numeric": 226,
     "name": "Equatorial Guinea",
     "capital": "Malabo",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+240",
     "currency_code": "XAF",
     "population_approx": 1500000
@@ -1182,9 +1416,11 @@
   {
     "iso2": "ER",
     "iso3": "ERI",
+    "iso_numeric": 232,
     "name": "Eritrea",
     "capital": "Asmara",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+291",
     "currency_code": "ERN",
     "population_approx": 3500000
@@ -1192,9 +1428,11 @@
   {
     "iso2": "SZ",
     "iso3": "SWZ",
+    "iso_numeric": 748,
     "name": "Eswatini",
     "capital": "Mbabane",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+268",
     "currency_code": "SZL",
     "population_approx": 1200000
@@ -1202,9 +1440,11 @@
   {
     "iso2": "ET",
     "iso3": "ETH",
+    "iso_numeric": 231,
     "name": "Ethiopia",
     "capital": "Addis Ababa",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+251",
     "currency_code": "ETB",
     "population_approx": 120000000
@@ -1212,9 +1452,11 @@
   {
     "iso2": "GA",
     "iso3": "GAB",
+    "iso_numeric": 266,
     "name": "Gabon",
     "capital": "Libreville",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+241",
     "currency_code": "XAF",
     "population_approx": 2300000
@@ -1222,9 +1464,11 @@
   {
     "iso2": "GM",
     "iso3": "GMB",
+    "iso_numeric": 270,
     "name": "Gambia",
     "capital": "Banjul",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+220",
     "currency_code": "GMD",
     "population_approx": 2600000
@@ -1232,9 +1476,11 @@
   {
     "iso2": "GH",
     "iso3": "GHA",
+    "iso_numeric": 288,
     "name": "Ghana",
     "capital": "Accra",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+233",
     "currency_code": "GHS",
     "population_approx": 32000000
@@ -1242,9 +1488,11 @@
   {
     "iso2": "GN",
     "iso3": "GIN",
+    "iso_numeric": 324,
     "name": "Guinea",
     "capital": "Conakry",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+224",
     "currency_code": "GNF",
     "population_approx": 13000000
@@ -1252,9 +1500,11 @@
   {
     "iso2": "GW",
     "iso3": "GNB",
+    "iso_numeric": 624,
     "name": "Guinea-Bissau",
     "capital": "Bissau",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+245",
     "currency_code": "XOF",
     "population_approx": 2000000
@@ -1262,9 +1512,11 @@
   {
     "iso2": "CI",
     "iso3": "CIV",
+    "iso_numeric": 384,
     "name": "Ivory Coast",
     "capital": "Yamoussoukro",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+225",
     "currency_code": "XOF",
     "population_approx": 27000000
@@ -1272,9 +1524,11 @@
   {
     "iso2": "KE",
     "iso3": "KEN",
+    "iso_numeric": 404,
     "name": "Kenya",
     "capital": "Nairobi",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+254",
     "currency_code": "KES",
     "population_approx": 54000000
@@ -1282,9 +1536,11 @@
   {
     "iso2": "LS",
     "iso3": "LSO",
+    "iso_numeric": 426,
     "name": "Lesotho",
     "capital": "Maseru",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+266",
     "currency_code": "LSL",
     "population_approx": 2100000
@@ -1292,9 +1548,11 @@
   {
     "iso2": "LR",
     "iso3": "LBR",
+    "iso_numeric": 430,
     "name": "Liberia",
     "capital": "Monrovia",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+231",
     "currency_code": "LRD",
     "population_approx": 5300000
@@ -1302,9 +1560,11 @@
   {
     "iso2": "LY",
     "iso3": "LBY",
+    "iso_numeric": 434,
     "name": "Libya",
     "capital": "Tripoli",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+218",
     "currency_code": "LYD",
     "population_approx": 7000000
@@ -1312,9 +1572,11 @@
   {
     "iso2": "MG",
     "iso3": "MDG",
+    "iso_numeric": 450,
     "name": "Madagascar",
     "capital": "Antananarivo",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+261",
     "currency_code": "MGA",
     "population_approx": 28000000
@@ -1322,9 +1584,11 @@
   {
     "iso2": "MW",
     "iso3": "MWI",
+    "iso_numeric": 454,
     "name": "Malawi",
     "capital": "Lilongwe",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+265",
     "currency_code": "MWK",
     "population_approx": 20000000
@@ -1332,9 +1596,11 @@
   {
     "iso2": "ML",
     "iso3": "MLI",
+    "iso_numeric": 466,
     "name": "Mali",
     "capital": "Bamako",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+223",
     "currency_code": "XOF",
     "population_approx": 22000000
@@ -1342,9 +1608,11 @@
   {
     "iso2": "MR",
     "iso3": "MRT",
+    "iso_numeric": 478,
     "name": "Mauritania",
     "capital": "Nouakchott",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+222",
     "currency_code": "MRU",
     "population_approx": 4600000
@@ -1352,9 +1620,11 @@
   {
     "iso2": "MU",
     "iso3": "MUS",
+    "iso_numeric": 480,
     "name": "Mauritius",
     "capital": "Port Louis",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+230",
     "currency_code": "MUR",
     "population_approx": 1300000
@@ -1362,9 +1632,11 @@
   {
     "iso2": "MA",
     "iso3": "MAR",
+    "iso_numeric": 504,
     "name": "Morocco",
     "capital": "Rabat",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+212",
     "currency_code": "MAD",
     "population_approx": 37000000
@@ -1372,9 +1644,11 @@
   {
     "iso2": "MZ",
     "iso3": "MOZ",
+    "iso_numeric": 508,
     "name": "Mozambique",
     "capital": "Maputo",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+258",
     "currency_code": "MZN",
     "population_approx": 32000000
@@ -1382,9 +1656,11 @@
   {
     "iso2": "NA",
     "iso3": "NAM",
+    "iso_numeric": 516,
     "name": "Namibia",
     "capital": "Windhoek",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+264",
     "currency_code": "NAD",
     "population_approx": 2600000
@@ -1392,9 +1668,11 @@
   {
     "iso2": "NE",
     "iso3": "NER",
+    "iso_numeric": 562,
     "name": "Niger",
     "capital": "Niamey",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+227",
     "currency_code": "XOF",
     "population_approx": 25000000
@@ -1402,9 +1680,11 @@
   {
     "iso2": "RW",
     "iso3": "RWA",
+    "iso_numeric": 646,
     "name": "Rwanda",
     "capital": "Kigali",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+250",
     "currency_code": "RWF",
     "population_approx": 13000000
@@ -1412,9 +1692,11 @@
   {
     "iso2": "ST",
     "iso3": "STP",
+    "iso_numeric": 678,
     "name": "São Tomé and Príncipe",
     "capital": "São Tomé",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+239",
     "currency_code": "STN",
     "population_approx": 220000
@@ -1422,9 +1704,11 @@
   {
     "iso2": "SN",
     "iso3": "SEN",
+    "iso_numeric": 686,
     "name": "Senegal",
     "capital": "Dakar",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+221",
     "currency_code": "XOF",
     "population_approx": 17000000
@@ -1432,9 +1716,11 @@
   {
     "iso2": "SC",
     "iso3": "SYC",
+    "iso_numeric": 690,
     "name": "Seychelles",
     "capital": "Victoria",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+248",
     "currency_code": "SCR",
     "population_approx": 100000
@@ -1442,19 +1728,23 @@
   {
     "iso2": "SL",
     "iso3": "SLE",
+    "iso_numeric": 694,
     "name": "Sierra Leone",
     "capital": "Freetown",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+232",
-    "currency_code": "SLL",
+    "currency_code": "SLE",
     "population_approx": 8000000
   },
   {
     "iso2": "SO",
     "iso3": "SOM",
+    "iso_numeric": 706,
     "name": "Somalia",
     "capital": "Mogadishu",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+252",
     "currency_code": "SOS",
     "population_approx": 16000000
@@ -1462,9 +1752,11 @@
   {
     "iso2": "SS",
     "iso3": "SSD",
+    "iso_numeric": 728,
     "name": "South Sudan",
     "capital": "Juba",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+211",
     "currency_code": "SSP",
     "population_approx": 11000000
@@ -1472,9 +1764,11 @@
   {
     "iso2": "SD",
     "iso3": "SDN",
+    "iso_numeric": 729,
     "name": "Sudan",
     "capital": "Khartoum",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+249",
     "currency_code": "SDG",
     "population_approx": 46000000
@@ -1482,9 +1776,11 @@
   {
     "iso2": "TZ",
     "iso3": "TZA",
+    "iso_numeric": 834,
     "name": "Tanzania",
     "capital": "Dodoma",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+255",
     "currency_code": "TZS",
     "population_approx": 63000000
@@ -1492,9 +1788,11 @@
   {
     "iso2": "TG",
     "iso3": "TGO",
+    "iso_numeric": 768,
     "name": "Togo",
     "capital": "Lomé",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+228",
     "currency_code": "XOF",
     "population_approx": 8600000
@@ -1502,9 +1800,11 @@
   {
     "iso2": "TN",
     "iso3": "TUN",
+    "iso_numeric": 788,
     "name": "Tunisia",
     "capital": "Tunis",
     "continent": "Africa",
+    "subregion": "Northern Africa",
     "dial_code": "+216",
     "currency_code": "TND",
     "population_approx": 12000000
@@ -1512,9 +1812,11 @@
   {
     "iso2": "UG",
     "iso3": "UGA",
+    "iso_numeric": 800,
     "name": "Uganda",
     "capital": "Kampala",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+256",
     "currency_code": "UGX",
     "population_approx": 47000000
@@ -1522,9 +1824,11 @@
   {
     "iso2": "ZM",
     "iso3": "ZMB",
+    "iso_numeric": 894,
     "name": "Zambia",
     "capital": "Lusaka",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+260",
     "currency_code": "ZMW",
     "population_approx": 19000000
@@ -1532,19 +1836,23 @@
   {
     "iso2": "ZW",
     "iso3": "ZWE",
+    "iso_numeric": 716,
     "name": "Zimbabwe",
     "capital": "Harare",
     "continent": "Africa",
+    "subregion": "Sub-Saharan Africa",
     "dial_code": "+263",
-    "currency_code": "ZWL",
+    "currency_code": "ZWG",
     "population_approx": 16000000
   },
   {
     "iso2": "AG",
     "iso3": "ATG",
+    "iso_numeric": 28,
     "name": "Antigua and Barbuda",
     "capital": "Saint John's",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1268",
     "currency_code": "XCD",
     "population_approx": 100000
@@ -1552,9 +1860,11 @@
   {
     "iso2": "BS",
     "iso3": "BHS",
+    "iso_numeric": 44,
     "name": "Bahamas",
     "capital": "Nassau",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1242",
     "currency_code": "BSD",
     "population_approx": 400000
@@ -1562,9 +1872,11 @@
   {
     "iso2": "BB",
     "iso3": "BRB",
+    "iso_numeric": 52,
     "name": "Barbados",
     "capital": "Bridgetown",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1246",
     "currency_code": "BBD",
     "population_approx": 280000
@@ -1572,9 +1884,11 @@
   {
     "iso2": "BZ",
     "iso3": "BLZ",
+    "iso_numeric": 84,
     "name": "Belize",
     "capital": "Belmopan",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+501",
     "currency_code": "BZD",
     "population_approx": 400000
@@ -1582,9 +1896,11 @@
   {
     "iso2": "BO",
     "iso3": "BOL",
+    "iso_numeric": 68,
     "name": "Bolivia",
     "capital": "Sucre",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+591",
     "currency_code": "BOB",
     "population_approx": 12000000
@@ -1592,9 +1908,11 @@
   {
     "iso2": "CL",
     "iso3": "CHL",
+    "iso_numeric": 152,
     "name": "Chile",
     "capital": "Santiago",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+56",
     "currency_code": "CLP",
     "population_approx": 19000000
@@ -1602,9 +1920,11 @@
   {
     "iso2": "CO",
     "iso3": "COL",
+    "iso_numeric": 170,
     "name": "Colombia",
     "capital": "Bogotá",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+57",
     "currency_code": "COP",
     "population_approx": 51000000
@@ -1612,9 +1932,11 @@
   {
     "iso2": "CR",
     "iso3": "CRI",
+    "iso_numeric": 188,
     "name": "Costa Rica",
     "capital": "San José",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+506",
     "currency_code": "CRC",
     "population_approx": 5200000
@@ -1622,9 +1944,11 @@
   {
     "iso2": "CU",
     "iso3": "CUB",
+    "iso_numeric": 192,
     "name": "Cuba",
     "capital": "Havana",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+53",
     "currency_code": "CUP",
     "population_approx": 11000000
@@ -1632,9 +1956,11 @@
   {
     "iso2": "DM",
     "iso3": "DMA",
+    "iso_numeric": 212,
     "name": "Dominica",
     "capital": "Roseau",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1767",
     "currency_code": "XCD",
     "population_approx": 72000
@@ -1642,9 +1968,11 @@
   {
     "iso2": "DO",
     "iso3": "DOM",
+    "iso_numeric": 214,
     "name": "Dominican Republic",
     "capital": "Santo Domingo",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1809",
     "currency_code": "DOP",
     "population_approx": 11000000
@@ -1652,9 +1980,11 @@
   {
     "iso2": "EC",
     "iso3": "ECU",
+    "iso_numeric": 218,
     "name": "Ecuador",
     "capital": "Quito",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+593",
     "currency_code": "USD",
     "population_approx": 18000000
@@ -1662,9 +1992,11 @@
   {
     "iso2": "SV",
     "iso3": "SLV",
+    "iso_numeric": 222,
     "name": "El Salvador",
     "capital": "San Salvador",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+503",
     "currency_code": "USD",
     "population_approx": 6500000
@@ -1672,9 +2004,11 @@
   {
     "iso2": "GD",
     "iso3": "GRD",
+    "iso_numeric": 308,
     "name": "Grenada",
     "capital": "Saint George's",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1473",
     "currency_code": "XCD",
     "population_approx": 113000
@@ -1682,9 +2016,11 @@
   {
     "iso2": "GT",
     "iso3": "GTM",
+    "iso_numeric": 320,
     "name": "Guatemala",
     "capital": "Guatemala City",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+502",
     "currency_code": "GTQ",
     "population_approx": 17000000
@@ -1692,9 +2028,11 @@
   {
     "iso2": "GY",
     "iso3": "GUY",
+    "iso_numeric": 328,
     "name": "Guyana",
     "capital": "Georgetown",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+592",
     "currency_code": "GYD",
     "population_approx": 800000
@@ -1702,9 +2040,11 @@
   {
     "iso2": "HT",
     "iso3": "HTI",
+    "iso_numeric": 332,
     "name": "Haiti",
     "capital": "Port-au-Prince",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+509",
     "currency_code": "HTG",
     "population_approx": 11000000
@@ -1712,9 +2052,11 @@
   {
     "iso2": "HN",
     "iso3": "HND",
+    "iso_numeric": 340,
     "name": "Honduras",
     "capital": "Tegucigalpa",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+504",
     "currency_code": "HNL",
     "population_approx": 10000000
@@ -1722,9 +2064,11 @@
   {
     "iso2": "JM",
     "iso3": "JAM",
+    "iso_numeric": 388,
     "name": "Jamaica",
     "capital": "Kingston",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1876",
     "currency_code": "JMD",
     "population_approx": 3000000
@@ -1732,9 +2076,11 @@
   {
     "iso2": "NI",
     "iso3": "NIC",
+    "iso_numeric": 558,
     "name": "Nicaragua",
     "capital": "Managua",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+505",
     "currency_code": "NIO",
     "population_approx": 7000000
@@ -1742,9 +2088,11 @@
   {
     "iso2": "PA",
     "iso3": "PAN",
+    "iso_numeric": 591,
     "name": "Panama",
     "capital": "Panama City",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+507",
     "currency_code": "PAB",
     "population_approx": 4300000
@@ -1752,9 +2100,11 @@
   {
     "iso2": "PY",
     "iso3": "PRY",
+    "iso_numeric": 600,
     "name": "Paraguay",
     "capital": "Asunción",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+595",
     "currency_code": "PYG",
     "population_approx": 7400000
@@ -1762,9 +2112,11 @@
   {
     "iso2": "PE",
     "iso3": "PER",
+    "iso_numeric": 604,
     "name": "Peru",
     "capital": "Lima",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+51",
     "currency_code": "PEN",
     "population_approx": 33000000
@@ -1772,9 +2124,11 @@
   {
     "iso2": "KN",
     "iso3": "KNA",
+    "iso_numeric": 659,
     "name": "Saint Kitts and Nevis",
     "capital": "Basseterre",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1869",
     "currency_code": "XCD",
     "population_approx": 53000
@@ -1782,9 +2136,11 @@
   {
     "iso2": "LC",
     "iso3": "LCA",
+    "iso_numeric": 662,
     "name": "Saint Lucia",
     "capital": "Castries",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1758",
     "currency_code": "XCD",
     "population_approx": 180000
@@ -1792,9 +2148,11 @@
   {
     "iso2": "VC",
     "iso3": "VCT",
+    "iso_numeric": 670,
     "name": "Saint Vincent and the Grenadines",
     "capital": "Kingstown",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1784",
     "currency_code": "XCD",
     "population_approx": 110000
@@ -1802,9 +2160,11 @@
   {
     "iso2": "SR",
     "iso3": "SUR",
+    "iso_numeric": 740,
     "name": "Suriname",
     "capital": "Paramaribo",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+597",
     "currency_code": "SRD",
     "population_approx": 600000
@@ -1812,9 +2172,11 @@
   {
     "iso2": "TT",
     "iso3": "TTO",
+    "iso_numeric": 780,
     "name": "Trinidad and Tobago",
     "capital": "Port of Spain",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+1868",
     "currency_code": "TTD",
     "population_approx": 1400000
@@ -1822,9 +2184,11 @@
   {
     "iso2": "UY",
     "iso3": "URY",
+    "iso_numeric": 858,
     "name": "Uruguay",
     "capital": "Montevideo",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+598",
     "currency_code": "UYU",
     "population_approx": 3500000
@@ -1832,19 +2196,23 @@
   {
     "iso2": "VE",
     "iso3": "VEN",
+    "iso_numeric": 862,
     "name": "Venezuela",
     "capital": "Caracas",
     "continent": "Americas",
+    "subregion": "Latin America and the Caribbean",
     "dial_code": "+58",
-    "currency_code": "VEF",
+    "currency_code": "VES",
     "population_approx": 28000000
   },
   {
     "iso2": "FJ",
     "iso3": "FJI",
+    "iso_numeric": 242,
     "name": "Fiji",
     "capital": "Suva",
     "continent": "Oceania",
+    "subregion": "Melanesia",
     "dial_code": "+679",
     "currency_code": "FJD",
     "population_approx": 930000
@@ -1852,9 +2220,11 @@
   {
     "iso2": "KI",
     "iso3": "KIR",
+    "iso_numeric": 296,
     "name": "Kiribati",
     "capital": "South Tarawa",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+686",
     "currency_code": "AUD",
     "population_approx": 120000
@@ -1862,9 +2232,11 @@
   {
     "iso2": "MH",
     "iso3": "MHL",
+    "iso_numeric": 584,
     "name": "Marshall Islands",
     "capital": "Majuro",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+692",
     "currency_code": "USD",
     "population_approx": 42000
@@ -1872,9 +2244,11 @@
   {
     "iso2": "FM",
     "iso3": "FSM",
+    "iso_numeric": 583,
     "name": "Micronesia",
     "capital": "Palikir",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+691",
     "currency_code": "USD",
     "population_approx": 115000
@@ -1882,9 +2256,11 @@
   {
     "iso2": "NR",
     "iso3": "NRU",
+    "iso_numeric": 520,
     "name": "Nauru",
     "capital": "Yaren",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+674",
     "currency_code": "AUD",
     "population_approx": 10000
@@ -1892,9 +2268,11 @@
   {
     "iso2": "NZ",
     "iso3": "NZL",
+    "iso_numeric": 554,
     "name": "New Zealand",
     "capital": "Wellington",
     "continent": "Oceania",
+    "subregion": "Australia and New Zealand",
     "dial_code": "+64",
     "currency_code": "NZD",
     "population_approx": 5000000
@@ -1902,9 +2280,11 @@
   {
     "iso2": "PW",
     "iso3": "PLW",
+    "iso_numeric": 585,
     "name": "Palau",
     "capital": "Ngerulmud",
     "continent": "Oceania",
+    "subregion": "Micronesia",
     "dial_code": "+680",
     "currency_code": "USD",
     "population_approx": 18000
@@ -1912,9 +2292,11 @@
   {
     "iso2": "PG",
     "iso3": "PNG",
+    "iso_numeric": 598,
     "name": "Papua New Guinea",
     "capital": "Port Moresby",
     "continent": "Oceania",
+    "subregion": "Melanesia",
     "dial_code": "+675",
     "currency_code": "PGK",
     "population_approx": 10000000
@@ -1922,9 +2304,11 @@
   {
     "iso2": "WS",
     "iso3": "WSM",
+    "iso_numeric": 882,
     "name": "Samoa",
     "capital": "Apia",
     "continent": "Oceania",
+    "subregion": "Polynesia",
     "dial_code": "+685",
     "currency_code": "WST",
     "population_approx": 220000
@@ -1932,9 +2316,11 @@
   {
     "iso2": "SB",
     "iso3": "SLB",
+    "iso_numeric": 90,
     "name": "Solomon Islands",
     "capital": "Honiara",
     "continent": "Oceania",
+    "subregion": "Melanesia",
     "dial_code": "+677",
     "currency_code": "SBD",
     "population_approx": 720000
@@ -1942,9 +2328,11 @@
   {
     "iso2": "TO",
     "iso3": "TON",
+    "iso_numeric": 776,
     "name": "Tonga",
     "capital": "Nukuʻalofa",
     "continent": "Oceania",
+    "subregion": "Polynesia",
     "dial_code": "+676",
     "currency_code": "TOP",
     "population_approx": 100000
@@ -1952,9 +2340,11 @@
   {
     "iso2": "TV",
     "iso3": "TUV",
+    "iso_numeric": 798,
     "name": "Tuvalu",
     "capital": "Funafuti",
     "continent": "Oceania",
+    "subregion": "Polynesia",
     "dial_code": "+688",
     "currency_code": "AUD",
     "population_approx": 11000
@@ -1962,11 +2352,25 @@
   {
     "iso2": "VU",
     "iso3": "VUT",
+    "iso_numeric": 548,
     "name": "Vanuatu",
     "capital": "Port Vila",
     "continent": "Oceania",
+    "subregion": "Melanesia",
     "dial_code": "+678",
     "currency_code": "VUV",
     "population_approx": 320000
+  },
+  {
+    "iso2": "HK",
+    "iso3": "HKG",
+    "iso_numeric": 344,
+    "name": "Hong Kong",
+    "capital": "Hong Kong",
+    "continent": "Asia",
+    "subregion": "Eastern Asia",
+    "dial_code": "+852",
+    "currency_code": "HKD",
+    "population_approx": 7500000
   }
 ]

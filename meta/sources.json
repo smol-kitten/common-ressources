@@ -1,0 +1,648 @@
+{
+  "_generated_by": "tools/build_sources.py",
+  "_about": "Authoritative source map. 'kind' = standard | official | curated. Consumers should verify safety/compliance-critical values against the cited primary source.",
+  "documented": 65,
+  "total_datasets": 181,
+  "sources": {
+    "accessibility/aria-roles/aria-roles.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "W3C WAI-ARIA 1.2",
+          "url": "https://www.w3.org/TR/wai-aria-1.2/"
+        }
+      ]
+    },
+    "accessibility/wcag/criteria.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "W3C WCAG 2.2",
+          "url": "https://www.w3.org/TR/WCAG22/"
+        }
+      ]
+    },
+    "astronomy/constellations/constellations.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IAU — The Constellations",
+          "url": "https://www.iau.org/public/themes/constellations/"
+        }
+      ]
+    },
+    "astronomy/moons/moons.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "JPL Solar System Dynamics — Planetary Satellites",
+          "url": "https://ssd.jpl.nasa.gov/sats/"
+        }
+      ]
+    },
+    "astronomy/stars/notable-stars.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "SIMBAD Astronomical Database",
+          "url": "https://simbad.u-strasbg.fr/simbad/"
+        }
+      ]
+    },
+    "bio/amino-acids/amino-acids.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "UniProt amino-acid reference",
+          "url": "https://www.uniprot.org/help/amino_acids"
+        },
+        {
+          "title": "IUPAC-IUBMB nomenclature",
+          "url": "https://iupac.org/"
+        }
+      ]
+    },
+    "bio/codon-table/codon-table.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "NCBI — The Genetic Codes (translation table 1)",
+          "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi"
+        },
+        {
+          "title": "IUPAC-IUBMB amino-acid nomenclature",
+          "url": "https://iupac.org/"
+        }
+      ]
+    },
+    "devops/docker/objects.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "Dockerfile reference",
+          "url": "https://docs.docker.com/reference/dockerfile/"
+        }
+      ]
+    },
+    "devops/kubernetes/objects.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "Kubernetes API reference",
+          "url": "https://kubernetes.io/docs/reference/"
+        }
+      ]
+    },
+    "finance/forex/pairs.json": {
+      "kind": "curated",
+      "sources": [
+        {
+          "title": "ISO 4217",
+          "url": "https://www.six-group.com/en/products-services/financial-information/data-standards.html"
+        }
+      ]
+    },
+    "finance/stock-exchanges/stock-exchanges.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO 10383 Market Identifier Codes",
+          "url": "https://www.iso20022.org/market-identifier-codes"
+        }
+      ]
+    },
+    "geo/airports/airports.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "IATA airport codes",
+          "url": "https://www.iata.org/en/publications/directories/code-search/"
+        },
+        {
+          "title": "ICAO location indicators",
+          "url": "https://www.icao.int/"
+        }
+      ]
+    },
+    "geo/cities/cities.json": {
+      "kind": "curated",
+      "sources": [
+        {
+          "title": "UN World Population Prospects",
+          "url": "https://population.un.org/wpp/"
+        }
+      ]
+    },
+    "geo/countries/countries.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO 3166-1 country codes",
+          "url": "https://www.iso.org/iso-3166-country-codes.html"
+        },
+        {
+          "title": "UN Member States",
+          "url": "https://www.un.org/en/about-us/member-states"
+        }
+      ]
+    },
+    "geo/currencies/currencies.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO 4217 maintenance agency (SIX)",
+          "url": "https://www.six-group.com/en/products-services/financial-information/data-standards.html"
+        }
+      ]
+    },
+    "geo/timezones/timezones.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IANA Time Zone Database",
+          "url": "https://www.iana.org/time-zones"
+        }
+      ]
+    },
+    "i18n/languages/languages.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO 639 Registration Authority (LoC)",
+          "url": "https://www.loc.gov/standards/iso639-2/php/code_list.php"
+        }
+      ]
+    },
+    "i18n/locales/locales.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "Unicode CLDR",
+          "url": "https://cldr.unicode.org/"
+        },
+        {
+          "title": "BCP 47 / RFC 5646 language tags",
+          "url": "https://www.rfc-editor.org/rfc/rfc5646"
+        }
+      ]
+    },
+    "iso/15924/scripts.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO 15924 code list (Unicode RA)",
+          "url": "https://www.unicode.org/iso15924/codelists.html"
+        }
+      ]
+    },
+    "iso/216/paper-sizes.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO 216 — trimmed paper sizes",
+          "url": "https://www.iso.org/standard/36631.html"
+        }
+      ]
+    },
+    "iso/27001/controls.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO/IEC 27001:2022 Annex A",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ]
+    },
+    "iso/639-2/languages.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "Library of Congress — ISO 639-2 registration authority",
+          "url": "https://www.loc.gov/standards/iso639-2/php/code_list.php"
+        }
+      ]
+    },
+    "iso/724/metric-threads.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO 724 — metric screw threads",
+          "url": "https://www.iso.org/standard/1391.html"
+        }
+      ]
+    },
+    "iso/8601/formats.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO 8601 date/time",
+          "url": "https://www.iso.org/iso-8601-date-and-time-format.html"
+        }
+      ]
+    },
+    "iso/9001/clauses.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "ISO 9001:2015",
+          "url": "https://www.iso.org/standard/62085.html"
+        }
+      ]
+    },
+    "linux/exit-codes/exit-codes.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "Advanced Bash-Scripting Guide — exit codes",
+          "url": "https://tldp.org/LDP/abs/html/exitcodes.html"
+        }
+      ]
+    },
+    "linux/filesystem/filesystem.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "Filesystem Hierarchy Standard 3.0",
+          "url": "https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html"
+        }
+      ]
+    },
+    "linux/signals/signals.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "signal(7) man page",
+          "url": "https://man7.org/linux/man-pages/man7/signal.7.html"
+        },
+        {
+          "title": "POSIX.1-2017",
+          "url": "https://pubs.opengroup.org/onlinepubs/9699919799/"
+        }
+      ]
+    },
+    "math/constants/constants.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "OEIS — decimal expansions",
+          "url": "https://oeis.org/"
+        },
+        {
+          "title": "mpmath — arbitrary-precision computation",
+          "url": "https://mpmath.org/"
+        }
+      ]
+    },
+    "math/symbols/symbols.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "Unicode Mathematical Operators",
+          "url": "https://www.unicode.org/charts/PDF/U2200.pdf"
+        }
+      ]
+    },
+    "net/dns-record-types/dns-record-types.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IANA DNS Parameters",
+          "url": "https://www.iana.org/assignments/dns-parameters/"
+        }
+      ]
+    },
+    "net/http-status-codes/http-status-codes.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IANA HTTP Status Code Registry",
+          "url": "https://www.iana.org/assignments/http-status-codes/"
+        }
+      ]
+    },
+    "net/ports/ports.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IANA Service Name & Port Registry",
+          "url": "https://www.iana.org/assignments/service-names-port-numbers/"
+        }
+      ]
+    },
+    "networking/devices/device-types.json": {
+      "kind": "curated",
+      "sources": [
+        {
+          "title": "Cisco networking documentation",
+          "url": "https://www.cisco.com/"
+        }
+      ]
+    },
+    "networking/protocols/ip-protocols.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IANA Protocol Numbers",
+          "url": "https://www.iana.org/assignments/protocol-numbers/"
+        }
+      ]
+    },
+    "networking/special-use-ips/special-use-ips.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IANA IPv4 Special-Purpose Address Registry",
+          "url": "https://www.iana.org/assignments/iana-ipv4-special-registry/"
+        },
+        {
+          "title": "IANA IPv6 Special-Purpose Address Registry",
+          "url": "https://www.iana.org/assignments/iana-ipv6-special-registry/"
+        }
+      ]
+    },
+    "networking/subnets/cidr.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "RFC 4632 — CIDR",
+          "url": "https://www.rfc-editor.org/rfc/rfc4632"
+        }
+      ]
+    },
+    "programming/design-patterns/design-patterns.json": {
+      "kind": "curated",
+      "sources": [
+        {
+          "title": "GoF design patterns",
+          "url": "https://en.wikipedia.org/wiki/Software_design_pattern"
+        }
+      ]
+    },
+    "programming/frameworks.json": {
+      "kind": "curated",
+      "sources": []
+    },
+    "programming/languages.json": {
+      "kind": "curated",
+      "sources": [
+        {
+          "title": "TIOBE index (popularity)",
+          "url": "https://www.tiobe.com/tiobe-index/"
+        }
+      ]
+    },
+    "programming/licenses/licenses.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "SPDX License List",
+          "url": "https://spdx.org/licenses/"
+        },
+        {
+          "title": "OSI Approved Licenses",
+          "url": "https://opensource.org/licenses"
+        }
+      ]
+    },
+    "science/binary-prefixes/binary-prefixes.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IEC 80000-13:2008 — binary prefixes",
+          "url": "https://www.iso.org/standard/31898.html"
+        }
+      ]
+    },
+    "science/constants/constants.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "NIST CODATA Fundamental Physical Constants",
+          "url": "https://physics.nist.gov/cuu/Constants/"
+        }
+      ]
+    },
+    "science/elements/elements.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IUPAC Periodic Table",
+          "url": "https://iupac.org/what-we-do/periodic-table-of-elements/"
+        },
+        {
+          "title": "IUPAC Standard Atomic Weights",
+          "url": "https://iupac.qmul.ac.uk/AtWt/"
+        }
+      ]
+    },
+    "science/propagation/signal-speeds.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "NIST — speed of light & material velocity factors",
+          "url": "https://physics.nist.gov/cuu/Constants/"
+        }
+      ]
+    },
+    "science/si-base-units/si-base-units.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "BIPM — SI base units",
+          "url": "https://www.bipm.org/en/measurement-units/si-base-units"
+        }
+      ]
+    },
+    "science/si-derived-units/si-derived-units.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "BIPM — SI Brochure, Table 4 (derived units with special names)",
+          "url": "https://www.bipm.org/en/measurement-units"
+        }
+      ]
+    },
+    "science/si-prefixes/si-prefixes.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "BIPM — SI prefixes",
+          "url": "https://www.bipm.org/en/measurement-units/si-prefixes"
+        },
+        {
+          "title": "27th CGPM (2022) Resolution 3",
+          "url": "https://www.bipm.org/en/committees/cg/cgpm/27-2022/resolution-3"
+        }
+      ]
+    },
+    "science/units/units.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "BIPM SI Brochure (9th ed.)",
+          "url": "https://www.bipm.org/en/publications/si-brochure"
+        }
+      ]
+    },
+    "security/hash-algorithms/hash-algorithms.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "NIST FIPS 180-4 (SHA-1/SHA-2)",
+          "url": "https://csrc.nist.gov/publications/detail/fips/180/4/final"
+        },
+        {
+          "title": "NIST FIPS 202 (SHA-3/SHAKE)",
+          "url": "https://csrc.nist.gov/publications/detail/fips/202/final"
+        }
+      ]
+    },
+    "security/headers/security-headers.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "OWASP Secure Headers Project",
+          "url": "https://owasp.org/www-project-secure-headers/"
+        }
+      ]
+    },
+    "security/owasp-top10/owasp-top10.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "OWASP Top 10",
+          "url": "https://owasp.org/www-project-top-ten/"
+        }
+      ]
+    },
+    "security/tls/versions.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "RFC 8446 — TLS 1.3",
+          "url": "https://www.rfc-editor.org/rfc/rfc8446"
+        },
+        {
+          "title": "RFC 5246 — TLS 1.2",
+          "url": "https://datatracker.ietf.org/doc/html/rfc5246"
+        }
+      ]
+    },
+    "space/dwarf-planets/dwarf-planets.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "IAU — Pluto & dwarf planets",
+          "url": "https://www.iau.org/public/themes/pluto/"
+        },
+        {
+          "title": "NASA — Dwarf Planets",
+          "url": "https://science.nasa.gov/dwarf-planets/"
+        }
+      ]
+    },
+    "space/planets/planets.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "NASA NSSDCA Planetary Fact Sheet",
+          "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+        }
+      ]
+    },
+    "unicode/blocks/blocks.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "Unicode Character Database — Blocks",
+          "url": "https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt"
+        }
+      ]
+    },
+    "unicode/symbols/special-chars.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "Unicode Code Charts",
+          "url": "https://www.unicode.org/charts/"
+        }
+      ]
+    },
+    "web/browsers.json": {
+      "kind": "official",
+      "sources": [
+        {
+          "title": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/en-US/docs/Web"
+        }
+      ]
+    },
+    "web/csp/directives.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "W3C Content Security Policy Level 3",
+          "url": "https://www.w3.org/TR/CSP3/"
+        }
+      ]
+    },
+    "web/http/auth-schemes.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IANA HTTP Authentication Scheme Registry",
+          "url": "https://www.iana.org/assignments/http-authschemes/"
+        }
+      ]
+    },
+    "web/http/headers.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IANA HTTP Field Name Registry",
+          "url": "https://www.iana.org/assignments/http-fields/"
+        }
+      ]
+    },
+    "web/http/methods.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "RFC 9110 §9 — Methods",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110"
+        }
+      ]
+    },
+    "web/http/status-codes.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "RFC 9110 — HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110"
+        },
+        {
+          "title": "IANA HTTP Status Code Registry",
+          "url": "https://www.iana.org/assignments/http-status-codes/"
+        }
+      ]
+    },
+    "web/mime/mappings.json": {
+      "kind": "standard",
+      "sources": [
+        {
+          "title": "IANA Media Types",
+          "url": "https://www.iana.org/assignments/media-types/"
+        }
+      ]
+    },
+    "web/regex/patterns.json": {
+      "kind": "curated",
+      "sources": [
+        {
+          "title": "regular-expressions.info",
+          "url": "https://www.regular-expressions.info/"
+        }
+      ]
+    }
+  }
+}

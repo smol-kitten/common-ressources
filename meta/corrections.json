@@ -12,6 +12,87 @@
         "ai/models.json"
       ],
       "corrections_count": 12
+    },
+    {
+      "date": "2026-07-07",
+      "method": "ISO 4217 canonicalisation (SIX Financial maintenance agency) + redenomination records",
+      "files_checked": [
+        "geo/countries/countries.json",
+        "geo/currencies/currencies.json"
+      ],
+      "corrections_count": 5
+    },
+    {
+      "date": "2026-07-07",
+      "method": "Anthropic model documentation (platform.claude.com models overview)",
+      "files_checked": [
+        "ai/models.json"
+      ],
+      "corrections_count": 8
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (ISO 4217 amendments 176/179 via Wikipedia + SIX)",
+      "files_checked": [
+        "geo/currencies/currencies.json"
+      ],
+      "corrections_count": 0
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (ISO 15924 official code list + Unicode Blocks 17.0 + CLDR Script_Metadata)",
+      "files_checked": [
+        "iso/15924/scripts.json"
+      ],
+      "corrections_count": 2
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (Anthropic model docs — models overview table)",
+      "files_checked": [
+        "ai/models.json"
+      ],
+      "corrections_count": 6
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (IANA Protocol Numbers registry CSV)",
+      "files_checked": [
+        "networking/protocols/ip-protocols.json"
+      ],
+      "corrections_count": 2
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (NIST CODATA fundamental constants table, allascii.txt)",
+      "files_checked": [
+        "science/constants/constants.json"
+      ],
+      "corrections_count": 0
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web verification (CIAAW standard atomic weights)",
+      "files_checked": [
+        "science/elements/elements.json"
+      ],
+      "corrections_count": 6
+    },
+    {
+      "date": "2026-07-07",
+      "method": "verification (IAU 88 canonical abbreviations + area-sum invariant)",
+      "files_checked": [
+        "astronomy/constellations/constellations.json"
+      ],
+      "corrections_count": 0
+    },
+    {
+      "date": "2026-07-07",
+      "method": "web/tzdb verification (IANA tz database 2025b via zoneinfo)",
+      "files_checked": [
+        "geo/timezones/timezones.json"
+      ],
+      "corrections_count": 25
     }
   ],
   "corrections": [
@@ -118,16 +199,6 @@
     {
       "date": "2026-06-17",
       "file": "science/elements/elements.json",
-      "entry": "Gold (Au)",
-      "field": "mass",
-      "old_value": 196.967,
-      "new_value": 196.966,
-      "reason": "IUPAC 2021 value is 196.966570; rounded to 6 sig figs is 196.966, not 196.967",
-      "source": "https://iupac.qmul.ac.uk/AtWt/AtWt21.html"
-    },
-    {
-      "date": "2026-06-17",
-      "file": "science/elements/elements.json",
       "entry": "Uranium (U)",
       "field": "mass",
       "old_value": 238.029,
@@ -144,6 +215,526 @@
       "new_value": "EUR",
       "reason": "Bulgaria adopted the Euro on January 1, 2026, becoming the 21st Eurozone member",
       "source": "https://en.wikipedia.org/wiki/Adoption_of_the_euro_in_Bulgaria"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Belarus",
+      "field": "currency_code",
+      "old_value": "BYR",
+      "new_value": "BYN",
+      "reason": "Belarus redenominated the ruble 10000:1 on 2016-07-01; ISO 4217 code is now BYN, old BYR withdrawn",
+      "source": "https://en.wikipedia.org/wiki/Belarusian_ruble"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Venezuela",
+      "field": "currency_code",
+      "old_value": "VEF",
+      "new_value": "VES",
+      "reason": "Venezuela introduced the bolívar soberano (100000:1) on 2018-08-20; ISO 4217 code VES supersedes VEF",
+      "source": "https://en.wikipedia.org/wiki/Venezuelan_bol%C3%ADvar"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Sierra Leone",
+      "field": "currency_code",
+      "old_value": "SLL",
+      "new_value": "SLE",
+      "reason": "Sierra Leone redenominated the leone 1000:1 in 2022; current ISO 4217 code is SLE",
+      "source": "https://en.wikipedia.org/wiki/Sierra_Leonean_leone"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Zimbabwe",
+      "field": "currency_code",
+      "old_value": "ZWL",
+      "new_value": "ZWG",
+      "reason": "Zimbabwe replaced ZWL with Zimbabwe Gold (ZiG) in April 2024; ISO 4217 assigned code ZWG",
+      "source": "https://en.wikipedia.org/wiki/Zimbabwe_Gold"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/currencies/currencies.json",
+      "entry": "Indonesian Rupiah (IDR)",
+      "field": "decimals",
+      "old_value": 0,
+      "new_value": 2,
+      "reason": "ISO 4217 assigns IDR two minor units (exponent 2); previous value 0 did not match the standard the dataset follows",
+      "source": "https://www.six-group.com/en/products-services/financial-information/data-standards.html"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.5",
+      "field": "name",
+      "old_value": "Claude Opus 4",
+      "new_value": "Claude Opus 4.5",
+      "reason": "Entry name did not match its api_id claude-opus-4-5, which is Claude Opus 4.5",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.5",
+      "field": "pricing.input_mtok",
+      "old_value": 15.0,
+      "new_value": 5.0,
+      "reason": "Opus 4.5-tier input price is $5/MTok; $15 was the older Opus 4/4.1 price",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.5",
+      "field": "pricing.output_mtok",
+      "old_value": 75.0,
+      "new_value": 25.0,
+      "reason": "Opus 4.5-tier output price is $25/MTok; $75 was the older Opus 4/4.1 price",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.5",
+      "field": "name",
+      "old_value": "Claude Sonnet 4",
+      "new_value": "Claude Sonnet 4.5",
+      "reason": "Entry name did not match its api_id claude-sonnet-4-5",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Haiku 4.5",
+      "field": "name",
+      "old_value": "Claude Haiku 4",
+      "new_value": "Claude Haiku 4.5",
+      "reason": "Entry name did not match its api_id claude-haiku-4-5",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.6",
+      "field": "context_window",
+      "old_value": 200000,
+      "new_value": 1000000,
+      "reason": "Claude Sonnet 4.6 has a 1M-token context window, not 200K",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.6",
+      "field": "max_output_tokens",
+      "old_value": 16000,
+      "new_value": 64000,
+      "reason": "Claude Sonnet 4.6 supports up to 64K output tokens",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Haiku 4.5",
+      "field": "max_output_tokens",
+      "old_value": 8192,
+      "new_value": 64000,
+      "reason": "Claude Haiku 4.5 supports up to 64K output tokens",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "iso/15924/scripts.json",
+      "entry": "Hani",
+      "field": "code",
+      "old_value": "Han",
+      "new_value": "Hani",
+      "reason": "ISO 15924 code for Han is \"Hani\" (No. 500); \"Han\" is not an assigned code",
+      "source": "ISO 15924 (unicode.org/iso15924/iso15924.txt)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "iso/15924/scripts.json",
+      "entry": "Mroo",
+      "field": "numeric",
+      "old_value": 199,
+      "new_value": 264,
+      "reason": "ISO 15924 numeric code for Mroo (Mro) is 264, not 199",
+      "source": "ISO 15924 (unicode.org/iso15924/iso15924.txt)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.5",
+      "field": "knowledge_cutoff",
+      "old_value": "2025-03",
+      "new_value": "2025-05",
+      "reason": "Anthropic docs list reliable knowledge cutoff May 2025 (revised)",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.5",
+      "field": "knowledge_cutoff",
+      "old_value": "2025-03",
+      "new_value": "2025-01",
+      "reason": "Anthropic docs list reliable knowledge cutoff Jan 2025",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Haiku 4.5",
+      "field": "knowledge_cutoff",
+      "old_value": "2025-03",
+      "new_value": "2025-02",
+      "reason": "Anthropic docs list reliable knowledge cutoff Feb 2025",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Sonnet 4.6",
+      "field": "knowledge_cutoff",
+      "old_value": "2025-03",
+      "new_value": "2025-08",
+      "reason": "Anthropic docs list reliable knowledge cutoff Aug 2025 (revised)",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "networking/protocols/ip-protocols.json",
+      "entry": "RDP",
+      "field": "full_name",
+      "old_value": "Reliable Datagram Protocol",
+      "new_value": "Reliable Data Protocol",
+      "reason": "IP protocol 27 (RDP) is the Reliable Data Protocol (RFC 908), not \"Datagram\"",
+      "source": "https://www.iana.org/assignments/protocol-numbers/"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "networking/protocols/ip-protocols.json",
+      "entry": "IGP",
+      "field": "full_name",
+      "old_value": "Interior Gateway Protocol",
+      "new_value": "Any private interior gateway",
+      "reason": "IP protocol 9 is IANA \"any private interior gateway (e.g. Cisco IGRP)\", not the generic Interior Gateway Protocol",
+      "source": "https://www.iana.org/assignments/protocol-numbers/"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Lithium",
+      "field": "mass",
+      "old_value": 6.941,
+      "new_value": 6.94,
+      "reason": "IUPAC conventional atomic weight for Li is 6.94 (interval [6.938, 6.997])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Boron",
+      "field": "mass",
+      "old_value": 10.811,
+      "new_value": 10.81,
+      "reason": "IUPAC conventional atomic weight for B is 10.81 (interval [10.806, 10.821])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Silicon",
+      "field": "mass",
+      "old_value": 28.086,
+      "new_value": 28.085,
+      "reason": "IUPAC conventional atomic weight for Si is 28.085 (interval [28.084, 28.086])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Sulfur",
+      "field": "mass",
+      "old_value": 32.065,
+      "new_value": 32.06,
+      "reason": "IUPAC conventional atomic weight for S is 32.06 (interval [32.059, 32.076])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Chlorine",
+      "field": "mass",
+      "old_value": 35.453,
+      "new_value": 35.45,
+      "reason": "IUPAC conventional atomic weight for Cl is 35.45 (interval [35.446, 35.457])",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "science/elements/elements.json",
+      "entry": "Gold",
+      "field": "mass",
+      "old_value": 196.966,
+      "new_value": 196.967,
+      "reason": "CIAAW standard atomic weight of Au is 196.966570(4); abridged 196.967",
+      "source": "https://ciaaw.org/atomic-weights.htm"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Africa/Cairo",
+      "field": "dst_offset",
+      "old_value": "+02:00",
+      "new_value": "+03:00",
+      "reason": "Egypt reinstated DST in 2023",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Africa/Cairo",
+      "field": "dst",
+      "old_value": false,
+      "new_value": true,
+      "reason": "Egypt reinstated DST in 2023",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "America/Mexico_City",
+      "field": "dst_offset",
+      "old_value": "-05:00",
+      "new_value": "-06:00",
+      "reason": "Mexico abolished DST in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "America/Mexico_City",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Mexico abolished DST in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "America/Asuncion",
+      "field": "utc_offset",
+      "old_value": "-04:00",
+      "new_value": "-03:00",
+      "reason": "Paraguay adopted permanent UTC-03:00 (2024)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "America/Asuncion",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Paraguay adopted permanent UTC-03:00 (2024)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Ulaanbaatar",
+      "field": "dst_offset",
+      "old_value": "+09:00",
+      "new_value": "+08:00",
+      "reason": "Mongolia abolished DST in 2017",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Ulaanbaatar",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Mongolia abolished DST in 2017",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Almaty",
+      "field": "utc_offset",
+      "old_value": "+06:00",
+      "new_value": "+05:00",
+      "reason": "Kazakhstan unified to UTC+05:00 in 2024",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Almaty",
+      "field": "dst_offset",
+      "old_value": "+06:00",
+      "new_value": "+05:00",
+      "reason": "Kazakhstan unified to UTC+05:00 in 2024",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Tehran",
+      "field": "dst_offset",
+      "old_value": "+04:30",
+      "new_value": "+03:30",
+      "reason": "Iran abolished DST in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Tehran",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Iran abolished DST in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Damascus",
+      "field": "utc_offset",
+      "old_value": "+02:00",
+      "new_value": "+03:00",
+      "reason": "Syria adopted permanent UTC+03:00 in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Damascus",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Syria adopted permanent UTC+03:00 in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Amman",
+      "field": "utc_offset",
+      "old_value": "+02:00",
+      "new_value": "+03:00",
+      "reason": "Jordan adopted permanent UTC+03:00 in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Amman",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Jordan adopted permanent UTC+03:00 in 2022",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Baku",
+      "field": "dst_offset",
+      "old_value": "+05:00",
+      "new_value": "+04:00",
+      "reason": "Azerbaijan abolished DST in 2016",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Baku",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Azerbaijan abolished DST in 2016",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Africa/Khartoum",
+      "field": "utc_offset",
+      "old_value": "+03:00",
+      "new_value": "+02:00",
+      "reason": "Sudan changed to UTC+02:00 (currently, no DST)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Africa/Khartoum",
+      "field": "dst_offset",
+      "old_value": "+03:00",
+      "new_value": "+02:00",
+      "reason": "Sudan changed to UTC+02:00 (currently, no DST)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Pacific/Fiji",
+      "field": "dst_offset",
+      "old_value": "+13:00",
+      "new_value": "+12:00",
+      "reason": "Fiji no longer observes DST (since 2021)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Pacific/Fiji",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Fiji no longer observes DST (since 2021)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Pacific/Apia",
+      "field": "dst_offset",
+      "old_value": "+14:00",
+      "new_value": "+13:00",
+      "reason": "Samoa no longer observes DST (since 2021)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Pacific/Apia",
+      "field": "dst",
+      "old_value": true,
+      "new_value": false,
+      "reason": "Samoa no longer observes DST (since 2021)",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/timezones/timezones.json",
+      "entry": "Asia/Yangon",
+      "field": "iana",
+      "old_value": "Asia/Rangoon",
+      "new_value": "Asia/Yangon",
+      "reason": "IANA renamed Asia/Rangoon to Asia/Yangon",
+      "source": "IANA tz database 2025b (via Python zoneinfo)"
     }
   ],
   "no_action_items": [
@@ -159,6 +750,34 @@
       "entry": "Indonesia (ID)",
       "note": "Capital Jakarta confirmed correct as of June 2026. Transfer to Nusantara has not yet been formally completed; targeted for 2028.",
       "source": "https://jakartaglobe.id/news/constitutional-court-confirms-jakarta-still-indonesias-capital-not-nusantara"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "ai/models.json",
+      "entry": "Claude Opus 4.8",
+      "note": "Added current flagship Claude Opus 4.8 (1M context, 128K output, $5/$25) — was missing from the dataset.",
+      "source": "https://platform.claude.com/docs/en/about-claude/models/overview"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/currencies/currencies.json",
+      "entry": "ANG",
+      "note": "Removed Netherlands Antillean Guilder (ANG) — withdrawn 2025-03-31 (ISO 4217 Amendment 176) and replaced by the Caribbean Guilder (XCG), which is present.",
+      "source": "https://en.wikipedia.org/wiki/ISO_4217"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/currencies/currencies.json",
+      "entry": "XAD",
+      "note": "Added Arab Accounting Dinar (XAD, numeric 396, minor unit 2) for the Arab Monetary Fund — effective 2025-05-12 (ISO 4217 Amendment 179).",
+      "source": "https://en.wikipedia.org/wiki/ISO_4217"
+    },
+    {
+      "date": "2026-07-07",
+      "file": "geo/countries/countries.json",
+      "entry": "Bulgaria",
+      "note": "Bulgaria currency_code EUR confirmed current — acceded to the euro area 2026-01-01 (ISO 4217 Amendment 180); BGN moved to historical status.",
+      "source": "https://en.wikipedia.org/wiki/ISO_4217"
     }
   ]
 }

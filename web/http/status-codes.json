@@ -16,6 +16,22 @@
     "source": "RFC 9110"
   },
   {
+    "code": 102,
+    "name": "Processing",
+    "description": "WebDAV: the server has received and is processing the request, but no response is available yet.",
+    "category": "informational",
+    "cacheable": false,
+    "source": "RFC 2518"
+  },
+  {
+    "code": 103,
+    "name": "Early Hints",
+    "description": "Used to return response headers before the final HTTP message, allowing preloading of resources.",
+    "category": "informational",
+    "cacheable": false,
+    "source": "RFC 8297"
+  },
+  {
     "code": 200,
     "name": "OK",
     "description": "The request has succeeded. The meaning of the success depends on the HTTP method.",
@@ -56,6 +72,14 @@
     "source": "RFC 9110"
   },
   {
+    "code": 205,
+    "name": "Reset Content",
+    "description": "Tells the client to reset the document view (e.g. clear a form).",
+    "category": "success",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
     "code": 206,
     "name": "Partial Content",
     "description": "This response code is used when the Range header is sent from the client to request only part of a resource.",
@@ -70,6 +94,30 @@
     "category": "success",
     "cacheable": false,
     "source": "RFC 4918"
+  },
+  {
+    "code": 208,
+    "name": "Already Reported",
+    "description": "WebDAV: members of a DAV binding have already been enumerated in a previous reply to this request.",
+    "category": "success",
+    "cacheable": false,
+    "source": "RFC 5842"
+  },
+  {
+    "code": 226,
+    "name": "IM Used",
+    "description": "The server has fulfilled a GET request for a resource and the response is a representation of the result of one or more instance-manipulations.",
+    "category": "success",
+    "cacheable": false,
+    "source": "RFC 3229"
+  },
+  {
+    "code": 300,
+    "name": "Multiple Choices",
+    "description": "The request has more than one possible response; the client should choose one.",
+    "category": "redirection",
+    "cacheable": true,
+    "source": "RFC 9110"
   },
   {
     "code": 301,
@@ -88,11 +136,27 @@
     "source": "RFC 9110"
   },
   {
+    "code": 303,
+    "name": "See Other",
+    "description": "The server directs the client to get the requested resource at another URI with a GET request.",
+    "category": "redirection",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
     "code": 304,
     "name": "Not Modified",
     "description": "The response has not been modified, so the client can continue to use the same cached version of the response.",
     "category": "redirection",
     "cacheable": true,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 305,
+    "name": "Use Proxy",
+    "description": "Deprecated. The requested resource must be accessed through a proxy provided in the Location header.",
+    "category": "redirection",
+    "cacheable": false,
     "source": "RFC 9110"
   },
   {
@@ -128,6 +192,14 @@
     "source": "RFC 9110"
   },
   {
+    "code": 402,
+    "name": "Payment Required",
+    "description": "Reserved for future use. Sometimes used by APIs to indicate quota has been exhausted.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
     "code": 403,
     "name": "Forbidden",
     "description": "The client does not have access rights to the content; that is, it is unauthorized, so the server is refusing to give the requested resource.",
@@ -147,6 +219,22 @@
     "code": 405,
     "name": "Method Not Allowed",
     "description": "The request method is known by the server but is not supported by the target resource.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 406,
+    "name": "Not Acceptable",
+    "description": "No content conforming to the criteria given by the client in the Accept headers is found.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 407,
+    "name": "Proxy Authentication Required",
+    "description": "Similar to 401 but authentication is needed to be done by a proxy.",
     "category": "client-error",
     "cacheable": false,
     "source": "RFC 9110"
@@ -176,6 +264,22 @@
     "source": "RFC 9110"
   },
   {
+    "code": 411,
+    "name": "Length Required",
+    "description": "The server rejects the request because the Content-Length header is not defined.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 412,
+    "name": "Precondition Failed",
+    "description": "One or more conditions given in the request header fields evaluated to false.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
     "code": 413,
     "name": "Content Too Large",
     "description": "Request entity is larger than limits defined by the server; the server might close the connection or return a Retry-After header field.",
@@ -200,12 +304,36 @@
     "source": "RFC 9110"
   },
   {
+    "code": 416,
+    "name": "Range Not Satisfiable",
+    "description": "The range specified by the Range header in the request cannot be fulfilled.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 417,
+    "name": "Expectation Failed",
+    "description": "The expectation indicated by the Expect request header field cannot be met by the server.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
     "code": 418,
     "name": "I'm a teapot",
     "description": "The server refuses the attempt to brew coffee with a teapot. This error is a reference to Hyper Text Coffee Pot Control Protocol defined in RFC 2324.",
     "category": "client-error",
     "cacheable": false,
     "source": "RFC 2324"
+  },
+  {
+    "code": 421,
+    "name": "Misdirected Request",
+    "description": "The request was directed at a server that is not able to produce a response for the combination of scheme and authority.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
   },
   {
     "code": 422,
@@ -216,9 +344,57 @@
     "source": "RFC 9110"
   },
   {
+    "code": 423,
+    "name": "Locked",
+    "description": "WebDAV: the resource being accessed is locked.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 4918"
+  },
+  {
+    "code": 424,
+    "name": "Failed Dependency",
+    "description": "WebDAV: the request failed because it depended on another request that failed.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 4918"
+  },
+  {
+    "code": 425,
+    "name": "Too Early",
+    "description": "The server is unwilling to risk processing a request that might be replayed.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 8470"
+  },
+  {
+    "code": 426,
+    "name": "Upgrade Required",
+    "description": "The client should switch to a different protocol specified in the Upgrade header.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 428,
+    "name": "Precondition Required",
+    "description": "The origin server requires the request to be conditional to prevent 'lost update' problems.",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 6585"
+  },
+  {
     "code": 429,
     "name": "Too Many Requests",
     "description": "The user has sent too many requests in a given amount of time (rate limiting).",
+    "category": "client-error",
+    "cacheable": false,
+    "source": "RFC 6585"
+  },
+  {
+    "code": 431,
+    "name": "Request Header Fields Too Large",
+    "description": "The server is unwilling to process the request because its header fields are too large.",
     "category": "client-error",
     "cacheable": false,
     "source": "RFC 6585"
@@ -272,11 +448,51 @@
     "source": "RFC 9110"
   },
   {
+    "code": 505,
+    "name": "HTTP Version Not Supported",
+    "description": "The HTTP version used in the request is not supported by the server.",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 9110"
+  },
+  {
+    "code": 506,
+    "name": "Variant Also Negotiates",
+    "description": "The server has an internal configuration error: the chosen variant is configured to engage in content negotiation itself.",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 2295"
+  },
+  {
     "code": 507,
     "name": "Insufficient Storage",
     "description": "The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request (WebDAV).",
     "category": "server-error",
     "cacheable": false,
     "source": "RFC 4918"
+  },
+  {
+    "code": 508,
+    "name": "Loop Detected",
+    "description": "WebDAV: the server detected an infinite loop while processing the request.",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 5842"
+  },
+  {
+    "code": 510,
+    "name": "Not Extended",
+    "description": "Further extensions to the request are required for the server to fulfil it. Defined by the experimental RFC 2774; now marked OBSOLETED in the IANA HTTP Status Code registry and effectively unused.",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 2774"
+  },
+  {
+    "code": 511,
+    "name": "Network Authentication Required",
+    "description": "The client needs to authenticate to gain network access (e.g. captive portal).",
+    "category": "server-error",
+    "cacheable": false,
+    "source": "RFC 6585"
   }
 ]

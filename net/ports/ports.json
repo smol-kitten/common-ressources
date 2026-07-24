@@ -1,44 +1,542 @@
 [
-  { "port": 20, "protocol": "TCP", "service": "FTP Data", "description": "File Transfer Protocol data transfer channel" },
-  { "port": 21, "protocol": "TCP", "service": "FTP Control", "description": "File Transfer Protocol command/control channel" },
-  { "port": 22, "protocol": "TCP", "service": "SSH", "description": "Secure Shell remote login and tunneling" },
-  { "port": 23, "protocol": "TCP", "service": "Telnet", "description": "Unencrypted remote login (deprecated, insecure)" },
-  { "port": 25, "protocol": "TCP", "service": "SMTP", "description": "Simple Mail Transfer Protocol — server-to-server email" },
-  { "port": 53, "protocol": "TCP/UDP", "service": "DNS", "description": "Domain Name System resolution queries" },
-  { "port": 67, "protocol": "UDP", "service": "DHCP Server", "description": "Dynamic Host Configuration Protocol server" },
-  { "port": 68, "protocol": "UDP", "service": "DHCP Client", "description": "Dynamic Host Configuration Protocol client" },
-  { "port": 69, "protocol": "UDP", "service": "TFTP", "description": "Trivial File Transfer Protocol (PXE booting, firmware)" },
-  { "port": 80, "protocol": "TCP", "service": "HTTP", "description": "Hypertext Transfer Protocol — unencrypted web traffic" },
-  { "port": 110, "protocol": "TCP", "service": "POP3", "description": "Post Office Protocol v3 — email retrieval" },
-  { "port": 123, "protocol": "UDP", "service": "NTP", "description": "Network Time Protocol — clock synchronization" },
-  { "port": 143, "protocol": "TCP", "service": "IMAP", "description": "Internet Message Access Protocol — email retrieval" },
-  { "port": 161, "protocol": "UDP", "service": "SNMP", "description": "Simple Network Management Protocol polling" },
-  { "port": 162, "protocol": "UDP", "service": "SNMP Trap", "description": "Simple Network Management Protocol trap messages" },
-  { "port": 194, "protocol": "TCP", "service": "IRC", "description": "Internet Relay Chat — plaintext" },
-  { "port": 389, "protocol": "TCP/UDP", "service": "LDAP", "description": "Lightweight Directory Access Protocol" },
-  { "port": 443, "protocol": "TCP", "service": "HTTPS", "description": "HTTP over TLS — encrypted web traffic" },
-  { "port": 445, "protocol": "TCP", "service": "SMB", "description": "Server Message Block — Windows file sharing" },
-  { "port": 465, "protocol": "TCP", "service": "SMTPS", "description": "SMTP over TLS (implicit) — secure email submission" },
-  { "port": 514, "protocol": "UDP", "service": "Syslog", "description": "System log messages (BSD syslog)" },
-  { "port": 587, "protocol": "TCP", "service": "SMTP Submission", "description": "Email submission from mail client to server (STARTTLS)" },
-  { "port": 636, "protocol": "TCP", "service": "LDAPS", "description": "LDAP over TLS — secure directory access" },
-  { "port": 993, "protocol": "TCP", "service": "IMAPS", "description": "IMAP over TLS — secure email retrieval" },
-  { "port": 995, "protocol": "TCP", "service": "POP3S", "description": "POP3 over TLS — secure email retrieval" },
-  { "port": 1194, "protocol": "UDP", "service": "OpenVPN", "description": "OpenVPN default port" },
-  { "port": 1433, "protocol": "TCP", "service": "MSSQL", "description": "Microsoft SQL Server database" },
-  { "port": 1521, "protocol": "TCP", "service": "Oracle DB", "description": "Oracle Database listener" },
-  { "port": 2049, "protocol": "TCP/UDP", "service": "NFS", "description": "Network File System" },
-  { "port": 3306, "protocol": "TCP", "service": "MySQL", "description": "MySQL / MariaDB database server" },
-  { "port": 3389, "protocol": "TCP", "service": "RDP", "description": "Remote Desktop Protocol — Windows remote desktop" },
-  { "port": 5432, "protocol": "TCP", "service": "PostgreSQL", "description": "PostgreSQL database server" },
-  { "port": 5900, "protocol": "TCP", "service": "VNC", "description": "Virtual Network Computing — remote desktop" },
-  { "port": 6379, "protocol": "TCP", "service": "Redis", "description": "Redis in-memory data store" },
-  { "port": 6443, "protocol": "TCP", "service": "Kubernetes API", "description": "Kubernetes API server" },
-  { "port": 6881, "protocol": "TCP/UDP", "service": "BitTorrent", "description": "BitTorrent peer-to-peer file sharing" },
-  { "port": 8080, "protocol": "TCP", "service": "HTTP Alt", "description": "Alternate HTTP port — often used for proxies or dev servers" },
-  { "port": 8443, "protocol": "TCP", "service": "HTTPS Alt", "description": "Alternate HTTPS port — common for management interfaces" },
-  { "port": 9200, "protocol": "TCP", "service": "Elasticsearch", "description": "Elasticsearch REST API" },
-  { "port": 9418, "protocol": "TCP", "service": "Git", "description": "Git protocol for fast repository access" },
-  { "port": 27017, "protocol": "TCP", "service": "MongoDB", "description": "MongoDB database server" },
-  { "port": 51820, "protocol": "UDP", "service": "WireGuard", "description": "WireGuard VPN default port" }
+  {
+    "port": 19,
+    "protocol": "TCP/UDP",
+    "service": "CHARGEN",
+    "description": "Character Generator Protocol (obsolete; amplification-attack risk)"
+  },
+  {
+    "port": 20,
+    "protocol": "TCP",
+    "service": "FTP Data",
+    "description": "File Transfer Protocol data transfer channel"
+  },
+  {
+    "port": 21,
+    "protocol": "TCP",
+    "service": "FTP Control",
+    "description": "File Transfer Protocol command/control channel"
+  },
+  {
+    "port": 22,
+    "protocol": "TCP",
+    "service": "SSH",
+    "description": "Secure Shell remote login and tunneling"
+  },
+  {
+    "port": 23,
+    "protocol": "TCP",
+    "service": "Telnet",
+    "description": "Unencrypted remote login (deprecated, insecure)"
+  },
+  {
+    "port": 25,
+    "protocol": "TCP",
+    "service": "SMTP",
+    "description": "Simple Mail Transfer Protocol — server-to-server email"
+  },
+  {
+    "port": 37,
+    "protocol": "UDP",
+    "service": "Time",
+    "description": "Time Protocol (seconds since 1900)"
+  },
+  {
+    "port": 43,
+    "protocol": "TCP",
+    "service": "WHOIS",
+    "description": "Domain/IP registration lookup"
+  },
+  {
+    "port": 49,
+    "protocol": "TCP",
+    "service": "TACACS+",
+    "description": "Cisco AAA authentication"
+  },
+  {
+    "port": 53,
+    "protocol": "TCP/UDP",
+    "service": "DNS",
+    "description": "Domain Name System resolution queries"
+  },
+  {
+    "port": 67,
+    "protocol": "UDP",
+    "service": "DHCP Server",
+    "description": "Dynamic Host Configuration Protocol server"
+  },
+  {
+    "port": 68,
+    "protocol": "UDP",
+    "service": "DHCP Client",
+    "description": "Dynamic Host Configuration Protocol client"
+  },
+  {
+    "port": 69,
+    "protocol": "UDP",
+    "service": "TFTP",
+    "description": "Trivial File Transfer Protocol (PXE booting, firmware)"
+  },
+  {
+    "port": 79,
+    "protocol": "TCP",
+    "service": "Finger",
+    "description": "User information protocol (legacy)"
+  },
+  {
+    "port": 80,
+    "protocol": "TCP",
+    "service": "HTTP",
+    "description": "Hypertext Transfer Protocol — unencrypted web traffic"
+  },
+  {
+    "port": 88,
+    "protocol": "TCP",
+    "service": "Kerberos",
+    "description": "Kerberos network authentication"
+  },
+  {
+    "port": 102,
+    "protocol": "TCP",
+    "service": "ISO-TSAP",
+    "description": "ISO Transport over TCP (Siemens S7)"
+  },
+  {
+    "port": 110,
+    "protocol": "TCP",
+    "service": "POP3",
+    "description": "Post Office Protocol v3 — email retrieval"
+  },
+  {
+    "port": 113,
+    "protocol": "TCP",
+    "service": "Ident",
+    "description": "Identification Protocol"
+  },
+  {
+    "port": 119,
+    "protocol": "TCP",
+    "service": "NNTP",
+    "description": "Network News Transfer Protocol"
+  },
+  {
+    "port": 123,
+    "protocol": "UDP",
+    "service": "NTP",
+    "description": "Network Time Protocol — clock synchronization"
+  },
+  {
+    "port": 135,
+    "protocol": "TCP",
+    "service": "MS-RPC",
+    "description": "Microsoft RPC Endpoint Mapper"
+  },
+  {
+    "port": 137,
+    "protocol": "UDP",
+    "service": "NetBIOS-NS",
+    "description": "NetBIOS Name Service"
+  },
+  {
+    "port": 138,
+    "protocol": "UDP",
+    "service": "NetBIOS-DGM",
+    "description": "NetBIOS Datagram Service"
+  },
+  {
+    "port": 139,
+    "protocol": "TCP",
+    "service": "NetBIOS-SSN",
+    "description": "NetBIOS Session Service"
+  },
+  {
+    "port": 143,
+    "protocol": "TCP",
+    "service": "IMAP",
+    "description": "Internet Message Access Protocol — email retrieval"
+  },
+  {
+    "port": 161,
+    "protocol": "UDP",
+    "service": "SNMP",
+    "description": "Simple Network Management Protocol polling"
+  },
+  {
+    "port": 162,
+    "protocol": "UDP",
+    "service": "SNMP Trap",
+    "description": "Simple Network Management Protocol trap messages"
+  },
+  {
+    "port": 179,
+    "protocol": "TCP",
+    "service": "BGP",
+    "description": "Border Gateway Protocol"
+  },
+  {
+    "port": 194,
+    "protocol": "TCP",
+    "service": "IRC",
+    "description": "Internet Relay Chat — plaintext"
+  },
+  {
+    "port": 389,
+    "protocol": "TCP/UDP",
+    "service": "LDAP",
+    "description": "Lightweight Directory Access Protocol"
+  },
+  {
+    "port": 443,
+    "protocol": "TCP",
+    "service": "HTTPS",
+    "description": "HTTP over TLS — encrypted web traffic"
+  },
+  {
+    "port": 445,
+    "protocol": "TCP",
+    "service": "SMB",
+    "description": "Server Message Block — Windows file sharing"
+  },
+  {
+    "port": 465,
+    "protocol": "TCP",
+    "service": "SMTPS",
+    "description": "SMTP over TLS (implicit) — secure email submission"
+  },
+  {
+    "port": 500,
+    "protocol": "UDP",
+    "service": "IKE",
+    "description": "Internet Key Exchange (IPsec/ISAKMP)"
+  },
+  {
+    "port": 514,
+    "protocol": "UDP",
+    "service": "Syslog",
+    "description": "System log messages (BSD syslog)"
+  },
+  {
+    "port": 520,
+    "protocol": "UDP",
+    "service": "RIP",
+    "description": "Routing Information Protocol"
+  },
+  {
+    "port": 546,
+    "protocol": "UDP",
+    "service": "DHCPv6-client",
+    "description": "DHCPv6 client"
+  },
+  {
+    "port": 547,
+    "protocol": "UDP",
+    "service": "DHCPv6-server",
+    "description": "DHCPv6 server"
+  },
+  {
+    "port": 587,
+    "protocol": "TCP",
+    "service": "SMTP Submission",
+    "description": "Email submission from mail client to server (STARTTLS)"
+  },
+  {
+    "port": 631,
+    "protocol": "TCP",
+    "service": "IPP",
+    "description": "Internet Printing Protocol (CUPS)"
+  },
+  {
+    "port": 636,
+    "protocol": "TCP",
+    "service": "LDAPS",
+    "description": "LDAP over TLS — secure directory access"
+  },
+  {
+    "port": 853,
+    "protocol": "TCP",
+    "service": "DoT",
+    "description": "DNS over TLS"
+  },
+  {
+    "port": 873,
+    "protocol": "TCP",
+    "service": "rsync",
+    "description": "rsync file synchronization"
+  },
+  {
+    "port": 990,
+    "protocol": "TCP",
+    "service": "FTPS",
+    "description": "FTP over TLS (control)"
+  },
+  {
+    "port": 993,
+    "protocol": "TCP",
+    "service": "IMAPS",
+    "description": "IMAP over TLS — secure email retrieval"
+  },
+  {
+    "port": 995,
+    "protocol": "TCP",
+    "service": "POP3S",
+    "description": "POP3 over TLS — secure email retrieval"
+  },
+  {
+    "port": 1080,
+    "protocol": "TCP",
+    "service": "SOCKS",
+    "description": "SOCKS proxy"
+  },
+  {
+    "port": 1194,
+    "protocol": "UDP",
+    "service": "OpenVPN",
+    "description": "OpenVPN default port"
+  },
+  {
+    "port": 1433,
+    "protocol": "TCP",
+    "service": "MSSQL",
+    "description": "Microsoft SQL Server database"
+  },
+  {
+    "port": 1521,
+    "protocol": "TCP",
+    "service": "Oracle DB",
+    "description": "Oracle Database listener"
+  },
+  {
+    "port": 1701,
+    "protocol": "UDP",
+    "service": "L2TP",
+    "description": "Layer 2 Tunneling Protocol"
+  },
+  {
+    "port": 1723,
+    "protocol": "TCP",
+    "service": "PPTP",
+    "description": "Point-to-Point Tunneling Protocol"
+  },
+  {
+    "port": 1812,
+    "protocol": "UDP",
+    "service": "RADIUS",
+    "description": "RADIUS authentication"
+  },
+  {
+    "port": 1813,
+    "protocol": "UDP",
+    "service": "RADIUS-acct",
+    "description": "RADIUS accounting"
+  },
+  {
+    "port": 1883,
+    "protocol": "TCP",
+    "service": "MQTT",
+    "description": "MQTT message broker"
+  },
+  {
+    "port": 2049,
+    "protocol": "TCP/UDP",
+    "service": "NFS",
+    "description": "Network File System"
+  },
+  {
+    "port": 2181,
+    "protocol": "TCP",
+    "service": "ZooKeeper",
+    "description": "Apache ZooKeeper client"
+  },
+  {
+    "port": 2379,
+    "protocol": "TCP",
+    "service": "etcd",
+    "description": "etcd client API"
+  },
+  {
+    "port": 2380,
+    "protocol": "TCP",
+    "service": "etcd-peer",
+    "description": "etcd peer communication"
+  },
+  {
+    "port": 3260,
+    "protocol": "TCP",
+    "service": "iSCSI",
+    "description": "iSCSI target"
+  },
+  {
+    "port": 3306,
+    "protocol": "TCP",
+    "service": "MySQL",
+    "description": "MySQL / MariaDB database server"
+  },
+  {
+    "port": 3389,
+    "protocol": "TCP",
+    "service": "RDP",
+    "description": "Remote Desktop Protocol — Windows remote desktop"
+  },
+  {
+    "port": 5060,
+    "protocol": "UDP",
+    "service": "SIP",
+    "description": "Session Initiation Protocol"
+  },
+  {
+    "port": 5061,
+    "protocol": "TCP",
+    "service": "SIP-TLS",
+    "description": "SIP over TLS"
+  },
+  {
+    "port": 5222,
+    "protocol": "TCP",
+    "service": "XMPP",
+    "description": "XMPP client connection"
+  },
+  {
+    "port": 5353,
+    "protocol": "UDP",
+    "service": "mDNS",
+    "description": "Multicast DNS (Bonjour/Avahi)"
+  },
+  {
+    "port": 5432,
+    "protocol": "TCP",
+    "service": "PostgreSQL",
+    "description": "PostgreSQL database server"
+  },
+  {
+    "port": 5601,
+    "protocol": "TCP",
+    "service": "Kibana",
+    "description": "Kibana web UI"
+  },
+  {
+    "port": 5671,
+    "protocol": "TCP",
+    "service": "AMQPS",
+    "description": "AMQP over TLS"
+  },
+  {
+    "port": 5672,
+    "protocol": "TCP",
+    "service": "AMQP",
+    "description": "Advanced Message Queuing Protocol (RabbitMQ)"
+  },
+  {
+    "port": 5900,
+    "protocol": "TCP",
+    "service": "VNC",
+    "description": "Virtual Network Computing — remote desktop"
+  },
+  {
+    "port": 5984,
+    "protocol": "TCP",
+    "service": "CouchDB",
+    "description": "Apache CouchDB HTTP API"
+  },
+  {
+    "port": 6379,
+    "protocol": "TCP",
+    "service": "Redis",
+    "description": "Redis in-memory data store"
+  },
+  {
+    "port": 6443,
+    "protocol": "TCP",
+    "service": "Kubernetes API",
+    "description": "Kubernetes API server"
+  },
+  {
+    "port": 6667,
+    "protocol": "TCP",
+    "service": "IRC",
+    "description": "Internet Relay Chat"
+  },
+  {
+    "port": 6881,
+    "protocol": "TCP/UDP",
+    "service": "BitTorrent",
+    "description": "BitTorrent peer-to-peer file sharing"
+  },
+  {
+    "port": 8080,
+    "protocol": "TCP",
+    "service": "HTTP Alt",
+    "description": "Alternate HTTP port — often used for proxies or dev servers"
+  },
+  {
+    "port": 8086,
+    "protocol": "TCP",
+    "service": "InfluxDB",
+    "description": "InfluxDB HTTP API"
+  },
+  {
+    "port": 8443,
+    "protocol": "TCP",
+    "service": "HTTPS Alt",
+    "description": "Alternate HTTPS port — common for management interfaces"
+  },
+  {
+    "port": 8883,
+    "protocol": "TCP",
+    "service": "MQTTS",
+    "description": "MQTT over TLS"
+  },
+  {
+    "port": 9090,
+    "protocol": "TCP",
+    "service": "Prometheus",
+    "description": "Prometheus metrics server"
+  },
+  {
+    "port": 9092,
+    "protocol": "TCP",
+    "service": "Kafka",
+    "description": "Apache Kafka broker"
+  },
+  {
+    "port": 9200,
+    "protocol": "TCP",
+    "service": "Elasticsearch",
+    "description": "Elasticsearch REST API"
+  },
+  {
+    "port": 9418,
+    "protocol": "TCP",
+    "service": "Git",
+    "description": "Git protocol for fast repository access"
+  },
+  {
+    "port": 11211,
+    "protocol": "TCP",
+    "service": "Memcached",
+    "description": "Memcached cache (amplification-attack risk)"
+  },
+  {
+    "port": 15672,
+    "protocol": "TCP",
+    "service": "RabbitMQ-mgmt",
+    "description": "RabbitMQ management UI"
+  },
+  {
+    "port": 25565,
+    "protocol": "TCP",
+    "service": "Minecraft",
+    "description": "Minecraft Java Edition server"
+  },
+  {
+    "port": 27017,
+    "protocol": "TCP",
+    "service": "MongoDB",
+    "description": "MongoDB database server"
+  },
+  {
+    "port": 51820,
+    "protocol": "UDP",
+    "service": "WireGuard",
+    "description": "WireGuard VPN default port"
+  }
 ]

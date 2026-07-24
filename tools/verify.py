@@ -1,0 +1,712 @@
+#!/usr/bin/env python3
+"""
+verify.py — deterministic auto-verification for common-ressources datasets.
+
+Goes beyond `validate.sh` (JSON syntax + presence of a few fields): this catches
+*semantic* defects that would otherwise ship silently:
+
+  - duplicate primary keys within a list (same country twice, same color name, ...)
+  - malformed hex colors and hex/rgb mismatches
+  - malformed ISO / code fields (iso2, iso3, currency codes, script codes, ...)
+  - cross-file referential integrity (a country's currency_code must exist in the
+    currencies dataset; a language's script should be a known ISO 15924 name; ...)
+  - numeric sanity (unique ordinals, positive masses, offset formats, ...)
+
+It is dependency-free (stdlib only), deterministic, and CI-friendly:
+  exit 0 = clean, exit 1 = errors found. Use --warn-as-error to also fail on warnings.
+  --json writes a machine-readable report to tools/reports/verify.json.
+
+Usage:
+  python3 tools/verify.py            # human report
+  python3 tools/verify.py --json     # + machine report
+  python3 tools/verify.py --warn-as-error
+"""
+import json
+import os
+import re
+import sys
+import glob
+from collections import Counter, defaultdict
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+ERRORS = []
+WARNINGS = []
+STATS = Counter()
+
+
+def err(file, msg):
+    ERRORS.append({"file": file, "level": "error", "msg": msg})
+
+
+def warn(file, msg):
+    WARNINGS.append({"file": file, "level": "warning", "msg": msg})
+
+
+def load(rel):
+    with open(os.path.join(ROOT, rel), encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def data_files():
+    out = []
+    for f in sorted(glob.glob(os.path.join(ROOT, "**", "*.json"), recursive=True)):
+        rel = os.path.relpath(f, ROOT)
+        if rel.startswith(".git") or "node_modules" in rel:
+            continue
+        if rel.startswith("package") or rel.endswith("package-lock.json"):
+            continue
+        if rel.startswith("tools/reports"):
+            continue
+        out.append(rel)
+    return out
+
+
+HEX_RE = re.compile(r"^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$")
+# Fields that MUST be globally unique within a dataset — a repeat is a real defect.
+# Deliberately excludes name/symbol/code: the same glyph or code legitimately maps to
+# multiple concepts (σ = Sigma & Stefan-Boltzmann; e = charge & Euler; a country code
+# shared by several mirror rows), so those are not reliable primary keys.
+STRICT_ID_FIELDS = ["id", "iso2", "iso3", "iana", "slug", "uuid"]
+# Fields whose presence differentiates otherwise-similar rows (VOLUME instruction vs
+# volume object) — used to suppress false duplicate reports.
+DISCRIMINATORS = ["category", "type", "kind", "class", "group", "series"]
+
+
+def hex_to_rgb(h):
+    h = h.lstrip("#")
+    if len(h) == 3:
+        h = "".join(c * 2 for c in h)
+    if len(h) < 6:
+        return None
+    try:
+        return [int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)]
+    except ValueError:
+        return None
+
+
+def check_generic(rel, d):
+    """Checks applied to every list-of-objects dataset."""
+    if not isinstance(d, list) or not d or not all(isinstance(x, dict) for x in d):
+        return
+    STATS["list_datasets"] += 1
+
+    # 1a. strict-ID duplicates — these fields must be unique; a repeat is a defect.
+    for pk in STRICT_ID_FIELDS:
+        if all(pk in x and x[pk] not in (None, "") for x in d):
+            norm = [x[pk].lower() if isinstance(x[pk], str) else x[pk] for x in d]
+            dups = [v for v, c in Counter(norm).items() if c > 1]
+            if dups:
+                err(rel, f"duplicate {pk!r}: {', '.join(map(str, sorted(map(str, dups))[:8]))}")
+
+    # 1b. fully-identical rows — always a mistake regardless of schema.
+    seen_rows = {}
+    for i, x in enumerate(d):
+        sig = json.dumps(x, sort_keys=True, ensure_ascii=False)
+        if sig in seen_rows:
+            err(rel, f"identical duplicate rows at index {seen_rows[sig]} and {i}")
+        else:
+            seen_rows[sig] = i
+
+    # 1c. name/code near-unique collisions — WARN only, suppressed when a discriminator
+    #     field (category/type/...) differs between the colliding rows.
+    for pk in ("code", "name", "symbol"):
+        if not all(pk in x and isinstance(x[pk], (str, int)) for x in d):
+            continue
+        by_val = defaultdict(list)
+        for x in d:
+            key = x[pk].lower() if isinstance(x[pk], str) else x[pk]
+            by_val[key].append(x)
+        distinct_ratio = len(by_val) / len(d)
+        if distinct_ratio < 0.9:
+            continue  # field is clearly not a key (many repeats by design)
+        for val, rows in by_val.items():
+            if len(rows) < 2:
+                continue
+            disc = next((f for f in DISCRIMINATORS if all(f in r for r in rows)), None)
+            if disc and len({r[disc] for r in rows}) == len(rows):
+                continue  # differentiated by category/type → legitimate
+            warn(rel, f"repeated {pk!r} value {val!r} ({len(rows)}×) with no discriminator")
+        break  # only report on the first usable key field
+
+    # 2. hex color validity + hex/rgb agreement (any field whose value looks hex-ish)
+    for i, x in enumerate(d):
+        for k, v in x.items():
+            if isinstance(v, str) and v.startswith("#") and len(v) in (4, 7, 9):
+                if not HEX_RE.match(v):
+                    err(rel, f"item {i} field {k!r}: malformed hex {v!r}")
+        # rgb tuple should match a sibling hex field when both present
+        if "hex" in x and "rgb" in x and isinstance(x["rgb"], list):
+            expect = hex_to_rgb(x["hex"]) if isinstance(x["hex"], str) else None
+            if expect and list(x["rgb"])[:3] != expect:
+                pkid = next((x[f] for f in ("name", "id", "code") if f in x), i)
+                err(rel, f"{pkid}: rgb {x['rgb']} != hex {x['hex']} ({expect})")
+
+
+def check_colors_named():
+    rel = "colors/named.json"
+    d = load(rel)
+    for c in d:
+        rgb = hex_to_rgb(c["hex"])
+        if rgb != c["rgb"]:
+            err(rel, f"{c['name']}: rgb {c['rgb']} != hex {c['hex']}")
+    STATS["cross_checks"] += 1
+
+
+def check_countries_currencies():
+    countries = load("geo/countries/countries.json")
+    currencies = load("geo/currencies/currencies.json")
+    known = {c["code"] for c in currencies}
+    # ISO 4217 numeric codes: unique 1..999 integers where present
+    cur_nums = Counter(c["numeric"] for c in currencies if "numeric" in c)
+    for v, n in cur_nums.items():
+        if not isinstance(v, int) or not (1 <= v <= 999):
+            err("geo/currencies/currencies.json", f"bad numeric {v!r}")
+        if n > 1:
+            err("geo/currencies/currencies.json", f"duplicate numeric {v!r}")
+    missing = set()
+    for c in countries:
+        code = c.get("currency_code")
+        if not code:
+            continue
+        if not re.match(r"^[A-Z]{3}$", code):
+            err("geo/countries/countries.json", f"{c['name']}: bad currency_code {code!r}")
+        elif code not in known:
+            missing.add(code)
+    if missing:
+        warn("geo/currencies/currencies.json",
+             f"{len(missing)} currency codes referenced by countries.json are missing: "
+             f"{', '.join(sorted(missing))}")
+    # iso2/iso3 shape + uniqueness
+    for field, length in (("iso2", 2), ("iso3", 3)):
+        seen = Counter(c[field] for c in countries if c.get(field))
+        for v, n in seen.items():
+            if not re.match(rf"^[A-Z]{{{length}}}$", v):
+                err("geo/countries/countries.json", f"bad {field} {v!r}")
+            if n > 1:
+                err("geo/countries/countries.json", f"duplicate {field} {v!r}")
+    # iso_numeric (ISO 3166-1 numeric): 1..999, unique where present
+    num_seen = Counter(c["iso_numeric"] for c in countries if "iso_numeric" in c)
+    for v, n in num_seen.items():
+        if not isinstance(v, int) or not (1 <= v <= 999):
+            err("geo/countries/countries.json", f"bad iso_numeric {v!r}")
+        if n > 1:
+            err("geo/countries/countries.json", f"duplicate iso_numeric {v!r}")
+    STATS["cross_checks"] += 1
+
+
+def check_languages_scripts():
+    langs = load("i18n/languages/languages.json")
+    scripts = load("iso/15924/scripts.json")
+    # ISO 15924 names carry parentheticals/aliases, e.g. "Bengali (Bangla)",
+    # "Oriya (Odia)". Accept a language's script if it matches the leading name
+    # OR appears as a whole alpha token anywhere in the canonical name.
+    tokens = set()
+    fullnames = []
+    for s in scripts:
+        name = s["name"].lower()
+        fullnames.append(name)
+        tokens.add(name)
+        tokens.add(name.split(" (")[0].strip())
+        for tok in re.findall(r"[a-z']{3,}", name):
+            tokens.add(tok)
+    for l in langs:
+        sc = l.get("script")
+        if not sc:
+            continue
+        scl = sc.lower()
+        if scl not in tokens and not any(scl in fn for fn in fullnames):
+            warn("i18n/languages/languages.json",
+                 f"{l['name']}: script {sc!r} not a known ISO 15924 name")
+    STATS["cross_checks"] += 1
+
+
+def check_iso639_2():
+    """ISO 639-2: unique bibliographic codes; mutual consistency with ISO 639-1.
+    Every 639-2 alpha2 resolves to a 639-1 language, and every 639-1 language's
+    iso639_2 resolves to a code (bibliographic or terminologic) here."""
+    rel = "iso/639-2/languages.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    iso = load(rel)
+    bib = [e["alpha3_b"] for e in iso]
+    if len(bib) != len(set(bib)):
+        err(rel, "duplicate alpha3_b codes")
+    codes = set()
+    for e in iso:
+        if len(e["alpha3_b"]) == 3:
+            codes.add(e["alpha3_b"])
+        if "alpha3_t" in e:
+            codes.add(e["alpha3_t"])
+    langs = load("i18n/languages/languages.json")
+    lang_alpha2 = {l.get("iso639_1") for l in langs}
+    for e in iso:
+        a2 = e.get("alpha2")
+        if a2 and a2 not in lang_alpha2:
+            warn(rel, f"{e['alpha3_b']}: alpha2 {a2!r} not in i18n/languages")
+    for l in langs:
+        c = l.get("iso639_2")
+        if c and c not in codes:
+            err("i18n/languages/languages.json",
+                f"{l.get('name')}: iso639_2 {c!r} not in iso/639-2")
+    STATS["cross_checks"] += 1
+
+
+def check_timezones():
+    tz = load("geo/timezones/timezones.json")
+    off = re.compile(r"^[+-]\d{2}:\d{2}$")
+    for t in tz:
+        for f in ("utc_offset", "dst_offset"):
+            if f in t and not off.match(str(t[f])):
+                err("geo/timezones/timezones.json", f"{t.get('iana')}: bad {f} {t[f]!r}")
+    STATS["cross_checks"] += 1
+
+
+def check_elements():
+    el = load("science/elements/elements.json")
+    nums = [e["number"] for e in el]
+    if sorted(nums) != list(range(1, len(el) + 1)):
+        err("science/elements/elements.json", "atomic numbers not contiguous 1..N")
+    for e in el:
+        if e.get("mass", 0) <= 0:
+            err("science/elements/elements.json", f"{e['symbol']}: non-positive mass")
+    STATS["cross_checks"] += 1
+
+
+def check_codon_table():
+    """The genetic code: 64 codons, 3 stops, AUG start; every encoded amino acid
+    must resolve to a symbol_1 in the amino-acids dataset."""
+    rel = "bio/codon-table/codon-table.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    codons = load(rel)
+    if len(codons) != 64:
+        err(rel, f"expected 64 codons, found {len(codons)}")
+    seen = {c["codon"] for c in codons}
+    bases = "ACGU"
+    expected = {a + b + c for a in bases for b in bases for c in bases}
+    if seen != expected:
+        err(rel, "codons are not exactly the 64 A/C/G/U triplets")
+    stops = [c["codon"] for c in codons if c.get("stop")]
+    if sorted(stops) != ["UAA", "UAG", "UGA"]:
+        err(rel, f"stop codons must be UAA/UAG/UGA, found {stops}")
+    starts = [c["codon"] for c in codons if c.get("start")]
+    if starts != ["AUG"]:
+        err(rel, f"start codon must be AUG, found {starts}")
+    aa = load("bio/amino-acids/amino-acids.json")
+    syms = {a["symbol_1"] for a in aa}
+    for c in codons:
+        s = c.get("amino_acid_1")
+        if s is not None and s not in syms:
+            err(rel, f"{c['codon']}: amino_acid_1 {s!r} not in amino-acids.json")
+        if s is None and not c.get("stop"):
+            err(rel, f"{c['codon']}: null amino acid but not marked stop")
+    STATS["cross_checks"] += 1
+
+
+def check_si_prefixes():
+    """24 SI prefixes with unique symbols and the canonical exponent set."""
+    rel = "science/si-prefixes/si-prefixes.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    pre = load(rel)
+    if len(pre) != 24:
+        err(rel, f"expected 24 SI prefixes, found {len(pre)}")
+    syms = [p["symbol"] for p in pre]
+    if len(syms) != len(set(syms)):
+        err(rel, "duplicate prefix symbols")
+    exps = sorted(p["base10"] for p in pre)
+    want = sorted([30, 27, 24, 21, 18, 15, 12, 9, 6, 3, 2, 1,
+                   -1, -2, -3, -6, -9, -12, -15, -18, -21, -24, -27, -30])
+    if exps != want:
+        err(rel, "base10 exponents do not match the canonical SI set")
+    STATS["cross_checks"] += 1
+
+
+def check_hash_algorithms():
+    """Hash algorithms: unique slugs, valid status, positive digest sizes."""
+    rel = "security/hash-algorithms/hash-algorithms.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    slugs = [e.get("slug") for e in d]
+    if len(slugs) != len(set(slugs)):
+        err(rel, "duplicate slugs")
+    for e in d:
+        if e.get("status") not in ("secure", "broken", "deprecated", "not-applicable"):
+            err(rel, f"{e.get('name')}: invalid status {e.get('status')!r}")
+        if "digest_bits" in e and e["digest_bits"] <= 0:
+            err(rel, f"{e.get('name')}: non-positive digest_bits")
+        # non-cryptographic entries must not be marked secure/broken as if crypto
+        if e.get("cryptographic") is False and e.get("status") != "not-applicable":
+            err(rel, f"{e.get('name')}: non-cryptographic but status {e.get('status')!r}")
+    STATS["cross_checks"] += 1
+
+
+def check_special_use_ips():
+    """Special-use IP blocks: valid CIDR, family matches the block, RFCs present."""
+    rel = "networking/special-use-ips/special-use-ips.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    try:
+        import ipaddress
+    except ImportError:
+        return
+    for e in load(rel):
+        b = e.get("block", "")
+        try:
+            net = ipaddress.ip_network(b, strict=False)
+        except ValueError:
+            err(rel, f"invalid CIDR block: {b!r}")
+            continue
+        fam = "IPv4" if net.version == 4 else "IPv6"
+        if e.get("family") != fam:
+            err(rel, f"{b}: family {e.get('family')} != {fam}")
+        if not e.get("rfcs"):
+            err(rel, f"{b}: no RFC reference")
+    STATS["cross_checks"] += 1
+
+
+def check_unicode_blocks():
+    """Unicode blocks: sorted, non-overlapping, count matches the U+start..U+end range."""
+    rel = "unicode/blocks/blocks.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    prev_end = -1
+    for e in d:
+        try:
+            st = int(e["start"][2:], 16)
+            en = int(e["end"][2:], 16)
+        except (KeyError, ValueError):
+            err(rel, f"{e.get('name')}: bad start/end")
+            continue
+        if en < st:
+            err(rel, f"{e['name']}: end before start")
+        if "count" in e and e["count"] != en - st + 1:
+            err(rel, f"{e['name']}: count {e['count']} != range size {en - st + 1}")
+        if st <= prev_end:
+            err(rel, f"{e['name']}: overlaps previous block (not sorted/disjoint)")
+        prev_end = en
+    STATS["cross_checks"] += 1
+
+
+def check_si_units():
+    """SI base units (7) and named derived units (22): fixed universes, unique symbols."""
+    base_rel = "science/si-base-units/si-base-units.json"
+    if os.path.exists(os.path.join(ROOT, base_rel)):
+        base = load(base_rel)
+        if len(base) != 7:
+            err(base_rel, f"expected 7 SI base units, found {len(base)}")
+        want = {"second", "metre", "kilogram", "ampere", "kelvin", "mole", "candela"}
+        if {b["name"] for b in base} != want:
+            err(base_rel, "SI base unit names do not match the canonical seven")
+        STATS["cross_checks"] += 1
+    der_rel = "science/si-derived-units/si-derived-units.json"
+    if os.path.exists(os.path.join(ROOT, der_rel)):
+        der = load(der_rel)
+        if len(der) != 22:
+            err(der_rel, f"expected 22 named derived units, found {len(der)}")
+        syms = [d["symbol"] for d in der]
+        if len(syms) != len(set(syms)):
+            err(der_rel, "duplicate derived-unit symbols")
+        STATS["cross_checks"] += 1
+
+
+def check_constellations():
+    """The 88 IAU constellations: unique abbreviations, areas summing to the full
+    celestial sphere (41,253 sq deg) within rounding tolerance."""
+    rel = "astronomy/constellations/constellations.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    if len(d) != 88:
+        err(rel, f"expected 88 IAU constellations, found {len(d)}")
+    abbrs = [e.get("iau_abbreviation") for e in d]
+    if len(abbrs) != len(set(abbrs)):
+        err(rel, "duplicate IAU abbreviations")
+    areas = [e["area_sq_deg"] for e in d if isinstance(e.get("area_sq_deg"), (int, float))]
+    total = sum(areas)
+    if len(areas) == 88 and abs(total - 41253) > 20:
+        err(rel, f"constellation areas sum to {total}, expected ~41253 (full sphere)")
+    STATS["cross_checks"] += 1
+
+
+def check_math_constants():
+    """Math constants: unique slugs; high-precision value string agrees with approx."""
+    rel = "math/constants/constants.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    slugs = [e.get("slug") for e in d]
+    if len(slugs) != len(set(slugs)):
+        err(rel, "duplicate slugs")
+    for e in d:
+        try:
+            v = float(e["value"])
+        except (KeyError, ValueError):
+            err(rel, f"{e.get('name')}: value not parseable")
+            continue
+        a = e.get("approx")
+        if a is None or abs(v - a) > 1e-9 * max(1.0, abs(a)):
+            err(rel, f"{e.get('name')}: value {e.get('value')} disagrees with approx {a}")
+    STATS["cross_checks"] += 1
+
+
+def check_binary_prefixes():
+    """8 IEC binary prefixes with value == 2**base2 and unique symbols."""
+    rel = "science/binary-prefixes/binary-prefixes.json"
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        return
+    d = load(rel)
+    if len(d) != 8:
+        err(rel, f"expected 8 IEC binary prefixes, found {len(d)}")
+    syms = [e.get("symbol") for e in d]
+    if len(syms) != len(set(syms)):
+        err(rel, "duplicate symbols")
+    for e in d:
+        if str(2 ** e["base2"]) != e.get("value"):
+            err(rel, f"{e.get('name')}: value != 2**{e['base2']}")
+    STATS["cross_checks"] += 1
+
+
+def check_planets():
+    p = load("space/planets/planets.json")
+    orders = [x["order"] for x in p if "order" in x]
+    if len(orders) != len(set(orders)):
+        err("space/planets/planets.json", "duplicate 'order' values")
+    STATS["cross_checks"] += 1
+
+
+def check_http_status():
+    rels = ("net/http-status-codes/http-status-codes.json",
+            "web/http/status-codes.json")
+    tables = {}
+    for rel in rels:
+        if not os.path.exists(os.path.join(ROOT, rel)):
+            continue
+        d = load(rel)
+        for x in d:
+            code = x.get("code")
+            if code is not None and not (100 <= int(code) <= 599):
+                err(rel, f"status code out of range: {code}")
+        tables[rel] = {x["code"]: x for x in d if "code" in x}
+    # the two HTTP status datasets overlap — shared codes must agree on name/category
+    if len(tables) == 2:
+        (ra, ta), (rb, tb) = tables.items()
+        for code in sorted(set(ta) & set(tb)):
+            for f in ("name", "category"):
+                va, vb = ta[code].get(f), tb[code].get(f)
+                if va and vb and va.lower() != vb.lower():
+                    err(rb, f"status {code}: {f} {vb!r} disagrees with {ra} ({va!r})")
+    STATS["cross_checks"] += 1
+
+
+def check_geo_crossref():
+    """iso2 references in airports/cities/currencies must exist in countries.json."""
+    countries = load("geo/countries/countries.json")
+    iso2 = {c["iso2"] for c in countries if c.get("iso2")}
+    # currencies.country_code → countries.iso2 (skip regional None / EU / IMF)
+    for c in load("geo/currencies/currencies.json"):
+        cc = c.get("country_code")
+        if cc and cc not in iso2 and cc not in ("EU",):
+            warn("geo/currencies/currencies.json",
+                 f"{c['code']}: country_code {cc} not in countries.json")
+    # airports.country_iso2
+    try:
+        for a in load("geo/airports/airports.json"):
+            cc = a.get("country_iso2")
+            if cc and cc not in iso2:
+                warn("geo/airports/airports.json", f"{a.get('iata')}: country_iso2 {cc} unknown")
+            for f, lo, hi in (("lat", -90, 90), ("lon", -180, 180)):
+                if f in a and not (lo <= a[f] <= hi):
+                    err("geo/airports/airports.json", f"{a.get('iata')}: {f} out of range: {a[f]}")
+            if a.get("iata") and not re.match(r"^[A-Z]{3}$", a["iata"]):
+                err("geo/airports/airports.json", f"bad IATA code {a['iata']!r}")
+            if a.get("icao") and not re.match(r"^[A-Z]{4}$", a["icao"]):
+                err("geo/airports/airports.json", f"bad ICAO code {a['icao']!r}")
+    except FileNotFoundError:
+        pass
+    # cities.country (iso2)
+    try:
+        for c in load("geo/cities/cities.json"):
+            cc = c.get("country")
+            if cc and cc not in iso2:
+                warn("geo/cities/cities.json", f"{c.get('name')}: country {cc} not in countries.json")
+            for f, lo, hi in (("lat", -90, 90), ("lng", -180, 180)):
+                if f in c and not (lo <= c[f] <= hi):
+                    err("geo/cities/cities.json", f"{c.get('name')}: {f} out of range: {c[f]}")
+    except FileNotFoundError:
+        pass
+    STATS["cross_checks"] += 1
+
+
+def check_finance():
+    """Currency/country references across finance datasets must resolve."""
+    try:
+        currencies = {c["code"] for c in load("geo/currencies/currencies.json")}
+    except FileNotFoundError:
+        return
+    iso2 = {c["iso2"] for c in load("geo/countries/countries.json") if c.get("iso2")}
+    iso2 |= {"EU"}  # supranational marker used by pan-European exchanges/indices
+    # forex pairs: base/quote are currency codes; pair == base/quote
+    try:
+        for p in load("finance/forex/pairs.json"):
+            for side in ("base", "quote"):
+                v = p.get(side)
+                if v and v not in currencies:
+                    warn("finance/forex/pairs.json", f"{p.get('pair')}: {side} {v} not a known currency")
+            if p.get("base") and p.get("quote") and p.get("pair") \
+                    and p["pair"] != f"{p['base']}/{p['quote']}":
+                err("finance/forex/pairs.json", f"pair {p['pair']} != {p['base']}/{p['quote']}")
+    except FileNotFoundError:
+        pass
+    # stock exchanges: MIC shape, country iso2, currency
+    try:
+        for e in load("finance/stock-exchanges/stock-exchanges.json"):
+            if e.get("mic") and not re.match(r"^[A-Z0-9]{4}$", e["mic"]):
+                err("finance/stock-exchanges/stock-exchanges.json", f"bad MIC {e['mic']!r}")
+            if e.get("country") and e["country"] not in iso2:
+                warn("finance/stock-exchanges/stock-exchanges.json",
+                     f"{e.get('acronym')}: country {e['country']} not in countries.json")
+            if e.get("currency") and e["currency"] not in currencies:
+                warn("finance/stock-exchanges/stock-exchanges.json",
+                     f"{e.get('acronym')}: currency {e['currency']} not a known currency")
+    except FileNotFoundError:
+        pass
+    # indices: country_iso2, currency
+    try:
+        for ix in load("finance/indices/indices.json"):
+            if ix.get("country_iso2") and ix["country_iso2"] not in iso2:
+                warn("finance/indices/indices.json",
+                     f"{ix.get('slug')}: country_iso2 {ix['country_iso2']} not in countries.json")
+            if ix.get("currency") and ix["currency"] not in currencies:
+                warn("finance/indices/indices.json",
+                     f"{ix.get('slug')}: currency {ix['currency']} not a known currency")
+    except FileNotFoundError:
+        pass
+    STATS["cross_checks"] += 1
+
+
+def check_locales():
+    """BCP 47-style locale codes must decompose into a known language + region."""
+    try:
+        locales = load("i18n/locales/locales.json")
+    except FileNotFoundError:
+        return
+    langs = {l["iso639_1"] for l in load("i18n/languages/languages.json") if l.get("iso639_1")}
+    iso2 = {c["iso2"] for c in load("geo/countries/countries.json") if c.get("iso2")}
+    for loc in locales:
+        code = loc.get("code", "")
+        if not re.match(r"^[a-z]{2}-[A-Z]{2}$", code):
+            warn("i18n/locales/locales.json", f"unusual locale code {code!r}")
+        lc, rc = loc.get("language_code"), loc.get("region_code")
+        if lc and lc not in langs:
+            warn("i18n/locales/locales.json", f"{code}: language_code {lc} not in languages.json")
+        if rc and rc not in iso2:
+            warn("i18n/locales/locales.json", f"{code}: region_code {rc} not in countries.json")
+        if lc and rc and code and code != f"{lc}-{rc}":
+            err("i18n/locales/locales.json", f"code {code} != {lc}-{rc}")
+    STATS["cross_checks"] += 1
+
+
+def check_formats():
+    """Regex / range sanity on well-specified code fields."""
+    try:
+        for c in load("geo/countries/countries.json"):
+            dc = c.get("dial_code")
+            if dc and not re.match(r"^\+\d{1,4}(-\d+)?$", str(dc)):
+                warn("geo/countries/countries.json", f"{c['name']}: unusual dial_code {dc!r}")
+    except FileNotFoundError:
+        pass
+    try:
+        for l in load("i18n/languages/languages.json"):
+            if l.get("iso639_1") and not re.match(r"^[a-z]{2}$", l["iso639_1"]):
+                err("i18n/languages/languages.json", f"bad iso639_1 {l['iso639_1']!r}")
+            if l.get("iso639_2") and not re.match(r"^[a-z]{3}$", l["iso639_2"]):
+                err("i18n/languages/languages.json", f"bad iso639_2 {l['iso639_2']!r}")
+            if l.get("direction") not in (None, "ltr", "rtl"):
+                err("i18n/languages/languages.json", f"bad direction {l['direction']!r}")
+    except FileNotFoundError:
+        pass
+    try:
+        for c in load("geo/currencies/currencies.json"):
+            if not (0 <= c.get("decimals", 0) <= 4):
+                err("geo/currencies/currencies.json", f"{c['code']}: decimals out of range")
+    except FileNotFoundError:
+        pass
+    try:
+        for p in load("net/ports/ports.json"):
+            port = p.get("port")
+            if port is not None and not (0 <= int(port) <= 65535):
+                err("net/ports/ports.json", f"port out of range: {port}")
+    except FileNotFoundError:
+        pass
+    STATS["cross_checks"] += 1
+
+
+def main():
+    argv = sys.argv[1:]
+    want_json = "--json" in argv
+    warn_as_error = "--warn-as-error" in argv
+
+    # generic pass
+    parsed = 0
+    for rel in data_files():
+        try:
+            d = load(rel)
+        except Exception as e:  # noqa
+            err(rel, f"JSON parse error: {e}")
+            continue
+        parsed += 1
+        check_generic(rel, d)
+    STATS["files_parsed"] = parsed
+
+    # targeted cross-file checks (guarded so a missing file never crashes the run)
+    for fn in (check_colors_named, check_countries_currencies, check_languages_scripts,
+               check_timezones, check_iso639_2, check_elements, check_codon_table, check_si_prefixes,
+               check_si_units, check_binary_prefixes, check_math_constants,
+               check_constellations, check_unicode_blocks,
+               check_special_use_ips, check_hash_algorithms, check_planets, check_http_status,
+               check_geo_crossref, check_locales, check_finance, check_formats):
+        try:
+            fn()
+        except FileNotFoundError:
+            pass
+        except Exception as e:  # noqa
+            err(fn.__name__, f"checker crashed: {e}")
+
+    # report
+    print("=== verify.py — semantic verification ===")
+    print(f"files parsed: {STATS['files_parsed']}   "
+          f"list datasets: {STATS['list_datasets']}   "
+          f"cross-checks: {STATS['cross_checks']}")
+    print()
+    if ERRORS:
+        print(f"ERRORS ({len(ERRORS)}):")
+        for e in ERRORS:
+            print(f"  ✗ {e['file']}: {e['msg']}")
+    if WARNINGS:
+        print(f"\nWARNINGS ({len(WARNINGS)}):")
+        for w in WARNINGS:
+            print(f"  ! {w['file']}: {w['msg']}")
+    if not ERRORS and not WARNINGS:
+        print("clean — no semantic issues found.")
+
+    if want_json:
+        os.makedirs(os.path.join(ROOT, "tools", "reports"), exist_ok=True)
+        rep = {
+            "stats": dict(STATS),
+            "errors": ERRORS,
+            "warnings": WARNINGS,
+        }
+        with open(os.path.join(ROOT, "tools", "reports", "verify.json"), "w") as fh:
+            json.dump(rep, fh, indent=2, ensure_ascii=False)
+        print("\nwrote tools/reports/verify.json")
+
+    rc = 1 if ERRORS or (warn_as_error and WARNINGS) else 0
+    sys.exit(rc)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Ceres",
+    "type": "dwarf planet",
+    "region": "asteroid belt",
+    "mass_kg": 9.39e20,
+    "radius_km": 469.7,
+    "distance_from_sun_km": 413700000,
+    "orbital_period_days": 1680,
+    "moons": 0,
+    "avg_temperature_c": -105,
+    "discovered": 1801,
+    "designation": "1 Ceres"
+  },
+  {
+    "name": "Pluto",
+    "type": "dwarf planet",
+    "region": "Kuiper belt",
+    "mass_kg": 1.303e22,
+    "radius_km": 1188.3,
+    "distance_from_sun_km": 5906380000,
+    "orbital_period_days": 90560,
+    "moons": 5,
+    "avg_temperature_c": -229,
+    "discovered": 1930,
+    "designation": "134340 Pluto"
+  },
+  {
+    "name": "Haumea",
+    "type": "dwarf planet",
+    "region": "Kuiper belt",
+    "mass_kg": 4.006e21,
+    "radius_km": 780,
+    "distance_from_sun_km": 6452000000,
+    "orbital_period_days": 103774,
+    "moons": 2,
+    "avg_temperature_c": -241,
+    "discovered": 2004,
+    "designation": "136108 Haumea"
+  },
+  {
+    "name": "Makemake",
+    "type": "dwarf planet",
+    "region": "Kuiper belt",
+    "mass_kg": 3.1e21,
+    "radius_km": 715,
+    "distance_from_sun_km": 6850000000,
+    "orbital_period_days": 111845,
+    "moons": 1,
+    "avg_temperature_c": -243,
+    "discovered": 2005,
+    "designation": "136472 Makemake"
+  },
+  {
+    "name": "Eris",
+    "type": "dwarf planet",
+    "region": "scattered disc",
+    "mass_kg": 1.638e22,
+    "radius_km": 1163,
+    "distance_from_sun_km": 10120000000,
+    "orbital_period_days": 204060,
+    "moons": 1,
+    "avg_temperature_c": -243,
+    "discovered": 2005,
+    "designation": "136199 Eris"
+  }
+]
