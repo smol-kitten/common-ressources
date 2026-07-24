@@ -50,6 +50,10 @@ on:
         required: false
         default: '40'
 
+concurrency:
+  group: '${{ github.workflow }}-${{ github.ref }}'
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   screenshots:
     runs-on: self-hosted

@@ -9,19 +9,25 @@ name: Dependabot auto-merge
 # pull-requests:write — no PAT / org secret needed).
 on:
   schedule:
-    - cron: '23 4 * * *'
+    - cron: '59 4 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
   pull-requests: write
+  checks: read      # read PR check-run state (github-script)
+  statuses: read    # read legacy commit-status state
+
+concurrency:
+  group: '${{ github.workflow }}-${{ github.ref }}'
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   reap:
     runs-on: [self-hosted, linux]
     steps:
       - name: Merge green Dependabot patch/minor PRs
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const { owner, repo } = context.repo;
