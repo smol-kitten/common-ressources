@@ -1,0 +1,9 @@
+# gitleaks ignore list (fingerprint = commit:file:rule:line).
+# Each entry below was reviewed on 2026-10-04 (task t-e23116) and confirmed to be a
+# documentation placeholder, test fixture, or false positive - not a credential.
+# The fleet Security Scan runs `gitleaks detect --source .`, which reads this file.
+# Do not add real secrets here: rotate and remove them instead.
+1302de869ab75812cdbe85a0f886a79cf8407f7e:devops/kubernetes/objects.json:generic-api-key:368
+496803aaf39f64a5f6b18c8d14fcd7a5a52641fb:rice/preview.html:generic-api-key:306
+c161d180083e8f926046d23dae0c12ec08cc27cc:web/regex/patterns.json:jwt:200
+c864290d8bfc8bddb9d01966446a08256464f671:web/http/auth-schemes.json:stripe-access-token:45
