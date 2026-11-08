@@ -1,0 +1,7 @@
+# Reviewed false positives (fleet sweep 2026-11-08). Format: commit:file:rule:line
+# k8s object-kinds reference data (PriorityClass entry), not a key
+1302de869ab75812cdbe85a0f886a79cf8407f7e:devops/kubernetes/objects.json:generic-api-key:368
+# vendored minified xterm.js, entropy hit
+496803aaf39f64a5f6b18c8d14fcd7a5a52641fb:rice/preview.html:generic-api-key:306
+# doc example in the auth-schemes dataset (short, not a real Stripe key); now a placeholder
+c864290d8bfc8bddb9d01966446a08256464f671:web/http/auth-schemes.json:stripe-access-token:45

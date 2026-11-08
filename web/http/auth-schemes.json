@@ -42,7 +42,7 @@
     "security": "medium",
     "description": "Non-standard but widely used. A static secret key sent as a header (commonly X-API-Key) or query parameter. Easy to implement but offers no built-in expiry or scope.",
     "header_format": "X-API-Key: <api-key>",
-    "example": "X-API-Key: sk_live_abc123def456"
+    "example": "X-API-Key: sk_live_<your-key>"
   },
   {
     "scheme": "HMAC",
