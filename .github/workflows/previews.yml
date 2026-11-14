@@ -16,6 +16,10 @@ on:
       - 'docker/Dockerfile'
   workflow_dispatch:
 
+# The job commits the regenerated PNGs back to the branch; the repo default token is read-only.
+permissions:
+  contents: write
+
 concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
@@ -24,7 +28,8 @@ jobs:
   generate:
     runs-on: self-hosted
     container:
-      image: mcr.microsoft.com/playwright:v1.61.1-jammy
+      # keep in step with @playwright/test in package.json (the install step below covers a drift)
+      image: mcr.microsoft.com/playwright:v1.64.0-jammy
       options: --user root
 
     steps:
@@ -35,6 +40,14 @@ jobs:
 
       - name: Install Node dependencies
         run: npm ci
+
+      # The image ships the browser build of ITS Playwright version. When @playwright/test in
+      # package.json is newer or older, the tests fail with "Executable doesn't exist". This fetches
+      # the build the installed package wants; it does nothing when the image already has it.
+      - name: Install the browser build that @playwright/test wants
+        run: npx playwright install chromium
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
 
       - name: Run Playwright tests (includes screenshot generation)
         run: npx playwright test --reporter=list
