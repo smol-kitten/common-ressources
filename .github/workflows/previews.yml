@@ -16,6 +16,10 @@ on:
       - 'docker/Dockerfile'
   workflow_dispatch:
 
+# The job commits the regenerated PNGs back to the branch; the repo default token is read-only.
+permissions:
+  contents: write
+
 concurrency:
   group: '${{ github.workflow }}-${{ github.ref }}'
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
